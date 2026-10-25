@@ -12,7 +12,9 @@ ROM: dict[int, str] = {
     0xFD8B: "CROUT1",
     0xE752: "GETADR",
     0xE10C: "AYINT",  # FAC -> integer (array subscripts)
-    0xEB63: "MOVAF", 0xE7AA: "FSUBT",
+    0xEB63: "MOVAF", 0xE7AA: "FSUBT", 0xEAF9: "LOAD.FAC.FROM.YA", 0xEB2B: "STORE.FAC.AT.YX.ROUNDED",
+    0xE7BE: "FADD", 0xE7A7: "FSUB", 0xE97F: "FMULT", 0xEBB2: "FCOMP", 0xE9E3: "LOAD.ARG.FROM.YA", 0xEA66: "FDIV",
+    0xEA69: "FDIVT", 0xD412: "ERROR", 0xDB5C: "OUTDO", 0xD52C: "INLIN", 0xFDED: "COUT", 0xFD0C: "RDKEY",
     0xE941: "LOG", 0xEB90: "SGN", 0xEBAF: "ABS", 0xEC23: "INT", 0xEE8D: "SQR", 0xEE97: "FPWRT",
     0xEED0: "NEGOP", 0xEF09: "EXP", 0xEFAE: "RND", 0xEFEA: "COS", 0xEFF1: "SIN", 0xF03A: "TAN", 0xF09E: "ATN",
     0xF273: "NORMAL", 0xF277: "INVERSE", 0xF280: "FLASH", 0xF390: "GR", 0xF399: "TEXT", 0xF3D8: "HGR2", 0xF3E2: "HGR",
@@ -31,6 +33,11 @@ ZERO_PAGE: dict[int, str] = {
 # provisional, from the statement that calls them (Phase 1); "/I" = integer entry,
 # which for statement pairs sits 3 bytes from the real entry.
 RUNTIME: dict[int, str] = {
+    0x08A7: "RT.CLEARCOMMON", 0x0F0B: "RT.CLEARCHAIN", 0x1423: "RT.DEBUG", 0x1656: "RT.RESUME",
+    0x09E1: "RT.IFOR.INIT", 0x09DE: "RT.IFOR.INIT/R", 0x1691: "RT.IFOR.LIMIT", 0x168E: "RT.IFOR.LIMIT/R",
+    0x168A: "RT.IFOR.STEP", 0x1687: "RT.IFOR.STEP/R", 0x167E: "RT.IFOR.STEP1", 0x165F: "RT.PUSH.SUBSCRIPT/I",
+    0x1675: "RT.IMOVE", 0x10DF: "RT.CONCAT.T", 0x1549: "RT.STRGT", 0x1546: "RT.STRLE", 0x152F: "RT.STRGE",
+    0x1298: "RT.INPUT.STR.NEXT", 0x128A: "RT.INPUT.STR.PROMPT", 0x096C: "RT.CHRGET.PATCH(data)",
     0x08AA: "RT.CLEAR", 0x08DB: "RT.HIMEM", 0x0963: "RT.RESTORE", 0x097B: "RT.POP",
     0x09E5: "RT.FOR.INIT/I", 0x09E8: "RT.FOR.INIT", 0x0A31: "RT.NEXT",
     0x0B11: "RT.ARR.REAL", 0x0B14: "RT.ARR.STR", 0x0B17: "RT.ARR.INT", 0x0C6F: "RT.ARR.STORE",
@@ -61,7 +68,7 @@ RUNTIME: dict[int, str] = {
     0x1761: "RT.PRINTNUM",
     0x0EC5: "RT.STRLIT",  # inline 2-byte pointer to [len][text]
     0x0EEE: "RT.PRINTSTR",
-    0x0CC3: "RT.INEG",
+    0x0CC3: "RT.INEG", 0x0CDA: "RT.ISUBT",
 }
 
 # Routines that read inline operand bytes after the JSR: address -> byte count

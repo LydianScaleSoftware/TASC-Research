@@ -14,9 +14,21 @@ Entry point for any new session. Read this first, then the handoff prompt
   two fresh batches matched 197/200 and 199/200 on first contact before fixes.
   The predictor code (with its comments) is now the authoritative template
   set; `tasc/templates/core.json` is an earlier summary.
-- Next (Mark's call): Phase 2 (annotated disassembly of RUNTIME and the PASS
-  files using the predictor/objfile parser) and Phase R. Cleanup: mypy (31
-  errors, Ref payload typing).
+- **Phase 2: started (session 3).** Every byte of PASS0/1/2 classified
+  (`python -m tasc.classify`): all template output, zero foreign bytes (H3).
+  The only hand-written code in the PASS files is an 89-byte page-3 block
+  POKEd from PASS0 DATA ($0377-$03CF, `ml/pass0_page3.hex`; H7). PASS0 also
+  patches DOS 3.3 at $A633/$A649/$A7C4/$A96C (originals saved and verified).
+- **Phase R: started.** `python -m tasc.rtdis` flow-disassembles RUNTIME from
+  TASC's own entry table: 3,925/4,013 bytes are code; the rest is the CHRGET
+  patch, an error stub, 42 bytes of leftover assembler text and the copyright
+  (H6 confirmed). Listing `docs/runtime/runtime_listing.txt`, index
+  `docs/runtime/routine_index.tsv`. Documented so far: RT.INIT, entry table,
+  real/string/integer dispatchers (RAG runtime.md, runtime-index.md).
+- Next: document the remaining RUNTIME routines (integer multiply, FOR/NEXT,
+  strings, INPUT/READ, ONERR, arrays, garbage collection); trace what the DOS
+  patches do; then Phase 3 lifting of PASS1/PASS2 using the predictor.
+  Cleanup: mypy.
 
 ### How the predictor is debugged
 `python -m tasc.predict_check [family]` (summary), `python -m tasc.linediff
@@ -81,11 +93,11 @@ boot takes about 10 s of wall time.
 |---|---|---|
 | H1 shared RUNTIME/config | observed (supporting) | PASS0/1/2 load $41F2; headers: library end $17AF, one COMMON block $17B0-$41F1 (PASS0 defines, PASS1/2 use) |
 | H2 options inferable | open | object start = default (right after COMMON), not HGR1 (session-1 reading corrected) |
-| H3 hand-written parts identifiable | open | |
+| H3 hand-written parts identifiable | **confirmed** | none inside compiled code; tasc.classify: 0 foreign bytes in PASS0/1/2 |
 | H4 deterministic | **confirmed** | phase0 runs A/B/C identical (C in a dirty session over an existing BALL.OBJ) |
 | H5 names/line numbers lost | open | |
-| H6 RUNTIME hand-written | observed (supporting) | init code: BIT-skip tricks, relocation via the caller's JSR operand |
-| H7 how ML was joined | open | PASS files start with a compiled string literal ("COPYRIGHT…"), so no prefix blob |
+| H6 RUNTIME hand-written | **confirmed** | no template patterns; flow analysis covers 3,925/4,013 bytes as hand code |
+| H7 how ML was joined | **confirmed** | POKEd from DATA (PASS0: 89 bytes to $0377); recovering the source reproduces it |
 
 ## Facts established (details in RAG `phase0.md`, `phase1.md`)
 
