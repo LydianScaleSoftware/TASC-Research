@@ -1,40 +1,30 @@
 # TASC reverse engineering: project notes
 
-Entry point for any new session. Phase 3 handoff: `../TASC_handoff_phase3.md`. Read this first, then the handoff prompt
+Entry point for any new session. Phase 3 handoff: `docs/handoff_phase3.md`. Read this first, then the handoff prompt
 (`../TASC_handoff_prompt.md`) for the full mission and rules. RAG collection
 **`TASC project`** holds findings as chunks (status in brackets in each title).
 
-## Status (2026-10-25, session 2)
+## Status (2026-10-25, session 4)
 
-- **Phase 0: done** (session 1). `python -m tasc.phase0`.
-- **Phase 1: exit criterion met (2026-10-25).** The Python predictor
-  `tasc/compiler/` reproduces BALL.OBJ byte for byte and all 1,528 recorded
-  real-TASC compiles, including 603 random programs in four batches
-  (`python -m tasc.predict_check`, pytest `tests/test_compiler.py`). The last
-  two fresh batches matched 197/200 and 199/200 on first contact before fixes.
-  The predictor code (with its comments) is now the authoritative template
-  set; `tasc/templates/core.json` is an earlier summary.
-- **Phase 2: started (session 3).** Every byte of PASS0/1/2 classified
-  (`python -m tasc.classify`): all template output, zero foreign bytes (H3).
-  The only hand-written code in the PASS files is an 89-byte page-3 block
-  POKEd from PASS0 DATA ($0377-$03CF, `ml/pass0_page3.hex`; H7). PASS0 also
-  patches DOS 3.3 at $A633/$A649/$A7C4/$A96C (originals saved and verified).
-- **Phase R: main areas documented (session 3).** `python -m tasc.rtdis`
-  flow-disassembles RUNTIME (3,925/4,013 bytes code; rest classified; H6
-  confirmed). Documented in RAG runtime.md / runtime-routines.md: RT.INIT,
-  entry table, all three dispatchers, integer multiply, arrays, FOR/NEXT
-  frames (measured in Pandowdy) and the RETURN-unwinds-FOR trick, POP,
-  strings (literals in place, two string slots, compacting GC), INPUT/READ/
-  GET, STOP/END, RESUME/Debug, ONERR/RESUME. DOS patches explained: they let
-  TASC READ the tokenized source as a text file and use byte offsets > 32767.
-- ONERR path traced in Pandowdy (ERROR -> HANDLERR -> TXTPTR=$00BB -> patched
-  CHRGOT -> JMP $5B handler) and RESUME (re-runs the statement from its
-  RT.DEBUG call). Statement/graphics entries documented, incl. why integer
-  entries are +3 (JSR AYINT) or -3 (JSR $0058 before GETADR entries).
-  Phase R is complete enough for Phase 3. Still open: the PASS0 operator
-  table ($5005); optional (Mark): reassemblable RUNTIME source.
-- Next: Phase 3, lifting PASS1/PASS2 with the object parser and predictor.
-  Cleanup: mypy.
+- Phases 0, 1, 2, R: done (sessions 1-3; details in RAG phase0/1/2, runtime*).
+- **Phase 3 (session 4): decompiler front end built; PASS source recovered.**
+  `tasc/decomp/` decompiles an object to tokenized Applesoft, checked by
+  recompiling with the predictor. PASS0/1/2 (decompiled jointly, shared COMMON
+  names) recompile byte for byte, and **the real TASC compiles the regenerated
+  sources into files identical to PASS0, PASS1 and PASS2**
+  (`python -m tasc.selfcompile`; experiments/p3_selfcompile). So the goal-5
+  method is proven; what remains for Phase 5 is naming, numbering and
+  documentation under the same constraints. Corpus: 1,479/1,528 recorded
+  compiles round-trip (`--corpus`); the tail is FRE/POS arguments, RESUME-option
+  programs and random-program corners.
+- Generated sources: `src/generated/PASSn.txt` (listing), `PASSn.bas` (tokenized).
+  Names are hash-solver names (meaningless); numbering 5s.
+- Predictor fix found in PASS1: FN params and per-function FN temps allocated
+  in creation order. RESUME/Debug list confirmed from PASS1's dispatcher.
+- Next: Phase 3 lifting proper: annotate PASS1 (parser, expression scan/reduce,
+  symbol table in BX(), emitter at 5390-5450) and PASS2 (backpatch, allocation),
+  replace observed-only rules (string compare swap; main temps int-first;
+  unparsed skip) with TASC's code; add RUN to the predictor. Corpus tail.
 
 ### How the predictor is debugged
 `python -m tasc.predict_check [family]` (summary), `python -m tasc.linediff
@@ -101,7 +91,7 @@ boot takes about 10 s of wall time.
 | H2 options inferable | observed | all defaults: int arithmetic on (int ops on int vars), int constants on, RESUME/Debug off (no JSR $1423), library $0803, program right after COMMON |
 | H3 hand-written parts identifiable | **confirmed** | none inside compiled code; tasc.classify: 0 foreign bytes in PASS0/1/2 |
 | H4 deterministic | **confirmed** | phase0 runs A/B/C identical (C in a dirty session over an existing BALL.OBJ) |
-| H5 names/line numbers lost | open | |
+| H5 names/line numbers lost | **confirmed** | no line table, debug calls or names in PASS files; regenerated names/numbers recompile identically |
 | H6 RUNTIME hand-written | **confirmed** | no template patterns; flow analysis covers 3,925/4,013 bytes as hand code |
 | H7 how ML was joined | **confirmed** | POKEd from DATA (PASS0: 89 bytes to $0377); recovering the source reproduces it |
 
