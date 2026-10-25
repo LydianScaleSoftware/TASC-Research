@@ -78,6 +78,11 @@ boot takes about 10 s of wall time.
   boundaries are constrained. One statement per line except forced groupings.
   Frozen once Phase 5's DOC/VARS files are published; later changes carry
   documentation over by object address.
+- **Phase 5 variable names (Mark, 2026-10-25):** the ideal name conveys the
+  variable's usage or meaning, from analysis of what the program does; keep that
+  goal, and where the hash order forbids it fall back to a similar first letter
+  with a second letter or digit chosen to fit the logic; never a keyword. The
+  compendium records the preferred name beside any fallback.
 
 - Repo `tasc-re/` under the project folder; git; originals read-only in
   `images/original/`; the working image is `images/work/tasc201.dsk` (copy of 2.01).
@@ -140,17 +145,5 @@ boot takes about 10 s of wall time.
 
 ## Open questions for Mark
 
-- Phase 5 defaults still to confirm: how far names may
-  stray from mnemonic when the hash forces it; the page-3 ML block stays in
-  PASS0's DATA statements as in the original.
-
-## Layout
-
-```
-tasc/disk.py       cp2 wrapper          tasc/emu.py      Pandowdy stdio client + screen capture
-tasc/harness.py    compile driver       tasc/inventory.py  extract + hash all images
-tasc/phase0.py     Phase 0 loop         docs/inventory.md  file table
-docs/rag/*.md      RAG sources (push the whole file after editing)
-src/launchers/     detokenized small Applesoft programs
-extracted/<img>/   exact file data, NAPS-suffixed names (#TTAAAA)
-```
+- Phase 5 default still to confirm: the page-3 ML block stays in PASS0's DATA
+  statements as in the original.
