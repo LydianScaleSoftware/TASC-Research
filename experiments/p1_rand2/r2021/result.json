@@ -1,0 +1,70 @@
+{
+ "id": "r2021",
+ "key": "28abdbec9712b69e",
+ "source": "10 REM! INTEGER *\n20 CALL X:PRINT TAN(29005),LEFT$(\"\",Q1);:HTAB 714=28114<=255\n30 GOSUB 80\n40 A$(2)=XY$:GR\n50 M%=554:HCOLOR=(NOT ((NOT 40)))\n60 GOSUB 90\n70 PRINT W$+\"\"+LEFT$(XY$,566);:AB=211\n80 XY%=Y:Q1=Y:VTAB -Z%\n90 HTAB NOT ((-(39))):PRINT XY$,24;0;\n100 PRINT 2.25^ATN(AB);SGN(Z%*Q1>M%),\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 524,
+ "obj_sha256": "0cc445f3acf8c1589c45e99bf1b45fe6a3726eb2ac030eb9313eeaabb275ef09",
+ "cycles": 77766651,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6138
+  },
+  {
+   "line": 40,
+   "addr": 6141
+  },
+  {
+   "line": 50,
+   "addr": 6156
+  },
+  {
+   "line": 60,
+   "addr": 6174
+  },
+  {
+   "line": 70,
+   "addr": 6177
+  },
+  {
+   "line": 80,
+   "addr": 6222
+  },
+  {
+   "line": 90,
+   "addr": 6243
+  },
+  {
+   "line": 100,
+   "addr": 6278
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S008.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6587",
+  "LOCAL VARIABLES": "6588 - 6629",
+  "HIGHEST MEMORY LOCATION": "6629"
+ }
+}

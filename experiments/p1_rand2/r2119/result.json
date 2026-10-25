@@ -1,0 +1,83 @@
+{
+ "id": "r2119",
+ "key": "a2da2c8fa3a2009e",
+ "source": "10 DEF FN F(T)=SGN(C=1000)-COS(40)\n20 HTAB N2%:IF (N2%) THEN 120:N2%=AB%\n30 IF (ABS(388)+Y-FN F(W%)/Y) THEN PRINT:AB%=FN F(AB%=C)>Y:READ Y$,W%\n40 ON C-((A+AB%-NOT 127)) GOTO 130,50,90,50\n50 IF (-((M-40>W%-255))) THEN HCOLOR=976+M>=AB%\n60 PRINT LEFT$(XY$+\"HI\"+XY$,((A OR C))>RND(M));N2$;:HLIN N2% AND M,(XY) AT 7^((A%/24512))>FN F(A%):XY$=XY$+Y$\n70 FOR M=(1) TO (NOT ((NOT C<((20<>.5))))):POKE W%,FN F(N2%*45>0):IF (N2%) THEN FOR Y=(39) TO (FN F(NOT XY))\n80 NEXT M:N2%=65535 OR AB%/((AB%<>C))\n90 PRINT\n100 CALL A:READ A%,M\n110 IF (((XY OR A-2.25))/20) THEN 60\n120 HTAB 255:XY$=XY$\n130 POKE -ASC(\"HI\"),((A<=N2%*Y))+-A%:DATA 1,\"A,B\",X\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1106,
+ "obj_sha256": "bae1ead3e58c71d27c92148e452420c7dd0be6bfd5ca4a58d92a56f7852d565f",
+ "cycles": 109364350,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6115
+  },
+  {
+   "line": 30,
+   "addr": 6144
+  },
+  {
+   "line": 40,
+   "addr": 6226
+  },
+  {
+   "line": 50,
+   "addr": 6262
+  },
+  {
+   "line": 60,
+   "addr": 6311
+  },
+  {
+   "line": 70,
+   "addr": 6448
+  },
+  {
+   "line": 80,
+   "addr": 6553
+  },
+  {
+   "line": 90,
+   "addr": 6585
+  },
+  {
+   "line": 100,
+   "addr": 6591
+  },
+  {
+   "line": 110,
+   "addr": 6615
+  },
+  {
+   "line": 120,
+   "addr": 6646
+  },
+  {
+   "line": 130,
+   "addr": 6664
+  }
+ ],
+ "info": {
+  "THEN  PRINT": "AB% =  FN F(AB% = C) > Y: R",
+  "OBJECT FILE": "S002.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7169",
+  "LOCAL VARIABLES": "7170 - 7223",
+  "HIGHEST MEMORY LOCATION": "7223"
+ }
+}

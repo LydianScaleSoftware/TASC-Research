@@ -1,0 +1,98 @@
+{
+ "id": "r2091",
+ "key": "a136d1bb4c282236",
+ "source": "10 REM! INTEGER J\n20 DIM P(1),B(3)\n30 DEF FN F(Z)=C/Q1%\n40 AB=((825 AND AB))<>40<>Y:READ Q1%,W%:B(32767)=COS(Q1%)\n50 PRINT:PRINT C$;-((-((Y AND Y))));W%=FN F(255>=32160),\n60 Y$=C$:HCOLOR=FN F(B(Y%))\n70 Y$=\"123\"+\"A\":END:READ Y\n80 HOME\n90 Y$=RIGHT$(\"123\"+M$,2)\n100 Q1%=J:Q1%=B(AB=J>Y)\n110 Y=J:PRINT \"123\";EXP(-((-C%))),\n120 P(NOT ((Y%<=J)))=LOG(((P(Y%)+30537))*((Y%*.5))):IF (P(((B(2)>=Q1%))-AB)) THEN 170\n130 GOTO 60\n140 INPUT \"\";Q1%:Y%=256+B(Q1%)>=Q1%\n150 POP:B(-Y%)=-Y\n160 Y=C\n170 C%=B<>Y-((M OR AB))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 787,
+ "obj_sha256": "c3b5abd865318c4d05790508ed9d63f0bff9932bf6891b9d741b6732910ff1ed",
+ "cycles": 99411897,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6097
+  },
+  {
+   "line": 50,
+   "addr": 6151
+  },
+  {
+   "line": 60,
+   "addr": 6202
+  },
+  {
+   "line": 70,
+   "addr": 6220
+  },
+  {
+   "line": 80,
+   "addr": 6254
+  },
+  {
+   "line": 90,
+   "addr": 6257
+  },
+  {
+   "line": 100,
+   "addr": 6287
+  },
+  {
+   "line": 110,
+   "addr": 6317
+  },
+  {
+   "line": 120,
+   "addr": 6356
+  },
+  {
+   "line": 130,
+   "addr": 6436
+  },
+  {
+   "line": 140,
+   "addr": 6439
+  },
+  {
+   "line": 150,
+   "addr": 6478
+  },
+  {
+   "line": 160,
+   "addr": 6502
+  },
+  {
+   "line": 170,
+   "addr": 6508
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6850",
+  "LOCAL VARIABLES": "6851 - 6931",
+  "HIGHEST MEMORY LOCATION": "6931"
+ }
+}

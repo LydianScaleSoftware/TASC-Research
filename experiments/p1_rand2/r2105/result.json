@@ -1,0 +1,86 @@
+{
+ "id": "r2105",
+ "key": "2241b11b349457c4",
+ "source": "10 REM! INTEGER J,I\n20 DEF FN F(X)=A OR 369\n30 COLOR=A%>NOT W%<=39*40+W%:A%=N2\n40 PRINT AB;Y$;I<=N2,\n50 IF (M*B%) THEN VTAB N2:IF (AB) THEN 140\n60 GOSUB 140:HCOLOR=XY%\n70 GOSUB 70:AB=ABS(39)\n80 GET Y$\n90 AB$=\"TASC\":PRINT ((J=I))^J=1.5;\n100 HLIN ATN(100)-2,(3.14159) AT N2\n110 GOTO 50\n120 HLIN NOT ((127>682)),(B%) AT A:POKE A%^((W%>=XY%)) AND ABS(65535),1\n130 B%=INT(NOT I):SPEED=C:VTAB I\n140 POKE I,W%<=B%:FOR I=(C*709 AND 256) TO (J):SPEED=0*((B%/AB<>AB-C))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 764,
+ "obj_sha256": "e4b5abae57dc3fc68d9a78f54c057ad330643a25ecc6071bc2f3e7e9f6f1f6c9",
+ "cycles": 94184455,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6100
+  },
+  {
+   "line": 40,
+   "addr": 6142
+  },
+  {
+   "line": 50,
+   "addr": 6169
+  },
+  {
+   "line": 60,
+   "addr": 6196
+  },
+  {
+   "line": 70,
+   "addr": 6205
+  },
+  {
+   "line": 80,
+   "addr": 6217
+  },
+  {
+   "line": 90,
+   "addr": 6223
+  },
+  {
+   "line": 100,
+   "addr": 6266
+  },
+  {
+   "line": 110,
+   "addr": 6296
+  },
+  {
+   "line": 120,
+   "addr": 6299
+  },
+  {
+   "line": 130,
+   "addr": 6365
+  },
+  {
+   "line": 140,
+   "addr": 6389
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6827",
+  "LOCAL VARIABLES": "6828 - 6878",
+  "HIGHEST MEMORY LOCATION": "6878"
+ }
+}

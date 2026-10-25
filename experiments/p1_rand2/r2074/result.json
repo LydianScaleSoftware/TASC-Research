@@ -1,0 +1,70 @@
+{
+ "id": "r2074",
+ "key": "52354a1c5defbe05",
+ "source": "10 DEF FN F(T)=W%\n20 N2=Z%:IF (SQR(M)) THEN X=W%*ATN(Y)^((24 OR Y))\n30 READ W%:IF (LOG(M%)*FN F(N2)) THEN W%=-((521+N2%))\n40 SPEED=544:A$=LEFT$(C$,N2% AND Z%)+MID$(X$+\"TASC\",INT(Z%),M<X):ONERR GOTO 90\n50 GOSUB 90\n60 IF (X) THEN 30:ON INT(((Y<>Y))*((Y/Z%))) GOTO 100,70,20,90\n70 PRINT Q1;:PRINT:HCOLOR=Y-FN F(NOT 3.14159)\n80 W%=127\n90 C$=A$+\"X Y\":PRINT\n100 IF (7) THEN IF (Y=((FN F(484)>=NOT W%))) THEN IF (EXP(EXP(NOT 1))) THEN 70\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 629,
+ "obj_sha256": "b85d52d7c791b43c400986491e01f3068adb8c6a80e82bf8f4b8e9f782c56f66",
+ "cycles": 89626469,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6094
+  },
+  {
+   "line": 30,
+   "addr": 6146
+  },
+  {
+   "line": 40,
+   "addr": 6189
+  },
+  {
+   "line": 50,
+   "addr": 6285
+  },
+  {
+   "line": 60,
+   "addr": 6288
+  },
+  {
+   "line": 70,
+   "addr": 6296
+  },
+  {
+   "line": 80,
+   "addr": 6320
+  },
+  {
+   "line": 90,
+   "addr": 6326
+  },
+  {
+   "line": 100,
+   "addr": 6353
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S009.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6692",
+  "LOCAL VARIABLES": "6693 - 6748",
+  "HIGHEST MEMORY LOCATION": "6748"
+ }
+}

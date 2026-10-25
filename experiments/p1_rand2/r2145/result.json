@@ -1,0 +1,99 @@
+{
+ "id": "r2145",
+ "key": "36ce3b67edb5bdb0",
+ "source": "10 REM! INTEGER J\n20 REM! USECOMMON Z%,J,C%\n30 DIM D%(10),B%(11,5)\n40 C%=NOT ((C%*A/-Z%)):Q1=-A\n50 PRINT:Z=Z\n60 IF (39) THEN HLIN A,(Q1) AT -((NOT COS(C%))):CALL J\n70 IF (3) THEN C%=C%:HLIN A,(20) AT LOG(Q1):PLOT -AB%*W,2<=12300\n80 Z%=AB%=VAL(\"\")\n90 ON AB%-(((J)=Z)) GOTO 60,100,10,100:COLOR=-((((65535>=J))/((256+Z))))\n100 Q1=D%(AB%)\n110 PRINT LEFT$(Z$,W);\n120 HTAB -((NOT 10071 AND 751))\n130 VTAB Z%/5:READ A:Z=((J OR 395))+SGN(J)>=39+C%\n140 TEXT:PRINT Z%,\n150 Q1$=Z$+\"HI\"+N2$\n160 Q1=AB%:A%(Y%)=932:HCOLOR=-ASC(Z$)\n170 B%(((10))<=B%(829,J),-((-558)))=COS(43039)+2<=AB:AB=A+((J+C%>=(W)))\n",
+ "options": {
+  "library": null,
+  "program": "HGR1",
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 16390,
+ "obj_len": 964,
+ "obj_sha256": "aee1a4cb03314ecc7365ccb7f32853a3beadb6f286b415d3ce4d1fb07a463503",
+ "cycles": 104457437,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 16404
+  },
+  {
+   "line": 20,
+   "addr": 16404
+  },
+  {
+   "line": 30,
+   "addr": 16410
+  },
+  {
+   "line": 40,
+   "addr": 16410
+  },
+  {
+   "line": 50,
+   "addr": 16445
+  },
+  {
+   "line": 60,
+   "addr": 16454
+  },
+  {
+   "line": 70,
+   "addr": 16497
+  },
+  {
+   "line": 80,
+   "addr": 16556
+  },
+  {
+   "line": 90,
+   "addr": 16577
+  },
+  {
+   "line": 100,
+   "addr": 16628
+  },
+  {
+   "line": 110,
+   "addr": 16640
+  },
+  {
+   "line": 120,
+   "addr": 16652
+  },
+  {
+   "line": 130,
+   "addr": 16670
+  },
+  {
+   "line": 140,
+   "addr": 16727
+  },
+  {
+   "line": 150,
+   "addr": 16739
+  },
+  {
+   "line": 160,
+   "addr": 16768
+  },
+  {
+   "line": 170,
+   "addr": 16804
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "OBJECT FILE": "S002.OBJ",
+  "PROGRAM": "16390 - 17353",
+  "NUMERIC COMMON": "16384 - 16389",
+  "LOCAL VARIABLES": "17354 - 17581",
+  "HIGHEST MEMORY LOCATION": "17581"
+ }
+}

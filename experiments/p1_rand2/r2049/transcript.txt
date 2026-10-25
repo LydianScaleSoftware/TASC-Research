@@ -1,0 +1,150 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S010
+
+
+OBJECT CODE FILE:
+(DEFAULT S010.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION? NO
+
+COMPILATION LISTING:
+(DEFAULT YES)? YES
+
+PAUSE ON ERRORS:
+(DEFAULT YES)? YES
+
+INTEGER ARITHMETIC:
+(DEFAULT YES)? YES
+
+INTEGER CONSTANTS:
+(DEFAULT YES)? YES
+
+RESUME/DEBUG CODE:
+(DEFAULT NO)? YES
+
+*****BEGINNING PASS 1
+
+
+
+10
+RECOGNIZED  REM ! INTEGER I,K
+20  DIM D$(1,12),P%(10,4)
+30 Q1% = AB: ON 971 < (( SIN (40) > A(7,
+1000) * W)) GOTO 80,170,180,10: HTAB P%(
+Q1% - P%(Z%,1000),K <  > 2) * ((A(49152,
+Q1%) < 1000))
+40 Q1% = Y - Q1% + A(I,M%) + ((B - Q1% <
+  =  ASC (M$)))
+50  VTAB 7: HLIN ((127 OR AB)) = ((127 <
+ Y)),(Q1) AT AB%: ON B GOTO 60,220,70,30
+
+60  PRINT P%( EXP (B),Z% = A(I,15155)) O
+R W;Q1;
+70  HLIN Z%,((( LOG (K) OR M%)) * ((B >
+ = AB)) ^ W) AT  ATN ( NOT I) = 65535:M$
+ = D$( NOT ((I - B)),256)
+80 B = (511) >  = P%(0 - Q1,P%(11863,K)
+- 1E3)
+90  IF ( RND (AB%)) THEN 130
+100  GOTO 260
+110  COLOR=  PEEK (Z%)
+120 P%(K, - (( - 127))) =  ATN (683 * ((
+AB = A(I,M%)))): PRINT  LOG (Y) > ((Q1%
+>  = 3.14159)) - Z%; RIGHT$ (D$(I,K * Z%
+),Q1 OR P%(Q1%,10) + 1000);W$,: GOSUB 15
+0
+130 Z% = Q1% AND  COS (B) = 26875
+140 P%(M%,((Q1 <  = K)) - 40 / B OR M%)
+= K: READ M$
+150  SPEED= B: PRINT  NOT (( NOT Y)) * (
+(W ^ Q1% * ((Y > Z%))));
+160  FOR AB = (Y) TO ( LEN ( MID$ ( CHR$
+ (Q1),0))): PRINT Z%; LOG (AB) + 1.5 < A
+B% - AB;
+170 W$ = D$( ASC ("123"),B >  = Z% <  >
+((Y >  = 10)))
+180  PRINT  CHR$ ((17141));: DRAW AB% AT
+  LOG (Q1),(AB% * Z%): GOSUB 220
+190  NEXT AB: IF (127) THEN  IF ( - 1000
+) THEN  HTAB  EXP (Q1):I = 39
+200 Q1 =  ASC ( CHR$ (I)):AB% =  -  PEEK
+ (P%(20,M%))
+210 Y =  TAN ((K)) = Y: HTAB (1E3)
+220  TEXT : IF ( - Z% * 3.14159) THEN M%
+ = ((449 > P%(2,Q1%))) * ((W < 24)) + 32
+767
+230 M$ = D$(I,Z%)
+240 AB$ = D$( SGN (AB% + Q1%),B - ((Y -
+1)))
+250 D$(B + AB% <  = M%,AB%) = "HI":B = 7
+:A(1, - AB) =  EXP (2) + AB% <  >  SGN (
+I) * 32767
+260  DATA -2.5,300: FOR K = (40 / (( TAN
+ (W) = 127))) TO (5)
+270  IF ( NOT ((Q1% OR W))) THEN 270
+280  DATA "A,B",: COLOR= B
+290 K =  ATN (1) <  = AB: SPEED= M% + Y:
+M$ =  CHR$ ( ABS (Y = K))
+300  FOR Q1 = (1 + 100 <  =  VAL (AB$) >
+  = W) TO (( - ((Y = AB)))) STEP (((((P%
+(K,K) OR K)) = (AB))) +  - 127): FOR B =
+ ( INT (I)) TO (( - P%(32767,M%) ^ 256))
+: IF ( SIN ((K)) *  - ((Q1 AND 7))) THEN
+  READ Z%
+
+
+
+*****BEGINNING PASS 2
+
+
+.......
+
+
+*****CODE GENERATION COMPLETE
+
+
+COMPILATION INFORMATION AND LINE NUMBER
+REFERENCE TABLE? YES
+
+
+SOURCE FILE: S010
+OBJECT FILE: S010.OBJ
+LIBRARY OCCUPIES 2051 - 6063
+PROGRAM OCCUPIES 6064 - 8509
+
+NO COMMON BLOCK
+
+LOCAL VARIABLES OCCUPY 8510 - 9331
+
+HIGHEST MEMORY LOCATION: 9331
+
+
+LINE# ADDR   LINE# ADDR   LINE# ADDR
+
+10    6084   20    6084   30    6084
+40    6213   50    6273   60    6348
+70    6405   80    6509   90    6563
+100   6579   110   6582   120   6594
+130   6738   140   6765   150   6822
+160   6876   170   6944   180   7004
+190   7046   200   7098   210   7140
+220   7167   230   7231   240   7249
+250   7291   260   7395   270   7442
+280   7465   290   7485   300   7536
+
+*****COMPILATION COMPLETE
+
+
+]?

@@ -1,0 +1,99 @@
+{
+ "id": "r2132",
+ "key": "37321c97924164a3",
+ "source": "10 REM! INTEGER K\n20 REM! DEFCOMMON A%,C%,XY\n30 DEF FN F(X)=M%\n40 GOSUB 20\n50 W%=-((((20>=C%))^((A%=31151))))\n60 W%=((A(126,C%) AND -39))<=FN F(W)\n70 PRINT\n80 B=N2\n90 GOTO 100:C%=XY:C%=-W\n100 POKE ((A(256,W%)*W))^((C% OR W%))+-B,ABS(A(A%+620,VAL(Y$)))\n110 FOR K=(NOT W%<=40) TO (W%)\n120 A(A(C%,A%)^32767-VAL(W$)*N2,C%)=B+((B AND XY)):FOR W=(M%) TO (C):PRINT W%,100>A%>14293;\"\"+\"\",\n130 ON TAN(W) GOTO 120,30,90,110:RETURN\n140 ONERR GOTO 140\n150 C=A(W<>M%,((24<C))+((C%>=W%)))\n160 GOSUB 40\n170 IF (24) THEN 130:FOR K=(-14) TO (240 OR 28+W%-M%*0):A%=5+INT(B^A%)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6073,
+ "obj_len": 872,
+ "obj_sha256": "f31020611b4e2cb0c2d68e45244a0b67022b9b9dd59e7c2082171d4630ea6f9f",
+ "cycles": 104478798,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6093
+  },
+  {
+   "line": 40,
+   "addr": 6103
+  },
+  {
+   "line": 50,
+   "addr": 6106
+  },
+  {
+   "line": 60,
+   "addr": 6139
+  },
+  {
+   "line": 70,
+   "addr": 6184
+  },
+  {
+   "line": 80,
+   "addr": 6187
+  },
+  {
+   "line": 90,
+   "addr": 6193
+  },
+  {
+   "line": 100,
+   "addr": 6211
+  },
+  {
+   "line": 110,
+   "addr": 6292
+  },
+  {
+   "line": 120,
+   "addr": 6318
+  },
+  {
+   "line": 130,
+   "addr": 6461
+  },
+  {
+   "line": 140,
+   "addr": 6480
+  },
+  {
+   "line": 150,
+   "addr": 6485
+  },
+  {
+   "line": 160,
+   "addr": 6536
+  },
+  {
+   "line": 170,
+   "addr": 6539
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S002.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6073 - 6944",
+  "NUMERIC COMMON": "6064 - 6072",
+  "LOCAL VARIABLES": "6945 - 7596",
+  "HIGHEST MEMORY LOCATION": "7596"
+ }
+}

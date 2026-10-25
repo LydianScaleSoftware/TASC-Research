@@ -1,0 +1,82 @@
+{
+ "id": "r2067",
+ "key": "3ef01d6c8bb495ad",
+ "source": "10 REM! INTEGER I,J\n20 DIM A$(6),P(12)\n30 DATA HI,\"A,B\",HI\n40 PRINT\n50 PLOT Q1,((I OR X))/((1*46547))+(Q1<>49152)\n60 CALL P(C%)/((B<P(J))):A=N2%+((10>=32767<=((B OR 3))))\n70 IF (7) THEN 70\n80 B=576<=517:Q1=127>49152\n90 X=39\n100 XY$=W$\n110 COLOR=P(P(B%)-42571)\n120 SPEED=-XY<N2%\n130 PRINT -((((7+P(N2%)))^-P(X%)));((-74-498))*(((5149)--B%));SGN(I<X OR 3<=X);:XY$=W$\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": 28672,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 737,
+ "obj_sha256": "b0f0d9782a4ca55526d5fa252f1fa42d88a765dcc3ef24671b92bd15ad827f8d",
+ "cycles": 95021305,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6100
+  },
+  {
+   "line": 50,
+   "addr": 6103
+  },
+  {
+   "line": 60,
+   "addr": 6151
+  },
+  {
+   "line": 70,
+   "addr": 6211
+  },
+  {
+   "line": 80,
+   "addr": 6219
+  },
+  {
+   "line": 90,
+   "addr": 6243
+  },
+  {
+   "line": 100,
+   "addr": 6249
+  },
+  {
+   "line": 110,
+   "addr": 6255
+  },
+  {
+   "line": 120,
+   "addr": 6279
+  },
+  {
+   "line": 130,
+   "addr": 6294
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "OBJECT FILE": "S002.OBJ",
+  "PROGRAM": "6064 - 6800",
+  "LOCAL VARIABLES": "28672 - 28796",
+  "HIGHEST MEMORY LOCATION": "28796"
+ }
+}

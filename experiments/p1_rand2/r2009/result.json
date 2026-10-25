@@ -1,0 +1,62 @@
+{
+ "id": "r2009",
+ "key": "337ff4bf7a5fd4b4",
+ "source": "10 IF (-((-Y))) THEN B$=MID$(\"123\",N2,TAN(C%)/W%):FOR N2=(((AB>=W%<N2*Y%))+AB) TO (-((VAL(M$)=AB)))\n20 NEXT N2:ON 255-W% GOTO 10,30:Y%=31344\n30 IF (Z%) THEN 70:PRINT \"123\"+\"X Y\";LEFT$(B$,0)+M$,\n40 HTAB 32767:PRINT SIN(7),C$;C%*M;\n50 TEXT:Y=25214:Y=Y\n60 PRINT LEN(B$);:W%=((N2 OR -Y%))--((Y%<>39))\n70 C%=N2:C$=B$\n80 POKE -RND(.5)*20,977/SQR(298)\n",
+ "options": {
+  "library": 4096,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 8109,
+ "obj_len": 571,
+ "obj_sha256": "7e5bc86453138db657c5424cc1b9cb9c7ea25b89a4a70376d7d190db0cc687f0",
+ "cycles": 87437012,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 8129
+  },
+  {
+   "line": 20,
+   "addr": 8243
+  },
+  {
+   "line": 30,
+   "addr": 8268
+  },
+  {
+   "line": 40,
+   "addr": 8276
+  },
+  {
+   "line": 50,
+   "addr": 8309
+  },
+  {
+   "line": 60,
+   "addr": 8321
+  },
+  {
+   "line": 70,
+   "addr": 8363
+  },
+  {
+   "line": 80,
+   "addr": 8375
+  }
+ ],
+ "info": {
+  "LIBRARY": "4096 - 8108",
+  "OBJECT FILE": "S009.OBJ",
+  "PROGRAM": "8109 - 8679",
+  "LOCAL VARIABLES": "8680 - 8718",
+  "HIGHEST MEMORY LOCATION": "8718"
+ }
+}

@@ -1,0 +1,78 @@
+{
+ "id": "r2092",
+ "key": "c7e7ed5adad31b17",
+ "source": "10 REM! INTEGER K\n20 DIM A%(12)\n30 B$=\"\":IF (((-W AND (M)))/SIN(AB)) THEN 110:DATA \"A,B\",1,-2.5,X\n40 B$=\"123\":INPUT \"NAME\";Q1$:W=W\n50 AB$=AB$\n60 ONERR GOTO 70\n70 INPUT \"NAME\";AB%,B$:ON NOT A%(N2>=AB%) GOTO 120,100,70,50:AB%=AB%^K+N2>=694\n80 COLOR=A%(A%(K)-A%(X%))\n90 X=2.25:IF (A%(48351-M)) THEN B$=RIGHT$(LEFT$(AB$+\"123\",B%^K),X%):AB%=SGN(VAL(Q1$)>0.1)\n100 VTAB W:PRINT CHR$(NOT K);AB$;1555,:GOSUB 40\n110 B$=LEFT$(MID$(MID$(\"123\",A%(28173),X%),NOT B%),65535):PRINT\n120 DATA 1,1,1,1\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 685,
+ "obj_sha256": "d80e98ee066ed1c105b57ed9e16b2760544050923e83a7cac477ebaa3673b153",
+ "cycles": 89954492,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6146
+  },
+  {
+   "line": 50,
+   "addr": 6192
+  },
+  {
+   "line": 60,
+   "addr": 6198
+  },
+  {
+   "line": 70,
+   "addr": 6203
+  },
+  {
+   "line": 80,
+   "addr": 6285
+  },
+  {
+   "line": 90,
+   "addr": 6309
+  },
+  {
+   "line": 100,
+   "addr": 6392
+  },
+  {
+   "line": 110,
+   "addr": 6428
+  },
+  {
+   "line": 120,
+   "addr": 6476
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6748",
+  "LOCAL VARIABLES": "6749 - 6820",
+  "HIGHEST MEMORY LOCATION": "6820"
+ }
+}

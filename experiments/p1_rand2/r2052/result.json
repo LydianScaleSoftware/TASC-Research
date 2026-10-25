@@ -1,0 +1,90 @@
+{
+ "id": "r2052",
+ "key": "7ae12e9ee51517f9",
+ "source": "10 DIM P%(1,1)\n20 HCOLOR=B%:AB%=NOT ((A<>AB/Z)):PRINT\n30 VTAB Z:PRINT\n40 W%=B%>ATN(A%(10)):M%=171\n50 GOTO 120:IF (39) THEN 30:IF (INT(A)^W%) THEN A=W%\n60 ON -N2 GOTO 110,60\n70 Q1$=C$\n80 PRINT:Z=D%(-AB%<NOT AB%):AB=10^((P%(1,B%)*7))>=NOT AB%\n90 IF (((A-39+((W%+W%))))*N2) THEN SCALE=A\n100 D%(ATN(NOT 753))=536 OR NOT M%:ON W%-0-((AB%+32767))+-D%(39) GOTO 120,10,70,120:M$=C$\n110 PRINT\n120 D%(-ATN(PEEK(24)))=AB%:M%=2.25+-((D%(802)<>M%))\n130 A=COS(N2):AB%=AB*((-P%(B%,AB%)<=ABS(40))):PRINT\n140 PRINT Z;M$,\n150 AB=20:C$=\"123\"+Q1$:PRINT\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 855,
+ "obj_sha256": "acb556e4fec2eb44260a3c7d9d1654b679e4cdfdbb8707a8a3a661ce0f0abbcb",
+ "cycles": 99902807,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6111
+  },
+  {
+   "line": 40,
+   "addr": 6120
+  },
+  {
+   "line": 50,
+   "addr": 6147
+  },
+  {
+   "line": 60,
+   "addr": 6150
+  },
+  {
+   "line": 70,
+   "addr": 6164
+  },
+  {
+   "line": 80,
+   "addr": 6170
+  },
+  {
+   "line": 90,
+   "addr": 6248
+  },
+  {
+   "line": 100,
+   "addr": 6285
+  },
+  {
+   "line": 110,
+   "addr": 6372
+  },
+  {
+   "line": 120,
+   "addr": 6375
+  },
+  {
+   "line": 130,
+   "addr": 6423
+  },
+  {
+   "line": 140,
+   "addr": 6471
+  },
+  {
+   "line": 150,
+   "addr": 6486
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6918",
+  "LOCAL VARIABLES": "6919 - 7011",
+  "HIGHEST MEMORY LOCATION": "7011"
+ }
+}

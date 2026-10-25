@@ -1,0 +1,90 @@
+{
+ "id": "r2126",
+ "key": "b7cc47c74ec2d5e7",
+ "source": "10 REM! INTEGER K,I\n20 DEF FN F(T)=COS(-((I-B)))\n30 TEXT:COLOR=FN F(-AB)+((FN F(Y%)+PEEK(B%(XY%))))\n40 AB=Y%:B%(I)=ATN(((24<XY%))^((.001/B%(I)))):B%(((FN F(40)<>Q1))/VAL(\"\"))=-307*((K+21272))+I\n50 GR\n60 ON 2.25 GOTO 50,120,120:PLOT 100,X^NOT X:M$=MID$(\"\",Q1,7)+MID$(AB$,B%(C%),B%(Y%))+\"\"\n70 IF (VAL(\"123\")) THEN 20\n80 IF (FN F(127)) THEN ON ((917<>((0<Q1%))))/B%(NOT AB) GOTO 80,30,30:SPEED=Y:PRINT AB$,LEN(AB$);B%(COS(I));\n90 READ M$,B,X:FOR K=(X) TO (-((-B%(I)))*39)\n100 B=-((NOT COS(2.25))):HCOLOR=-((B%(Y%)<Y AND Q1*Q1%))\n110 B%(XY%)=Y:M$=B$\n120 DATA HI:GOTO 10\n130 PRINT:B=40<=SIN(Y>=256)\n140 VTAB 497+1:GOTO 130:PRINT AB;K;AB$;\n150 FOR X=(0) TO (Y*INT(B%(1))) STEP (LEN(B$)>B):Y%=NOT XY%*RND(B%(XY%)):B%(C%)=B%(.5)*-((3.14159>B%(K)))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1199,
+ "obj_sha256": "fab88807619e90a6aace7c8ef1e96b3b1b38497cf28de2f44185790ade6c3c94",
+ "cycles": 120011206,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6103
+  },
+  {
+   "line": 40,
+   "addr": 6148
+  },
+  {
+   "line": 50,
+   "addr": 6259
+  },
+  {
+   "line": 60,
+   "addr": 6262
+  },
+  {
+   "line": 70,
+   "addr": 6374
+  },
+  {
+   "line": 80,
+   "addr": 6396
+  },
+  {
+   "line": 90,
+   "addr": 6494
+  },
+  {
+   "line": 100,
+   "addr": 6538
+  },
+  {
+   "line": 110,
+   "addr": 6591
+  },
+  {
+   "line": 120,
+   "addr": 6612
+  },
+  {
+   "line": 130,
+   "addr": 6624
+  },
+  {
+   "line": 140,
+   "addr": 6648
+  },
+  {
+   "line": 150,
+   "addr": 6660
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S009.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7262",
+  "LOCAL VARIABLES": "7263 - 7348",
+  "HIGHEST MEMORY LOCATION": "7348"
+ }
+}

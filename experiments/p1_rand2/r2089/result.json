@@ -1,0 +1,90 @@
+{
+ "id": "r2089",
+ "key": "4db8750cad172b5d",
+ "source": "10 REM! INTEGER K,J\n20 DIM P$(7)\n30 GOTO 40\n40 FOR C=(B%>B*W%*-N2) TO (B) STEP (B%)\n50 P$(B%)=\"\"+P$(K)+M$+P$(1000):X$=STR$(W%):HLIN C*((3.14159 OR C<>1000)),(AB%) AT -((Q1-N2))\n60 W%=K:DATA 1,X\n70 C$=P$(255)\n80 P$(-.5)=P$(7+((Q1-3))):PRINT K;AB,((J<>B%))-NOT 1>-W%,:PLOT AB,ASC(MID$(MID$(\"X Y\",K),C AND K))\n90 CALL B% OR K>AB+1000:B%=39-Q1=((B% OR AB)) AND J\n100 ON VAL(RIGHT$(\"A\",C))<=C GOTO 150,150,140,50\n110 ON K>=255>=W%>40 GOTO 100,140,30,140:DATA X,HI,X,\n120 AB=(VAL(RIGHT$(C$,K)))\n130 K=SGN((40))*J:READ J,K\n140 HLIN 40000,(W%) AT 659:C$=\"123\"+M$\n150 AB%=SQR(C):END\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 923,
+ "obj_sha256": "e533e35a839b19210a50ae546d82bc23bcfe1ea376765d193da6d0a159db6755",
+ "cycles": 105500800,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6087
+  },
+  {
+   "line": 50,
+   "addr": 6128
+  },
+  {
+   "line": 60,
+   "addr": 6224
+  },
+  {
+   "line": 70,
+   "addr": 6240
+  },
+  {
+   "line": 80,
+   "addr": 6249
+  },
+  {
+   "line": 90,
+   "addr": 6381
+  },
+  {
+   "line": 100,
+   "addr": 6444
+  },
+  {
+   "line": 110,
+   "addr": 6481
+  },
+  {
+   "line": 120,
+   "addr": 6528
+  },
+  {
+   "line": 130,
+   "addr": 6543
+  },
+  {
+   "line": 140,
+   "addr": 6567
+  },
+  {
+   "line": 150,
+   "addr": 6609
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S011.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6986",
+  "LOCAL VARIABLES": "6987 - 7050",
+  "HIGHEST MEMORY LOCATION": "7050"
+ }
+}

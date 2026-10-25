@@ -1,0 +1,86 @@
+{
+ "id": "r2093",
+ "key": "b6ffd9fa9362a2fc",
+ "source": "10 REM! INTEGER J,I\n20 DEF FN F(X)=AB\n30 N2$=STR$(-((-C))):Q1$=RIGHT$(MID$(C$,Q1),((Z%=C))^((C-Q1)))\n40 N2$=LEFT$(\"\",((AB%<=1E3))*((.001+1))):SPEED=Q1:POKE NOT INT(40-426),21999\n50 FOR C=(((A=Z))*J OR Q1-((805-C%))) TO (J):IF (ASC(STR$(AB%))-((FN F(C)+C%))) THEN 40\n60 Z%=W%<=10+((W%+Z))\n70 GOSUB 100:CALL Z:DATA HI,-2.5,300,300\n80 Z%=2:GOTO 100\n90 AB=Q1:N2$=N2$:HPLOT TO 0.1,(SIN(((I>=905))+NOT Z)) TO 20*3+((AB%<A))<>-EXP(40),(W%)\n100 HLIN SGN(-((2/1000))),(Z%) AT Q1>=VAL(LEFT$(Q1$,AB%)):C%=COS(EXP(LEN(Q1$)))\n110 PRINT C;:C=ABS(Z>=32767)*((36065>=20-Z)):HTAB .001\n120 DATA \"A,B\":IF (W%) THEN IF (C) THEN Z%=-AB% OR J\n130 A=PEEK(J)*TAN(-C):COLOR=I<Q1+Z\n140 READ W%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1057,
+ "obj_sha256": "10b8eb166c85eab2734294db5677713aaf71ce583c48817da5770fb6aa152a35",
+ "cycles": 114802006,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6094
+  },
+  {
+   "line": 40,
+   "addr": 6148
+  },
+  {
+   "line": 50,
+   "addr": 6216
+  },
+  {
+   "line": 60,
+   "addr": 6294
+  },
+  {
+   "line": 70,
+   "addr": 6312
+  },
+  {
+   "line": 80,
+   "addr": 6343
+  },
+  {
+   "line": 90,
+   "addr": 6352
+  },
+  {
+   "line": 100,
+   "addr": 6445
+  },
+  {
+   "line": 110,
+   "addr": 6505
+  },
+  {
+   "line": 120,
+   "addr": 6550
+  },
+  {
+   "line": 130,
+   "addr": 6594
+  },
+  {
+   "line": 140,
+   "addr": 6633
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S002.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7120",
+  "LOCAL VARIABLES": "7121 - 7175",
+  "HIGHEST MEMORY LOCATION": "7175"
+ }
+}

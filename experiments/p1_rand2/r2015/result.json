@@ -1,0 +1,86 @@
+{
+ "id": "r2015",
+ "key": "b8988f7d06bad1a8",
+ "source": "10 REM! INTEGER K,J\n20 DIM P$(1,4),A(2),B$(3)\n30 DEF FN F(Z)=(-Z%)/255\n40 COLOR=SGN(-((NOT J)))\n50 GET AB%:W=A(-J):COLOR=35184\n60 PRINT C%/127<=ATN(C%)/ATN(35141);\n70 N2=J:IF (A) THEN A=-((NOT C%-A(K))):P$(1000=RND(SIN(A(J))),AB%*ATN(32767))=\"TASC\"\n80 GOSUB 10\n90 PRINT FN F(7),\n100 RESUME:PRINT A$+STR$(127>=913);ASC(STR$(1.5)),:N2=C\n110 A(PEEK(ASC(A$)))=A(((N2<>J))*NOT A)\n120 IF (C) THEN 10\n130 M%=K<=N2:ON 45096 GOTO 30:CALL ((K-196/10))*SQR(-K)\n140 W=-J>=((M%+N2<=Z%-65535)):CALL C%\n",
+ "options": {
+  "library": 4096,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 8109,
+ "obj_len": 840,
+ "obj_sha256": "12a233f1b12839a6e5d9fe00c94231c20397e3fcaa593891321162eea5ec3572",
+ "cycles": 97873091,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 8129
+  },
+  {
+   "line": 20,
+   "addr": 8129
+  },
+  {
+   "line": 30,
+   "addr": 8129
+  },
+  {
+   "line": 40,
+   "addr": 8154
+  },
+  {
+   "line": 50,
+   "addr": 8169
+  },
+  {
+   "line": 60,
+   "addr": 8193
+  },
+  {
+   "line": 70,
+   "addr": 8229
+  },
+  {
+   "line": 80,
+   "addr": 8325
+  },
+  {
+   "line": 90,
+   "addr": 8328
+  },
+  {
+   "line": 100,
+   "addr": 8340
+  },
+  {
+   "line": 110,
+   "addr": 8382
+  },
+  {
+   "line": 120,
+   "addr": 8424
+  },
+  {
+   "line": 130,
+   "addr": 8432
+  },
+  {
+   "line": 140,
+   "addr": 8483
+  }
+ ],
+ "info": {
+  "LIBRARY": "4096 - 8108",
+  "OBJECT FILE": "S002.OBJ",
+  "PROGRAM": "8109 - 8948",
+  "LOCAL VARIABLES": "8949 - 9042",
+  "HIGHEST MEMORY LOCATION": "9042"
+ }
+}

@@ -1,0 +1,78 @@
+{
+ "id": "r2118",
+ "key": "60b4f84b3ed2fed9",
+ "source": "10 DIM D$(4,12)\n20 DEF FN F(Z)=((B%(N2%)))*40\n30 C=AB\n40 A=FN F(C)\n50 IF (((B%(A%) OR N2%))+((AB>=N2%))-796) THEN IF (FN F(W*((9219>B%(A%))))) THEN GOTO 100:COLOR=C*((1 AND 40000+9890))\n60 WAIT X%<X%,(100<((W>=W)) AND TAN(B%(N2%))),(-((40<AB))):DATA \"A,B\",:PRINT\n70 M$=D$(-((N2%<=W)),-((16184^B%(X%)))):READ W:HTAB .001\n80 PRINT 32767,:M$=W$\n90 GOSUB 120:M$=W$:M$=Y$+\"A\"\n100 PRINT 17124;:C=LOG(W)>100:PRINT Y$;-((NOT W)) AND NOT W;\n110 M$=\"123\":PLOT A,B%(-A%=-W)\n120 VTAB ((XY*10+LEN(\"X Y\")))/10:DATA HI,-2.5,X:B%(N2%)=XY OR B%(127)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 899,
+ "obj_sha256": "9a39471acd7a89ab22147980181c1ca49d0a41254fc0b68eb7d3c9b89d708540",
+ "cycles": 102203418,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6103
+  },
+  {
+   "line": 40,
+   "addr": 6112
+  },
+  {
+   "line": 50,
+   "addr": 6124
+  },
+  {
+   "line": 60,
+   "addr": 6201
+  },
+  {
+   "line": 70,
+   "addr": 6287
+  },
+  {
+   "line": 80,
+   "addr": 6356
+  },
+  {
+   "line": 90,
+   "addr": 6377
+  },
+  {
+   "line": 100,
+   "addr": 6414
+  },
+  {
+   "line": 110,
+   "addr": 6477
+  },
+  {
+   "line": 120,
+   "addr": 6534
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6962",
+  "LOCAL VARIABLES": "6963 - 7163",
+  "HIGHEST MEMORY LOCATION": "7163"
+ }
+}

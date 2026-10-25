@@ -1,0 +1,94 @@
+{
+ "id": "r2107",
+ "key": "adbdd4568b551a82",
+ "source": "10 REM! INTEGER *\n20 DEF FN F(Z)=VAL(\"A\"+A$+A$)\n30 PRINT \"123\",COS(LEN(A$)),:A$=\"A\"\n40 FOR A=(NOT 0) TO (5+((A AND Q1%))*((B%<=5)))\n50 HOME\n60 IF (-EXP(X)) THEN Y$=B$+B$+B$+\"\"\n70 END\n80 X=N2%*Q1:N2=A*N2:Q1%=-N2%\n90 PRINT Y;((20>0>=X))+((2>=A)),:GOSUB 60:FOR A=(NOT COS(N2%>N2)) TO (VAL(CHR$(1.5))) STEP (FN F(Q1%)*((((Q1=N2%))+-A)))\n100 PRINT\n110 Y$=Y$:HTAB Q1\n120 FOR X=(FN F(ATN(B%))>=A) TO (-Y):ON -Q1% GOTO 150,80\n130 PRINT B%=A=Y>X+((Y>10));:W%=Y\n140 ON A GOTO 50,90,110:DATA 1,-2.5,\"A,B\",\n150 Y=X>=((-X AND 333))\n160 A$=B$:Q1=FN F(TAN(SQR(20))):A=SIN(N2%)-B%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 853,
+ "obj_sha256": "dd176e8c9efabff02a8c2fbdb0670494ba97d2f664ad952376f2b8a387898970",
+ "cycles": 103233154,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6119
+  },
+  {
+   "line": 40,
+   "addr": 6168
+  },
+  {
+   "line": 50,
+   "addr": 6215
+  },
+  {
+   "line": 60,
+   "addr": 6218
+  },
+  {
+   "line": 70,
+   "addr": 6267
+  },
+  {
+   "line": 80,
+   "addr": 6270
+  },
+  {
+   "line": 90,
+   "addr": 6297
+  },
+  {
+   "line": 100,
+   "addr": 6415
+  },
+  {
+   "line": 110,
+   "addr": 6418
+  },
+  {
+   "line": 120,
+   "addr": 6430
+  },
+  {
+   "line": 130,
+   "addr": 6476
+  },
+  {
+   "line": 140,
+   "addr": 6521
+  },
+  {
+   "line": 150,
+   "addr": 6552
+  },
+  {
+   "line": 160,
+   "addr": 6573
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S003.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6916",
+  "LOCAL VARIABLES": "6917 - 6955",
+  "HIGHEST MEMORY LOCATION": "6955"
+ }
+}

@@ -1,0 +1,76 @@
+{
+ "id": "r2054",
+ "key": "3359b511d5151b39",
+ "source": "10 REM! INTEGER K,I\n20 REM! USECOMMON Y,I,Z$\n30 Z%=ASC(CHR$(21738))<>ABS(Q1%)-1000:X=Z:PRINT LEFT$(\"\",Z% OR 20)+Z$+Z$;\n40 X=EXP(K)-Q1>=((K>481 OR 685)):IF (339 AND Q1) THEN Z%=-6803\n50 Q1=10^3.14159:GOSUB 110\n60 B%(-((-((C%=X)))),K/127)=INT(X%):HCOLOR=C%:GOTO 10\n70 ON X GOTO 30\n80 X=NOT Z:SPEED=-LEN(Z$):Y=K\n90 X%=(-((853 AND K))):Z$=LEFT$(MID$(LEFT$(X$,B%(X%,X%)),(B)),812)\n100 COLOR=EXP(PEEK(Y)):X%=INT(INT(K))-((ATN(Q1)+Z))\n110 GOTO 30\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6073,
+ "obj_len": 730,
+ "obj_sha256": "4bd0ffaa3a89ff1c9cfa63ea80abc7b608082fb6121b39d762e5a97194fd2991",
+ "cycles": 92791562,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6093
+  },
+  {
+   "line": 40,
+   "addr": 6183
+  },
+  {
+   "line": 50,
+   "addr": 6260
+  },
+  {
+   "line": 60,
+   "addr": 6278
+  },
+  {
+   "line": 70,
+   "addr": 6341
+  },
+  {
+   "line": 80,
+   "addr": 6353
+  },
+  {
+   "line": 90,
+   "addr": 6389
+  },
+  {
+   "line": 100,
+   "addr": 6446
+  },
+  {
+   "line": 110,
+   "addr": 6494
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S002.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6073 - 6802",
+  "NUMERIC COMMON": "6064 - 6070",
+  "STRING COMMON": "6071 - 6072",
+  "LOCAL VARIABLES": "6803 - 7083",
+  "HIGHEST MEMORY LOCATION": "7083"
+ }
+}

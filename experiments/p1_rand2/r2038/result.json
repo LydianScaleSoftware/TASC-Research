@@ -1,0 +1,83 @@
+{
+ "id": "r2038",
+ "key": "76822a6224619477",
+ "source": "10 REM! USECOMMON A%,C%,Y%\n20 Z$=STR$(((W<>C%))-Y%):GOTO 110:B%(-((Z%<>((7 AND B)))),-((256+W))+NOT ABS(B))=Z%\n30 GOSUB 50\n40 IF (-A%) THEN HLIN Z%,(((B%(Z%,3)/B))^((W/XY))) AT EXP(Y%)\n50 A=((166>=B%(C%,100)))*100\n60 M=Y%:HCOLOR=A*A%\n70 TEXT:Z$=STR$(A)+A$(A%)+Z$\n80 PRINT \"TASC\";B$+\"A\"+\"\",B%(C%,B^.5)<B%(3,ASC(AB$)),\n90 PLOT -((XY=B))>=((39>((20=B)))),.5\n100 B$=STR$(M):A=Y%<=39:READ Z%\n110 PRINT \"X Y\",LEFT$(MID$(AB$,A AND 127),(1000));M<=A%*Y%-((Y%-C%)),\n120 GOSUB 40:IF (W) THEN CALL C%:FOR XY=(A+W) TO (SIN(-B%(Y%,127)))\n130 C%=100-NOT W:PLOT -0,((B-A))/ABS(M) AND VAL(STR$(45977))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6070,
+ "obj_len": 1090,
+ "obj_sha256": "f46b87764c5d851433b8d0b0b9ca6527017bb8053d72a24b8318e8c18a9536a2",
+ "cycles": 110449742,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6090
+  },
+  {
+   "line": 30,
+   "addr": 6191
+  },
+  {
+   "line": 40,
+   "addr": 6194
+  },
+  {
+   "line": 50,
+   "addr": 6267
+  },
+  {
+   "line": 60,
+   "addr": 6294
+  },
+  {
+   "line": 70,
+   "addr": 6315
+  },
+  {
+   "line": 80,
+   "addr": 6351
+  },
+  {
+   "line": 90,
+   "addr": 6455
+  },
+  {
+   "line": 100,
+   "addr": 6503
+  },
+  {
+   "line": 110,
+   "addr": 6539
+  },
+  {
+   "line": 120,
+   "addr": 6614
+  },
+  {
+   "line": 130,
+   "addr": 6675
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S012.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6070 - 7159",
+  "NUMERIC COMMON": "6064 - 6069",
+  "LOCAL VARIABLES": "7160 - 7470",
+  "HIGHEST MEMORY LOCATION": "7470"
+ }
+}

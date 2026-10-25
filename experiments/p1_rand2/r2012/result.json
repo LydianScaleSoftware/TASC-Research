@@ -1,0 +1,90 @@
+{
+ "id": "r2012",
+ "key": "6514a31cbab4d4c9",
+ "source": "10 REM! INTEGER I,J\n20 DIM D%(4,7),P(6)\n30 DEF FN F(T)=D%(((P(B%) AND X))+COS(Z),Z%*304)\n40 IF (-J) THEN PRINT\n50 COLOR=145^((NOT 3>=VAL(\"\")))\n60 FOR I=(56) TO (NOT 256-((X>=B))>=((XY%<=J))-((I AND D%(Z%,8552)))):FOR Z=(XY) TO (FN F(-1))\n70 IF (XY-2.25+COS(NOT XY)) THEN 120\n80 PRINT XY;\"123\"+STR$(3),X$,:M=Z\n90 PRINT:IF (M) THEN 90\n100 HCOLOR=1<>D%(B%,Z%)*XY:PRINT 1E3;FN F(J*5)<=EXP(10);VAL(AB$);:SPEED=-360*FN F(10<=1)\n110 IF (-39 AND Z%/Z*M) THEN 90:XY$=\"HI\":GOTO 60\n120 VTAB 741:FOR XY=(D%(((B%=XY))+((D%(J,Z%)-B)),Y%)) TO (D%(VAL(\"\"+AB$),Z/B%>=J)):ON B%+Z%+XY%<>VAL(AB$) GOTO 10,80\n130 GOSUB 150\n140 DATA 300,:XY$=RIGHT$(LEFT$(\"123\",XY)+XY$,X OR M):IF (INT(Z%)) THEN PRINT\n150 NEXT:IF (Z) THEN ON B GOTO 110,60,110:NEXT Z\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1161,
+ "obj_sha256": "06459587d68ff5d988bfea05c21df8207882f3c791ccba276c67e96feefb2f88",
+ "cycles": 113724846,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6139
+  },
+  {
+   "line": 50,
+   "addr": 6155
+  },
+  {
+   "line": 60,
+   "addr": 6191
+  },
+  {
+   "line": 70,
+   "addr": 6294
+  },
+  {
+   "line": 80,
+   "addr": 6322
+  },
+  {
+   "line": 90,
+   "addr": 6370
+  },
+  {
+   "line": 100,
+   "addr": 6381
+  },
+  {
+   "line": 110,
+   "addr": 6477
+  },
+  {
+   "line": 120,
+   "addr": 6520
+  },
+  {
+   "line": 130,
+   "addr": 6674
+  },
+  {
+   "line": 140,
+   "addr": 6677
+  },
+  {
+   "line": 150,
+   "addr": 6743
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S012.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7224",
+  "LOCAL VARIABLES": "7225 - 7402",
+  "HIGHEST MEMORY LOCATION": "7402"
+ }
+}

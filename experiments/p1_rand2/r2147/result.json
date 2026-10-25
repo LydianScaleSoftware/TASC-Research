@@ -1,0 +1,66 @@
+{
+ "id": "r2147",
+ "key": "dae5aeaf85cbe6c8",
+ "source": "10 FOR C=(((Z%<=255))*AB<>Z) TO (AB)\n20 PRINT A%;:VTAB XY%:CALL XY\n30 PRINT 10,MID$(\"123\"+STR$(A%),NOT AB%,(Z%)*N2^AB%),X$;:PRINT MID$(B$,LEN(\"X Y\")^-Z%),W$,Z%,:ON AB% GOTO 50,60\n40 FOR C=(1) TO ((32767)^((10=A%<=AB%))):IF (Z%) THEN SPEED=ASC(\"A\"+\"X Y\")\n50 NEXT C\n60 Z=C:Z%=-((N2=-AB%)):P%(XY%-((SIN(P%(105))>=-1)))=AB-((AB%<=478))>=((ASC(\"TASC\")>=1000))\n70 PRINT P%(XY%);\"HI\";\n80 GOSUB 10:IF (Z OR 0<Z% AND XY%) THEN GOTO 30:PLOT ((N2<=NOT Z))^((25196+((AB%=XY%)))),XY\n90 GOTO 60\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 795,
+ "obj_sha256": "45d8e99c2e6456b8312238cb6b441f776c0fbebb2ce0f1096bcc40061cded83d",
+ "cycles": 91755229,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6116
+  },
+  {
+   "line": 30,
+   "addr": 6134
+  },
+  {
+   "line": 40,
+   "addr": 6286
+  },
+  {
+   "line": 50,
+   "addr": 6363
+  },
+  {
+   "line": 60,
+   "addr": 6368
+  },
+  {
+   "line": 70,
+   "addr": 6486
+  },
+  {
+   "line": 80,
+   "addr": 6509
+  },
+  {
+   "line": 90,
+   "addr": 6541
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S004.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6858",
+  "LOCAL VARIABLES": "6859 - 6931",
+  "HIGHEST MEMORY LOCATION": "6931"
+ }
+}

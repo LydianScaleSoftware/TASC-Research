@@ -1,0 +1,70 @@
+{
+ "id": "r2036",
+ "key": "b6ea4f4812b14fce",
+ "source": "10 A%=N2:M=100-((AB%-((646<>AB%))))\n20 Q1%=A%:DATA ,1,X,\n30 A%=-((-((100*24)))):M$=B$:FOR M=(AB%) TO (255>SGN(Q1%)/((3*A%)))\n40 IF (INT(A%)) THEN 10:A$=MID$(MID$(B$,-7),255):CALL A\n50 AB%=NOT 125\n60 COLOR=ABS(W)=AB%-((AB<=AB%)):IF (-((5 AND AB%*A))) THEN A%=(AB)<40000:DATA 300,1,\n70 HCOLOR=A%:M%=M>384\n80 NEXT M:A%=W:FOR W=(-A*VAL(B$)-N2) TO (LOG(-N2)>((N2<=COS(Q1%)))) STEP (100)\n90 A%=Q1%<10\n100 M$=CHR$(Q1%):IF (24*SIN(COS(M%))) THEN PLOT VAL(B$),(AB%):DATA HI,300,,300\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 757,
+ "obj_sha256": "b6afe283c21136e91f2e7e8ec926f9f5501cd21b0f4aad10e8458ffee0102f43",
+ "cycles": 97423934,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6108
+  },
+  {
+   "line": 30,
+   "addr": 6126
+  },
+  {
+   "line": 40,
+   "addr": 6188
+  },
+  {
+   "line": 50,
+   "addr": 6222
+  },
+  {
+   "line": 60,
+   "addr": 6231
+  },
+  {
+   "line": 70,
+   "addr": 6311
+  },
+  {
+   "line": 80,
+   "addr": 6329
+  },
+  {
+   "line": 90,
+   "addr": 6411
+  },
+  {
+   "line": 100,
+   "addr": 6423
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S010.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6820",
+  "LOCAL VARIABLES": "6821 - 6864",
+  "HIGHEST MEMORY LOCATION": "6864"
+ }
+}

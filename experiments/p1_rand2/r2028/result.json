@@ -1,0 +1,90 @@
+{
+ "id": "r2028",
+ "key": "adc31c737e59e7d3",
+ "source": "10 REM! INTEGER I\n20 C=W\n30 DATA 1,\"A,B\",X,-2.5:PRINT C;Z$,\n40 CALL Y%:Z$=W$+RIGHT$(MID$(W$,A),Y%=C):HCOLOR=-((-((32767^A%))))\n50 SPEED=C\n60 CALL C\n70 COLOR=0.1:PRINT\n80 M$=W$:IF (ABS(.001)) THEN PRINT CHR$(I+1<=W),RIGHT$(W$,ATN(100));MID$(W$,Y%,255);:POP\n90 GOTO 130:READ M$,Z\n100 N2%=X%:CALL N2%\n110 IF (W) THEN 80\n120 W=Y%:ON -1000 GOTO 30,10\n130 HOME:GOSUB 50\n140 Z=X%\n150 POKE INT(I),NOT 127:Z=2:PRINT RIGHT$(MID$(\"\",I,I),Y%<>Y%)+CHR$(A%);\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 606,
+ "obj_sha256": "2a127bd66081e92ab1c23acfd553955a94961b98dd5ec871f648ccf4040adc9f",
+ "cycles": 88649940,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6090
+  },
+  {
+   "line": 40,
+   "addr": 6124
+  },
+  {
+   "line": 50,
+   "addr": 6178
+  },
+  {
+   "line": 60,
+   "addr": 6184
+  },
+  {
+   "line": 70,
+   "addr": 6190
+  },
+  {
+   "line": 80,
+   "addr": 6199
+  },
+  {
+   "line": 90,
+   "addr": 6278
+  },
+  {
+   "line": 100,
+   "addr": 6281
+  },
+  {
+   "line": 110,
+   "addr": 6290
+  },
+  {
+   "line": 120,
+   "addr": 6298
+  },
+  {
+   "line": 130,
+   "addr": 6318
+  },
+  {
+   "line": 140,
+   "addr": 6324
+  },
+  {
+   "line": 150,
+   "addr": 6330
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S002.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6669",
+  "LOCAL VARIABLES": "6670 - 6707",
+  "HIGHEST MEMORY LOCATION": "6707"
+ }
+}

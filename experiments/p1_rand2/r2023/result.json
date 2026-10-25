@@ -1,0 +1,78 @@
+{
+ "id": "r2023",
+ "key": "8e90b810ff22f955",
+ "source": "10 REM! INTEGER I,K\n20 DEF FN F(Z)=NOT ((32668*20 OR -I))\n30 K=Q1\n40 INVERSE\n50 FOR Q1=(32767) TO (EXP(((20 AND 3))<1.5)):XY=NOT ((AB>Q1%))/((N2%*.5>=ASC(\"X Y\"))):FOR W=(((AB=Z>K))-40000) TO (W) STEP (32767/10039/N2%>EXP(AB))\n60 N2%=N2%:PRINT 0,X$;Q1%,:NEXT W\n70 Y$=MID$(CHR$(FN F(I)),Z,0)\n80 XY=W/((((W>19))-((Q1%+K)))):FOR I=(Z) TO (Z) STEP (10):Q1%=W^((SGN(M%)*267))\n90 Y%=10:M%=((ASC(Y$)>-AB))+5\n100 IF (FN F(-((Z<>10)))) THEN 10:VTAB I\n110 X$=\"X Y\":I=ABS(Z)\n120 FOR Q1=(W) TO (VAL(\"A\"))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 863,
+ "obj_sha256": "7ac0c8b87ddfd0f44e6a78e3414cadca4372c8ab2e5d23763f3d7a79afc76a17",
+ "cycles": 104378862,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6118
+  },
+  {
+   "line": 40,
+   "addr": 6124
+  },
+  {
+   "line": 50,
+   "addr": 6127
+  },
+  {
+   "line": 60,
+   "addr": 6284
+  },
+  {
+   "line": 70,
+   "addr": 6319
+  },
+  {
+   "line": 80,
+   "addr": 6343
+  },
+  {
+   "line": 90,
+   "addr": 6411
+  },
+  {
+   "line": 100,
+   "addr": 6444
+  },
+  {
+   "line": 110,
+   "addr": 6466
+  },
+  {
+   "line": 120,
+   "addr": 6490
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S010.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6926",
+  "LOCAL VARIABLES": "6927 - 6986",
+  "HIGHEST MEMORY LOCATION": "6986"
+ }
+}

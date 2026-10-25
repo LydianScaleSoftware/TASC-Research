@@ -1,0 +1,66 @@
+{
+ "id": "r2099",
+ "key": "9422f15bb3bf0450",
+ "source": "10 DIM D(12)\n20 IF (3) THEN P$(AB%,2)=X$:POP\n30 DATA HI,300,X:DATA HI\n40 D(X%*X)=Q1%\n50 B=VAL(RIGHT$(\"HI\",-Q1%)):SPEED=Y OR W>TAN(X):CALL X<=VAL(MID$(M$,B,Y))\n60 IF ((65535)) THEN GOTO 10:ON 39 GOTO 80,90\n70 AB%=X%\n80 Y=2\n90 IF (3) THEN SPEED=LEN(STR$(X))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 375,
+ "obj_sha256": "00284b9d72a95de79b39d8e870c84d21c2cf244d1cdf0c789e4fa6cbb0b16b73",
+ "cycles": 71341040,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6113
+  },
+  {
+   "line": 40,
+   "addr": 6137
+  },
+  {
+   "line": 50,
+   "addr": 6155
+  },
+  {
+   "line": 60,
+   "addr": 6229
+  },
+  {
+   "line": 70,
+   "addr": 6237
+  },
+  {
+   "line": 80,
+   "addr": 6243
+  },
+  {
+   "line": 90,
+   "addr": 6249
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S008.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6438",
+  "LOCAL VARIABLES": "6439 - 6775",
+  "HIGHEST MEMORY LOCATION": "6775"
+ }
+}

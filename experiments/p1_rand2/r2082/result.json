@@ -1,0 +1,86 @@
+{
+ "id": "r2082",
+ "key": "09c6362817950b36",
+ "source": "10 DIM D$(12)\n20 DRAW X% AND LEN(\"\")<=COS(5) AT EXP(RND(111*AB)),(24 AND ((N2%<=100 AND ((W OR 100)))))\n30 GOTO 120:ON (SQR(Z%<=N2%)) GOTO 10:IF (Y%) THEN RESTORE\n40 POKE (SQR(508)),-((W-((39-842)))):ON TAN(3)^X% GOTO 140,50\n50 CALL ATN(B)*10-30508*((Y%>=AB)):CALL -((-B)):IF (127+32767) THEN 70\n60 Z$=D$(-N2%):HLIN -((B>32767)),(A OR N2%) AT ((40000<>W))*B/((((Y%>N2%))-756)):DATA HI,HI\n70 B=NOT ((40=N2))\n80 AB=((24712>=X%))/((978<>Y%))-EXP(Z%)\n90 N2=B(NOT X%*N2%):W=B(N2%)\n100 COLOR=N2:PRINT LEFT$(\"HI\"+\"TASC\"+Q1$,Z%-Z%+AB);Y%*ASC(\"X Y\");:IF (-((B AND A))) THEN 140\n110 N2=N2%:RESTORE\n120 IF (((W OR N2^B(5)))-((255*W<10))) THEN FOR N2=(256) TO (N2%):CALL ((32767<=Z%))*((W/A))=(SIN(X%))\n130 HCOLOR=X%^VAL(D$(Y%)+D$(N2%)):HCOLOR=((39>ABS(10)))/100\n140 B=-Z%:Q1$=Q1$\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1188,
+ "obj_sha256": "c037d5a0fa84349afc58cef7c1b190fe17fe144838e0a59e2266c5803ff313db",
+ "cycles": 113632438,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6174
+  },
+  {
+   "line": 40,
+   "addr": 6177
+  },
+  {
+   "line": 50,
+   "addr": 6224
+  },
+  {
+   "line": 60,
+   "addr": 6279
+  },
+  {
+   "line": 70,
+   "addr": 6369
+  },
+  {
+   "line": 80,
+   "addr": 6384
+  },
+  {
+   "line": 90,
+   "addr": 6423
+  },
+  {
+   "line": 100,
+   "addr": 6450
+  },
+  {
+   "line": 110,
+   "addr": 6550
+  },
+  {
+   "line": 120,
+   "addr": 6559
+  },
+  {
+   "line": 130,
+   "addr": 6661
+  },
+  {
+   "line": 140,
+   "addr": 6718
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S004.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7251",
+  "LOCAL VARIABLES": "7252 - 7378",
+  "HIGHEST MEMORY LOCATION": "7378"
+ }
+}

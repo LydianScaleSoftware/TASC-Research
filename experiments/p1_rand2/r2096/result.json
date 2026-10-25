@@ -1,0 +1,78 @@
+{
+ "id": "r2096",
+ "key": "a1016dd0a4553ad4",
+ "source": "10 REM! INTEGER K,I\n20 DIM B(5,10),D$(7),A(7,5)\n30 A$=C$+\"X Y\"\n40 PRINT I;PEEK(.5);\n50 A=Y%>A%:N2$=N2$\n60 IF (-127*X%^M<K) THEN PRINT COS(PEEK(A(426,127)));D$(((I AND X%))<=Y),:B=LOG(Y%):GR\n70 Z%=B-((B-A(255,7)))-X%\n80 D$(39 OR B+40000<B)=N2$:RETURN:B=NOT ((A(280,Y%)>=32767))+((10 OR 579))\n90 Y%=INT(A(Y%,10))+TAN(Z%<=0):DATA 300,HI,X:PRINT\n100 PRINT\n110 D$(B-SIN(A%)<=I)=MID$(MID$(N2$,B(2,32767))+LEFT$(N2$,502),I)\n120 IF ((0.1*Y%<>A%)) THEN 100:GOTO 40\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 872,
+ "obj_sha256": "b7cf4eea4fff93dbb069a23bc518f1999cd334963ac68039bc791ee78e051ea2",
+ "cycles": 95691786,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6111
+  },
+  {
+   "line": 50,
+   "addr": 6129
+  },
+  {
+   "line": 60,
+   "addr": 6153
+  },
+  {
+   "line": 70,
+   "addr": 6257
+  },
+  {
+   "line": 80,
+   "addr": 6290
+  },
+  {
+   "line": 90,
+   "addr": 6372
+  },
+  {
+   "line": 100,
+   "addr": 6432
+  },
+  {
+   "line": 110,
+   "addr": 6438
+  },
+  {
+   "line": 120,
+   "addr": 6507
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S005.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6935",
+  "LOCAL VARIABLES": "6936 - 7568",
+  "HIGHEST MEMORY LOCATION": "7568"
+ }
+}

@@ -31,6 +31,7 @@ class Ctx:
     arrays: dict[str, int]  # name with suffix -> number of subscripts
     fns: list[str]
     depth: int = 0
+    v2: bool = False
 
 
 def num_lit(r: random.Random) -> str:
@@ -188,10 +189,43 @@ def statement(c: Ctx, lines: list[int], cur: int, for_stack: list[str]) -> str:
         return "READ " + ",".join(r.choice(c.reals + c.ints + c.strs) for _ in range(r.randint(1, 2)))
     if k < 0.97:
         return "DATA " + ",".join(r.choice(["1", "-2.5", "HI", '"A,B"', "", "300", "X"]) for _ in range(r.randint(1, 4)))
-    return f"INPUT {r.choice(c.reals + c.ints)}"
+    if not c.v2:
+        return f"INPUT {r.choice(c.reals + c.ints)}"
+    k2 = r.random()
+    if k2 < 0.1:
+        return f"ON {nexpr(c)[0]} GOSUB " + ",".join(str(r.choice(lines)) for _ in range(r.randint(1, 3)))
+    if k2 < 0.18:
+        return f"ONERR GOTO {r.choice(lines)}"
+    if k2 < 0.22:
+        return "RESUME"
+    if k2 < 0.3:
+        return f"GET {r.choice(c.reals + c.ints + c.strs)}"
+    if k2 < 0.4:
+        pts = f"{nexpr(c)[0]},({nexpr(c)[0]})"
+        return "HPLOT " + ("TO " if r.random() < 0.3 else "") + pts + (f" TO {nexpr(c)[0]},({nexpr(c)[0]})" if r.random() < 0.4 else "")
+    if k2 < 0.48:
+        st = r.choice(["DRAW", "XDRAW"])
+        return f"{st} {nexpr(c)[0]}" + (f" AT {nexpr(c)[0]},({nexpr(c)[0]})" if r.random() < 0.5 else "")
+    if k2 < 0.53:
+        return f"WAIT {nexpr(c)[0]},({nexpr(c)[0]})" + (f",({nexpr(c)[0]})" if r.random() < 0.5 else "")
+    if k2 < 0.6:
+        st = r.choice(["ROT=", "SCALE=", "HCOLOR=", "PR#", "IN#"])
+        return f"{st}{nexpr(c)[0]}"
+    if k2 < 0.68:
+        vs = ",".join(target(c)[0] for _ in range(r.randint(1, 3)))
+        return (f'INPUT "{r.choice(["Q", "NAME", ""])}";' if r.random() < 0.5 else "INPUT ") + vs
+    if k2 < 0.76:
+        return "READ " + ",".join(target(c)[0] for _ in range(r.randint(1, 3)))
+    if k2 < 0.84:
+        return f"IF ({nexpr(c)[0]}) THEN RETURN" + (f":{statement(c, lines, cur, [])}" if r.random() < 0.5 else "")
+    if k2 < 0.9:
+        return f"IF ({nexpr(c)[0]}) THEN IF ({nexpr(c)[0]}) THEN {statement(c, lines, cur, [])}"
+    if k2 < 0.95:
+        return "STOP"
+    return f"GOSUB {r.choice(lines)}:{statement(c, lines, cur, [])}"
 
 
-def program(seed: int) -> tuple[str, Options]:
+def program(seed: int, v2: bool = False) -> tuple[str, Options]:
     r = random.Random(seed)
     names = [n for n in ["A", "B", "C", "X", "Y", "Z", "AB", "XY", "Q1", "M", "N2", "W"] if ok_name(n)]
     reals = r.sample(names, 5)
@@ -200,8 +234,14 @@ def program(seed: int) -> tuple[str, Options]:
     strs = r.sample([n + "$" for n in names], 3)
     arrays: dict[str, int] = {}
     head: list[str] = []
-    if intdecl:
+    if v2 and r.random() < 0.1:
+        head.append("REM! INTEGER *")
+        ints = [n for n in ints if n.endswith("%")] + [n for n in reals[:2]]
+        reals = reals[2:] or ["W"]
+    elif intdecl:
         head.append("REM! INTEGER " + ",".join(intdecl))
+    if v2 and r.random() < 0.15:
+        head.append("REM! " + r.choice(["DEFCOMMON", "USECOMMON"]) + " " + ",".join(r.sample(reals + ints + strs, 3)))
     dims = []
     for nm in r.sample(["A", "B", "D", "P"], r.randint(0, 3)):
         suffix = r.choice(["", "%", "$"])
@@ -211,7 +251,7 @@ def program(seed: int) -> tuple[str, Options]:
             dims.append(f"{nm}{suffix}({','.join(str(r.randint(1, 12)) for _ in range(nd))})")
     if dims:
         head.append("DIM " + ",".join(dims))
-    c = Ctx(r, reals, ints, strs, arrays, [])
+    c = Ctx(r, reals, ints, strs, arrays, [], v2=v2)
     if r.random() < 0.4:
         head.append(f"DEF FN F({r.choice(['Z', 'T', 'X'])})={nexpr(c)[0]}")
         c.fns = ["F"]
@@ -228,7 +268,11 @@ def program(seed: int) -> tuple[str, Options]:
         if len(text) > 200:
             text = stmts[0][:200]
         out.append(f"{ln} {text}")
-    opts = Options(int_arith=r.random() < 0.7, int_const=r.random() < 0.7, resume=r.random() < 0.25)
+    mem: dict[str, object] = {}
+    if v2 and r.random() < 0.2:
+        mem = r.choice([{"library": 0x1000}, {"program": "HGR1"}, {"program": 0x5000}, {"variables": 0x7000},
+                        {"library": 0x4000, "program": 0x6000}])
+    opts = Options(int_arith=r.random() < 0.7, int_const=r.random() < 0.7, resume=r.random() < 0.25, **mem)  # type: ignore[arg-type]
     return "\n".join(out) + "\n", opts
 
 
@@ -237,9 +281,10 @@ def main() -> None:
 
     fam, count = sys.argv[1], int(sys.argv[2])
     seed0 = int(sys.argv[3]) if len(sys.argv) > 3 else 1000
+    v2 = "--v2" in sys.argv
     jobs = []
     for i in range(count):
-        src, opts = program(seed0 + i)
+        src, opts = program(seed0 + i, v2)
         jobs.append(Job(f"r{seed0 + i}", src, opts))
     run_family(fam, jobs, workers=12)
 

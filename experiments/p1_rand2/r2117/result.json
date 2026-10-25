@@ -1,0 +1,74 @@
+{
+ "id": "r2117",
+ "key": "1be44a0e6f82207d",
+ "source": "10 DEF FN F(X)=SQR(LEN(AB$)>=579)\n20 C=Z*C%=AB%\n30 Q1%=722--27846-LEN(MID$(Y$,XY)):N2=NOT AB%\n40 Y$=Y$\n50 FOR Z=(RND(FN F(VAL(\"X Y\")))) TO (XY AND C%<>C OR Z)\n60 GOSUB 90:ON 255*0 AND -((-Y%)) GOTO 20:Q1%=32767\n70 PRINT N2 OR C%*SGN(XY);:READ N2,C\n80 ON -C% GOTO 70\n90 X=N2<>((VAL(Y$)>((40<>Q1%))))\n100 PRINT Y%;\n110 IF (Z) THEN 70:HPLOT C%,(2-RND(C)+-N2):XY=((X-0<=AB%))^SQR(ABS(XY))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 574,
+ "obj_sha256": "b69ecb8c25eda0decbb9d782d3d89cbb4d14377a20c130d8d3fc470866dff77f",
+ "cycles": 90488267,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6106
+  },
+  {
+   "line": 30,
+   "addr": 6121
+  },
+  {
+   "line": 40,
+   "addr": 6160
+  },
+  {
+   "line": 50,
+   "addr": 6166
+  },
+  {
+   "line": 60,
+   "addr": 6219
+  },
+  {
+   "line": 70,
+   "addr": 6261
+  },
+  {
+   "line": 80,
+   "addr": 6291
+  },
+  {
+   "line": 90,
+   "addr": 6303
+  },
+  {
+   "line": 100,
+   "addr": 6336
+  },
+  {
+   "line": 110,
+   "addr": 6342
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6637",
+  "LOCAL VARIABLES": "6638 - 6686",
+  "HIGHEST MEMORY LOCATION": "6686"
+ }
+}

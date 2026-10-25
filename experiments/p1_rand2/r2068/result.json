@@ -1,0 +1,86 @@
+{
+ "id": "r2068",
+ "key": "9338df4bb6ec24e7",
+ "source": "10 REM! INTEGER J,K\n20 DEF FN F(T)=K<W*M<=893\n30 HPLOT VAL(\"HI\"+P$(A%))^0,(ATN(J>=-127))\n40 N2=40\n50 SPEED=20799<>K\n60 N2=-((XY^A%)):IF (NOT K) THEN PRINT RIGHT$(\"HI\"+\"HI\"+N2$,M%),1<>0;:A$(K*20+B+((ABS(B)+M/M%)))=N2$+MID$(N2$,M%)\n70 X$=M$:CALL N2^FN F(B%+.5)\n80 IF (J) THEN PRINT M,X$,\n90 RETURN\n100 TEXT\n110 W=XY\n120 IF (NOT 39) THEN 50:B=SQR(-W)\n130 PRINT SIN(-SIN(X%));\n140 HCOLOR=953:PRINT\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 723,
+ "obj_sha256": "588e5cb8cb942f2a0030bc52418828647eb6cc230b8bb764c5303fd14d2211b3",
+ "cycles": 95450912,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6109
+  },
+  {
+   "line": 40,
+   "addr": 6162
+  },
+  {
+   "line": 50,
+   "addr": 6168
+  },
+  {
+   "line": 60,
+   "addr": 6180
+  },
+  {
+   "line": 70,
+   "addr": 6324
+  },
+  {
+   "line": 80,
+   "addr": 6348
+  },
+  {
+   "line": 90,
+   "addr": 6374
+  },
+  {
+   "line": 100,
+   "addr": 6375
+  },
+  {
+   "line": 110,
+   "addr": 6378
+  },
+  {
+   "line": 120,
+   "addr": 6384
+  },
+  {
+   "line": 130,
+   "addr": 6407
+  },
+  {
+   "line": 140,
+   "addr": 6422
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S003.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6786",
+  "LOCAL VARIABLES": "6787 - 6888",
+  "HIGHEST MEMORY LOCATION": "6888"
+ }
+}

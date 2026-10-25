@@ -1,0 +1,131 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S010
+
+
+OBJECT CODE FILE:
+(DEFAULT S010.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION?
+
+*****BEGINNING PASS 1
+
+
+
+10
+RECOGNIZED  REM ! INTEGER J
+20  DIM D$(7)
+30  DATA 1,1: PRINT
+40 Y$ =  LEFT$ ("X Y",2) + Y$ + M$ + "X
+Y":J = A(X% <  > 40, TAN (130)):J = W% *
+ ((A(N2%,X%) <  ATN (256)))
+50  PRINT 10 + ((Q1% = (X%))); ATN ( - 1
+3121),Q1$,:J = .5: GET M
+60  IF (X) THEN 120
+
+*****WARNING
+LINE NUMBER 60
+IGNORED
+
+: POKE XY,100 <  = J * ((N2 - A(X%,N2%))
+)
+
+
+70  PRINT  LEN ("TASC");"" + Y$,: FOR N2
+ = (XY) TO (32767 > N2% <  =  - A(W%,127
+) OR  - XY <  = W%): GOSUB 200
+80  PRINT 256 - 7 = (( SGN (C) AND A(X%,
+N2%) * X%)),Q1$; - ((24 <  = M OR  SIN (
+A(J,5))));: READ C,Q1%
+90  PRINT
+100  ONERR  GOTO 140
+
+*****WARNING
+LINE NUMBER 100
+IGNORED
+
+: FOR J = (((694 <  > J OR 10646)) / M)
+TO (((24 <  > 10620)) * 1.5 <  >  PEEK (
+X%) / 255)
+
+
+:W% = N2
+110  IF ( - 1) THEN  SPEED= J
+120  FOR J = ( SIN ( EXP (Q1%) <  = ((C
+> XY)))) TO ( - ((N2% <  = C))): PRINT
+LEFT$ ( LEFT$ (M$,256),W% = J), NOT (((N
+2) ^ ((X% OR C))));A((C),N2% AND XY) > (
+(XY <  = ((N2 < A(N2%,7))))),:X% = X = N
+2 > ((W% <  > 32767)) OR (( - 705 OR  PE
+EK (N2%)))
+130  READ XY
+140  INVERSE :D$( SQR (39)) =  MID$ (Y$,
+C) + M$ + P$(7 + X%)
+150 N2 =  SQR ( ABS ( - 127))
+160  GOSUB 210: READ D$(Q1% / (( NOT X >
+ 554))),A(C >  = ((N2 - M OR C <  = Q1%)
+), TAN (N2% = XY <  =  ASC (M$)))
+170 C = A( SQR (3 AND A(987,J)),Q1% >  =
+  ASC ("")):XY = X%
+180 C = X%: IF (X <  = (( TAN (735) > ((
+N2% AND Q1%))))) THEN 180
+190  PLOT W% <  = M /  NOT X%, NOT 20
+200  NEXT J
+210  GOSUB 80:N2 =  - Q1% - (( - N2% + X
+Y))
+220  PRINT  NOT ((Q1% OR 40));Q1$;:M$ =
+M$ + Y$ + "TASC"
+
+
+
+*****BEGINNING PASS 2
+
+
+.....
+
+
+*****CODE GENERATION COMPLETE
+
+
+COMPILATION INFORMATION AND LINE NUMBER
+REFERENCE TABLE? YES
+
+
+SOURCE FILE: S010
+OBJECT FILE: S010.OBJ
+LIBRARY OCCUPIES 2051 - 6063
+PROGRAM OCCUPIES 6064 - 7726
+
+NO COMMON BLOCK
+
+LOCAL VARIABLES OCCUPY 7727 - 8424
+
+HIGHEST MEMORY LOCATION: 8424
+
+
+LINE# ADDR   LINE# ADDR   LINE# ADDR
+
+10    6084   20    6084   30    6084
+40    6097   50    6211   60    6265
+70    6273   80    6387   90    6495
+100   6498   110   6509   120   6530
+130   6759   140   6765   150   6816
+160   6834   170   6945   180   7011
+190   7055   200   7082   210   7087
+220   7117
+
+*****COMPILATION COMPLETE
+
+
+]?

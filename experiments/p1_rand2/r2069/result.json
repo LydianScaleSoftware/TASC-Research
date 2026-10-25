@@ -1,0 +1,95 @@
+{
+ "id": "r2069",
+ "key": "9eb5361d2d175795",
+ "source": "10 REM! USECOMMON M,Z%,Q1\n20 DIM A$(12)\n30 PRINT X$;Y;A$(1.5);:HTAB (Q1%)^X%:C$=LEFT$(\"123\",N2)\n40 ON (M%-3.14159-392*1) GOSUB 120,100,30\n50 IF (((X%<785))*((X%>5))+((ASC(Q1$)--40))) THEN IF (-255) THEN A$(Q1%)=MID$(C$,32767):Q1=Q1\n60 IF (-((NOT M<=((M% AND 19631))))) THEN 50:X$=\"HI\"\n70 Q1$=\"X Y\":IF (20) THEN CALL Y\n80 N2=X%:ON Z+((LEN(\"A\") AND Z)) GOTO 40,50,70,70:Q1=EXP(ABS(X%))>=-Z%\n90 PRINT \"\";:PLOT Y,NOT ((((Q1% OR Z))>-Z%))\n100 Q1$=Q1$\n110 ON Q1% GOSUB 110:M=12423+1.5\n120 VTAB INT(ATN(Q1)*((747 OR 39))):X%=Q1\n130 A$(1E3-49152+256>=Y)=Q1$\n140 PRINT X$;ABS(X%),M,:PRINT NOT ASC(CHR$(Q1));\n150 Q1$=\"TASC\"\n160 Q1%=0-((Z%+3))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6076,
+ "obj_len": 995,
+ "obj_sha256": "a127f662149af043475c143c0d48b811ff05ba788c5d14462640e4e6c5d0581b",
+ "cycles": 105295939,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6096
+  },
+  {
+   "line": 30,
+   "addr": 6096
+  },
+  {
+   "line": 40,
+   "addr": 6153
+  },
+  {
+   "line": 50,
+   "addr": 6181
+  },
+  {
+   "line": 60,
+   "addr": 6273
+  },
+  {
+   "line": 70,
+   "addr": 6324
+  },
+  {
+   "line": 80,
+   "addr": 6353
+  },
+  {
+   "line": 90,
+   "addr": 6420
+  },
+  {
+   "line": 100,
+   "addr": 6471
+  },
+  {
+   "line": 110,
+   "addr": 6477
+  },
+  {
+   "line": 120,
+   "addr": 6495
+  },
+  {
+   "line": 130,
+   "addr": 6528
+  },
+  {
+   "line": 140,
+   "addr": 6555
+  },
+  {
+   "line": 150,
+   "addr": 6601
+  },
+  {
+   "line": 160,
+   "addr": 6617
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S004.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6076 - 7070",
+  "NUMERIC COMMON": "6064 - 6075",
+  "LOCAL VARIABLES": "7071 - 7130",
+  "HIGHEST MEMORY LOCATION": "7130"
+ }
+}

@@ -1,0 +1,86 @@
+{
+ "id": "r2135",
+ "key": "be3b273a11cc0139",
+ "source": "10 REM! INTEGER J\n20 DIM B$(2,9)\n30 Y$=C$:GOSUB 100:X%=RND(NOT (X%))\n40 C=SQR(SQR(W)):Y=PEEK(M>=Y):C=7\n50 M$=Y$:C=127:HTAB ((C%>=X%>((10>N2%))))--C%/VAL(\"TASC\")\n60 PRINT:READ C%,Y%\n70 PRINT J>LEN(C$);\n80 PRINT A,M,C>=W;:GOSUB 130\n90 HTAB -Y%:IF (W) THEN 80\n100 CALL Y>3.14159\n110 GOSUB 120:PRINT C;C$;M;:TEXT:DATA 1,300,1\n120 PRINT:X%=X%:IF (NOT ((-((N2%>=C))))) THEN CALL COS(ASC(Y$))\n130 C$=MID$(Y$,-RND(3.14159),LOG(.5<>C%)):READ Y%\n140 GR:IF (SQR(X% AND W)-((W+M*C%))) THEN TEXT:FOR M=(Y%) TO (39) STEP (C%)\n",
+ "options": {
+  "library": 16384,
+  "program": 24576,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 24576,
+ "obj_len": 813,
+ "obj_sha256": "d756bb4420b84047bf6c7f91b51d5bf8d3cb034f878e42704c9a18e7874b33bf",
+ "cycles": 96768538,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 24596
+  },
+  {
+   "line": 20,
+   "addr": 24596
+  },
+  {
+   "line": 30,
+   "addr": 24596
+  },
+  {
+   "line": 40,
+   "addr": 24623
+  },
+  {
+   "line": 50,
+   "addr": 24668
+  },
+  {
+   "line": 60,
+   "addr": 24753
+  },
+  {
+   "line": 70,
+   "addr": 24774
+  },
+  {
+   "line": 80,
+   "addr": 24792
+  },
+  {
+   "line": 90,
+   "addr": 24828
+  },
+  {
+   "line": 100,
+   "addr": 24851
+  },
+  {
+   "line": 110,
+   "addr": 24866
+  },
+  {
+   "line": 120,
+   "addr": 24907
+  },
+  {
+   "line": 130,
+   "addr": 24962
+  },
+  {
+   "line": 140,
+   "addr": 25019
+  }
+ ],
+ "info": {
+  "LIBRARY": "16384 - 20396",
+  "OBJECT FILE": "S005.OBJ",
+  "PROGRAM": "24576 - 25388",
+  "LOCAL VARIABLES": "25389 - 25501",
+  "HIGHEST MEMORY LOCATION": "25501"
+ }
+}

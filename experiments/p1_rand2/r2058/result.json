@@ -1,0 +1,78 @@
+{
+ "id": "r2058",
+ "key": "305c5f429deea44c",
+ "source": "10 REM! INTEGER I\n20 DIM B(9)\n30 AB=39:IF (A) THEN IF (PEEK(ASC(A$(XY%))<>I)) THEN AB$=AB$:IF (X<=-((-X))) THEN 50\n40 GOTO 70\n50 AB=AB:COLOR=B(ATN(XY%+B(5))):X=B(((B(X%)>A))--XY%)\n60 READ M%,XY$:GOTO 10\n70 READ I:READ C,AB$:A$(((20*Y%<>LOG(AB)))^-(AB))=\"\"\n80 FOR A=(B) TO (AB) STEP (ATN((1E3))>=24)\n90 I=10*((3-X=A)):DATA ,300\n100 XY$=\"A\":X=X%\n110 FOR A=(X) TO (0):PLOT B*A-X%<=((X%+AB>B(Y%))),I^LOG(X%-Y%):PRINT LEFT$(\"X Y\",B(I)),\n120 VTAB X%:A=(127)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 835,
+ "obj_sha256": "505b22bf8d005c93669b1091b6f7b6b5bd0d7aad99e5487fe23992e8d56d30aa",
+ "cycles": 96923929,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6160
+  },
+  {
+   "line": 50,
+   "addr": 6163
+  },
+  {
+   "line": 60,
+   "addr": 6238
+  },
+  {
+   "line": 70,
+   "addr": 6256
+  },
+  {
+   "line": 80,
+   "addr": 6337
+  },
+  {
+   "line": 90,
+   "addr": 6369
+  },
+  {
+   "line": 100,
+   "addr": 6401
+  },
+  {
+   "line": 110,
+   "addr": 6426
+  },
+  {
+   "line": 120,
+   "addr": 6548
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S006.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6898",
+  "LOCAL VARIABLES": "6899 - 7019",
+  "HIGHEST MEMORY LOCATION": "7019"
+ }
+}

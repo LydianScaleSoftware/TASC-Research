@@ -1,0 +1,98 @@
+{
+ "id": "r2022",
+ "key": "80c91339d57f112d",
+ "source": "10 REM! INTEGER I,J\n20 RETURN\n30 PRINT:READ Z%,XY\n40 W=127\n50 GET Q1:POKE Z%,INT(5)=SGN(J)-J:N2=VAL(AB$)\n60 READ XY$,N2%\n70 PLOT W%,VAL(STR$(SIN(N2%))):Z%=W%\n80 XY=(XY*N2)<>(32767):Y$=\"\"\n90 N2=N2:PLOT ABS(W<>((32767>=I))),(W%)-((7<>A%))>=-((N2*I))\n100 READ W%,I:PRINT:SPEED=-((J-349))^1.5\n110 IF (N2) THEN PRINT 620*32767,\"TASC\"+\"A\",CHR$(40000);\n120 CALL Q1:SPEED=N2%\n130 NORMAL:GOSUB 40\n140 GOTO 50:GOSUB 20:XY$=STR$(24)\n150 W=ABS(W<>39/A%):IF (VAL(\"TASC\")>=Y>((Q1<>(XY)))) THEN IF (PEEK(693)+1) THEN W=INT(((A%<=Q1))*N2):VTAB Z%<-976\n160 ON Z% GOTO 100\n170 Q1=VAL(LEFT$(AB$,A%)+Y$):PRINT 256;NOT ((NOT XY<>J));\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 926,
+ "obj_sha256": "a3ccf9ed677e72b0cb7d9ab72e23fa757ad450309716c589491ce28c89b3abe3",
+ "cycles": 102426600,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6085
+  },
+  {
+   "line": 40,
+   "addr": 6100
+  },
+  {
+   "line": 50,
+   "addr": 6106
+  },
+  {
+   "line": 60,
+   "addr": 6160
+  },
+  {
+   "line": 70,
+   "addr": 6172
+  },
+  {
+   "line": 80,
+   "addr": 6199
+  },
+  {
+   "line": 90,
+   "addr": 6226
+  },
+  {
+   "line": 100,
+   "addr": 6286
+  },
+  {
+   "line": 110,
+   "addr": 6322
+  },
+  {
+   "line": 120,
+   "addr": 6386
+  },
+  {
+   "line": 130,
+   "addr": 6398
+  },
+  {
+   "line": 140,
+   "addr": 6404
+  },
+  {
+   "line": 150,
+   "addr": 6416
+  },
+  {
+   "line": 160,
+   "addr": 6531
+  },
+  {
+   "line": 170,
+   "addr": 6540
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S009.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6989",
+  "LOCAL VARIABLES": "6990 - 7037",
+  "HIGHEST MEMORY LOCATION": "7037"
+ }
+}

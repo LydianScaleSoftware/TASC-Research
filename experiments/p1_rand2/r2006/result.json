@@ -1,0 +1,70 @@
+{
+ "id": "r2006",
+ "key": "1dad63a742989dd8",
+ "source": "10 REM! INTEGER K,I\n20 DIM A(6)\n30 A(SIN(-B*((A-A(N2%)))))=W%:N2$=N2$\n40 I=-A:COLOR=K/A*A:CALL TAN(VAL(\"HI\"))\n50 IF (38119-A-A) THEN 80:GOSUB 80:HPLOT 1>212,(3.14159) TO 49152,(48801)\n60 COLOR=B\n70 IF (PEEK(Z)) THEN B=XY%>=NOT ((127-32767)):HLIN 99>=X%,(Z) AT 24:IF (RND(127)+((2<Z))<=((TAN(0) OR COS(256)))) THEN 40\n80 HTAB .001:CALL 33059:ON A(I)+RND(K) GOTO 30\n90 INVERSE:I=COS(49152)\n100 A(-A(49152/173))=B OR XY%/Q1=3:READ AB,B:POKE (838),((B-XY%>(48531)))+((XY%+A AND 100/I))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 800,
+ "obj_sha256": "2faf0233e28234b444a632228181b59689867002c33d56a1e1537bf6b6203d05",
+ "cycles": 97508086,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6126
+  },
+  {
+   "line": 50,
+   "addr": 6167
+  },
+  {
+   "line": 60,
+   "addr": 6189
+  },
+  {
+   "line": 70,
+   "addr": 6195
+  },
+  {
+   "line": 80,
+   "addr": 6310
+  },
+  {
+   "line": 90,
+   "addr": 6346
+  },
+  {
+   "line": 100,
+   "addr": 6358
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S006.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6863",
+  "LOCAL VARIABLES": "6864 - 6947",
+  "HIGHEST MEMORY LOCATION": "6947"
+ }
+}

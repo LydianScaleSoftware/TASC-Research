@@ -7,25 +7,29 @@ Entry point for any new session. Read this first, then the handoff prompt
 ## Status (2026-10-25, session 2)
 
 - **Phase 0: done** (session 1). `python -m tasc.phase0`.
-- **Phase 1: in progress.** About 560 controlled compiles so far. Templates
-  for most statements, operators, functions, constants and options are
-  recorded (observed) in `tasc/templates/core.json` and RAG `phase1.md`.
-  Symbol-table/allocation order is solved (32-bucket hash) and checked on
-  every compile by `python -m tasc.checkall`.
-- Next: (1) open questions below; (2) RESUME/Debug option, REM! extensions,
-  COMMON, memory layouts; (3) a predictor (Python generator of whole object
-  files from templates) to meet the Phase 1 exit (predict BALL and larger
-  generated programs byte for byte). The predictor is the seed of the
-  Phase 3 compiler.
+- **Phase 1: nearly done.** ~1,100 real-TASC compiles. The Python predictor
+  `tasc/compiler/` (parser, codegen, assembler, bit-exact ROM FIN) reproduces
+  **BALL.OBJ byte for byte** (and its line table) and all 961 controlled +
+  first-batch random compiles (`python -m tasc.predict_check`, also a pytest).
+  Second random batch `p1_rand2` (150 programs, wider constructs incl.
+  COMMON, memory layouts, ON GOSUB, ONERR, HPLOT, INPUT lists): 129/150 on
+  first pass; remaining mismatches are mostly COMMON programs.
+- Next: close `p1_rand2` (COMMON symbol/routine order; INPUT/READ into int
+  array elements), run another random batch, then declare the Phase 1 exit,
+  write the RAG chunks for the predictor rules, and clean up mypy (31 errors,
+  Ref payload typing).
 
-### Phase 1 open questions
-- DEF FN parameter slot (allocated first, not by hash).
-- REM !INTEGER: allocation and code for declared names.
-- Expression code generator: when temps are used, evaluation order for
-  complex operands on both sides; AND/OR with a complex left operand.
-- NEXT without a variable (.WORD 0?), ON GOSUB inline format detail.
-- Constant typing corner cases (5.0, 1E2, hex-like literals).
-- String temps (`X$=B$(1)+B$(2)` uses a string temp).
+### How the predictor is debugged
+`python -m tasc.predict_check [family]` (summary), `python -m tasc.linediff
+<family> <job>` (first differing source line, symbolic, address-normalised),
+scratch `tokdiff.py` (token-level diff of that line). Random programs:
+`python -m tasc.gen_random <family> <n> <seed> [--v2]` compiles them with the
+real TASC (12 parallel emulators, ~2 s/program wall).
+
+### Remaining unknowns (GUESS markers in tasc/compiler/codegen.py)
+- INPUT/READ into an int array element; string comparison with a simple left
+  and complex right (swap assumed); full RESUME/Debug statement list beyond
+  the families tested.
 
 ## Environment
 
@@ -89,6 +93,19 @@ boot takes about 10 s of wall time.
   $69-$6E,$7B-$80,$16; confirmed from RUNTIME init) + code + constant pool
   + variable routines. Line 10 is at load+20.
 - Variables/constants ordered by a 32-bucket hash, insertion order within.
+  Names: h=(3*(c1-1)+c2+T)&31, T real 0/str 1/int 2, arrays +22; INTEGER-
+  declared names keep T=0 and are entered at the declaration. Constants:
+  low byte (int) / exponent (real) &31, entered at scan time with their
+  natural type; other-typed forms entered when first generated.
+- Constants are packed by the ROM's FIN (not correctly rounded): 3.14159 ->
+  82 49 0F CF 82. `tasc/compiler/fin.py` is a bit-exact translation.
+- Dead code: after GOTO / THEN line / RETURN / END / STOP / NEW the rest of
+  the line's keyword statements are skipped unparsed; implicit assignments
+  and DATA are still compiled. Quirk: `IF X THEN RETURN:Y=1` runs Y=1 when X
+  is false.
+- Expression codegen follows TASC's bottom-up parse: literal data and
+  constant-table entries at scan time, code at reductions, one numeric and
+  one string accumulator, pending results spilled to typed temps.
 - String literals are inline: `JMP` over `[len][text]`.
 - BALL.OBJ (defaults): $17B0, 1485 bytes, sha `7a37f061…`; 40-entry line table.
 - CLINENUM is left as a 1-byte file after a compile.

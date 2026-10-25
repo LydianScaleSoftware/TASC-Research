@@ -1,0 +1,70 @@
+{
+ "id": "r2146",
+ "key": "352b73d5f23283f4",
+ "source": "10 REM! INTEGER K,J\n20 DIM P%(3,12),B(9,11)\n30 B(N2%,-((N2%+Z))^C%)=C\n40 Y=K:Z=-((-((A% OR Z))))\n50 Z=1000:Z=-127:ON 24 GOTO 30\n60 FOR Y=(Y OR AB%+ASC(XY$)) TO (((1=P%(C%,J)>=10))-((J<=10901<>AB%))):FOR J=(J) TO (C-B(C+127,20)) STEP (Y):NEXT J\n70 A=SGN(256):XY$=\"TASC\":Z=Z\n80 C=(720)+B(C-4359,K<AB%):HLIN C,(Z) AT B(LOG(PEEK(255)),N2%)\n90 DATA 300,X,-2.5,300:POKE A,-A:FOR C=(38667) TO (B(C%-N2%,NOT ((2 OR 7))))\n100 IF (ASC(Q1$+A$)=Z-5) THEN N2%=40\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 944,
+ "obj_sha256": "7bb3e3db348b03222cbbe383ce94988af6bd60bbe1a7473cf9ba86b4cd829036",
+ "cycles": 102715109,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6120
+  },
+  {
+   "line": 50,
+   "addr": 6153
+  },
+  {
+   "line": 60,
+   "addr": 6186
+  },
+  {
+   "line": 70,
+   "addr": 6318
+  },
+  {
+   "line": 80,
+   "addr": 6358
+  },
+  {
+   "line": 90,
+   "addr": 6445
+  },
+  {
+   "line": 100,
+   "addr": 6531
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S003.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7007",
+  "LOCAL VARIABLES": "7008 - 7756",
+  "HIGHEST MEMORY LOCATION": "7756"
+ }
+}

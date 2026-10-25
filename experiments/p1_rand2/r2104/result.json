@@ -1,0 +1,78 @@
+{
+ "id": "r2104",
+ "key": "47b15fd0ee2c3526",
+ "source": "10 REM! INTEGER K,J\n20 PRINT RIGHT$(Z$,K<((C%<K)));MID$(LEFT$(C$,XY),X)+MID$(C$+Z$,Q1<Q1);\n30 C=((255+115 AND (24)))<=VAL(MID$(\"A\",3)):PRINT LEFT$(\"\",Q1%);127;1000;:HCOLOR=AB%<>X\n40 GOTO 120:CALL Q1:COLOR=C%<=W%\n50 DATA \"A,B\",\"A,B\"\n60 GOTO 40:PRINT MID$(W$,Q1),CHR$(W% AND K-W%);\n70 Q1%=-W% AND AB%:COLOR=VAL(W$):AB=XY^256\n80 FOR Q1=(Q1<>AB%*((Q1%>=AB))) TO (AB%<((-22971=-AB%))):FOR J=(Q1) TO (((W%<=AB%<100))/314):NEXT J\n90 C%=Q1%\n100 PRINT:FOR Q1=(J) TO (VAL(\"\"))\n110 TEXT:PRINT \"123\",((Q1%)=TAN(J));\n120 NEXT\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 735,
+ "obj_sha256": "96b24711215225a3a7a12f9d20f571ad71b9b66d629334c6ed0de0cd62b822ac",
+ "cycles": 95722398,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6159
+  },
+  {
+   "line": 40,
+   "addr": 6247
+  },
+  {
+   "line": 50,
+   "addr": 6250
+  },
+  {
+   "line": 60,
+   "addr": 6264
+  },
+  {
+   "line": 70,
+   "addr": 6267
+  },
+  {
+   "line": 80,
+   "addr": 6306
+  },
+  {
+   "line": 90,
+   "addr": 6405
+  },
+  {
+   "line": 100,
+   "addr": 6411
+  },
+  {
+   "line": 110,
+   "addr": 6440
+  },
+  {
+   "line": 120,
+   "addr": 6476
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6798",
+  "LOCAL VARIABLES": "6799 - 6850",
+  "HIGHEST MEMORY LOCATION": "6850"
+ }
+}

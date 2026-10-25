@@ -1,0 +1,78 @@
+{
+ "id": "r2029",
+ "key": "70a01936906bcf96",
+ "source": "10 REM! INTEGER J,I\n20 Z%=XY:FOR N2=(EXP(15220)) TO (Q1%)\n30 RESTORE:C=((TAN(10) OR Q1%))-Q1%\n40 J=Q1:FOR I=((J)) TO ((29151)):FOR Q1=(((C<VAL(AB$)))*Q1%) TO (Q1) STEP (EXP(XY))\n50 Y%=((SGN(J)<=-C))*((((127<=Q1%))-((AB%>1000)))):HLIN W,(1000) AT (C)\n60 DATA 1,\"A,B\"\n70 NEXT Q1\n80 PRINT 24;:FOR XY=(40000^((Q1%*W))>=31224-INT(26713)) TO (((W<>39))-INT(Z%))\n90 C=((1 OR Q1%))^-Z%:W=NOT 5\n100 XY$=MID$(CHR$(40),C,J):Z%=40\n110 READ Q1%\n120 W$=AB$\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 713,
+ "obj_sha256": "b5c86883f8d23f1f6ca9bb66587eb99c0edb3cc8ba03a9b1c9b63bf126725900",
+ "cycles": 95706008,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6110
+  },
+  {
+   "line": 40,
+   "addr": 6140
+  },
+  {
+   "line": 50,
+   "addr": 6198
+  },
+  {
+   "line": 60,
+   "addr": 6270
+  },
+  {
+   "line": 70,
+   "addr": 6282
+  },
+  {
+   "line": 80,
+   "addr": 6287
+  },
+  {
+   "line": 90,
+   "addr": 6355
+  },
+  {
+   "line": 100,
+   "addr": 6397
+  },
+  {
+   "line": 110,
+   "addr": 6424
+  },
+  {
+   "line": 120,
+   "addr": 6430
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S003.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6776",
+  "LOCAL VARIABLES": "6777 - 6829",
+  "HIGHEST MEMORY LOCATION": "6829"
+ }
+}

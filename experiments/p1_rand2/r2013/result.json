@@ -1,0 +1,85 @@
+{
+ "id": "r2013",
+ "key": "70a2e4e7a30ade7f",
+ "source": "10 REM! INTEGER K,J\n20 REM! DEFCOMMON N2$,M%,Y%\n30 DIM D$(5)\n40 AB=Y%:PRINT SQR(-((890-0.1)));M<-24-607;:IF (32767) THEN 90\n50 VTAB K--((Z OR 39)):IF (65535) THEN IF (-AB%) THEN 90\n60 PRINT:GR:W=EXP(5)\n70 PRINT ((Z OR AB%))*PEEK(K)>=241;:HCOLOR=SQR(W)\n80 W=-SIN(A)\n90 N2$=MID$(MID$(D$(AB%),M,32767)+CHR$(40),Q1%<470>=AB,INT(AB%)^RND(J)):GOSUB 50:N2$=MID$(D$(M%)+A$+D$(J),AB%<>10 OR 1000)\n100 IF (0.1) THEN FOR M=(AB=(J)<=-((AB*K))) TO (INT(ABS(465))-SQR(NOT 921)) STEP (M):FOR K=(AB) TO (((K-M<Q1%))*(((1000)-((AB%+A))))) STEP (M%)\n110 PRINT\n120 IF (((NOT AB>W))+Y%) THEN RESTORE:PRINT STR$(ATN(AB%));:M=(AB%)<=Y%<((NOT J=K+M%))\n130 A$=\"A\":D$(K)=CHR$((K<>M%))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6070,
+ "obj_len": 1038,
+ "obj_sha256": "fd69d17098025350f962b7d8807e1303318e9706824bd73fc54533b26816992d",
+ "cycles": 109454880,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6090
+  },
+  {
+   "line": 40,
+   "addr": 6090
+  },
+  {
+   "line": 50,
+   "addr": 6155
+  },
+  {
+   "line": 60,
+   "addr": 6202
+  },
+  {
+   "line": 70,
+   "addr": 6223
+  },
+  {
+   "line": 80,
+   "addr": 6271
+  },
+  {
+   "line": 90,
+   "addr": 6286
+  },
+  {
+   "line": 100,
+   "addr": 6436
+  },
+  {
+   "line": 110,
+   "addr": 6559
+  },
+  {
+   "line": 120,
+   "addr": 6565
+  },
+  {
+   "line": 130,
+   "addr": 6656
+  }
+ ],
+ "info": {
+  "TORE": "PRINT  STR$ ( ATN (AB%));:M = (AB",
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6070 - 7107",
+  "NUMERIC COMMON": "6064 - 6067",
+  "STRING COMMON": "6068 - 6069",
+  "LOCAL VARIABLES": "7108 - 7166",
+  "HIGHEST MEMORY LOCATION": "7166"
+ }
+}

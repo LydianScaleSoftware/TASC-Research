@@ -1,0 +1,74 @@
+{
+ "id": "r2062",
+ "key": "1b69c7f0fb7cad2a",
+ "source": "10 REM! INTEGER *\n20 DIM P$(8)\n30 W%=Q1:GOSUB 30\n40 M$=\"TASC\"+P$(M%>18769)\n50 M$=CHR$(EXP(Q1%-M)):GOSUB 30:IF (Q1^Z>=20) THEN IF (M*((-M%-((B%(5)<=W%))))) THEN NORMAL\n60 Q1=(XY<=A(M%)):XY$=\"X Y\":XY$=P$(3/210<=-B%(1000))\n70 A(20)=-SQR(Z%):C=32767=((65535<>666))*((W%<>10)):FOR Q1=(((-Z% AND Z))-M) TO (NOT ((Q1-Q1))*45567) STEP (28182-W%)\n80 M=2-7:Q1=SGN(24)\n90 READ XY$:FOR C=(C) TO (M)\n100 FOR M=(Z%) TO (-B%(24>=M%)):IF (EXP(NOT ((Z%^256)))) THEN SPEED=Z\n110 INVERSE:M%=M%:NEXT M\n",
+ "options": {
+  "library": 16384,
+  "program": 24576,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 24576,
+ "obj_len": 920,
+ "obj_sha256": "f0a208b1189c87396e0a6ca786ea222f6a081b185fdfe1c149c405f91cda81d1",
+ "cycles": 101117599,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 24596
+  },
+  {
+   "line": 20,
+   "addr": 24596
+  },
+  {
+   "line": 30,
+   "addr": 24596
+  },
+  {
+   "line": 40,
+   "addr": 24608
+  },
+  {
+   "line": 50,
+   "addr": 24645
+  },
+  {
+   "line": 60,
+   "addr": 24729
+  },
+  {
+   "line": 70,
+   "addr": 24804
+  },
+  {
+   "line": 80,
+   "addr": 24924
+  },
+  {
+   "line": 90,
+   "addr": 24948
+  },
+  {
+   "line": 100,
+   "addr": 24977
+  },
+  {
+   "line": 110,
+   "addr": 25045
+  }
+ ],
+ "info": {
+  "LIBRARY": "16384 - 20396",
+  "OBJECT FILE": "S010.OBJ",
+  "PROGRAM": "24576 - 25495",
+  "LOCAL VARIABLES": "25496 - 25586",
+  "HIGHEST MEMORY LOCATION": "25586"
+ }
+}

@@ -1,0 +1,82 @@
+{
+ "id": "r2140",
+ "key": "f1aa96c199a5c087",
+ "source": "10 REM! INTEGER *\n20 N2=N2:C$=MID$(CHR$(EXP(19437)),W%):IF (P%(A%)-127>=3.14159) THEN IF ((Q1*RND(W%))) THEN 30\n30 PRINT -20;LEFT$(STR$(TAN(Z)),Z);\n40 Z=N2\n50 CALL -((NOT W)):A$(W%)=\"A\"\n60 P%(W% AND W^3+429/N2)=1:P%(AB%)=ASC(RIGHT$(\"A\"+B$,AB%))\n70 W%=100:FOR W=(2-520) TO (W%):PRINT ((W%)/P%(7)),256;PEEK(20642);\n80 W%=RND(W%)\n90 N2=-N2:GOTO 20:ON 24+((N2>=Q1/W)) GOTO 120,70,50,70\n100 NEXT W\n110 SPEED=W:VTAB SQR(A%*Z>=Y%)\n120 ON ASC(\"A\") GOSUB 30,20,130:PRINT Z;:PRINT\n130 P%(418)=M:SPEED=127+W%<>SQR(W):N2=AB%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 767,
+ "obj_sha256": "fb6437d00b609a2d80e5386af7f7052022d601a498d320939557ae880b6124f3",
+ "cycles": 96242308,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6153
+  },
+  {
+   "line": 40,
+   "addr": 6180
+  },
+  {
+   "line": 50,
+   "addr": 6186
+  },
+  {
+   "line": 60,
+   "addr": 6217
+  },
+  {
+   "line": 70,
+   "addr": 6296
+  },
+  {
+   "line": 80,
+   "addr": 6355
+  },
+  {
+   "line": 90,
+   "addr": 6364
+  },
+  {
+   "line": 100,
+   "addr": 6376
+  },
+  {
+   "line": 110,
+   "addr": 6381
+  },
+  {
+   "line": 120,
+   "addr": 6405
+  },
+  {
+   "line": 130,
+   "addr": 6437
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S010.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6830",
+  "LOCAL VARIABLES": "6831 - 6903",
+  "HIGHEST MEMORY LOCATION": "6903"
+ }
+}

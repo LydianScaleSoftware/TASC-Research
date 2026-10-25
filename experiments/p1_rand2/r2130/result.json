@@ -1,0 +1,70 @@
+{
+ "id": "r2130",
+ "key": "d1f7e0b452aec409",
+ "source": "10 REM! INTEGER J,I\n20 HOME\n30 Z%=AB*((X+1>M%))\n40 PLOT INT(I AND NOT M%),40:SPEED=1000:CALL A\n50 C%=((255>AB OR M%=I))=24\n60 Y$=RIGHT$(MID$(X$+X$,C%<39,XY^AB),C%)\n70 COLOR=-((-I*C%)):INPUT Y%,Y:HOME\n80 FOR I=(XY^((XY*39206-20))) TO (-LOG(-Z%)):IF (((A AND 10 AND 40<=I))^((C%>=XY AND -20))) THEN 10\n90 PRINT \"TASC\"+STR$(M%)+MID$(\"X Y\"+\"HI\",A-256,127);846;:IN#LOG(((Y OR Z%))-Y%):ON COS(C%=((J>=40))) GOTO 70\n100 Y$=LEFT$(MID$(\"X Y\",32767,43403),A^1E3)+X$:PRINT INT(AB);\n",
+ "options": {
+  "library": 16384,
+  "program": 24576,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 24576,
+ "obj_len": 915,
+ "obj_sha256": "590f76ea1168ee8ec60781ef46daf12331dfe37cc7bb9d72954ed4600baafab9",
+ "cycles": 98639237,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 24596
+  },
+  {
+   "line": 20,
+   "addr": 24596
+  },
+  {
+   "line": 30,
+   "addr": 24599
+  },
+  {
+   "line": 40,
+   "addr": 24617
+  },
+  {
+   "line": 50,
+   "addr": 24656
+  },
+  {
+   "line": 60,
+   "addr": 24692
+  },
+  {
+   "line": 70,
+   "addr": 24749
+  },
+  {
+   "line": 80,
+   "addr": 24785
+  },
+  {
+   "line": 90,
+   "addr": 24899
+  },
+  {
+   "line": 100,
+   "addr": 25031
+  }
+ ],
+ "info": {
+  "LIBRARY": "16384 - 20396",
+  "OBJECT FILE": "S000.OBJ",
+  "PROGRAM": "24576 - 25490",
+  "LOCAL VARIABLES": "25491 - 25543",
+  "HIGHEST MEMORY LOCATION": "25543"
+ }
+}

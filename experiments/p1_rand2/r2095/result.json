@@ -1,0 +1,70 @@
+{
+ "id": "r2095",
+ "key": "5a7e00366d9dcbca",
+ "source": "10 DEF FN F(Z)=PEEK(Z%)\n20 PRINT 5+((3831+((800-10413))));LEFT$(LEFT$(Q1$+\"HI\",SQR(Q1%)),C);:GOSUB 70\n30 Z%=((256<=XY))/FN F(40)*NOT ((Y%*W%))\n40 PRINT CHR$(.001)+W$;W$;:VTAB -156\n50 P%(((38998<=P%(Q1%,Q1%)+XY))+C,SGN(1.5) OR LOG(W%))=36205-NOT X+NOT P%(Q1%,553):CALL ((Q1%>=Y))+FN F(W%)=((LEN(\"123\") OR SQR(3.14159)))\n60 GOTO 20\n70 Q1=-((Z%/X>=XY/40))\n80 PRINT:PRINT FN F(LOG(W%))+Q1;((Y<>P%(1.5,Q1%)))+Y%+((SQR(P%(2.25,Y%))+698)),-Q1;:GOTO 40\n90 W$=W$+MID$(\"123\",TAN(Y%))\n100 IF (W%) THEN 40\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 938,
+ "obj_sha256": "c5da114c8d2f28519c686e00f937dcfd93a729fa7d13ec26a1c46aa605be9264",
+ "cycles": 98042960,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6100
+  },
+  {
+   "line": 30,
+   "addr": 6159
+  },
+  {
+   "line": 40,
+   "addr": 6205
+  },
+  {
+   "line": 50,
+   "addr": 6241
+  },
+  {
+   "line": 60,
+   "addr": 6412
+  },
+  {
+   "line": 70,
+   "addr": 6415
+  },
+  {
+   "line": 80,
+   "addr": 6445
+  },
+  {
+   "line": 90,
+   "addr": 6544
+  },
+  {
+   "line": 100,
+   "addr": 6577
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S004.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7001",
+  "LOCAL VARIABLES": "7002 - 7297",
+  "HIGHEST MEMORY LOCATION": "7297"
+ }
+}

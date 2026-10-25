@@ -1,0 +1,82 @@
+{
+ "id": "r2066",
+ "key": "65105a521ee30997",
+ "source": "10 DIM A(3),P(4)\n20 DEF FN F(T)=Y<>256\n30 PRINT 10;LEFT$(\"A\",ABS(-XY%)),\"TASC\";\n40 IF (436>((NOT 256 AND Y>7))) THEN Z%=A%:B%(((A(36500) AND 376))<((Z%<>B)))=INT(B):FOR W=(B) TO (5)\n50 NEXT W\n60 B%(((XY%<Y))+((2-B))+964)=NOT A%-((B%(AB%)-Z%))>20:IF (NOT ((-((-XY%))))) THEN HOME:PLOT 127,1000\n70 PRINT:PRINT:B=((AB*XY%))^215 AND -((AB%*3))\n80 ON W GOSUB 70,50,80:IF (FN F(831)+XY%) THEN 20:A(AB%*((SGN(294)/((XY%*A(A%))))))=75+((811 OR XY%-X))\n90 GOSUB 30:IF (A(1E3-XY%)-AB) THEN IF (W) THEN ONERR GOTO 130:GOSUB 30\n100 XY$=XY$:IF (A(XY%=A%=A(Z%))) THEN 80:READ XY%\n110 Z%=AB%--ASC(Q1$):VTAB B^B%(A%)\n120 HTAB 100:ON AB% GOSUB 30:IF (AB) THEN 40\n130 FOR B=(SIN(P(AB% AND 902))) TO (NOT ASC(\"\")-AB%) STEP (Y*B<>PEEK(AB+Y))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1142,
+ "obj_sha256": "995e292e7e46d0e1975c14e0c3c2c1f8acacc5f30f24928a2496b130684353e1",
+ "cycles": 113876096,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6100
+  },
+  {
+   "line": 40,
+   "addr": 6150
+  },
+  {
+   "line": 50,
+   "addr": 6259
+  },
+  {
+   "line": 60,
+   "addr": 6264
+  },
+  {
+   "line": 70,
+   "addr": 6370
+  },
+  {
+   "line": 80,
+   "addr": 6412
+  },
+  {
+   "line": 90,
+   "addr": 6489
+  },
+  {
+   "line": 100,
+   "addr": 6533
+  },
+  {
+   "line": 110,
+   "addr": 6574
+  },
+  {
+   "line": 120,
+   "addr": 6610
+  },
+  {
+   "line": 130,
+   "addr": 6633
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7205",
+  "LOCAL VARIABLES": "7206 - 7319",
+  "HIGHEST MEMORY LOCATION": "7319"
+ }
+}

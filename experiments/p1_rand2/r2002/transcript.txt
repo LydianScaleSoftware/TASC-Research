@@ -1,0 +1,143 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S002
+
+
+OBJECT CODE FILE:
+(DEFAULT S002.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION?
+
+*****BEGINNING PASS 1
+
+
+
+10
+RECOGNIZED  REM ! INTEGER *
+20  DIM A(6),B$(10,7)
+30  GET B$: IF ( ASC ("HI") > ((32767 +
+Z <  > 344))) THEN  IF (B% - Z) THEN B =
+  EXP (B): READ W
+40  READ Y%,Y$: PRINT  MID$ ("A" + "A" +
+ B$(A,A%),((B OR A)) - A(A%)); MID$ (Y$,
+ NOT (( NOT Y%)));B$(B + 793,B% < A%) +
+B$(A%,429);
+50  GR : HTAB A(0)
+60 B$ = B$ +  MID$ ("A" + Q1$,B * .001):
+ HTAB Q1
+70 A = 65535
+80  TEXT :B$( RND (A * A%) AND 100,A%) =
+ "X Y"
+90  DRAW B:B$( RND (5) <  > Q1,B% > 39)
+= B$ +  MID$ ("",A(B%)) + "TASC":Z = ((B
+ <  > M% = B% * W)) +  ASC ( RIGHT$ ("X
+Y",Y%))
+100 B = W: GOTO 140
+
+*****WARNING
+LINE NUMBER 100
+IGNORED
+
+: HCOLOR= W AND Z
+
+
+110 Z = Y%: IF ( - (( NOT  INT (B)))) TH
+EN  FOR A = (10) TO ( ATN (W * W * B))
+120  FOR Z = (Z + 1 >  = B OR Q1) TO (20
+ <  - ((Z - 10))): PRINT Q1;W * 558 / ((
+Z * Q1)) / A( LOG (32767)),"HI" + B$;: P
+RINT  LOG (M%);B$(A,Y%);
+130 Z = A(A%) * Y% / ((Z - Q1)) - A( VAL
+ (B$(A,W)))
+140  IF (A) THEN  PRINT B$(A <  > 20 <
+> B * A(B%),W);
+150  PRINT  NOT W AND  - 11585 - 69;"A"
++ Y$;: NEXT
+160 Q1$ = "X Y"
+170  ON 3 GOTO 220,140,150,80:A = ((24 =
+ 65535)) - Q1 > ((3531 < 615)) * (Q1): G
+OSUB 230
+180 Z = B
+190  SPEED= B < W < 256:Q1$ =  RIGHT$ (Q
+1$,32767 = A(W)) +  CHR$ (5 * Y%): NORMA
+L
+200  GOTO 100
+
+*****WARNING
+LINE NUMBER 200
+IGNORED
+
+: FOR B = ( RND (M% * Z) <  > B%) TO (37
+)
+
+
+210  IF (B *  COS (.5 <  = 127)) THEN 10
+
+
+*****WARNING
+LINE NUMBER 210
+IGNORED
+
+: PRINT "X Y" + B$(401 - B,B - 0.1);
+
+
+220  PLOT (Z - 781) ^ (((A(M%)) <  = B%
++ A(A))),B%
+230  PRINT : PRINT ((Z)) >  = A,:Y% =  N
+OT  INT (2)
+240 Q1 =  ASC (Y$):A(M%) =  LEN ( MID$ (
+Y$ + Q1$,B)): PRINT "A",
+
+
+
+*****BEGINNING PASS 2
+
+
+.....
+
+
+*****CODE GENERATION COMPLETE
+
+
+COMPILATION INFORMATION AND LINE NUMBER
+REFERENCE TABLE? YES
+
+
+SOURCE FILE: S002
+OBJECT FILE: S002.OBJ
+LIBRARY OCCUPIES 2051 - 6063
+PROGRAM OCCUPIES 6064 - 7883
+
+NO COMMON BLOCK
+
+LOCAL VARIABLES OCCUPY 7884 - 8108
+
+HIGHEST MEMORY LOCATION: 8108
+
+
+LINE# ADDR   LINE# ADDR   LINE# ADDR
+
+10    6084   20    6084   30    6084
+40    6160   50    6321   60    6333
+70    6376   80    6382   90    6439
+100   6584   110   6593   120   6649
+130   6797   140   6854   150   6913
+160   6973   170   6988   180   7048
+190   7054   200   7114   210   7117
+220   7139   230   7187   240   7219
+
+*****COMPILATION COMPLETE
+
+
+]?

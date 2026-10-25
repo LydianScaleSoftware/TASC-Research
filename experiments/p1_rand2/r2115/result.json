@@ -1,0 +1,70 @@
+{
+ "id": "r2115",
+ "key": "0763126341b30f53",
+ "source": "10 REM! INTEGER I,J\n20 POP\n30 B$=\"A\":VTAB ABS(W):PRINT\n40 COLOR=24/((J+A%)):COLOR=7:HPLOT XY,(-((-((-850))))) TO -((NOT Z%)) AND Z%,(.001)\n50 FOR I=(XY) TO (-((((X<J))*ASC(C$)))):INVERSE:IF (Z%) THEN B$=C$\n60 GR:ONERR GOTO 50\n70 GOSUB 80:Y%=NOT Z%<>W>0.1\n80 PRINT:B$=Z$+\"TASC\":IF ((Z%*W=W)) THEN 10\n90 Y%=Z+J:C$=C$:HLIN VAL(C$+\"123\")-SGN(M-.001),(28008-J+LEN(\"TASC\")=((M<XY))/((X<100))) AT XY AND I-SIN(XY)\n100 X=A%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 675,
+ "obj_sha256": "5d04ffb463db26708d9579d9d267304a55deea43150c98581e71905383ecb0bd",
+ "cycles": 90405026,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6087
+  },
+  {
+   "line": 40,
+   "addr": 6112
+  },
+  {
+   "line": 50,
+   "addr": 6178
+  },
+  {
+   "line": 60,
+   "addr": 6236
+  },
+  {
+   "line": 70,
+   "addr": 6244
+  },
+  {
+   "line": 80,
+   "addr": 6268
+  },
+  {
+   "line": 90,
+   "addr": 6313
+  },
+  {
+   "line": 100,
+   "addr": 6455
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S011.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6738",
+  "LOCAL VARIABLES": "6739 - 6789",
+  "HIGHEST MEMORY LOCATION": "6789"
+ }
+}

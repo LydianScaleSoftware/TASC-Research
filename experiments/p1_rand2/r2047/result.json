@@ -1,0 +1,87 @@
+{
+ "id": "r2047",
+ "key": "45511505ef01776f",
+ "source": "10 REM! DEFCOMMON A%,X,AB%\n20 DIM P$(3)\n30 DEF FN F(X)=-XY%\n40 CALL -X:ON 12480 GOTO 100:C=A%\n50 HCOLOR=10>=B%:PRINT C$+Y$;X;C$;:HLIN C,(FN F(COS(N2^1))) AT NOT ((FN F(N2)<>((39 OR A(65535)))))\n60 ON 1*-((C^100)) GOSUB 60\n70 FOR C=(AB) TO (A(((20 AND B%))<=AB+C)):COLOR=XY%\n80 RESTORE\n90 PRINT NOT ((RND(5)-((C<>B(B%,B%)))));C$,EXP(-AB%=A%);:NEXT C:B%=32767\n100 B%=100*N2:HLIN ASC(C$),(((0.1-A% OR 256))/XY) AT 32767^((AB%>((N2>=XY%))))\n110 PRINT:FOR AB=(PEEK(X)) TO (ASC(C$)):DATA X,X\n120 IF (-20) THEN 120:C=0<>((256+A%<((3=X)))):IF (NOT 1000) THEN P$(B(-A(XY%),AB AND 2.25)-40)=LEFT$(\"123\",B(B%,0))\n130 FOR XY=(NOT 32767) TO (534):P$(SGN(-((A(40)+XY%))))=MID$(X$,FN F(X),A(A%)^XY%)\n140 C$=STR$(256):READ B%:IF (XY% OR -((-AB%))) THEN PRINT\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6073,
+ "obj_len": 1033,
+ "obj_sha256": "b3cbf20144dcf36cb078700f8256713b4d1f81c0f73cf7e4ea757a653bb6fa97",
+ "cycles": 110894637,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6093
+  },
+  {
+   "line": 30,
+   "addr": 6093
+  },
+  {
+   "line": 40,
+   "addr": 6106
+  },
+  {
+   "line": 50,
+   "addr": 6130
+  },
+  {
+   "line": 60,
+   "addr": 6232
+  },
+  {
+   "line": 70,
+   "addr": 6253
+  },
+  {
+   "line": 80,
+   "addr": 6306
+  },
+  {
+   "line": 90,
+   "addr": 6309
+  },
+  {
+   "line": 100,
+   "addr": 6385
+  },
+  {
+   "line": 110,
+   "addr": 6454
+  },
+  {
+   "line": 120,
+   "addr": 6490
+  },
+  {
+   "line": 130,
+   "addr": 6536
+  },
+  {
+   "line": 140,
+   "addr": 6622
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S008.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6073 - 7105",
+  "NUMERIC COMMON": "6064 - 6072",
+  "LOCAL VARIABLES": "7106 - 7818",
+  "HIGHEST MEMORY LOCATION": "7818"
+ }
+}

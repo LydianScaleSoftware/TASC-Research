@@ -1,0 +1,135 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S007
+
+
+OBJECT CODE FILE:
+(DEFAULT S007.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION?
+
+*****BEGINNING PASS 1
+
+
+
+10
+RECOGNIZED  REM ! INTEGER *
+20  DIM B(6)
+30  READ A%: FOR Z = ( INT (B(A%)) = ((5
+ < 28496 AND XY% > W))) TO ( SQR (A%) >
+((B <  > 2)) + Z):XY = Z
+40  DATA : IF ( RND (N2) * Q1% + ((XY <
+ > 5))) THEN  RETURN
+
+*****WARNING
+LINE NUMBER 40
+IGNORED
+
+: ON 3 GOTO 110,130,90,160
+
+
+50  PRINT ((N2 - 256 -  VAL ("123"))) *
+(N2 * B);: HCOLOR= N2: DATA -2.5
+60  GOSUB 220: IF ( - (46571) - ((100 <
+W AND Q1%))) THEN B = W:B(XY) = 619 + 3
+OR N2
+70 N2 =  ASC (X$ + X$ + A$): FOR B = (((
+((Z% OR XY%)) > B(A%))) ^  LOG ( RND (67
+0))) TO ((A%)) STEP ( NOT  VAL ("A" + A$
+)): PRINT  ABS (Z),Z%, ATN (3 <  > N2) -
+ ((.001 - 0.1 +  - Z));
+80 B = ((39 OR XY)) * Z% / (XY%): IF (Z%
+ - 24) THEN A% = (Z <  = W * 39): HOME
+90 N2 = 420
+100 Z = 791: HPLOT (( - N2 > XY% - 65535
+)) * ((B - ((249 < Q1%)))),(B): FOR Z =
+((W AND B(Z%)) - 664 / ((B - Z))) TO ( V
+AL (M$))
+110  NEXT Z
+120 A$ =  MID$ (M$ + "123", INT (N2), -
+B(Z%)) +  CHR$ (992) +  MID$ (X$,0)
+130 W =  PEEK (W): PRINT A$ + A$,:N2 = N
+2
+140 B = N2: NEXT B:A$ =  RIGHT$ (A$, NOT
+ ((XY% - B(256))))
+150  FOR Z = (XY) TO ( NOT ((B(5) + 219
++ ((B(A%) = W))))): PLOT B( VAL (M$ + M$
+)),B: END
+160 Z = N2
+170  IF (9336) THEN 40
+180  GOSUB 160: IF (N2) THEN  IF (5 < ((
+XY <  = 40))) THEN B( - B) = B(XY) = B <
+ ((XY% * W =  NOT Z)): GOTO 90
+190  HLIN  ATN (B(XY)) / ((32767 / 537))
+ * (B(Z) + B(XY)),(255 * (W)) AT Z%
+200 W =  NOT 49440
+210  TEXT : IF (7) THEN A$ = M$: PRINT 7
+,
+220  FOR N2 = (Z) TO ( ASC (X$)) STEP (X
+Y - B(XY) +  LEN (X$) <  =  VAL (A$) * X
+Y): IF (7) THEN 210
+
+*****WARNING
+LINE NUMBER 220
+IGNORED
+
+: CALL Z
+
+
+230 A$ = "TASC": PRINT  RIGHT$ ( RIGHT$
+("X Y",W) + A$,N2 OR  SGN (N2)); CHR$ (Z
+% OR XY%);:N2 = 255 OR 127
+
+
+
+*****BEGINNING PASS 2
+
+
+.....
+
+
+*****CODE GENERATION COMPLETE
+
+
+COMPILATION INFORMATION AND LINE NUMBER
+REFERENCE TABLE? YES
+
+
+SOURCE FILE: S007
+OBJECT FILE: S007.OBJ
+LIBRARY OCCUPIES 2051 - 6063
+PROGRAM OCCUPIES 6064 - 7968
+
+NO COMMON BLOCK
+
+LOCAL VARIABLES OCCUPY 7969 - 8020
+
+HIGHEST MEMORY LOCATION: 8020
+
+
+LINE# ADDR   LINE# ADDR   LINE# ADDR
+
+10    6084   20    6084   30    6084
+40    6182   50    6218   60    6280
+70    6353   80    6529   90    6589
+100   6595   110   6699   120   6704
+130   6794   140   6827   150   6863
+160   6942   170   6948   180   6956
+190   7047   200   7116   210   7125
+220   7151   230   7218
+
+*****COMPILATION COMPLETE
+
+
+]?

@@ -1,0 +1,95 @@
+{
+ "id": "r2133",
+ "key": "d32797dde812e587",
+ "source": "10 REM! USECOMMON Z,N2,B%\n20 DIM P(11)\n30 Q1=XY%<>A<=((A%>SIN(Q1))):A%=2.25:IF (ABS(B%)) THEN GOSUB 140\n40 P((B%>974) OR 0/1000)=A%\n50 XY%=-A:B%(((((A OR Z))<P(A%)))*((LOG(A%)<>Q1)))=Q1\n60 CALL -((((XY% OR P(127)))/((Q1/1)))):PRINT:N2%=LOG(-A)\n70 READ B$,A%:A=ATN(Q1)+127\n80 B%((NOT ((N2%*Z))))=-N2:PRINT 1.5;Q1-LEN(CHR$(A)),822,\n90 X=XY%-((612 OR P(N2%))):CALL B%\n100 IF (INT(P(P(N2%)*65535))) THEN 30\n110 B%(N2%)=3/0<XY%:A=PEEK(SGN(A%))-X:IF (((XY%-2))*-P(A%)>B%/-19050) THEN GOSUB 10\n120 FOR Q1=(32767) TO (Q1-NOT ((Z-P(XY%))))\n130 IF (X) THEN READ Q1,Q1$:HLIN B%,(100) AT -((P(XY%)>((424=A%)))):AB$=MID$(AB$+Q1$+\"A\",5<>A+620,(VAL(\"\")))\n140 P(1000)=((0>=-24))-N2%\n150 A%=EXP(-N2)<((255+B%))^INT(Z):PRINT LOG(((3<B%(A%)))+(Q1));0;A%;:Q1=N2%\n160 COLOR=(N2)^((24*X))<=Q1:FOR Q1=(A) TO (A) STEP (39):ON -((3=N2%))^-((384*X)) GOTO 130,130,90,140\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6076,
+ "obj_len": 1528,
+ "obj_sha256": "1411d6c4b3729dd4caa9c87b9b6a4015d62c8cc7b286cc93442f22790fd0d945",
+ "cycles": 133856751,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6096
+  },
+  {
+   "line": 30,
+   "addr": 6096
+  },
+  {
+   "line": 40,
+   "addr": 6160
+  },
+  {
+   "line": 50,
+   "addr": 6199
+  },
+  {
+   "line": 60,
+   "addr": 6271
+  },
+  {
+   "line": 70,
+   "addr": 6328
+  },
+  {
+   "line": 80,
+   "addr": 6358
+  },
+  {
+   "line": 90,
+   "addr": 6429
+  },
+  {
+   "line": 100,
+   "addr": 6462
+  },
+  {
+   "line": 110,
+   "addr": 6490
+  },
+  {
+   "line": 120,
+   "addr": 6597
+  },
+  {
+   "line": 130,
+   "addr": 6631
+  },
+  {
+   "line": 140,
+   "addr": 6778
+  },
+  {
+   "line": 150,
+   "addr": 6811
+  },
+  {
+   "line": 160,
+   "addr": 6901
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S003.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6076 - 7603",
+  "NUMERIC COMMON": "6064 - 6075",
+  "LOCAL VARIABLES": "7604 - 7726",
+  "HIGHEST MEMORY LOCATION": "7726"
+ }
+}

@@ -1,0 +1,74 @@
+{
+ "id": "r2014",
+ "key": "3b5f5bfd08a4b54f",
+ "source": "10 DIM B%(4),A$(7)\n20 SPEED=558\n30 GOTO 10:ON B%(Z+2)*2 GOTO 60\n40 IF (-((A%>=100))>=AB%) THEN GR\n50 PRINT EXP(Z)<AB% AND SIN(W%),\"A\";\"\";:AB=M\n60 XY%=B%(TAN(AB)>=EXP(XY%))\n70 ON ATN(Z)/465 GOTO 50\n80 PRINT \"X Y\";:FOR AB=((B%(AB%<=M))) TO (B%(ABS(XY%)>A%))\n90 DATA 300:GOTO 110\n100 GOSUB 60:PRINT NOT ((((Z OR 256))^((127=256))));-W% OR W;:DATA HI,HI\n110 IF ((ASC(P$(A%)))^((W%<=X))) THEN COLOR=24\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 569,
+ "obj_sha256": "ad8844a3e1a3d45efbd323dc9629aec5147c1d406c92d0e369cdc3c21016133f",
+ "cycles": 84449207,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6090
+  },
+  {
+   "line": 40,
+   "addr": 6093
+  },
+  {
+   "line": 50,
+   "addr": 6119
+  },
+  {
+   "line": 60,
+   "addr": 6183
+  },
+  {
+   "line": 70,
+   "addr": 6213
+  },
+  {
+   "line": 80,
+   "addr": 6234
+  },
+  {
+   "line": 90,
+   "addr": 6293
+  },
+  {
+   "line": 100,
+   "addr": 6306
+  },
+  {
+   "line": 110,
+   "addr": 6371
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6632",
+  "LOCAL VARIABLES": "6633 - 6720",
+  "HIGHEST MEMORY LOCATION": "6720"
+ }
+}

@@ -1,0 +1,74 @@
+{
+ "id": "r2072",
+ "key": "5b7be4af5d15068f",
+ "source": "10 REM! INTEGER K\n20 DEF FN F(X)=TAN(B%(W%,XY%))<((SIN(3965)>39100))\n30 N2$=\"123\":PRINT VAL(\"\")<>XY%;Z<NOT ASC(N2$);\"A\";\n40 PRINT Q1;XY$;\n50 PRINT -0.1;AB%;:POP:HTAB Q1\n60 FOR Z=(AB%) TO (K<>3*128>X) STEP (30478)\n70 GOTO 60:M=W%/TAN(10)--((NOT W%)):PRINT\n80 Q1=COS(127)+ATN(Q1) AND Z*Q1-XY%\n90 AB=X:FOR Z=(-((1E3 OR M))/AB) TO (N2%):NEXT Z\n100 FOR X=(K*K) TO (W%):FOR AB=(INT(AB%)^((1000+.5))<>((AB%>=B%(AB%,XY%)))-M) TO (LOG(AB%/Z+NOT 32767))\n110 PRINT N2%;Q1;N2$;:ON FN F(W%) GOTO 90,10,60:IF (SIN(M)) THEN IF (N2%+((B%(N2%,3874)+K-1/AB))) THEN POP\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 938,
+ "obj_sha256": "31fd1cc946e37724893ed9e7383c2e2578872a1ec076a8adbf4eb6b8c512a496",
+ "cycles": 103492092,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6130
+  },
+  {
+   "line": 40,
+   "addr": 6201
+  },
+  {
+   "line": 50,
+   "addr": 6213
+  },
+  {
+   "line": 60,
+   "addr": 6237
+  },
+  {
+   "line": 70,
+   "addr": 6272
+  },
+  {
+   "line": 80,
+   "addr": 6302
+  },
+  {
+   "line": 90,
+   "addr": 6347
+  },
+  {
+   "line": 100,
+   "addr": 6393
+  },
+  {
+   "line": 110,
+   "addr": 6502
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S007.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7001",
+  "LOCAL VARIABLES": "7002 - 7299",
+  "HIGHEST MEMORY LOCATION": "7299"
+ }
+}

@@ -1,0 +1,110 @@
+{
+ "id": "r2090",
+ "key": "da1e4e1a90e5e31c",
+ "source": "10 DIM A%(7,4),B$(7)\n20 END:PRINT\n30 M=65535\n40 X=39:CALL ((2*A%(B%,X%)>=Z-M%))-(XY)\n50 PRINT SGN(32767*-M%);\n60 READ N2$,Z:N2$=Q1$:X%=COS(X%)\n70 VTAB ASC(N2$):M%=-A%(256^B%,AB%)\n80 PRINT:M%=127>=X%>3-853<>M%\n90 GOTO 180:IF (TAN(2.25<=ABS(X%))) THEN TEXT:XY=Z\n100 XY$=\"123\"\n110 X=A\n120 N2$=XY$+\"123\"+Q1$+XY$+STR$(16971*X%):CALL SQR(M%)*M<-((127<=A)):IF (X% AND EXP(256)^Z) THEN 110\n130 A=.5<=B%+-M%:GOTO 180\n140 FOR A=(897) TO (AB%):FOR XY=(((((B%>=1))+X%))/((((1000 OR 32767)) AND B%*A%(2.25,X%)))) TO (X%)\n150 GOSUB 70\n160 ON 382 GOTO 170,160,30,60\n170 B%=A%(NOT A,Z=A%(256,AB%))*(((A)-M^A%(AB%,B%)))\n180 GR:READ B%:GOTO 10\n190 GOTO 90:A=EXP(X+XY):NEXT XY\n200 PRINT XY$;XY$;XY$;:AB%=(M%<>M%)--((M%*M))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": 28672,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1102,
+ "obj_sha256": "80014bde9e912cdeedd32aed92a9f7c7a2352f375086c62ec23e48608d4c066f",
+ "cycles": 115991542,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6087
+  },
+  {
+   "line": 40,
+   "addr": 6093
+  },
+  {
+   "line": 50,
+   "addr": 6141
+  },
+  {
+   "line": 60,
+   "addr": 6159
+  },
+  {
+   "line": 70,
+   "addr": 6186
+  },
+  {
+   "line": 80,
+   "addr": 6228
+  },
+  {
+   "line": 90,
+   "addr": 6267
+  },
+  {
+   "line": 100,
+   "addr": 6276
+  },
+  {
+   "line": 110,
+   "addr": 6291
+  },
+  {
+   "line": 120,
+   "addr": 6297
+  },
+  {
+   "line": 130,
+   "addr": 6416
+  },
+  {
+   "line": 140,
+   "addr": 6440
+  },
+  {
+   "line": 150,
+   "addr": 6528
+  },
+  {
+   "line": 160,
+   "addr": 6531
+  },
+  {
+   "line": 170,
+   "addr": 6546
+  },
+  {
+   "line": 180,
+   "addr": 6621
+  },
+  {
+   "line": 190,
+   "addr": 6633
+  },
+  {
+   "line": 200,
+   "addr": 6648
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "OBJECT FILE": "S012.OBJ",
+  "PROGRAM": "6064 - 7165",
+  "LOCAL VARIABLES": "28672 - 28820",
+  "HIGHEST MEMORY LOCATION": "28820"
+ }
+}

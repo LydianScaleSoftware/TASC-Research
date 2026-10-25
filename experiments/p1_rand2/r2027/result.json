@@ -1,0 +1,99 @@
+{
+ "id": "r2027",
+ "key": "1b42d08a2f9fd35b",
+ "source": "10 REM! INTEGER K\n20 DIM A%(12,6)\n30 PRINT ASC(C$+Y$+C$),:IF (49152) THEN IF (K*((((40+Z))/Z%))) THEN PRINT LOG(AB%*1000)+-(K),Y$,-SGN(W%)*K;\n40 PRINT 255;M$,:FOR XY=(((127<>671*C%))/((((Z% AND AB%))+((40 AND 5))))) TO (65535 OR COS(13880 OR Z)):ON (823) GOTO 60\n50 NEXT XY:PRINT\n60 AB%=K*Z%:C%=W:FOR Z=(-PEEK(-K)) TO (XY)\n70 SPEED=Z%<=D%(W AND W%,B/256):A=(19837)\n80 ON W%<RND(AB%) GOTO 20,50,160:PRINT:ROT=534<>-C%^0\n90 IF (COS(32767)) THEN K=((-D%(Z%,Z%) AND Z%>32767))/D%(1000,K/A):HCOLOR=127:POKE Z<A,-(((W%)+XY))\n100 PRINT A%(127-1000,C%+191)<NOT C%,-K;LEFT$(\"HI\",-10>-255);\n110 DATA ,300:COLOR=256\n120 B=AB%\n130 C$=C$\n140 C$=LEFT$(MID$(LEFT$(M$,Z%),2-278),-A%(K,Z%)>81):IF ((VAL(RIGHT$(M$,100)))) THEN RETURN:A%(AB%,VAL(C$))=INT(((550<=XY))/127)\n150 NEXT Z:PRINT ((8089>=W))+((24<10))<=ABS(39*20);RIGHT$(\"HI\",(1000)-((D%(W%,W%)-100))),\n160 SPEED=ASC(MID$(C$,1>=C%)):W=7\n170 READ D%(C% OR B,-((((W<W))-K))),B,A%(Z%,Z%):XY=B:Y$=C$\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1586,
+ "obj_sha256": "aa526edaa76cb55bad169a7fb4e082c3a84a1fd007283102e8c106cb313bf0a5",
+ "cycles": 132829109,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6201
+  },
+  {
+   "line": 50,
+   "addr": 6305
+  },
+  {
+   "line": 60,
+   "addr": 6313
+  },
+  {
+   "line": 70,
+   "addr": 6354
+  },
+  {
+   "line": 80,
+   "addr": 6399
+  },
+  {
+   "line": 90,
+   "addr": 6451
+  },
+  {
+   "line": 100,
+   "addr": 6557
+  },
+  {
+   "line": 110,
+   "addr": 6649
+  },
+  {
+   "line": 120,
+   "addr": 6666
+  },
+  {
+   "line": 130,
+   "addr": 6672
+  },
+  {
+   "line": 140,
+   "addr": 6678
+  },
+  {
+   "line": 150,
+   "addr": 6782
+  },
+  {
+   "line": 160,
+   "addr": 6879
+  },
+  {
+   "line": 170,
+   "addr": 6906
+  }
+ ],
+ "info": {
+  "RINT": "ROT= 534 <  >  - C% ^ 0",
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7649",
+  "LOCAL VARIABLES": "7650 - 8126",
+  "HIGHEST MEMORY LOCATION": "8126"
+ }
+}

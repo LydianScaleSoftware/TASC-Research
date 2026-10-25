@@ -1,0 +1,16 @@
+10 REM! INTEGER K
+20 IF (7207) THEN 40:P%(PEEK(-C)^((N2%>0)))=((P%(0)<N2%))-((X%<>N2%))-((33959<W/K)):ON INT(ATN(P%(K))+K*Z%) GOTO 160
+30 N2%=B:X%=1E3-((10<>((P%(AB%)<>P%(Z%))))):HLIN Z%,(K+((C<>B-X))) AT 7*((B*EXP(N2%)))
+40 C=C:DATA 300,-2.5:AB%=127/Z%>=N2%=P%(TAN(C))
+50 Q1$=B$:K=Z%
+60 FOR X=(LEN(W$)) TO (B<NOT W*256):DATA X,X,-2.5,:GOTO 100
+70 PRINT RIGHT$("HI",7^X+X),X+X%;AB+RND(Z%);:NORMAL:CALL B
+80 AB=K=1<=((PEEK(B) OR SQR(X))):IF (.5) THEN PRINT ((C<AB))*7,((X%=P%(AB%)));
+90 N2%=32767:NEXT
+100 IF (ASC(Q1$)>=VAL(CHR$(W))) THEN 100:PRINT RIGHT$(RIGHT$("HI",NOT Z%),K<>C>=AB+W),LOG(N2%)-((P%(X%)<>AB))=((Z%=2.25))/((AB%*P%(AB%)));
+110 FOR W=(AB) TO (AB%):IF (C OR 1.5) THEN IF (-((X+.5))+ASC(Q1$)) THEN HTAB ((P%(127)>=K))+((-W OR AB<=P%(AB%))):B$=Q1$
+120 IF (B>X) THEN 150:B$=""
+130 C=19
+140 IF (7) THEN W$=LEFT$(W$,N2%):P%(TAN(950>=X+P%(Z%)))=AB:HTAB C
+150 DATA 300,X:IF ((10-B AND 2.25-K)) THEN POKE B,-((((P%(K)-C))/C)):X=B
+160 PRINT:DATA "A,B","A,B":GET X%

@@ -1,0 +1,86 @@
+{
+ "id": "r2005",
+ "key": "01fd647ab9057ed7",
+ "source": "10 REM! INTEGER K\n20 XY%=ABS(XY):K=X\n30 B=LOG(-A):COLOR=SGN(-679^((.5>=3)))\n40 POKE INT(X),LEN(\"X Y\")-33:X%=X-3\n50 HPLOT X,(40)\n60 HLIN NOT AB%,(ATN(XY%)) AT INT(((X% AND A))*40):A=2\n70 HTAB 10>=((INT(X)=((XY%<W))))\n80 AB%=((XY%>AB%))-ASC(Z$)\n90 IF (XY%) THEN PLOT 1000-.5,XY:PRINT K^-A OR NOT ((NOT 97));:AB$=B$\n100 W=W\n110 ON B% GOTO 100,130:ON X% GOTO 90,40,30,60\n120 XY=AB%\n130 ON AB% GOTO 40:FOR A=(283) TO (X-X%):HLIN 127>=((A>B)),(31611) AT A+((W>=24=((100 AND A))))\n140 POKE (INT(ATN(XY))),B%:HCOLOR=((-K OR XY>=AB%))<=PEEK(X%)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 945,
+ "obj_sha256": "43891b63ec67ab56a0cf8486788f45d61637949a33cd098d719c41c2c2a67164",
+ "cycles": 105646361,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6105
+  },
+  {
+   "line": 40,
+   "addr": 6153
+  },
+  {
+   "line": 50,
+   "addr": 6207
+  },
+  {
+   "line": 60,
+   "addr": 6222
+  },
+  {
+   "line": 70,
+   "addr": 6273
+  },
+  {
+   "line": 80,
+   "addr": 6309
+  },
+  {
+   "line": 90,
+   "addr": 6339
+  },
+  {
+   "line": 100,
+   "addr": 6410
+  },
+  {
+   "line": 110,
+   "addr": 6419
+  },
+  {
+   "line": 120,
+   "addr": 6451
+  },
+  {
+   "line": 130,
+   "addr": 6460
+  },
+  {
+   "line": 140,
+   "addr": 6555
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S005.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7008",
+  "LOCAL VARIABLES": "7009 - 7054",
+  "HIGHEST MEMORY LOCATION": "7054"
+ }
+}

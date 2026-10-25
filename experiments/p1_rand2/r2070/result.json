@@ -1,0 +1,102 @@
+{
+ "id": "r2070",
+ "key": "1109a310b243db4a",
+ "source": "10 REM! INTEGER *\n20 RETURN\n30 N2%=ASC(B$)\n40 C$=A$\n50 IF (-N2%) THEN 140\n60 FOR B=(4185) TO (-VAL(STR$(Z))):C%=43524\n70 B$=B$\n80 PLOT Z-EXP(574),C%>=((N2%<>C%>=3)):IF (C%) THEN HCOLOR=40713\n90 C%=-M<B:PRINT:NEXT B\n100 VTAB 0:FOR M=(AB) TO (2):READ B\n110 N2=39\n120 N2%=B>=SIN(M<B)\n130 M=((256/Z>C%))/((LOG(M)*INT(2.25))):Q1%=((Z-((M-Z))))/Q1%:IF (B%-((255>B%))>=47986) THEN 70\n140 ON N2% GOSUB 80,130:M=N2%<N2\n150 HCOLOR=C%:B$=LEFT$(B$,1000)+\"A\"+\"\"+B$+\"A\"+A$:ON ((N2% OR N2%>M))+((Q1%-N2))*M GOTO 110,160,100\n160 Z=N2%-((40 AND B%))-B\n170 M=2:IF (795) THEN 140\n180 ROT=C%:GOTO 170\n",
+ "options": {
+  "library": null,
+  "program": 20480,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 20480,
+ "obj_len": 884,
+ "obj_sha256": "7c273aa491a041bc24fd341abe7e2b9815cec49e8e651c3fe0b79ae3b1b109aa",
+ "cycles": 103809389,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 20500
+  },
+  {
+   "line": 20,
+   "addr": 20500
+  },
+  {
+   "line": 30,
+   "addr": 20501
+  },
+  {
+   "line": 40,
+   "addr": 20510
+  },
+  {
+   "line": 50,
+   "addr": 20516
+  },
+  {
+   "line": 60,
+   "addr": 20531
+  },
+  {
+   "line": 70,
+   "addr": 20563
+  },
+  {
+   "line": 80,
+   "addr": 20569
+  },
+  {
+   "line": 90,
+   "addr": 20619
+  },
+  {
+   "line": 100,
+   "addr": 20642
+  },
+  {
+   "line": 110,
+   "addr": 20671
+  },
+  {
+   "line": 120,
+   "addr": 20677
+  },
+  {
+   "line": 130,
+   "addr": 20698
+  },
+  {
+   "line": 140,
+   "addr": 20784
+  },
+  {
+   "line": 150,
+   "addr": 20807
+  },
+  {
+   "line": 160,
+   "addr": 20921
+  },
+  {
+   "line": 170,
+   "addr": 20948
+  },
+  {
+   "line": 180,
+   "addr": 20962
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "OBJECT FILE": "S005.OBJ",
+  "PROGRAM": "20480 - 21363",
+  "LOCAL VARIABLES": "21364 - 21397",
+  "HIGHEST MEMORY LOCATION": "21397"
+ }
+}

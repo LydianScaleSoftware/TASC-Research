@@ -1,0 +1,98 @@
+{
+ "id": "r2098",
+ "key": "390b6a042688977b",
+ "source": "10 DIM A$(6),B%(5,4),P$(1,1)\n20 DEF FN F(T)=127\n30 HTAB NOT M:CALL W% AND -24:Q1%=127\n40 GOTO 160\n50 IF (FN F(X<>M=((X<>Q1)))) THEN FOR Q1=(2.25-((NOT AB%-COS(N2)))) TO (W% OR COS(LOG(X%)))\n60 Q1%=FN F(AB%)\n70 DRAW 39 AT ASC(M$+\"A\")<=B%(M<=W%,B%(X%,1)-5),(W%):X=B:A$=LEFT$(RIGHT$(M$,10),1-M)+\"A\"\n80 X%=N2 AND 32767\n90 M=((W%=W%))*((Q1% OR B%(AB%,X%)))-EXP(Q1=256):IF (M) THEN A$=MID$(MID$(\"\",N2),-X%)+Z$:B=PEEK(108)\n100 M=B\n110 ON FN F(N2) GOSUB 20,50,70:READ M$,A$\n120 PRINT\n130 N2=((ATN(B%(203,AB%))>X%))-((B AND AB%<B)):Q1=Q1%:GOSUB 170\n140 N2=Q1:X=B+B:SPEED=1000*B%(M*43978,1000)\n150 GOSUB 10:FOR M=(LEN(A$(0>=Q1))) TO (((B%(AB%,AB%) OR 795))/NOT W%>LOG(VAL(M$))) STEP (X%):GOTO 120\n160 GOTO 20\n170 IF (B%(B%(W%,AB%)-X,24)) THEN POKE -((Q1<=731>Q1%)),49152^((N2*Q1%))+((FN F(65535) AND B<>B%(32767,3.14159)))\n",
+ "options": {
+  "library": null,
+  "program": 20480,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 20480,
+ "obj_len": 1360,
+ "obj_sha256": "e7e1c374d9f2f791ddc443dda3115701b915408397992d5f5901f3c345d1898d",
+ "cycles": 124952651,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 20500
+  },
+  {
+   "line": 20,
+   "addr": 20500
+  },
+  {
+   "line": 30,
+   "addr": 20510
+  },
+  {
+   "line": 40,
+   "addr": 20552
+  },
+  {
+   "line": 50,
+   "addr": 20555
+  },
+  {
+   "line": 60,
+   "addr": 20645
+  },
+  {
+   "line": 70,
+   "addr": 20657
+  },
+  {
+   "line": 80,
+   "addr": 20797
+  },
+  {
+   "line": 90,
+   "addr": 20812
+  },
+  {
+   "line": 100,
+   "addr": 20931
+  },
+  {
+   "line": 110,
+   "addr": 20940
+  },
+  {
+   "line": 120,
+   "addr": 20974
+  },
+  {
+   "line": 130,
+   "addr": 20980
+  },
+  {
+   "line": 140,
+   "addr": 21043
+  },
+  {
+   "line": 150,
+   "addr": 21097
+  },
+  {
+   "line": 160,
+   "addr": 21189
+  },
+  {
+   "line": 170,
+   "addr": 21192
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "OBJECT FILE": "S007.OBJ",
+  "PROGRAM": "20480 - 21839",
+  "LOCAL VARIABLES": "21840 - 21977",
+  "HIGHEST MEMORY LOCATION": "21977"
+ }
+}

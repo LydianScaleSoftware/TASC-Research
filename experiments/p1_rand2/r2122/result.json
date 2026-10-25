@@ -1,0 +1,78 @@
+{
+ "id": "r2122",
+ "key": "db551aca24573359",
+ "source": "10 REM! INTEGER J,I\n20 DIM D(12)\n30 D(XY>=7)=-((D(AB%)*D(Y%)))<NOT X%:CALL B\n40 Z$=AB$:CALL Y:GOSUB 20\n50 GOTO 30\n60 PRINT AB$;:B=X\n70 XY=COS(2):AB=X:COLOR=100\n80 X=-((Y%<TAN(D(728)))):D(AB<EXP(D(X%)))=Z%<=.5:Z$=AB$\n90 PRINT:RESTORE\n100 C$=\"A\"+\"123\":DATA -2.5,,1,:Z$=LEFT$(C$,((X% AND B))+((D(X%) AND I)))\n110 ON B GOTO 120,30,110,120:IF (PEEK(45748-D(Z%))+INT(Z%)) THEN 110\n120 AB%=LEN(\"123\")<=877:HTAB 1000\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 655,
+ "obj_sha256": "a25b87a206323593bfb3442808ff16e52d060022b8808c8d3e43fb5bd44ecbae",
+ "cycles": 89212824,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6144
+  },
+  {
+   "line": 50,
+   "addr": 6159
+  },
+  {
+   "line": 60,
+   "addr": 6162
+  },
+  {
+   "line": 70,
+   "addr": 6174
+  },
+  {
+   "line": 80,
+   "addr": 6195
+  },
+  {
+   "line": 90,
+   "addr": 6258
+  },
+  {
+   "line": 100,
+   "addr": 6264
+  },
+  {
+   "line": 110,
+   "addr": 6352
+  },
+  {
+   "line": 120,
+   "addr": 6398
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S005.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6718",
+  "LOCAL VARIABLES": "6719 - 6833",
+  "HIGHEST MEMORY LOCATION": "6833"
+ }
+}

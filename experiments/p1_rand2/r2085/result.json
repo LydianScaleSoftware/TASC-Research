@@ -1,0 +1,78 @@
+{
+ "id": "r2085",
+ "key": "916b43b3e13a5f69",
+ "source": "10 DEF FN F(T)=VAL(LEFT$(Y$,18880))/632^-N2%\n20 N2%=COS(C%*B)\n30 PRINT B$,C%,11353;:C=1-M%\n40 IF (.001) THEN ON -65535 GOTO 80,70:FOR X=(FN F(X)) TO (EXP(C)) STEP (TAN(M))\n50 Y$=RIGHT$(RIGHT$(STR$(127),NOT X),C):NEXT X\n60 IF (X*M^M) THEN PRINT M%*A%,:IF (X=1) THEN 110:IF (10) THEN COLOR=NOT A\n70 Y$=Y$:C=1000<=((-A% AND A%)):GOSUB 80\n80 N2%=C:PRINT:HTAB N2%=FN F(A)-M/M%\n90 HCOLOR=C%:IF (C%) THEN M=A\n100 B=1E3:ON M% GOTO 100,20,50,40\n110 DATA HI,X:VTAB M%:N2%=611\n120 PRINT M,ASC(B$);M$+Y$+LEFT$(Y$,X)+\"A\";:IF (840/B) THEN RETURN:Y$=\"HI\"\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 782,
+ "obj_sha256": "e845ccb258ad7a147b0c3026b04160ffdd190a0db7e601f31ab6e32fd30a0b87",
+ "cycles": 95569161,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6121
+  },
+  {
+   "line": 30,
+   "addr": 6133
+  },
+  {
+   "line": 40,
+   "addr": 6166
+  },
+  {
+   "line": 50,
+   "addr": 6217
+  },
+  {
+   "line": 60,
+   "addr": 6246
+  },
+  {
+   "line": 70,
+   "addr": 6291
+  },
+  {
+   "line": 80,
+   "addr": 6324
+  },
+  {
+   "line": 90,
+   "addr": 6360
+  },
+  {
+   "line": 100,
+   "addr": 6380
+  },
+  {
+   "line": 110,
+   "addr": 6401
+  },
+  {
+   "line": 120,
+   "addr": 6424
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S007.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6845",
+  "LOCAL VARIABLES": "6846 - 6901",
+  "HIGHEST MEMORY LOCATION": "6901"
+ }
+}

@@ -1,0 +1,90 @@
+{
+ "id": "r2114",
+ "key": "a68e9ee8ab82e1a2",
+ "source": "10 REM! INTEGER I\n20 M=100\n30 GOTO 100\n40 POKE M,M:A$=A$\n50 VTAB W%\n60 IF (Z%) THEN 30:GOSUB 70\n70 B(I,32767<RND(W%)/((3.14159>=256)))=((Q1%<=W>=LEN(\"X Y\")))+((I AND NOT X)):A$=CHR$(Z%):Y$=LEFT$(A$,-((B(2,I)+5)))\n80 HTAB W%:POP:CALL I\n90 IF (ABS(W%)) THEN 120:IF (TAN(N2)*(((M)>=((X%<>M))))) THEN IF (-((W%*LEN(\"X Y\")))) THEN 140:SPEED=-M\n100 HCOLOR=X+I:PRINT B(Q1%<>739,I)/((((I AND 127))<>NOT I));-((XY<>291-M));X<=TAN(M/A%(I));:Y$=\"TASC\"+MID$(CHR$(M),39)\n110 PRINT COS((W^N2)),A$;\n120 B(24*W%,NOT ((3.14159<=Q1%))*1.5)=SGN(429>=407+W)\n130 M=LEN(STR$(W%>M)):PRINT 884,:ONERR GOTO 40\n140 X%=-B(Z%,ASC(\"\")):B(Q1%,LEN(Y$))=N2\n150 Y$=A$:VTAB I:READ I\n",
+ "options": {
+  "library": 4096,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 8109,
+ "obj_len": 952,
+ "obj_sha256": "a08c64111906c808dbefcf70f3fb8c2a894332f754028eb293ebdc1d97b49142",
+ "cycles": 108595758,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 8129
+  },
+  {
+   "line": 20,
+   "addr": 8129
+  },
+  {
+   "line": 30,
+   "addr": 8135
+  },
+  {
+   "line": 40,
+   "addr": 8138
+  },
+  {
+   "line": 50,
+   "addr": 8156
+  },
+  {
+   "line": 60,
+   "addr": 8162
+  },
+  {
+   "line": 70,
+   "addr": 8170
+  },
+  {
+   "line": 80,
+   "addr": 8302
+  },
+  {
+   "line": 90,
+   "addr": 8317
+  },
+  {
+   "line": 100,
+   "addr": 8330
+  },
+  {
+   "line": 110,
+   "addr": 8475
+  },
+  {
+   "line": 120,
+   "addr": 8499
+  },
+  {
+   "line": 130,
+   "addr": 8550
+  },
+  {
+   "line": 140,
+   "addr": 8585
+  },
+  {
+   "line": 150,
+   "addr": 8633
+  }
+ ],
+ "info": {
+  "LIBRARY": "4096 - 8108",
+  "OBJECT FILE": "S010.OBJ",
+  "PROGRAM": "8109 - 9060",
+  "LOCAL VARIABLES": "9061 - 9738",
+  "HIGHEST MEMORY LOCATION": "9738"
+ }
+}

@@ -1,0 +1,94 @@
+{
+ "id": "r2073",
+ "key": "4c20d56491d3ea9b",
+ "source": "10 DEF FN F(T)=23404\n20 GOSUB 30\n30 PRINT N2;:FOR Q1=(((N2 AND M-B%))=EXP(A)) TO (40000):DATA 300\n40 PRINT A<=((X/A))^X%;\"123\"+M$;COS(-Y%);:PRINT 1.5;INT(N2 OR X%);\n50 AB%=A>-39<FN F(X%):HTAB -((((M>AB%))^((X%*969)))):GOSUB 110\n60 NEXT Q1\n70 M$=M$:VTAB B%:IF (3) THEN IF (RND(7)) THEN 20\n80 HTAB X%=B%<>A*B%\n90 FOR A=(10) TO (LEN(STR$(1000<>B%)))\n100 A=A>Y%<>AB%*X%<=NOT ((B%^AB%)):IF (X%^NOT X%) THEN CALL N2\n110 PLOT PEEK(A),Y%=((0.1/AB% OR 2 AND A)):PRINT ((-M OR 10)) AND PEEK(Q1),:NEXT A\n120 COLOR=FN F(X%):ON NOT A>A<=-AB% GOTO 160,110,80,80\n130 PRINT C$;:READ X,M$:FOR M=(COS(X%)*((FN F(256)-ATN(A)))) TO (Y%) STEP (789)\n140 IF (NOT M) THEN 110:X%=((X<=((B%<M))))*((M<>3.14159)):C$=STR$(.5*Q1<>Q1+1)\n150 GOTO 150\n160 Z$=\"123\"\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1179,
+ "obj_sha256": "f2db9eb896cbc33f772f4b835e585a08f59ec612fffab7de0436f7d7e21ed640",
+ "cycles": 114559354,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6094
+  },
+  {
+   "line": 30,
+   "addr": 6097
+  },
+  {
+   "line": 40,
+   "addr": 6160
+  },
+  {
+   "line": 50,
+   "addr": 6247
+  },
+  {
+   "line": 60,
+   "addr": 6316
+  },
+  {
+   "line": 70,
+   "addr": 6324
+  },
+  {
+   "line": 80,
+   "addr": 6366
+  },
+  {
+   "line": 90,
+   "addr": 6396
+  },
+  {
+   "line": 100,
+   "addr": 6428
+  },
+  {
+   "line": 110,
+   "addr": 6509
+  },
+  {
+   "line": 120,
+   "addr": 6604
+  },
+  {
+   "line": 130,
+   "addr": 6658
+  },
+  {
+   "line": 140,
+   "addr": 6732
+  },
+  {
+   "line": 150,
+   "addr": 6812
+  },
+  {
+   "line": 160,
+   "addr": 6815
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S008.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7242",
+  "LOCAL VARIABLES": "7243 - 7296",
+  "HIGHEST MEMORY LOCATION": "7296"
+ }
+}

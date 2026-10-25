@@ -1,0 +1,76 @@
+{
+ "id": "r2138",
+ "key": "76554588b96346f1",
+ "source": "10 REM! INTEGER I,K\n20 REM! USECOMMON AB$,Z,Y%\n30 Q1=-D%(W%)-599<=((20>M)):POKE Z,K+Z\n40 GOSUB 50:ON K-ASC(MID$(Y$,.001)) GOTO 50,30:END\n50 HCOLOR=NOT ((N2-Z=2))\n60 PRINT \"X Y\",ABS((Q1))>3,\n70 FOR Z=(((2.25/N2>NOT 1E3))-W) TO (NOT LEN(N2$) AND ASC(Y$+\"\")) STEP (N2<((Z/N2 OR 127)))\n80 N2$=AB$:AB$=MID$(RIGHT$(RIGHT$(Y$,21293),23536<>D%(870)),Z)\n90 NORMAL\n100 COLOR=0:GOTO 50:HCOLOR=SIN(NOT 0) OR W%<>-D%(K)\n110 RETURN:IF (ABS(X%)>-X%) THEN HLIN 190,((((X%-27400))/((K*20)))) AT W\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6073,
+ "obj_len": 601,
+ "obj_sha256": "2a3675b352f38bc5eff26fc85df04f3f7138ae7f0a6ea11f445d5442bb9fcdcd",
+ "cycles": 85396276,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6093
+  },
+  {
+   "line": 40,
+   "addr": 6147
+  },
+  {
+   "line": 50,
+   "addr": 6176
+  },
+  {
+   "line": 60,
+   "addr": 6194
+  },
+  {
+   "line": 70,
+   "addr": 6230
+  },
+  {
+   "line": 80,
+   "addr": 6335
+  },
+  {
+   "line": 90,
+   "addr": 6374
+  },
+  {
+   "line": 100,
+   "addr": 6377
+  },
+  {
+   "line": 110,
+   "addr": 6386
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S008.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6073 - 6673",
+  "NUMERIC COMMON": "6064 - 6070",
+  "STRING COMMON": "6071 - 6072",
+  "LOCAL VARIABLES": "6674 - 6732",
+  "HIGHEST MEMORY LOCATION": "6732"
+ }
+}
