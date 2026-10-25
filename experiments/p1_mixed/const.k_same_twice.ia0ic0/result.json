@@ -1,0 +1,34 @@
+{
+ "id": "const.k_same_twice.ia0ic0",
+ "key": "29a737cbd10aedb0",
+ "source": "10 X=5:Y%=5",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 67,
+ "obj_sha256": "2bb6be040a77732fc4843477323db49d6e184d87ca0d375751631577583bd855",
+ "cycles": 57607020,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S016.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6130",
+  "LOCAL VARIABLES": "6131 - 6137",
+  "HIGHEST MEMORY LOCATION": "6137"
+ }
+}

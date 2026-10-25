@@ -1,0 +1,34 @@
+{
+ "id": "le_ii_to_xi",
+ "key": "288f1e70372449ee",
+ "source": "10 X%=A%<=B%",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 62,
+ "obj_sha256": "2c6ca3fca90297d9e7de76f023c2116ab73fb78efdd34772391766f6cf619f99",
+ "cycles": 55292956,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S013.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6125",
+  "LOCAL VARIABLES": "6126 - 6131",
+  "HIGHEST MEMORY LOCATION": "6131"
+ }
+}

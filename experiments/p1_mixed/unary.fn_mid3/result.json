@@ -1,0 +1,34 @@
+{
+ "id": "unary.fn_mid3",
+ "key": "b1238175a278686b",
+ "source": "10 X$=MID$(A$,B,C)",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 79,
+ "obj_sha256": "f90e187ac0e77a7f96c04f3029a99ba5738a53b2e696ba03e0dc4a243f975f9a",
+ "cycles": 55791090,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S009.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6142",
+  "LOCAL VARIABLES": "6143 - 6156",
+  "HIGHEST MEMORY LOCATION": "6156"
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "id": "or_rr_to_x_ia0",
+ "key": "72a1dd4e0503b741",
+ "source": "10 X=AORB",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 53,
+ "obj_sha256": "bc73a9ca095c4d8f3429caa6dd1403da011be9ad6f045f2a8c5421c9cb5d020d",
+ "cycles": 55026430,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S008.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6116",
+  "LOCAL VARIABLES": "6117 - 6131",
+  "HIGHEST MEMORY LOCATION": "6131"
+ }
+}

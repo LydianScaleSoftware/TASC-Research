@@ -1,0 +1,34 @@
+{
+ "id": "ge_ii_to_x",
+ "key": "c06687290f461d51",
+ "source": "10 X=A%>=B%",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 62,
+ "obj_sha256": "149c4bd31bf02abe281143936d604426bae08b7b09ad0257d0a2d6881d108fa6",
+ "cycles": 58232924,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S005.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6125",
+  "LOCAL VARIABLES": "6126 - 6134",
+  "HIGHEST MEMORY LOCATION": "6134"
+ }
+}

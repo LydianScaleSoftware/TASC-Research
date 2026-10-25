@@ -1,0 +1,34 @@
+{
+ "id": "print.pr_x_c_y",
+ "key": "cd2e09a1ea89ecc1",
+ "source": "10 PRINT X,Y",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 59,
+ "obj_sha256": "f3c93337ee74ab65cda33aa57d8b6effc5ccb0a65a6c8157669b48160c0338e7",
+ "cycles": 55561762,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S003.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6122",
+  "LOCAL VARIABLES": "6123 - 6132",
+  "HIGHEST MEMORY LOCATION": "6132"
+ }
+}

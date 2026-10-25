@@ -1,0 +1,34 @@
+{
+ "id": "flow.for_nested_next",
+ "key": "1a2734624f136f39",
+ "source": "10 FOR I=1 TO 2:FOR J=1 TO 2:NEXT J,I",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 89,
+ "obj_sha256": "1a1d4d552b0865db7cdd3a6a0dae08fde2c3054e6a35b5d6cab5a85e9358cf64",
+ "cycles": 56312374,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S013.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6152",
+  "LOCAL VARIABLES": "6153 - 6162",
+  "HIGHEST MEMORY LOCATION": "6162"
+ }
+}

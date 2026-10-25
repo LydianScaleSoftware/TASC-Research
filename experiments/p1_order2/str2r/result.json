@@ -1,0 +1,58 @@
+{
+ "id": "str2r",
+ "key": "13234a3d9fbdab4a",
+ "source": "10 ZZ$=\"\"\n20 Z$=\"\"\n30 BA$=\"\"\n40 B$=\"\"\n50 AB$=\"\"\n60 AA$=\"\"\n70 A$=\"\"",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 177,
+ "obj_sha256": "5f9b13dd49ff8c4d0545fd8f8c13ce37c5ab6a69cd39dcceb573221f33df5b9d",
+ "cycles": 58854616,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6096
+  },
+  {
+   "line": 30,
+   "addr": 6108
+  },
+  {
+   "line": 40,
+   "addr": 6120
+  },
+  {
+   "line": 50,
+   "addr": 6132
+  },
+  {
+   "line": 60,
+   "addr": 6144
+  },
+  {
+   "line": 70,
+   "addr": 6156
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6240",
+  "LOCAL VARIABLES": "6241 - 6254",
+  "HIGHEST MEMORY LOCATION": "6254"
+ }
+}

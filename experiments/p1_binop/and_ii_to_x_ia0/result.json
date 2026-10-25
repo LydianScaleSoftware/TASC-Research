@@ -1,0 +1,34 @@
+{
+ "id": "and_ii_to_x_ia0",
+ "key": "b01fd65f10724c4b",
+ "source": "10 X=A%ANDB%",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 56,
+ "obj_sha256": "e9a50c796902d09e7cf048b73aca7dd17097b10c1f4b7b137973bb07daf4b2a0",
+ "cycles": 58418342,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S005.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6119",
+  "LOCAL VARIABLES": "6120 - 6128",
+  "HIGHEST MEMORY LOCATION": "6128"
+ }
+}

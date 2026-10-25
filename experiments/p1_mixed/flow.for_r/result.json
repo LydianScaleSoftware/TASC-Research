@@ -1,0 +1,34 @@
+{
+ "id": "flow.for_r",
+ "key": "cb3938932b79bc8e",
+ "source": "10 FOR I=1 TO 10:NEXT I",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 67,
+ "obj_sha256": "79bb38d387a8e9d48c777e2ceebe638f8805414f28ce26a48aee2d02e29a6ecf",
+ "cycles": 54287414,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S008.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6130",
+  "LOCAL VARIABLES": "6131 - 6135",
+  "HIGHEST MEMORY LOCATION": "6135"
+ }
+}

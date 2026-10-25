@@ -1,0 +1,34 @@
+{
+ "id": "unary.fn_chr_i",
+ "key": "cea3c814f440dca9",
+ "source": "10 X$=CHR$(A%)",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 51,
+ "obj_sha256": "db3e8ba57f5d95be4f6cb855b65c471eb3e9aaa44273cad09c2f64cdb3c74f8d",
+ "cycles": 56317694,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S010.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6114",
+  "LOCAL VARIABLES": "6115 - 6118",
+  "HIGHEST MEMORY LOCATION": "6118"
+ }
+}

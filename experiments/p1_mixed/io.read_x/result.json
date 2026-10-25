@@ -1,0 +1,38 @@
+{
+ "id": "io.read_x",
+ "key": "1284227069632987",
+ "source": "10 READ X\n20 DATA 5",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 46,
+ "obj_sha256": "296c8a0e87e985b584542caaf34c670a3ca937d32a28ea0fa264c5129f0b9175",
+ "cycles": 57771880,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6090
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S005.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6109",
+  "LOCAL VARIABLES": "6110 - 6114",
+  "HIGHEST MEMORY LOCATION": "6114"
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "id": "unary.streq",
+ "key": "c3ab7f3ca7661e15",
+ "source": "10 X=A$=B$",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 67,
+ "obj_sha256": "668483d9f9ebd405b54e5f912b58802617ed4f6a03bc7b1947f63bf300c6ea41",
+ "cycles": 53585667,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S014.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6130",
+  "LOCAL VARIABLES": "6131 - 6139",
+  "HIGHEST MEMORY LOCATION": "6139"
+ }
+}

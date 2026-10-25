@@ -1,0 +1,2 @@
+10 DEF FN F(Z)=Z+Y
+20 X=FN F(A)

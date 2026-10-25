@@ -1,0 +1,34 @@
+{
+ "id": "const.k_cmp_r.ia0ic0",
+ "key": "af88f1f2b5caae1c",
+ "source": "10 X=A>5",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 67,
+ "obj_sha256": "937cdc810f8cb0ab6cd9c8d324c7896e35c84eb2715612fe4faaa63bf8016ae0",
+ "cycles": 56510787,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S004.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6130",
+  "LOCAL VARIABLES": "6131 - 6140",
+  "HIGHEST MEMORY LOCATION": "6140"
+ }
+}

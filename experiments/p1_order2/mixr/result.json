@@ -1,0 +1,78 @@
+{
+ "id": "mixr",
+ "key": "5bc49a531eb6aaf2",
+ "source": "10 ZZ=0\n20 Z9=0\n30 A9=0\n40 A1=0\n50 B%=0\n60 AA%=0\n70 A%=0\n80 BA=0\n90 B=0\n100 AB=0\n110 AA=0\n120 A=0",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 228,
+ "obj_sha256": "1a7a65cd94edbcfd1b519264e891aa9f48440ceb54f905499acd1c836de11f71",
+ "cycles": 65559680,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6090
+  },
+  {
+   "line": 30,
+   "addr": 6096
+  },
+  {
+   "line": 40,
+   "addr": 6102
+  },
+  {
+   "line": 50,
+   "addr": 6108
+  },
+  {
+   "line": 60,
+   "addr": 6114
+  },
+  {
+   "line": 70,
+   "addr": 6120
+  },
+  {
+   "line": 80,
+   "addr": 6126
+  },
+  {
+   "line": 90,
+   "addr": 6132
+  },
+  {
+   "line": 100,
+   "addr": 6138
+  },
+  {
+   "line": 110,
+   "addr": 6144
+  },
+  {
+   "line": 120,
+   "addr": 6150
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6291",
+  "LOCAL VARIABLES": "6292 - 6342",
+  "HIGHEST MEMORY LOCATION": "6342"
+ }
+}

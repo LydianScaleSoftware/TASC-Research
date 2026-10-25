@@ -35,6 +35,7 @@ class Routine:
     dispatcher: int
     vtype: str  # real / int / str
     name: str = ""
+    dims: tuple[int, ...] = ()  # arrays: max index per subscript (inline after the JSR)
 
     @property
     def end(self) -> int:
@@ -100,10 +101,24 @@ def int_value(raw: bytes) -> int:
     return v
 
 
+ARRAY_DISPATCHERS = {0x0B11: "real", 0x0B14: "str", 0x0B17: "int"}
+
+
 def _parse_routine(d: bytes, load: int, off: int) -> Routine | None:
     """Try to parse one routine at file offset off."""
     a = off
     entries: dict[int, int] = {}
+    if d[a : a + 4] == b"\x38\xa9\x18\x20" and a + 9 <= len(d):  # array: SEC/CLC, JSR disp, inline data
+        disp = d[a + 4] | d[a + 5] << 8
+        if disp not in ARRAY_DISPATCHERS:
+            return None
+        tgt = d[a + 6] | d[a + 7] << 8
+        nd = d[a + 8]
+        if nd == 0 or a + 9 + 2 * nd > len(d):
+            return None
+        dims = tuple(d[a + 9 + 2 * i] | d[a + 10 + 2 * i] << 8 for i in range(nd))
+        return Routine(load + a, {load + a: 0, load + a + 2: 1}, tgt, disp, ARRAY_DISPATCHERS[disp],
+                       dims=dims, length=9 + 2 * nd)
     if d[a : a + 3] == b"\x38\xa9\x18":  # string: SEC / (LDA #$18 = CLC)
         if d[a + 3] == 0xA0 and d[a + 5] == 0xA9 and d[a + 7] == 0x4C:
             disp = d[a + 8] | d[a + 9] << 8
@@ -145,16 +160,45 @@ TYPE_ORDER = {"real": 0, "int": 1, "str": 2}
 TYPE_SIZE = {"real": 5, "int": 2, "str": 2}
 
 
+TYPE_HASH = {"real": 0, "str": 1, "int": 2}
+
+
+def symbol_hash(v: Var) -> int:
+    """Observed symbol-table bucket (p1_order, p1_order2): 32 buckets,
+    h = (3*(c1-1) + c2 + T) mod 32 with 5-bit character codes (A=1, '0'=16,
+    c2=0 for one-letter names), T = 0 real, 1 string, 2 integer.  Buckets are
+    walked in order; within a bucket entries keep insertion (source) order."""
+    c1 = ord(v.name[0]) & 0x1F
+    c2 = ord(v.name[1]) & 0x1F if len(v.name) > 1 else 0
+    return (3 * (c1 - 1) + c2 + TYPE_HASH[v.vtype]) % 32
+
+
+def symbol_key(v: Var) -> int:
+    return symbol_hash(v)  # sorted() is stable, so ties keep source order
+
+
+def var_size(v: Var) -> int:
+    n = 1
+    for d in v.dims if v.array else ():
+        n *= d + 1
+    return n * TYPE_SIZE[v.vtype]
+
+
 def predict_locals(vars_: list[Var], start: int) -> dict[int, Var]:
-    """Observed allocation rule (Phase 1, p1_alloc): numeric scalars sorted by
-    (name, real before int), then string scalars sorted by name."""
+    """Hypothesis: numeric scalars, numeric arrays, string scalars, string
+    arrays; each group in symbol-table order."""
     out: dict[int, Var] = {}
     a = start
-    num = sorted((v for v in vars_ if not v.array and v.vtype != "str"), key=lambda v: (v.name, TYPE_ORDER[v.vtype]))
-    strs = sorted((v for v in vars_ if not v.array and v.vtype == "str"), key=lambda v: v.name)
-    for v in num + strs:
-        out[a] = v
-        a += TYPE_SIZE[v.vtype]
+    groups = [
+        [v for v in vars_ if not v.array and v.vtype != "str"],
+        [v for v in vars_ if v.array and v.vtype != "str"],
+        [v for v in vars_ if not v.array and v.vtype == "str"],
+        [v for v in vars_ if v.array and v.vtype == "str"],
+    ]
+    for g in groups:
+        for v in sorted(g, key=symbol_key):
+            out[a] = v
+            a += var_size(v)
     return out
 
 
@@ -201,7 +245,7 @@ def parse(data: bytes, load: int, source: str | None = None) -> ObjectFile:
         targets = {r.target for r in routines if not (load <= r.target < load + rstart)}
         if not targets <= set(pred):
             obj.notes.append(f"ALLOC MISMATCH: routine targets {sorted(targets - set(pred))} not predicted")
-        end_pred = max((a + TYPE_SIZE[v.vtype] for a, v in pred.items()), default=words["LOCBEG1"] + 1) - 1
+        end_pred = max((a + var_size(v) for a, v in pred.items()), default=words["LOCBEG1"] + 1) - 1
         if pred and end_pred != words["LOCSTREND"]:
             obj.notes.append(f"ALLOC MISMATCH: predicted end ${end_pred:04X} != LOCSTREND ${words['LOCSTREND']:04X}")
     for r in routines:
@@ -209,7 +253,7 @@ def parse(data: bytes, load: int, source: str | None = None) -> ObjectFile:
             k = next(c for c in obj.constants if c.addr == r.target)
             r.name = f"K({int(k.value) if k.vtype == 'int' else f'{k.value:g}'}{'%' if k.vtype == 'int' else ''})"
         else:
-            suffix = {"real": "", "int": "%", "str": "$"}[r.vtype]
+            suffix = {"real": "", "int": "%", "str": "$"}[r.vtype] + ("()" if r.dims else "")
             r.name = vars_seen.setdefault(r.target, f"V{r.target:04X}{suffix}")
 
     entry_names: dict[int, str] = {}

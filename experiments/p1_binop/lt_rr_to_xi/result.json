@@ -1,0 +1,34 @@
+{
+ "id": "lt_rr_to_xi",
+ "key": "1b01cb725f1b535d",
+ "source": "10 X%=A<B",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 62,
+ "obj_sha256": "ea9dded441eac7cea18a2ff70cf31ad6a62422d5e151e762a5cf29f2f2c6ad0a",
+ "cycles": 57127226,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S004.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6125",
+  "LOCAL VARIABLES": "6126 - 6137",
+  "HIGHEST MEMORY LOCATION": "6137"
+ }
+}

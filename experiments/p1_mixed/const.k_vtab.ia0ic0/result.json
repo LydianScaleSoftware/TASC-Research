@@ -1,0 +1,33 @@
+{
+ "id": "const.k_vtab.ia0ic0",
+ "key": "824443b59f5bf23f",
+ "source": "10 VTAB 5",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 43,
+ "obj_sha256": "65b862778697d69d285abb2f59a7a9d88fc64ae80530ae1cc76123a8e250cc1f",
+ "cycles": 57193266,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S017.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6106",
+  "HIGHEST MEMORY LOCATION": "6106"
+ }
+}

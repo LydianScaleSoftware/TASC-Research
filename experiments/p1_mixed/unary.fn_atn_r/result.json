@@ -1,0 +1,34 @@
+{
+ "id": "unary.fn_atn_r",
+ "key": "af2b3427d87ca18a",
+ "source": "10 X=ATN(A)",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 50,
+ "obj_sha256": "ecb7375f7c73bf71c720ca514b9ff77b62a54aac0907e30706483ec190b1ee4e",
+ "cycles": 54621647,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S012.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6113",
+  "LOCAL VARIABLES": "6114 - 6123",
+  "HIGHEST MEMORY LOCATION": "6123"
+ }
+}

@@ -1,0 +1,38 @@
+{
+ "id": "io.def_fn_var",
+ "key": "0558a7d8c91fa7e5",
+ "source": "10 DEF FN F(Z)=Z+Y\n20 X=FN F(A)",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 78,
+ "obj_sha256": "61270f614858c8642a51b0627c3711229cf47596a1698866f668f980435fe34f",
+ "cycles": 56052003,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6094
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S012.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6141",
+  "LOCAL VARIABLES": "6142 - 6161",
+  "HIGHEST MEMORY LOCATION": "6161"
+ }
+}

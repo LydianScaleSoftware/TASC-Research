@@ -1,0 +1,34 @@
+{
+ "id": "io.input_xi",
+ "key": "94404f0bda8b3129",
+ "source": "10 INPUT X%",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 44,
+ "obj_sha256": "072d3afa21e774ef632b12876d0691064a9e34493993b37b51c00f370caee19d",
+ "cycles": 55426447,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S019.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6107",
+  "LOCAL VARIABLES": "6108 - 6109",
+  "HIGHEST MEMORY LOCATION": "6109"
+ }
+}

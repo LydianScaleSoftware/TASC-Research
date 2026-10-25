@@ -1,0 +1,34 @@
+{
+ "id": "xdraw_x_at_y_z",
+ "key": "c444692a1f544b8e",
+ "source": "10 XDRAW X AT Y,Z",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 68,
+ "obj_sha256": "509cf9498197ff6750d30112ef72dd48427a1fe994bd5aa4d73c582f092296ee",
+ "cycles": 54283045,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S003.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6131",
+  "LOCAL VARIABLES": "6132 - 6146",
+  "HIGHEST MEMORY LOCATION": "6146"
+ }
+}

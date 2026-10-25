@@ -1,0 +1,42 @@
+{
+ "id": "flow.on_goto",
+ "key": "7f1e2deb2077948f",
+ "source": "10 ON X GOTO 20,30\n20 END\n30 END",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 49,
+ "obj_sha256": "ce7bd13b46313fc96075512cd384ed667b14eba1297f03bc6951431f482db236",
+ "cycles": 55953952,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6095
+  },
+  {
+   "line": 30,
+   "addr": 6098
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S006.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6112",
+  "LOCAL VARIABLES": "6113 - 6117",
+  "HIGHEST MEMORY LOCATION": "6117"
+ }
+}

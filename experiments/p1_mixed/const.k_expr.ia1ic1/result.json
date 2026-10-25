@@ -1,0 +1,34 @@
+{
+ "id": "const.k_expr.ia1ic1",
+ "key": "a852e543aa5664ee",
+ "source": "10 X=2+3",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 66,
+ "obj_sha256": "1055e4f2ecaed32ffc5100b61306fcfc0fd0731073ad5b511ee729e8272c3590",
+ "cycles": 56953585,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S016.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6129",
+  "LOCAL VARIABLES": "6130 - 6134",
+  "HIGHEST MEMORY LOCATION": "6134"
+ }
+}

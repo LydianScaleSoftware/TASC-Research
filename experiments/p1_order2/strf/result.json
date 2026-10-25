@@ -1,0 +1,134 @@
+{
+ "id": "strf",
+ "key": "691f866a59863fac",
+ "source": "10 A$=\"\"\n20 B$=\"\"\n30 C$=\"\"\n40 D$=\"\"\n50 E$=\"\"\n60 F$=\"\"\n70 G$=\"\"\n80 H$=\"\"\n90 I$=\"\"\n100 J$=\"\"\n110 K$=\"\"\n120 L$=\"\"\n130 M$=\"\"\n140 N$=\"\"\n150 O$=\"\"\n160 P$=\"\"\n170 Q$=\"\"\n180 R$=\"\"\n190 S$=\"\"\n200 T$=\"\"\n210 U$=\"\"\n220 V$=\"\"\n230 W$=\"\"\n240 X$=\"\"\n250 Y$=\"\"\n260 Z$=\"\"",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 595,
+ "obj_sha256": "a3f23e9b30d91751d35727833523cdeb3f7fc7ff594db7479358c0b6bff6d6e8",
+ "cycles": 76478084,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6096
+  },
+  {
+   "line": 30,
+   "addr": 6108
+  },
+  {
+   "line": 40,
+   "addr": 6120
+  },
+  {
+   "line": 50,
+   "addr": 6132
+  },
+  {
+   "line": 60,
+   "addr": 6144
+  },
+  {
+   "line": 70,
+   "addr": 6156
+  },
+  {
+   "line": 80,
+   "addr": 6168
+  },
+  {
+   "line": 90,
+   "addr": 6180
+  },
+  {
+   "line": 100,
+   "addr": 6192
+  },
+  {
+   "line": 110,
+   "addr": 6204
+  },
+  {
+   "line": 120,
+   "addr": 6216
+  },
+  {
+   "line": 130,
+   "addr": 6228
+  },
+  {
+   "line": 140,
+   "addr": 6240
+  },
+  {
+   "line": 150,
+   "addr": 6252
+  },
+  {
+   "line": 160,
+   "addr": 6264
+  },
+  {
+   "line": 170,
+   "addr": 6276
+  },
+  {
+   "line": 180,
+   "addr": 6288
+  },
+  {
+   "line": 190,
+   "addr": 6300
+  },
+  {
+   "line": 200,
+   "addr": 6312
+  },
+  {
+   "line": 210,
+   "addr": 6324
+  },
+  {
+   "line": 220,
+   "addr": 6336
+  },
+  {
+   "line": 230,
+   "addr": 6348
+  },
+  {
+   "line": 240,
+   "addr": 6360
+  },
+  {
+   "line": 250,
+   "addr": 6372
+  },
+  {
+   "line": 260,
+   "addr": 6384
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6658",
+  "LOCAL VARIABLES": "6659 - 6710",
+  "HIGHEST MEMORY LOCATION": "6710"
+ }
+}

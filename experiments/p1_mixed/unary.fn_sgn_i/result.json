@@ -1,0 +1,34 @@
+{
+ "id": "unary.fn_sgn_i",
+ "key": "7ad3ad35c851bc9c",
+ "source": "10 X=SGN(A%)",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 50,
+ "obj_sha256": "a0e7ce1589b638347a141d0abc5f209666da20f061cdd1cc81ef45f35ce8b747",
+ "cycles": 53512857,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S014.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6113",
+  "LOCAL VARIABLES": "6114 - 6120",
+  "HIGHEST MEMORY LOCATION": "6120"
+ }
+}

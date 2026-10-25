@@ -1,0 +1,34 @@
+{
+ "id": "print.pr_tab",
+ "key": "37ab83bab7ec1ab4",
+ "source": "10 PRINT TAB(X)",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 38,
+ "obj_sha256": "c7a79641afebe135119c0074f990c169a5b82a07f9d324c3bba94b825aa5fb1a",
+ "cycles": 54387218,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S007.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6101",
+  "LOCAL VARIABLES": "6102 - 6106",
+  "HIGHEST MEMORY LOCATION": "6106"
+ }
+}

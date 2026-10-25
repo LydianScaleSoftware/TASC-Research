@@ -1,0 +1,34 @@
+{
+ "id": "mul_rr_to_x",
+ "key": "3999b49aa29ce5b1",
+ "source": "10 X=A*B",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 59,
+ "obj_sha256": "145d8898a1a59f3eac533cdfb17e8a38397311b0f43cfe951176e1c7dff57655",
+ "cycles": 54842961,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S008.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6122",
+  "LOCAL VARIABLES": "6123 - 6137",
+  "HIGHEST MEMORY LOCATION": "6137"
+ }
+}

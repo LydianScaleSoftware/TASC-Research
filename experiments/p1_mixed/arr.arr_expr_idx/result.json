@@ -1,0 +1,34 @@
+{
+ "id": "arr.arr_expr_idx",
+ "key": "9d94dd19d915806c",
+ "source": "10 X=A(I+1)",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 81,
+ "obj_sha256": "752065c409b2ab8ab6b82cfa430d527f81b6f4d72be9de912c7ff1c59a7a0b08",
+ "cycles": 58586351,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S005.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6144",
+  "LOCAL VARIABLES": "6145 - 6209",
+  "HIGHEST MEMORY LOCATION": "6209"
+ }
+}

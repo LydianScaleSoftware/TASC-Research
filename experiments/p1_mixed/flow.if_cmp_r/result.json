@@ -1,0 +1,34 @@
+{
+ "id": "flow.if_cmp_r",
+ "key": "aa2507de8a05c270",
+ "source": "10 IF X>Y THEN Z=1",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 84,
+ "obj_sha256": "4c448700ea707a3a1ea0e7dd3eb5bd9cbc91f084b43c5ad01baff662218e5cb2",
+ "cycles": 58156660,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6147",
+  "LOCAL VARIABLES": "6148 - 6162",
+  "HIGHEST MEMORY LOCATION": "6162"
+ }
+}

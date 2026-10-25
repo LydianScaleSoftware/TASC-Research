@@ -1,0 +1,34 @@
+{
+ "id": "mul_ir_to_x",
+ "key": "13a3a595f4ca3ebc",
+ "source": "10 X=A%*B",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 59,
+ "obj_sha256": "a46f0e346be71d4c6f7df2977586d73efbfe46511b1559a41472aae56458646d",
+ "cycles": 56986961,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S010.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6122",
+  "LOCAL VARIABLES": "6123 - 6134",
+  "HIGHEST MEMORY LOCATION": "6134"
+ }
+}

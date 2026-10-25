@@ -1,0 +1,34 @@
+{
+ "id": "gt_rr_to_x_ia0",
+ "key": "700802921b12875f",
+ "source": "10 X=A>B",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 62,
+ "obj_sha256": "3846b5a8924ad1362bcb83839265d1384b5acaeb7a557f097ecc7a0d79153754",
+ "cycles": 57942053,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6125",
+  "LOCAL VARIABLES": "6126 - 6140",
+  "HIGHEST MEMORY LOCATION": "6140"
+ }
+}

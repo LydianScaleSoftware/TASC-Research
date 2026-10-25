@@ -1,0 +1,78 @@
+{
+ "id": "mixf",
+ "key": "a3d8759000e52232",
+ "source": "10 A=0\n20 AA=0\n30 AB=0\n40 B=0\n50 BA=0\n60 A%=0\n70 AA%=0\n80 B%=0\n90 A1=0\n100 A9=0\n110 Z9=0\n120 ZZ=0",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 228,
+ "obj_sha256": "14749e8d825ff6c7909eddb6ea071e98b11af537d302695f065a14ea6156d642",
+ "cycles": 65559472,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6090
+  },
+  {
+   "line": 30,
+   "addr": 6096
+  },
+  {
+   "line": 40,
+   "addr": 6102
+  },
+  {
+   "line": 50,
+   "addr": 6108
+  },
+  {
+   "line": 60,
+   "addr": 6114
+  },
+  {
+   "line": 70,
+   "addr": 6120
+  },
+  {
+   "line": 80,
+   "addr": 6126
+  },
+  {
+   "line": 90,
+   "addr": 6132
+  },
+  {
+   "line": 100,
+   "addr": 6138
+  },
+  {
+   "line": 110,
+   "addr": 6144
+  },
+  {
+   "line": 120,
+   "addr": 6150
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6291",
+  "LOCAL VARIABLES": "6292 - 6342",
+  "HIGHEST MEMORY LOCATION": "6342"
+ }
+}

@@ -1,0 +1,41 @@
+{
+ "id": "flow.resume",
+ "key": "5160f6c14b69bf10",
+ "source": "10 ONERR GOTO 30\n20 END\n30 RESUME",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 31,
+ "obj_sha256": "0f6e00738bf8c21c41152fdb09b95ab7f386856fdca186377981a7a40de880d6",
+ "cycles": 57299158,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6089
+  },
+  {
+   "line": 30,
+   "addr": 6092
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S016.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6094",
+  "HIGHEST MEMORY LOCATION": "6094"
+ }
+}

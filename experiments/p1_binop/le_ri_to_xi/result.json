@@ -1,0 +1,34 @@
+{
+ "id": "le_ri_to_xi",
+ "key": "f372280eed76bf32",
+ "source": "10 X%=A<=B%",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 62,
+ "obj_sha256": "6562addfdcfdb7c5ea25f4cffe451d1867f5e1b3894cd81b1c7e6267e6c02bff",
+ "cycles": 55897084,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S015.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6125",
+  "LOCAL VARIABLES": "6126 - 6134",
+  "HIGHEST MEMORY LOCATION": "6134"
+ }
+}

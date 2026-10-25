@@ -1,0 +1,38 @@
+{
+ "id": "io.read_two",
+ "key": "5294f9a0687b8de6",
+ "source": "10 READ X,A$\n20 DATA 1,HI",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 65,
+ "obj_sha256": "dbc0cbd6c37b7e30441b142c8c6ce3b5f16e1b9f33f5552d4b9f0449ec913dd4",
+ "cycles": 55271314,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6096
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S007.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6128",
+  "LOCAL VARIABLES": "6129 - 6135",
+  "HIGHEST MEMORY LOCATION": "6135"
+ }
+}

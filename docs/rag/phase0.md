@@ -77,22 +77,32 @@ Running it: `BLOAD RUNTIME`, `BRUN BALL.OBJ`, answer 3: lo-res mode with balls p
 
 Evidence: `experiments/phase0/summary.md`. A = fresh boot; B = second fresh boot; C = the same machine as A after running BALL.OBJ, then `RUN HELLO` and recompiling over the existing BALL.OBJ (dirty memory, different disk layout; 144.96M vs 150.24M cycles). The object files, line tables and CLINENUM are identical across A, B and C. Byte comparisons of compiler output are therefore valid. (Fresh boots in Pandowdy are also cycle-identical: the emulator is deterministic.)
 
-## [observed] Object file header: JSR $0803 plus a 17-byte inline block
+## [confirmed] Object file header: JSR $0803 plus a 17-byte block copied to zero page
 
-Evidence: BALL.OBJ (run A) and the PASS files from the 2.01 image. Not yet confirmed by a controlled experiment.
+Evidence: BALL.OBJ, the PASS files, Phase 1 compiles; mapping confirmed by reading RUNTIME 2.01 init ($0803-$08A3). Supersedes the session-1 "observed" reading, which misnumbered the fields and wrongly suggested an HGR1 object start.
 
-Every object file starts `20 03 08` (JSR $0803, RUNTIME init). RUNTIME at $0803 pops the return address (`PLA/TAX/CLC/ADC #$11`) and resumes 17 bytes later, so 17 bytes of parameters follow the JSR. RUNTIME init also stores $4C (JMP) at $03F5 (& vector), $5B and $58 (Appendix F's JMP vector).
+Every object file starts `20 03 08` (JSR $0803). RUNTIME init pops the return address, adds $11, and reads the block through ($62),Y. It also reads the operand of the JSR itself to locate the library, so RUNTIME is relocatable by BLOAD address. File offsets:
+
+| Offset | Zero page | Meaning (manual Appendix F) |
+|---|---|---|
+| +3 | $12-13 | address of first DATA item (0 = none) |
+| +5 | $14-15 | highest location used |
+| +7 | $69-6A | beginning of COMMON - 1 |
+| +9 | $6B-6C | end of numeric COMMON |
+| +11 | $6D-6E | end of string COMMON |
+| +13 | $7B-7C | beginning of local variables - 1 (= last byte of the object file) |
+| +15 | $7D-7E | end of local numeric variables |
+| +17 | $7F-80 | end of local string variables |
+| +19 | $16 | flag: $00 = define COMMON (store +7..+12); $FF = COMMON must already match (compare, error $A3 on mismatch) |
 
 ```
-BALL.OBJ  @$17B0: 20 03 08 | 00 00 35 1E AF 17 AF 17 AF 17 7C 1D 35 1E 35 1E 00 | 20 58 FC ...
-PASS0     @$41F2: 20 03 08 | A2 42 DE 60 AF 17 D9 41 F1 41 6C 60 D0 60 DE 60 00 | 4C 24 42 1A "COPYRIGHT...
-PASS1     @$41F2: 20 03 08 | 00 00 BE 94 AF 17 D9 41 F1 41 E8 8E BC 94 BE 94 FF | 4C 24 42 1A "COPYRIGHT...
-PASS2     @$41F2: 20 03 08 | 7C 4C E4 94 AF 17 D9 41 F1 41 F6 65 E2 94 E4 94 FF | 4C 24 42 1A "COPYRIGHT...
+BALL.OBJ: 00 00 | 35 1E | AF 17 AF 17 AF 17 | 7C 1D | 35 1E 35 1E | 00
+PASS0:    A2 42 | DE 60 | AF 17 D9 41 F1 41 | 6C 60 | D0 60 DE 60 | 00
+PASS1:    00 00 | BE 94 | AF 17 D9 41 F1 41 | E8 8E | BC 94 BE 94 | FF
+PASS2:    7C 4C | E4 94 | AF 17 D9 41 F1 41 | F6 65 | E2 94 E4 94 | FF
 ```
 
-Tentative fields: offset +5 word = $17AF = last byte of RUNTIME (6063) in all of them (the rebuild disk has $1783 = its RUNTIME end); +7/+9 words = COMMON bounds (BALL: all $17AF = no COMMON; PASS files: $41D9 and $41F1, just below their $41F2 load address). BALL +11 word $1D7C = 7548 = last byte of program; +3 and +13/+15 ($1E35 = 7733) = top of local variables (HIGHEST MEMORY LOCATION). The last byte is $00 in BALL and PASS0, $FF in PASS1/PASS2.
-
-This suggests that the PASS files were compiled with object start HGR1 ($4000) and a 498-byte COMMON block at $4000-$41F1 (supports H1 and H2).
+So the PASS files share one COMMON block at $17B0-$41F1 (numeric $17B0-$41D9, 10,794 bytes; string $41DA-$41F1, 12 pointers), directly after RUNTIME. Their object code starts right after COMMON at $41F2, i.e. the default object start (end of library) moved up by COMMON, not HGR1. PASS0 defines COMMON (flag $00); PASS1 and PASS2 use it (flag $FF). PASS0 and PASS2 contain DATA.
 
 ## [observed] String literals are inline: JMP over [length][text]
 

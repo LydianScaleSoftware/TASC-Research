@@ -1,0 +1,34 @@
+{
+ "id": "str_arr",
+ "key": "f4e2cf34b519a89b",
+ "source": "10 X$=B$(1)+B$(2)",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 100,
+ "obj_sha256": "16ea11678347eb8fb3923e4f6fb8606017312030c2f9e4bc96fe0b1e8d865978",
+ "cycles": 56609537,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6163",
+  "LOCAL VARIABLES": "6164 - 6189",
+  "HIGHEST MEMORY LOCATION": "6189"
+ }
+}

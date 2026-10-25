@@ -4,14 +4,28 @@ Entry point for any new session. Read this first, then the handoff prompt
 (`../TASC_handoff_prompt.md`) for the full mission and rules. RAG collection
 **`TASC project`** holds findings as chunks (status in brackets in each title).
 
-## Status (2026-10-24, session 1)
+## Status (2026-10-25, session 2)
 
-- **Phase 0: done.** Exit criterion met: `python -m tasc.phase0` runs the whole
-  loop (inventory, detokenize, compile BALL, line table, run BALL.OBJ,
-  determinism check) in about 40 s with no manual steps.
-- Next: **Phase 1** (empirical templates). First need: drive the non-default
-  MEMORY USAGE and OPTIONS dialogues (prompts not yet seen) and a generator
-  that tokenizes test programs onto a work image with `cp2 import bas`.
+- **Phase 0: done** (session 1). `python -m tasc.phase0`.
+- **Phase 1: in progress.** About 560 controlled compiles so far. Templates
+  for most statements, operators, functions, constants and options are
+  recorded (observed) in `tasc/templates/core.json` and RAG `phase1.md`.
+  Symbol-table/allocation order is solved (32-bucket hash) and checked on
+  every compile by `python -m tasc.checkall`.
+- Next: (1) open questions below; (2) RESUME/Debug option, REM! extensions,
+  COMMON, memory layouts; (3) a predictor (Python generator of whole object
+  files from templates) to meet the Phase 1 exit (predict BALL and larger
+  generated programs byte for byte). The predictor is the seed of the
+  Phase 3 compiler.
+
+### Phase 1 open questions
+- DEF FN parameter slot (allocated first, not by hash).
+- REM !INTEGER: allocation and code for declared names.
+- Expression code generator: when temps are used, evaluation order for
+  complex operands on both sides; AND/OR with a complex left operand.
+- NEXT without a variable (.WORD 0?), ON GOSUB inline format detail.
+- Constant typing corner cases (5.0, 1E2, hex-like literals).
+- String temps (`X$=B$(1)+B$(2)` uses a string temp).
 
 ## Environment
 
@@ -49,23 +63,32 @@ boot takes about 10 s of wall time.
 - Experiment layout: `experiments/<family>/<run>/` with `work.dsk`,
   `after.dsk` (git-ignored), `<SRC>.OBJ`, `transcript.txt`, `result.json`.
 - Golden files in `tests/golden/` (BALL.OBJ, BALL transcript).
+- Batch compiles: `tasc.batch.run_family(family, jobs)`; 12 workers ≈ 1 compile/s.
+  Results cached by hash(source+options) in `experiments/<family>/<job>/`
+  (source.txt, OBJ.bin, transcript.txt, result.json).
+- Object parsing: `tasc.objfile.parse(obj, load, source)` renders code
+  symbolically (`JSR X.op1`, `K(5%)`), naming variables via the allocation
+  rule; `python -m tasc.explore <family> <job...>` prints listings.
+- Family definitions live in `tasc/families.py`.
 
 ## Hypotheses
 
 | | Status | Evidence / note |
 |---|---|---|
-| H1 shared RUNTIME/config | observed (supporting) | PASS0/1/2 all load $41F2; headers give library end $17AF and COMMON $41D9..$41F1 |
-| H2 options inferable | open | object start likely HGR1 ($4000) + 498-byte COMMON block |
+| H1 shared RUNTIME/config | observed (supporting) | PASS0/1/2 load $41F2; headers: library end $17AF, one COMMON block $17B0-$41F1 (PASS0 defines, PASS1/2 use) |
+| H2 options inferable | open | object start = default (right after COMMON), not HGR1 (session-1 reading corrected) |
 | H3 hand-written parts identifiable | open | |
 | H4 deterministic | **confirmed** | phase0 runs A/B/C identical (C in a dirty session over an existing BALL.OBJ) |
 | H5 names/line numbers lost | open | |
-| H6 RUNTIME hand-written | open | init code at $0803 looks hand-written (PLA/ADC #$11 inline skip) |
+| H6 RUNTIME hand-written | observed (supporting) | init code: BIT-skip tricks, relocation via the caller's JSR operand |
 | H7 how ML was joined | open | PASS files start with a compiled string literal ("COPYRIGHT…"), so no prefix blob |
 
-## Facts established (details in RAG `phase0.md`)
+## Facts established (details in RAG `phase0.md`, `phase1.md`)
 
-- Object file = `JSR $0803` + 17-byte inline parameter block + code. Line 10 of
-  BALL is at load+20.
+- Object file = `JSR $0803` + 17-byte header (copied to zero page $12,$14,
+  $69-$6E,$7B-$80,$16; confirmed from RUNTIME init) + code + constant pool
+  + variable routines. Line 10 is at load+20.
+- Variables/constants ordered by a 32-bucket hash, insertion order within.
 - String literals are inline: `JMP` over `[len][text]`.
 - BALL.OBJ (defaults): $17B0, 1485 bytes, sha `7a37f061…`; 40-entry line table.
 - CLINENUM is left as a 1-byte file after a compile.

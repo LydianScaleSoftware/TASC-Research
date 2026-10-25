@@ -1,0 +1,34 @@
+{
+ "id": "mul_ii_to_xi",
+ "key": "eee9f801f9931c31",
+ "source": "10 X%=A%*B%",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 59,
+ "obj_sha256": "1d16653b063a965f96afd0dd235e2ff15ab0f5d18dedde55aa46325b0aaa4eb8",
+ "cycles": 54282922,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6122",
+  "LOCAL VARIABLES": "6123 - 6128",
+  "HIGHEST MEMORY LOCATION": "6128"
+ }
+}

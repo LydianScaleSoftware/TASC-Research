@@ -1,0 +1,34 @@
+{
+ "id": "unary.fn_pos_r",
+ "key": "7116c565c46f8cf6",
+ "source": "10 X=POS(A)",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 41,
+ "obj_sha256": "446684e1c279c95cd516a7608416c1eaa3feea6d19c180a4294ae30fc0ae4abb",
+ "cycles": 56373545,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S004.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6104",
+  "LOCAL VARIABLES": "6105 - 6114",
+  "HIGHEST MEMORY LOCATION": "6114"
+ }
+}

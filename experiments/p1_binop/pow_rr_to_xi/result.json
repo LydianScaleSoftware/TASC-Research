@@ -1,0 +1,34 @@
+{
+ "id": "pow_rr_to_xi",
+ "key": "0c8e1788284c4658",
+ "source": "10 X%=A^B",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 62,
+ "obj_sha256": "47b19c1175c668abffab3a553f47105753b835db3ffb0c8dbcaf1a49d301b54b",
+ "cycles": 54934893,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S008.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6125",
+  "LOCAL VARIABLES": "6126 - 6137",
+  "HIGHEST MEMORY LOCATION": "6137"
+ }
+}

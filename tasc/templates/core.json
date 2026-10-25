@@ -1,0 +1,505 @@
+{
+ "layout": {
+  "object_file": "[JSR $0803][17-byte header][code][constant pool][routines]; local variables follow in memory",
+  "header": {
+   "+3": "DATAPTR -> $12 (first DATA item, 0 if none)",
+   "+5": "HIGHEST -> $14",
+   "+7": "COMBEG1 -> $69 (COMMON start - 1)",
+   "+9": "NUMCOMEND -> $6B",
+   "+11": "STRCOMEND -> $6D",
+   "+13": "LOCBEG1 -> $7B (= last byte of object file)",
+   "+15": "LOCNUMEND -> $7D",
+   "+17": "LOCSTREND -> $7F",
+   "+19": "FLAG -> $16: $00 define COMMON; $FF COMMON must match $69-$6E (else error $A3)",
+   "status": "confirmed by RUNTIME init code at $0875-$08A2",
+   "evidence": [
+    "RUNTIME 2.01 $0803-$08A3"
+   ]
+  },
+  "implicit_end": {
+   "emit": [
+    "JMP RT.END"
+   ],
+   "note": "always appended after the last line",
+   "evidence": [
+    "p1_stmt/end",
+    "p1_explore/two_ends"
+   ]
+  },
+  "line_start": "a line with no code shares the next line's address",
+  "routine_order": "numeric variables (symbol order), constants (pool order), string variables; arrays: see allocation",
+  "constant_pool": "one entry per distinct (value,type); order = 32-bucket hash, bucket = low byte & 31 (int, stored big-endian) or exponent & 31 (real); insertion order within a bucket",
+  "constant_pool_evidence": [
+   "p1_alloc/k21",
+   "PASS0/1/2 pools (277 constants, nondecreasing buckets)"
+  ],
+  "allocation": {
+   "rule": "temps first; then numeric scalars, numeric arrays, string scalars, string arrays; each group in symbol order",
+   "symbol_order": "bucket h = (3*(c1-1) + c2 + T) mod 32, 5-bit chars (A=1,'0'=16, c2=0 if one letter), T real 0 / string 1 / int 2; buckets ascending, insertion (source) order within",
+   "sizes": "real 5, int 2, string 2 (pointer); arrays: product(max+1) * size, no header",
+   "temps": "expression temporaries occupy the first slots of locals; reused across statements; count = max depth",
+   "open": [
+    "array group order vs symbol order not separately tested",
+    "FN parameter slot (comes first, not by hash)",
+    "REM !INTEGER names"
+   ],
+   "evidence": [
+    "p1_order",
+    "p1_order2",
+    "p1_alloc2",
+    "p1_temp",
+    "556 compiles via tasc.checkall"
+   ]
+  },
+  "peephole": {
+   "rule": "store to V immediately followed (same line) by a load of V: the load is omitted (also IF V right after the store tests flags)",
+   "not": [
+    "across lines",
+    "with another statement between"
+   ],
+   "evidence": [
+    "p1_mixed/peep.*"
+   ]
+  }
+ },
+ "routines": {
+  "numeric": {
+   "bytes": "(A2 op AD)* A2 op A0 hi A9 lo 4C disp",
+   "note": "AD/2C swallow the next LDX; one entry per op used, highest op first",
+   "disp": {
+    "$1764": "real",
+    "$0D06": "int"
+   }
+  },
+  "string": {
+   "bytes": "38 A9 18 A0 hi A9 lo 4C 7F 0C",
+   "entries": {
+    "+0": "SEC: load (op0)",
+    "+2": "CLC: store (op1)"
+   }
+  },
+  "array": {
+   "bytes": "38 A9 18 20 disp [addr lo hi][ndims][max index lo hi]*ndims",
+   "disp": {
+    "$0B11": "real",
+    "$0B14": "string",
+    "$0B17": "int"
+   },
+   "entries": {
+    "+0": "SEC: load element",
+    "+2": "CLC: element address (stores)"
+   }
+  },
+  "ops_real": {
+   "0": "load FAC",
+   "1": "store FAC",
+   "2": "FAC+M",
+   "3": "M-FAC",
+   "4": "FAC*M",
+   "5": "compare",
+   "6": "load ARG",
+   "7": "M/FAC"
+  },
+  "ops_int": {
+   "0": "load IACC",
+   "1": "store IACC",
+   "2": "add",
+   "3": "M-IACC",
+   "4": "mul",
+   "5": "compare",
+   "6..13": "real ops 0..7 applied to the int variable (6 load as real, 7 store FAC rounded, 8 add, 9 sub, 10 mul, 11 cmp, 12 ARG, 13 div)"
+  },
+  "evidence": [
+   "p1_binop/*",
+   "p1_explore/*"
+  ]
+ },
+ "operators": {
+  "commutative": {
+   "ops": {
+    "+": 2,
+    "*": 4
+   },
+   "emit": [
+    "E(left)",
+    "right.op"
+   ],
+   "note": "if left is complex and right simple"
+  },
+  "reversed": {
+   "ops": {
+    "-": 3,
+    "/": 7
+   },
+   "emit": [
+    "E(right)",
+    "left.op"
+   ]
+  },
+  "power": {
+   "emit": [
+    "E(right)",
+    "left.op6",
+    "JSR FPWRT"
+   ]
+  },
+  "compare": {
+   "ops": {
+    "=": "RT.EQ",
+    "<": "RT.LT",
+    ">": "RT.GT",
+    "<=": "RT.LE",
+    ">=": "RT.GE",
+    "<>": "RT.NE"
+   },
+   "emit": [
+    "E(left)",
+    "right.op5",
+    "JSR RT.<cmp>"
+   ],
+   "result": "real 0/1 in FAC, Z flag set for IF"
+  },
+  "and_or": {
+   "emit_real_left": [
+    "E(right)",
+    "LDA left.exponent",
+    "JSR RT.AND|RT.OR (if right real) / RT.AND/I|RT.OR/I (if right int)"
+   ],
+   "emit_int_left": [
+    "E(right)",
+    "LDA left.lo",
+    "ORA left.hi",
+    "JSR ..."
+   ],
+   "note": "left simple variable tested in memory"
+  },
+  "unary_minus": {
+   "real": [
+    "E",
+    "JSR NEGOP"
+   ],
+   "int": [
+    "E",
+    "JSR RT.INEG"
+   ],
+   "note": "literals never folded: -5 = const 5 + negate"
+  },
+  "not": {
+   "emit": [
+    "E",
+    "JSR RT.EQ"
+   ]
+  },
+  "unary_plus": {
+   "emit": [
+    "E"
+   ]
+  },
+  "string_concat": {
+   "emit": [
+    "E(left)",
+    "JSR RT.PUSHSTR",
+    "E(right)",
+    "JSR RT.CONCAT"
+   ]
+  },
+  "string_compare": {
+   "emit": [
+    "E(left)",
+    "JSR RT.PUSHSTR",
+    "E(right)",
+    "JSR RT.STREQ|RT.STRLT|RT.STRNE"
+   ]
+  },
+  "types": {
+   "int_arith_on": "int op int (+ - *, negate) done in IACC; JSR RT.FLOAT.IACC if a real is needed",
+   "int_arith_off": "int operands floated via op6/op8.. ; store to int via op7",
+   "compare_int": "int compare (op5 on int routines) regardless of the int arithmetic option",
+   "division": "always real (op13 for int operand)"
+  },
+  "evidence": [
+   "p1_binop/*",
+   "p1_mixed/unary.*"
+  ]
+ },
+ "constants": {
+  "integer_literal": "integer-valued, |n| <= 32767",
+  "int_const_on": "integer literal is int where the context can use an int (int op with int arith on, int store, int-entry statement, int compare); a lone literal stored to a real is a real constant",
+  "int_const_off": "all literals real",
+  "out_of_range": "40000, 32768 always real; X%=40000 -> const.op0, X%.op7",
+  "evidence": [
+   "p1_mixed/const.*"
+  ]
+ },
+ "statements": {
+  "HOME": [
+   "JSR HOME"
+  ],
+  "TEXT": [
+   "JSR TEXT"
+  ],
+  "GR": [
+   "JSR GR"
+  ],
+  "HGR": [
+   "JSR HGR"
+  ],
+  "HGR2": [
+   "JSR HGR2"
+  ],
+  "NORMAL": [
+   "JSR NORMAL"
+  ],
+  "INVERSE": [
+   "JSR INVERSE"
+  ],
+  "FLASH": [
+   "JSR FLASH"
+  ],
+  "END": [
+   "JMP RT.END"
+  ],
+  "NEW": [
+   "JSR RT.END"
+  ],
+  "STOP": [
+   "JSR RT.STOP"
+  ],
+  "RETURN": [
+   "RTS"
+  ],
+  "POP": [
+   "JSR RT.POP"
+  ],
+  "RESTORE": [
+   "JSR RT.RESTORE"
+  ],
+  "CLEAR": [
+   "JSR RT.CLEAR"
+  ],
+  "REM": [],
+  "LET V=E": "same as V=E",
+  "V=E": [
+   "E",
+   "V.op1 (or op7 for int target of real E)"
+  ],
+  "GOTO n": [
+   "JMP @n"
+  ],
+  "GOSUB n": [
+   "JSR @n"
+  ],
+  "IF E THEN stmts": [
+   "E",
+   "BNE *+5",
+   "JMP @nextline",
+   "stmts"
+  ],
+  "IF E THEN n / IF E THEN GOTO n": [
+   "E",
+   "BEQ *+5",
+   "JMP @n"
+  ],
+  "ON E GOTO n1,..": [
+   "E",
+   "JSR RT.ONGOTO",
+   ".BYTE count",
+   ".WORD @n1,..."
+  ],
+  "ON E GOSUB n1,..": [
+   "E",
+   "JSR RT.ONGOSUB",
+   ".BYTE count",
+   ".WORD @n1,..."
+  ],
+  "ONERR GOTO n": [
+   "JSR RT.ONERR",
+   ".WORD @n"
+  ],
+  "RESUME (debug off)": [],
+  "FOR V=A TO B [STEP C]": [
+   "E(A)",
+   "JSR RT.FOR.INIT[/I]",
+   ".WORD &V",
+   "E(B)",
+   "JSR RT.FOR.LIMIT[/I]",
+   "E(C), JSR RT.FOR.STEP[/I]  |  JSR RT.FOR.STEP1"
+  ],
+  "NEXT V": [
+   "JSR RT.NEXT",
+   ".WORD &V"
+  ],
+  "NEXT (no name)": [
+   "JSR RT.NEXT",
+   ".WORD 0 (?)"
+  ],
+  "PRINT": "items in order: string -> RT.PRINTSTR, real -> RT.PRINTNUM, int -> RT.PRINTINT, ',' -> RT.COMMA, TAB( -> E, RT.TAB, SPC( -> E, RT.SPC; ';' nothing; JSR CRDO unless the statement ends with ; , TAB( or SPC(",
+  "string literal": [
+   "JMP past",
+   ".BYTE len, text",
+   "JSR RT.STRLIT",
+   ".WORD &len"
+  ],
+  "DATA": [
+   "JMP past",
+   "items: [len][text] (quotes removed)",
+   ".BYTE $FF",
+   ".WORD next DATA block or 0"
+  ],
+  "READ V": [
+   "JSR RT.READ.NUM|RT.READ.STR",
+   "V.op1"
+  ],
+  "INPUT [\"p\";] V1,V2": [
+   "JSR RT.INPUT.BEGIN",
+   "[prompt literal via RT.STRLIT.PROMPT, RT.INPUT.NUM.PROMPT]",
+   "RT.INPUT.NUM|RT.INPUT.STR, V1.op1|op7",
+   "RT.INPUT.NUM.NEXT, V2.op1",
+   "JSR RT.INPUT.END"
+  ],
+  "GET V": [
+   "JSR RT.GET.STR|RT.GET.NUM",
+   "V.op1"
+  ],
+  "DEF FN F(P)=E / FN F(A)": "in place: JMP past body; body = P.op1, E, RTS. call: E(A), JSR body",
+  "one-argument statements": {
+   "VTAB": "RT.VTAB",
+   "HTAB": "RT.HTAB",
+   "COLOR=": "RT.COLOR",
+   "HCOLOR=": "RT.HCOLOR",
+   "SPEED=": "RT.SPEED",
+   "ROT=": "RT.ROT",
+   "SCALE=": "RT.SCALE",
+   "CALL": "RT.CALL",
+   "IN#": "RT.IN#",
+   "PR#": "RT.PR#",
+   "HIMEM:": "RT.HIMEM",
+   "DRAW": "RT.DRAW",
+   "XDRAW": "RT.XDRAW",
+   "emit": [
+    "E",
+    "JSR entry (int entry when E is int: VTAB, COLOR, ...)"
+   ]
+  },
+  "multi-argument statements": {
+   "PLOT a,b": [
+    "a",
+    "RT.SAVE.X",
+    "b",
+    "RT.PLOT"
+   ],
+   "HLIN a,b AT c": [
+    "a",
+    "RT.SAVE.X",
+    "b",
+    "RT.SAVE.Y",
+    "c",
+    "RT.HLIN"
+   ],
+   "VLIN a,b AT c": [
+    "a",
+    "RT.SAVE.X",
+    "b",
+    "RT.SAVE.Y",
+    "c",
+    "RT.VLIN"
+   ],
+   "POKE a,b": [
+    "a",
+    "RT.SAVE.ADDR",
+    "b",
+    "RT.POKE.VAL"
+   ],
+   "WAIT a,b[,c]": [
+    "a",
+    "RT.SAVE.ADDR",
+    "b",
+    "RT.WAIT2 | RT.SAVE.ARG3, c, RT.WAIT3"
+   ],
+   "HPLOT a,b": [
+    "a",
+    "RT.SAVE.HX",
+    "b",
+    "RT.HPLOT"
+   ],
+   "HPLOT TO a,b": [
+    "a",
+    "RT.SAVE.HX",
+    "b",
+    "RT.HPLOT.TO"
+   ],
+   "DRAW s AT x,y": [
+    "s",
+    "RT.SAVE.SHAPE",
+    "x",
+    "RT.SAVE.HX",
+    "y",
+    "RT.DRAW.AT"
+   ]
+  },
+  "evidence": [
+   "p1_stmt/*",
+   "p1_mixed/flow.*",
+   "p1_mixed/io.*",
+   "p1_mixed/print.*"
+  ]
+ },
+ "functions": {
+  "ROM": {
+   "SGN": "SGN",
+   "INT": "INT",
+   "ABS": "ABS",
+   "SQR": "SQR",
+   "RND": "RND",
+   "LOG": "LOG",
+   "EXP": "EXP",
+   "COS": "COS",
+   "SIN": "SIN",
+   "TAN": "TAN",
+   "ATN": "ATN",
+   "USR": "USRVEC",
+   "emit": [
+    "E (int floated by op6)",
+    "JSR fn"
+   ]
+  },
+  "RUNTIME": {
+   "PEEK": "RT.PEEK[/I] then RT.FLOAT.IACC",
+   "PDL": "RT.PDL, RT.FLOAT.IACC",
+   "SCRN(a,b)": "a, RT.PUSH.BYTE, b, RT.SCRN, RT.FLOAT.IACC",
+   "LEN": "RT.LEN (int result)",
+   "ASC": "RT.ASC (int)",
+   "VAL": "RT.VAL",
+   "STR$": "RT.STR",
+   "CHR$": "RT.CHR[/I]",
+   "LEFT$(s,n)": "s, n, RT.LEFT",
+   "RIGHT$(s,n)": "s, n, RT.RIGHT",
+   "MID$(s,n)": "s, n, RT.MID2",
+   "MID$(s,n,m)": "s, n, RT.PUSH.BYTE, m, RT.MID3"
+  },
+  "quirks": {
+   "FRE(x)": "JSR RT.FRE; x not evaluated",
+   "POS(x)": "JSR RT.POS; x not evaluated"
+  },
+  "evidence": [
+   "p1_mixed/unary.*"
+  ]
+ },
+ "arrays": {
+  "load": [
+   "subscript(s) as int: int const / E then AYINT; extra subscripts pushed with RT.PUSH.SUBSCRIPT",
+   "JSR arr+0"
+  ],
+  "store_string": [
+   "subscripts",
+   "JSR arr+2",
+   "E",
+   "JSR RT.ARR.STR.STORE"
+  ],
+  "default_dims": "10 per subscript without DIM; DIM generates no code",
+  "evidence": [
+   "p1_mixed/arr.*",
+   "p1_temp/*"
+  ]
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "id": "print.pr_s_juxt_x",
+ "key": "24362118d26d6ffc",
+ "source": "10 PRINT \"A\"X",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 54,
+ "obj_sha256": "3958ee56caaa4f9dc81cb0293f7619f8ab916969c4acfa29e0ab85254fa1e30b",
+ "cycles": 54806399,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S006.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6117",
+  "LOCAL VARIABLES": "6118 - 6122",
+  "HIGHEST MEMORY LOCATION": "6122"
+ }
+}

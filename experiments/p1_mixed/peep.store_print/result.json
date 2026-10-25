@@ -1,0 +1,34 @@
+{
+ "id": "peep.store_print",
+ "key": "2c01b10cd8ccd511",
+ "source": "10 X=1:PRINT X",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 58,
+ "obj_sha256": "f32d376993e87425941d2149eee738651f5a1ddd394464591d847b0e4d396517",
+ "cycles": 54924907,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S006.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6121",
+  "LOCAL VARIABLES": "6122 - 6126",
+  "HIGHEST MEMORY LOCATION": "6126"
+ }
+}

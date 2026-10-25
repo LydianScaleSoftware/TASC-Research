@@ -1,0 +1,33 @@
+{
+ "id": "io.data_mixed",
+ "key": "a38c77ab2c745944",
+ "source": "10 DATA 1,\"A B\",C,-2.5,",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 43,
+ "obj_sha256": "c9eab7052cc390f16b062e6929900a9dc8f7d2c22cee957bd8ec9e1daa25b029",
+ "cycles": 54536860,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S009.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6106",
+  "HIGHEST MEMORY LOCATION": "6106"
+ }
+}

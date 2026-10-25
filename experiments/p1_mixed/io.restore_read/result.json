@@ -1,0 +1,38 @@
+{
+ "id": "io.restore_read",
+ "key": "3b85acc724531ed9",
+ "source": "10 READ X:RESTORE\n20 DATA 1",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 49,
+ "obj_sha256": "57dce75483e78e81c866735d0b8e42401f62462f7f5af1d27166c4bedc55b59c",
+ "cycles": 56572492,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6093
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S010.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6112",
+  "LOCAL VARIABLES": "6113 - 6117",
+  "HIGHEST MEMORY LOCATION": "6117"
+ }
+}

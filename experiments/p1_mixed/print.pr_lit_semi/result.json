@@ -1,0 +1,33 @@
+{
+ "id": "print.pr_lit_semi",
+ "key": "0f6be682f17ecbd3",
+ "source": "10 PRINT \"A\";",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 36,
+ "obj_sha256": "567d640885ce2c8674ec01b44f7375286d1ed7cab579397fb04903dc6c62d5ab",
+ "cycles": 52649561,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S014.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6099",
+  "HIGHEST MEMORY LOCATION": "6099"
+ }
+}

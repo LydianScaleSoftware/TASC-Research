@@ -1,0 +1,34 @@
+{
+ "id": "const.k_m32768.ia0ic0",
+ "key": "77a35f8f5c3c221d",
+ "source": "10 X%=-32768",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 55,
+ "obj_sha256": "454b0a01196242f6541bdc8a1c41cdff5687656111b35d98866e20e924941aca",
+ "cycles": 54559333,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6118",
+  "LOCAL VARIABLES": "6119 - 6120",
+  "HIGHEST MEMORY LOCATION": "6120"
+ }
+}

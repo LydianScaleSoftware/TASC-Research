@@ -1,0 +1,33 @@
+{
+ "id": "clear",
+ "key": "cf8ae793e9ac54bf",
+ "source": "10 CLEAR",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 26,
+ "obj_sha256": "11e4f42dae09295fafe0a8bd9d15aa5e7a5da3c282c7061fd010325d4b7d177f",
+ "cycles": 53142681,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6089",
+  "HIGHEST MEMORY LOCATION": "6089"
+ }
+}

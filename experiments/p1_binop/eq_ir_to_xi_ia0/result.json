@@ -1,0 +1,34 @@
+{
+ "id": "eq_ir_to_xi_ia0",
+ "key": "86face3aba23378e",
+ "source": "10 X%=A%=B",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 62,
+ "obj_sha256": "22fab0f5484d2dbeced193d51b66dbed2bc3ec2b933e5adfd3a9bc19b6de4ae7",
+ "cycles": 56096640,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S006.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6125",
+  "LOCAL VARIABLES": "6126 - 6134",
+  "HIGHEST MEMORY LOCATION": "6134"
+ }
+}

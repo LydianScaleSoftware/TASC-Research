@@ -25,6 +25,16 @@ def strip_keywords(body: str) -> str:
     out: list[str] = []
     i = 0
     while i < len(s):
+        # Applesoft PARSE special case: "AT" followed by "N" is ATN; followed by "O" it is
+        # "A" then "TO".
+        if s.startswith("AT", i) and i + 2 < len(s) and s[i + 2] in "NO":
+            if s[i + 2] == "N":
+                out.append("   ")
+                i += 3
+            else:
+                out.append("A")
+                i += 1
+            continue
         for t in _WORD_TOKENS:
             if s.startswith(t, i):
                 out.append(" " * len(t))
@@ -41,6 +51,7 @@ class Var:
     name: str  # first two significant characters
     vtype: str  # 'real' | 'int' | 'str'
     array: bool = False
+    dims: tuple[int, ...] = ()  # arrays: max index per subscript (DIM, else 10 each)
 
     def __str__(self) -> str:
         return self.name + {"real": "", "int": "%", "str": "$"}[self.vtype] + ("()" if self.array else "")
@@ -53,15 +64,46 @@ def variables(listing: str) -> list[Var]:
     tokenizer would see them; names are cut to two characters.
     """
     found: list[Var] = []
+    dimmed: dict[tuple[str, str], tuple[int, ...]] = {}
+    for m in re.finditer(r"DIM\s*([^:\n]*)", listing.upper()):
+        for d in re.finditer(r"([A-Z][A-Z0-9]*)([%$]?)\(([\d,\s]+)\)", m.group(1).replace(" ", "")):
+            vt = {"%": "int", "$": "str", "": "real"}[d.group(2)]
+            dimmed[(d.group(1)[:2], vt)] = tuple(int(x) for x in d.group(3).split(","))
+    nsubs: dict[tuple[str, str], int] = {}
     for line in listing.splitlines():
         body = re.sub(r"^\s*\d+\s*", "", line)
         body = re.sub(r'"[^"]*"?', " ", body)
         body = re.split(r"\bREM\b|\bDATA\b", body)[0]
+        # FN names are function names, not variables
+        body = re.sub(r"FN\s*[A-Z][A-Z0-9]*", " ", body.upper())
         s = strip_keywords(body)
+        # numeric literals (with exponents) are not names; a name can't start with a digit
+        s = re.sub(r"(?<![A-Z0-9])(\d+\.?\d*|\.\d+)(E[+-]?\d+)?", " ", s)
         for m in re.finditer(r"([A-Z][A-Z0-9]*)([%$]?)(\(?)", s):
             name = m.group(1)[:2]
             vtype = {"%": "int", "$": "str", "": "real"}[m.group(2)]
             v = Var(name, vtype, m.group(3) == "(")
-            if v not in found:
+            if v.array:
+                # count subscripts: commas at depth 1 after the '('
+                depth, n, i = 0, 1, m.end()
+                while i < len(s):
+                    ch = s[i]
+                    if ch == "(":
+                        depth += 1
+                    elif ch == ")":
+                        if depth == 0:
+                            break
+                        depth -= 1
+                    elif ch == "," and depth == 0:
+                        n += 1
+                    i += 1
+                nsubs.setdefault((name, vtype), n)
+            if all((f.name, f.vtype, f.array) != (v.name, v.vtype, v.array) for f in found):
                 found.append(v)
-    return found
+    out: list[Var] = []
+    for v in found:
+        if v.array:
+            dims = dimmed.get((v.name, v.vtype)) or (10,) * nsubs.get((v.name, v.vtype), 1)
+            v = Var(v.name, v.vtype, True, dims)
+        out.append(v)
+    return out

@@ -1,0 +1,34 @@
+{
+ "id": "two_stmts",
+ "key": "27f44813ab825c62",
+ "source": "10 X=A(1)+A(2):Y=A(3)+A(4)",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 150,
+ "obj_sha256": "86449ad0f7b50feac5eb90396f9701961b04868aa707d69b800410bc637a55ad",
+ "cycles": 59265162,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6213",
+  "LOCAL VARIABLES": "6214 - 6283",
+  "HIGHEST MEMORY LOCATION": "6283"
+ }
+}

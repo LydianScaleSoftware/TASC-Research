@@ -1,0 +1,34 @@
+{
+ "id": "arr.arr_dim_multi",
+ "key": "7960a1f6a48603ef",
+ "source": "10 DIM A(5),B%(6)",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 45,
+ "obj_sha256": "c6aa76a7cf361729a4065f4157c93646f172e4b082658a367af2246507a4b92f",
+ "cycles": 54030569,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S012.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6108",
+  "LOCAL VARIABLES": "6109 - 6152",
+  "HIGHEST MEMORY LOCATION": "6152"
+ }
+}

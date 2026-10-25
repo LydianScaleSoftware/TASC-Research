@@ -1,0 +1,34 @@
+{
+ "id": "ne_ri_to_x_ia0",
+ "key": "8aa87f76774afb7e",
+ "source": "10 X=A<>B%",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 62,
+ "obj_sha256": "993501ac243180489380939704dd14388a81403052ae9904316ff63700ce4c2a",
+ "cycles": 56244816,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S015.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6125",
+  "LOCAL VARIABLES": "6126 - 6137",
+  "HIGHEST MEMORY LOCATION": "6137"
+ }
+}

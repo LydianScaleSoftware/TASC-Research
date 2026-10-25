@@ -1,0 +1,34 @@
+{
+ "id": "unary.strlt",
+ "key": "b5453274739d34e2",
+ "source": "10 X=A$<B$",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 67,
+ "obj_sha256": "a978590456d45833b79bc26375d43f538f1a449618b496c7fa8977105f41929e",
+ "cycles": 55523006,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S015.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6130",
+  "LOCAL VARIABLES": "6131 - 6139",
+  "HIGHEST MEMORY LOCATION": "6139"
+ }
+}

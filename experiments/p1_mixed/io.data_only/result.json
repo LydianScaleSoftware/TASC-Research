@@ -1,0 +1,33 @@
+{
+ "id": "io.data_only",
+ "key": "a451f81063d190d3",
+ "source": "10 DATA 1,2,3",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 35,
+ "obj_sha256": "37c032445186dcd27edd1e7f90c7fac6b0ce43662870a795046e5d89a76a7dcc",
+ "cycles": 53864998,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S008.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6098",
+  "HIGHEST MEMORY LOCATION": "6098"
+ }
+}

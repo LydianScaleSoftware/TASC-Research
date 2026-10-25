@@ -1,0 +1,34 @@
+{
+ "id": "le_rr_to_x",
+ "key": "87617d80423cc478",
+ "source": "10 X=A<=B",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 62,
+ "obj_sha256": "05c4239a34f8c2ceb45280b9cd91efe5c65119f2e863e09748525c8d49702d0f",
+ "cycles": 57560277,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6125",
+  "LOCAL VARIABLES": "6126 - 6140",
+  "HIGHEST MEMORY LOCATION": "6140"
+ }
+}

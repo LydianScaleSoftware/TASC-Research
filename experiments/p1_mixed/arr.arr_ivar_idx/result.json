@@ -1,0 +1,34 @@
+{
+ "id": "arr.arr_ivar_idx",
+ "key": "7c2ce382828c9cf6",
+ "source": "10 X=A(I%)",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 61,
+ "obj_sha256": "9bc373884ef1d375d923823286b6884c8066a9b9ed3b5e325be9f130cd416561",
+ "cycles": 56851727,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S004.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6124",
+  "LOCAL VARIABLES": "6125 - 6186",
+  "HIGHEST MEMORY LOCATION": "6186"
+ }
+}

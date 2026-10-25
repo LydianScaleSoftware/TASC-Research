@@ -1,0 +1,34 @@
+{
+ "id": "io.get_s",
+ "key": "652e4621a2c0a007",
+ "source": "10 GET A$",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 39,
+ "obj_sha256": "5d7b6cc8c487ee7056d026a6301d6d5a90ad2168f7714b99678f309742a38697",
+ "cycles": 54924955,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S003.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6102",
+  "LOCAL VARIABLES": "6103 - 6104",
+  "HIGHEST MEMORY LOCATION": "6104"
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "id": "depth2b",
+ "key": "d1ff6c19b3ae68ec",
+ "source": "10 X=A(1)*A(2)+A(3)*A(4)",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 159,
+ "obj_sha256": "e4216ff41c886181f5c25ad36878f2e155b8141c01433ed426a9fcd213496b9d",
+ "cycles": 56786598,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S002.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6222",
+  "LOCAL VARIABLES": "6223 - 6292",
+  "HIGHEST MEMORY LOCATION": "6292"
+ }
+}

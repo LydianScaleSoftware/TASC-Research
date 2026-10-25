@@ -1,0 +1,42 @@
+{
+ "id": "flow.on_gosub",
+ "key": "bc6fbc8125409d26",
+ "source": "10 ON X GOSUB 20,30\n20 RETURN\n30 RETURN",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 45,
+ "obj_sha256": "69e5f012b48783212aecb4d33869bc71f5793b9cfdb9c9de8adb4144caeea455",
+ "cycles": 55717437,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6095
+  },
+  {
+   "line": 30,
+   "addr": 6096
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S007.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6108",
+  "LOCAL VARIABLES": "6109 - 6113",
+  "HIGHEST MEMORY LOCATION": "6113"
+ }
+}

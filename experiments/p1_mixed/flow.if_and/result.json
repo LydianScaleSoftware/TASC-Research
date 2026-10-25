@@ -1,0 +1,34 @@
+{
+ "id": "flow.if_and",
+ "key": "ac71e76dfdfbc7d5",
+ "source": "10 IF X AND Y THEN Z=1",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 75,
+ "obj_sha256": "1444177ff1241ad9bab4580b467ffcb2eb0e2363c2b0409a3cf662fc33f235cd",
+ "cycles": 56372802,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S003.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6138",
+  "LOCAL VARIABLES": "6139 - 6153",
+  "HIGHEST MEMORY LOCATION": "6153"
+ }
+}

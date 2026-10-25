@@ -1,0 +1,174 @@
+{
+ "id": "b2f",
+ "key": "0e7b9253cebc02eb",
+ "source": "10 BA=0\n20 BB=0\n30 BC=0\n40 BD=0\n50 BE=0\n60 BF=0\n70 BG=0\n80 BH=0\n90 BI=0\n100 BJ=0\n110 BK=0\n120 BL=0\n130 BM=0\n140 BN=0\n150 BO=0\n160 BP=0\n170 BQ=0\n180 BR=0\n190 BS=0\n200 BT=0\n210 BU=0\n220 BV=0\n230 BW=0\n240 BX=0\n250 BY=0\n260 BZ=0\n270 B0=0\n280 B1=0\n290 B2=0\n300 B3=0\n310 B4=0\n320 B5=0\n330 B6=0\n340 B7=0\n350 B8=0\n360 B9=0",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 577,
+ "obj_sha256": "8d24766999068caaf094b71005dff9514e71ee2dcbc623b03bc6fd1d872ffa87",
+ "cycles": 90289505,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6090
+  },
+  {
+   "line": 30,
+   "addr": 6096
+  },
+  {
+   "line": 40,
+   "addr": 6102
+  },
+  {
+   "line": 50,
+   "addr": 6108
+  },
+  {
+   "line": 60,
+   "addr": 6114
+  },
+  {
+   "line": 70,
+   "addr": 6120
+  },
+  {
+   "line": 80,
+   "addr": 6126
+  },
+  {
+   "line": 90,
+   "addr": 6132
+  },
+  {
+   "line": 100,
+   "addr": 6138
+  },
+  {
+   "line": 110,
+   "addr": 6144
+  },
+  {
+   "line": 120,
+   "addr": 6150
+  },
+  {
+   "line": 130,
+   "addr": 6156
+  },
+  {
+   "line": 140,
+   "addr": 6162
+  },
+  {
+   "line": 150,
+   "addr": 6168
+  },
+  {
+   "line": 160,
+   "addr": 6174
+  },
+  {
+   "line": 170,
+   "addr": 6180
+  },
+  {
+   "line": 180,
+   "addr": 6186
+  },
+  {
+   "line": 190,
+   "addr": 6192
+  },
+  {
+   "line": 200,
+   "addr": 6198
+  },
+  {
+   "line": 210,
+   "addr": 6204
+  },
+  {
+   "line": 220,
+   "addr": 6210
+  },
+  {
+   "line": 230,
+   "addr": 6216
+  },
+  {
+   "line": 240,
+   "addr": 6222
+  },
+  {
+   "line": 250,
+   "addr": 6228
+  },
+  {
+   "line": 260,
+   "addr": 6234
+  },
+  {
+   "line": 270,
+   "addr": 6240
+  },
+  {
+   "line": 280,
+   "addr": 6246
+  },
+  {
+   "line": 290,
+   "addr": 6252
+  },
+  {
+   "line": 300,
+   "addr": 6258
+  },
+  {
+   "line": 310,
+   "addr": 6264
+  },
+  {
+   "line": 320,
+   "addr": 6270
+  },
+  {
+   "line": 330,
+   "addr": 6276
+  },
+  {
+   "line": 340,
+   "addr": 6282
+  },
+  {
+   "line": 350,
+   "addr": 6288
+  },
+  {
+   "line": 360,
+   "addr": 6294
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6640",
+  "LOCAL VARIABLES": "6641 - 6820",
+  "HIGHEST MEMORY LOCATION": "6820"
+ }
+}

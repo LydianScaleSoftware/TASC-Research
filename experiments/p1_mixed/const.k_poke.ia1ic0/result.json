@@ -1,0 +1,33 @@
+{
+ "id": "const.k_poke.ia1ic0",
+ "key": "931b7c7906c0a779",
+ "source": "10 POKE 768,0",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 63,
+ "obj_sha256": "a07a1b1e6b161c92f1895790c32b1a9494add6c984d2c338f35d005eced514c4",
+ "cycles": 56889894,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S016.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6126",
+  "HIGHEST MEMORY LOCATION": "6126"
+ }
+}

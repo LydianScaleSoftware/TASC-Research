@@ -1,0 +1,34 @@
+{
+ "id": "h01_AA",
+ "key": "78c9f5f97c12cd37",
+ "source": "10 AA=A(1)+A(2)",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 98,
+ "obj_sha256": "19a7dc9755ebe9ba29c208c7a3597b3b8da225cb15f7e95ddf25e65fd17a4129",
+ "cycles": 55587965,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6161",
+  "LOCAL VARIABLES": "6162 - 6226",
+  "HIGHEST MEMORY LOCATION": "6226"
+ }
+}

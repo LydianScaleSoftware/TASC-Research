@@ -1,0 +1,1 @@
+10 IF X AND Y THEN Z=1

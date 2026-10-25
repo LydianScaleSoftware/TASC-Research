@@ -1,0 +1,34 @@
+{
+ "id": "arr.arr_var_idx",
+ "key": "c1d239621b3b5215",
+ "source": "10 X=A(I)",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 64,
+ "obj_sha256": "f8c8a24818d22a5d18218aeac9786e4d48eb2207abb4a35dffe7e882a1d20c27",
+ "cycles": 55800667,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S003.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6127",
+  "LOCAL VARIABLES": "6128 - 6192",
+  "HIGHEST MEMORY LOCATION": "6192"
+ }
+}

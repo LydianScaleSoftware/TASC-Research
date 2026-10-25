@@ -1,0 +1,34 @@
+{
+ "id": "unary.fn_peek_r",
+ "key": "58d4425c08d303ae",
+ "source": "10 X=PEEK(A)",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 53,
+ "obj_sha256": "39fd415da9a21ea60ef12f7583ec33f025144db142c35b20afcf75edbaadeeb3",
+ "cycles": 54805621,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S013.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6116",
+  "LOCAL VARIABLES": "6117 - 6126",
+  "HIGHEST MEMORY LOCATION": "6126"
+ }
+}

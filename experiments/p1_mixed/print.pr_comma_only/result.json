@@ -1,0 +1,33 @@
+{
+ "id": "print.pr_comma_only",
+ "key": "0003f279d587e4c7",
+ "source": "10 PRINT ,",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 26,
+ "obj_sha256": "17c1c03bc3e77ad9ff889783c8f9567e19873f01f860692199d8b89469c51aad",
+ "cycles": 53851268,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S013.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6089",
+  "HIGHEST MEMORY LOCATION": "6089"
+ }
+}
