@@ -1,0 +1,42 @@
+{
+ "id": "rem.common_two_rems",
+ "key": "a1e9802985e17a1c",
+ "source": "10 REM! DEFCOMMON A\n20 REM! DEFCOMMON B\n30 B=A",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6074,
+ "obj_len": 47,
+ "obj_sha256": "dbaf4a69258a8eff644938f040264cbdb14e69affae116523d9fcceb51ff57eb",
+ "cycles": 54425316,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6089
+  },
+  {
+   "line": 30,
+   "addr": 6094
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S007.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6074 - 6120",
+  "NUMERIC COMMON": "6064 - 6073",
+  "HIGHEST MEMORY LOCATION": "6120"
+ }
+}

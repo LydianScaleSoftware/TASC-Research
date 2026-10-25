@@ -1,0 +1,42 @@
+{
+ "id": "rem.int_then_common",
+ "key": "3421a1e4e88cfec4",
+ "source": "10 REM! INTEGER I\n20 REM! DEFCOMMON I,J\n30 I=1",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6071,
+ "obj_len": 49,
+ "obj_sha256": "764b13f812b6753639320121090e69b81ae15e35dd4541dcb661848705327297",
+ "cycles": 56532195,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6091
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S004.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6071 - 6119",
+  "NUMERIC COMMON": "6064 - 6070",
+  "HIGHEST MEMORY LOCATION": "6119"
+ }
+}

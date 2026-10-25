@@ -1,0 +1,39 @@
+{
+ "id": "rem.common_plus_local",
+ "key": "b5c3d8d408e99a6e",
+ "source": "10 REM! DEFCOMMON A\n20 A=1:B=2",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6069,
+ "obj_len": 81,
+ "obj_sha256": "90b76ace141c29be61a7335ce5aa53c4a27922c7ea74ec95e7a88b961b53a99c",
+ "cycles": 55063962,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6089
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S003.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6069 - 6149",
+  "NUMERIC COMMON": "6064 - 6068",
+  "LOCAL VARIABLES": "6150 - 6154",
+  "HIGHEST MEMORY LOCATION": "6154"
+ }
+}

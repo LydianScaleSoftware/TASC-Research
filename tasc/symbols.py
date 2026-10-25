@@ -12,6 +12,7 @@ ROM: dict[int, str] = {
     0xFD8B: "CROUT1",
     0xE752: "GETADR",
     0xE10C: "AYINT",  # FAC -> integer (array subscripts)
+    0xEB63: "MOVAF", 0xE7AA: "FSUBT",
     0xE941: "LOG", 0xEB90: "SGN", 0xEBAF: "ABS", 0xEC23: "INT", 0xEE8D: "SQR", 0xEE97: "FPWRT",
     0xEED0: "NEGOP", 0xEF09: "EXP", 0xEFAE: "RND", 0xEFEA: "COS", 0xEFF1: "SIN", 0xF03A: "TAN", 0xF09E: "ATN",
     0xF273: "NORMAL", 0xF277: "INVERSE", 0xF280: "FLASH", 0xF390: "GR", 0xF399: "TEXT", 0xF3D8: "HGR2", 0xF3E2: "HGR",
@@ -32,7 +33,7 @@ ZERO_PAGE: dict[int, str] = {
 RUNTIME: dict[int, str] = {
     0x08AA: "RT.CLEAR", 0x08DB: "RT.HIMEM", 0x0963: "RT.RESTORE", 0x097B: "RT.POP",
     0x09E5: "RT.FOR.INIT/I", 0x09E8: "RT.FOR.INIT", 0x0A31: "RT.NEXT",
-    0x0B11: "RT.ARR.REAL", 0x0B14: "RT.ARR.STR", 0x0B17: "RT.ARR.INT", 0x0C6F: "RT.ARR.STR.STORE",
+    0x0B11: "RT.ARR.REAL", 0x0B14: "RT.ARR.STR", 0x0B17: "RT.ARR.INT", 0x0C6F: "RT.ARR.STORE",
     0x0DD9: "RT.DRAW.AT", 0x0DE0: "RT.XDRAW.AT", 0x0DED: "RT.HPLOT.TO", 0x0DF4: "RT.HPLOT",
     0x0E34: "RT.DRAW", 0x0E3B: "RT.XDRAW", 0x0E77: "RT.COLOR", 0x0E7A: "RT.COLOR/I", 0x0E80: "RT.VAL",
     0x0EAA: "RT.ASC", 0x0EB6: "RT.LEN", 0x0EC2: "RT.STRLIT.PROMPT", 0x0F13: "RT.FRE",
@@ -76,8 +77,9 @@ INLINE_OPERANDS: dict[int, int] = {
 DISPATCHERS: dict[int, str] = {0x1764: "real", 0x0D06: "int", 0x0C7F: "str"}
 
 
-def all_names() -> dict[int, str]:
+def all_names(delta: int = 0) -> dict[int, str]:
+    """ROM and RUNTIME names; delta = library address - $0803 (RUNTIME relocated)."""
     d: dict[int, str] = {}
     d.update(ROM)
-    d.update(RUNTIME)
+    d.update({a + delta: n for a, n in RUNTIME.items()})
     return d

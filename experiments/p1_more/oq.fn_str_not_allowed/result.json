@@ -1,0 +1,38 @@
+{
+ "id": "oq.fn_str_not_allowed",
+ "key": "0803b8e6626fca42",
+ "source": "10 DEF FN F(Z)=Z*Z\n20 PRINT FN F(2)",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 71,
+ "obj_sha256": "8fde96be6f39f069da177c801a82e38501697f718b83e50b5b5c94a1f4caa2c0",
+ "cycles": 56650447,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6094
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S004.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6134",
+  "LOCAL VARIABLES": "6135 - 6139",
+  "HIGHEST MEMORY LOCATION": "6139"
+ }
+}

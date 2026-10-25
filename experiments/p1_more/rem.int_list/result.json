@@ -1,0 +1,38 @@
+{
+ "id": "rem.int_list",
+ "key": "6cea7e9d7b912c8e",
+ "source": "10 REM! INTEGER I,J , K\n20 I=J+K",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 59,
+ "obj_sha256": "d4072e9a85e3accd00a8630ca5ece09b0aa4d7edd122cf127361232a1573be5f",
+ "cycles": 56511863,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6122",
+  "LOCAL VARIABLES": "6123 - 6128",
+  "HIGHEST MEMORY LOCATION": "6128"
+ }
+}

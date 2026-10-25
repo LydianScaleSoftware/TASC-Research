@@ -133,6 +133,37 @@ T["arrays"] = {
     "evidence": ["p1_mixed/arr.*", "p1_temp/*"],
 }
 
+T["resume_debug"] = {
+    "emit": "JSR $1423 before each statement that can error (assignments, PRINT, IF, FOR, NEXT, INPUT, VTAB, ...); not before HOME, END, GOTO, GOSUB, RETURN, REM, DATA",
+    "RESUME": ["JMP $1656"], "RESUME_without_option": [], "open": "full per-statement list", "evidence": ["p1_more/rd.*"]}
+
+T["rem_bang"] = {
+    "recognition": "REM followed by '!' (spaces allowed) and INTEGER/DEFCOMMON/USECOMMON/CLEAR COMMON/CLEAR CHAIN; screen prints RECOGNIZED",
+    "INTEGER": "names become int (2 bytes, int dispatcher) but keep the real-name hash bucket (T=0)",
+    "integer FOR": ["E(A)", "JSR $09E1", ".WORD &V", "E(B)", "JSR $1691", "E(C), JSR $168A | JSR $167E"],
+    "DEFCOMMON/USECOMMON": "COMMON block at program start: numeric then string sub-block, declaration order; routines still in hash order; USECOMMON -> header flag $FF",
+    "CLEAR COMMON": ["JSR $08A7"], "CLEAR CHAIN": ["JSR $0F0B"], "evidence": ["p1_more/rem.*"]}
+
+T["memory"] = {
+    "library L": "object starts JSR L; all RUNTIME calls relocated by L-$0803; default program start L+4013",
+    "program": "load address; COMBEG1 = start-1 (COMMON at program start, object after it)",
+    "variables": "LOCBEG1 = variables start - 1 (default: end of object file)",
+    "HIGHEST": "end of the highest block", "code": "symbolic code identical for all layouts", "evidence": ["p1_more/mem.*"]}
+
+T["allocation_specials"] = {
+    "order": "[temps][DEF FN parameters, definition order][named numerics by hash]...; string temps lead the string section",
+    "fn_param": "separate symbol from a global of the same name", "evidence": ["p1_more/oq.fn_*", "p1_temp/*"]}
+
+T["literals"] = {"integer": "decided by value: 5.0, 1E2, 007 are integers; .5 real; -0 = int 0 + negate", "evidence": ["p1_more/oq.lit_*"]}
+
+T["expressions_more"] = {
+    "both_complex_commutative": ["E(left)", "T.op1", "E(right)", "T.op2|op4"],
+    "both_complex_minus": ["E(left)", "T.op1", "E(right)", "T.op3 (T-FAC)"],
+    "left_complex_minus_right_simple": ["E(left)", "JSR $EB63 (FAC->ARG)", "right.op0", "JSR $E7AA (ARG-FAC)"],
+    "and_or": "the simple operand (either side) is tested in memory; the other is evaluated into FAC",
+    "string_both_complex": ["E(left)", "Tstr.op1", "E(right)", "Tstr.op0 (?)", "JSR $10DF"],
+    "evidence": ["p1_more/oq.*"]}
+
 out = Path(__file__).with_name("core.json")
 out.write_text(json.dumps(T, indent=1) + "\n")
 print("wrote", out)

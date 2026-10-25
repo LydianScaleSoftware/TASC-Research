@@ -1,0 +1,34 @@
+{
+ "id": "oq.lit_dot5",
+ "key": "5aa3bca1326cd73d",
+ "source": "10 X%=.5",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 52,
+ "obj_sha256": "3e7efbf63296d7391646f050ebdc041e531de3f1ecc9c524f9c8afdadd973a70",
+ "cycles": 53694777,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S003.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6115",
+  "LOCAL VARIABLES": "6116 - 6117",
+  "HIGHEST MEMORY LOCATION": "6117"
+ }
+}

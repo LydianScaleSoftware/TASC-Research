@@ -1,0 +1,33 @@
+{
+ "id": "rd.data",
+ "key": "97e1a58518e84a78",
+ "source": "10 DATA 1",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 31,
+ "obj_sha256": "9be31c76ff7dc412e26bbbf52cc7cf78975b330eef5defa774106b01732b881b",
+ "cycles": 56626687,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S005.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6094",
+  "HIGHEST MEMORY LOCATION": "6094"
+ }
+}

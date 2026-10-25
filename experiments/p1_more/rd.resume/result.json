@@ -1,0 +1,37 @@
+{
+ "id": "rd.resume",
+ "key": "72db95cddc9710bf",
+ "source": "10 ONERR GOTO 20\n20 RESUME",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 31,
+ "obj_sha256": "3c92803a8299177f6c83334e3a9c31e6adb0906c4e359976dee4f9577a057bd1",
+ "cycles": 56434764,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6089
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S006.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6094",
+  "HIGHEST MEMORY LOCATION": "6094"
+ }
+}

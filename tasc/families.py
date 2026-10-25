@@ -102,3 +102,43 @@ IO = {
     "def_fn": "10 DEF FN F(Z)=Z*2\n20 X=FN F(3)", "def_fn_var": "10 DEF FN F(Z)=Z+Y\n20 X=FN F(A)",
     "rem": "10 REM HELLO\n20 END", "rem_bang_int": "10 REM !INTEGER I\n20 I=1", "let": "10 LET X=1", "colon_empty": "10 X=1::Y=2",
 }
+
+
+RESUME_DEBUG = {
+    "end": "10 END", "home": "10 HOME", "assign_k": "10 X=1", "assign_v": "10 X=Y", "assign_expr": "10 X=Y+Z",
+    "assign_div": "10 X=Y/Z", "print_x": "10 PRINT X", "goto": "10 GOTO 10", "two_stmts": "10 X=1:Y=2",
+    "two_lines": "10 X=1\n20 Y=2", "if": "10 IF X THEN Y=1", "for": "10 FOR I=1 TO 2:NEXT I", "gosub": "10 GOSUB 20\n20 RETURN",
+    "rem": "10 REM X\n20 END", "resume": "10 ONERR GOTO 20\n20 RESUME", "input": "10 INPUT X", "vtab": "10 VTAB X",
+    "str_assign": '10 A$="X"', "int_add": "10 X%=Y%+Z%", "arr": "10 X=A(1)", "return": "10 RETURN", "data": "10 DATA 1",
+}
+
+REMBANG = {
+    "int_one": "10 REM! INTEGER I\n20 I=1", "int_for": "10 REM! INTEGER I\n20 FOR I=1 TO 10:NEXT I",
+    "int_for_vars": "10 REM! INTEGER I\n20 FOR I=A% TO B% STEP C%:NEXT I", "int_star": "10 REM! INTEGER *\n20 I=1:J=I+1",
+    "int_list": "10 REM! INTEGER I,J , K\n20 I=J+K", "int_arr": "10 REM! INTEGER A(5)\n20 A(1)=2",
+    "int_hash": "10 REM! INTEGER K\n20 A=1:K=1", "int_two_rems": "10 REM! INTEGER I\n20 REM! INTEGER J\n30 I=J",
+    "rem_nospace": "10 REM!INTEGER I\n20 I=1", "rem_inactive": "10 REM INTEGER I\n20 I=1",
+    "defcommon_num": "10 REM! DEFCOMMON A,B%\n20 A=1:B%=2", "defcommon_str": "10 REM! DEFCOMMON A$,B\n20 A$=\"X\":B=1",
+    "defcommon_arr": "10 REM! DEFCOMMON A(3),B$(2)\n20 A(1)=1", "usecommon": "10 REM! USECOMMON A,B%\n20 A=1:B%=2",
+    "common_order": "10 REM! DEFCOMMON Z,A\n20 A=1:Z=1", "common_plus_local": "10 REM! DEFCOMMON A\n20 A=1:B=2",
+    "int_then_common": "10 REM! INTEGER I\n20 REM! DEFCOMMON I,J\n30 I=1", "clear_common": "10 REM! CLEAR COMMON",
+    "clear_chain": "10 REM! CLEAR CHAIN\n20 PRINT CHR$(4);\"BRUN X\"", "common_two_rems": "10 REM! DEFCOMMON A\n20 REM! DEFCOMMON B\n30 B=A",
+}
+
+OPEN_Q = {
+    "fn_param_hash0": "10 DEF FN F(Z)=Z\n20 A=FN F(1)", "fn_param_after": "10 DEF FN F(A)=A\n20 Z=FN F(1)",
+    "fn_two": "10 DEF FN F(X)=X\n20 DEF FN G(Y)=Y\n30 A=FN F(1)+FN G(2)", "fn_param_used_outside": "10 DEF FN F(Z)=Z\n20 Z=FN F(1)",
+    "fn_str_not_allowed": "10 DEF FN F(Z)=Z*Z\n20 PRINT FN F(2)",
+    "next_noname_lines": "10 FOR I=1 TO 2\n20 NEXT", "next_two_loops": "10 FOR I=1 TO 2:FOR J=1 TO 2:NEXT:NEXT",
+    "on_gosub3": "10 ON X GOSUB 20,30,40\n20 RETURN\n30 RETURN\n40 RETURN", "str_temp": "10 X$=B$(1)+B$(2)",
+    "lit_5p0": "10 X%=5.0", "lit_1e2": "10 X%=1E2", "lit_dot5": "10 X%=.5", "lit_neg0": "10 X%=-0", "lit_32767_r": "10 X=32767",
+    "lit_ident_lead0": "10 X%=007", "lit_two_forms": "10 X=5:Y%=5:Z=A%+5",
+    "sub_complex_left": "10 X=A(1)-Y", "and_complex_left": "10 X=A(1) AND Y", "paren": "10 X=(A+B)*(C+D)", "paren_rev": "10 X=(A+B)-(C+D)",
+}
+
+MEMORY = {
+    "lib_1000": ("$1000", None, None), "prog_hgr1": (None, "HGR1", None), "prog_hgr2": (None, "HGR2", None),
+    "prog_num": (None, "$5000", None), "vars_num": (None, None, "$6000"), "prog_vars": (None, "HGR1", "$7000"),
+    "lib_prog": ("$4000", "$6000", None), "vars_below": (None, "$6000", "$2000"),
+}
+MEMORY_SRC = '10 X=1:A$="HI":PRINT X;A$\n20 GOTO 10\n30 DATA 5'

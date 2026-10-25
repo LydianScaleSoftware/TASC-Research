@@ -1,0 +1,38 @@
+{
+ "id": "rem.usecommon",
+ "key": "652719fd17a082d7",
+ "source": "10 REM! USECOMMON A,B%\n20 A=1:B%=2",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6071,
+ "obj_len": 78,
+ "obj_sha256": "9708c8bbb74088af34f9bc94cf691f1c73496942624dbf4f5740c3f81fcd342d",
+ "cycles": 55428701,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6091
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6071 - 6148",
+  "NUMERIC COMMON": "6064 - 6070",
+  "HIGHEST MEMORY LOCATION": "6148"
+ }
+}

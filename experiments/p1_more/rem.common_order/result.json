@@ -1,0 +1,38 @@
+{
+ "id": "rem.common_order",
+ "key": "a236205d6191a383",
+ "source": "10 REM! DEFCOMMON Z,A\n20 A=1:Z=1",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6074,
+ "obj_len": 67,
+ "obj_sha256": "d68c31ff708027f05f20f6be216c1044560bee78beb74d5616b4e1c418aaf21c",
+ "cycles": 54069101,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6094
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S002.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6074 - 6140",
+  "NUMERIC COMMON": "6064 - 6073",
+  "HIGHEST MEMORY LOCATION": "6140"
+ }
+}

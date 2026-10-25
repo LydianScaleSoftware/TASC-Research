@@ -1,0 +1,37 @@
+{
+ "id": "rd0.gosub",
+ "key": "a70fd336e57f078f",
+ "source": "10 GOSUB 20\n20 RETURN",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 27,
+ "obj_sha256": "ff59baf567e32a1019888429bfb68aeb46fac924901129e03638db5d8d5e1027",
+ "cycles": 52702418,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6087
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S002.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6090",
+  "HIGHEST MEMORY LOCATION": "6090"
+ }
+}

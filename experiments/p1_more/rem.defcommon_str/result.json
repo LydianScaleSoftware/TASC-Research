@@ -1,0 +1,39 @@
+{
+ "id": "rem.defcommon_str",
+ "key": "eb860f00e0fa1738",
+ "source": "10 REM! DEFCOMMON A$,B\n20 A$=\"X\":B=1",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6071,
+ "obj_len": 75,
+ "obj_sha256": "4fbe34d239ba078acd7407e9776dc7521910e889a7dff02dc4d46238ead64ee4",
+ "cycles": 54654297,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6091
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S007.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6071 - 6145",
+  "NUMERIC COMMON": "6064 - 6068",
+  "STRING COMMON": "6069 - 6070",
+  "HIGHEST MEMORY LOCATION": "6145"
+ }
+}

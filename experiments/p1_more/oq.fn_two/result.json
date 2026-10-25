@@ -1,0 +1,42 @@
+{
+ "id": "oq.fn_two",
+ "key": "89e8b4913caf5e05",
+ "source": "10 DEF FN F(X)=X\n20 DEF FN G(Y)=Y\n30 A=FN F(1)+FN G(2)",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 125,
+ "obj_sha256": "0f7a3ac1755a231415fe28a2c31b4d5586cf4d37e4086bb23538eb367d0e3a5b",
+ "cycles": 55987864,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6091
+  },
+  {
+   "line": 30,
+   "addr": 6098
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S002.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6188",
+  "LOCAL VARIABLES": "6189 - 6208",
+  "HIGHEST MEMORY LOCATION": "6208"
+ }
+}

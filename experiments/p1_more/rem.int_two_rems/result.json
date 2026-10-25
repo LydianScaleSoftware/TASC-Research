@@ -1,0 +1,42 @@
+{
+ "id": "rem.int_two_rems",
+ "key": "b5bc42addd2f2a6f",
+ "source": "10 REM! INTEGER I\n20 REM! INTEGER J\n30 I=J",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 47,
+ "obj_sha256": "19d024e7f0803b56bb188d24356615bb49855fdc756e7f7db1d1b7af198a3f2a",
+ "cycles": 54329346,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S003.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6110",
+  "LOCAL VARIABLES": "6111 - 6114",
+  "HIGHEST MEMORY LOCATION": "6114"
+ }
+}

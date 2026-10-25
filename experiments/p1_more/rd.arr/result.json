@@ -1,0 +1,34 @@
+{
+ "id": "rd.arr",
+ "key": "6ef341440f57a00a",
+ "source": "10 X=A(1)",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 66,
+ "obj_sha256": "ef23d6af22dfc4fa7d5330ef80eae72a84a7eb141a391e4030b169c5234165b9",
+ "cycles": 54680269,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S003.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6129",
+  "LOCAL VARIABLES": "6130 - 6189",
+  "HIGHEST MEMORY LOCATION": "6189"
+ }
+}

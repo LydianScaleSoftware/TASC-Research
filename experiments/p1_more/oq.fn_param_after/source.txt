@@ -1,0 +1,2 @@
+10 DEF FN F(A)=A
+20 Z=FN F(1)

@@ -1,0 +1,38 @@
+{
+ "id": "rd.two_lines",
+ "key": "d46e61e2432773c6",
+ "source": "10 X=1\n20 Y=2",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 87,
+ "obj_sha256": "f7865857cad38aa5ca9e6c480dbbe5b5e048bcce8cad6b1e61436e8d823b037e",
+ "cycles": 55589392,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6093
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6150",
+  "LOCAL VARIABLES": "6151 - 6160",
+  "HIGHEST MEMORY LOCATION": "6160"
+ }
+}

@@ -1,0 +1,42 @@
+{
+ "id": "mem.prog_hgr1",
+ "key": "5015db8be93b5f24",
+ "source": "10 X=1:A$=\"HI\":PRINT X;A$\n20 GOTO 10\n30 DATA 5",
+ "options": {
+  "library": null,
+  "program": "HGR1",
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 16384,
+ "obj_len": 105,
+ "obj_sha256": "f3d6f230c3c4a5b78df0cfcd1e974e01657215ad167f717ba0a06074e7d2377e",
+ "cycles": 59478728,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 16404
+  },
+  {
+   "line": 20,
+   "addr": 16439
+  },
+  {
+   "line": 30,
+   "addr": 16442
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "OBJECT FILE": "S005.OBJ",
+  "PROGRAM": "16384 - 16488",
+  "LOCAL VARIABLES": "16489 - 16495",
+  "HIGHEST MEMORY LOCATION": "16495"
+ }
+}

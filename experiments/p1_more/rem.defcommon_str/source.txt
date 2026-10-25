@@ -1,0 +1,2 @@
+10 REM! DEFCOMMON A$,B
+20 A$="X":B=1

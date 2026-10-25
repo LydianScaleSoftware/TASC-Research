@@ -1,0 +1,34 @@
+{
+ "id": "rd0.assign_k",
+ "key": "8eb0d76ceb765536",
+ "source": "10 X=1",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 52,
+ "obj_sha256": "5a44a30c6536d643a19cfc43f94af5cb133c1447d86e13cb7f990d7b6836644d",
+ "cycles": 55592930,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6115",
+  "LOCAL VARIABLES": "6116 - 6120",
+  "HIGHEST MEMORY LOCATION": "6120"
+ }
+}

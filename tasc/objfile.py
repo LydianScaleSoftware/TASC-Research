@@ -104,12 +104,12 @@ def int_value(raw: bytes) -> int:
 ARRAY_DISPATCHERS = {0x0B11: "real", 0x0B14: "str", 0x0B17: "int"}
 
 
-def _parse_routine(d: bytes, load: int, off: int) -> Routine | None:
+def _parse_routine(d: bytes, load: int, off: int, delta: int = 0) -> Routine | None:
     """Try to parse one routine at file offset off."""
     a = off
     entries: dict[int, int] = {}
     if d[a : a + 4] == b"\x38\xa9\x18\x20" and a + 9 <= len(d):  # array: SEC/CLC, JSR disp, inline data
-        disp = d[a + 4] | d[a + 5] << 8
+        disp = (d[a + 4] | d[a + 5] << 8) - delta
         if disp not in ARRAY_DISPATCHERS:
             return None
         tgt = d[a + 6] | d[a + 7] << 8
@@ -121,7 +121,7 @@ def _parse_routine(d: bytes, load: int, off: int) -> Routine | None:
                        dims=dims, length=9 + 2 * nd)
     if d[a : a + 3] == b"\x38\xa9\x18":  # string: SEC / (LDA #$18 = CLC)
         if d[a + 3] == 0xA0 and d[a + 5] == 0xA9 and d[a + 7] == 0x4C:
-            disp = d[a + 8] | d[a + 9] << 8
+            disp = (d[a + 8] | d[a + 9] << 8) - delta
             if DISPATCHERS.get(disp) != "str":
                 return None
             tgt = d[a + 6] | d[a + 4] << 8
@@ -138,17 +138,17 @@ def _parse_routine(d: bytes, load: int, off: int) -> Routine | None:
         return None
     if a + 7 > len(d) or d[a] != 0xA0 or d[a + 2] != 0xA9 or d[a + 4] != 0x4C:
         return None
-    disp = d[a + 5] | d[a + 6] << 8
+    disp = (d[a + 5] | d[a + 6] << 8) - delta
     if disp not in DISPATCHERS:
         return None
     tgt = d[a + 3] | d[a + 1] << 8
     return Routine(load + off, entries, tgt, disp, DISPATCHERS[disp], length=a + 7 - off)
 
 
-def _parse_routines_from(d: bytes, load: int, off: int, end: int) -> list[Routine] | None:
+def _parse_routines_from(d: bytes, load: int, off: int, end: int, delta: int = 0) -> list[Routine] | None:
     out: list[Routine] = []
     while off < end:
-        r = _parse_routine(d, load, off)
+        r = _parse_routine(d, load, off, delta)
         if r is None:
             return None
         out.append(r)
@@ -203,20 +203,21 @@ def predict_locals(vars_: list[Var], start: int) -> dict[int, Var]:
 
 
 def parse(data: bytes, load: int, source: str | None = None) -> ObjectFile:
-    if data[:3] != b"\x20\x03\x08":
-        raise ValueError("object file does not start with JSR $0803")
+    if data[0] != 0x20:
+        raise ValueError("object file does not start with JSR <library>")
+    lib = data[1] | data[2] << 8
+    delta = lib - 0x0803  # RUNTIME is relocated as a whole
     words = {k: data[3 + 2 * i] | data[4 + 2 * i] << 8 for i, k in enumerate(HEADER_FIELDS)}
     obj = ObjectFile(load, data, Header(words, data[19]))
     prog_end = words["LOCBEG1"] - load + 1  # file offset just past the object file
-    if prog_end != len(data):
-        obj.notes.append(f"LOCBEG1+1 (${words['LOCBEG1'] + 1:04X}) != end of file (${load + len(data):04X})")
+    if prog_end != len(data):  # variables placed elsewhere (memory option)
         prog_end = len(data)
 
     # routines: earliest offset from which the rest parses as routines
     routines: list[Routine] = []
     rstart = prog_end
     for off in range(20, prog_end):
-        rs = _parse_routines_from(data, load, off, prog_end)
+        rs = _parse_routines_from(data, load, off, prog_end, delta)
         if rs is not None:
             routines, rstart = rs, off
             break
@@ -260,7 +261,8 @@ def parse(data: bytes, load: int, source: str | None = None) -> ObjectFile:
     for r in routines:
         for a, op in r.entries.items():
             entry_names[a] = f"{r.name}.op{op}"
-    names = all_names()
+    names = all_names(delta)
+    inline_ops = {a + delta: n for a, n in INLINE_OPERANDS.items()}
 
     # code: linear decode with inline strings and inline operands
     a = load + 20
@@ -282,8 +284,8 @@ def parse(data: bytes, load: int, source: str | None = None) -> ObjectFile:
             sym = f"{i.mnemonic} @+{i.operand - load}"
         obj.code.append(CodeItem(a, i.raw, sym))
         a += i.length
-        if i.mnemonic == "JSR" and i.operand in INLINE_OPERANDS:
-            n = INLINE_OPERANDS[i.operand]
+        if i.mnemonic == "JSR" and i.operand in inline_ops:
+            n = inline_ops[i.operand]
             w = data[a - load : a - load + n]
             ref = w[0] | w[1] << 8 if n == 2 else 0
             obj.code.append(CodeItem(a, w, f".WORD @+{ref - load}" if n == 2 else ".BYTES"))

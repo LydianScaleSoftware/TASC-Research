@@ -1,0 +1,2 @@
+10 REM! INTEGER I,J , K
+20 I=J+K

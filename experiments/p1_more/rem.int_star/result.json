@@ -1,0 +1,38 @@
+{
+ "id": "rem.int_star",
+ "key": "b34562be0584ef6b",
+ "source": "10 REM! INTEGER *\n20 I=1:J=I+1",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 67,
+ "obj_sha256": "b688be7c64dfe9ba145debdfdb3688fb33967fe805c5f0119353712b8426fa14",
+ "cycles": 54858775,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S007.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6130",
+  "LOCAL VARIABLES": "6131 - 6134",
+  "HIGHEST MEMORY LOCATION": "6134"
+ }
+}

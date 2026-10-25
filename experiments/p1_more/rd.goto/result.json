@@ -1,0 +1,33 @@
+{
+ "id": "rd.goto",
+ "key": "2399ba616bf60259",
+ "source": "10 GOTO 10",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 26,
+ "obj_sha256": "63cb7d61ffd94a7582f6ec5de79c94b43aedac5b1962c1fa1d5fc4daa6c59438",
+ "cycles": 53646381,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S007.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6089",
+  "HIGHEST MEMORY LOCATION": "6089"
+ }
+}

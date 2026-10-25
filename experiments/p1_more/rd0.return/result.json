@@ -1,0 +1,33 @@
+{
+ "id": "rd0.return",
+ "key": "31f793a2fa631184",
+ "source": "10 RETURN",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 24,
+ "obj_sha256": "32901208ae2a2dc9ae8368572001b9cf147e5c6e01bd597f160456c60dd68d67",
+ "cycles": 51916424,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S002.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6087",
+  "HIGHEST MEMORY LOCATION": "6087"
+ }
+}

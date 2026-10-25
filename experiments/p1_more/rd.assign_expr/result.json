@@ -1,0 +1,34 @@
+{
+ "id": "rd.assign_expr",
+ "key": "a3989773153c2261",
+ "source": "10 X=Y+Z",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 62,
+ "obj_sha256": "a4a0def008c2935279d4f80aa2a6d879078777b5026d2feda8b108308dc2028a",
+ "cycles": 56560602,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S004.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6125",
+  "LOCAL VARIABLES": "6126 - 6140",
+  "HIGHEST MEMORY LOCATION": "6140"
+ }
+}

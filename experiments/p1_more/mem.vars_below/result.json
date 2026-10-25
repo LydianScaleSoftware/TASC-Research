@@ -1,0 +1,42 @@
+{
+ "id": "mem.vars_below",
+ "key": "252dad7de37b3af1",
+ "source": "10 X=1:A$=\"HI\":PRINT X;A$\n20 GOTO 10\n30 DATA 5",
+ "options": {
+  "library": null,
+  "program": 24576,
+  "variables": 8192,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 24576,
+ "obj_len": 105,
+ "obj_sha256": "d5f100427c6b17dcd40d093a51aae0c9dd19a7bcfb1d58c730e42e294075a62f",
+ "cycles": 57059514,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 24596
+  },
+  {
+   "line": 20,
+   "addr": 24631
+  },
+  {
+   "line": 30,
+   "addr": 24634
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "OBJECT FILE": "S003.OBJ",
+  "PROGRAM": "24576 - 24680",
+  "LOCAL VARIABLES": "8192 - 8198",
+  "HIGHEST MEMORY LOCATION": "24680"
+ }
+}

@@ -1,0 +1,2 @@
+10 DEF FN F(Z)=Z*Z
+20 PRINT FN F(2)
