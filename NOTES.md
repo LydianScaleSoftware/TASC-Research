@@ -6,7 +6,10 @@ Entry point for any new session. **Current handoff: `docs/handoff_phase5.md`** (
 
 ## Status (2026-10-25, session 6)
 
-- **Session 6: PASS1 statement-level commentary done** (PASS1.ann ~1,000 [lines]; 287 bare DOC lines left, all trivial). New tool `python -m tasc.annlist <PASS> [first [last]]`. Annotation fixes: IL = 1 for a REAL FOR variable; SG = value must be real; EC ($0947) resets the stack and DATA pointer. Program bytes unchanged (PASSn.bas/.txt identical), so the session-5 real-TASC proof stands; re-prove before the final deliverable. Next: PASS0 annotations, then PASS2.
+- **Session 6: PASS1 statement-level commentary done** (PASS1.ann ~1,000 [lines]; 287 bare DOC lines left, all trivial). New tool `python -m tasc.annlist <PASS> [first [last]]`. Annotation fixes: IL = 1 for a REAL FOR variable; SG = value must be real; EC ($0947) resets the stack and DATA pointer.
+- **Session 6: PASS0 annotated** (docs/lift/annot/PASS0.ann: its 22 local variables, 3 DEF FNs, routine headers, ~110 line comments; PASS0 added to DOCUMENTED). COMMON DP(I,0) holds the address as a signed word (FN SW), not address-32767.
+- **Session 6: listings now round-trip.** Two defects found in the shipped .txt listings (present since session 5): the renderer collapsed double spaces inside string literals (PASS0 430/440), and names ending in A or T joined a following keyword when the listing is tokenized again (`VA THEN` -> V AT HEN, `KT OR` -> K TO R; real ROM behaviour). Fixed in tasc/decomp/render.py and names._ok (no name ends in A or T); pytest test_listing_retokenizes imports each PASSn.txt with cp2 and compares with PASSn.bas. Names are solved jointly over the passes (COMMON), so PASS0's preferences and the new rule changed names in all three passes; see the proof line below.
+- **Proof (session 6, final names):** `python -m tasc.selfcompile PASS0/PASS1/PASS2`: real TASC compiles the regenerated sources (305, 1,344 and 501 lines) into files identical to PASS0/1/2 (sha256 e500a1ff..., 71768885..., 218d8a5b...; experiments/p3_selfcompile/*/summary.json). Full pytest 22 passed (corpus round trip included).
 
 
 - Phases 0, 1, 2, R: done (sessions 1-3; details in RAG phase0/1/2, runtime*).

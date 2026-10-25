@@ -16,7 +16,7 @@ from tasc.compiler.parse import TOK, read_program
 from tasc.decomp.names import RESERVED
 
 SRC = Path(__file__).parents[1] / "src"
-DOCUMENTED = ["PASS1"]
+DOCUMENTED = ["PASS0", "PASS1"]
 KEYWORD_PARTS = ("AT", "TO", "ON", "OR", "FN", "IF")
 
 
@@ -120,3 +120,19 @@ def test_names_are_safe(name: str) -> None:
             assert base not in RESERVED and not any(k in base for k in KEYWORD_PARTS), u
             key = (base[:2], u.rstrip("()")[len(base):], u.endswith("()"))
             assert seen.setdefault(key, u) == u, f"{u} collides with {seen[key]}"
+
+
+@pytest.mark.parametrize("name", ["PASS0", "PASS1", "PASS2"])
+def test_listing_retokenizes(name: str, tmp_path: Path) -> None:
+    """The plain listing, typed in again (tokenized as the ROM does), gives the same program."""
+    import shutil
+
+    from tasc import disk
+
+    image = tmp_path / "t.dsk"
+    shutil.copyfile(Path(__file__).parents[1] / "images" / "work" / "tasc201.dsk", image)
+    disk.import_basic(image, SRC / f"{name}.txt", "LISTING")
+    got = [(ln.number, ln.body) for ln in read_program(disk.extract(image, "LISTING").data)]
+    want = source_lines(name)
+    bad = [n for (n, a), (_, b) in zip(want, got) if a != b]
+    assert len(got) == len(want) and not bad, f"lines that tokenize differently: {bad}"

@@ -4,7 +4,7 @@
  "obj_addr": 16882,
  "obj_len": 7803,
  "obj_sha256": "e500a1ffb6e1bf79af73dd7114dacaabdc4f23db83dfb43c6ab6e6d8379f7241",
- "cycles": 464324665,
+ "cycles": 464945427,
  "line_table": [
   {
    "line": 10,
@@ -1228,7 +1228,7 @@
   }
  ],
  "info": {
-  "XT AW": "BZ = 1: GOTO 3200",
+  "XT GE": "BZ = 1: GOTO 3200",
   "OBJECT FILE": "SRC0.OBJ",
   "LIBRARY": "2051 - 6063",
   "PROGRAM": "16882 - 24684",

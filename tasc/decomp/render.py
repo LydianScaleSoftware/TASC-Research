@@ -284,10 +284,15 @@ def listing(lines: list[tuple[int, bytes]]) -> str:
                 s.append(chr(b))
             else:
                 s.append(f"{{${b:02X}}}")
-        text = "".join(s).strip()
-        while "  " in text:
-            text = text.replace("  ", " ")
-        for a, b in (("< =", "<="), ("> =", ">="), ("< >", "<>"), ("> <", "><"), ("= <", "=<"), ("= >", "=>")):
-            text = text.replace(a, b)
+        # spacing is normalised outside quotes only; string literals keep their text
+        parts = "".join(s).split('"')
+        for i in range(0, len(parts), 2):
+            p = parts[i]
+            while "  " in p:
+                p = p.replace("  ", " ")
+            for a, b in (("< =", "<="), ("> =", ">="), ("< >", "<>"), ("> <", "><"), ("= <", "=<"), ("= >", "=>")):
+                p = p.replace(a, b)
+            parts[i] = p
+        text = '"'.join(parts).strip()
         out.append(f"{num} {text}")
     return "\n".join(out) + "\n"

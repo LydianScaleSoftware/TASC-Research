@@ -46,6 +46,10 @@ def suffix(s: Sym, decl_int: bool) -> str:
 def _ok(name: str) -> bool:
     if name in RESERVED:
         return False
+    # a final A or T joins a following keyword when the line is typed in again:
+    # VA THEN reads as V AT HEN, KT OR as K TO R
+    if name.endswith(("A", "T")):
+        return False
     return not any(t in name for t in ("AT", "TO", "ON", "OR", "FN", "IF"))
 
 
