@@ -154,7 +154,11 @@ class Compiler:
         self.const_seq = 0
         self.seq = 0
         self.temps: dict[str, list[Sym]] = {"real": [], "int": [], "str": []}
-        self.fn_temps: dict[str, list[Sym]] = {"real": [], "int": [], "str": []}  # observed: DEF FN bodies
+        # every temp created inside a DEF FN body (all functions); see fn_pool
+        self.fn_temps: dict[str, list[Sym]] = {"real": [], "int": [], "str": []}
+        # observed (PASS1, session 4): each DEF FN body gets temps of its own; they are not
+        # reused by the next function's body
+        self.fn_pool: dict[str, list[Sym]] = {"real": [], "int": [], "str": []}
         self.in_fn = False
         self.temp_depth: dict[str, int] = {"real": 0, "int": 0, "str": 0}
         self.params: list[Sym] = []
@@ -218,10 +222,12 @@ class Compiler:
 
     def temp(self, vtype: str) -> Sym:
         d = self.temp_depth[vtype]
-        pool = self.fn_temps[vtype] if self.in_fn else self.temps[vtype]
+        pool = self.fn_pool[vtype] if self.in_fn else self.temps[vtype]
         if d == len(pool):
             self.seq += 1
             pool.append(Sym(f"T{d}", vtype, "temp", seq=self.seq, label=f"T{vtype[0]}{d}"))
+            if self.in_fn:
+                self.fn_temps[vtype].append(pool[-1])
         self.temp_depth[vtype] = d + 1
         return pool[d]
 
@@ -1100,6 +1106,7 @@ class Compiler:
         saved = self.scope_param
         self.scope_param = {param[0]: p}
         self.in_fn = True
+        self.fn_pool = {"real": [], "int": [], "str": []}
         self.entry(p, 1)
         self.gen(body, "real")
         self.in_fn = False

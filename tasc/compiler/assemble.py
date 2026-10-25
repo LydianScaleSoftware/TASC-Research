@@ -81,7 +81,9 @@ def assemble(c: Compiler, opts: Options) -> Result:
 
     # symbols: temps, FN params, named variables
     temps = [t for vt in ("int", "real") for t in c.temps[vt]]  # observed in BALL: int temp before real temp
-    fn_temps = sorted((t for vt in ("real", "int") for t in c.fn_temps[vt]), key=lambda t: t.seq)  # observed: creation order (main temps: int first)
+    # observed (PASS1): FN parameters and FN-body temps share one list in creation order
+    # (main temps: int first)
+    fn_syms = sorted(c.params + [t for vt in ("real", "int") for t in c.fn_temps[vt]], key=lambda t: t.seq)
     stemps = c.temps["str"]
     named = list(c.syms.values())
     num_scalars = _symbol_order([s for s in named if not s.array and s.vtype != "str"])
@@ -92,7 +94,7 @@ def assemble(c: Compiler, opts: Options) -> Result:
     # routines: numeric (temps, params, scalars), constants, strings, arrays   (order partly GUESS)
     # observed: numeric scalars, constants, numeric arrays, string scalars, string arrays
     # (arrays always get a routine)
-    rtn_order = ([s for s in temps + c.params + fn_temps + num_scalars if s.ops] + [k for k in consts if k.ops] + num_arrays
+    rtn_order = ([s for s in temps + fn_syms + num_scalars if s.ops] + [k for k in consts if k.ops] + num_arrays
                  + [s for s in stemps + c.fn_temps["str"] + strings if s.ops or s.array or s.common is not None])
     entry: dict[tuple[int, int], int] = {}
     for s in rtn_order:
@@ -112,7 +114,7 @@ def assemble(c: Compiler, opts: Options) -> Result:
     # local variables
     var_start = opts.variables if isinstance(opts.variables, int) else obj_end
     a = var_start
-    for s in temps + c.params + fn_temps + [s for s in num_scalars + num_arrays if s.common is None]:
+    for s in temps + fn_syms + [s for s in num_scalars + num_arrays if s.common is None]:
         s.addr, a = a, a + s.size()
     locnumend = a - 1
     for s in stemps + c.fn_temps["str"] + [s for s in strings if s.common is None]:
