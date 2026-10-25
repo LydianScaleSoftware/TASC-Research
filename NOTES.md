@@ -83,6 +83,16 @@ boot takes about 10 s of wall time.
   goal, and where the hash order forbids it fall back to a similar first letter
   with a second letter or digit chosen to fit the logic; never a keyword. The
   compendium records the preferred name beside any fallback.
+- **Page-3 ML block (Mark, 2026-10-25):** stays in PASS0's DATA statements, loaded by
+  the original FOR/READ/POKE loop and USR-vector POKEs (the DATA text and its split
+  into four statements are fixed by the object; the original method is the only one
+  that keeps PASS0 byte-identical). DOC file points to ml/pass0_page3.hex/.asm.txt.
+- **MAKE RUNTIME (Mark, 2026-10-25):** RUNTIME is hand-written (H6), so add an
+  Applesoft program `MAKE RUNTIME` that POKEs RUNTIME's 4,013 bytes from DATA
+  statements and BSAVEs `RUNTIME,A$803,L4013` (not in the manual; consistent with
+  how the original was probably built). Proof: run it in Pandowdy and compare the
+  saved file with the original RUNTIME byte for byte. The program must sit above
+  $17AF while it POKEs $0803-$17AF (it relocates itself first: TXTTAB to $4001).
 
 - Repo `tasc-re/` under the project folder; git; originals read-only in
   `images/original/`; the working image is `images/work/tasc201.dsk` (copy of 2.01).
@@ -145,5 +155,4 @@ boot takes about 10 s of wall time.
 
 ## Open questions for Mark
 
-- Phase 5 default still to confirm: the page-3 ML block stays in PASS0's DATA
-  statements as in the original.
+- None blocking. Phase 5 defaults all decided (see Decisions).
