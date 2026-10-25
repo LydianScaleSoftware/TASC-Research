@@ -1,0 +1,114 @@
+# PASS0: setup and dialog
+
+## What it does
+
+PASS0 is the first of the three programs that make up the compiler. It talks to the user, prepares DOS and memory for the compilation, and leaves everything the later passes need in the COMMON block it defines. It does no compiling itself. Its work, in order:
+
+1. Changes six bytes of DOS so that the tokenized Applesoft source can be read through DOS's text-file READ.
+2. Asks for the source file, the object file, the memory layout and the compiler options, checking each answer.
+3. Builds the tables the code generator uses (the call table and the operator table) and loads a small machine-language helper into page 3.
+4. Sets up the symbol table's chain heads, creates the object file, empties the line number file, and runs PASS1 with `BRUN`.
+
+Everything PASS0 hands on lives in the COMMON block, which PASS0 declares with `REM! DEFCOMMON` and PASS1 and PASS2 declare with `REM! USECOMMON` in exactly the same order. `REM! CLEAR CHAIN` just before the `BRUN` sets up string storage so the COMMON strings survive the chain.
+
+## Flow
+
+1. **DOS and memory** ([[$4206]]). `NOMONC,I,O` stops DOS echoing commands, `MAXFILES3` gives three file buffers (source, object, line number file), and `HIMEM: 38400` keeps strings below the DOS buffers at $9600. The six DOS patches are read from the DATA statement at [[$429F]]; each original byte is saved in {DP}() for the restore at the end of the compilation ([[$42F3]]).
+2. **Fixed values** ([[$4354]]). The library routine that resets the stack ({EC}), the library length ({LL}, 4013), the default library address ({DA}, $0803), the DOS command strings, and the boot drive: DOS's last-used slot and drive ($AA6A, $AA68) become {SL}, {DR} and {DD$}; the slot also gives the drive motor switches {MO} and {MF}, and $AA52 is DOS's output state byte {DM}.
+3. **Source file** ([[$4489]]). The title, then `SOURCE FILE?`. The answer is split into a name and a slot/drive part ([[$54BC]]) and checked by running `APPEND` on it, which fails with FILE NOT FOUND if the file is missing ([[$4541]], [[$59EF]]). The file is closed again at [[$45A7]].
+4. **Object file** ([[$45A7]]). The default is the source name, cut to 26 characters, plus `.OBJ`, on the source file's drive. Any other answer is split the same way ([[$466B]]).
+5. **Memory layout** ([[$46A1]]). The default puts the library at $0803, the program right after it and the variables after the program. Otherwise three addresses are asked for: the library ([[$474A|line 1060]]), the program (a number, `HGR1` = $4000 or `HGR2` = $6000, [[$47D4|line 1220]]) and the variables ([[$48D1|line 1420]]); each is checked by the address routine ([[$57B7]]). The layout is shown and confirmed ([[$494B]]).
+6. **Options** ([[$4A7A]]). The default is listing, pause on errors, integer arithmetic and integer constants on, RESUME/debug code off; otherwise each is asked in turn. Return alone accepts the default.
+7. **Tables** ([[$4F8F]], [[$509A]], [[$5219]]). The call table and the operator table are read from DATA into the symbol table array {SY}() at 150 and 300, where PASS1 picks them up; the 89 bytes of machine code are POKEd into $0377-$03CF and the USR vector at $0A is pointed at $0377.
+8. **Symbol table** ([[$5265]]). 32 hash chains each for variables, constants and line numbers, and the addresses of the page-3 routines.
+9. **Files and chain** ([[$52E1]]). A one-byte `BSAVE` creates the object file as a binary file; the line number file is opened, deleted and opened again so it is empty; then `BRUN PASS1` on the boot drive.
+
+## How the dialog is built
+
+The questions do not call their checks with GOSUB. A question stores a number in {QN}, saying which question is being answered, and jumps (GOTO) to a shared check. The check ends with `ON {QN} GOTO`, which returns to the code after that question ([[$5996|line 3410]] for addresses, [[$5A99|line 3590]] for files). After every check, {BD} = 1 means the answer was refused and the question is asked again.
+
+- The yes/no routine ([[$53D3]]) returns {YN} = 1 for Y, 0 for N, 2 for Return alone; anything else rings the bell and sets {BD}.
+- The line reader ([[$5463]]) calls the ROM's INLIN and copies the line from $0200 into {L$}; Control-C stops the program.
+- A file answer that starts with Control-D is a DOS command (CATALOG, for example): it is executed and the question is asked again ([[$59B8]]).
+- DOS errors are caught with ONERR; error 6 is reported as FILE NOT FOUND, anything else as DISK ERROR. After a caught error the library routine at $0947 ({EC}) resets the stack, because Applesoft's error handling leaves it as it was when the error happened.
+- The address routine ([[$57B7]]) accepts a decimal number (converted with VAL under ONERR) or hexadecimal after `$`, from 0 to 49151 ($BFFF).
+
+## Subroutines
+
+| Line | What it does |
+|---|---|
+| [[$53D3]] | Yes/no answer into {YN}; {BD} = 1 if neither |
+| [[$5463]] | Read a line from the keyboard into {L$} |
+| [[$54BC]] | Split a file specification into {NM$} (name, trimmed, at most 30 characters) and {SD$} (`,Sn,Dn`, the boot drive's slot or drive filled in where missing); clears {SD} when the file is on another slot or drive |
+| [[$5787]] | Report an illegal file specification |
+| [[$57B7]] | Convert an address answer into {AD}; returns through `ON {QN} GOTO` |
+| [[$59B8]] | Check a file answer; [[$59EF|line 3480]] runs a DOS command under ONERR; returns through `ON {QN} GOTO` |
+
+## Stored addresses
+
+Integer variables hold -32767 to 32767, so an address is usually kept as address-32767 and turned back with +32767 (`FN SA` and `FN RA` in this pass; the other passes have the same pair). Addresses that are POKEd or PEEKed are kept as signed words instead, address-65536 above 32767 (`FN SW`): that is how {DP}(I,0), {MO}, {MF} and {DM} are stored.
+
+## The COMMON block
+
+PASS0 defines it at the start of program space ($17B0, right after the library) and moves the program start to $41F2. Numbers come first, then strings; every pass declares the same names in the same order.
+
+| Variables | Meaning |
+|---|---|
+| {NV}, {NK}, {NL} | Number of hash chains for variables, constants and line numbers (32 each) |
+| {VB}, {KB}, {LB}, {HT} | First variable, constant and line number chain head in {SY}(), and the last chain head (9, 41, 73, 104) |
+| {MO}, {MF}, {SD} | Drive motor on and off switches; {SD} = 1 if both files are on the boot drive, so its motor is kept running |
+| {DM} | DOS's output state byte ($AA52) |
+| {EC} | Library routine at $0947 that resets the stack and the DATA pointer |
+| {LL} | Library length (4013) |
+| {UP}, {KP}, {RB}, {WB}, {IO}, {LS} | Page-3 code: USR entry, packed-number bytes, read a byte, write a byte, transfer cell, list a line |
+| {LA}, {PS}, {VA} | Library, program and variables addresses (stored as address-32767; {VA} = -32767 means after the program) |
+| {PC} | Address of the next object byte (stored) |
+| {LC} | Number of source lines read |
+| {CS} | Start of the COMMON block of the program being compiled |
+| {DL} | Latest link of the DATA chain |
+| {FB} | Object file base: file position = address - {FB} |
+| {OL}, {OP}, {OD}, {OI}, {OK} | Options: listing, pause, RESUME/debug, integer arithmetic, integer constants |
+| {FE} | 1 after a fatal error |
+| {CM} | COMMON kind of the program being compiled: -1 none, 0 define, 255 use |
+| {DP}() | The six DOS patch addresses and their original bytes |
+| {SY}() | The symbol table, 5351 words |
+| {BE$}, {D$} | Two bells; Control-D |
+| {OP$}, {CL$}, {RD$}, {WR$} | DOS OPEN, CLOSE, READ and WRITE commands |
+| {SF$}, {SS$}, {OF$}, {OS$} | Source and object file names and their slot/drive parts |
+| {LN$}, {DD$} | The line number file `CLINENUM` and the boot drive's `,Sn,Dn` |
+
+## Data
+
+### DOS patches (DATA at [[$429F]])
+
+Address, new byte, original byte, six times. Together they let DOS read the Applesoft program file as text, byte for byte:
+
+| Address | Change | Effect |
+|---|---|---|
+| $A633-$A635 | `BNE $A644 / JSR $A2FC` becomes `JMP $A644` | a zero byte (the end of each tokenized line) no longer ends the data read |
+| $A649 | `AND #$7F` becomes `AND #$FF` | bytes keep bit 7, so tokens survive |
+| $A7C4 | becomes `RTS` | the file type is not checked: the A-type source opens as a text file |
+| $A96C | `$7F` becomes `$FF` | the B (byte position) parameter may go up to 65535 |
+
+### Call table (DATA at [[$4C96]])
+
+136 entries, the routines compiled code calls, by index. A positive entry is an offset from the library address (2912 is $0803+2912 = $1363, the library's END); a negative entry is minus a ROM address (-57612 is $E10C, AYINT). PASS0 turns each into a stored address and puts it in {SY}(150) to {SY}(285). For a routine with a real and an integer form the table holds one of them; the other is 3 bytes away.
+
+### Operator table (DATA at [[$5002]])
+
+17 operators, three numbers each: the token, its priority on the parse stack, and its priority when it arrives. `(` 1/14, `)` 13/1, NOT 13/14, `+ -` 9/8, `* /` 11/10, `^` 13/12, AND 5/4, OR 3/2, the relations 7/6, negation 13/14. PASS1 reduces while the operator on the stack has a higher priority than the one arriving.
+
+### Page-3 machine code (DATA at [[$50CB]])
+
+89 bytes POKEd into $0377-$03CF ([[$5219]]):
+
+| Entry | What it does |
+|---|---|
+| $0377 | USR: stores the floating point accumulator, rounded, as 5 packed bytes at $0371-$0375 (how PASS1 packs a numeric constant) |
+| $037E | reads one byte with RDKEY into $0376; with DOS reading a file, the byte comes from the file |
+| $0387 | prints the byte in $0376 with COUT; with DOS writing a file, it goes to the file |
+| $038D | lists the tokenized line in the input buffer at $0280, spelling tokens from the ROM's keyword table (the compilation listing) |
+
+### Symbol table chain heads (set at [[$5265]])
+
+{SY}(0) heads the list of COMMON declarations; 1-4 are the FN chains, 5-8 the temporaries (5 integer, 6 string, 7 real, 8 inside DEF FN), 9-40 the variable chains, 41-72 the constant chains and 73-104 the line number chains. PASS0 zeroes them all. The call and operator tables lie above them, in the space where PASS1 later allocates entries: PASS1 copies the tables out before it allocates anything.

@@ -1,0 +1,99 @@
+# PASS2: finishing the object file
+
+## What it does
+
+PASS1 leaves an object file in which every reference to a line, a function, a variable's routine or the next DATA block is a **link** to the previous reference to the same thing, with the latest reference kept in the symbol table. PASS2 turns this into a finished program:
+
+1. checks that every line number and function referred to exists, finding each line's address in the line number file;
+2. writes the constants and the variable access routines after the code, allocates the COMMON block and the local variables, and decides the final memory layout;
+3. follows every chain and writes the real address (or the right call) over each link;
+4. writes the header and, if asked, prints the compilation information and line number table;
+5. puts DOS back as it was.
+
+Its inputs are the COMMON block (the symbol table and everything PASS0 and PASS1 left there), the object file and the line number file `CLINENUM`.
+
+## Overall flow
+
+1. **Collect references** ([line 320](PASS2.html#L320)). The reference list RL() gets a pair (latest reference, target) for the DATA chain (target 0) and for every line symbol (target the line number for now).
+2. **Sort and look up lines** ([line 450](PASS2.html#L450), [line 570](PASS2.html#L570)). The line pairs are sorted by number with a shell sort; the line number file, which holds (number, address) for every line in order, is then read once alongside them, and each pair's target becomes the line's address. A line that is not there is reported as `UNDEFINED LINE NUMBER` with the line of its latest reference ([line 900](PASS2.html#L900)).
+3. **Functions** ([line 740](PASS2.html#L740)). A pair (latest reference, address of the body) per function; one never defined is `UNDEFINED FUNCTION`.
+4. **Stop on errors** ([line 1060](PASS2.html#L1060)). Any fatal error, here or in PASS1, ends the compilation: the object file is deleted.
+5. **Constant pool** ([line 1090](PASS2.html#L1090)). Written at the end of the code: every real constant as 5 bytes, every integer constant that is referred to as 2 (high byte first). Each entry is given its address and marked 47 (real) or 49 (integer).
+6. **COMMON** ([line 1280](PASS2.html#L1280)). The declared variables get their addresses in declaration order from the start of the COMMON block: all numeric ones, then all strings. Each is marked by adding 50 to its type.
+7. **Routine area and locals** ([line 1500](PASS2.html#L1500), [line 1720](PASS2.html#L1720)). The size of all the routines is worked out first, so the local variables can start right after them (or at the address asked for).
+8. **Routines and locals** ([line 1850](PASS2.html#L1850)). Three passes over the symbol table write the routines and give each local variable its storage, in the same order: numeric scalars, temporaries and constants; then numeric arrays; then string variables, temporaries and arrays.
+9. **Backpatching** ([line 3080](PASS2.html#L3080)). Every chain is followed and every link replaced.
+10. **Header** ([line 3660](PASS2.html#L3660)) and **report** ([line 3960](PASS2.html#L3960)), then DOS is restored ([line 4440](PASS2.html#L4440)).
+
+## The variable routines
+
+Compiled code never addresses a variable directly. It calls the variable's own small routine, entering at a different point for each operation; the routine loads the operation number and the variable's address and jumps to a dispatcher in the library. PASS2 writes one routine per variable (only the entries actually used):
+
+```
+numeric:  A2 op  [AD A2 op]...  A0 hi  A9 lo  4C dispatcher
+string:   38 A9 18  A0 hi  A9 lo  4C dispatcher
+array:    38 A9 18  20 dispatcher  address  dims  dimension...
+```
+
+They are written at [line 2060](PASS2.html#L2060) (numeric), [line 2370](PASS2.html#L2370) (string) and [line 2780](PASS2.html#L2780) (array).
+
+In the numeric routine the entries are `LDX #operation`, highest operation first. Every entry but the first is preceded by $AD, the `LDA absolute` opcode, which swallows the next `LDX` as its operand, so each entry falls through the following ones to the shared `LDY #hi / LDA #lo / JMP`. A numeric variable whose operation mask is empty gets no routine, only storage. The string and array routines use the same trick on a single byte: `SEC` at +0 (load) and the `CLC` that is the operand of `LDA #` at +2 (store, or an element's address). An array routine is followed by the array's address, its number of dimensions and each dimension (10 for an array never dimensioned).
+
+| Dispatcher | Library address (library at $0803) |
+|---|---|
+| real, string, integer | $1764, $0C7F, $0D06 |
+| real, string, integer arrays | $0B11, $0B14, $0B17 |
+| loop starts (int/int, real/int, int/real, real/real), NEXT | $09E1, $09E5, $09DE, $09E8, $0A31 |
+
+Sizes, used to place the locals ([line 1500](PASS2.html#L1500)): a numeric routine is 3 bytes per operation used plus 6, a string routine 10, an array routine 9 + 2 per dimension. Storage: 5 bytes for a real, 2 for an integer or a string pointer, arrays (dimension+1) multiplied over the dimensions times that. Constants and COMMON variables already have their addresses and take no local storage.
+
+## Backpatching
+
+The object file is worked through in 256-byte pages of the file, from the last page to the first, printing a dot for each ([line 3080](PASS2.html#L3080)). In each page, every chain whose latest reference lies in the page is followed for as long as its links stay in the page: the link is read, and the file is positioned to write over it. Because links always point backwards, every reference is met in its own page. What is written depends on the chain:
+
+| Chain | Written over the link |
+|---|---|
+| a line or function | the target's address (the `JMP` or `JSR` before it is already there) |
+| a numeric variable or constant, operation 0-13 | `JSR` to the routine's entry for that operation |
+| operation 21-25 | `JSR` to the loop start or NEXT entry; the two bytes after it get the variable's address |
+| operation 20 | `LDA` of the variable; for an integer also `ORA` of its second byte |
+| a string variable or an array | `JSR` to its routine, +2 for operation 1 |
+| the DATA chain | 0 for the last link; each earlier one the address just after the later link, so each DATA `JMP` skips its block and each block's last word points at the next block's first item |
+
+## Data structures
+
+### Reference list, RL()
+
+Up to 5900 values (TOO LONG beyond), in three parts; GG(0) and GG(1) mark where the first two end.
+
+| Part | Entries |
+|---|---|
+| lines and functions | pairs (latest reference, target address); the DATA pair first |
+| numeric variables and constants | groups: latest reference, storage address, number of entries+1 (negative for an integer), then the address of each operation's entry from the highest down (-32767 if not used) |
+| strings and arrays | pairs (latest reference, routine address) |
+
+### Symbol table as PASS2 leaves it
+
+PASS2 reuses words it no longer needs: a constant's packed bytes are replaced by its address and the mark 47/49; a COMMON variable's name hash by its address, and its type is raised by 50. So a stored type of 47 or more means "address already known".
+
+### Memory layout and header
+
+The finished program in memory, from the bottom:
+
+| Area | |
+|---|---|
+| library | LB, 4013 bytes |
+| COMMON | numeric variables, then strings (MM(3) to MM(5)) |
+| program | header, code (with string literals and DATA in place), constants, routines |
+| local variables | numeric, then strings (MM(0) to MM(2)) |
+| string space | above, up to HIMEM |
+
+The object file is a binary file: its address and length, then the program. The program starts with `JSR` to the library, which copies the 17 bytes after the call to page zero: the address of the first DATA item, the highest address used, the COMMON bounds, the local bounds (each as the address before the area and the last address of each part) and the COMMON flag (0 none or define, 255 use). These 24 bytes were reserved by PASS1 and are written last ([line 3660](PASS2.html#L3660)).
+
+### Line number file
+
+`CLINENUM` holds one record per source line: the line number and the address of its code, low byte first. PASS2 reads it in order to resolve the line pairs, to find the line of a reference for an error report ([line 5000](PASS2.html#L5000)), and for the line number table.
+
+## The report
+
+With Y to `COMPILATION INFORMATION AND LINE NUMBER REFERENCE TABLE?` ([line 3960](PASS2.html#L3960)): the files, where the library, program, COMMON and locals lie, the highest address, and every line's number and address, three to a row. A Control-D line is run as a DOS command and the question asked again.

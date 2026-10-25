@@ -1,0 +1,186 @@
+# PASS1: the compiler proper
+
+## What it does
+
+PASS1 reads the tokenized Applesoft program one byte at a time, checks its syntax, builds the symbol table and writes the object code. It makes a single pass over the source, so a reference to something not yet known (a line further on, a variable's access routine, a function defined later) cannot be written as an address. Instead it is written as a **link**: each reference holds the address of the previous reference to the same symbol, and the symbol holds the latest one. PASS2 later follows these backward chains and replaces every link with the real address.
+
+Inputs: the source file (read through DOS's text-file READ, which PASS0's DOS patches make byte-exact), and the COMMON block PASS0 filled in (options, memory layout, files, the call table and the operator table, the empty symbol table). Outputs: the object file (header space, code, string literals and DATA in place, all references chained), the line number file `CLINENUM` (each line's number and address), and the symbol table in COMMON for PASS2. With the listing option it also prints each line as it is compiled.
+
+## Overall flow
+
+1. **Setup** ([[$4206]]). Sizes of the buffers and tables; the call table is copied from {SY}(150..285) into {CT}() and the operator table from {SY}(300..350) into {OT}() ([[$4277]], [[$429F]]), before the symbol table space they sit in is used. The files are opened and 24 bytes are reserved at the start of the object file for the header PASS2 writes.
+2. **First line** ([[$4635]]). The code starts 20 bytes into the program; the first line's link and number are read. An empty program stops here.
+3. **Statement loop** ([[$46B9]], [[$46BC]]). For each statement: an end of statement is skipped; any statement except REM ends the declarations; a name starts an assignment; a statement after an unconditional transfer is skipped with a warning; otherwise the keyword dispatches through three `ON ... GOTO` lists ([[$4744]]).
+4. **Statement handlers** (below) parse the statement and write its code, nearly always ending at the end-of-statement routine ([[$53F5]]): the line is listed when complete, Control-C is checked, and the next statement or line follows.
+5. **End of program** ([[$5476]]). IF statements on the last line are patched, a final `JMP` to the library's END is written, the files are closed and PASS2 is run.
+
+A fatal error ([[$56BE]]) is reported with the line and a marker, then compilation carries on so further errors are found, but no more code is written. After the last line a fatal error ends the compilation in PASS2.
+
+## Reading the source
+
+The program file is the tokenized program as Applesoft stores it: two length bytes, then lines of [link, link][number, number][tokens...][0], ending with a zero link. Three variables form a short pipeline ([[$5877]]): {T} is the current token, {NT} the next one, and {IB} the byte just read from the file. When {T} becomes the zero at the end of a line, the next two bytes are the link (zero ends the program, {NT} = -1) and the next line starts ([[$5885]]):
+
+- the line number is read; with the listing option it is printed;
+- a record (line number, code address) is written to the line number file; PASS2 uses it to resolve line references and for its report;
+- the JMPs of IF statements on the previous line, waiting on the parse stack, are patched with this address;
+- the dead-code flag {DC} is cleared.
+
+Each token is copied into the listing buffer at $0280-$036F as it is passed; the page-3 routine at $038D prints the buffer with the keywords spelled out. A line that fills the buffer is TOO LONG.
+
+## Statement handlers
+
+Most statements compile to their argument expressions followed by a `JSR` to a library or ROM routine taken from the call table. For a simple statement the call table index is the token minus 128 (PR# is 10, CALL 12, HOME 23). Most entries are the integer-argument entry point; the call emitter uses the entry 3 bytes lower when the argument is real ([[$6FC8]]).
+
+| Statement | Handler | Code written |
+|---|---|---|
+| END | [[$47FB]] | `JMP` END ($1363) |
+| FOR | [[$4801]] | initial value; a loop-start operation on the loop variable (21-24 by variable and value type) plus 2 bytes for the variable's address; limit; step (or step 1) |
+| NEXT | [[$489D]] | per variable: operation 25 and its address; a bare NEXT calls the library's NEXT with a zero word |
+| DATA | [[$48CE]] | `JMP` over the items, each as length and text, then 255 and a link; both words are chained through {DL} |
+| INPUT | [[$499D]] | input start; optional prompt literal; per item a read routine (first, after a prompt, next; number or string) and the store; input end |
+| DIM | [[$4A2A]] | no code: the dimensions go into each array's symbol entry ([[$4A39]]) |
+| READ | [[$4B80]] | per item: read a number or string, then the store |
+| PLOT, HLIN, VLIN | [[$4BC4]] | each value followed by a call that saves it, the last one by the statement's call |
+| HPLOT | [[$4BFC]] | first point, then each `TO` point |
+| DRAW, XDRAW | [[$4C43]] | shape number, optionally `AT` x, y |
+| ONERR GOTO | [[$4C7E]] | the library's ONERR call followed by the line's address (chained) |
+| RESUME | [[$4C93]] | a `JMP` to the library's RESUME only with the RESUME/debug option; otherwise a warning |
+| LET, assignment | [[$4CA4]] | the target, the value by type, the store ([[$7B9F]]) |
+| GOTO | [[$4CE4]] | `JMP` line (chained) |
+| RUN | [[$4CF3]] | `JMP $03F5`; RUN line: CLEAR, then `JMP` line |
+| IF | [[$4D1E]] | the condition and a flag test; THEN line: `BEQ *+5 / JMP line`; THEN RETURN: `BEQ *+3 / RTS`; THEN statements: `BNE *+5 / JMP next line` with the address patched when the next line starts |
+| GOSUB | [[$4DA2]] | `JSR` line (chained) |
+| RETURN | [[$4DC6]] | `RTS` |
+| REM, REM! | [[$4DD8]] | REM: nothing; REM! directives (below) |
+| STOP, NEW | [[$5156]] | the library's STOP, or END for NEW |
+| ON ... GOTO/GOSUB | [[$515C]] | index; the library's ON routine; a count byte (patched at the end); one chained word per line |
+| WAIT | [[$51CF]] | address, mask, optional second mask |
+| DEF FN | [[$520A]] | `JMP` over the body; the body stores the argument in the parameter, computes the expression and returns |
+| POKE | [[$52AD]] | address, value |
+| PRINT | [[$52C2]] | per item a print call by type; `,` a tab call; `TAB(` and `SPC(`; a carriage return unless the statement ends with `;` `,` `TAB(` or `SPC(` |
+| GET | [[$5382]] | per item: get a number or a one-character string, then the store |
+| CALL, HIMEM: | [[$53CB]] | argument, call (real entry in the table) |
+| one-argument statements | [[$53DD]] | argument, call (VTAB HTAB COLOR= HCOLOR= SPEED= ROT= SCALE= IN# PR#) |
+| no-argument statements | [[$53EF]] | a call (POP, CLEAR, and without the debug call GR TEXT HGR HGR2 HOME NORMAL INVERSE FLASH RESTORE) |
+| unsupported keywords | [[$54D8]] | none: `WARNING / LINE NUMBER n / IGNORED` |
+
+With the RESUME/debug option most handlers start with a call to the library's debug routine ([[$6F9E]]), which records the statement's address and stack level so RESUME can repeat it. The statement right after THEN does not get one ({TH}).
+
+**Dead code.** After END, STOP, NEW, GOTO, IF ... THEN line, RETURN, ONERR, RUN or (with the option) RESUME, {DC} is set ([[$4DCF]]). Until the next line, any further statement that starts with a keyword, except DATA and REM, is skipped with the warning; an assignment is still compiled. One consequence, kept on purpose: in `IF X THEN RETURN : Y = 1` the assignment runs when X is false.
+
+## Directives (REM!)
+
+Recognized only at the start of the program, before any other statement ([[$4DD8]]). Spaces are allowed between the letters ([[$50DE]]); a remark that does not match is ignored.
+
+- `INTEGER` *names* or `INTEGER *`: the names (or every real name from here on) are entered as integers. The symbol is still hashed under its real name, so later uses find it without a `%`.
+- `CLEAR COMMON`, `CLEAR CHAIN` ([[$4E73]]): a call to the library, which must end the line.
+- `DEFCOMMON` / `USECOMMON` *names* ([[$4EE9]]): each name is appended to the declaration list at {SY}(0) and its size (2 bytes integer or string, 5 real, times the elements of an array) is added to the program start {PS}, which moves the code address {PC} and the file base {FB} with it. Mixing the two kinds, or declaring a name twice, is a declaration error. PASS2 allocates the block in this order.
+
+## Expressions
+
+An expression is handled in two steps: the parser turns it into a table of **triples**, and the code generator turns the triples into code.
+
+### Parsing ([[$5FE4]])
+
+A bottom-up parser with one stack, {ST}(): operators and operand triples are pushed from the bottom, saved values (subscript counts, the function argument description) from the top; the two sides meeting means TOO COMPLEX. Operands become triples at once: a variable or constant ([[$5AFD]], kind = its type), a string literal (kind -4, written in place as `JMP` over [length][text], [[$5EF1]]), an array element (the array's triple plus pairs of subscripts with operation 22, [[$5BD5]]), a function call (its operation is token-181, arguments as described in {FA}(), [[$5D7C]]), `FN` (operation 18, [[$64C2]]). Before each operator the reduce step ([[$67AB]]) compares priorities from the operator table and pops operators into new triples while the one on the stack has the higher priority; a closing parenthesis removes its pair. Two-character relations are combined first ([[$6702]]). Numeric and string parts are parsed by separate paths, because a string can only be followed by `+` (concatenation) or a relation; a string comparison gives a numeric result.
+
+Operation numbers in the triples:
+
+| Numbers | Operations |
+|---|---|
+| 1-7 | `+ - * / ^` AND OR |
+| 8-13 | `> = < >= <= <>` |
+| 14, 15, 16 | NOT, negation, concatenation |
+| 17 | MID$'s third argument |
+| 18 | FN call |
+| 19, 20, 21 | real, string, integer array element |
+| 22 | a pair of further subscripts |
+| 23-28 | the string relations |
+| 29-53 | functions, token-181 (SGN 29 ... ASC 49, CHR$ 50, LEFT$ 51, RIGHT$ 52, MID$ 53) |
+
+Operand kinds (negative): -1 integer, -2 string, -3 real (variables and constants), -4 string literal, and, once code exists for a triple, -5 result in the accumulator (real or string), -6 real temporary, -7 string temporary, -8 integer temporary, -9 result in the integer accumulator.
+
+Constants ([[$6255]]): with the integer constants option a whole number up to 32767 is an integer constant; anything else is packed into the 5-byte floating point form by the USR routine at $0377 (the ROM's own conversion and rounding). Each is entered once in its constant chain (value or exponent mod 32).
+
+### Code generation ([[$715A]])
+
+The triples are taken in order. For each one the generator decides whether its operands are used as integers or reals ({RO}) and whether the result is real ({RR}): `+ - *` and negation are integer operations only with the integer arithmetic option and integer operands; relations and AND/OR/NOT always work on integers as integers; division and the functions are real, except for the few that take or give integers. An integer left in the integer accumulator that is needed as a real is floated first. Then by operation ([[$7439]]):
+
+- **Arithmetic** uses the variable's own access routine: `+` and `*` apply the operand in memory to the accumulator (operations 2 and 4, either order); `-` and `/` have reversed forms (3, 7: memory minus or divided by the accumulator), and when the left operand is already in the accumulator it is moved aside first.
+- **Relations** load one side, compare with the other (operation 5) and call the relation's routine; when the right side is the one in the accumulator, the swapped relation is used.
+- **AND, OR** test the other operand in memory with `LDA` (and `ORA` of its second byte for an integer) and call.
+- **Strings**: one string is pushed to the second string slot and the other loaded, then the routine is called.
+- **Array elements** push all subscripts but the first, then call the array's routine: operation 0 loads the element, operation 1 (for a store) leaves its address.
+
+Where the result goes ([[$7834]]): if the next operation uses it from the accumulator it stays there; otherwise it is stored in a temporary of its type ([[$7021]]), which is freed again once it has been used.
+
+The store ([[$7B9F]]) writes operation 1 on the target (or 7 to store a real value into an integer variable, which rounds and range-checks), or the library's array store. A load of the variable just stored is left out when the store was the last code written ([[$7C5A]]). For IF, unless the last operation left the flags set, `LDA $9D` (real) or `LDA $A0 / ORA $A1` (integer) sets them ([[$7DF9]]).
+
+## Writing the object file
+
+All output goes through a few emitters:
+
+| Line | Writes |
+|---|---|
+| [[$6D4F]] | an operation on a symbol: [operation byte][link], marking the operation in the symbol's mask |
+| [[$6DED]] | an opcode (`JMP`, `JSR`) and a link to a line or function symbol |
+| [[$6E08]] | a word that is an address (kept as address-32767) |
+| [[$6E3B]] | a byte |
+| [[$6E7A]] | a patch of an earlier word or byte |
+| [[$6FC8]] | `JSR` (or `JMP`, [[$7000]]) to call table entry {CI} |
+
+The object file is open for WRITE through DOS. DOS's output state byte at $AA52 is set to 4 before each byte, so every character printed goes to the file, and the page-3 routine at $0387 prints the byte. Before a DOS command the state is set to 5 (the start of a write line, where Control-D starts a command). A patch positions the file with `WRITE name,B` at the byte, writes, and positions it back at the end. With the files on the boot drive, the drive motor is touched after each byte to keep it running.
+
+## Data structures
+
+### Symbol table, {SY}()
+
+5351 words in COMMON. Chain heads at the bottom (set by PASS0), then entries allocated upward from {NF}; SYMBOL TABLE FULL past 5350. Every entry starts with a link to the next in its chain (0 ends it) and a **reference chain** head (the latest reference in the object file; -32767 for none). New entries go at the end of their chain, so a chain keeps the order of first use.
+
+| Kind | Chain | Words after the link and reference chain |
+|---|---|---|
+| variable | (name hash + type code) mod 32, from {VB} | operation mask, name hash (99 × first character + second), type code |
+| array | likewise | the same, then the number of dimensions and each dimension (-1 if never dimensioned) |
+| real constant | exponent byte mod 32, from {KB} | operation mask, the 5 packed bytes |
+| integer constant | value mod 32 | operation mask, -10, the value |
+| line number | (number-32767) mod 32, from {LB} | number-32767 (the address is in the line number file) |
+| function | 1 + hash mod 4 | name hash, address of the body (-32767 until defined) |
+| temporary | 5 integer, 6 string, 7 real, 8 inside DEF FN | operation mask, type (type-3 while in use) |
+| COMMON declaration | list from {SY}(0) | the symbol |
+
+Type codes: -3 real, -2 string, -1 integer; arrays add 22. The operation mask has bit *n* set for every operation *n* used on the symbol; PASS2 writes an entry point only for those.
+
+### Call table, {CT}()
+
+136 addresses of library and ROM routines (from PASS0), by index. For an operation the index is its number+64 (`-` is 66, FSUBT; `>` is 72; SGN is 93).
+
+### Operator table, {OT}()
+
+17 rows of token, stack priority, arriving priority (see PASS0).
+
+### Parse stack, {ST}(), and triple table, {TR}()
+
+{ST}(0..100) holds operators and operand triples from the bottom ({SP}) and saved values from the top ({VP}). Between statements it also holds the addresses of IF jumps waiting for the next line. {TR}(1..100, 0..2) holds (operation or operand kind, left, right) for one expression; {TC} is the next free triple.
+
+### Variable access operations
+
+The operation numbers written before a variable reference, which PASS2 turns into calls of the variable's routine:
+
+| Number | Real variable | Integer variable |
+|---|---|---|
+| 0 | load into the accumulator | load into the integer accumulator |
+| 1 | store | store |
+| 2 | add to the accumulator | add |
+| 3 | memory minus accumulator | memory minus accumulator |
+| 4 | multiply | multiply |
+| 5 | compare | compare |
+| 6 | load into the second accumulator | (6-13: operations 0-7 with the variable used as a real) |
+| 7 | memory divided by accumulator | |
+| 20 | test for AND/OR (becomes `LDA`) | test (`LDA`, `ORA`) |
+| 21-25 | loop start (by variable and value type), NEXT | |
+
+String variables have two operations (0 load, 1 store) and arrays two (0 load an element, 1 its address).
+
+## Errors
+
+The handler names the kind ([[$55C6]]) and reports it ([[$56BE]]): two bells, `*****FATAL ERROR`, the line number, the kind, the line up to the error with `!ERR!` and the rest of the statement. With the pause option it waits for a key (Control-C ends the compilation, [[$7E1C]]). The parse may have been deep inside subroutines, so the library routine at $0947 resets the stack before the next statement. The kinds are SYNTAX, DECLARATION, SUBSCRIPT, TOO COMPLEX, TOO LONG, SYMBOL TABLE FULL, INCOMPLETE, OPERAND, REDEFINED and TYPE MISMATCH.

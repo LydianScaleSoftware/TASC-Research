@@ -1,0 +1,15 @@
+# MAKE RUNTIME: building the library
+
+## What it does
+
+RUNTIME is the machine language library every compiled program calls: arithmetic, strings, input and output, the variable dispatchers, loops, COMMON and the rest. It is written in machine language, so it has no Applesoft source of its own. MAKE RUNTIME is the program that produces the `RUNTIME` file: its 4013 bytes are kept in DATA statements, POKEd into place, and saved with `BSAVE`.
+
+## How it works
+
+1. **Line 10.** RUNTIME belongs at $0803-$17AF, which is exactly where an Applesoft program normally lives, so MAKE RUNTIME cannot POKE it there while it is itself in the way. If the program starts low in memory (the high byte of the program start, location 104, is below 64), it moves the start of program space to $4001 (pointer at 103-104, a zero byte at $4000) and runs itself again from disk; it then loads above the library.
+2. **Line 20.** `FOR AD = 2051 TO 6063`: each byte is read from DATA and POKEd, $0803 to $17AF.
+3. **Line 30.** `BSAVE RUNTIME,A$803,L4013`. BSAVE records the address it saves from, so the bytes have to be at $0803.
+
+## Data
+
+The DATA statements from line 100 hold the library's bytes in order, 25 to a line; each line's DOC entry gives the addresses it covers.

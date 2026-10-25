@@ -61,13 +61,19 @@ def test_source_documentation_is_standalone() -> None:
     banned = re.compile(r"\bml/|\brag\b|\.md\b|\.py\b|\.hex\b|\.json\b|\bH[1-7]\b|pandowdy|python|cp2|ciderpress|"
                         r"tasc-re|predictor|decompil|experiments/|github|\bgit\b|sha256|pytest|claude",
                         re.IGNORECASE)
-    files = list(src.glob("*.DOC.TXT")) + list(src.glob("*.VARS.TXT"))
+    files = (list(src.glob("*.DOC.TXT")) + list(src.glob("*.VARS.TXT")) + list(src.glob("*.OVERVIEW.TXT"))
+             + list((src / "html").glob("*.html")))
     assert files
     for f in files:
         # a variable of the program may be called H1-H7; that is not a hypothesis reference
         vars_file = src / (f.name.split(".")[0] + ".VARS.TXT")
-        names = {row.split()[0].split("(")[0].rstrip("%$") for row in vars_file.read_text().splitlines()[1:] if row.strip()}
-        for n, line in enumerate(f.read_text().splitlines(), 1):
+        rows = vars_file.read_text().splitlines()[1:] if vars_file.exists() else []
+        names = {row.split()[0].split("(")[0].rstrip("%$") for row in rows if row.strip()}
+        text = f.read_text()
+        if f.suffix == ".html":  # the visible text and attribute values, not the markup or style sheet
+            text = re.sub(r"<style>.*?</style>", "", text, flags=re.S)
+            text = re.sub(r"<[a-z0-9]+|</[a-z0-9]+>|\b(?:class|id|href|name|content|lang|charset)=\"[^\"]*\"", " ", text)
+        for n, line in enumerate(text.splitlines(), 1):
             for m in banned.finditer(line):
                 assert re.fullmatch(r"H[1-7]", m.group(0), re.IGNORECASE) and m.group(0) in names, \
                     f"{f.name}:{n}: {line[:80]}"
