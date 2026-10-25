@@ -66,6 +66,14 @@ boot takes about 10 s of wall time.
   INTEGER lines come before the COMMON declaration. Evidence: integer FOR loops in
   PASS1/PASS2 require INTEGER-declared names; reals in every pass rule out
   `INTEGER *`; PASS1's integers in first-use order would need 38 hash buckets.
+- **Phase 5 line numbers (Mark, 2026-10-25):** steps of 10; a subroutine starts at
+  the smallest multiple of 100 that is not the very next line number (after a
+  routine ending at 90 the next starts at 200, after 150 at 200, after 190 at
+  300). Range check: PASS1 ends near 18,500-20,300, PASS2 near 6,000, PASS0 near
+  3,200 (Applesoft max 63,999). Numbers do not affect the object; only line
+  boundaries are constrained. One statement per line except forced groupings.
+  Frozen once Phase 5's DOC/VARS files are published; later changes carry
+  documentation over by object address.
 
 - Repo `tasc-re/` under the project folder; git; originals read-only in
   `images/original/`; the working image is `images/work/tasc201.dsk` (copy of 2.01).
@@ -128,9 +136,10 @@ boot takes about 10 s of wall time.
 
 ## Open questions for Mark
 
-- Phase 5 defaults still to confirm: line numbers in steps of 5, fixed once
-  published; how far names may stray from mnemonic when the hash forces it; the
-  page-3 ML block stays in PASS0's DATA statements as in the original.
+- Phase 5 defaults still to confirm: which GOSUB targets count as routine starts
+  (fall-through entries; GOTO-dispatched statement handlers); how far names may
+  stray from mnemonic when the hash forces it; the page-3 ML block stays in
+  PASS0's DATA statements as in the original.
 
 ## Layout
 
