@@ -1,0 +1,90 @@
+{
+ "id": "r5186",
+ "key": "d2f6d5d29fb1c832",
+ "source": "10 REM! INTEGER K,I\n20 DIM B$(3),P$(11)\n30 DEF FN F(X)=(W%>=Q1%-Q1%)\n40 XY%=A:M=XY% OR XY%:GET Y:Q1%=Y OR (XY%):PRINT\n50 Q1=Y:I=5=885:Y=I AND I\n60 W%=ASC(A$(.5))*K:Q1=W% OR M:B$=N2$\n70 HLIN VAL(CHR$(A)+\"\"+\"X Y\"),(Q1%) AT NOT A:FOR A=(Y) TO (XY%):GET W%:W%=W% OR (39-((FN F(255)-((0<>A)))))\n80 GET XY%:K=XY% AND (Q1)\n90 DRAW FRE(Q1+I-Q1%):IF (W%) THEN 100\n100 IF (W%>=Q1%) THEN ON -((W%>Q1)) AND M-((0+127)) GOSUB 50,120\n110 GET Y:I=Y AND (Y):IF (Q1% AND ASC(MID$(N2$,M,Q1%))) THEN IF (342-NOT ((Z%+7))) THEN 60:IF (-1283) THEN DATA -2.5,1,1,1\n120 Y=K*K>((X>Q1%)):XY%=-((41-Y-5/127)):READ K\n130 B$=MID$(P$(39),0,0)+Z$+\"X Y\":IF (Q1%) THEN RUN 90:FOR Q1=(7) TO (783 OR W%)\n140 GOTO 10:RUN 40\n150 X=10:Y=FRE(X)+POS(-FN F(W%) AND ABS(281)):M=LEN(\"\"):Q1%=VAL(N2$):Q1=Q1% OR Q1%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1120,
+ "obj_sha256": "f81f3f804092cafe3a5c4e65c4cd6a69727c3b636a83ed372f98cf1c793c35d4",
+ "cycles": 118593434,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6103
+  },
+  {
+   "line": 50,
+   "addr": 6145
+  },
+  {
+   "line": 60,
+   "addr": 6178
+  },
+  {
+   "line": 70,
+   "addr": 6217
+  },
+  {
+   "line": 80,
+   "addr": 6330
+  },
+  {
+   "line": 90,
+   "addr": 6351
+  },
+  {
+   "line": 100,
+   "addr": 6380
+  },
+  {
+   "line": 110,
+   "addr": 6435
+  },
+  {
+   "line": 120,
+   "addr": 6502
+  },
+  {
+   "line": 130,
+   "addr": 6556
+  },
+  {
+   "line": 140,
+   "addr": 6612
+  },
+  {
+   "line": 150,
+   "addr": 6615
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S006.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7183",
+  "LOCAL VARIABLES": "7184 - 7297",
+  "HIGHEST MEMORY LOCATION": "7297"
+ }
+}

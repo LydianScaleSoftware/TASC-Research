@@ -1,0 +1,74 @@
+{
+ "id": "r5125",
+ "key": "ec5569eb0f13fc72",
+ "source": "10 REM! INTEGER I\n20 DIM B(4,3)\n30 W=-((Y-SGN(10)))\n40 RETURN:HLIN ((N2*XY)),(A%--((1E3/XY))) AT -B(Q1%,FRE(W)):N2=1E3\n50 B(Y% AND W<=15390+W%,POS(N2))=((-W%<>(X)))+(A%<=10):RUN:PRINT:X=1:PRINT\n60 FOR Y=(-((N2>W%))<FRE(I/XY)) TO (XY<((65535=100))):XY=5:IF (XY OR XY) THEN 50\n70 X=NOT Q1%:X=X OR I:ON Y GOSUB 90:Q1$=STR$(-A%)\n80 W%=LEN(A$)<>((W<127))\n90 XY=40000\n100 Y=POS(LEFT$(Q1$,W%)+M$):N2=Y\n110 B(44*Y,W%)=N2>((W%^I=ASC(\"TASC\"))):Y=TAN(109*Y)-((XY<>N2-X)):N2=FRE(Y)+POS(POS(10/24)-A%):PRINT A$;\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 839,
+ "obj_sha256": "71f39a9c1a12421416390c446fac51fcb938edb464f23a8f3dbbbef9e76889f7",
+ "cycles": 101843060,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6099
+  },
+  {
+   "line": 50,
+   "addr": 6106
+  },
+  {
+   "line": 60,
+   "addr": 6190
+  },
+  {
+   "line": 70,
+   "addr": 6260
+  },
+  {
+   "line": 80,
+   "addr": 6305
+  },
+  {
+   "line": 90,
+   "addr": 6332
+  },
+  {
+   "line": 100,
+   "addr": 6338
+  },
+  {
+   "line": 110,
+   "addr": 6365
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S005.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6902",
+  "LOCAL VARIABLES": "6903 - 7050",
+  "HIGHEST MEMORY LOCATION": "7050"
+ }
+}

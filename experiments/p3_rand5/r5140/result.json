@@ -1,0 +1,23 @@
+{
+ "id": "r5140",
+ "key": "3ab96c842d6bc77e",
+ "source": "10 REM! INTEGER K,I\n20 DEF FN F(Z)=SIN(-M-VAL(Q1$))\n30 I=Q1%:IF (I AND I) THEN 310:PRINT Q1/B,\"A\";:FOR Q1=(FN F(D(NOT 127))) TO (255)\n40 IF (1) THEN IF (32767) THEN Z=M:Z=Z OR Z\n50 IF (K) THEN READ Z:PRINT Z OR Z:FOR B=(ATN(POS(C%>P(C%,M%)))) TO (-((-((-M%))))) STEP (M):Q1$=RIGHT$(Q1$,-((D(40000)^B)))\n60 DATA -2.5:M=C%:Z=M AND LEN(X$)<FRE(C$)\n70 Z=M:REM! CLEAR CHAIN\n80 PRINT D(10/1E3)+((B>B))/M%,\"A\"+LEFT$(X$,255<Z);:C%=PEEK(((Z%-10))^-Q1%):W=C% OR C%:IF (B*P(C%,D(K)<=258)) THEN M%=703\n90 COLOR=Z%:I=71<>POS(Q1%):Z=I OR B:Z=M%>=((SQR(W) AND ASC(Q1$)))\n100 END:HPLOT 783,(W) TO FN F(C%),(Q1)\n110 C$=X$:D(644)=NOT I:FOR K=(TAN(P(346,40)^Z%^((897*40)))) TO (Q1) STEP (NOT D(M%))\n120 REM! CLEAR CHAIN:READ Z%:PRINT Z% OR Z%\n130 FOR W=(RND(Q1%)) TO (NOT 2):IF (Z%) THEN 300\n140 Z=W:W=Z AND Z:FOR Q1=(I*3*Q1%) TO (ABS(24)>B AND I) STEP (402+((K>=K)))\n150 READ M,Q1:K=Z-SGN(M%)*((26003>2.25))\n160 PRINT POS(CHR$(M))<M;:IF (41315*M/1000) THEN P(456*((M% OR 39))/M%,K)=C%:READ K:PRINT K AND K\n170 M%=((432 AND FRE(X$)))+3:IF (M% OR M%) THEN 210:READ W,W:B=FRE(LEFT$(Q1$,Q1)+RIGHT$(C$,40)+X$):PRINT POS(Q1$)\n180 IF (NOT ((((32767+8506))/193))) THEN READ K:Z%=((Q1>=Q1 OR 1))=44683-167:W=Z% AND Z%\n190 ONERR GOTO 90\n200 IF (M) THEN RUN:C%=((Q1% AND I))*((W<=((W<>Z%)))):PRINT Q1;\n210 HCOLOR=K:DATA \"A,B\",-2.5,-2.5,1:DATA \"A,B\"\n220 NEXT Q1\n230 NORMAL\n240 IF (VAL(MID$(X$,D(I),D(K))+X$)) THEN RUN 140:READ Z:PRINT Z OR Z\n250 SPEED=W:FOR I=(M) TO (Q1):D(Q1+C%)=RND(Z)<=Q1\n260 GOSUB 70:PLOT K,M%\n270 READ B:PRINT B AND B:PRINT -M<40000*-M;M%,C$;:POKE 10,C%^((481*256))--((K>=Q1%))\n280 POKE P(I,40),FN F(1)\n290 FOR W=(((40-Z AND -8258))/Q1) TO (C% AND ((32767 OR B))^((Q1 AND C%))) STEP (20):ON ASC(X$)*((C%=49152/24)) GOTO 60,300,10\n300 POP\n310 READ I:PRINT I OR I\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 120\nSYNTAX\n\n REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

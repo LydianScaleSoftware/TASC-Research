@@ -1,0 +1,23 @@
+{
+ "id": "r6043",
+ "key": "b081933d4a7dae2f",
+ "source": "10 DIM P$(9,9),A(5,8)\n20 DEF FN F(X)=A(32767,M%-W%^W)\n30 COLOR=FRE(W)=NOT ((Q1+M%)):IF (((W AND .5))<=A(M%,127)) THEN D(127)=A%-X-((A% AND .001)):M%=A%\n40 GOTO 40:REM! CLEAR COMMON:IF (INT(X%)-PEEK(193)^((X%<>W%))) THEN IF (B<=M%) THEN TRACE:IF (23749) THEN SHLOAD\n50 GET Q1:A%=Q1 AND (SQR(VAL(P$(M%,43928)))):GOTO 60\n60 DATA \"A,B\":IF (W%) THEN STORE B,C\n70 IF (NOT 24+D(M%)) THEN PRINT:HTAB 1E3:READ W:PRINT W AND W\n80 IF (-100) THEN TRACE:IF (X%) THEN TRACE:M%=X%\n90 GOTO 10:REM! CLEAR CHAIN\n100 W=D(864 OR 5 OR A%):DEL 10,20:GOTO 70:REM! CLEAR COMMON\n110 RUN\n120 X%=2.25:IF (X% OR X%) THEN 160:B=A<>A=D(M%)=B:B=B OR W%\n130 Y$=\"A\":IF (-((127-49152)) OR FRE(Y$)) THEN LOMEM: 16384:DATA X,,HI\n140 W=X%:W=FRE(W)+POS(B):Q1=((A OR 37))*27>2:IF (-PEEK(M%)) THEN 120\n150 W=-POS(39-A):STORE B,C:W=W\n160 IF (B) THEN NOTRACE:M%=B:A=M% AND Q1:GOTO 250\n170 IF (A(D(M%)^((A%-M%)),NOT SIN(255))) THEN LIST:& \"X:Y\",1\n180 CALL -127:GET B:A%=B OR (Q1)\n190 STORE B,C\n200 Y$=X$+RIGHT$(LEFT$(W$,413),256>A%)\n210 GOTO 160:LIST 10-20\n220 P$(0<=POS(X$)<=X,W%)=RIGHT$(CHR$(W%<A),EXP(A+W))\n230 LOMEM: 16384\n240 PRINT A% OR NOT 49152*((W OR B));RND(FRE(M%)),\n250 A=A%\n260 X%=A(LEN(P$(W%,A%)),ASC(X$))<NOT M%:A=X% OR X%:IF (POS(X%)+Q1) THEN VTAB ((-A AND A(A%,3.14159)<=M%))<=NOT X%\n270 HCOLOR=A(W%,VAL(MID$(\"\",0))):CALL X*SQR(B):RECALL A\n280 DATA X,-2.5,X,\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 40\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

@@ -1,0 +1,23 @@
+{
+ "id": "r5253",
+ "key": "8d6f6f5af4b9d279",
+ "source": "10 DIM P%(10)\n20 READ M%:PRINT M% AND M%\n30 Q1$=LEFT$(Q1$,-812<AB):M%=795-W%:W=M% OR M%\n40 POKE W%,(((W) AND W%))<=((1E3+B(X%)<=B(B%))):PRINT RND(M%+AB<(B(M%)));:A$=LEFT$(\"123\"+\"123\"+\"HI\",(AB^Q1))\n50 W%=TAN(M%) OR ((B(X%) OR AB)):DATA :M%=7:IF (M% AND M%) THEN 150\n60 Q1=M%:M=PEEK(POS(\"X Y\")):M=FRE(M)+POS(FRE(FRE(AB$)=AB+X%)):Q1$=CHR$(100)\n70 RUN:DATA X,1,1\n80 PRINT\n90 IF (927) THEN RUN:X%=Q1:XY=X% AND AB\n100 IF (W) THEN B%=W:READ XY\n110 COLOR=W%:AB$=\"123\":HTAB -W\n120 REM! CLEAR CHAIN:IF (XY) THEN RUN 40\n130 ON B(910)*351-((W<=1E3))-((AB/A%(3.14159)+255)) GOTO 30\n140 HTAB X%*-((M%/32767)):Q1=W:XY=Q1 AND Q1\n150 INPUT \"NAME\";W,M:PRINT \"TASC\";W%+W%;X%<>XY,:W=40000\n160 AB=M AND -((2<=3)):IF (W-502) THEN RUN 160:XY=COS(NOT ((A%(X%)<=AB)))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 120\nSYNTAX\n\n REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

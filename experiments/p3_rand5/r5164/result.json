@@ -1,0 +1,74 @@
+{
+ "id": "r5164",
+ "key": "e1b2976263a0095b",
+ "source": "10 DIM P$(1)\n20 IF (W^Z%) THEN RUN:HLIN W,(W) AT 2:PRINT W%;Z%;\n30 M%=AB%<((831^2<NOT Z%)):XY$=STR$(LEN(P$(Z%)+W$)):A=NOT ((40/-M%)):IF (A OR A) THEN 100\n40 RUN:PRINT A,COS(10)^((((Z%<>W))+Z));\n50 FOR M=(Z) TO (0.1):PRINT W;Y$;\n60 READ W%:PRINT W% AND W%:RUN 40\n70 M=SGN(Z%<>VAL(Y$)):W$=CHR$(Z)\n80 P$(M%)=MID$(\"HI\"+LEFT$(Y$,AB%),A>-4275,((W+43313))^255):AB%=Z>AB%:IF (AB% OR AB%) THEN 10\n90 PRINT AB%,:Y$=STR$(40000):IF (W) THEN IF (40) THEN Z%=((M AND M%))<>W%*AB% OR 39-Z%<=ASC(\"123\"):AB=Z% OR Z%\n100 FOR AB=(-((((AB% OR 82))=576*M))) TO (-W):M=(-W%/-W%):A=FRE(M)+POS(M%+((AB<>M%))):W=M%:Z=W OR NOT Z\n110 AB=100\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 960,
+ "obj_sha256": "0f6e48b664d792bd7c2615ce201e815ba57069ef5e51d6bbe79aa16d785fbe65",
+ "cycles": 105395147,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6103
+  },
+  {
+   "line": 40,
+   "addr": 6188
+  },
+  {
+   "line": 50,
+   "addr": 6191
+  },
+  {
+   "line": 60,
+   "addr": 6220
+  },
+  {
+   "line": 70,
+   "addr": 6250
+  },
+  {
+   "line": 80,
+   "addr": 6277
+  },
+  {
+   "line": 90,
+   "addr": 6383
+  },
+  {
+   "line": 100,
+   "addr": 6504
+  },
+  {
+   "line": 110,
+   "addr": 6626
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S004.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7023",
+  "LOCAL VARIABLES": "7024 - 7078",
+  "HIGHEST MEMORY LOCATION": "7078"
+ }
+}

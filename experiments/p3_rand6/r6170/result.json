@@ -1,0 +1,23 @@
+{
+ "id": "r6170",
+ "key": "93f76a7fdd34eede",
+ "source": "10 REM! INTEGER J\n20 DIM P(3,3)\n30 DEF FN F(Z)=P(A%,XY%)<=C\n40 N2$=STR$(XY%):N2$=\"123\":FOR B=(2.25>=B%) TO (XY%) STEP (C%)\n50 GOTO 30:LIST 10-20:ON ATN(A%) GOTO 70\n60 POKE J,-((C%>=VAL(N2$))):DEL 10,20\n70 LOMEM: 16384\n80 IF (-P(93^Y,A%)) THEN RUN 170:FOR B=(M) TO (A%<=J<>AB>C):PRINT N2$;\n90 STORE B,C:READ Y:PRINT Y AND Y:READ M:PRINT M OR M\n100 LOAD \"F\"\n110 SHLOAD\n120 GOTO 110:REM! CLEAR CHAIN:C=FRE(MID$(\"X Y\",127,ASC(\"TASC\")<=((Y<>Y)))):PRINT POS(Q1$):AB=B:B=AB OR AB\n130 LIST:XY%=XY%:LOMEM: 16384\n140 GOTO 110:REM! CLEAR CHAIN:PLOT RND(J),B\n150 P(B%,FN F(C%))=P(1,A%):B%=0:&:B=B%\n160 IF (B) THEN SAVE\n170 NOTRACE:GOTO 90:CONT:IF (FN F(32767 OR AB)) THEN READ AB:PRINT AB AND AB\n180 & \"X:Y\",1:B=J*((NOT 3.14159+((B AND Y))))\n190 B=((B<=((3>=B))))-587:Q1$=MID$(N2$,B):A%=A%:B=A% AND A%\n200 P(XY%,.001=-J)=((40000-XY%+FRE(B%)))*M:AB=FRE(M$+\"A\"):PRINT POS(N2$):IF (-((P(XY%,3)^C%))) THEN 170\n210 J=-C AND LOG(Y):AB=FRE(J)+POS(((10<>.001^0))-15/((B-Y))):P(((PEEK(Y)<-1))*22925,EXP(VAL(\"A\"+M$)))=FN F(P(J,XY%)>=Y)<=C+3:C%=14495:& \"X:Y\",1:Y=C%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 120\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

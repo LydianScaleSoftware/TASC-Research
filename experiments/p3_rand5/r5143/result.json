@@ -1,0 +1,89 @@
+{
+ "id": "r5143",
+ "key": "23a5c11db4c772a0",
+ "source": "10 REM! INTEGER K,I\n20 REM! DEFCOMMON M%,I,Y$\n30 DIM D$(3),B$(7,12)\n40 DEF FN F(X)=-Q1\n50 X=NOT ((NOT X%))*((N2>=Z%))\n60 HCOLOR=POS(LEFT$(\"123\",5))\n70 N2=FRE(\"HI\"):PRINT POS(A$)\n80 Y=N2:IF (Y OR Y) THEN 110:REM! CLEAR COMMON\n90 CALL M%:IF (C) THEN I=Q1<((1000 AND X)):Q1=I OR FN F(-((NOT Q1)))\n100 N2$=A$\n110 VTAB 1000:M%=NOT ((M%<=C>M%+950))\n120 Y=-((COS(N2)>=((65535<=Q1)))):X=Y OR Y:N2=255:N2=N2 AND Y\n130 ON NOT ((M%-255-((40000<N2)))) GOTO 70,50\n140 GOSUB 100\n",
+ "options": {
+  "library": 16384,
+  "program": 24576,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 24582,
+ "obj_len": 590,
+ "obj_sha256": "99cdfa8956731c5948d00c3b17e841d0a031526c48051b1ac5fbdea232c37d07",
+ "cycles": 91240386,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 24596
+  },
+  {
+   "line": 20,
+   "addr": 24596
+  },
+  {
+   "line": 30,
+   "addr": 24602
+  },
+  {
+   "line": 40,
+   "addr": 24602
+  },
+  {
+   "line": 50,
+   "addr": 24615
+  },
+  {
+   "line": 60,
+   "addr": 24642
+  },
+  {
+   "line": 70,
+   "addr": 24666
+  },
+  {
+   "line": 80,
+   "addr": 24687
+  },
+  {
+   "line": 90,
+   "addr": 24704
+  },
+  {
+   "line": 100,
+   "addr": 24760
+  },
+  {
+   "line": 110,
+   "addr": 24766
+  },
+  {
+   "line": 120,
+   "addr": 24802
+  },
+  {
+   "line": 130,
+   "addr": 24856
+  },
+  {
+   "line": 140,
+   "addr": 24890
+  }
+ ],
+ "info": {
+  "LIBRARY": "16384 - 20396",
+  "RECOGNIZED": "REM ! CLEAR COMMON",
+  "OBJECT FILE": "S003.OBJ",
+  "PROGRAM": "24582 - 25171",
+  "NUMERIC COMMON": "24576 - 24579",
+  "STRING COMMON": "24580 - 24581",
+  "LOCAL VARIABLES": "25172 - 25432",
+  "HIGHEST MEMORY LOCATION": "25432"
+ }
+}

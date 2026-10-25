@@ -1,0 +1,118 @@
+{
+ "id": "r5139",
+ "key": "c61e7e72f358a4d9",
+ "source": "10 REM! INTEGER *\n20 DIM P$(4)\n30 N2%=FRE(X$)>=W OR FRE(-7):READ A%:PRINT A% AND A%\n40 HTAB -(40) AND ASC(MID$(\"HI\",A,C)):GET Z%:N2%=Z% OR (Z%):FOR W=(A%) TO (Z%) STEP (((127<Q1%))^N2%)\n50 CALL Q1\n60 A=TAN(Z)=C\n70 INVERSE\n80 ON 39 GOTO 20,30,80\n90 IF (Z%) THEN 210:Z=C:Q1=Z AND 5:GOTO 40\n100 C=W:Z=C OR A:READ Z%:PRINT Z% AND Z%:Q1=POS(Z$)\n110 A=0.1:GOSUB 90\n120 X$=P$((Q1%)):READ Z:READ N2%:PRINT N2% OR N2%\n130 Z%=((39+ATN(W)))^((.5+A%)):A=Z% OR C:HLIN Z%,(Z) AT ((A-5 OR 43949/1000))=-C^(A):HLIN (C)-COS(9393)>W,(N2%) AT VAL(\"\")\n140 A=TAN(65535)+((Q1%<=2>-Z%)):Z=FRE(A)+POS(((Z%*A OR 100))-Q1%):READ C:IF (A) THEN 110\n150 RUN:Q1%=Z%:Q1=Q1% OR Q1%\n160 REM! CLEAR COMMON\n170 W=Q1:IF (W AND W) THEN 100\n180 Z%=Z*-A%:A=Z% AND Z%\n190 READ A:PRINT A AND A:DRAW N2%-Z%<=LEN(A$)<>Q1*10*((Q1%/6880))\n200 Q1=W*((A>=1E3))\n210 Z=FRE(Z$):PRINT POS(X$)\n220 HLIN Q1%^Z%,(NOT ((A/-Q1))) AT COS(NOT ((7=40)))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1262,
+ "obj_sha256": "304d4c24c982e2e0d9f60c3a203d7cc975e5af3eab05b072056660ac008b302b",
+ "cycles": 126932553,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6138
+  },
+  {
+   "line": 50,
+   "addr": 6238
+  },
+  {
+   "line": 60,
+   "addr": 6244
+  },
+  {
+   "line": 70,
+   "addr": 6259
+  },
+  {
+   "line": 80,
+   "addr": 6262
+  },
+  {
+   "line": 90,
+   "addr": 6275
+  },
+  {
+   "line": 100,
+   "addr": 6304
+  },
+  {
+   "line": 110,
+   "addr": 6355
+  },
+  {
+   "line": 120,
+   "addr": 6364
+  },
+  {
+   "line": 130,
+   "addr": 6403
+  },
+  {
+   "line": 140,
+   "addr": 6547
+  },
+  {
+   "line": 150,
+   "addr": 6642
+  },
+  {
+   "line": 160,
+   "addr": 6657
+  },
+  {
+   "line": 170,
+   "addr": 6660
+  },
+  {
+   "line": 180,
+   "addr": 6674
+  },
+  {
+   "line": 190,
+   "addr": 6692
+  },
+  {
+   "line": 200,
+   "addr": 6767
+  },
+  {
+   "line": 210,
+   "addr": 6782
+  },
+  {
+   "line": 220,
+   "addr": 6797
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S019.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7325",
+  "LOCAL VARIABLES": "7326 - 7371",
+  "HIGHEST MEMORY LOCATION": "7371"
+ }
+}

@@ -1,0 +1,74 @@
+{
+ "id": "r5069",
+ "key": "cb9944d8b991b12d",
+ "source": "10 DIM A$(2)\n20 B=B%\n30 B%=N2%+(((N2%)+VAL(A$(A%)))):Y=M^VAL(A$(A%)+Y$):B=FRE(Y)+POS(W)\n40 VTAB B+B/A%\n50 READ B%:PRINT B% AND B%:Y=((N2% AND ((B% OR N2%))))<Y%:W=Y OR Y\n60 RUN 40:IF (VAL(\"TASC\")) THEN RUN\n70 Q1$=Q1$:A$(1E3)=STR$(B%)\n80 VTAB N2:Y$=Q1$:HLIN M,(28466) AT ABS(B)\n90 FOR N2=(INT(B%)) TO (65535>=FRE(LEFT$(\"\",M))):M=1.5:M=M OR M\n100 B%=A%:IF (B% OR B%) THEN 70\n110 Y$=\"HI\"\n",
+ "options": {
+  "library": null,
+  "program": 20480,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 20480,
+ "obj_len": 506,
+ "obj_sha256": "321830105e01253f959ce06728f12fad2642e7bc75aacc84f4dda319c12f85c1",
+ "cycles": 81899142,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 20500
+  },
+  {
+   "line": 20,
+   "addr": 20500
+  },
+  {
+   "line": 30,
+   "addr": 20506
+  },
+  {
+   "line": 40,
+   "addr": 20566
+  },
+  {
+   "line": 50,
+   "addr": 20578
+  },
+  {
+   "line": 60,
+   "addr": 20638
+  },
+  {
+   "line": 70,
+   "addr": 20644
+  },
+  {
+   "line": 80,
+   "addr": 20665
+  },
+  {
+   "line": 90,
+   "addr": 20698
+  },
+  {
+   "line": 100,
+   "addr": 20751
+  },
+  {
+   "line": 110,
+   "addr": 20765
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "OBJECT FILE": "S009.OBJ",
+  "PROGRAM": "20480 - 20985",
+  "LOCAL VARIABLES": "20986 - 21033",
+  "HIGHEST MEMORY LOCATION": "21033"
+ }
+}

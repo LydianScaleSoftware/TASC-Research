@@ -1,0 +1,103 @@
+{
+ "id": "r6232",
+ "key": "04fc5ead9ef5777c",
+ "source": "10 REM! INTEGER J,K\n20 DIM P$(1)\n30 PRINT (((Y<=C%))--K),SGN(.001 AND C)>C%,\n40 Z%=AB\n50 Y=N2:GET K:Z%=K OR (TAN(B))\n60 K=(EXP(COS(C))):Y=K AND N2\n70 Z%=J:C=Z% AND Z%\n80 RECALL A:K=C%=((RND(39)<>(10))):B=FRE(K)+POS(Y<=Y):VTAB C%\n90 GOTO 100:C=J:DEL 10,20:B=C:GOTO 30:REM! CLEAR CHAIN\n100 P$(C%)=LEFT$(Z$,7)\n110 C=(Y):AB=FRE(C)+POS(B):IF (((39>=5))*Z%) THEN RUN 80:REM! CLEAR CHAIN\n120 M$=\"123\"+RIGHT$(Z$,N2>=C):PRINT MID$(AB$,N2,35901)+STR$(39)+M$,RIGHT$(LEFT$(P$(X%),N2),K)+\"TASC\";\n130 Z$=AB$+CHR$(Y):AB$=LEFT$(P$(A%-C%),-((AB<1.5)))\n140 IF (C) THEN RUN 170:B=J\n150 IF (TAN((X%)*((B-1)))) THEN RUN 40:GET K:J=K AND (NOT (((X%)+((908-1000)))))\n160 AB$=P$(127)+Z$:IF (Z%) THEN SPEED=3.14159<=127*N2:IF (A%) THEN X%=X%:C=X% OR A%\n170 AB=N2 OR 47409<=C% OR -5\n180 Z$=RIGHT$(M$,15746):GOTO 140:REM! CLEAR COMMON\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1055,
+ "obj_sha256": "d003230a83150c02891598c8c0fd594591ec532ae52a27bf8d6eae90bf45ce57",
+ "cycles": 121109947,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6135
+  },
+  {
+   "line": 50,
+   "addr": 6141
+  },
+  {
+   "line": 60,
+   "addr": 6171
+  },
+  {
+   "line": 70,
+   "addr": 6198
+  },
+  {
+   "line": 80,
+   "addr": 6210
+  },
+  {
+   "line": 90,
+   "addr": 6264
+  },
+  {
+   "line": 100,
+   "addr": 6279
+  },
+  {
+   "line": 110,
+   "addr": 6297
+  },
+  {
+   "line": 120,
+   "addr": 6349
+  },
+  {
+   "line": 130,
+   "addr": 6461
+  },
+  {
+   "line": 140,
+   "addr": 6506
+  },
+  {
+   "line": 150,
+   "addr": 6526
+  },
+  {
+   "line": 160,
+   "addr": 6577
+  },
+  {
+   "line": 170,
+   "addr": 6647
+  },
+  {
+   "line": 180,
+   "addr": 6680
+  }
+ ],
+ "info": {
+  "RECOGNIZED": "REM ! CLEAR COMMON",
+  "OBJECT FILE": "S012.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7118",
+  "LOCAL VARIABLES": "7119 - 7172",
+  "HIGHEST MEMORY LOCATION": "7172"
+ }
+}

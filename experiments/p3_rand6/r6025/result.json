@@ -1,0 +1,23 @@
+{
+ "id": "r6025",
+ "key": "f1b6e4dcbbdd63bb",
+ "source": "10 REM! INTEGER I,K\n20 REM! USECOMMON A$,W,C\n30 DIM P$(2)\n40 DEF FN F(Z)=((24<>POS(Z%)))-((C=NOT M))\n50 W=39:NOTRACE:W=W:IF (((C+A%))*AB/40) THEN W%=C*I<=ASC(RIGHT$(A$,M)):W=W% AND I:P$(FN F(ABS(M))-FRE(MID$(N2$,AB%)))=Q1$+A$+\"A\"+Q1$\n60 K=K-((A%-POS(AB%))):AB=K OR K:IF (10) THEN A%=NOT 1000:A=FRE(A%)+POS(((255 OR A-127))=VAL(Q1$)^Z%):READ AB%:PRINT AB% OR AB%\n70 VTAB A:& \"X:Y\",1:GET W%:K=W% AND (AB%)\n80 PRINT:FOR I=(M) TO (19086)\n90 SHLOAD:A%=LEN(\"123\"):IF (A% OR A%) THEN 150\n100 GOSUB 70\n110 GOTO 30:REM! CLEAR COMMON:GOTO 100:REM! CLEAR CHAIN:CONT\n120 GOTO 150:LIST 10-20:A%=A^I+((584<>Z%))<M\n130 SHLOAD\n140 W=TAN(W%)=I:IF (W OR W) THEN 120:AB=435:ON FN F(769=A)*((((AB% OR 24798))<>TAN(W%))) GOSUB 210,150\n150 IF (-((AB^A)) AND 127) THEN RUN:REM! CLEAR CHAIN:NEXT I\n160 RUN\n170 N2$=MID$(P$(W%),C-M)+\"\":IF (AB+C+Z%*AB=-((255 OR 4185))) THEN & \"X:Y\",1:REM! CLEAR COMMON\n180 AB%=C:GOTO 70:REM! CLEAR COMMON:W=NOT A%:A=W AND AB\n190 I=NOT 3:W=I OR I:READ K:PRINT K OR K:HTAB -A%\n200 ON 20*C*-W<>NOT Z% GOTO 30,150,70\n210 IF (0.1) THEN STORE B,C:P$(Z%*A)=\"123\"\n",
+ "options": {
+  "library": 16384,
+  "program": 24576,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 110\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

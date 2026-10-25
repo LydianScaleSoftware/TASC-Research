@@ -1,0 +1,23 @@
+{
+ "id": "r6014",
+ "key": "18a260b8fa27bfa0",
+ "source": "10 REM! INTEGER J\n20 REM! DEFCOMMON C,X%,Q1$\n30 DIM D%(10),B$(10)\n40 DEF FN F(T)=Y^X%\n50 RUN 40:C=XY%+65535^Y-100:CONT\n60 GET C:J=C AND (Y*1000+W^W% AND -FN F(7)):GET Q1:W%=Q1 OR (C)\n70 SHLOAD:Q1=Q1:IF (Q1 AND Q1) THEN 60:W%=XY%\n80 HOME\n90 IF (Y) THEN TRACE:Y=Y:IF (Y OR Y) THEN 120:& \"X:Y\",1\n100 XY%=W:Y$=CHR$(40)+Q1$+Q1$:Q1$=STR$(D%(X%)+XY%<=2.25)\n110 GET W%:J=W% OR (10):TRACE\n120 PRINT -X%,D%(XY%>Q1>XY%);D%(471)<=D%(Y%)-Q1,:GOTO 20:REM! CLEAR CHAIN:GOTO 10\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 120\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

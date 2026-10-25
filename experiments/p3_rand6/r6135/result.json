@@ -1,0 +1,23 @@
+{
+ "id": "r6135",
+ "key": "a7ede9544dd2bcf5",
+ "source": "10 DIM B%(12,9)\n20 DEF FN F(Z)=X% OR Z%^10>=XY\n30 Q1=FN F(Y%)>0:IF (Q1 OR Q1) THEN 230:FOR A=(NOT ((5/X%<>((Y%>Z%))))) TO (B)\n40 PRINT -((-40992));X$;W$,:IF (ASC(LEFT$(W$,-A))) THEN SHLOAD:NOTRACE\n50 LOAD \"F\":XY=-X% OR ((255-Z%))^Z%:RECALL A:W=XY:READ Y%:PRINT Y% OR Y%\n60 LOMEM: 16384\n70 GOTO 20:REM! CLEAR COMMON:GOTO 10\n80 Z%=((COS(3.14159) OR W*AB%))>NOT 7-W:Q1=FRE(Z%)+POS(65535):SPEED=1+1\n90 COLOR=POS(CHR$(TAN(B%(Y%,X%))))\n100 NEXT A\n110 Z%=Y%:A$(Y%)=\"\":W$=\"\"\n120 IF (AB%) THEN RUN:IF (1.5) THEN 120:RUN\n130 A=B%(X%,X%)*((AB%-2.25))>Z%:& \"X:Y\",1:XY=A:B=FN F(Z%/255>=B):Q1=B OR B:RETURN\n140 LIST 10-20:HOME\n150 A=ASC(Z$+Z$):W=FRE(A)+POS(B):GOTO 100:GOTO 20:LIST 10-20\n160 GOSUB 50:IF (B%(X%,POS(W$))>2.25) THEN RECALL A\n170 W$=W$:REM! CLEAR CHAIN:PRINT X%>=3,Z$+\"\";X%/W;\n180 READ AB%:PRINT AB% AND AB%:SPEED=FRE(LOG(X%)):B=17333\n190 W$=RIGHT$(STR$(NOT B%(X%,39643)),COS(B%(Z%,3.14159))):IF (2) THEN LOMEM: 16384:AB%=SGN(W)\n200 IF (FN F(452)) THEN Z%=((.5 OR W))-Y%/AB%-871:& \"X:Y\",1:B=Z%:W$=X$\n210 B%(ASC(A$(0))>AB%<>127,609>TAN(5)<=LEN(X$))=LOG(Q1+LEN(A$(2.25)))\n220 RUN 150:PRINT:X=1\n230 PRINT -((EXP(W)-256*1));-34350;22737^((Y%+32767))/W,\n240 Q1=LEN(STR$(X%)):&:XY=Q1\n",
+ "options": {
+  "library": null,
+  "program": 20480,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 70\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

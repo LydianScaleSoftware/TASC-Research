@@ -1,0 +1,78 @@
+{
+ "id": "r6149",
+ "key": "6edd99f9f9658a05",
+ "source": "10 REM! INTEGER *\n20 RUN 40:PRINT:X=1\n30 XY=Q1:LOAD \"F\":Y=XY:A$=STR$(750):READ C$\n40 N2=VAL(\"HI\")*AB%:PRINT STR$(-VAL(A$));\n50 IF (228*N2) THEN RUN 100:VTAB 36146\n60 Q1%=POS(\"TASC\")\n70 Q1%=XY:DEL 10,20:N2=Q1%\n80 FOR Q1=(SQR(1000)) TO (XY):B%=NOT AB%\n90 CALL 39\n100 Q1=N2/FRE(Y^W):CONT:Q1=Q1:IF (Q1=RND(256<>1000)) THEN RECALL A:GOTO 30:NOTRACE\n110 GOTO 90:READ W:POKE ((FRE(B%)<>((0=N2))))*20,LOG(1000/Q1+((1E3-39)))\n120 N2=-((W%+715)):Q1=N2 OR N2:AB%=-N2:LIST 10-20\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 490,
+ "obj_sha256": "bfe8537b3a258f1cbb0ddf265a700cbeb8da152652774230b7565ef7b5b1de98",
+ "cycles": 86984495,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6096
+  },
+  {
+   "line": 40,
+   "addr": 6120
+  },
+  {
+   "line": 50,
+   "addr": 6155
+  },
+  {
+   "line": 60,
+   "addr": 6176
+  },
+  {
+   "line": 70,
+   "addr": 6190
+  },
+  {
+   "line": 80,
+   "addr": 6199
+  },
+  {
+   "line": 90,
+   "addr": 6228
+  },
+  {
+   "line": 100,
+   "addr": 6234
+  },
+  {
+   "line": 110,
+   "addr": 6284
+  },
+  {
+   "line": 120,
+   "addr": 6287
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S009.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6553",
+  "LOCAL VARIABLES": "6554 - 6577",
+  "HIGHEST MEMORY LOCATION": "6577"
+ }
+}

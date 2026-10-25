@@ -1,0 +1,23 @@
+{
+ "id": "r6153",
+ "key": "22778b70275dffb6",
+ "source": "10 GOTO 130:REM! CLEAR CHAIN\n20 FOR X=(Z%) TO (FRE(Z%*Q1%)<>A):ON (((24) AND INT(40000)))<>C% GOTO 260\n30 RUN 80:HPLOT RND(W+Z%)-A%,(-33915*N2/((W*935))) TO POS(D$(256)+X$+X$),(Z*((28864+A*183)))\n40 A%=NOT A:FOR Z=(35623*X) TO (ATN(A%+((N2<>A%))))\n50 PRINT LEFT$(\"123\"+\"\",N2),495*Z%+10<921,\n60 PRINT\n70 B$=LEFT$(LEFT$(B$,913),X):IF (W=((Q1%>N2 AND -Z%))) THEN GR\n80 ON 2 GOTO 210,30,160,290:IF (Q1%) THEN RUN\n90 ON 14997 GOTO 70,10,10,90:NEXT Z\n100 REM! CLEAR COMMON:C%=((Q1%>=NOT 32767))+N2:W=C% AND C%:X=A\n110 GOTO 170:LOAD \"F\":CALL 255\n120 C%=VAL(RIGHT$(B$+\"HI\",X)):Z=FRE(C%)+POS(C%/W)\n130 NORMAL\n140 B$=MID$(LEFT$(MID$(\"123\",.5,A),X),Z%/Q1%+2/A,Q1%)\n150 PRINT VAL(RIGHT$(X$,A%))/((Q1%+((A% OR Q1%))));X<C%,A%<911,:Z%=A%:IF (Q1%) THEN 250\n160 TRACE:IF (ASC(B$)) THEN LIST 10-20\n170 RUN:X=Z%:&:W=X:GOTO 190:REM! CLEAR COMMON\n180 C%=POS(VAL(B$+\"\")):&\n190 IF (32767^Q1%<=C%) THEN RECALL A\n200 &:GOTO 160:& \"X:Y\",1:DEL 10,20\n210 PRINT:PLOT 37973,W:HPLOT POS(39)*NOT ((N2=442)),(20) TO ((W AND Z))*A%,(40000-W=((A%<435)) OR A%+Q1%)\n220 FOR N2=(40) TO (ATN(C% AND C%))\n230 PRINT:DEL 10,20\n240 W=FRE(MID$(B$,A<FRE(Q1$))):PRINT POS(Q1$):ON C% GOTO 280,200\n250 W=10:N2=FRE(W)+POS(Z<>N2=-249+-972):IF (N2) THEN CONT\n260 A=FRE(CHR$(Z%)):PRINT POS(Q1$)\n270 Q1%=3^C%*ATN(147)=Z%:&:X=Q1%:W=N2:IF (W AND W) THEN 250:IF (X) THEN 70\n280 CALL N2:A%=(5):W=FRE(A%)+POS(Q1%=-C%*C%)\n290 IF ((ABS(X))) THEN RUN\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 100\nSYNTAX\n\n REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

@@ -1,0 +1,23 @@
+{
+ "id": "r6069",
+ "key": "5bc3d2c672e2a288",
+ "source": "10 REM! INTEGER J,I\n20 REM! USECOMMON J,I,X%\n30 IF (X%) THEN C%=XY%:IF (Y OR W) THEN IF ((-ATN(849))) THEN LIST 10-20:LOAD \"F\"\n40 C$=C$:GOTO 170:&:IF (5) THEN RUN 280\n50 &\n60 IF (X%) THEN LOMEM: 16384:PRINT 277^(J)/((NOT A OR W^Y%));\n70 GOTO 80:HTAB (NOT XY%^864)\n80 FOR A=(-((W))) TO (J)\n90 REM! CLEAR CHAIN:XY$=MID$(\"\",EXP(833))+MID$(\"123\",INT(Y%)):CALL EXP(Z)\n100 GET A:Y%=A OR (((941 OR 1.5))<=((Y%<=I))<=ABS(W))\n110 CONT:NORMAL\n120 IF (((Y%*127 AND 32767+C))>((XY%<>24*C%))) THEN 260:ON -363 GOTO 10,70,140:IF ((X%)<=NOT ASC(Z$)) THEN LOAD \"F\"\n130 Z$=\"X Y\"\n140 RUN:C%=Y%:ON 256 GOTO 60\n150 READ XY$\n160 W=C% AND Z:LIST 10-20:C=W:RUN:IF (A) THEN & \"X:Y\",1\n170 CONT:J=1000+J:IF (J OR J) THEN 270\n180 IF (J+J) THEN 140:HLIN X%/32767=C%<>FRE(2-XY%),(ASC(XY$)) AT NOT A\n190 COLOR=PEEK(760):HTAB ((931-.5<C))*((220+-7))\n200 LIST 10-20\n210 Z=W\n220 C=I:GOTO 30:SAVE:J=-((LOG(32767)+X%)):A=FRE(J)+POS(((X%)))\n230 GOTO 20:ON FRE(MID$(XY$,A))=X% GOTO 260,70:VTAB EXP(Z)\n240 SHLOAD:A=24:Y=-((((40<100))*340)):A=Y AND I\n250 IF (39<W) THEN & \"X:Y\",1:ON NOT I GOTO 230,50,170\n260 GOSUB 50:STORE B,C\n270 J=J:&:A=J\n280 RUN\n290 A=FRE(MID$(RIGHT$(XY$,24),-Y%)+CHR$(I)):PRINT POS(C$):GOTO 140:RECALL A\n300 GOTO 40:REM! CLEAR COMMON:FOR W=(Z+ATN(X%)-W) TO (NOT 20)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 90\nSYNTAX\n\n REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

@@ -1,0 +1,119 @@
+{
+ "id": "r6096",
+ "key": "8c062d55e36343eb",
+ "source": "10 REM! INTEGER K\n20 DIM D%(11,10)\n30 DEF FN F(Z)=39\n40 GOTO 130:READ Q1:PRINT Q1 AND Q1\n50 HCOLOR=X%/FRE(32767+.001)\n60 FOR XY=(Q1) TO (B%^X%)\n70 GOSUB 10:HCOLOR=Q1<=D%(K,100)<>FRE(\"\")\n80 IF (INT(D%(K,K))<=B+39) THEN NOTRACE\n90 Z$=\"TASC\":READ X%,Z%\n100 FOR Q1=(B) TO (5)\n110 Z$=A$:INPUT Q1\n120 XY=D%(Z%+X%,-K)-((B<((XY>=XY)))):M=FRE(XY)+POS(VAL(MID$(Z$,XY<=XY))):STOP:IF (FN F(XY)) THEN IF (XY) THEN RECALL A\n130 K=((414 OR Z%))*FRE(256):A$=Q1$\n140 SAVE\n150 NEXT Q1\n160 B=D%(K,((1E3-X%))/AB%):XY=B AND C:M=106-D%(XY>Z%,C<K):Q1=M AND M:FOR C=(X%-Z%) TO (LEN(MID$(Q1$,B>X%)))\n170 Q1=Q1*Q1:TRACE:C=Q1:NEXT:B=24\n180 Q1$=\"X Y\"\n190 D%(X%,255)=256\n200 B%=K:XY=B% OR Z%\n210 FOR M=(7<=((-11615<=32767))) TO (((X%<=B))+NOT D%(Z%,X%)+((932-C AND TAN(D%(K,X%))))):C=-((B AND Q1))*D%(427,116)^B\n220 X%=32767:Q1=M>=((-Z% AND ABS(X%))):M=D%(Z%,D%(X%,X%)+0 AND 1.5):SHLOAD:XY=M\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1253,
+ "obj_sha256": "6e2c434bc78402c64f6a4b7395000d64f20b9c8febe9c0707c26a65067ab3cc1",
+ "cycles": 129150940,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6094
+  },
+  {
+   "line": 50,
+   "addr": 6097
+  },
+  {
+   "line": 60,
+   "addr": 6112
+  },
+  {
+   "line": 70,
+   "addr": 6135
+  },
+  {
+   "line": 80,
+   "addr": 6178
+  },
+  {
+   "line": 90,
+   "addr": 6216
+  },
+  {
+   "line": 100,
+   "addr": 6244
+  },
+  {
+   "line": 110,
+   "addr": 6261
+  },
+  {
+   "line": 120,
+   "addr": 6279
+  },
+  {
+   "line": 130,
+   "addr": 6366
+  },
+  {
+   "line": 140,
+   "addr": 6393
+  },
+  {
+   "line": 150,
+   "addr": 6393
+  },
+  {
+   "line": 160,
+   "addr": 6398
+  },
+  {
+   "line": 170,
+   "addr": 6520
+  },
+  {
+   "line": 180,
+   "addr": 6543
+  },
+  {
+   "line": 190,
+   "addr": 6558
+  },
+  {
+   "line": 200,
+   "addr": 6579
+  },
+  {
+   "line": 210,
+   "addr": 6600
+  },
+  {
+   "line": 220,
+   "addr": 6746
+  }
+ ],
+ "info": {
+  "AND C": "M = 106 - D%(XY > Z%,C < K):Q1 = M",
+  "OBJECT FILE": "S016.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7316",
+  "LOCAL VARIABLES": "7317 - 7638",
+  "HIGHEST MEMORY LOCATION": "7638"
+ }
+}

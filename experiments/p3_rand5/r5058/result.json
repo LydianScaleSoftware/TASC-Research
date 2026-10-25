@@ -1,0 +1,23 @@
+{
+ "id": "r5058",
+ "key": "6e26797e21d2b5ae",
+ "source": "10 REM! INTEGER J,I\n20 READ I:PRINT I OR I:READ Z%:VTAB ((40>X))^0-321\n30 VTAB 255:REM! CLEAR CHAIN\n40 VTAB (1E3)+-((Y=N2%)):Y=Z%\n50 GET AB%:Z%=AB% AND (AB%):PRINT \"123\",\n60 N2%=49152:IF (N2% AND N2%) THEN 10\n70 REM! CLEAR COMMON:IF (Y<>((AB%<((7>=10))))) THEN AB%=LEN(STR$(AB%)) OR Q1:X=AB% OR AB%\n80 W=COS(24)+I<>((LEN(AB$) AND SGN(0.1))):HLIN SIN(Q1),(.5) AT Z%:X$=CHR$(VAL(LEFT$(\"X Y\",I)))\n90 W=ATN(Q1=FRE(X)):Y=W OR ATN(((Q1=W))*XY%):M=W:GOTO 110\n100 GOTO 40:Z%=890/(AB%*M):X=Z% AND Z%:FOR I=(40) TO (-((39<>I-N2%))) STEP (POS(MID$(X$+A$,W)))\n110 FOR Y=(XY%=((26806<>Q1 AND J))) TO (VAL(RIGHT$(MID$(\"A\",X,M),FRE(710)))):AB%=X:X=AB% OR -((1E3-Y))<AB%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 70\nSYNTAX\n\n REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

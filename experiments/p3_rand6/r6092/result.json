@@ -1,0 +1,23 @@
+{
+ "id": "r6092",
+ "key": "03b35f0ed95b5316",
+ "source": "10 REM! INTEGER K\n20 DIM A%(1)\n30 DEF FN F(Z)=225-B-W%-((AB%+(Z%)))\n40 IF (B) THEN 40:READ AB%:PRINT AB% OR AB%:X%=65535:IF (X% AND X%) THEN 10\n50 ON 32767/X GOTO 220,210,80,150:GOTO 220:POKE AB%,B\n60 RUN\n70 GOTO 260:NOTRACE\n80 DEL 10,20\n90 GOSUB 150\n100 X=B:IF (X AND X) THEN 60\n110 A$=MID$(MID$(LEFT$(\"HI\",W%),X,B*B),W%+FRE(\"TASC\"),-X<((A%(W%)>1))):X=FRE(LEFT$(A$,K)):PRINT POS(XY$)\n120 SPEED=Q1\n130 ON X=N2 GOTO 270,140,270,240\n140 GOTO 30:REM! CLEAR COMMON:READ Q1:PRINT Q1 AND Q1:FOR K=(LEN(XY$+\"X Y\")) TO (FRE(POS(X%))<((653<=Z%=256)))\n150 IF (23376) THEN A%(6393)=1000*((3.14159<>K))*A%(W%)\n160 IF (NOT ((X%-K<=Z%*X%))) THEN 230:RECALL A\n170 PRINT:RECALL A\n180 Z%=N2:IF (Z% AND Z%) THEN 310:PRINT\n190 W%=Q1:&:X=W%:DEL 10,20:IF (-256) THEN HTAB XY\n200 IF (PEEK(K)) THEN FOR B=(A%(FRE(X$))) TO (AB%<=A%(K)) STEP (65535):XY=2:N2=XY OR XY:X%=AB%:B=X% OR X%\n210 XDRAW Z%<=X AT -((LOG(B)<=VAL(X$))),(INT(256+W%+((42434<>15)))):XY=-32767<=AB%:LIST 10-20:N2=XY:GOSUB 80\n220 LIST 10-20:N2=-N2:CONT:B=N2\n230 POKE K,Q1:IF (X) THEN 230\n240 N2=Z%:RECALL A:Q1=N2:X=1:LOAD \"F\":N2=X:A%(((SGN(B) AND ((A%(AB%) AND N2))))=FN F(K))=10*Z%-((Z%/K<100))\n250 INVERSE:A$=X$\n260 A%(256)=-XY:CONT:DATA ,\"A,B\"\n270 IF (-((NOT Z%))) THEN 270\n280 IF (NOT X+-B AND N2) THEN STORE B,C:DATA \"A,B\":X=W%:X=X AND X\n290 PLOT 0.1/Q1,Q1 AND B:SHLOAD\n300 XY=W%\n310 GOTO 60:&\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 140\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

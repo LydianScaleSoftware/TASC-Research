@@ -1,0 +1,23 @@
+{
+ "id": "r6163",
+ "key": "3956a994292b205e",
+ "source": "10 REM! INTEGER K,I\n20 A=I:LIST 10-20\n30 A=FRE(CHR$(TAN(Y%-I))):PRINT POS(A$):ON -Q1>=((2.25 AND Y%)) GOTO 90,10,70,80:PRINT A%;(W^W);\n40 A=0:A=A OR POS(255):STORE B,C:GR\n50 SPEED=5\n60 REM! CLEAR COMMON:W$=MID$(\"TASC\",(20)+-A)\n70 & \"X:Y\",1:ONERR GOTO 60\n80 VTAB A%:K=AB:Q1=K OR VAL(MID$(LEFT$(\"TASC\",A%),468*K,N2%+A)):M%=M%\n90 GOTO 60:SHLOAD:Z$=W$\n100 GOTO 80:CONT\n110 A%=AB:RECALL A:W=A%\n120 C=W OR K:LOMEM: 16384:A=C\n130 Z$=W$\n140 IF (SQR(W)) THEN LOMEM: 16384:READ Q1:PRINT Q1 OR Q1\n150 I=10:TRACE\n160 GOTO 170:AB=NOT AB:Q1=AB AND Y%:REM! CLEAR COMMON\n170 A%=3.14159:IF (3) THEN LIST\n180 I=-2.25:C=I AND I:ON -AB GOTO 80:READ Q1\n190 PRINT:A=A:AB=A AND A\n200 Z$=A$:&:SAVE\n210 IF (49152<>LEN(W$)) THEN RUN:ON I GOTO 120,10,100,150\n220 COLOR=502+((78 AND 65535))\n",
+ "options": {
+  "library": null,
+  "program": 20480,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 60\nSYNTAX\n\n REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

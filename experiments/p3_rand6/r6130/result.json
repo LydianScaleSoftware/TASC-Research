@@ -1,0 +1,23 @@
+{
+ "id": "r6130",
+ "key": "ee05490a87916ff6",
+ "source": "10 DIM P%(2)\n20 IF (-((W*D%(7,X%)*((2.25-2))))) THEN & \"X:Y\",1\n30 TRACE\n40 RESTORE:W$=Q1$:AB=D%(X%,NOT COS(Z)):SHLOAD:Z=AB\n50 GOTO 50:REM! CLEAR COMMON:A(W^((AB%-1000)),ATN(TAN(AB%^X%)))=(AB%<>X)/X%:RUN 50\n60 ON LEN(Q1$) GOTO 80,140,110\n70 PRINT MID$(X$+X$+Q1$+X$,2),MID$(\"\",Z*692,A(AB%+W%,LOG(Z)));\n80 W=FRE(W$):PRINT POS(W$):Q1$=RIGHT$(RIGHT$(\"\"+X$,C),W%)\n90 N2%=((32767-X%)):IF (127+198) THEN 40\n100 AB%=W:W=AB% AND AB%:GOTO 30:DEL 10,20\n110 DEL 10,20:GOTO 60:REM! CLEAR CHAIN\n120 CALL LEN(MID$(\"\"+Q1$,-3)):HTAB X%-((VAL(W$) AND ATN(AB%)))\n130 & \"X:Y\",1:READ W:PRINT W AND W:GOTO 80:REM! CLEAR COMMON\n140 READ W:PRINT W OR W:READ Q1$:GOSUB 60\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 50\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

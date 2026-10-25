@@ -1,0 +1,23 @@
+{
+ "id": "r6154",
+ "key": "94a20e40e47c50fc",
+ "source": "10 REM! INTEGER K,J\n20 DIM A%(6,11),P%(9)\n30 DEF FN F(X)=AB\n40 M%=696:&:Q1=M%\n50 ON 100 GOTO 260\n60 Z%=-416/((AB+Q1))*((24 OR K)):AB$=\"A\"\n70 PRINT LEFT$(\"TASC\"+\"TASC\",A%),-((-Z%)) AND M>-32767,W$+LEFT$(\"\",EXP(967));\n80 GET AB:AB%=AB OR (((B>=Q1))*NOT B*M%):Z%=-ABS(B)/40:Q1=Z% OR AB%\n90 Q1=NOT B:A=Q1 OR Q1\n100 B=NOT 1E3:Q1=B OR B:FOR Q1=(ATN(FN F(B)<B)) TO (P%(2*((Q1-M)))) STEP (J)\n110 A=Z%:A=FRE(A)+POS(151):LOAD \"F\"\n120 AB=A%(AB%,M%)^((((M%<=346))/((A%(J,AB%)*M)))):LOMEM: 16384:A=AB:A%(24,RND(VAL(AB$))>=COS(255))=5\n130 & \"X:Y\",1:AB%=P%(Z%):IF (AB% OR AB%) THEN 260:IF (Z%) THEN 30\n140 M=M%-((39<=69)):B=M OR M:GOTO 50\n150 B=Q1:B=B AND B:IF (-((Q1 AND SGN(P%(A%))))) THEN 230:AB%=Z%<=Q1:LOAD \"F\":B=AB%\n160 A=((0>=K^P%(255)))*AB%\n170 GOSUB 90:IF (NOT ((-A%(0.1,A%)<Q1))) THEN SHLOAD\n180 READ B:PRINT B OR B:& \"X:Y\",1\n190 B$=W$\n200 REM! CLEAR CHAIN:AB$=AB$+\"A\":B$=B$\n210 K=M=AB:SHLOAD:K=717\n220 AB=FRE(W$):PRINT POS(B$)\n230 PLOT NOT A%(ASC(W$),ATN(B)),Q1\n240 M=39:Q1=M AND A%:A=((100<=Q1))+((B<32767))>256\n250 IF (POS(A%(M%,AB%))>0*M<AB) THEN RECALL A:P%(A%)=AB%\n260 RECALL A\n270 B$=B$\n280 HTAB ((7<=341>((Q1<=.5))))*Z%\n290 PRINT 24;2,:NEXT Q1\n300 B$=\"HI\"\n310 LIST:PRINT\n",
+ "options": {
+  "library": 4096,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 200\nSYNTAX\n\n REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

@@ -1,0 +1,23 @@
+{
+ "id": "r5063",
+ "key": "246297dac56d70fb",
+ "source": "10 DEF FN F(Z)=NOT Z%\n20 COLOR=-Z\n30 XY=FRE(X$+\"HI\"+M$+M$):PRINT POS(M$):N2%=VAL(CHR$(5+M))\n40 REM! CLEAR CHAIN:HCOLOR=SQR(NOT Z%)+((97/Y%>((N2%=N2))))\n50 READ M$,Z%:PLOT ((FRE(\"X Y\")<>N2%))/((42646/Z<>XY-B%)),FN F(-((255<=XY)))\n60 IF (ASC(\"123\")+B%) THEN DATA HI,HI,300:IF (-((3+M))+NOT ((N2<0))) THEN B=20<>-140<>NOT 4876\n70 IF (FRE(40000<=XY+Y%)) THEN COLOR=N2:B%=FN F(40^((M/XY)))\n80 ON Z%/((B%<>Y%=65535)) GOTO 130,110,90,130:N2%=((Z%=XY))*10+((M AND B%)):M=N2% AND XY:HTAB XY\n90 PRINT FRE(MID$(LEFT$(W$,Z),Y%,N2-M)),SIN(POS(M$))*1E3,Z,\n100 GOTO 120\n110 Y%=XY:READ Y%\n120 HOME:XY=Z:XY=XY OR XY\n130 Z%=((FN F(256) AND B%<=N2%))=N2%:M=FRE(Z%)+POS(N2)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 40\nSYNTAX\n\n REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

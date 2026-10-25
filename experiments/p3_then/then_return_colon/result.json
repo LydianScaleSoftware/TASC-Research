@@ -1,0 +1,38 @@
+{
+ "id": "then_return_colon",
+ "key": "7bf5445786fecee0",
+ "source": "10 IF X THEN RETURN:\n20 PRINT\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 41,
+ "obj_sha256": "26b30ec62a680046a357ced29f1e5d73dcf500071b3cf60f76987424b5d01c97",
+ "cycles": 55284050,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6090
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6104",
+  "LOCAL VARIABLES": "6105 - 6109",
+  "HIGHEST MEMORY LOCATION": "6109"
+ }
+}

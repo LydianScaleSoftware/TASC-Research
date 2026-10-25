@@ -1,0 +1,80 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S005
+
+
+OBJECT CODE FILE:
+(DEFAULT S005.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION?
+
+*****BEGINNING PASS 1
+
+
+
+10
+RECOGNIZED  REM ! INTEGER J
+20  DIM A$(2,11),D%(7,11),B%(9)
+30  DEF  FN F(Z) = ((39625) AND  FRE (""
+))
+40  DATA "A,B",,X
+
+*****WARNING
+LINE NUMBER 40
+IGNORED
+
+: IF ( -  VAL (Y$ + Y$)) THEN  CONT
+
+
+: PLOT  NOT  INT (C% >  = C%), - ((((X A
+ND B)) >  =  SQR (W)))
+50 XY$ = AB$
+60 Z% = Y * (( - Y AND 0)):B =  FRE (Z%)
+ +  POS (C% OR XY%): IF (A < ((255 * 40)
+) ^ B) THEN 210
+70  PRINT XY% -  FN F(1000), - (( - A))
+^  EXP (C% ^ W),
+
+*****WARNING
+LINE NUMBER 70
+IGNORED
+
+: STORE B,C
+
+
+80  COLOR= J <  = W%: COLOR= A
+90  FOR J = (J + ((D%(J,XY%) + ((W + W))
+))) TO (D%(Z%,B - ((J >  = W)))): FOR Y
+= (J <  =  SGN (A < XY%)) TO (2.25 *  SI
+N (42082)) STEP (878)
+100  GOSUB 180: PRINT XY$;XY$; LEFT$ ( R
+IGHT$ ("123" + A$(C%,1000),X <  > A),B >
+ J <  > ((40 > D%(2,Z%)))),:B = 100 * ((
+Y + Y <  =  NOT Z%))
+110  PRINT 32767;W%;XY% - 20;
+120  GET XY%:J = XY% AND (XY% > Z% - B%(
+J)):Y = A: GOTO 200
+RECOGNIZED : REM ! CLEAR CHAIN
+130  HCOLOR= 5418
+140 W = 255:B = W OR W
+150 Y =  FRE (Y$): PRINT  POS (XY$)
+160  IF (W%) THEN  GOTO 90
+
+*****FATAL ERROR
+LINE NUMBER 160
+SYNTAX
+
+: REM ! CLEAR COMMON !ERR!
+
+TYPE CNTRL-C TO ABORT

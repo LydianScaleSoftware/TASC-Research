@@ -1,0 +1,102 @@
+{
+ "id": "r6247",
+ "key": "3621cbec4103e001",
+ "source": "10 REM! INTEGER J,I\n20 DIM A$(1,11)\n30 Z%=-((NOT ((M*Z%)))):W=FRE(Z%)+POS(LOG(B%<>A%)):NOTRACE:IF (EXP(488)) THEN RECALL A\n40 W=32767:M=W OR W:GOTO 100:NOTRACE:HCOLOR=W\n50 Y$=X$\n60 RUN 10\n70 READ W:PRINT W OR W:DEL 10,20:B%(40)=M\n80 A%=EXP(J OR 1E3):XY=A% AND Z%:GOTO 60:LIST 10-20:Y$=\"123\"\n90 COLOR=1E3:Z%=2.25:IF (Z% AND Z%) THEN 110:PRINT B%((Z%))*722;\n100 GOTO 160\n110 J=127\n120 IF (B%(I)>=XY*I) THEN STORE B,C:ON 27948*NOT ((B%(J)-W)) GOTO 30,20,50,100:M%=XY\n130 LOAD \"F\":GOTO 70:&:B%(-((100<=POS(J))))=M+B%(ABS(1))\n140 GOTO 170:& \"X:Y\",1:PLOT A%,COS(I):W=((293 OR Z)):Z=FRE(W)+POS(-((47978=Z%))*((EXP(M)<330+B%(0))))\n150 A$(M%,(I))=\"TASC\"\n160 END:POKE 1.5,XY:GOTO 10\n170 HCOLOR=NOT LEN(Y$) AND W:B%=579^32767*256:IF (M) THEN LOAD \"F\"\n180 J=XY:TRACE:Q1=J\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 932,
+ "obj_sha256": "ea6a22478312c91d09ba5f5ae6b41e820608d64600c23e358794068c2428dbfd",
+ "cycles": 114333362,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6144
+  },
+  {
+   "line": 50,
+   "addr": 6159
+  },
+  {
+   "line": 60,
+   "addr": 6165
+  },
+  {
+   "line": 70,
+   "addr": 6171
+  },
+  {
+   "line": 80,
+   "addr": 6201
+  },
+  {
+   "line": 90,
+   "addr": 6252
+  },
+  {
+   "line": 100,
+   "addr": 6281
+  },
+  {
+   "line": 110,
+   "addr": 6284
+  },
+  {
+   "line": 120,
+   "addr": 6290
+  },
+  {
+   "line": 130,
+   "addr": 6360
+  },
+  {
+   "line": 140,
+   "addr": 6405
+  },
+  {
+   "line": 150,
+   "addr": 6486
+  },
+  {
+   "line": 160,
+   "addr": 6514
+  },
+  {
+   "line": 170,
+   "addr": 6517
+  },
+  {
+   "line": 180,
+   "addr": 6562
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S007.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6995",
+  "LOCAL VARIABLES": "6996 - 7123",
+  "HIGHEST MEMORY LOCATION": "7123"
+ }
+}

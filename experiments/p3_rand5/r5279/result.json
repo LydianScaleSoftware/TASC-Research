@@ -1,0 +1,23 @@
+{
+ "id": "r5279",
+ "key": "a24be1a2433cf57f",
+ "source": "10 REM! INTEGER I\n20 DIM B$(1,10)\n30 W%=Y%:IF (W% AND W%) THEN 170:Z%=-((-D%(Z%,B%))):READ I:PRINT I OR I\n40 FOR I=(I) TO (B%):POKE D%(ABS(W<>Y%),W%),1000\n50 DATA -2.5:FOR W=(Y) TO (VAL(\"TASC\"))\n60 XY=FRE(N2$):PRINT POS(W$)\n70 XY=TAN(NOT ((I-1E3))):XY=D%(W%,((Z% OR D%(537,I)))-Z%*W):PRINT Z%--Y%;FRE(RIGHT$(\"A\",B%<256)),\"\";\n80 FOR W=(D%((39)/XY,B%)) TO (7674=((Q1 AND XY))<>D%(W%>W%,486)):COLOR=FRE(STR$(W))^NOT 40\n90 HCOLOR=B%:PRINT W,W$+B$(Y%,B%)+MID$(A$(Y%),ASC(A$)),XY,\n100 Z%=X+Y:XY=FRE(Z%)+POS(W%*951=Z%-Z%<-((D%(I,5)<=W))):Q1=W\n110 FOR Y=(W%) TO (Z%-3):Z%=39:I=Y%*B%\n120 N2$=RIGHT$(STR$(-10),XY+((I OR X))):B%=((1000-7))^I-3:IF (B% OR B%) THEN 140:X=-D%((3.14159),Y%)\n130 READ A$(-0)\n140 B%=Q1/23012:W=FRE(B%)+POS(Q1):CALL D%(.001<Y,I<=Y)>=((LOG(194) OR -D%(I,W%))):Z%=I:Y=Z% AND Z%\n150 FOR W=(Z%) TO (((W% AND Q1))*((Y*D%(B%,Z%)))*NOT ((3.14159<=Z%))) STEP (ATN((2))*((TAN(Y)/W%)))\n160 W%=3.14159:Q1=FRE(W%)+POS(256)\n170 XY=FRE(N2$+\"A\"):PRINT POS(A$):A$=N2$\n180 N2$=B$(-Q1 OR Z%<=W%,(Q1)):Y%=5466:PRINT MID$(\"\"+A$(2),Y)+\"123\",\n190 READ W$\n200 PRINT EXP(32767);\"TASC\"+MID$(\"\",39)+W$+LEFT$(\"123\",D%(B%,10));:Q1=FRE(CHR$(XY)):PRINT POS(W$)\n210 PRINT SQR(B%),39,FRE(-662) AND LEN(A$(40000)+A$(Y%));\n220 ON X-2*Y+W% GOTO 160,50:W$=\"\"\n230 IF (Z%) THEN A$=A$+A$(0/Y%)\n240 W=W%:X=W OR W:Y=((PEEK(1675) OR -X))+B%\n250 W%=10:IF (W% OR W%) THEN 30\n260 REM! CLEAR COMMON:READ XY\n270 READ W,B%\n280 B%=(XY):Y=B% AND B%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 260\nSYNTAX\n\n REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

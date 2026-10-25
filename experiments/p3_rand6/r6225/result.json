@@ -1,0 +1,95 @@
+{
+ "id": "r6225",
+ "key": "9b7444ef0b0f387c",
+ "source": "10 REM! INTEGER J\n20 PR#J:M$=MID$(LEFT$(C$,Y<=N2%),P%(100)):GOTO 30:REM! CLEAR COMMON\n30 IF (LOG(J-((XY+12)))) THEN 160:Y%=XY:X=FRE(Y%)+POS(LOG(X%)<=FRE(0.1)<-((-X))):C=X%:IF (C OR C) THEN 160\n40 M$=LEFT$(CHR$(XY-10141),5*192):Z=Y OR 20:LOAD \"F\":X=Z:VTAB ((1.5+X<((7>X%))))*AB%\n50 IF (AB%) THEN 60\n60 RUN:IF (NOT 39 AND XY) THEN STORE B,C\n70 IF (-((((X% OR X%))*P%(X%)))) THEN IF (Y%) THEN IF (C) THEN PRINT:SPEED=EXP((40)-C)\n80 X=AB%-NOT J:IF (X AND X) THEN 100:TRACE\n90 PRINT TAN(SQR(.5/Y));\n100 X=RND(P%(X%))<>Y+3>((P%(X%)<=719))/((P%(464)>=Y)):STORE B,C:X=X\n110 J=255\n120 C=374:IF (-((NOT 46539 OR X%))) THEN 140\n130 XY$=LEFT$(STR$(XY),106<>581)+XY$+RIGHT$(B$(J),X):B$(40-((7/C))^((P%(39)*C)))=\"\":GOTO 70:REM! CLEAR CHAIN\n140 GET C:J=C AND (N2%=Z):REM! CLEAR COMMON\n150 Y=FRE(C$):PRINT POS(M$):IF (-((P%(N2%)=46145))) THEN AB%=9:Z=XY:X=Z OR Z\n160 IF (J) THEN &:IF (665>=X) THEN TRACE\n",
+ "options": {
+  "library": null,
+  "program": 20480,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 20480,
+ "obj_len": 1187,
+ "obj_sha256": "275197a4762bf274e5994192dbe9ff3e935ee7c17b2b6a839ca415b0a590897c",
+ "cycles": 122019844,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 20500
+  },
+  {
+   "line": 20,
+   "addr": 20500
+  },
+  {
+   "line": 30,
+   "addr": 20539
+  },
+  {
+   "line": 40,
+   "addr": 20624
+  },
+  {
+   "line": 50,
+   "addr": 20690
+  },
+  {
+   "line": 60,
+   "addr": 20698
+  },
+  {
+   "line": 70,
+   "addr": 20701
+  },
+  {
+   "line": 80,
+   "addr": 20769
+  },
+  {
+   "line": 90,
+   "addr": 20789
+  },
+  {
+   "line": 100,
+   "addr": 20804
+  },
+  {
+   "line": 110,
+   "addr": 20879
+  },
+  {
+   "line": 120,
+   "addr": 20885
+  },
+  {
+   "line": 130,
+   "addr": 20916
+  },
+  {
+   "line": 140,
+   "addr": 21018
+  },
+  {
+   "line": 150,
+   "addr": 21045
+  },
+  {
+   "line": 160,
+   "addr": 21103
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "RECOGNIZED": "REM ! CLEAR COMMON",
+  "OBJECT FILE": "S005.OBJ",
+  "PROGRAM": "20480 - 21666",
+  "LOCAL VARIABLES": "21667 - 21763",
+  "HIGHEST MEMORY LOCATION": "21763"
+ }
+}

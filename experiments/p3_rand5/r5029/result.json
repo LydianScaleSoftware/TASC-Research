@@ -1,0 +1,86 @@
+{
+ "id": "r5029",
+ "key": "fa3c2af7c2da9ac5",
+ "source": "10 REM! INTEGER I,K\n20 DEF FN F(T)=ABS((N2=C))\n30 XY%=NOT 1000<=-XY AND ((Y OR N2))<=((256>=127)):XY=XY% OR XY%\n40 GOSUB 40:HTAB Q1%\n50 GOSUB 80\n60 I=-((M=K*XY%)):PRINT:ON C GOTO 60,110,90,30\n70 GET Y%:I=Y% OR (C):RUN:Y=FRE(FRE(M$))<=I\n80 PRINT FN F(I),31781>=NOT ((-39));XY$;:Y%=40000+N2+VAL(XY$)<>7:PRINT XY,CHR$(Y)+\"\";\n90 XY%=INT(VAL(\"\")):M=XY% AND XY:RUN:Y%=M%-5-((XY+((M%<=C))))\n100 XY=FRE(M$+A$):PRINT POS(M$)\n110 SPEED=NOT Q1%\n120 FOR XY=(K<=((C OR M% AND N2))) TO (256)\n130 M%=RND(N2):Y%=((POS(\"HI\")>-M))*32767:Y=FRE(Y%)+POS(NOT Y%*Y)\n140 IF (100-32767) THEN Y%=I:Y=FRE(Y%)+POS(POS(LEFT$(XY$,VAL(A$))))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": 28672,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 937,
+ "obj_sha256": "e928a59a8abdecbf8278b619bda56192b08d5fca5fc6f423903a9a4dfc166b77",
+ "cycles": 111936018,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6103
+  },
+  {
+   "line": 40,
+   "addr": 6178
+  },
+  {
+   "line": 50,
+   "addr": 6187
+  },
+  {
+   "line": 60,
+   "addr": 6190
+  },
+  {
+   "line": 70,
+   "addr": 6229
+  },
+  {
+   "line": 80,
+   "addr": 6268
+  },
+  {
+   "line": 90,
+   "addr": 6363
+  },
+  {
+   "line": 100,
+   "addr": 6426
+  },
+  {
+   "line": 110,
+   "addr": 6453
+  },
+  {
+   "line": 120,
+   "addr": 6462
+  },
+  {
+   "line": 130,
+   "addr": 6500
+  },
+  {
+   "line": 140,
+   "addr": 6566
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "OBJECT FILE": "S009.OBJ",
+  "PROGRAM": "6064 - 7000",
+  "LOCAL VARIABLES": "28672 - 28731",
+  "HIGHEST MEMORY LOCATION": "28731"
+ }
+}

@@ -1,0 +1,99 @@
+{
+ "id": "r6276",
+ "key": "54052a5e3c2d57ec",
+ "source": "10 REM! INTEGER J\n20 DIM A$(3),P%(6,10),D%(11)\n30 IF (N2) THEN SHLOAD:FOR Q1=(A) TO (309) STEP (N2):REM! CLEAR CHAIN\n40 PRINT N2;\"X Y\";80/((N2*P%(J,A%)))<>W;:IF (C%) THEN RUN 70:GOTO 170:RECALL A\n50 Q1=XY%:IF (Q1 OR Q1) THEN 120\n60 J=PEEK(32767<5^A):LIST 10-20:A=J:A=1:N2$=\"TASC\"\n70 IF (XY%) THEN LOMEM: 16384:GOTO 170:SAVE:GOTO 70:TRACE\n80 STOP:M=XY%:NOTRACE:M=M:GOSUB 70\n90 M=D%(M*(A)):M%=W\n100 STORE B,C:M=C%:W=M AND M\n110 GOTO 170:& \"X:Y\",1:ON 7-C%-((XY%-32767<>31485)) GOTO 40,130,70,110:GOTO 130:REM! CLEAR COMMON\n120 PRINT:Q1=A%:M=FRE(Q1)+POS(NOT 40000+1-38):RUN\n130 PRINT 44964>=41921*((0.1*A)),\n140 TRACE:ON XY% GOTO 160,40:HTAB 3\n150 PRINT RIGHT$(N2$,((1<>W))-((881+M%)));C%;:STOP\n160 C%=-D%(PEEK(A)):IF (C% AND C%) THEN 70\n170 FOR Q1=(M) TO (P%(147 AND M%,.5)) STEP (A%+ATN(W)>=M):RUN\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 968,
+ "obj_sha256": "037d4a50476dbefec19b8fe683b68e7cb887e16689882a475f4f5fd7156aa1bc",
+ "cycles": 110921604,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6124
+  },
+  {
+   "line": 50,
+   "addr": 6195
+  },
+  {
+   "line": 60,
+   "addr": 6221
+  },
+  {
+   "line": 70,
+   "addr": 6282
+  },
+  {
+   "line": 80,
+   "addr": 6296
+  },
+  {
+   "line": 90,
+   "addr": 6317
+  },
+  {
+   "line": 100,
+   "addr": 6347
+  },
+  {
+   "line": 110,
+   "addr": 6371
+  },
+  {
+   "line": 120,
+   "addr": 6380
+  },
+  {
+   "line": 130,
+   "addr": 6440
+  },
+  {
+   "line": 140,
+   "addr": 6464
+  },
+  {
+   "line": 150,
+   "addr": 6487
+  },
+  {
+   "line": 160,
+   "addr": 6529
+  },
+  {
+   "line": 170,
+   "addr": 6570
+  }
+ ],
+ "info": {
+  "RECOGNIZED": "REM ! CLEAR COMMON",
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7031",
+  "LOCAL VARIABLES": "7032 - 7259",
+  "HIGHEST MEMORY LOCATION": "7259"
+ }
+}

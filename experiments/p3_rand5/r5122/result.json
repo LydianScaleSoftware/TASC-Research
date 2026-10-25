@@ -1,0 +1,90 @@
+{
+ "id": "r5122",
+ "key": "91816b3533f52dce",
+ "source": "10 REM! INTEGER *\n20 AB=-X\n30 PRINT B$+\"HI\"+Y$+W$+Y$;A%-A,31353;\n40 A%=B%>Z AND ((A AND 20))<>(40483)\n50 IN#NOT TAN(X)>=Z%:X=AB<ASC(LEFT$(B$,3))\n60 GOTO 110\n70 N2%=NOT ((-X^155)):SPEED=POS(W+((315+978))):B%=NOT ((EXP(7)+Z)):A=FRE(B%)+POS(W=A*ATN(X))\n80 IF (-A%) THEN W=A-LEN(\"A\")<W/((Z>0.1))\n90 READ AB:PRINT AB AND AB\n100 RUN 30:X=15795>=X:ON A GOTO 130,110\n110 READ Z:PRINT Z OR Z\n120 Y$=CHR$(B%):READ X:PRINT X AND X:W=14275:IF (W AND W) THEN 20\n130 B%=ASC(B$+\"\"):W=B% OR B%\n140 A=FRE(Y$):PRINT POS(B$)\n150 IF (NOT AB) THEN AB=Z-((-1.5>=B%)):A=FRE(AB)+POS((W)):PRINT LEFT$(\"HI\",W);51-X;CHR$(255 AND EXP(Z%));\n",
+ "options": {
+  "library": null,
+  "program": "HGR1",
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 16384,
+ "obj_len": 948,
+ "obj_sha256": "d04f27b1f852743e273ab5914093a95e5f5d4fbda7612553503f21555d4c331c",
+ "cycles": 105346525,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 16404
+  },
+  {
+   "line": 20,
+   "addr": 16404
+  },
+  {
+   "line": 30,
+   "addr": 16413
+  },
+  {
+   "line": 40,
+   "addr": 16472
+  },
+  {
+   "line": 50,
+   "addr": 16511
+  },
+  {
+   "line": 60,
+   "addr": 16552
+  },
+  {
+   "line": 70,
+   "addr": 16555
+  },
+  {
+   "line": 80,
+   "addr": 16649
+  },
+  {
+   "line": 90,
+   "addr": 16704
+  },
+  {
+   "line": 100,
+   "addr": 16728
+  },
+  {
+   "line": 110,
+   "addr": 16746
+  },
+  {
+   "line": 120,
+   "addr": 16770
+  },
+  {
+   "line": 130,
+   "addr": 16817
+  },
+  {
+   "line": 140,
+   "addr": 16847
+  },
+  {
+   "line": 150,
+   "addr": 16862
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "OBJECT FILE": "S002.OBJ",
+  "PROGRAM": "16384 - 17331",
+  "LOCAL VARIABLES": "17332 - 17362",
+  "HIGHEST MEMORY LOCATION": "17362"
+ }
+}

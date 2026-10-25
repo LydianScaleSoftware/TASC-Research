@@ -1,0 +1,90 @@
+{
+ "id": "r6084",
+ "key": "ea1ce80ff28c7102",
+ "source": "10 REM! INTEGER K\n20 DIM D$(3)\n30 Q1=P(3):X=X+((46470-W+((Z-Q1)))):Q1=X AND X:IF (B%) THEN DEL 10,20\n40 X=1E3:IF (X AND X) THEN 130\n50 RUN 110:W=FRE(\"X Y\"):PRINT POS(C$):GOTO 130:CONT\n60 X=FRE(Y$):PRINT POS(Y$)\n70 SHLOAD:CONT:GET M%:M%=M% AND (POS(Z))\n80 PRINT -((40*14804-P(Q1%)*P(Z%))),B$;RIGHT$(C$,X);:W=Q1%\n90 AB=B%:GOTO 70:Y$=MID$(RIGHT$(D$(Z%),P(M%))+MID$(D$(M%),5),PEEK(Q1))\n100 PRINT AB*P(Q1%)+Z%;C$;:SHLOAD:GOTO 110:SHLOAD\n110 SPEED=2.25:X=Q1:RECALL A:X=X:Y$=RIGHT$(MID$(B$+B$,-Z%),Q1>=49152-1.5)\n120 X=560<>-((X-1)):RECALL A:AB=X:AB=456\n130 IF (ABS(P(M%))) THEN RUN 80:IF ((P((W)))) THEN RUN 10:B$=\"HI\"\n140 Z=AB:X=Z OR Q1%:B$=\"A\"+MID$(\"123\"+B$,Q1%)\n150 IF (-POS(D$(B%))) THEN SAVE\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 847,
+ "obj_sha256": "61f181b9b0b9da351d98fc45d198b62660bdbfec28f918615b457a541f89b0ec",
+ "cycles": 104823977,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6131
+  },
+  {
+   "line": 50,
+   "addr": 6145
+  },
+  {
+   "line": 60,
+   "addr": 6164
+  },
+  {
+   "line": 70,
+   "addr": 6179
+  },
+  {
+   "line": 80,
+   "addr": 6200
+  },
+  {
+   "line": 90,
+   "addr": 6263
+  },
+  {
+   "line": 100,
+   "addr": 6320
+  },
+  {
+   "line": 110,
+   "addr": 6344
+  },
+  {
+   "line": 120,
+   "addr": 6398
+  },
+  {
+   "line": 130,
+   "addr": 6425
+  },
+  {
+   "line": 140,
+   "addr": 6461
+  },
+  {
+   "line": 150,
+   "addr": 6522
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S004.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6910",
+  "LOCAL VARIABLES": "6911 - 7023",
+  "HIGHEST MEMORY LOCATION": "7023"
+ }
+}

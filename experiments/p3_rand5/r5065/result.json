@@ -1,0 +1,94 @@
+{
+ "id": "r5065",
+ "key": "c3d99478d17ebe2a",
+ "source": "10 REM! INTEGER J\n20 DEF FN F(T)=Y\n30 IF (((W OR A<=AB))>1948) THEN RUN:AB%=504:Z=FRE(Y$+MID$(\"A\",39<>AB%)):PRINT POS(Q1$)\n40 Q1$=\"HI\"\n50 IF (-32767) THEN 80:READ AB:PRINT AB OR AB:A=Z*40000<=LEN(Y$)=Z:AB=FRE(A)+POS(2287)\n60 AB=J:Y$=\"TASC\"\n70 AB%=Z%:GOSUB 90\n80 HTAB 0:IF (((J<J))^W) THEN RUN:W=FRE(\"A\"):PRINT POS(M$)\n90 A%=FN F(NOT ((472/45018))):Z=A% AND Z:PLOT W%,FN F(A OR Z):COLOR=96\n100 IF (1E3=POS(Q1$)) THEN Z%=-Z\n110 READ Q1$,W%,AB%:A%=ASC(Q1$)\n120 RUN 150:PRINT:X=1\n130 FOR AB=(A%) TO (J) STEP (A%):M$=M$\n140 AB=883/((AB%/W-((7-3.14159)))):A=AB AND AB:Z=Z%:Y=Z OR Z\n150 AB=FN F(-7)*((NOT W%+A)):IF (AB OR AB) THEN 50:ON NOT ((FN F(W)-Y)) GOTO 20,50,80,40\n160 AB%=32767\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 891,
+ "obj_sha256": "f009caf704a46d87365d0c5ff0fd242e154659c75250cdb74a92214f0f9a6992",
+ "cycles": 109768926,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6094
+  },
+  {
+   "line": 40,
+   "addr": 6163
+  },
+  {
+   "line": 50,
+   "addr": 6177
+  },
+  {
+   "line": 60,
+   "addr": 6241
+  },
+  {
+   "line": 70,
+   "addr": 6263
+  },
+  {
+   "line": 80,
+   "addr": 6272
+  },
+  {
+   "line": 90,
+   "addr": 6317
+  },
+  {
+   "line": 100,
+   "addr": 6376
+  },
+  {
+   "line": 110,
+   "addr": 6399
+  },
+  {
+   "line": 120,
+   "addr": 6426
+  },
+  {
+   "line": 130,
+   "addr": 6438
+  },
+  {
+   "line": 140,
+   "addr": 6464
+  },
+  {
+   "line": 150,
+   "addr": 6506
+  },
+  {
+   "line": 160,
+   "addr": 6541
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S005.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6954",
+  "LOCAL VARIABLES": "6955 - 7010",
+  "HIGHEST MEMORY LOCATION": "7010"
+ }
+}

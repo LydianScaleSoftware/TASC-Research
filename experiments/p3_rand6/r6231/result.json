@@ -1,0 +1,23 @@
+{
+ "id": "r6231",
+ "key": "ac3344b9d1ca7e8f",
+ "source": "10 REM! DEFCOMMON W$,Y,Q1%\n20 DEF FN F(Z)=A%(Q1%)\n30 STOP:GOTO 20:&:AB%=NOT ((-((NOT 5))))\n40 CALL A%(AB%)\n50 IF (((((XY>W))-((XY AND M%))))*Z%) THEN LOMEM: 16384:M%=NOT FN F(7):IF (M% OR M%) THEN 240\n60 X$=\"HI\"+LEFT$(XY$,XY):GOTO 270:CONT\n70 PRINT:ON -((M%-XY AND 649-10)) GOTO 210,40,190,280\n80 DRAW -256=Q1%=POS(M%)/((B%(256,Z%)<>M%))\n90 FOR XY=(XY) TO (127<>XY) STEP (858):AB%=LOG(Q1%)-((-AB%-258))\n100 IF (AB*NOT ((-540))) THEN &:Q1%=-((NOT 39*523)):Y=B%(Z%,3.14159)-((M%<=23292))>M%:CONT:Z=Y\n110 READ Z:PRINT Z AND Z\n120 AB=W:PRINT M%-39461;:B%(Q1%,-((Z%<>XY))>-Z)=NOT AB%\n130 PRINT:B%(PEEK(-Y),M%)=-((1000^((M%>=AB%))))\n140 NOTRACE:NEXT XY:FOR XY=(AB%) TO (7-39=Q1%) STEP (-((20>W)))\n150 Z%=NOT ((234*((AB%/W))))\n160 Q1%=FRE(((M%>2))+Z):W=Q1% OR Q1%:W$=W$\n170 XY=((EXP(Z%)*((AB%*Q1%))))^M%:& \"X:Y\",1:Z=XY:GOSUB 40:GOTO 130\n180 M%=FRE(-W)-W:Z%=((B%(32767,Z%)/B%(M%,3)<>FN F(40980)))^INT(XY):IF (Z% AND Z%) THEN 140:XY$=\"X Y\"\n190 READ W:PRINT W AND W:ON VAL(W$)*ATN(AB%<Y) GOTO 70,260,250,70\n200 SAVE:Z=M%\n210 XY=W:LIST:Y=XY:POKE ((AB AND AB%))=((XY<874))<=W,AB*((Z+24))>=NOT AB:IF (Z%) THEN DEL 10,20\n220 X$=XY$+X$:PRINT MID$(\"123\"+W$+XY$,3.14159/((566 OR M%)));Q1%,M%,:XY=Z%*((40/Q1%))*-AB%\n230 GOTO 170:RECALL A\n240 FOR W=(B%(-INT(Z),XY+ASC(X$))) TO (VAL(X$)):M%=((100 OR Q1%))>=((100 AND 39))<>-Z%:Z=B%(((39 OR M%))+Y,ASC(\"\")=EXP(53))\n250 SPEED=Y:GOTO 280:REM! CLEAR COMMON\n260 GOTO 300:REM! CLEAR COMMON:GOTO 130:STORE B,C:XY$=XY$\n270 PRINT ((20>XY))*Q1%+AB%^0,XY$+STR$(XY)+W$;\"123\";\n280 W=((POS(Z%)=((B%(Q1%,Z%)<=Z))))+Q1%:STORE B,C:W=W:M%=24<=((XY AND Z%))-((Q1% AND Z%)):IF (M% AND M%) THEN 120:Z%=XY:LIST 10-20:XY=Z%\n290 NEXT W:TRACE:FOR AB=(127+Z%) TO (LOG(Q1%)<>Z)\n300 POP:PRINT \"123\";\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 260\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

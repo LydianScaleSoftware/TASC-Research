@@ -96,6 +96,7 @@ class Stmt:
     kind: str
     args: list[object] = field(default_factory=list)
     kw: bool = True  # began with a keyword token (an implicit LET does not)
+    then_colon: bool = False  # IF: a ':' directly after THEN (an empty statement follows)
 
 
 # ---------------------------------------------------------------- tokenizer view
@@ -211,6 +212,11 @@ def is_str(e: Expr) -> bool:
 def expr(c: Cursor, minprio: int = 0) -> Expr:
     left = unary(c)
     while True:
+        if (isinstance(left, Bin) and left.op == "+" and is_str(left) and c.peek() is not None
+                and c.peek() in (TOK["*"], TOK["/"], TOK["^"], TOK["NOT"])):
+            # PASS1 4555-4580: a pending concatenation cannot be reduced by an operator of
+            # higher input priority than + (9): INCOMPLETE
+            raise ParseError("INCOMPLETE")
         op = _binop_at(c)
         if op is None or op[1] <= minprio:
             return left
@@ -346,7 +352,9 @@ def statement(c: Cursor) -> Stmt:
             return Stmt("IFGOTO", [cond, line_number(c)])
         if c.peek() is not None and 48 <= c.peek() <= 57:  # type: ignore[operator]
             return Stmt("IFGOTO", [cond, line_number(c)])
-        return Stmt("IF", [cond])  # following statements on the line are conditional
+        st = Stmt("IF", [cond])  # following statements on the line are conditional
+        st.then_colon = c.at(":")
+        return st
     if c.take("ON"):
         e = expr(c)
         kind = "ONGOTO" if c.take("GOTO") else ("ONGOSUB" if c.take("GOSUB") else None)
@@ -363,6 +371,8 @@ def statement(c: Cursor) -> Stmt:
         return Stmt("RESUME")
     if c.take("FOR"):
         v = varref(c)
+        if v.suffix or v.subs is not None:
+            raise ParseError("SYNTAX: FOR needs a real or INTEGER-declared name")  # PASS1 395-445
         c.expect("=")
         a = expr(c)
         c.expect("TO")
@@ -375,6 +385,8 @@ def statement(c: Cursor) -> Stmt:
             vs.append(varref(c))
             while c.take(","):
                 vs.append(varref(c))
+        if any(v.suffix or v.subs is not None for v in vs):
+            raise ParseError("SYNTAX: NEXT variable")
         return Stmt("NEXT", [vs])
     if c.take("PRINT"):
         items: list[object] = []
@@ -490,6 +502,11 @@ def skip_statement(c: Cursor) -> None:
         c.p += 1
 
 
+# PASS1 dispatcher entries that go to the "WARNING / LINE NUMBER n / IGNORED" handler (2485)
+UNSUPPORTED = {TOK[k] for k in ("DEL", "SHLOAD", "TRACE", "NOTRACE", "LOMEM:", "RECALL", "STORE", "&", "LOAD",
+                                "SAVE", "CONT", "LIST")}
+
+
 def iter_statements(body: bytes):  # type: ignore[no-untyped-def]
     """Yields (kw, parse) per statement: kw = begins with a keyword token; parse(skip)
     parses the statement (or skips it when skip=True and returns None)."""
@@ -498,7 +515,9 @@ def iter_statements(body: bytes):  # type: ignore[no-untyped-def]
         if c.take(":"):
             continue
         kw = (c.peek() or 0) >= 0x80
-        is_data = c.at("DATA")
+        # PASS1 330: DATA and REM are exempt from the dead-code skip
+        is_data = c.at("DATA") or c.at("REM")
+        unsupported = c.peek() in UNSUPPORTED
         done = False
 
         def parse(skip: bool, c: Cursor = c, kw: bool = kw) -> Stmt | None:
@@ -513,7 +532,7 @@ def iter_statements(body: bytes):  # type: ignore[no-untyped-def]
                 raise ParseError(f"junk after statement at {c.p} in {c.b!r}")
             return st
 
-        yield kw, is_data, parse
+        yield kw, is_data, unsupported, parse, c.peek()
         if not done:
             raise ParseError("statement neither parsed nor skipped")
 

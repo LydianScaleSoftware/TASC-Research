@@ -1,0 +1,83 @@
+{
+ "id": "r5005",
+ "key": "a96acf39edb46f3f",
+ "source": "10 REM! INTEGER J\n20 INVERSE\n30 B%=-X:W=B% OR 5^POS(10)\n40 IF (N2) THEN RETURN\n50 X=((B%))*N2%\n60 N2%=X:A=FRE(N2%)+POS(C%):HTAB 478\n70 C%=3:IF (C% OR C%) THEN 20\n80 GET X:B%=X AND (LEN(M$)>=Y%):A=((-40 OR POS(A)))*N2:IF (A OR A) THEN 70\n90 PRINT 20-((NOT C%+256));:ON ((912>255=C%+XY))/XY GOTO 70:N2=(24)\n100 X=((A*XY>=B%/24))-COS(C%*Y%):Y%=ASC(CHR$(W)+B$):X=FRE(MID$(MID$(\"TASC\",N2)+\"TASC\",185 AND 256 AND 256-N2%)):PRINT POS(M$)\n110 PRINT:ON C% GOTO 90:REM! CLEAR CHAIN\n120 W=INT(255)<>J:FOR A=(((X*C%>=C%))*((B%/-XY))) TO (N2% AND N2%):GOTO 110\n130 PRINT J<>N2%<C%<((NOT X>=PEEK(2)));\"TASC\"+\"X Y\";100;:M$=B$\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 942,
+ "obj_sha256": "3a3b1665bff65b5f9b38eb17bc733ffc6c91a00264f3a715acb72df5974d92f1",
+ "cycles": 105576251,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6087
+  },
+  {
+   "line": 40,
+   "addr": 6120
+  },
+  {
+   "line": 50,
+   "addr": 6126
+  },
+  {
+   "line": 60,
+   "addr": 6138
+  },
+  {
+   "line": 70,
+   "addr": 6168
+  },
+  {
+   "line": 80,
+   "addr": 6191
+  },
+  {
+   "line": 90,
+   "addr": 6250
+  },
+  {
+   "line": 100,
+   "addr": 6310
+  },
+  {
+   "line": 110,
+   "addr": 6447
+  },
+  {
+   "line": 120,
+   "addr": 6462
+  },
+  {
+   "line": 130,
+   "addr": 6530
+  }
+ ],
+ "info": {
+  "RECOGNIZED": "REM ! CLEAR CHAIN",
+  "OBJECT FILE": "S005.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7005",
+  "LOCAL VARIABLES": "7006 - 7054",
+  "HIGHEST MEMORY LOCATION": "7054"
+ }
+}

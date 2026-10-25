@@ -1,0 +1,23 @@
+{
+ "id": "r6051",
+ "key": "76de6937ea77ca68",
+ "source": "10 REM! DEFCOMMON N2$,AB$,W\n20 N2=C-B%(COS(AB%)):W=N2 OR N2:W=40:IF (W AND W) THEN 110:X=RND(C%)<Y%-X<=((C%<C%))*100\n30 AB$=\"123\":PRINT N2;:SPEED=-(127-W)\n40 READ Y%:PRINT Y% OR Y%\n50 IF (C<=B>=Y%) THEN 60:COLOR=LEN(XY$):LIST 10-20\n60 IF (((INT(Y%)*INT(B%(7))))^((M%<W))) THEN LOAD \"F\":RUN 50\n70 N2=(M%)+((Y%-B%(AB%)))<=((3>N2 OR C%*127)):NOTRACE\n80 B%(C%)=B AND SIN(7):AB%=ABS(FRE(-470)):IF (AB% OR AB%) THEN 150:REM! CLEAR CHAIN\n90 LIST:N2=(NOT C%=B):X=N2 OR N2:NORMAL\n100 GOSUB 40\n110 RETURN:M%=1E3:X=M% AND M%\n120 HTAB COS(ASC(\"HI\")):B%((1000+B<>C%))=Y%:AB$=XY$\n130 CONT:RUN:B%(C%)=-819\n140 GOTO 130:REM! CLEAR CHAIN:RUN:DEL 10,20\n150 READ C%,AB%:X=NOT AB%\n160 C%=M%:SAVE:C=C%:X=N2=((B%(M%)>=((B OR AB%))))\n170 IF (X) THEN 80\n180 PRINT \"HI\";\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 140\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

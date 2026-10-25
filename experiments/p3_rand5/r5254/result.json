@@ -1,0 +1,90 @@
+{
+ "id": "r5254",
+ "key": "61dd218e623bc57f",
+ "source": "10 REM! INTEGER K\n20 PRINT X AND COS(A)^EXP(B),\"\";:IF (450-5) THEN 70:A=FRE(CHR$(Z%)):PRINT POS(W$)\n30 X=X\n40 HTAB POS(W$)<=(256)+-AB%\n50 RETURN:PRINT 2957;((Z%>=Z%))+PEEK(Q1%) OR SQR(-A),Z%;:ON A GOTO 140,80,40\n60 ONERR GOTO 150:Q1%=A\n70 B=NOT 24 OR ((26046>=Q1%))+(517):FOR Z=(Z) TO (AB%-Z+973)\n80 AB%=K:IF (AB% AND AB%) THEN 60\n90 Z%=100:X=Z% AND Z%:VTAB 39\n100 A=3+LEN(C$):X=A AND A:Z=Z%=B:B=Z AND Z\n110 DATA HI:XY%=-((2 OR 2.25)):Z=XY% OR XY%:READ Q1%:PRINT Q1% OR Q1%\n120 GET XY:Q1%=XY AND (A)\n130 PRINT Z%=470+X<=Z,RIGHT$(W$,24)+W$+RIGHT$(\"123\",Z%);\n140 GOTO 90\n150 XY%=39=Z:DATA 300,HI\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 909,
+ "obj_sha256": "e0e5d1bce0736073605a41904f299c9e931253157f1da5edc93889bb324cdee9",
+ "cycles": 103491816,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6163
+  },
+  {
+   "line": 40,
+   "addr": 6172
+  },
+  {
+   "line": 50,
+   "addr": 6199
+  },
+  {
+   "line": 60,
+   "addr": 6200
+  },
+  {
+   "line": 70,
+   "addr": 6214
+  },
+  {
+   "line": 80,
+   "addr": 6273
+  },
+  {
+   "line": 90,
+   "addr": 6302
+  },
+  {
+   "line": 100,
+   "addr": 6338
+  },
+  {
+   "line": 110,
+   "addr": 6401
+  },
+  {
+   "line": 120,
+   "addr": 6479
+  },
+  {
+   "line": 130,
+   "addr": 6503
+  },
+  {
+   "line": 140,
+   "addr": 6575
+  },
+  {
+   "line": 150,
+   "addr": 6578
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S014.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6972",
+  "LOCAL VARIABLES": "6973 - 7020",
+  "HIGHEST MEMORY LOCATION": "7020"
+ }
+}

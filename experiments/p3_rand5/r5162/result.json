@@ -1,0 +1,143 @@
+{
+ "id": "r5162",
+ "key": "be894213729c58e4",
+ "source": "10 DEF FN F(Z)=2510\n20 AB%=AB%^A<>A*3-INT(Q1%):C=AB% AND AB%\n30 READ W,W:A%=NOT Z:Z=POS(Y%):C=Z OR Z\n40 GOSUB 240\n50 HLIN Y%,(100) AT Q1%:A%=((7>Z))-255 AND 5:C=A% OR A%\n60 X=-((1000>((Y% OR Z)))):REM! CLEAR CHAIN\n70 POKE A%,((39^3<=990))*((983-100)):AB%=Z:IF (AB% AND AB%) THEN 80\n80 READ X:PRINT X AND X:GET AB%:Y%=AB% OR (256+POS(C<>A))\n90 A=POS(Z$):FOR Z=(SQR(563)=AB%) TO (NOT 3<=5)\n100 HLIN 2,(AB%^C<COS(3)) AT Q1%*828+TAN(AB%):CALL X\n110 Z=LOG(A%-X)<=((A%<AB%))-((W>=395)):Z=Z AND Z:GOTO 140:RUN\n120 VTAB EXP(FRE(A%))+W:PRINT:A%=A\n130 PLOT 3+C,NOT ((3*Q1%)):HCOLOR=((X OR 40 OR SGN(.5)))*Z\n140 AB%=-Y%/NOT ((AB% OR 65535)):PRINT XY$,-Y%;1,:READ AB%\n150 PRINT\n160 PRINT AB%,\n170 VTAB X=32767:X=777:C=X AND A%\n180 C=FRE(LEFT$(\"123\",Z AND 4159)+XY$):PRINT POS(Z$)\n190 GET X:AB%=X AND (((Q1%>=Y%))-((Y%+565)) OR C)\n200 GOTO 60:NEXT Z\n210 READ Y%,AB%\n220 W=127:REM! CLEAR COMMON\n230 DRAW X:Z$=MID$(\"\"+Z$+\"HI\",AB%^AB%<((AB%<>Y%)))\n240 HCOLOR=ASC(MID$(\"X Y\",AB%)+Z$)\n250 A%=A%\n260 IF (INT(FRE(Q1%+Q1%))) THEN 160:X=-((Q1% AND C))*((((X<>.5))*((AB%*127)))):FOR W=(A%) TO (C)\n270 C=Q1%:W=C AND C:A=C\n280 VTAB X:PLOT Z,-.001+100>-Y%:Z$=Z$+\"X Y\"+M$+M$\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1628,
+ "obj_sha256": "542bbcafca19c6951f5e18b8ae7f966498d5291e00427c431ad6fbf804fde687",
+ "cycles": 148558832,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6094
+  },
+  {
+   "line": 30,
+   "addr": 6148
+  },
+  {
+   "line": 40,
+   "addr": 6184
+  },
+  {
+   "line": 50,
+   "addr": 6187
+  },
+  {
+   "line": 60,
+   "addr": 6247
+  },
+  {
+   "line": 70,
+   "addr": 6274
+  },
+  {
+   "line": 80,
+   "addr": 6333
+  },
+  {
+   "line": 90,
+   "addr": 6384
+  },
+  {
+   "line": 100,
+   "addr": 6428
+  },
+  {
+   "line": 110,
+   "addr": 6488
+  },
+  {
+   "line": 120,
+   "addr": 6542
+  },
+  {
+   "line": 130,
+   "addr": 6563
+  },
+  {
+   "line": 140,
+   "addr": 6616
+  },
+  {
+   "line": 150,
+   "addr": 6679
+  },
+  {
+   "line": 160,
+   "addr": 6682
+  },
+  {
+   "line": 170,
+   "addr": 6691
+  },
+  {
+   "line": 180,
+   "addr": 6721
+  },
+  {
+   "line": 190,
+   "addr": 6766
+  },
+  {
+   "line": 200,
+   "addr": 6808
+  },
+  {
+   "line": 210,
+   "addr": 6811
+  },
+  {
+   "line": 220,
+   "addr": 6823
+  },
+  {
+   "line": 230,
+   "addr": 6832
+  },
+  {
+   "line": 240,
+   "addr": 6903
+  },
+  {
+   "line": 250,
+   "addr": 6933
+  },
+  {
+   "line": 260,
+   "addr": 6939
+  },
+  {
+   "line": 270,
+   "addr": 7003
+  },
+  {
+   "line": 280,
+   "addr": 7021
+  }
+ ],
+ "info": {
+  "RECOGNIZED": "REM ! CLEAR COMMON",
+  "OBJECT FILE": "S002.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7691",
+  "LOCAL VARIABLES": "7692 - 7745",
+  "HIGHEST MEMORY LOCATION": "7745"
+ }
+}

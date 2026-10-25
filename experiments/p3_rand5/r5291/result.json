@@ -1,0 +1,74 @@
+{
+ "id": "r5291",
+ "key": "68ae2dd3c22811f3",
+ "source": "10 REM! INTEGER J,I\n20 DIM B$(10,7)\n30 DEF FN F(T)=Z%\n40 HTAB -J\n50 READ W:PRINT W AND W:C$=MID$(RIGHT$(B$,I<Z%),M,-2):N2%=Z\n60 B$(Z%,N2%)=B$(LEN(C$+B$),-((-D(Z%)))):I=Z*0:Z=I OR I:N2%=-EXP(M%)<((-Z<=127))\n70 C=I:Z=C OR C:W=D(.001<=N2% AND J):READ C:PRINT C OR C\n80 C=J:Z=D(FN F(2<>N2%)):Z=7141-ASC(X$):M=Z OR Z\n90 GET AB:M%=AB AND (-Y%):RUN:PRINT:X=1:AB=FN F(J)*((C/J)):AB=AB OR ((FN F(606)>=N2%/256))^((256=Y%))\n100 ON ((LEN(\"\")>=((Z OR AB))))^I GOSUB 40,40,50:C=0:AB=C OR C\n110 CALL D(1 OR 100):Z%=TAN(N2%):W=Z% AND Y%:HLIN NOT 841,(ATN(-32767>((3>M%)))) AT FRE(W^256)*((-J AND Y%))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1151,
+ "obj_sha256": "1a0ca0ae2faf8a9b4aa23b7b5f7951f9d6e4c3d08a146e03980446e27ab77348",
+ "cycles": 114175646,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6094
+  },
+  {
+   "line": 50,
+   "addr": 6106
+  },
+  {
+   "line": 60,
+   "addr": 6184
+  },
+  {
+   "line": 70,
+   "addr": 6307
+  },
+  {
+   "line": 80,
+   "addr": 6388
+  },
+  {
+   "line": 90,
+   "addr": 6454
+  },
+  {
+   "line": 100,
+   "addr": 6571
+  },
+  {
+   "line": 110,
+   "addr": 6647
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S011.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7214",
+  "LOCAL VARIABLES": "7215 - 7505",
+  "HIGHEST MEMORY LOCATION": "7505"
+ }
+}

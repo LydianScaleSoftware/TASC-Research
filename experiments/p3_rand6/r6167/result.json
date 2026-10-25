@@ -1,0 +1,23 @@
+{
+ "id": "r6167",
+ "key": "1606f48f0b96a630",
+ "source": "10 REM! INTEGER K,I\n20 DIM A$(7,3),B$(5)\n30 Q1=C%<C%-((A%-Q1)):CONT:C=Q1:TRACE\n40 GOTO 70:REM! CLEAR CHAIN:GOTO 140:REM! CLEAR COMMON:PRINT LEN(RIGHT$(Q1$,Q1))*(255=Z%);VAL(C$);\n50 DATA -2.5,-2.5,1,1:CALL 10*A%*Q1\n60 TRACE\n70 XY=1000:READ XY\n80 XY=VAL(\"HI\")\n90 C=FRE(\"123\"):PRINT POS(Q1$):ONERR GOTO 60:GOTO 40:& \"X:Y\",1\n100 A%=A:C=FRE(A%)+POS(RND(PEEK(256*K)))\n110 INVERSE\n120 ON K GOTO 40,150:XY%=XY:C=XY% OR XY%:C=K^XY*C:A=C OR NOT I/((K OR -255))\n130 ON FRE(AB$)*LOG(A%<>I) GOTO 100:IF (((A%>=C))^((0>351))+PEEK(A%)) THEN RUN 160\n140 LOMEM: 16384\n150 END\n160 HTAB 1000:SAVE:IF (NOT (FRE(.001))) THEN GOTO 90:LOMEM: 16384\n170 Z%=(XY%*-A%):SAVE:A=Z%:A=I:Q1=A OR A:C%=127^NOT 6753+((C%+Z%)):Z=C% AND C%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 40\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

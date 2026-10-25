@@ -1,0 +1,23 @@
+{
+ "id": "r6179",
+ "key": "4e51d0a50650432b",
+ "source": "10 REM! INTEGER J,I\n20 DIM A%(8),D$(1),B(7)\n30 DEF FN F(X)=EXP(J>=J)+N2\n40 M=Q1*10<-40329+((A%(B%)-Y))\n50 GOTO 170:LIST 10-20:GOTO 40:STORE B,C\n60 CONT:A=A%(B(A%)>=514):A=A AND A:IF (J/A^C%=((Q1>Q1*A%(3.14159)))) THEN SAVE\n70 SPEED=TAN(40)<0:PLOT 49152,((Q1>=7<=((Y AND Q1))))*POS(CHR$(127)):HTAB 40\n80 GOTO 230:& \"X:Y\",1\n90 Q1=C%>Y:J=SQR(C%-7/N2%):N2=J OR J\n100 N2=I:N2=N2 AND N2:DATA \"A,B\",\"A,B\":LOMEM: 16384\n110 B%=M-((NOT 825<>C%)):Y=FRE(B%)+POS(((SQR(A)<>N2%+B(I)))*((N2%+256))):DEL 10,20\n120 N2=Q1:A=N2 OR N2\n130 DATA ,-2.5,X,\n140 Y=FRE(MID$(LEFT$(RIGHT$(Q1$,N2),SGN(A%)),((I OR N2%))<>LEN(\"A\"))):PRINT POS(B$)\n150 C%=A+((((.001<0))+((39>I)))):A=C% AND A%\n160 IF (Q1) THEN RUN:GET A%:I=A% OR (POS(Q1>=49152))\n170 CONT:HTAB Y+A:Y=FRE(\"123\"):Y=Y OR Y\n180 DEL 10,20\n190 REM! CLEAR CHAIN:Y=FRE(MID$(\"X Y\",M*N2%,1 AND J)):PRINT CHR$(N2%),\"HI\"+Y$,Q1;\n200 PRINT STR$(-B%-((623>=B(A%)))),TAN(A%<>I),NOT 39;:J=A%(10)>=24 AND 619*C% OR J*((J<C%)):Q1=J OR J\n210 Q1$=B$\n220 Q1$=CHR$(C%)+MID$(CHR$(0.1),255-A%,Y/A%(C%)):READ A:PRINT A AND A:FOR N2=(A%) TO (FN F(A%(C%)) AND FRE(1)>=Y)\n230 B%=FN F(((B(40000)<>N2))+((N2>39))):CONT:M=B%:D$(N2%)=\"123\"\n240 GET M:B%=M AND (N2%)\n250 GOTO 80:SHLOAD:FOR A=(-1) TO (FN F(I)):B$=B$\n260 NEXT A:RETURN\n270 I=EXP(N2/40+N2%):GOTO 260:HLIN NOT ((N2<=N2))-((A%-Y)),(N2) AT SGN(B(7)) OR Q1\n280 HLIN -20,(FN F(-((-A)))) AT N2\n290 NEXT N2:B%=FN F(ABS(B(3.14159) OR 39)):CONT:Q1=B%\n300 READ B$,Q1$:IF (Y) THEN RECALL A\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 190\nSYNTAX\n\n REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

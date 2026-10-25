@@ -1,0 +1,76 @@
+{
+ "id": "r6216",
+ "key": "a419a2d228362eb6",
+ "source": "10 REM! INTEGER I\n20 DIM D$(11)\n30 HTAB LOG((AB))<ASC(LEFT$(XY$,A)):XY%=-((256=AB<>SIN(AB)))\n40 IF (AB) THEN STORE B,C:GOTO 20:REM! CLEAR COMMON\n50 XY%=(I=B%(Z%,I) OR Z%):IF (XY% OR XY%) THEN 70\n60 GOTO 30:REM! CLEAR COMMON\n70 Y=256-.001/49152=((N2<>1<=Z%)):Y=B%(40,I=M%)*((N2+Y>I)):IF (Y OR Y) THEN 100:XY%=B%(I<=ATN(N2),-I<=((Z%<=AB))):& \"X:Y\",1:W=XY%\n80 GOTO 50:LOMEM: 16384\n90 Y=773^((((B%(0,XY%) OR AB))<I)):W=B%(XY%-353*Z%,(INT(127))):N2=W AND W:AB=(FRE(\"TASC\")):Y=AB AND M%\n100 VTAB 0.1:SPEED=AB=LEN(XY$+D$(1000)):B%(-COS(Z%),((W>=I+I))+((Z%<3.14159>=Y)))=((SGN(AB%)<XY%))*VAL(XY$)\n110 IF (NOT ((AB%<M%/XY%))) THEN RUN:XY%=XY%>=1000<>I>=VAL(XY$):IF (XY% OR XY%) THEN 10:RUN:PRINT:X=1\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1078,
+ "obj_sha256": "5bd70b11a78e3fe37d6b22ef22252d7df145863dcca07b3cbc19262bac66e76a",
+ "cycles": 115095547,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6153
+  },
+  {
+   "line": 50,
+   "addr": 6173
+  },
+  {
+   "line": 60,
+   "addr": 6226
+  },
+  {
+   "line": 70,
+   "addr": 6235
+  },
+  {
+   "line": 80,
+   "addr": 6399
+  },
+  {
+   "line": 90,
+   "addr": 6402
+  },
+  {
+   "line": 100,
+   "addr": 6524
+  },
+  {
+   "line": 110,
+   "addr": 6653
+  }
+ ],
+ "info": {
+  "RECOGNIZED": "REM ! CLEAR COMMON",
+  "RUN": "XY% = XY% >  = 1000 <  > I >  =  VA",
+  "OBJECT FILE": "S006.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7141",
+  "LOCAL VARIABLES": "7142 - 7461",
+  "HIGHEST MEMORY LOCATION": "7461"
+ }
+}

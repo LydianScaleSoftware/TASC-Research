@@ -1,0 +1,23 @@
+{
+ "id": "r6264",
+ "key": "0449566b3c73fc5a",
+ "source": "10 REM! INTEGER J\n20 GOTO 10:REM! CLEAR COMMON:STORE B,C:HTAB Z<=COS(B<B%)\n30 HCOLOR=-J:REM! CLEAR COMMON:N2=B*Z\n40 TEXT:GOTO 10:& \"X:Y\",1:Q1%=B%:IF (Q1% OR Q1%) THEN 50\n50 XY$=Y$:B=Q1 OR J:AB=B OR AB\n60 N2=FRE(\"123\"):PRINT POS(XY$)\n70 IF (-((70 OR Z))*((Q1*Z))) THEN LOMEM: 16384:READ W$\n80 J=-((Y%>=ASC(W$))):W$=MID$(Y$,((Q1-775))/Y%,(AB<=N2))\n90 N2=RND(AB)>(EXP(Q1)):AB=N2 OR N2:J=-24:Q1=FRE(J)+POS(ABS(((Y%<5))+32767)):HLIN Y%,(AB) AT -24\n100 CALL TAN(AB)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 20\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

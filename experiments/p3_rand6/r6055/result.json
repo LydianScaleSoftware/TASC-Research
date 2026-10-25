@@ -1,0 +1,83 @@
+{
+ "id": "r6055",
+ "key": "82f37ea5c61e7592",
+ "source": "10 REM! INTEGER J,I\n20 DIM A(9,11)\n30 FOR W=(COS(M%<X)--M%) TO (SQR(A)=VAL(C$)):DATA \"A,B\",-2.5,-2.5,HI:LOMEM: 16384\n40 STORE B,C\n50 N2=LOG(W):A=N2 AND N2:GOTO 110:& \"X:Y\",1:ON -((A(J,I)+100)) GOTO 30,130,10\n60 X=FRE(Z$):PRINT POS(C$):RUN 40\n70 W=D((1000))<=316\n80 N2=A(NOT ((A(AB%,740)<W)),(POS(\"TASC\"))):A=N2 AND N2:N2=(NOT 0 OR W=24592):A=N2 OR N2:PRINT\n90 READ N2:PRINT N2 AND N2:W=W+7+((I=936))>B%^POS(M%):LOMEM: 16384:X=W:REM! CLEAR COMMON\n100 PRINT Z$,J;STR$(INT(AB%)>=W%);\n110 FOR X=(J) TO (100>X+237<=((W<>X))*AB%)\n120 I=M:X=I OR M\n130 Z$=CHR$(A(-B%,W^A)):READ X:PRINT X AND X\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": 28672,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 789,
+ "obj_sha256": "915370b6df79109dc91a7ef35a8b2a44a43ef769e7391e97885eb3ac7badd034",
+ "cycles": 100796272,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6163
+  },
+  {
+   "line": 50,
+   "addr": 6163
+  },
+  {
+   "line": 60,
+   "addr": 6181
+  },
+  {
+   "line": 70,
+   "addr": 6202
+  },
+  {
+   "line": 80,
+   "addr": 6220
+  },
+  {
+   "line": 90,
+   "addr": 6312
+  },
+  {
+   "line": 100,
+   "addr": 6378
+  },
+  {
+   "line": 110,
+   "addr": 6411
+  },
+  {
+   "line": 120,
+   "addr": 6458
+  },
+  {
+   "line": 130,
+   "addr": 6479
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "RECOGNIZED": "REM ! CLEAR COMMON",
+  "OBJECT FILE": "S015.OBJ",
+  "PROGRAM": "6064 - 6852",
+  "LOCAL VARIABLES": "28672 - 29372",
+  "HIGHEST MEMORY LOCATION": "29372"
+ }
+}

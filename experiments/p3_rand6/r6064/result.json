@@ -1,0 +1,127 @@
+{
+ "id": "r6064",
+ "key": "d6e7d293b57b7e55",
+ "source": "10 DIM D(3)\n20 DEF FN F(X)=N2\n30 RECALL A:SPEED=1000=NOT 1000\n40 HLIN M,(127^-((XY%+N2))) AT FN F(LOG(-A%)):ON FN F(-Y) GOTO 200,200,140,90\n50 READ Y:M=M:N2=M AND M:N2%=((C%>=C%<((C% AND M))))-LEN(W$)\n60 PRINT N2<>A%;AB$;:READ N2:PRINT N2 AND N2:LIST\n70 IF (Q1) THEN 210:C$=W$+MID$(CHR$(20),A(2443,A%)<>N2%):XY%=-C%:TRACE:M=XY%\n80 GOTO 50:STORE B,C\n90 HTAB 846:ON NOT N2% GOTO 50,200,20,70:N2%=XY+24=857:M=N2% OR N2%\n100 HTAB VAL(\"HI\"+C$+AB$+C$)\n110 XY=ATN(NOT FN F(40)):Y=XY OR VAL(P$(M=49152))\n120 Q1=-12876>=M*M<>((60>N2<>127)):C%=-N2*((XY=XY)) AND NOT Y*5:RECALL A\n130 DATA 1,HI,300:GOSUB 190\n140 C%=39:LIST:Q1=C%:IF (XY%) THEN & \"X:Y\",1\n150 VTAB ABS(N2%>=XY<>947)\n160 FOR M=(VAL(W$) OR NOT FN F(40)) TO (XY%) STEP (5):REM! CLEAR COMMON\n170 LOMEM: 16384:C$=P$(A%):GOTO 140:REM! CLEAR CHAIN\n180 A%=((257+Q1))*LEN(AB$)*POS(0<=A%)\n190 RUN 60:XY=Q1 OR 100*((A(N2%,122)-Y)):IF (XY AND XY) THEN 220\n200 N2=FN F(Q1-1):M=766\n210 DEL 10,20:SAVE\n220 A(((XY>=C%))^N2*806,XY%)=FN F(POS(ASC(\"TASC\"))):XY%=-A%+N2:M=FRE(XY%)+POS(NOT 100):M=LEN(W$)\n230 READ Y:N2=Q1:CONT:XY=N2:NEXT M\n240 A%=N2:XY=A% AND A%:GOTO 230:RECALL A:TRACE\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1442,
+ "obj_sha256": "3b43368f46d29fd40ee1e25a7713f22c92e7d0ad86a48142ded6f3e06d2338ed",
+ "cycles": 139301701,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6094
+  },
+  {
+   "line": 40,
+   "addr": 6109
+  },
+  {
+   "line": 50,
+   "addr": 6172
+  },
+  {
+   "line": 60,
+   "addr": 6238
+  },
+  {
+   "line": 70,
+   "addr": 6271
+  },
+  {
+   "line": 80,
+   "addr": 6333
+  },
+  {
+   "line": 90,
+   "addr": 6336
+  },
+  {
+   "line": 100,
+   "addr": 6390
+  },
+  {
+   "line": 110,
+   "addr": 6428
+  },
+  {
+   "line": 120,
+   "addr": 6472
+  },
+  {
+   "line": 130,
+   "addr": 6562
+  },
+  {
+   "line": 140,
+   "addr": 6580
+  },
+  {
+   "line": 150,
+   "addr": 6600
+  },
+  {
+   "line": 160,
+   "addr": 6621
+  },
+  {
+   "line": 170,
+   "addr": 6667
+  },
+  {
+   "line": 180,
+   "addr": 6682
+  },
+  {
+   "line": 190,
+   "addr": 6727
+  },
+  {
+   "line": 200,
+   "addr": 6766
+  },
+  {
+   "line": 210,
+   "addr": 6784
+  },
+  {
+   "line": 220,
+   "addr": 6784
+  },
+  {
+   "line": 230,
+   "addr": 6905
+  },
+  {
+   "line": 240,
+   "addr": 6925
+  }
+ ],
+ "info": {
+  "RECOGNIZED": "REM ! CLEAR CHAIN",
+  "OBJECT FILE": "S004.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7505",
+  "LOCAL VARIABLES": "7506 - 8201",
+  "HIGHEST MEMORY LOCATION": "8201"
+ }
+}

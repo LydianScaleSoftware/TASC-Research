@@ -1,0 +1,23 @@
+{
+ "id": "r5059",
+ "key": "af09bc42acbb1517",
+ "source": "10 REM! INTEGER J\n20 DEF FN F(X)=W%\n30 PRINT W;MID$(C$,657<Q1 AND ASC(C$));EXP(XY),:REM! CLEAR CHAIN:VTAB J=-A\n40 GET N2%:Y%=N2% OR (N2%>-((Y OR 542))):Y=POS(Y%):XY=Y%\n50 CALL Y:GET A:J=A OR (-1):Y=POS(MID$(AB$,FN F(Y))):Y=Y OR Y\n60 PRINT 7086*((5<=W-N2%));RIGHT$(AB$,FRE(1));XY>Z%;:CALL Q1:GET W:Y%=W AND (SGN(XY))\n70 Y%=Y:Q1=Y% OR Y%:N2%=Y\n80 W%=Y%:CALL W%<((Y<=W%)) OR FN F(792):VTAB XY\n90 W=SGN(Q1)\n100 READ XY:PRINT XY OR XY\n110 IF (W+((127=W%<=N2%))) THEN RUN 240:C$=RIGHT$(AB$,Z%)\n120 RETURN:READ J:PRINT J AND J:PRINT RIGHT$(AB$+\"HI\",VAL(AB$))+RIGHT$(B$,N2%);\n130 Y=((SGN(XY) AND COS(XY)))*((XY*1E3/((XY<=J)))):IF (Y OR Y) THEN 100\n140 GOSUB 40\n150 XY=24:IF (XY AND XY) THEN 70\n160 B$=MID$(CHR$(Q1-1),1<=XY+W):J=TAN(W%):GOTO 270\n170 A=-((J*((Q1=Y%))))\n180 FOR Y=(NOT ((((1181-W))*Q1))) TO (SGN(W*40)>2) STEP (1000=Y%):Z%=Z%:W=Z% OR Z%:IF (Z%) THEN 10\n190 GOTO 120:A=N2%:C$=MID$(AB$,39,XY)+CHR$(Q1)+CHR$(W%)+AB$+C$\n200 REM! CLEAR COMMON:PRINT\n210 READ W%\n220 FOR W=(((W%>-10))+7) TO (((((Q1 OR Y))<XY))-N2%)\n230 PRINT 661;:READ Y%:PRINT Y% OR Y%:Y%=2.25:W=Y% OR Y%\n240 SPEED=987>=0.1:AB$=\"123\":REM! CLEAR CHAIN\n250 W%=Y:Q1=W% OR W%:GOTO 240:READ W\n260 A=65535:ON INT(256) GOSUB 70,80,250:END\n270 PRINT:C$=\"X Y\"\n",
+ "options": {
+  "library": null,
+  "program": "HGR1",
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 30\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

@@ -1,0 +1,169 @@
+{
+ "id": "r5147",
+ "key": "e27acd8bc14ceccf",
+ "source": "10 REM! INTEGER I,J\n20 REM! USECOMMON X,I,Q1$\n30 DIM D%(11)\n40 DEF FN F(T)=XY\n50 VTAB Y:Y=SQR(P%(A%)-XY OR B%<D%(5)):Q1=Y OR W%:IF (3*255) THEN IF (LOG(VAL(AB$))) THEN B%=POS(NOT Y)\n60 XY=W%:W%=40:W%=7:Q1=W% OR W%\n70 IF (Y) THEN B%=SGN(Y-P%(0))*((LEN(C$)*((I*J)))):IF (FRE(24)+40) THEN B%=NOT ((100 AND Y AND B%)):XY=B% AND Q1:RUN\n80 GOSUB 310:FOR X=(W%) TO (ABS(POS(C$))):Y=W OR 45999*256-Y*799:XY=Y AND Y\n90 P%(B%)=Y:P%(-((W*32767)) OR C%)=PEEK(POS(TAN(B%))):C$=Q1$\n100 Q1=B%:GOTO 180:A%=Q1^P%(121)>=A%\n110 D%(W%)=528-1E3\n120 HTAB 65535:X=-((-49152))^P%(A% AND 20):IF (256-39856) THEN 180\n130 D%(NOT A%)=((A%<((40<J))))+W:HCOLOR=256\n140 SPEED=FN F(A%)\n150 W=((Q1 AND 0-B%))+I:GOTO 160:PRINT 3;I;\n160 Q1=FRE(AB$):W=XY\n170 Q1=P%(J<=XY<=D%(A%)^P%(W%)):IF (-((D%(W%)-P%(C%)))+FN F(65535<>X)) THEN Y=FRE(AB$):PRINT POS(C$):Q1$=\"A\"\n180 XY=((C%-0>=FN F(I)))+((W=C%<>10)):HLIN NOT J-A% AND 10,(POS(XY)+((Y<>W))) AT B%:X=1<=W\n190 READ B%:ON C% GOTO 40,80,320,160:J=XY:IF (J AND J) THEN 320\n200 PRINT SQR(COS(X>=A%));-Q1^((D%(C%)^I))-FN F(10<=D%(W%));D%(A%)<NOT I AND 3,\n210 X=-((W%-((P%(255) AND 49152)))):IF (X OR X) THEN 290:READ J:PRINT J OR J:X=W%\n220 IF (FN F(742+((I-Y)))) THEN 50:Q1=10:REM! CLEAR COMMON\n230 C%=X:IF (C% OR C%) THEN 250:J=J:IF (J OR J) THEN 300\n240 IF (VAL(C$)) THEN POKE ((FRE(Y)>XY^705))*((P%(W%)<997=3)),NOT ((569+RND(Q1)))\n250 ON I GOTO 200:Q1=X:XY=Q1 AND Q1:AB$=STR$(X)\n260 GET W%:B%=W% OR (LOG(FRE(LEFT$(AB$,XY))))\n270 C$=Q1$+\"HI\"+MID$(Q1$,Q1,A%):DATA X:PRINT C$;20-W%;VAL(MID$(\"A\"+\"X Y\",Q1+J));\n280 READ C%,Q1:DATA X,\"A,B\",300:C$=LEFT$(C$+C$+\"\",33561)\n290 NEXT I:I=SIN(Y<=I):IF (B%) THEN Y=FRE(Q1$):PRINT POS(AB$)\n300 RUN 190\n310 W=B% AND 21084:Y=W AND W:X=COS(C%)+EXP(-W):XY=X OR XY\n320 W=X>=Y=Q1/B(B%)>=((FRE(I)>LEN(AB$))):J=809\n330 W%=EXP(X)-((20>Y))>844:SPEED=Q1+B(255)>((W OR 20))<J\n340 IF (FN F(256)) THEN 280\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6073,
+ "obj_len": 2428,
+ "obj_sha256": "4877626bdcd9dadd2c5dc1ed433fb974ba505e4a9983ec3242ff720fb3d14e6e",
+ "cycles": 202542233,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6093
+  },
+  {
+   "line": 40,
+   "addr": 6093
+  },
+  {
+   "line": 50,
+   "addr": 6103
+  },
+  {
+   "line": 60,
+   "addr": 6209
+  },
+  {
+   "line": 70,
+   "addr": 6233
+  },
+  {
+   "line": 80,
+   "addr": 6344
+  },
+  {
+   "line": 90,
+   "addr": 6403
+  },
+  {
+   "line": 100,
+   "addr": 6463
+  },
+  {
+   "line": 110,
+   "addr": 6496
+  },
+  {
+   "line": 120,
+   "addr": 6511
+  },
+  {
+   "line": 130,
+   "addr": 6572
+  },
+  {
+   "line": 140,
+   "addr": 6614
+  },
+  {
+   "line": 150,
+   "addr": 6623
+  },
+  {
+   "line": 160,
+   "addr": 6644
+  },
+  {
+   "line": 170,
+   "addr": 6656
+  },
+  {
+   "line": 180,
+   "addr": 6784
+  },
+  {
+   "line": 190,
+   "addr": 6895
+  },
+  {
+   "line": 200,
+   "addr": 6939
+  },
+  {
+   "line": 210,
+   "addr": 7050
+  },
+  {
+   "line": 220,
+   "addr": 7085
+  },
+  {
+   "line": 230,
+   "addr": 7113
+  },
+  {
+   "line": 240,
+   "addr": 7142
+  },
+  {
+   "line": 250,
+   "addr": 7220
+  },
+  {
+   "line": 260,
+   "addr": 7250
+  },
+  {
+   "line": 270,
+   "addr": 7283
+  },
+  {
+   "line": 280,
+   "addr": 7396
+  },
+  {
+   "line": 290,
+   "addr": 7457
+  },
+  {
+   "line": 300,
+   "addr": 7500
+  },
+  {
+   "line": 310,
+   "addr": 7506
+  },
+  {
+   "line": 320,
+   "addr": 7563
+  },
+  {
+   "line": 330,
+   "addr": 7629
+  },
+  {
+   "line": 340,
+   "addr": 7695
+  }
+ ],
+ "info": {
+  "RECOGNIZED": "REM ! CLEAR COMMON",
+  "OBJECT FILE": "S007.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6073 - 8500",
+  "NUMERIC COMMON": "6064 - 6070",
+  "STRING COMMON": "6071 - 6072",
+  "LOCAL VARIABLES": "8501 - 8654",
+  "HIGHEST MEMORY LOCATION": "8654"
+ }
+}

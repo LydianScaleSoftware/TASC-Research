@@ -1,0 +1,87 @@
+{
+ "id": "r5249",
+ "key": "7bdf325bd9ebd8ed",
+ "source": "10 REM! INTEGER J,I\n20 REM! USECOMMON B,Q1,I\n30 DIM A$(10)\n40 DEF FN F(T)=AB\n50 XY=AB\n60 M%=Y:Q1=M% OR M%:XY%=X%\n70 Q1=-((((XY%-5))^NOT Q1)):DATA X,HI:Y$=\"X Y\"\n80 DATA \"A,B\",\"A,B\"\n90 PRINT:GOTO 80\n100 COLOR=1.5^((((M% OR B)) AND 255-Y))\n110 PRINT B;M%;\n120 Y=Q1>((14048 AND X%))--J:AB=Y AND XY:IF (((LEN(Y$)+I))/NOT ((909/I))) THEN 100:HLIN -((AB+((100<=.001)))),(XY%) AT -((-24 OR 2-7))\n130 HTAB FN F(0=X%>=XY)\n140 Q1=NOT TAN(B)*7:GOTO 110\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6076,
+ "obj_len": 572,
+ "obj_sha256": "335edbdab4b388c3f0651a4b1db6a9346e573e8836d9a5f2750bd5ca516c2915",
+ "cycles": 87299080,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6096
+  },
+  {
+   "line": 40,
+   "addr": 6096
+  },
+  {
+   "line": 50,
+   "addr": 6106
+  },
+  {
+   "line": 60,
+   "addr": 6112
+  },
+  {
+   "line": 70,
+   "addr": 6139
+  },
+  {
+   "line": 80,
+   "addr": 6192
+  },
+  {
+   "line": 90,
+   "addr": 6206
+  },
+  {
+   "line": 100,
+   "addr": 6212
+  },
+  {
+   "line": 110,
+   "addr": 6248
+  },
+  {
+   "line": 120,
+   "addr": 6260
+  },
+  {
+   "line": 130,
+   "addr": 6338
+  },
+  {
+   "line": 140,
+   "addr": 6359
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S009.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6076 - 6647",
+  "NUMERIC COMMON": "6064 - 6075",
+  "LOCAL VARIABLES": "6648 - 6706",
+  "HIGHEST MEMORY LOCATION": "6706"
+ }
+}

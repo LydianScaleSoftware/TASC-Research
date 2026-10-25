@@ -1,0 +1,23 @@
+{
+ "id": "r6076",
+ "key": "dd46da626c4b8fef",
+ "source": "10 REM! INTEGER I\n20 REM! USECOMMON W,XY%,Z%\n30 DIM B(6)\n40 DEF FN F(Z)=40000\n50 READ I\n60 IF (XY%) THEN & \"X:Y\",1:GOSUB 10:POKE -B(XY%),I\n70 DATA HI:C$=\"X Y\"\n80 GOTO 30:IF (662) THEN IF (SQR(RND(FN F(XY)))) THEN PRINT CHR$(NOT XY)+XY$;LEFT$(C$+Y$,127)+CHR$(Z%^B%);\n90 DEL 10,20\n100 FOR W=(100) TO (LEN(Y$)+((B+XY))>((FRE(\"TASC\")>=((B%=255))))) STEP (B%)\n110 Q1=((Q1<588))+((.5 OR I))>=((XY%+Z%))*((255<Z%)):I=-XY%:Q1=I AND I\n120 W=FRE(\"A\"+LEFT$(\"TASC\",618)+MID$(Y$,B%,XY)):PRINT POS(C$):INPUT C$,B\n130 GOTO 40\n140 GOTO 110:REM! CLEAR CHAIN:GOTO 160:REM! CLEAR COMMON\n150 ON B(Y%) GOTO 120,20,150,180:B%=1.5^-Z%-((((B% AND 47110))+W)):C=B% AND B%:Z%=ASC(P$(Z%<>Y%))\n160 CONT\n170 SHLOAD\n180 PRINT W;\n190 LOMEM: 16384:I=C*B*FN F(B(32767))-((Z%>-Z%)):XY=FRE(I)+POS(Q1+40):IF (-751) THEN & \"X:Y\",1\n200 XY=299\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 140\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

@@ -1,0 +1,74 @@
+{
+ "id": "r5184",
+ "key": "c1735669195d867d",
+ "source": "10 REM! INTEGER I,J\n20 DIM A$(10)\n30 IF (POS(\"\")-AB) THEN A$(J)=C$:FOR B=(20-RND(0.1+P(32767,N2%))) TO (P(-A,PEEK(A))^RND(-A)):PRINT B;N2$+MID$(RIGHT$(C$,A),I,SQR(X));\n40 IF (FRE(AB*((C%>1000)))) THEN X=((96<>W%-100))*W:A=I-C%^SIN(W):IF (A AND A) THEN 80\n50 IF (AB>24) THEN RUN:AB%=(1.5):A=AB% AND AB%:GOTO 70\n60 RUN:PRINT:X=1\n70 RUN:B=P(-P(W%,3)/((32202<>5)),SGN(J+X)):B=B AND B\n80 PRINT ABS(SGN(TAN(J)));N2$,STR$(AB%=AB%-1000);\n90 A=W\n100 AB%=AB*40179:B=AB% AND J:AB=65535:READ C$,AB\n110 IF (P(RND(B),LEN(\"A\"))<=X-W) THEN 90:W=X<>W\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 989,
+ "obj_sha256": "955cdc1067336b589e001a7a6789a38f5f363c46516c83ab0b587cad025eed6d",
+ "cycles": 108406901,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6253
+  },
+  {
+   "line": 50,
+   "addr": 6334
+  },
+  {
+   "line": 60,
+   "addr": 6381
+  },
+  {
+   "line": 70,
+   "addr": 6396
+  },
+  {
+   "line": 80,
+   "addr": 6477
+  },
+  {
+   "line": 90,
+   "addr": 6522
+  },
+  {
+   "line": 100,
+   "addr": 6531
+  },
+  {
+   "line": 110,
+   "addr": 6585
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S004.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7052",
+  "LOCAL VARIABLES": "7053 - 7725",
+  "HIGHEST MEMORY LOCATION": "7725"
+ }
+}

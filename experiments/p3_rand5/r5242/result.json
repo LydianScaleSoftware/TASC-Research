@@ -1,0 +1,23 @@
+{
+ "id": "r5242",
+ "key": "030cf0181a5c5f69",
+ "source": "10 REM! INTEGER J,I\n20 REM! DEFCOMMON N2,Y%,Z$\n30 DEF FN F(T)=FRE(B%)\n40 Z$=B$:Y%=FN F(Y%):IF (Y% AND Y%) THEN 120:IF (TAN(3)) THEN 110\n50 A%=24:IF (A% OR A%) THEN 240\n60 ON ((Z<>3))+J/NOT Z GOTO 170,150,180,90\n70 Y=((C<>FN F(XY%)))-I:PRINT COS(TAN(N2)) OR A%;I*A%;ATN(((N2 AND A%))<=SQR(Y)),:END\n80 Y=867\n90 XY%=INT(32767):AB=XY% AND XY%:FOR I=(1-RND(N2)) TO (ASC(STR$(0)))\n100 N2=LEN(CHR$(B%))<=J:Y=N2 AND N2:IF (J) THEN C=I:RUN\n110 HLIN A%,(J) AT 127=15483=-Y>=ASC(Z$):Y%=J:IF (Y% OR Y%) THEN 40\n120 RUN 210:PRINT:X=1\n130 READ Y%:PRINT Y% OR Y%\n140 RUN:PRINT:X=1\n150 POKE ((I-XY%))^((5>Y)) AND -((B%<>AB)),C+((-Z>=37079*I)):Y$=B$:J=COS(N2=AB) OR Y:AB=J OR J\n160 HTAB B%>TAN(XY%):GR:B$=B$+Y$+Y$+CHR$(171)\n170 REM! CLEAR CHAIN:IF (Y%) THEN HTAB N2:IF (Y) THEN RUN\n180 PRINT:N2=((ASC(Y$)<Y))^-((B%<>I)):Y=N2 OR 32767\n190 PRINT Y$;562;\"TASC\";\n200 ONERR GOTO 100:D$(POS(Z$))=LEFT$(\"X Y\",Y% AND ASC(Z$))\n210 GOSUB 40\n220 HCOLOR=AB:PRINT C*POS(A%-3.14159),SQR(N2);:GET XY%:Y%=XY% AND (0)\n230 GOSUB 120:Y$=B$:IF (VAL(\"123\")/((XY%>=256))*((((B% AND I))>=127))) THEN Y=C\n240 RUN 120:PRINT:X=1\n250 FOR C=(432) TO (AB):Z=J:Y%=B%-((Y<((24=3))))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 170\nSYNTAX\n\n REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

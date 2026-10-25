@@ -1,0 +1,83 @@
+{
+ "id": "r5046",
+ "key": "fa57ce0ad6419f81",
+ "source": "10 REM! INTEGER I,J\n20 GET AB:I=AB AND (-32767)\n30 GOSUB 50:DATA ,,300,HI\n40 Z$=Q1$:FOR AB=(X) TO (N2)\n50 FOR A=(J) TO (913):IF (N2) THEN I=POS(\"TASC\"):AB=I OR I\n60 IF (M>I) THEN A$=\"TASC\"\n70 COLOR=I\n80 AB=FRE(RIGHT$(STR$(32767<A),((I AND AB))^-XY%)):PRINT POS(A$)\n90 C%=(38769^M)*((X*J)):AB=C% OR M:M=X:M=M AND M\n100 IF (-(N2>M)) THEN IF (3) THEN 130:N2%=AB%\n110 IF (AB%) THEN M=FRE(RIGHT$(\"123\"+A$,C%*5)+A$):PRINT POS(Q1$):HCOLOR=-LEN(Z$)=AB%:GOSUB 110\n120 HCOLOR=(XY%):AB=SQR(SGN(C%)):A=FRE(AB)+POS(29)\n130 GOTO 90:COLOR=X:IF (J) THEN 100\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 684,
+ "obj_sha256": "5e5060a9a2dcc906574683f18eb19ce18d1abd0a5bc5d7a95d15246cad21cdf4",
+ "cycles": 97713813,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6105
+  },
+  {
+   "line": 40,
+   "addr": 6123
+  },
+  {
+   "line": 50,
+   "addr": 6146
+  },
+  {
+   "line": 60,
+   "addr": 6191
+  },
+  {
+   "line": 70,
+   "addr": 6221
+  },
+  {
+   "line": 80,
+   "addr": 6227
+  },
+  {
+   "line": 90,
+   "addr": 6284
+  },
+  {
+   "line": 100,
+   "addr": 6335
+  },
+  {
+   "line": 110,
+   "addr": 6368
+  },
+  {
+   "line": 120,
+   "addr": 6451
+  },
+  {
+   "line": 130,
+   "addr": 6487
+  }
+ ],
+ "info": {
+  "OR M": "M = X:M = M AND M",
+  "OBJECT FILE": "S006.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6747",
+  "LOCAL VARIABLES": "6748 - 6795",
+  "HIGHEST MEMORY LOCATION": "6795"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "r6215",
+ "key": "ff6d84eec8153d36",
+ "source": "10 REM! INTEGER I\n20 DIM A%(2,8),P$(12)\n30 GOTO 30:REM! CLEAR CHAIN:AB$=B$(AB^24*Y,W%):IF (W%/A%(M%,A%)) THEN 240\n40 READ Q1:PRINT Q1 OR Q1\n50 GET Y:I=Y AND (A):A=W%/((24-Q1<=((A>=AB)))):VTAB ATN(W)\n60 DATA X,\n70 A=NOT I*POS(I) AND Y:IF (A OR A) THEN 250:IF (Y%<>A%(A%,I)>=W/32767<=A) THEN &\n80 READ A:PRINT A OR A:FOR W=(COS(ASC(\"123\"))) TO (COS(I)):IF (COS(A%)) THEN GOTO 210:SHLOAD\n90 STORE B,C\n100 W%=436:DEL 10,20:Y=W%:GR\n110 GET AB:W%=AB OR (TAN(A%(M%,32767)<=7)-W):PLOT W,Q1\n120 READ W:PRINT W AND W:PRINT LEFT$(\"TASC\",0+((A>=A%(3,Y%))));STR$(A%*W%),:AB=RND(I)\n130 NEXT\n140 IF (M%/I<>M%) THEN 180:Y=PEEK(FRE(2050))>=INT(M%)+((AB-10)):A=I:Q1=A OR A\n150 GOTO 30:LOMEM: 16384:A%=A:LIST 10-20:W=A%\n160 STOP\n170 GOTO 180:SAVE\n180 PRINT Q1>((I AND AB))/A%;\n190 Q1=FRE(RIGHT$(MID$(\"X Y\",I),POS(B$(I,M%)))+MID$(LEFT$(B$(Y%,A%),1E3),127-2)):PRINT POS(N2$):RUN\n200 GOTO 210:REM! CLEAR COMMON\n210 I=Q1:NOTRACE:Q1=I:COLOR=VAL(\"123\")<>Y+A<>((RND(A%)>800*A%(M%,1000))):I=I:IF (I AND I) THEN 260\n220 SPEED=W%:IF (Y) THEN &:GET Y%:W%=Y% AND ((A%))\n230 Y%=794\n240 STORE B,C\n250 PRINT AB$;AB>LEN(STR$(Y%));\n260 Y=Y%:DEL 10,20:AB=-((A%(.5,M%)^((A%(M%,Y%)<>Q1))))\n270 FOR AB=(Q1) TO (W%) STEP (A):SHLOAD:RUN\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 30\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

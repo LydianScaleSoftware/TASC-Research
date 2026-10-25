@@ -1,0 +1,23 @@
+{
+ "id": "r6091",
+ "key": "f3d897d2febefaf8",
+ "source": "10 DIM A(2),P$(10)\n20 DEF FN F(T)=32767<>XY%<N2\n30 GOTO 30:N2=FN F(Z):Z=N2 AND FRE(LEFT$(Y$,B%)+N2$+P$(M%))\n40 N2$=Y$\n50 XY$=\"A\":GOTO 40:REM! CLEAR CHAIN:TRACE\n60 M%=B-N2:W=M% OR Z:Z%=3236:LIST:Z=Z%\n70 C=EXP(SQR(24)*((100-A(Z%))))\n80 LOMEM: 16384:CALL FRE(XY$+Y$)<>-((XY%<=XY%))\n90 IF (VAL(CHR$(B))=FRE(FN F(XY%))) THEN TRACE\n100 Y$=CHR$(Z%)\n110 DATA ,X,300:P$(((C^XY%<=B+W))*((45429*Z>2.25-B%)))=LEFT$(N2$,SQR(Z))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 50\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

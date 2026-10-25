@@ -1,0 +1,23 @@
+{
+ "id": "r6106",
+ "key": "1f65e90a03ce0a1b",
+ "source": "10 REM! INTEGER K,J\n20 DEF FN F(X)=RND(ASC(STR$(X)))\n30 C=-((1E3 OR 40000)):A=FRE(C)+POS(K):IF (J<>24) THEN IF (C OR A) THEN PRINT A$;:LIST\n40 GOTO 40:REM! CLEAR COMMON:PRINT 238;N2$+\"TASC\";FN F(32767=J)<Q1%,:READ B\n50 RUN 120\n60 PRINT ((-AB%-FN F(J)))*K;FRE(17195),65535+NOT W;:AB%=K:GOTO 40:DEL 10,20\n70 DATA HI,HI,:NORMAL\n80 W=-((-W)):B=FRE(W)+POS(((A AND POS(\"123\")))*C):ON C GOTO 110:RUN\n90 N2$=RIGHT$(MID$(\"HI\",W,10),X)+MID$(X$,K)+\"A\":X=Q1%\n100 HCOLOR=-FN F(C<>A)\n110 GOTO 90:SAVE:J=-FRE(\"X Y\"):B=J OR J:IF (K>=317) THEN W=FN F(A AND C>Q1%):C=W AND C\n120 HCOLOR=C:REM! CLEAR CHAIN:DATA 1,,X,HI\n130 FOR C=(NOT 698^A%>A) TO (40/((((C AND C))+W%)))\n140 FOR A=(40) TO (((C<>C))*0+W%) STEP (((A% AND B AND A%))/((219*152*((K<=3))))):GET J:J=J OR (W%*((((B-1.5))*((W%>=X)))))\n150 PRINT \"A\";\n160 DATA 1,X,\"A,B\",X\n170 LIST 10-20\n180 B=FRE(CHR$(AB%<X))\n190 IF (A) THEN ON FN F(((B<>Q1%))*((752>=A))) GOTO 210,50\n200 GOSUB 220:&\n210 RUN 150\n220 ON 5 GOSUB 80,30,190\n230 PLOT X=((798 OR .001+20)),AB%:READ C,J\n240 GOTO 80:SHLOAD:HCOLOR=65535:IF (((-B*K))^((-W-X))) THEN LOAD \"F\"\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 40\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

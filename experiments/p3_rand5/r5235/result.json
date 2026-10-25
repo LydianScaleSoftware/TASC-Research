@@ -1,0 +1,114 @@
+{
+ "id": "r5235",
+ "key": "90766c28c9e04919",
+ "source": "10 REM! INTEGER I,J\n20 READ Z%:PRINT Z% AND Z%:GOSUB 150\n30 Z%=AB:IF (Z% AND Z%) THEN 10:IF ((C)<>32767) THEN 110\n40 IF (C) THEN 200:N2=((N2%-985+-AB))*-((W>=W)):HTAB I\n50 READ W:PRINT W AND W:N2=7\n60 C=POS(M%)>=256:AB=C OR C:B=Z%:W=LEN(C$+C$)-((FRE(B)+(N2)))\n70 IF (47276) THEN 190\n80 B=N2:IF (-321) THEN 170\n90 I=LOG(N2%<=1000 OR (W%)):AB=FRE(I)+POS(POS(MID$(LEFT$(\"\",65535),C,2.25))):PRINT M%+B;\n100 IF (SGN(-J)) THEN C=AB:ON 1000 GOTO 120,210:W=FRE(C$):PRINT POS(W$)\n110 CALL 3:FOR C=(NOT 255) TO (C<33620<>((-M%>M%^65535)))\n120 A$=A$\n130 IF (W OR POS(N2%)) THEN RUN 140:M%=AB:B=FRE(STR$(C)):PRINT POS(C$)\n140 B=Z%:IF (EXP(100*NOT J)) THEN 90\n150 HCOLOR=(M%+W%) AND ((40315 OR W))-((C>=1E3)):DATA -2.5,-2.5,-2.5,:READ W%\n160 FOR W=(B) TO (W%) STEP (69+C-255>=SQR(NOT J)):N2=POS(Z%)+((LOG(10)<=J)):NEXT W\n170 XDRAW ((TAN(N2)<N2%))-((867 AND 14736)):FOR AB=(C) TO (W)\n180 HCOLOR=FRE(A$):C=1:W=C OR C\n190 READ Z%,W%\n200 RUN 80:N2=FRE(I):AB=N2 AND B:ON 324 GOTO 130,60\n210 I=FRE(20*691)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1249,
+ "obj_sha256": "ed7c0b13fb14dbbbca1e739b0555e849dcb0932b69eaa67273f3043dfb942afa",
+ "cycles": 124061099,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6111
+  },
+  {
+   "line": 40,
+   "addr": 6134
+  },
+  {
+   "line": 50,
+   "addr": 6181
+  },
+  {
+   "line": 60,
+   "addr": 6202
+  },
+  {
+   "line": 70,
+   "addr": 6259
+  },
+  {
+   "line": 80,
+   "addr": 6267
+  },
+  {
+   "line": 90,
+   "addr": 6286
+  },
+  {
+   "line": 100,
+   "addr": 6370
+  },
+  {
+   "line": 110,
+   "addr": 6421
+  },
+  {
+   "line": 120,
+   "addr": 6486
+  },
+  {
+   "line": 130,
+   "addr": 6492
+  },
+  {
+   "line": 140,
+   "addr": 6530
+  },
+  {
+   "line": 150,
+   "addr": 6555
+  },
+  {
+   "line": 160,
+   "addr": 6628
+  },
+  {
+   "line": 170,
+   "addr": 6707
+  },
+  {
+   "line": 180,
+   "addr": 6754
+  },
+  {
+   "line": 190,
+   "addr": 6772
+  },
+  {
+   "line": 200,
+   "addr": 6784
+  },
+  {
+   "line": 210,
+   "addr": 6808
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S015.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7312",
+  "LOCAL VARIABLES": "7313 - 7362",
+  "HIGHEST MEMORY LOCATION": "7362"
+ }
+}

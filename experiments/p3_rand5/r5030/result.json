@@ -1,0 +1,70 @@
+{
+ "id": "r5030",
+ "key": "33ab4ec960ebcae6",
+ "source": "10 DIM P$(10)\n20 M$=C$:GOSUB 40\n30 READ B%,Y:Q1=N2%:IF (Q1 AND Q1) THEN 90\n40 GOTO 30:PRINT -Y%>=((7<>AB))-Y%,:RUN:PRINT:X=1\n50 HLIN Y%>=3,(FRE(AB%)) AT Q1<AB*M<=((Y<((X OR AB))))\n60 HCOLOR=((NOT Y<=-24498))+((5>Y>Y%))\n70 Q1=POS(A$+MID$(M$,Y%))\n80 FOR Y=(Q1 AND VAL(M$)) TO (((((X OR Y%)) AND B%))<=Q1)\n90 IF (Q1) THEN RUN 80:DATA X,300,-2.5:P$(-((FRE(P$(B%))=256)))=LEFT$(C$,SIN(AB))+\"123\"\n100 AB%=B%+B%+((AB%<=X))=Y:DATA 300,,-2.5\n",
+ "options": {
+  "library": 4096,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 8109,
+ "obj_len": 660,
+ "obj_sha256": "0f9edb6226772060b287b8b85dd3b43c5746b815a4618d4af7ed83c6912439cd",
+ "cycles": 92443334,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 8129
+  },
+  {
+   "line": 20,
+   "addr": 8129
+  },
+  {
+   "line": 30,
+   "addr": 8141
+  },
+  {
+   "line": 40,
+   "addr": 8182
+  },
+  {
+   "line": 50,
+   "addr": 8194
+  },
+  {
+   "line": 60,
+   "addr": 8254
+  },
+  {
+   "line": 70,
+   "addr": 8302
+  },
+  {
+   "line": 80,
+   "addr": 8329
+  },
+  {
+   "line": 90,
+   "addr": 8379
+  },
+  {
+   "line": 100,
+   "addr": 8473
+  }
+ ],
+ "info": {
+  "LIBRARY": "4096 - 8108",
+  "OBJECT FILE": "S010.OBJ",
+  "PROGRAM": "8109 - 8768",
+  "LOCAL VARIABLES": "8769 - 8836",
+  "HIGHEST MEMORY LOCATION": "8836"
+ }
+}

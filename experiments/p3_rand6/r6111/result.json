@@ -1,0 +1,23 @@
+{
+ "id": "r6111",
+ "key": "fc59fa37386b37b8",
+ "source": "10 REM! INTEGER K,I\n20 DIM A%(12),D%(3,1),P(9)\n30 DEF FN F(X)=3\n40 HCOLOR=255>256>=ASC(STR$(AB))\n50 W$=\"TASC\":GOTO 250:REM! CLEAR COMMON:READ B%:PRINT B% OR B%\n60 B%=XY:AB=B% OR B%:FOR Q1=(611) TO (VAL(\"X Y\")-PEEK(1)=PEEK(K))\n70 NEXT Q1\n80 N2%=AB<=M=2:XY=FRE(N2%)+POS(-((LEN(\"HI\")+255)))\n90 POKE ((((Q1 OR K))*ASC(\"123\")))^((D%(M%,X%)*B%<>FRE(P(X%)))),PEEK(RND(Z<=B%))\n100 POKE SGN(XY),40\n110 RESTORE:PRINT 281;W$,FN F(X%) AND POS(W$),:AB=M\n120 REM! CLEAR COMMON:CONT\n130 K=NOT ((NOT ((32767-2.25)))):M=K AND K\n140 RUN:Q1=XY:&\n150 D%(((SQR(XY)=PEEK(32827)))-796,NOT ((Z>=P(I))))=K:N2%=M\n160 W$=Y$:REM! CLEAR CHAIN:GET XY:X%=XY AND (40000<>-634=NOT 39)\n170 SHLOAD\n180 W$=RIGHT$(STR$(Q1>3),255-D%(M%,K)<=Z):Y$=Y$+W$:AB=NOT 0*((1/I))*NOT X%:IF (AB OR AB) THEN 250\n190 B%=AB:LOMEM: 16384:Q1=B%:Z=255:AB=Z AND NOT I:CONT\n200 & \"X:Y\",1\n210 GOTO 230:Y$=LEFT$(Y$,SQR(FN F(Z))):PRINT\n220 FOR K=(Z) TO (-((AB-P(20))) OR 127):PRINT K;NOT P(K+18831),EXP(P(X%))^XY+((Z<>TAN(X%)));:IF (((10<>256))--I) THEN SHLOAD\n230 AB=-A%(I):Q1=AB OR K:Q1=-0\n240 IF (B%) THEN RECALL A:AB=5:AB=AB OR AB:M=((TAN(AB)+-I))/((AB/((A%(100)<>AB)))):XY=M OR Z\n250 ON ((M%<>B%))^SQR(24)=Q1 GOTO 200,100,70,200:Z=FN F(N2%+Q1):M=Z AND ((100<>XY+XY))*813\n260 XY=Z\n270 W$=\"123\":AB=-((M%-230=2*P(24))):IF (AB AND AB) THEN 230\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 50\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

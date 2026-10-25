@@ -1,0 +1,91 @@
+{
+ "id": "r6136",
+ "key": "e0c4d32f1d2e3b63",
+ "source": "10 DIM A$(9)\n20 DEF FN F(X)=652^A%\n30 IF (NOT ((((7<=1000))-((20+N2%))))) THEN READ N2:PRINT N2 AND N2:Y=FN F(((N2<=Y))*2.25):B=Y AND Y\n40 IF (N2) THEN STORE B,C:AB=M%\n50 FOR AB=(POS(MID$(\"A\",M%)) OR AB%) TO (NOT B)\n60 READ C$,AB:RETURN:M%=255-31\n70 IF (N2%<N2%) THEN 150:AB=N2%:Y=AB OR AB:IF (AB%) THEN RUN\n80 N2=24+B\n90 DATA 300,\"A,B\",-2.5:GOTO 100:& \"X:Y\",1\n100 STORE B,C\n110 AB=B:Y=AB AND N2:FOR N2=(A) TO (TAN(-((N2%-A%))))\n120 FOR N2=(N2%*A%*((8/N2%))+((NOT 32767<=N2*M%))) TO (N2=-((AB%>N2%)))\n130 GET N2:N2%=N2 OR (((A%<>A))*Y=A):GOSUB 60:GOTO 60:REM! CLEAR COMMON\n140 FOR Y=(1000) TO (AB):N2%=ABS(M%)/B:IF (AB%+-FN F(M%)) THEN REM! CLEAR COMMON\n150 A%=A%-119+((N2%+100)) AND AB^831<INT(Y)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": 28672,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1015,
+ "obj_sha256": "b2d763efe5d3bdaa70fdd7c528881bb936f04393ae50cbd6c9d0cd6611aca170",
+ "cycles": 111883671,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6100
+  },
+  {
+   "line": 40,
+   "addr": 6194
+  },
+  {
+   "line": 50,
+   "addr": 6214
+  },
+  {
+   "line": 60,
+   "addr": 6262
+  },
+  {
+   "line": 70,
+   "addr": 6290
+  },
+  {
+   "line": 80,
+   "addr": 6331
+  },
+  {
+   "line": 90,
+   "addr": 6343
+  },
+  {
+   "line": 100,
+   "addr": 6365
+  },
+  {
+   "line": 110,
+   "addr": 6365
+  },
+  {
+   "line": 120,
+   "addr": 6421
+  },
+  {
+   "line": 130,
+   "addr": 6498
+  },
+  {
+   "line": 140,
+   "addr": 6549
+  },
+  {
+   "line": 150,
+   "addr": 6615
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "RECOGNIZED": "IF (AB% +  -  FN F(M%)) THE",
+  "OBJECT FILE": "S000.OBJ",
+  "PROGRAM": "6064 - 7078",
+  "LOCAL VARIABLES": "28672 - 28743",
+  "HIGHEST MEMORY LOCATION": "28743"
+ }
+}

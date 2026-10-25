@@ -1,0 +1,66 @@
+{
+ "id": "r6054",
+ "key": "ac33f1d9d0153d7c",
+ "source": "10 DEF FN F(T)=-XY^INT(A)\n20 M%=Q1%=-((A+A%)):XY=M% OR M%\n30 HTAB EXP(FRE(VAL(B$))):IF (FN F(FN F(NOT 1000))) THEN 50:ON ATN(-X%) GOTO 70\n40 IF (X%*Q1%>0.1/M OR 291-B) THEN TRACE:GET B:X%=B AND (Q1%):RUN:PRINT:X=1\n50 IF (32767>=((24<B))-((2737+X%))) THEN 70:&:PRINT W$;\n60 XY=ASC(\"123\"):A=XY AND XY:Y=0:IF (Y OR Y) THEN 80\n70 GOSUB 40:Y=XY*M%:PRINT ((ASC(A$)>LEN(A$)))^NOT 20;\n80 GOTO 20:RECALL A:FOR Y=(A%*((B<40 AND A<=Y))) TO (((1.5-XY))/-XY>=930)\n90 IF (M%) THEN GOTO 50\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 698,
+ "obj_sha256": "3630f4e3ace4b3e11d41ee0d2d69d9e4739703a77bc7c6c91c17d02b92203b69",
+ "cycles": 93787434,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6112
+  },
+  {
+   "line": 30,
+   "addr": 6151
+  },
+  {
+   "line": 40,
+   "addr": 6191
+  },
+  {
+   "line": 50,
+   "addr": 6274
+  },
+  {
+   "line": 60,
+   "addr": 6312
+  },
+  {
+   "line": 70,
+   "addr": 6377
+  },
+  {
+   "line": 80,
+   "addr": 6434
+  },
+  {
+   "line": 90,
+   "addr": 6437
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S014.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6761",
+  "LOCAL VARIABLES": "6762 - 6820",
+  "HIGHEST MEMORY LOCATION": "6820"
+ }
+}

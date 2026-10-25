@@ -1,0 +1,23 @@
+{
+ "id": "r6078",
+ "key": "dbe1dd471578a790",
+ "source": "10 DIM B$(8),A$(3)\n20 SPEED=N2%:GOSUB 100:M=((M+Y%))/850>=D%(39 AND W%):X=M OR M\n30 GOTO 70:SAVE:W%=.001^FRE(A$+A$)\n40 GOTO 110:SAVE:POKE ((EXP(M)<X))+AB%,376<Q1\n50 IF ((100)) THEN LIST\n60 PRINT N2,:Q1=-N2:GET Q1:W%=Q1 OR (D%(AB%))\n70 GET N2%:AB%=N2% AND (TAN(2)):GOTO 10:LOAD \"F\"\n80 Z=AB%:TRACE:N2=Z:IF (((AB%<=2.25))-10) THEN LIST 10-20\n90 &:FOR X=(3<=D%(N2%) AND ((5 OR N2%)) OR 23368 AND AB%>=D%(40)) TO (24):GOSUB 90\n100 RESTORE:ON 40112 GOTO 130,150,130,90:M=-Y%\n110 A$=\"TASC\":NEXT X:HLIN 101+NOT ((Z AND N2)),(((W% AND D%(W%)))*ATN(1000)>=39) AT D%(2)\n120 AB$=\"HI\":B$(5)=A$+\"\"\n130 GOTO 110:REM! CLEAR CHAIN:N2=FRE(LOG(N2%)):M=N2 AND AB%:REM! CLEAR COMMON\n140 GOTO 20:&:IF (ASC(A$+Y$)<=0) THEN FOR Q1=(N2) TO (N2%+((40283>=W%<((D%(659)<=Q1)))))\n150 HCOLOR=AB%<>((D%(N2%)>W%))*Y%\n160 B$(40)=A$:Z=Z OR D%(AB%-303)\n170 A$(POS(ASC(\"\"))-477)=A$\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 130\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

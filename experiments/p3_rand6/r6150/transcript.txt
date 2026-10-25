@@ -1,0 +1,199 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S002
+
+
+OBJECT CODE FILE:
+(DEFAULT S002.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION?
+
+*****BEGINNING PASS 1
+
+
+
+10
+RECOGNIZED  REM ! INTEGER K,I
+20  DIM P(9)
+30  DEF  FN F(Z) = M
+40
+
+*****WARNING
+LINE NUMBER 40
+IGNORED
+
+ LOAD "F"
+
+
+
+
+*****WARNING
+LINE NUMBER 40
+IGNORED
+
+: IF ( - ((P(I) / B))) THEN  & "X:Y",1
+
+
+:Q1 = 15683:M = Q1 OR Q1
+50  PRINT  FN F(P(M%) AND K) > ((XY <  >
+ 866 - A%(W%))); - A%(3286),24,
+60  HOME : GOTO 190
+
+*****WARNING
+LINE NUMBER 60
+IGNORED
+
+: NOTRACE
+
+
+70  PRINT B;AB$ +  CHR$ (Q1) + A$;
+80 K = M
+90  PLOT Q1, TAN (I) - ((C% > ((W% <  >
+X))))
+100 P( ABS (M%)) = XY:W% = 5 - W% * W% +
+ C% / ((3 <  > X)):XY = W% AND B
+110  PRINT XY;256;((A%(C%) AND  EXP (K))
+) +  LEN (Y$),: IF (3) THEN M% =  - (( N
+OT 566)): RUN
+120  PRINT
+130  ON  FN F( NOT 255) GOTO 30,170:K =
+((M% - 24 OR  LEN (Y$))) ^ ((((M <  = X)
+) + ((M% + P(C%))))): IF (B - 88 - ((3.1
+4159 - XY)) > (( VAL ("123") = 127))) TH
+EN M% = M - K = ((XY + P(C%))) *  ASC ("
+A")
+140  GOTO 100
+
+*****WARNING
+LINE NUMBER 140
+IGNORED
+
+: LIST 10 - 20
+
+
+
+
+*****WARNING
+LINE NUMBER 140
+IGNORED
+
+: RUN
+
+
+
+
+*****WARNING
+LINE NUMBER 140
+IGNORED
+
+: IF (129 - P(C%) + .001) THEN  DEL 10,2
+0
+
+
+150  READ M: PRINT M OR M: PRINT "TASC";
+Q1 /  NOT X * ((M% *  - K)),: FOR Q1 = (
+(( - I OR B)) <  = Q1% *  SIN (B)) TO (
+- P( NOT 65535))
+160
+
+*****WARNING
+LINE NUMBER 160
+IGNORED
+
+ IF (32767) THEN  DEL 10,20
+
+
+170 X =  FRE (A$): PRINT  POS (A$):M = Q
+1 +  - X: IF (M OR M) THEN 190
+
+*****WARNING
+LINE NUMBER 170
+IGNORED
+
+: FOR I = ( - ((P(M%) > 20))) TO ( -  AS
+C ( RIGHT$ ("",P(Q1%))))
+
+
+180  GOSUB 230
+190  DATA ,,X
+
+*****WARNING
+LINE NUMBER 190
+IGNORED
+
+: CONT
+
+
+200
+
+*****WARNING
+LINE NUMBER 200
+IGNORED
+
+ NOTRACE
+
+
+
+
+*****WARNING
+LINE NUMBER 200
+IGNORED
+
+: LIST
+
+
+210  READ K: PRINT K AND K: TEXT : DATA
+1
+220  IF (828 +  LEN (AB$) <  > Q1) THEN
+20
+230 A$ =  CHR$ ( COS (K) >  = K / .001):
+ GOTO 290
+
+*****WARNING
+LINE NUMBER 230
+IGNORED
+
+: DEL 10,20
+
+
+240  PR# B + 2
+
+*****WARNING
+LINE NUMBER 240
+IGNORED
+
+: LIST
+
+
+250 AB$ = A$: PRINT A$; MID$ (AB$,Q1 <
+> I,3.14159) +  CHR$ (1 * 39);C%;: GET X
+
+260  GOTO 210
+
+*****WARNING
+LINE NUMBER 260
+IGNORED
+
+: GOTO 30
+
+
+
+
+*****FATAL ERROR
+LINE NUMBER 260
+SYNTAX
+
+: REM ! CLEAR COMMON !ERR!
+
+TYPE CNTRL-C TO ABORT

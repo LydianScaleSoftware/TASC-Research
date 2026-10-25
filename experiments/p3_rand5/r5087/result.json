@@ -1,0 +1,23 @@
+{
+ "id": "r5087",
+ "key": "1a1432c8147db4f0",
+ "source": "10 REM! INTEGER I,K\n20 DEF FN F(Z)=Z\n30 IF (-AB) THEN ON SQR(XY/-AB) GOTO 30,110:HCOLOR=XY%:PRINT \"TASC\";Y,\n40 PRINT Q1%<>NOT D(2.25)+I;FN F(M%^Z);Z,:AB=-127\n50 FOR K=(((10-((7<=Y))))*D(XY%)) TO (A%):FOR I=(1.5) TO (K) STEP (-AB)\n60 XY%=2<((SIN(C)>598)):Z=XY% OR XY%\n70 PRINT AB$,-((LEN(AB$) AND XY%-Q1%)),:IF (Y) THEN RUN 40:Y=D(2870)^VAL(AB$)-716\n80 A%=Q1%<=((Z=971))*.5\n90 Z=-((TAN(Q1%)<>1000)):GET Y:A%=Y OR (M%+745)\n100 PRINT CHR$(-34);:Y=((39+C))/XY*D(D(Q1%)>Z):PRINT\n110 REM! CLEAR CHAIN:FOR AB=(C) TO (FN F(XY^((C^871))))\n120 SPEED=-INT(D(A%)) AND -((NOT A%))\n130 IF (-XY%-((K+((10>M%))))) THEN PRINT K*((AB<XY%)) OR M%<>((714=AB));A%^((((Q1% OR 100))<1+256));XY,:C=FRE(B$(Q1%)):PRINT POS(Q1$)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 110\nSYNTAX\n\n REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

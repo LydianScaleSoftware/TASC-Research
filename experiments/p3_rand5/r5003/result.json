@@ -1,0 +1,102 @@
+{
+ "id": "r5003",
+ "key": "d806d21f218e5da3",
+ "source": "10 REM! INTEGER K,J\n20 DIM A$(8,3)\n30 DEF FN F(T)=7\n40 FOR Q1=(5) TO (W%):PLOT 7,FRE(\"123\")\n50 Y=LEN(Y$+X$)<-((W% AND K)):IF (LEN(\"HI\"+\"X Y\"+\"TASC\")) THEN RETURN:CALL 40:N2=K\n60 N2%=-AB:READ K:PRINT Y$;644+ATN(260),Q1,\n70 N2%=N2:C=FRE(N2%)+POS(N2%+N2):IF (2881 AND K) THEN AB%=12255\n80 J=Q1%:Q1=FRE(MID$(\"TASC\",LEN(\"TASC\")))\n90 ON ABS(-39) GOTO 180,30,110:C=FRE(RND(N2))-ATN(-W%)\n100 RESTORE\n110 AB=FRE(W$):PRINT POS(Y$)\n120 DATA X:PRINT K;:FOR J=(21526-J-((((AB%<=Q1%))+C))) TO (COS(Y-24<-K))\n130 AB=((K>.001))*AB:W%=C\n140 GR:A$(ASC(MID$(Y$,N2)+CHR$(W%)),-((PEEK(N2)+N2%)))=MID$(CHR$(-AB%),-((AB%<C)))\n150 FOR Y=(VAL(CHR$(Y))*((COS(35247)<=N2))) TO (C) STEP (1000):Y=1E3\n160 C=ABS(Q1%):A$(AB%,FN F(C))=MID$(Y$,.5 AND 49152)\n170 GOTO 60:A$(Q1%-Q1%,W%)=\"A\"\n180 POKE 39,W%\n",
+ "options": {
+  "library": null,
+  "program": "HGR1",
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 16384,
+ "obj_len": 1151,
+ "obj_sha256": "23bd522095b42a8045caf43b62ea60d23110b7ccefb30abbcc6ae69724d2a7da",
+ "cycles": 114048322,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 16404
+  },
+  {
+   "line": 20,
+   "addr": 16404
+  },
+  {
+   "line": 30,
+   "addr": 16404
+  },
+  {
+   "line": 40,
+   "addr": 16414
+  },
+  {
+   "line": 50,
+   "addr": 16450
+  },
+  {
+   "line": 60,
+   "addr": 16553
+  },
+  {
+   "line": 70,
+   "addr": 16598
+  },
+  {
+   "line": 80,
+   "addr": 16651
+  },
+  {
+   "line": 90,
+   "addr": 16695
+  },
+  {
+   "line": 100,
+   "addr": 16747
+  },
+  {
+   "line": 110,
+   "addr": 16750
+  },
+  {
+   "line": 120,
+   "addr": 16765
+  },
+  {
+   "line": 130,
+   "addr": 16841
+  },
+  {
+   "line": 140,
+   "addr": 16862
+  },
+  {
+   "line": 150,
+   "addr": 16943
+  },
+  {
+   "line": 160,
+   "addr": 16993
+  },
+  {
+   "line": 170,
+   "addr": 17032
+  },
+  {
+   "line": 180,
+   "addr": 17069
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "OBJECT FILE": "S003.OBJ",
+  "PROGRAM": "16384 - 17534",
+  "LOCAL VARIABLES": "17535 - 17663",
+  "HIGHEST MEMORY LOCATION": "17663"
+ }
+}

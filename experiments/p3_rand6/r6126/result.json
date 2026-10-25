@@ -1,0 +1,23 @@
+{
+ "id": "r6126",
+ "key": "9d89f2daf08124dd",
+ "source": "10 REM! INTEGER J\n20 DIM B$(9),D%(9)\n30 DEF FN F(X)=D%(J)\n40 X%=-((XY<Z)):Z=X% AND X%\n50 AB%=C\n60 AB%=X%:Z=FRE(AB%)+POS(-A%):M=M:IF (M AND M) THEN 250\n70 AB%=((M>=5))*49152:STORE B,C:C=AB%:HLIN -((D%(X%) OR J)),(A) AT XY\n80 D%(-D%(20))=LOG(M%>=Z AND FN F(39))\n90 GOTO 240:CONT:REM! CLEAR COMMON\n100 XY=((C OR Z))<FN F(A%)-((24 OR 0.1)):A=XY OR AB%:M%=XY+XY-44145>=3:M=M% AND M%:C=C:IF (C AND C) THEN 10\n110 D%(AB%)=((M+983<M-AB%))-((AB%>=J+XY)):A=A\n120 READ Z,XY:J=10:M%=X%:C=M% OR M%\n130 XY=3.14159<>J:LOAD \"F\":A=XY:SAVE\n140 Z=VAL(\"TASC\")>=C:C=Z AND Z\n150 IF (M) THEN XY=FRE(MID$(LEFT$(\"X Y\",X%+10),C>D%(M%))):PRINT POS(Z$):CONT\n160 M%=D%(X%):ON AB%*M>=X%<>FRE(M$)-FN F(XY) GOTO 80,80,40:RUN\n170 A=A%*XY>-M%>((.001=J))-((605<XY)):GOSUB 30\n180 DEL 10,20:Z=M:IF (Z OR Z) THEN 160:PRINT\n190 RUN 80\n200 FOR Z=(ABS(-ASC(\"123\"))) TO (((FN F(Z)>FN F(D%(270))))+NOT VAL(\"123\")) STEP (M%>=COS(M%)):DATA ,X,300\n210 M%=J<>POS(B$(A%)):READ A:PRINT A OR A:A=((XY<=XY))+-7:IF (A OR A) THEN 280\n220 M=POS(M%):GOTO 190:REM! CLEAR CHAIN:A=-((((698+XY))*((65535 AND X%)))):A=FRE(A)+POS(-SIN(3)<>((M%+X%<A%)))\n230 PRINT:DATA \"A,B\"\n240 A=J\n250 J=NOT ((-23515))*((Z>=AB%)):IF (J AND J) THEN 240:M=XY:C=M OR M\n260 PRINT XY,A%;M%,:GOTO 90:GOTO 30\n270 C=FN F(M^A%)*((XY*J+M)):C=X%-AB%*PEEK(2)\n280 Z$=\"123\":READ C$\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 220\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

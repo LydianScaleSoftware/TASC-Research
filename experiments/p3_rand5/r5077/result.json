@@ -1,0 +1,23 @@
+{
+ "id": "r5077",
+ "key": "8cd668f67a52f09f",
+ "source": "10 REM! INTEGER I\n20 DIM A%(6,12),D(11,8)\n30 DEF FN F(X)=XY%\n40 Q1=FRE(MID$(Q1$,7)):PRINT POS(Q1$):PRINT\n50 RUN 250:PRINT:X=1\n60 FOR Q1=(ABS(ASC(MID$(Y$,Z%)))) TO (-((M*Q1))):A=FRE(Z$+Y$):PRINT POS(Q1$)\n70 Q1=((NOT 13527+3*696))*((3.14159--B(M%))):M%=A%(-M%,7/I+40000):A=M% AND M%\n80 Q1=FRE(Y$):PRINT POS(Z$)\n90 Y$=STR$(FN F(FN F(A%(XY%,M%)))):REM! CLEAR COMMON\n100 IF (((M%<Z%))+-M%>=POS(D(A%,255)<I)) THEN 100\n110 W=-((I+((I>A%)))):READ A%:PRINT A% AND A%:A=I\n120 M=FRE(RIGHT$(\"TASC\"+Q1$+\"A\"+Y$,M<>769)):PRINT POS(Y$):Z$=\"TASC\"+Y$\n130 REM! CLEAR CHAIN\n140 HLIN X OR NOT 20,(((A-TAN(255)))*((24<=0))) AT FN F(XY%):M=B(I)*W:A=M OR Z%\n150 IF (XY%) THEN W=Q1\n160 TEXT:M=117\n170 PRINT A%-A%+SGN(SIN(1));STR$(M);:M=1.5\n180 REM! CLEAR CHAIN:A=FRE(MID$(Z$,A%(A%,Z%),I-A%+FN F(W))):PRINT POS(Q1$):Z%=-SGN(W):A=Z% AND M\n190 IF (A) THEN HCOLOR=24:M=A%-((M AND 20))>205\n200 READ I:PRINT I AND I:ON FN F(A OR X) GOTO 190:IF (3) THEN IF (FRE(2.25)) THEN RUN\n210 NEXT Q1:IF (28514) THEN 30:READ X:PRINT X AND X\n220 PRINT MID$(\"\",M-B(I)/A);\n230 M%=Q1:Q1=M% OR X:X=M%\n240 PRINT Y$;:X=M\n250 Z%=I:X=Z% AND Z%\n260 READ W:RUN\n270 STOP:Q1=FRE(Y$+Q1$+\"TASC\"+Z$):PRINT POS(Q1$):W=2:M=W AND A\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 180\nSYNTAX\n\n REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

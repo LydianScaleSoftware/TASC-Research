@@ -1,0 +1,82 @@
+{
+ "id": "r5047",
+ "key": "7c427f5e7bb3e3f2",
+ "source": "10 REM! INTEGER J,K\n20 DIM D%(7)\n30 DEF FN F(T)=((D%(X%) AND 349))-((1E3 OR X%))>FRE(NOT 32767)\n40 COLOR=FRE(1.5-W):RUN 120:PRINT:X=1:X%=B%-D%(339)\n50 GOSUB 100\n60 PRINT MID$(W$+\"TASC\"+LEFT$(AB$,J),D%(X=Z));:M=2:ON 5 GOTO 100,20,120,10\n70 Q1%=32018:J=D%(40667-454^M):Z=J AND M<>-FRE(\"TASC\")\n80 K=((734^X%-SQR(100)))*C%:RUN 50:PRINT:X=1:HLIN M,(M) AT ASC(CHR$(K))\n90 IF (D%(((X>=Z))*NOT C%)) THEN 120\n100 DRAW Z AT Q1,(SGN(M)<=W<=FN F(D%(K) AND Q1%)):Z=FRE(127):Z=FRE(Z)+POS(X):W=Z\n110 INVERSE:RUN:PRINT:X=1:B%=-W+NOT X%^2192:IF (B% OR B%) THEN 80\n120 D%(K)=((M OR K))>=-FN F(23154):IF (C%) THEN RUN 100\n130 FOR J=(POS(VAL(\"123\"))*W) TO (FN F(D%(40))):DATA HI,HI,\"A,B\"\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 983,
+ "obj_sha256": "ddd50498039d540da5298106dc9b6b4f014cfdf878e367561abf1d38900e5ce9",
+ "cycles": 105235370,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6142
+  },
+  {
+   "line": 50,
+   "addr": 6178
+  },
+  {
+   "line": 60,
+   "addr": 6181
+  },
+  {
+   "line": 70,
+   "addr": 6263
+  },
+  {
+   "line": 80,
+   "addr": 6322
+  },
+  {
+   "line": 90,
+   "addr": 6361
+  },
+  {
+   "line": 100,
+   "addr": 6393
+  },
+  {
+   "line": 110,
+   "addr": 6474
+  },
+  {
+   "line": 120,
+   "addr": 6516
+  },
+  {
+   "line": 130,
+   "addr": 6569
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S007.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7046",
+  "LOCAL VARIABLES": "7047 - 7120",
+  "HIGHEST MEMORY LOCATION": "7120"
+ }
+}

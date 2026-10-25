@@ -1,0 +1,23 @@
+{
+ "id": "r6052",
+ "key": "9b7c51f6eecd5d64",
+ "source": "10 REM! INTEGER K\n20 DIM D$(2),A$(1)\n30 DEF FN F(T)=K\n40 K=K:PRINT \"X Y\",FN F(W) OR AB%;INT(LEN(LEFT$(D$(K),20)));:Q1=RND(X):W=FRE(Q1)+POS(M)\n50 GOTO 320:REM! CLEAR COMMON:GOSUB 200\n60 W=M%:W=W OR W:PRINT\n70 IF (((774<>K))^Y+1.5) THEN NOTRACE:RETURN\n80 A%=Y<>M%:W=A% AND K:PLOT AB%-((AB% OR M%))>NOT ((Q1=Q1%)),-((K*Y<>FN F(40))):&\n90 Q1$=N2$\n100 REM! CLEAR CHAIN:AB%=NOT ((FN F(M)-AB%/A%))\n110 Q1=256:IF (Q1 AND Q1) THEN 220:READ K\n120 GOTO 120\n130 CONT:A%=FN F(-Q1*626)\n140 SHLOAD:POKE X,W\n150 GOTO 20:DEL 10,20\n160 READ Q1,A%\n170 Q1$=Q1$+\"TASC\":A%=AB%*((-M=M%)):IF (A% AND A%) THEN 130\n180 M=W\n190 Q1=FRE(LEFT$(N2$,((1.5 OR 24))/((Q1<M)))):PRINT POS(N2$)\n200 X=PEEK(65535<X>((M<1000))):IF (X AND X) THEN 30:W=ASC(\"HI\")<>ASC(Q1$) OR A%+M=129:IF (W OR W) THEN 330\n210 A%=Q1<>3\n220 GOTO 130:REM! CLEAR CHAIN:WAIT X<=M%,(AB%^LOG(M)),(W-Q1+AB%)\n230 READ Q1,M:WAIT K,(NOT ((AB% AND K<=A%))),(M)\n240 CALL 2.25:Q1=SIN(-((Y>=10))):IF (NOT LEN(\"123\")) THEN & \"X:Y\",1\n250 PRINT \"X Y\",Z$;:Z$=\"HI\":IF (199+SIN(M)-POS(\"123\"+N2$)) THEN ON -TAN(Q1%)-((RND(A%)-((Y=M)))) GOTO 270,210,100\n260 K=NOT ((X AND M%<>10)):X=K OR Q1\n270 SHLOAD\n280 GOSUB 280\n290 Y=-((-FN F(Q1))):IF (Y OR Y) THEN 230\n300 AB%=FN F(-((-Y))):Y=FRE(AB%)+POS(ABS(Q1)):IF (AB%) THEN RUN\n310 GOTO 80:REM! CLEAR CHAIN:READ M%,N2$:D$(M%)=Z$\n320 DATA HI,,300\n330 IF (Q1<=A%) THEN 30:FOR M=(W) TO (Y AND M%):RUN\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 50\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

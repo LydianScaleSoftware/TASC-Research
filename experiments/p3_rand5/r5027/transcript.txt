@@ -1,0 +1,223 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S007
+
+
+OBJECT CODE FILE:
+(DEFAULT S007.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION?
+
+*****BEGINNING PASS 1
+
+
+
+10
+RECOGNIZED  REM ! INTEGER K
+20  DIM A%(9,4),D$(4)
+30  DEF  FN F(Z) = 10 OR Z = A + 2
+40 K =  LOG ( NOT ((C - 607))):Y = K OR
+Y - ((A% OR A%(26094,X%) / 16))
+50 W = .001: IF (W OR W) THEN 190
+
+*****WARNING
+LINE NUMBER 50
+IGNORED
+
+: PRINT  MID$ ( STR$ (7) + D$(W%), NOT A
+% <  =  SGN (2.25),Y);Y;
+
+
+60  IF (A) THEN 40:A =  FRE ( LEFT$ (Z$,
+A%(Z >  = 40,XY%)))
+
+*****WARNING
+LINE NUMBER 60
+IGNORED
+
+: PRINT  POS (W$)
+
+
+:A$ =  MID$ ("A", NOT ((X% AND W)), NOT
+A%)
+70  CALL  FN F(A - 7) >  =  - ((2 AND A%
+(100,K)))
+80  HTAB A% AND  POS ( PEEK (Z)): IF (A%
+) THEN  RUN 40
+90  COLOR= A%(K,0): PRINT W%,127;:Y =  F
+RE ("A"): PRINT  POS (W$)
+100  READ W%,Z$
+110  IF (W%) THEN A%( LEN (W$) / Y + W,1
+000) = A% = X%:A%(X%,A%(W%, COS (C)) ^ (
+( NOT 407 > A%(K,XY%)))) = C: VTAB W
+120 C =  FRE (A$ + A$): PRINT  POS (A$):
+C =  VAL ( MID$ (D$(W%),C)) * ((0 AND K
+<  = K)):Y = C AND  - ((Y = K)) < ((((A%
+ OR 40000)) < A + A)): HTAB A%
+130 W$ =  RIGHT$ (Z$,127):Z$ = D$( LOG (
+W)):C = W% ^ ((40 ^ 10 - A%(32767,W%)))
+140 A = Y:C = C:A = C AND C
+150 A$ = "A"
+160  COLOR= XY%:A%( LOG ( - 250),((A% AN
+D Z)) <  > ((Z < C)) + ((A%(XY%,W%) + Y)
+)) = K <  = ((20 OR 7)) + ((X% + Y)): IF
+ (627) THEN  IF (.001) THEN  IF (346) TH
+EN  PRINT  MID$ (Z$,1 / ((A%(W%,3.14159)
+ + W%))),
+170 XY% = A%(Y = 26875 <  > 20 + A%(XY%,
+39),Z * 91 ^ XY%): IF (XY% OR XY%) THEN
+240
+
+*****WARNING
+LINE NUMBER 170
+IGNORED
+
+: GET XY%
+
+
+:X% = XY% OR ( NOT K)
+180 D$(((Z * A% /  SIN (A))) ^ 1000) =
+MID$ ( MID$ ("A" + "HI",5 AND 3),A%,.001
+):A% = XY%:W = A% OR A%
+190  PLOT  TAN (X% * X% <  > ((Y OR C)))
+, - A%(A%(W%,100) > C,W%)
+200  GOTO 220
+
+*****WARNING
+LINE NUMBER 200
+IGNORED
+
+: IF (W) THEN Y =  FRE (Z$)
+
+
+
+
+*****WARNING
+LINE NUMBER 200
+IGNORED
+
+: PRINT  POS (A$)
+
+
+:C =  VAL ( RIGHT$ (D$(K) + "A", NOT 40)
+)
+
+*****WARNING
+LINE NUMBER 200
+IGNORED
+
+: IF (C AND C) THEN 280
+
+
+210 C = A%(K, VAL ("") /  - A): IF (W% *
+ ((100 + XY%)) > 7) THEN  PRINT "A",:Z =
+ XY%
+220  FOR Z = (C) TO ( - A%)
+230  FOR W = (65535) TO ( FN F(Y)): IF (
+((.001 <  > A% + C)) - 100) THEN  RUN :A
+ = ((X% - XY% OR W = Z)) >  = A%( LEN ("
+"),Z ^ 18548)
+240 A%( INT (Y AND A OR Y ^ 255), NOT ((
+Y * XY%)) OR  ASC ( LEFT$ (D$(K),A%(XY%,
+W%)))) = K - Y - 1.5 AND K
+250  IF (42913 ^ C *  FN F(A% OR A%)) TH
+EN 310
+
+*****WARNING
+LINE NUMBER 250
+IGNORED
+
+: IF (W%) THEN  PLOT K + ((A% - 256 > XY
+%)),Z
+
+
+
+
+*****WARNING
+LINE NUMBER 250
+IGNORED
+
+: RUN
+
+
+
+
+*****WARNING
+LINE NUMBER 250
+IGNORED
+
+: PRINT
+
+
+:X = 1
+260  PRINT  CHR$ (K),A; CHR$ (X%) +  MID
+$ (A$ + W$,A%(213,100) / A%(K,K),X% < A%
+);: READ A: PRINT A OR A:K = Z >  =  EXP
+ (XY%):C = K OR K
+270  READ A$
+280  SPEED= K:W$ =  LEFT$ ("A",539 > 20)
+
+290  FOR A = ( INT (A)) TO (1 OR  EXP (X
+Y% >  = A)) STEP (255): NEXT : IF ( - 10
+ - ((X% < 0))) THEN 260
+300  GET Y:W% = Y AND ( NOT XY%): HCOLOR
+= 3 AND Y
+310 D$(32767) =  MID$ ( MID$ (D$(K),W%,A
+%(XY%,X%)),A%(A%,A%),C) + "123"
+
+
+
+*****BEGINNING PASS 2
+
+
+........
+
+
+*****CODE GENERATION COMPLETE
+
+
+COMPILATION INFORMATION AND LINE NUMBER
+REFERENCE TABLE? YES
+
+
+SOURCE FILE: S007
+OBJECT FILE: S007.OBJ
+LIBRARY OCCUPIES 2051 - 6063
+PROGRAM OCCUPIES 6064 - 8928
+
+NO COMMON BLOCK
+
+LOCAL VARIABLES OCCUPY 8929 - 9108
+
+HIGHEST MEMORY LOCATION: 9108
+
+
+LINE# ADDR   LINE# ADDR   LINE# ADDR
+
+10    6084   20    6084   30    6084
+40    6112   50    6177   60    6191
+70    6290   80    6335   90    6373
+100   6423   110   6435   120   6575
+130   6707   140   6773   150   6791
+160   6804   170   6984   180   7076
+190   7178   200   7253   210   7290
+220   7371   230   7391   240   7517
+250   7636   260   7679   270   7832
+280   7838   290   7869   300   7943
+310   7979
+
+*****COMPILATION COMPLETE
+
+
+]?

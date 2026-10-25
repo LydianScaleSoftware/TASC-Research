@@ -1,0 +1,111 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S004
+
+
+OBJECT CODE FILE:
+(DEFAULT S004.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION?
+
+*****BEGINNING PASS 1
+
+
+
+10
+RECOGNIZED  REM ! INTEGER K
+20 Y% = 2.25:N2 = Y% AND AB:XY$ = B$ + B
+$:Z$ = XY$
+30 XY = B(XY%):B(((B AND AB)) * 5319) =
+XY% * 32767
+40  RUN
+
+*****WARNING
+LINE NUMBER 40
+IGNORED
+
+: IF (255) THEN 10
+
+
+:XY% = C%
+50  FOR N2 = ( SQR (N2)) TO ( - ((B =  N
+OT 256))): NEXT N2: RUN 110
+60 K =  - 39:N2 = K AND K
+70 X% = ((XY + XY)) * ((B(127) < B(X%)))
+ + (( NOT 35946 < ((Y% AND B)))):A = X%
+OR X%
+80  READ C%: PRINT C% OR C%
+90  COLOR= B(20 - ((K AND K)))
+100  GOSUB 270
+110  IF (((B >  = 10 OR N2 = AB)) -  - B
+(XY%)) THEN  RUN 270
+
+*****WARNING
+LINE NUMBER 110
+IGNORED
+
+: PRINT X%;XY;((744 <  > ((B AND N2))))
+* ((XY% + ((X% >  = B))));
+
+
+:B( FRE ( CHR$ (N2 = AB))) =  PEEK (C% >
+  RND (A))
+120 B(XY%) = Y%: PRINT  - B(24 < 638),:
+GET C%:X% = C% OR (((0 OR B + 1.5)) <  =
+  PEEK (40))
+130  GOSUB 10
+140 A = 693:XY% =  NOT (XY <  = X%):AB =
+ A +  FRE (XY)
+150  GOSUB 220: IF (690) THEN 250
+160  CALL N2:XY% = 13431 ^ AB:B = XY% AN
+D B(1E3)
+170  PLOT  LEN ( LEFT$ ("123",N2)) AND
+- X% =  - N2,1000
+180  GOSUB 220
+190  RUN
+
+*****WARNING
+LINE NUMBER 190
+IGNORED
+
+: PRINT
+
+
+:X = 1
+200  FOR A = (K * C% OR Y%) TO ( - ((((3
+ OR C%)) <  > (AB)))) STEP ( PEEK (255)
+>  =  NOT 42176)
+210  GOTO 140:Y% = XY%
+
+*****WARNING
+LINE NUMBER 210
+IGNORED
+
+: ON B( POS ("TASC")) GOTO 250,10,110
+
+
+220 AB =  ABS (A): IF (3.14159) THEN C%
+= ((X% OR 3.14159)) - ((5 = B(Y%) - AB))
+:B = C% AND A
+230  HLIN  SQR ( - 7 = ((65535 <  = A)))
+,(XY) AT  POS (904):A = 21982
+240
+
+*****FATAL ERROR
+LINE NUMBER 240
+SYNTAX
+
+ REM ! CLEAR CHAIN !ERR!
+
+TYPE CNTRL-C TO ABORT

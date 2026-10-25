@@ -1,0 +1,2 @@
+10 X=1:STORE Q,R:Y=X
+20 PRINT R

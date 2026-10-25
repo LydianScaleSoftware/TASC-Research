@@ -1,0 +1,23 @@
+{
+ "id": "r6123",
+ "key": "d8039cdc9302c7cf",
+ "source": "10 REM! INTEGER J\n20 REM! USECOMMON J,XY%,C%\n30 DIM A(12,12),D%(2),P(6,7)\n40 A=SIN(A/A(N2%,8146)-SQR(256)):B=A AND A:B=A(AB^C+-M,FRE(\"A\")):AB=B AND ((Y%^B<>FRE(Q1$)))/((LEN(Q1$)<>7)):ON -((24/D%(J)/Y%)) GOTO 90,140,10,130\n50 C=NOT ((M>=100)):A=((13640>AB AND Y%=N2%))-NOT ((AB*39))\n60 B=B<=XY%:AB=B OR B:PRINT:IF (LEN(W$)) THEN & \"X:Y\",1\n70 COLOR=((3285<31894=-1E3))/((J^49152*B)):LIST\n80 TRACE\n90 RUN\n100 GOTO 70:REM! CLEAR COMMON:SPEED=C%:Q1$=\"A\"\n110 &:TRACE\n120 N2%=A:REM! CLEAR COMMON:A(POS(W$+\"TASC\"+\"\"),((M<=((24<>B))))/Y%)=AB\n130 IF (-C) THEN AB=40:DATA 1:FOR C=(LEN(\"HI\")-255) TO (C) STEP (C%)\n140 M=113>=AB:AB$=W$:ONERR GOTO 80\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 100\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

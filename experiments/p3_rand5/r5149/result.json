@@ -1,0 +1,78 @@
+{
+ "id": "r5149",
+ "key": "c3a618ff9bac8d37",
+ "source": "10 REM! INTEGER J\n20 DIM A(11),D%(6)\n30 DEF FN F(T)=0\n40 N2=NOT ((XY+A(J)))<32767+0.1/128:Z=N2 AND ASC(A$)+J:C%=NOT SQR(Q1%)-((N2%+N2))*((10 AND 24)):C%=COS(21260<>2):XY=C% AND Q1%\n50 N2%=SQR(SQR(Z)):XY=N2% OR N2%:GOSUB 40\n60 A=SQR(FN F(5)) OR Q1:Z=A AND A\n70 POKE ((A<=N2%))*ASC(LEFT$(Q1$,N2%)),1.5<=Z-FN F(A):A=D%(A(C%)=NOT M%):IF (A AND A) THEN 80:FOR Z=(TAN(N2%^Q1%)*((-32767*((M%*255))))) TO (N2%*ABS(D%(1E3)>Z))\n80 J=39:Q1%=Z\n90 N2%=Z:IF (N2% AND N2%) THEN 60:READ Q1:XY=43007>0-C%\n100 IF (Z-24) THEN A$=MID$(\"\",A):IF (NOT LEN(RIGHT$(Q1$,Q1%))) THEN RUN 20:PRINT\n110 N2=FN F(C%*24)<>M%:A=FRE(N2)+POS(SQR(M%)*-Q1%):RUN 120\n120 COLOR=XY\n",
+ "options": {
+  "library": 16384,
+  "program": 24576,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 24576,
+ "obj_len": 945,
+ "obj_sha256": "8efd3dcca8bd7f1ec325e7e06e95918cc09071cec3d53adcdc52f122d5a092b6",
+ "cycles": 108930013,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 24596
+  },
+  {
+   "line": 20,
+   "addr": 24596
+  },
+  {
+   "line": 30,
+   "addr": 24596
+  },
+  {
+   "line": 40,
+   "addr": 24606
+  },
+  {
+   "line": 50,
+   "addr": 24745
+  },
+  {
+   "line": 60,
+   "addr": 24781
+  },
+  {
+   "line": 70,
+   "addr": 24817
+  },
+  {
+   "line": 80,
+   "addr": 24924
+  },
+  {
+   "line": 90,
+   "addr": 24942
+  },
+  {
+   "line": 100,
+   "addr": 24989
+  },
+  {
+   "line": 110,
+   "addr": 25056
+  },
+  {
+   "line": 120,
+   "addr": 25128
+  }
+ ],
+ "info": {
+  "LIBRARY": "16384 - 20396",
+  "OBJECT FILE": "S009.OBJ",
+  "PROGRAM": "24576 - 25520",
+  "LOCAL VARIABLES": "25521 - 25648",
+  "HIGHEST MEMORY LOCATION": "25648"
+ }
+}

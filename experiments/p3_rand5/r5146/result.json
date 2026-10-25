@@ -1,0 +1,74 @@
+{
+ "id": "r5146",
+ "key": "ae66687ecd74914e",
+ "source": "10 IF (-TAN(XY)<>((((C AND C%))=XY))) THEN INVERSE:PRINT ((XY AND XY))<>(Z%-X);Z%*32767=C% OR XY,((XY AND A%))*-909*((NOT 1000-((2.25<=N2%)))),:DATA 300,X\n20 GR:RUN\n30 A%=N2% AND 1:X=FRE(A%)+POS(256):PLOT 137,M:GET A%:A%=A% AND (M)\n40 DATA HI,HI,:PRINT 20567,XY;\n50 PRINT\n60 IF (ATN(XY>N2%) AND 3+B=128) THEN GOTO 110:A%=127:C=N2%\n70 CALL N2%>=((Z%-N2%=Z%)):IF (A%) THEN 60\n80 Z%=C%--((N2%<A%))\n90 X=7:X=X AND A%:DATA 300,,\"A,B\",HI:M=24:IF (M OR M) THEN 110\n100 FOR X=((40)) TO (NOT VAL(MID$(A$,A%,X))):READ X:PRINT X AND X\n110 REM! CLEAR CHAIN\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 810,
+ "obj_sha256": "fa1a42f159b85a0d3fb99d89acdb331a892dc835367f0e8aab72f2fc52624692",
+ "cycles": 103564625,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6245
+  },
+  {
+   "line": 30,
+   "addr": 6251
+  },
+  {
+   "line": 40,
+   "addr": 6317
+  },
+  {
+   "line": 50,
+   "addr": 6345
+  },
+  {
+   "line": 60,
+   "addr": 6348
+  },
+  {
+   "line": 70,
+   "addr": 6398
+  },
+  {
+   "line": 80,
+   "addr": 6427
+  },
+  {
+   "line": 90,
+   "addr": 6445
+  },
+  {
+   "line": 100,
+   "addr": 6495
+  },
+  {
+   "line": 110,
+   "addr": 6547
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S006.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6873",
+  "LOCAL VARIABLES": "6874 - 6918",
+  "HIGHEST MEMORY LOCATION": "6918"
+ }
+}

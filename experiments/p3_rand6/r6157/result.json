@@ -1,0 +1,66 @@
+{
+ "id": "r6157",
+ "key": "c26bf8f90d323d22",
+ "source": "10 LIST:N2=10:CONT:N2=N2:XY=W%-((AB<>45 OR 65535)):AB=XY AND XY\n20 READ M:PRINT M AND M\n30 M=32767\n40 PRINT\n50 NOTRACE\n60 GET N2:W%=N2 OR (NOT AB%)\n70 DATA HI,X\n80 Q1=5\n90 PRINT:Q1=M:IF (Q1 OR Q1) THEN 60\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 271,
+ "obj_sha256": "5a8e43ba1b697ea1e62245e6be04be699189f2e3251085e23f5d60c35c1428ee",
+ "cycles": 72331817,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6120
+  },
+  {
+   "line": 30,
+   "addr": 6135
+  },
+  {
+   "line": 40,
+   "addr": 6141
+  },
+  {
+   "line": 50,
+   "addr": 6144
+  },
+  {
+   "line": 60,
+   "addr": 6144
+  },
+  {
+   "line": 70,
+   "addr": 6165
+  },
+  {
+   "line": 80,
+   "addr": 6176
+  },
+  {
+   "line": 90,
+   "addr": 6182
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6334",
+  "LOCAL VARIABLES": "6335 - 6363",
+  "HIGHEST MEMORY LOCATION": "6363"
+ }
+}

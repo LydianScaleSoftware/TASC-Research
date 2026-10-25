@@ -1,0 +1,79 @@
+{
+ "id": "r5289",
+ "key": "68c9238e0b8a0471",
+ "source": "10 REM! USECOMMON Y,C%,W%\n20 DIM B(7,6)\n30 DEF FN F(T)=-248\n40 C%=ABS(39):PLOT W%=W%<=22869,W%:PRINT\n50 XY=20:IF (XY AND XY) THEN 90:PRINT Z$;69;\n60 M%=B(N2%,((B(20,1) AND W%))*1000):IF (M% AND M%) THEN 30:GOSUB 90\n70 COLOR=-TAN(B(C%,255)):M%=W%:IF (M% OR M%) THEN 90\n80 RESUME:SPEED=255=W%:W%=-((XY=XY))>=((Q1>((127<C%))))\n90 N2%=ASC(STR$(POS(\"HI\")))\n100 A$(SGN(C%-((Y-XY))))=\"TASC\":W%=-((FN F(491)>Y)):IF (W% OR W%) THEN 10:GET AB\n110 DATA :N2%=.5<>Y>=NOT M%>=LOG(-W%)\n120 A=EXP(7-N2%)>=((Q1<=W% AND SIN(XY)))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6073,
+ "obj_len": 742,
+ "obj_sha256": "ccfcbeb18ffd1737653db1f5e73d29c718f7e78a9b3c1813ba7b6c664f6cfb76",
+ "cycles": 96928721,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6093
+  },
+  {
+   "line": 30,
+   "addr": 6093
+  },
+  {
+   "line": 40,
+   "addr": 6106
+  },
+  {
+   "line": 50,
+   "addr": 6142
+  },
+  {
+   "line": 60,
+   "addr": 6156
+  },
+  {
+   "line": 70,
+   "addr": 6209
+  },
+  {
+   "line": 80,
+   "addr": 6244
+  },
+  {
+   "line": 90,
+   "addr": 6295
+  },
+  {
+   "line": 100,
+   "addr": 6316
+  },
+  {
+   "line": 110,
+   "addr": 6385
+  },
+  {
+   "line": 120,
+   "addr": 6437
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S009.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6073 - 6814",
+  "NUMERIC COMMON": "6064 - 6072",
+  "LOCAL VARIABLES": "6815 - 7150",
+  "HIGHEST MEMORY LOCATION": "7150"
+ }
+}

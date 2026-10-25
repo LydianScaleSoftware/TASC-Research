@@ -1,0 +1,23 @@
+{
+ "id": "r6138",
+ "key": "3809f4d98bbc7f57",
+ "source": "10 NOTRACE\n20 B=A%\n30 Z=1.5:Y=Z OR Z:PRINT:RECALL A\n40 LOAD \"F\"\n50 C=2:B=C OR C\n60 HLIN (LOG(Z%)<>VAL(AB$)),(C) AT 5-B%+((M%=Z AND B))\n70 M%=FRE(MID$(\"HI\",A%))<=((A%<Y+Y)):IF (B%) THEN VTAB -A%:GOTO 20\n80 M%=((M%*A%=C))+LEN(MID$(N2$,B)):AB$=MID$(MID$(C$,POS(A)),M%,C)\n90 GOTO 10:CONT\n100 GOTO 20:REM! CLEAR COMMON:IF (-((NOT ((Z+B%))))) THEN 40\n110 IF (Z+((100<=A))-((A%+A%*Z))) THEN GET A:A%=A OR (((A>=M%))+A+((Z%<=39)))\n120 Z%=C*((Z%=2.25))<=((Z%>=Z OR 20<Z%)):LIST 10-20:C=Z%\n130 STORE B,C:B=FRE(-31192):B=B OR B\n140 M%=-1000<M%:C=M% OR M%:IF (RND(SQR(39))) THEN LIST 10-20:GOTO 100:SHLOAD\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 100\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

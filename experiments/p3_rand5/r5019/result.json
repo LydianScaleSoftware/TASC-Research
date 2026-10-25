@@ -1,0 +1,23 @@
+{
+ "id": "r5019",
+ "key": "6a96a2caa7f895e8",
+ "source": "10 REM! INTEGER K,I\n20 X%=A%:A=X% OR K\n30 FOR AB=(40) TO (AB)\n40 XY=XY\n50 Q1=I:A=Q1 OR Q1:GET Q1:XY=((X% OR A%))*1445\n60 READ AB:PRINT AB OR AB:FOR Q1=(((A%>A%))*M% AND I<=553) TO (((X%<ATN(3.14159)))*((X%<Q1>X%))) STEP (X%):READ W%\n70 Q1=M%\n80 TEXT:ON X GOTO 80,20:W$=\"X Y\"+\"A\"\n90 AB=1000 AND 1>I AND XY+((XY=829)):PRINT -(20),W$+W$;\n100 GOTO 80\n110 AB=((XY<=W%<1-A))-POS(A%-W%):XY=FRE(AB)+POS(644):Q1=(I AND ((1000 AND A%))):IF (Q1 AND Q1) THEN 150:M%=M%\n120 TEXT\n130 COLOR=1:IF (A<>A=(579) AND (256)) THEN 100:GOSUB 230\n140 IF (ABS(ABS((I)))) THEN AB=((-A%-39))*LEN(N2$+N2$):Q1=FRE(AB)+POS(.5):X=FRE(CHR$(NOT W%*A)):PRINT POS(N2$)\n150 K=COS(FRE(FRE(1000))):READ A,W%\n160 IF (20) THEN IF (((W%>=39))/X) THEN W$=B$\n170 K=-((PEEK(32767)*NOT XY)):Q1=K OR K:Q1=-A%\n180 HTAB 3.14159<=(10-I)\n190 A=I:AB=FRE(A)+POS(XY):RUN 50:PRINT:X=1\n200 FOR I=(-824) TO (65535):GOTO 90:PRINT I,XY+482+AB;AB,\n210 SPEED=LEN(B$+RIGHT$(N2$,I)):PRINT:A=M%\n220 A=LEN(\"123\"):XY=A OR A:Q1=LEN(W$+W$+\"123\"):XY=ABS(-((5<K))):IF (XY AND XY) THEN 50\n230 REM! CLEAR COMMON:DATA \"A,B\",\"A,B\",,300:B$=MID$(N2$,W%>=W% AND W%)\n240 READ XY:PRINT XY AND XY:NEXT:NEXT Q1\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 230\nSYNTAX\n\n REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

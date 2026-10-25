@@ -1,0 +1,82 @@
+{
+ "id": "r5037",
+ "key": "9a23a58f663c69d5",
+ "source": "10 REM! INTEGER J,K\n20 XY=LOG(J)\n30 XY=-AB>5:AB=FRE(XY)+POS(POS(Q1$)-J<>((-1000=C))):IF (X%) THEN 90:AB=1.5\n40 RUN:FOR W=(XY%^((X<XY<((X<18914))))) TO (AB)\n50 IF (532) THEN READ M%:PRINT M% AND M%:PLOT ((K+B% OR W>AB))-XY,B%:X%=ASC(\"HI\"+B$+\"TASC\"):W=X% AND AB\n60 X%=2.25:XY=X% OR XY:PRINT 598;B$;:J=40:X=J OR NOT M%\n70 X=SIN(ASC(RIGHT$(Z$,X))):AB=X OR M%\n80 FOR C=(LEN(LEFT$(\"A\",X%))-887) TO (-((NOT ((W*47493))))):INPUT \"\";C\n90 RUN:RUN:PRINT:X=1:READ C\n100 PRINT 0>=100,XY%>=W,:B$=\"A\"+B$+B$+B$\n110 PRINT\n120 IF (B%<=X%) THEN XY=XY%+41029:IF (XY AND XY) THEN 130:M%=1:READ B%,XY%\n130 AB=C:FOR W=(W) TO (TAN(100/24310)):J=X%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 968,
+ "obj_sha256": "6cae194b315e1143dd144af52cb6b09cb1e6e460977848e424322025bbf18dd6",
+ "cycles": 109658343,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6093
+  },
+  {
+   "line": 40,
+   "addr": 6176
+  },
+  {
+   "line": 50,
+   "addr": 6179
+  },
+  {
+   "line": 60,
+   "addr": 6310
+  },
+  {
+   "line": 70,
+   "addr": 6367
+  },
+  {
+   "line": 80,
+   "addr": 6400
+  },
+  {
+   "line": 90,
+   "addr": 6477
+  },
+  {
+   "line": 100,
+   "addr": 6486
+  },
+  {
+   "line": 110,
+   "addr": 6550
+  },
+  {
+   "line": 120,
+   "addr": 6553
+  },
+  {
+   "line": 130,
+   "addr": 6590
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S017.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7031",
+  "LOCAL VARIABLES": "7032 - 7084",
+  "HIGHEST MEMORY LOCATION": "7084"
+ }
+}

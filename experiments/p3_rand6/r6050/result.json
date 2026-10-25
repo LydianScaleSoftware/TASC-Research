@@ -1,0 +1,23 @@
+{
+ "id": "r6050",
+ "key": "48ce76755bfdf09c",
+ "source": "10 DEF FN F(Z)=A%+((((X AND 49152))+((AB<=X%))))\n20 PLOT XY%>=39^NOT XY%,SQR(A%)\n30 GR\n40 RUN 160:M=W>((X%+W<=X))\n50 AB=90:X%=FN F(W%):AB=X% OR XY%\n60 VTAB -((X>=((W=617)))):FOR AB=(X%) TO (2+XY%):IF (POS(P$(X%))) THEN SAVE\n70 READ Q1\n80 SHLOAD:AB=EXP(W)\n90 SHLOAD:LIST\n100 RUN:PRINT:X=1:LIST:FOR X=(Q1-((X%>24>=((Q1=A%))))) TO (256>=X%=AB)\n110 GET X:W%=X OR (X%)\n120 GOTO 150:REM! CLEAR COMMON:SHLOAD\n130 REM! CLEAR COMMON:READ XY%:M=SQR(24=10<=LEN(N2$))\n140 FOR X=(NOT X OR A%) TO (INT(1000*W>=W^XY%)):RUN 160:SPEED=NOT 7\n150 GOTO 150:REM! CLEAR COMMON:PRINT XY%,\n160 PRINT:W%=W=LEN(\"X Y\"+\"\"):IF (W% OR W%) THEN 50\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 120\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

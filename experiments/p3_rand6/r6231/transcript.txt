@@ -1,0 +1,204 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S005
+
+
+OBJECT CODE FILE:
+(DEFAULT S005.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION? NO
+
+COMPILATION LISTING:
+(DEFAULT YES)? YES
+
+PAUSE ON ERRORS:
+(DEFAULT YES)? YES
+
+INTEGER ARITHMETIC:
+(DEFAULT YES)? YES
+
+INTEGER CONSTANTS:
+(DEFAULT YES)? YES
+
+RESUME/DEBUG CODE:
+(DEFAULT NO)? YES
+
+*****BEGINNING PASS 1
+
+
+
+10
+RECOGNIZED  REM ! DEFCOMMON W$,Y,Q1%
+20  DEF  FN F(Z) = A%(Q1%)
+30  STOP
+
+*****WARNING
+LINE NUMBER 30
+IGNORED
+
+: GOTO 20
+
+
+
+
+*****WARNING
+LINE NUMBER 30
+IGNORED
+
+: &
+
+
+:AB% =  NOT (( - (( NOT 5))))
+40  CALL A%(AB%)
+50
+
+*****WARNING
+LINE NUMBER 50
+IGNORED
+
+ IF (((((XY > W)) - ((XY AND M%)))) * Z%
+) THEN  LOMEM: 16384
+
+
+:M% =  NOT  FN F(7): IF (M% OR M%) THEN
+240
+60 X$ = "HI" +  LEFT$ (XY$,XY): GOTO 270
+
+
+*****WARNING
+LINE NUMBER 60
+IGNORED
+
+: CONT
+
+
+70  PRINT : ON  - ((M% - XY AND 649 - 10
+)) GOTO 210,40,190,280
+80  DRAW  - 256 = Q1% =  POS (M%) / ((B%
+(256,Z%) <  > M%))
+90  FOR XY = (XY) TO (127 <  > XY) STEP
+(858):AB% =  LOG (Q1%) - (( - AB% - 258)
+)
+100
+
+*****WARNING
+LINE NUMBER 100
+IGNORED
+
+ IF (AB *  NOT (( - 540))) THEN  &
+
+
+:Q1% =  - (( NOT 39 * 523)):Y = B%(Z%,3.
+14159) - ((M% <  = 23292)) > M%
+
+*****WARNING
+LINE NUMBER 100
+IGNORED
+
+: CONT
+
+
+:Z = Y
+110  READ Z: PRINT Z AND Z
+120 AB = W: PRINT M% - 39461;:B%(Q1%, -
+((Z% <  > XY)) >  - Z) =  NOT AB%
+130  PRINT :B%( PEEK ( - Y),M%) =  - ((1
+000 ^ ((M% >  = AB%))))
+140
+
+*****WARNING
+LINE NUMBER 140
+IGNORED
+
+ NOTRACE
+
+
+: NEXT XY: FOR XY = (AB%) TO (7 - 39 = Q
+1%) STEP ( - ((20 > W)))
+150 Z% =  NOT ((234 * ((AB% / W))))
+160 Q1% =  FRE (((M% > 2)) + Z):W = Q1%
+OR Q1%:W$ = W$
+170 XY = (( EXP (Z%) * ((AB% * Q1%)))) ^
+ M%
+
+*****WARNING
+LINE NUMBER 170
+IGNORED
+
+: & "X:Y",1
+
+
+:Z = XY: GOSUB 40: GOTO 130
+180 M% =  FRE ( - W) - W:Z% = ((B%(32767
+,Z%) / B%(M%,3) <  >  FN F(40980))) ^  I
+NT (XY): IF (Z% AND Z%) THEN 140:XY$ = "
+X Y"
+190  READ W: PRINT W AND W: ON  VAL (W$)
+ *  ATN (AB% < Y) GOTO 70,260,250,70
+200
+
+*****WARNING
+LINE NUMBER 200
+IGNORED
+
+ SAVE
+
+
+:Z = M%
+210 XY = W
+
+*****WARNING
+LINE NUMBER 210
+IGNORED
+
+: LIST
+
+
+:Y = XY: POKE ((AB AND AB%)) = ((XY < 87
+4)) <  = W,AB * ((Z + 24)) >  =  NOT AB
+
+*****WARNING
+LINE NUMBER 210
+IGNORED
+
+: IF (Z%) THEN  DEL 10,20
+
+
+220 X$ = XY$ + X$: PRINT  MID$ ("123" +
+W$ + XY$,3.14159 / ((566 OR M%)));Q1%,M%
+,:XY = Z% * ((40 / Q1%)) *  - AB%
+230  GOTO 170
+
+*****WARNING
+LINE NUMBER 230
+IGNORED
+
+: RECALL A
+
+
+240  FOR W = (B%( -  INT (Z),XY +  ASC (
+X$))) TO ( VAL (X$)):M% = ((100 OR Q1%))
+ >  = ((100 AND 39)) <  >  - Z%:Z = B%((
+(39 OR M%)) + Y, ASC ("") =  EXP (53))
+250  SPEED= Y: GOTO 280
+RECOGNIZED : REM ! CLEAR COMMON
+260  GOTO 300
+
+*****FATAL ERROR
+LINE NUMBER 260
+SYNTAX
+
+: REM ! CLEAR COMMON !ERR!
+
+TYPE CNTRL-C TO ABORT

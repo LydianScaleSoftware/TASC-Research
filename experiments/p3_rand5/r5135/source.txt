@@ -1,0 +1,8 @@
+10 POP
+20 W=Q1:RUN 10:Y%=A% AND Y:Q1=FRE(Y%)+POS(Y)
+30 XY%=C:C=XY% OR Y%:PRINT Y%,MID$(LEFT$("123",C-168),((C AND XY%))-((3<=W)));:Y%=C^W/((XY%<Q1*C))
+40 COLOR=(A% OR 39)<-((XY%=Q1))
+50 RUN:RUN
+60 B%=Q1--39:IF (W) THEN ON ((XY%+Q1<>((X<>Y))))*NOT ((W*B%)) GOTO 30,20:CALL X
+70 HPLOT TO -((W OR B%))^SQR(670),(Y%<=Q1):A%=((SGN(B%)<=W))+W
+80 VTAB C:GET Y%:B%=Y% AND (((765 AND W/Y%))*((255/((B%*100))))):Y%=((A%+X<=B%))+42402

@@ -1,0 +1,112 @@
+{
+ "id": "r6193",
+ "key": "2ac5eea4eaceebff",
+ "source": "10 REM! INTEGER I\n20 DIM A(2,6)\n30 PRINT M%,\n40 N2=Z%>=((Q1>N2<>N2)):IF (N2 AND N2) THEN 180:GET Y:X%=Y OR (ABS(146)):N2$=STR$(NOT ((-Q1)))\n50 POKE 100,W% AND W%+Y<VAL(\"HI\"):GOSUB 180:M$=RIGHT$(LEFT$(MID$(N2$,X),Q1+44585),(M%))\n60 A(VAL(CHR$(NOT N2)),-65535)=2.25:M%=Y:X=M% OR M%:Q1=2.25+((-W%<>X)):X=FRE(Q1)+POS((((Y)+((Y-I))))*((ATN(W%)-20)))\n70 GOTO 130:LIST:Y=Y/-((X^14461)):GOTO 10:REM! CLEAR COMMON\n80 TRACE:FOR X=(X) TO (ATN(X=W%)-((1=FRE(X%)))):IF (M%=A(Q1<5,896<N2)) THEN STORE B,C\n90 C=A(VAL(N2$),(Q1))/SQR(1000/A(20,X%))\n100 Q1=I:Q1=FRE(STR$(X%)):PRINT POS(M$):PRINT A(Z%,I);20;A(FRE(256)-((C<I)),W%);\n110 RECALL A\n120 READ Y,X:W%=20-X%<=N2^Z%>39/127:IF (W% OR W%) THEN 100:READ X,N2$\n130 GOTO 160:REM! CLEAR COMMON\n140 PRINT M$+\"HI\",\n150 HLIN POS(127=C)<>11766,(SIN(X)) AT ((M%<>752))*((I+((352>=W%))))\n160 M$=N2$:SAVE\n170 HLIN 664,(A(M%=I,594-N2)^I) AT X:PRINT 949;M$,\n180 Y=35517:Q1=Y OR Y:GOTO 150:STORE B,C:DATA \"A,B\"\n190 Y=Q1-VAL(M$)*((40000>=I)):PRINT\n200 READ Q1\n",
+ "options": {
+  "library": null,
+  "program": 20480,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 20480,
+ "obj_len": 1405,
+ "obj_sha256": "b0f8fbe51151e24ba46b6d7c70f2a8de0614742d8fb13ff168c01c31daecf78d",
+ "cycles": 134718976,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 20500
+  },
+  {
+   "line": 20,
+   "addr": 20500
+  },
+  {
+   "line": 30,
+   "addr": 20500
+  },
+  {
+   "line": 40,
+   "addr": 20509
+  },
+  {
+   "line": 50,
+   "addr": 20573
+  },
+  {
+   "line": 60,
+   "addr": 20650
+  },
+  {
+   "line": 70,
+   "addr": 20779
+  },
+  {
+   "line": 80,
+   "addr": 20803
+  },
+  {
+   "line": 90,
+   "addr": 20888
+  },
+  {
+   "line": 100,
+   "addr": 20942
+  },
+  {
+   "line": 110,
+   "addr": 21029
+  },
+  {
+   "line": 120,
+   "addr": 21029
+  },
+  {
+   "line": 130,
+   "addr": 21100
+  },
+  {
+   "line": 140,
+   "addr": 21106
+  },
+  {
+   "line": 150,
+   "addr": 21132
+  },
+  {
+   "line": 160,
+   "addr": 21195
+  },
+  {
+   "line": 170,
+   "addr": 21201
+  },
+  {
+   "line": 180,
+   "addr": 21270
+  },
+  {
+   "line": 190,
+   "addr": 21295
+  },
+  {
+   "line": 200,
+   "addr": 21325
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "RECOGNIZED": "REM ! CLEAR COMMON",
+  "T X": "PRINT 949;M$,",
+  "OBJECT FILE": "S013.OBJ",
+  "PROGRAM": "20480 - 21884",
+  "LOCAL VARIABLES": "21885 - 22038",
+  "HIGHEST MEMORY LOCATION": "22038"
+ }
+}

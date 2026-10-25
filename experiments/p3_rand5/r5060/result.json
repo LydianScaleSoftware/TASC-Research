@@ -1,0 +1,23 @@
+{
+ "id": "r5060",
+ "key": "567eb21e41140f3a",
+ "source": "10 REM! INTEGER K,I\n20 X=Z%:Y=X AND X:Q1$=Z$\n30 REM! CLEAR CHAIN:IF (Y) THEN HTAB A%\n40 IF (NOT 31102) THEN READ A%:PRINT A% OR A%:Z=ASC(Q1$):AB=Z OR Z:IF (127 AND ((Z%-X))/((127-Y))) THEN 260\n50 CALL ((Z%=X))+((X-Z%))=((Y%>A%>=AB)):M$=Z$+MID$(\"HI\",K)+Z$+M$+M$+\"A\"\n60 B=24:X=B AND B>Z%+TAN(Z):Y%=Y:PRINT\n70 GOTO 150\n80 AB=X:READ M%:PRINT M% AND M%\n90 PRINT:Y%=-LEN(Z$)+A%:X=Y% OR Y\n100 GET B:K=B AND (ASC(M$))\n110 Y=VAL(Z$+\"A\"+M$+Z$):Z=Y AND A%:B=I/M%\n120 A%=Y%:AB=A% AND A%:X=5:Z$=M$\n130 POP:HTAB 938\n140 Z%=256:IF (Z% OR Z%) THEN 240:ON -((Z+X))<>((SIN(A%)=ABS(M%))) GOTO 30,100,210:X=12064\n150 READ M%:PRINT M% AND M%\n160 Y%=15651:B=Y% AND A%:ON ((((Y% OR Z%))>=((M%<=.001))))+Z*((127-Y)) GOSUB 260:COLOR=NOT B\n170 AB=B:PRINT CHR$(INT(-40));M$;K;\n180 GOTO 60\n190 RUN:PRINT:X=1:B=SIN((M%<=24)):B=B OR B\n200 IF (Y%) THEN RUN\n210 RUN:REM! CLEAR COMMON\n220 M%=((X<=Z))-1000:AB=FRE(M%)+POS(17059):PLOT -((I<>I*Z%)),(A%<>B)>=X:ON -((NOT Y<>EXP(X))) GOSUB 70,70,220\n230 ON K*Z% GOTO 10,190,240\n240 READ Z%:PRINT Z% AND Z%\n250 RESTORE:READ Z%:PRINT Z% OR Z%:AB=FRE(M$):PRINT POS(Q1$)\n260 M%=Z\n270 RUN:PRINT:X=1:XDRAW -((-((Z%+846)))) AT B^-SGN(0),(EXP(X)):A%=Z:Y=A% AND A%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 30\nSYNTAX\n\n REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

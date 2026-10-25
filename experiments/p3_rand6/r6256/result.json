@@ -1,0 +1,75 @@
+{
+ "id": "r6256",
+ "key": "a5ffecbbf402f18d",
+ "source": "10 REM! INTEGER K,I\n20 DIM A(3),B$(12)\n30 PRINT CHR$(X);AB$,:GOTO 110:GOTO 20:REM! CLEAR COMMON\n40 PLOT N2,-24+NOT ((-W)):AB$=CHR$(AB%)\n50 GET X%:N2%=X% AND (XY):IF (W) THEN LIST:REM! CLEAR COMMON\n60 PRINT\n70 PRINT LEFT$(MID$(\"123\"+AB$,AB<>X),X),INT(I);:FOR N2=(25855) TO (5):GOTO 50:LOAD \"F\"\n80 XY=FRE(B$(4047>=20)+\"A\"):PRINT POS(AB$):COLOR=832\n90 N2%=I\n100 IF (X%) THEN 100:X=NOT ((N2-RND(XY))):IF (POS(N2$)/((N2%*1000))) THEN 60\n110 GOSUB 90:GOSUB 100\n",
+ "options": {
+  "library": 16384,
+  "program": 24576,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 24576,
+ "obj_len": 546,
+ "obj_sha256": "ac9c0406230869388a4f801b0500a974d675dd55999a11843581c01b840d9412",
+ "cycles": 84795005,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 24596
+  },
+  {
+   "line": 20,
+   "addr": 24596
+  },
+  {
+   "line": 30,
+   "addr": 24596
+  },
+  {
+   "line": 40,
+   "addr": 24626
+  },
+  {
+   "line": 50,
+   "addr": 24673
+  },
+  {
+   "line": 60,
+   "addr": 24717
+  },
+  {
+   "line": 70,
+   "addr": 24723
+  },
+  {
+   "line": 80,
+   "addr": 24803
+  },
+  {
+   "line": 90,
+   "addr": 24861
+  },
+  {
+   "line": 100,
+   "addr": 24870
+  },
+  {
+   "line": 110,
+   "addr": 24901
+  }
+ ],
+ "info": {
+  "LIBRARY": "16384 - 20396",
+  "RECOGNIZED": "REM ! CLEAR COMMON",
+  "OBJECT FILE": "S005.OBJ",
+  "PROGRAM": "24576 - 25121",
+  "LOCAL VARIABLES": "25122 - 25206",
+  "HIGHEST MEMORY LOCATION": "25206"
+ }
+}

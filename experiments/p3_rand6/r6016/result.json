@@ -1,0 +1,23 @@
+{
+ "id": "r6016",
+ "key": "41d0bfa9e37ff5df",
+ "source": "10 DIM A$(2),D$(4,9)\n20 GOTO 190:NOTRACE:LOAD \"F\":IF (5) THEN DEL 10,20\n30 Y=Q1%:Q1=SGN(M%)\n40 POP:Z%=Q1%:Q1=((Q1-Q1))*X:M=Q1 AND Q1\n50 Q1=SIN(40000 AND B%<=48994)\n60 CALL -C\n70 Q1%=ASC(B$):C=Q1% OR Z%\n80 COLOR=35842:NORMAL:Q1=LEN(B$+D$(Q1%,33612)+M$):Q1=Q1 OR Y\n90 REM! CLEAR COMMON:READ M%:PRINT M% OR M%\n100 GOTO 60:RECALL A:X=32767:& \"X:Y\",1:Q1=X:RUN 100\n110 GET Y:B%=Y AND (71):RECALL A\n120 FOR C=(SQR(B%)) TO (B%)\n130 PRINT M%--B%,X;:LOAD \"F\"\n140 GET M%:Z%=M% AND (-Y=24):PRINT:C$=MID$(C$+\"TASC\",25936,M%)\n150 B%=(40/B%):LOAD \"F\":X=B%:IF (M%) THEN SAVE:Q1%=Q1:Q1=Q1% AND Q1%\n160 PRINT CHR$(X OR Y+M);LEFT$(B$,40);:STORE B,C\n170 Q1%=Z%:LIST:C=Q1%:Z%=SQR(Q1%)\n180 M$=M$+\"HI\"\n190 Y=446:Q1=Y AND C:Z%=((M AND Q1))>=((Y>Q1%))<=M:Z%=POS(A$(Z%)+C$+B$):C=Z% AND Z%\n200 LIST\n210 M$=STR$(NOT ((20>X)))\n",
+ "options": {
+  "library": 16384,
+  "program": 24576,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 90\nSYNTAX\n\n REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

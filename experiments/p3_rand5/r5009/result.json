@@ -1,0 +1,66 @@
+{
+ "id": "r5009",
+ "key": "3068f756c682e3ec",
+ "source": "10 DIM P%(9),B%(8)\n20 X=121-((((Z%=Z))+-N2)):IF (X AND X) THEN 70:ON P%(Z%<=((W% AND B%(B%)))) GOTO 70\n30 Z%=B%(((B%>934))^(Z))\n40 SPEED=Q1>=((P%(Z%)*W>=LEN(\"TASC\"))):GOSUB 20\n50 P%(Z%)=B%(-X+Y%)\n60 HPLOT TO W,(ASC(\"X Y\")):GOSUB 80\n70 Z=FRE(Z$):PRINT POS(Z$):W%=B%(692):IF (W% AND W%) THEN 80\n80 P%((20))=Z<2:COLOR=(NOT X)<>POS(-.5):DATA -2.5,\"A,B\",X,300\n90 B%=Z:GOTO 40\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 525,
+ "obj_sha256": "2b865a5bdb1c9bdf341d3559f0cee22e1dfe3d31210dd9e64c6e46f22d9b3ef4",
+ "cycles": 82901744,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6119
+  },
+  {
+   "line": 40,
+   "addr": 6146
+  },
+  {
+   "line": 50,
+   "addr": 6198
+  },
+  {
+   "line": 60,
+   "addr": 6222
+  },
+  {
+   "line": 70,
+   "addr": 6249
+  },
+  {
+   "line": 80,
+   "addr": 6281
+  },
+  {
+   "line": 90,
+   "addr": 6353
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S009.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6588",
+  "LOCAL VARIABLES": "6589 - 6666",
+  "HIGHEST MEMORY LOCATION": "6666"
+ }
+}

@@ -1,0 +1,165 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S007
+
+
+OBJECT CODE FILE:
+(DEFAULT S007.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION?
+
+*****BEGINNING PASS 1
+
+
+
+10
+RECOGNIZED  REM ! INTEGER I,K
+20  DIM A$(3,4),P%(12)
+30
+
+*****WARNING
+LINE NUMBER 30
+IGNORED
+
+ SAVE
+
+
+: FOR X = (Q1%) TO (97 + ((Q1% -  INT (A
+B)))) STEP (X% * 65535 + ((P%(I) * 2 <
+> (X))))
+40  PRINT ( COS (Y%));M$;
+50  PRINT 65535;691;Q1%;:M =  FRE ( MID$
+ ( STR$ (B%), RND (B%)) +  LEFT$ (A$(Q1%
+,X%),AB / P%(Q1%))): PRINT  POS (X$): PR
+INT ((((0 AND XY)) > 68)) - (38776 ^ Q1%
+); NOT ((((M <  > I)) /  SIN (3))),A$(X%
+,Y%);
+60  GOTO 220:Y = X
+
+*****WARNING
+LINE NUMBER 60
+IGNORED
+
+: IF (Q1% - P%((I))) THEN X% =  -  PEEK
+(AB)
+
+
+
+
+*****WARNING
+LINE NUMBER 60
+IGNORED
+
+: IF (X% AND X%) THEN 80
+
+
+70  GOTO 250
+
+*****WARNING
+LINE NUMBER 70
+IGNORED
+
+: STORE B,C
+
+
+80  IF (( VAL (A$(I,B%)) / Y)) THEN  GOS
+UB 120: IF (M) THEN  RUN 10
+90  READ K: PRINT K OR K: PRINT X% +  -
+((K >  = Y%));
+100 K =  VAL ( LEFT$ ( STR$ (P%(X%)),327
+67))
+110  COLOR= P%(7):Y =  NOT ((22824 AND
+RND (0.1)))
+120
+
+*****WARNING
+LINE NUMBER 120
+IGNORED
+
+ IF (P%(I AND (K))) THEN  LOAD "F"
+
+
+:M$ =  LEFT$ (XY$,P%(Q1%)) +  MID$ (M$,4
+5509) +  MID$ ( LEFT$ (XY$,127),Y,1000 A
+ND Y)
+130  GET M:Y% = M AND ( LEN ("" + "A" +
+XY$ + A$(39,I))): READ K: PRINT K AND K
+140 AB = Y% <  =  - ((K + Y)):Y =  FRE (
+AB) +  POS (Y): SPEED=  -  FRE (I): HTAB
+ ((3 > K)) + X = Y%
+150 X$ = "TASC"
+RECOGNIZED : REM ! CLEAR CHAIN
+160  GOTO 90
+
+*****WARNING
+LINE NUMBER 160
+IGNORED
+
+: RECALL A
+
+
+
+
+*****WARNING
+LINE NUMBER 160
+IGNORED
+
+: PRINT
+
+
+170  VTAB Y%:K = P%( LOG (K) * AB):XY =
+K AND  ATN (40 ^ X * ((X% = X%)))
+180  READ XY$,Y
+190 M = Y / X%
+200  NEXT X: CALL  TAN (Y%)
+
+*****WARNING
+LINE NUMBER 200
+IGNORED
+
+: TRACE
+
+
+210  PRINT ((K < XY / P%(.5))) +  TAN (X
+Y * 20); MID$ ( MID$ ( LEFT$ (X$,XY),AB
+* 2),B%,3 <  > Y% + 40); FRE (XY) * Q1%;
+
+220 I = (Y)
+
+*****WARNING
+LINE NUMBER 220
+IGNORED
+
+: SAVE
+
+
+:X = I:K = Y%:X = K OR Y%
+230
+
+*****WARNING
+LINE NUMBER 230
+IGNORED
+
+ RECALL A
+
+
+240  GOTO 280
+
+*****FATAL ERROR
+LINE NUMBER 240
+SYNTAX
+
+: REM ! CLEAR CHAIN !ERR!
+
+TYPE CNTRL-C TO ABORT

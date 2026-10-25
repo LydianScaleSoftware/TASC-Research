@@ -1,0 +1,23 @@
+{
+ "id": "r5239",
+ "key": "0b9d7cacd165f9e6",
+ "source": "10 REM! INTEGER *\n20 DIM A$(2),D$(9),P(12)\n30 DEF FN F(X)=-(49152)\n40 PRINT N2;-((256=AB));A$;\n50 HCOLOR=39>35478:COLOR=AB+((2<=FN F(Q1))):C%=-3+PEEK(P(Z)):C=C% OR C%\n60 GOSUB 150:AB=49152+Q1:IF (AB OR AB) THEN 140\n70 IF (((P(Z) OR Z))+AB+((-7+((N2>=Q1))))) THEN N2=N2+-N2+((40<>INT(P(A%))))\n80 READ AB,A$:CALL NOT ((P(AB) OR 32767))/7\n90 FOR Q1=(890>POS(823 OR C)) TO (C):SPEED=LOG(256)--46:HCOLOR=3>=Q1\n100 FOR N2=(C%) TO (COS(NOT ((100 OR N2%)))):PRINT:HLIN 20,(NOT Q1) AT 2<>SQR(Q1)\n110 FOR AB=(NOT ((486/FN F(C%)))) TO (((N2% OR 925*Z))^((N2+N2-((48869+X%))))):N2%=39:PRINT NOT 2,Y$;MID$(AB$,INT(C),629<=24)+RIGHT$(MID$(AB$,C),A%);\n120 AB$=AB$\n130 N2%=3:IF (P(C%)-Z) THEN HCOLOR=((A%<Q1))*3=N2:HTAB N2%\n140 ON 933 GOSUB 40,40,110:READ Q1,AB$:ON Q1 OR 7 GOTO 70,130\n150 A$=AB$+MID$(LEFT$(AB$,P(A%)),246,20)\n160 C=1000\n170 INPUT AB$\n180 HCOLOR=N2%:P(TAN(SIN(P(A%))=C%/Q1))=((POS(C%)<>40^Q1))*52\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: unexpected input wait during compile:\n\n*****BEGINNING PASS 1\n\n\n\n10\nRECOGNIZED  REM ! INTEGER *\n20  DIM A$(2),D$(9),P(12)\n30  DEF  FN F(X) =  - (49152)\n40  PRINT N2; - ((256 = AB));A$;\n50  HCOLOR= 39 > 35478: COLOR= AB + ((2\n<  =  FN F(Q1))):C% =  - 3 +  PEEK (P(Z)\n):C = C% OR C%\n60  GOSUB 150:AB = 49152 + Q1: IF (AB OR\n AB) THEN 140\n70  IF (((P(Z) OR Z)) + AB + (( - 7 + ((\nN2 >  = Q1))))) THEN N2 = N2 +  - N2 + (\n(40 <  >  INT (P(A%))))\n80  READ AB,A$\n\nDISK FULL\n\nBREAK IN 0\n]?",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

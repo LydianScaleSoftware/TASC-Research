@@ -1,0 +1,38 @@
+{
+ "id": "unsup_vars",
+ "key": "9e673623fe5dfa63",
+ "source": "10 X=1:STORE Q,R:Y=X\n20 PRINT R\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 82,
+ "obj_sha256": "8ac9426813925f6a72ca3202fe8a19221c42ce56ec20330f83eddf9dad1eecf3",
+ "cycles": 57138914,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6093
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6145",
+  "LOCAL VARIABLES": "6146 - 6160",
+  "HIGHEST MEMORY LOCATION": "6160"
+ }
+}

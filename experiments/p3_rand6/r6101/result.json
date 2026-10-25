@@ -1,0 +1,79 @@
+{
+ "id": "r6101",
+ "key": "a4a3b373927818be",
+ "source": "10 IF (FRE(\"A\")) THEN TRACE:M%=VAL(LEFT$(\"\",M%*Y)):IF (M% AND M%) THEN 10\n20 M=FRE(D$(LEN(AB$+\"TASC\"))):PRINT POS(N2$)\n30 IF (((VAL(N2$) OR ((A OR C%))))/(((M) OR SQR(AB)))) THEN LIST:PRINT SIN(286);B*C%-PEEK(A);:AB$=STR$(A)\n40 PRINT C%,:A=FRE(LEFT$(MID$(\"HI\"+D$(N2%),M>=10),ATN(POS(M)))):PRINT POS(N2$)\n50 GOSUB 50:B=B:M=B AND ((682 AND -961))-((A=(40))):REM! CLEAR COMMON\n60 IF (0) THEN RECALL A:LIST\n70 FOR AB=(A) TO (83):AB$=AB$:REM! CLEAR CHAIN\n80 FOR Y=(49152) TO (C%*39*((M>=3.14159))*-M):RUN 120:IF (M) THEN TRACE\n90 & \"X:Y\",1\n100 AB$=LEFT$(AB$+LEFT$(\"123\",B),TAN(10)):N2$=AB$:W%=40:A=W% AND C%\n110 AB=FRE(MID$(\"X Y\"+D$(5),C%,W%+C%)):PRINT POS(N2$):W%=N2%:A=W% OR W%:A=Y:IF (A AND A) THEN 20\n120 HTAB M%<=VAL(B$)<=POS(N2$+N2$)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1047,
+ "obj_sha256": "ebb71746405c5df188040c42836302cd192651ff9d18691a928e3631e90e37de",
+ "cycles": 108393581,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6149
+  },
+  {
+   "line": 30,
+   "addr": 6198
+  },
+  {
+   "line": 40,
+   "addr": 6298
+  },
+  {
+   "line": 50,
+   "addr": 6375
+  },
+  {
+   "line": 60,
+   "addr": 6435
+  },
+  {
+   "line": 70,
+   "addr": 6446
+  },
+  {
+   "line": 80,
+   "addr": 6481
+  },
+  {
+   "line": 90,
+   "addr": 6540
+  },
+  {
+   "line": 100,
+   "addr": 6540
+  },
+  {
+   "line": 110,
+   "addr": 6615
+  },
+  {
+   "line": 120,
+   "addr": 6731
+  }
+ ],
+ "info": {
+  "RECOGNIZED": "REM ! CLEAR CHAIN",
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7110",
+  "LOCAL VARIABLES": "7111 - 7178",
+  "HIGHEST MEMORY LOCATION": "7178"
+ }
+}

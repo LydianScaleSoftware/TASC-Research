@@ -1,0 +1,127 @@
+{
+ "id": "r6206",
+ "key": "6559e5e76299d46e",
+ "source": "10 REM! INTEGER J,K\n20 DEF FN F(T)=Q1%\n30 GET XY:M%=XY AND (24):PRINT B% AND XY;LOG(679 AND K);\n40 DEL 10,20\n50 SPEED=((-890+((A>40))))*((B+B%-((W>K))))\n60 LOAD \"F\":IF (W) THEN AB%=XY:B=AB% OR AB%:GOTO 70\n70 TEXT\n80 PRINT B$,FRE(Y*100),\n90 PRINT:B%=B%\n100 PRINT W$+B$+MID$(CHR$(B%),AB%=AB%),B$;W$,:LOAD \"F\":GOTO 90:REM! CLEAR COMMON\n110 Y=EXP(J)+((J>XY))<=NOT B-2\n120 ON W GOTO 40,80,30,60:GOTO 90:&\n130 COLOR=Q1%\n140 ON 2 GOTO 220\n150 XY=FRE(B$):PRINT POS(Z$):PRINT INT(VAL(B$)),48706;\"\",\n160 XY=.5:XY=XY AND XY:IF (NOT Q1%) THEN M%=1000:ON W GOTO 130\n170 PRINT Q1%,\n180 FOR J=(XY) TO (J)\n190 IF (151) THEN PRINT STR$(-((B%=A)));K;LOG(TAN(317>=Y)),:RUN:PRINT:X=1:GOTO 10\n200 PRINT XY,W;-LOG(-Y),:LOMEM: 16384\n210 IF (782-7>=16765*FRE(B)) THEN TRACE\n220 READ B%:PRINT B% AND B%\n230 CALL A:XY=127 AND B%:IF (XY AND XY) THEN 130\n240 HCOLOR=W:ON A AND B% GOTO 160,240,170:GOTO 10:NOTRACE\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1230,
+ "obj_sha256": "5f8bc946400e66125dbf7cef166acb2703c88544789fbf5578a1b835a9150283",
+ "cycles": 128143871,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6094
+  },
+  {
+   "line": 40,
+   "addr": 6154
+  },
+  {
+   "line": 50,
+   "addr": 6154
+  },
+  {
+   "line": 60,
+   "addr": 6208
+  },
+  {
+   "line": 70,
+   "addr": 6246
+  },
+  {
+   "line": 80,
+   "addr": 6249
+  },
+  {
+   "line": 90,
+   "addr": 6276
+  },
+  {
+   "line": 100,
+   "addr": 6291
+  },
+  {
+   "line": 110,
+   "addr": 6363
+  },
+  {
+   "line": 120,
+   "addr": 6414
+  },
+  {
+   "line": 130,
+   "addr": 6435
+  },
+  {
+   "line": 140,
+   "addr": 6444
+  },
+  {
+   "line": 150,
+   "addr": 6456
+  },
+  {
+   "line": 160,
+   "addr": 6516
+  },
+  {
+   "line": 170,
+   "addr": 6572
+  },
+  {
+   "line": 180,
+   "addr": 6584
+  },
+  {
+   "line": 190,
+   "addr": 6604
+  },
+  {
+   "line": 200,
+   "addr": 6675
+  },
+  {
+   "line": 210,
+   "addr": 6711
+  },
+  {
+   "line": 220,
+   "addr": 6740
+  },
+  {
+   "line": 230,
+   "addr": 6770
+  },
+  {
+   "line": 240,
+   "addr": 6814
+  }
+ ],
+ "info": {
+  "RECOGNIZED": "REM ! CLEAR COMMON",
+  "OBJECT FILE": "S006.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7293",
+  "LOCAL VARIABLES": "7294 - 7360",
+  "HIGHEST MEMORY LOCATION": "7360"
+ }
+}

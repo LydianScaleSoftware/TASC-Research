@@ -1,0 +1,38 @@
+{
+ "id": "rem_dead_rd",
+ "key": "a0f4f450b9a0cde4",
+ "source": "10 GOTO 20:REM! CLEAR CHAIN\n20 PRINT\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 38,
+ "obj_sha256": "fe112b5a1a92b75403b17887f04e468ca1ce30ab5cfc25ee5f404537accf4717",
+ "cycles": 54222808,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6093
+  }
+ ],
+ "info": {
+  "RECOGNIZED": "REM ! CLEAR CHAIN",
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6101",
+  "HIGHEST MEMORY LOCATION": "6101"
+ }
+}

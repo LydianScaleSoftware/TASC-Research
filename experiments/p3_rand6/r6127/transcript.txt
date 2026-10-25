@@ -1,0 +1,98 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S002
+
+
+OBJECT CODE FILE:
+(DEFAULT S002.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION?
+
+*****BEGINNING PASS 1
+
+
+
+10
+RECOGNIZED  REM ! INTEGER J
+20  DIM A(12,8)
+30  PRINT  RIGHT$ ("123" +  MID$ (B$,A(2
+.25,255),1000),1 OR Y);
+40  ON  - D%(39) GOTO 20,130,40: GET Y:X
+% = Y OR (1E3 OR 0)
+50 N2 =  RND (0) > N2
+
+*****WARNING
+LINE NUMBER 50
+IGNORED
+
+: LOAD "F"
+
+
+60 X% =  - A(X%, - N2):XY% = ((Y% AND J
++ X%)) * J:C =  FRE (XY%) +  POS ( - A(1
+000,J) - B% <  = ((D%(XY%) <  > Y% >  =
+((Y < J)))))
+RECOGNIZED : REM ! CLEAR CHAIN
+70 XY% =  POS ( MID$ (B$,39)) >  = 24:C
+= XY% AND B%
+
+*****WARNING
+LINE NUMBER 70
+IGNORED
+
+: IF (24 <  =  - ((C < C))) THEN  & "X:Y
+",1
+
+
+: GOTO 50
+
+*****WARNING
+LINE NUMBER 70
+IGNORED
+
+: STORE B,C
+
+
+80  FOR N2 = ( EXP ( - C) AND (( - XY OR
+ Y% * J))) TO ( VAL ("123")):D%( - N2 >
+Y%) = Y% * ((Y% * A(.001,40)))
+90 Y% =  LOG ( VAL (B$))
+100 Y% = X:XY = Y% OR  VAL (XY$ + C$) ^
+(Y)
+
+*****WARNING
+LINE NUMBER 100
+IGNORED
+
+: & "X:Y",1
+
+
+110
+
+*****WARNING
+LINE NUMBER 110
+IGNORED
+
+ & "X:Y",1
+
+
+: GOTO 130
+
+*****FATAL ERROR
+LINE NUMBER 110
+SYNTAX
+
+: REM ! CLEAR COMMON !ERR!
+
+TYPE CNTRL-C TO ABORT

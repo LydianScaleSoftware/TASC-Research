@@ -1,0 +1,23 @@
+{
+ "id": "r6011",
+ "key": "5bd25efed0e45f96",
+ "source": "10 REM! INTEGER *\n20 DIM P$(10)\n30 READ Q1%:PRINT Q1% AND Q1%\n40 AB=FRE(XY$):PRINT POS(Q1$):Y=40390:IF (Y OR Y) THEN 100\n50 C%=Q1%=((1000=ATN(39))):IF (C% OR C%) THEN 120\n60 RUN 40:PRINT:X=1:GOTO 140:REM! CLEAR CHAIN:NORMAL\n70 PRINT Q1%;\"HI\"+XY$+\"123\",:RUN 90\n80 IF (NOT AB>127<>(127>AB)) THEN NOTRACE\n90 IF (7 OR Z) THEN CONT:C%=Z\n100 IF (645) THEN TRACE\n110 GOTO 210:LOAD \"F\"\n120 B$=P$(-((-10))):FOR Y=(((X% OR POS(X)))-M) TO (M)\n130 Q1%=FRE(EXP(Q1%)):LIST 10-20:M=Q1%:HLIN 0,(NOT (((AB%)<M))) AT ((LOG(Q1%) AND C%))*X:PRINT X*Q1%;AB%+((Q1%>256))=Q1%+M*AB%;\n140 P$(-C%)=\"X Y\":AB=10\n150 RESTORE:PLOT 320,X%\n160 GOSUB 90:AB=AB:& \"X:Y\",1:Z=AB\n170 GOTO 90:REM! CLEAR COMMON:IF (NOT ((NOT ((.001<>AB))))) THEN 20\n180 AB=C% OR ASC(Q1$):M=AB AND AB\n190 SHLOAD\n200 RUN 50:PRINT:X=1\n210 Z=-((AB%+Q1%))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 60\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

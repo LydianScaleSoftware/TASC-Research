@@ -1,0 +1,23 @@
+{
+ "id": "r6173",
+ "key": "49a9a5ff9f01a5dd",
+ "source": "10 DIM A%(1),B(9)\n20 REM! CLEAR CHAIN:ON -3 GOTO 90,160,160\n30 Z%=-((X OR B(Q1%))) AND ((39<Z% OR 44451)):Z%=((((A>=10))-Z))*47408:CONT:A=Z%:&\n40 READ X,A:PLOT Z,PEEK(XY*((32767>=W%)))\n50 XY=X:A=FRE(XY)+POS(X):LIST:IF (Z%-((M OR SQR(Q1%)))) THEN SHLOAD\n60 FOR XY=(102) TO (-(A)):A=255:IF (A AND A) THEN 50:FOR X=(2) TO (Z%)\n70 IF (-RND(XY+X%)) THEN RECALL A:IF ((X%)) THEN DEL 10,20\n80 Z=X%^((-5-((B(32767)<Q1%)))):Z=XY:TRACE:Z=Z\n90 XY=M:LOAD \"F\":A=XY\n100 NORMAL:READ W%:PRINT W% AND W%:PRINT Q1$;MID$(X$,TAN(.001)*W%);\"X Y\";\n110 B$=\"TASC\":A%(VAL(B$))=(INT(100)):PRINT\n120 PRINT P%(NOT COS(Z));:PRINT NOT ((NOT XY/EXP(Q1%)));\n130 TRACE\n140 X=Z:SAVE:Z=X\n150 A=ATN((A%(Q1%))):XY=A OR A:GET M:X%=M OR (VAL(CHR$(W%))+Z%)\n160 & \"X:Y\",1:Z%=(Q1%) AND -((1000 AND X)):A=Z% AND Z:IF (M) THEN 120\n170 GOTO 40\n180 FOR A=(VAL(LEFT$(X$,RND(A)))) TO (256):Z=10<>EXP(65535)=P%(VAL(\"X Y\"))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 20\nSYNTAX\n\n REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

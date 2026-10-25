@@ -1,0 +1,23 @@
+{
+ "id": "r5261",
+ "key": "8b0f1704f3b92c2b",
+ "source": "10 DIM B$(5)\n20 DEF FN F(T)=SGN(X)\n30 FOR XY=(INT(B)<39) TO (650) STEP (W*((256-40))+-177):D$(FN F(M%))=\"\":Z$=A$\n40 REM! CLEAR COMMON:SPEED=5\n50 PRINT W;127;\n60 N2=XY-100<Z%>((ASC(C$)<=((1.5 OR M%)))):IF (N2 AND N2) THEN 50:HCOLOR=TAN(C%)\n70 READ B:PRINT B OR B\n80 POKE -((XY<5312))/7,W<>B%:VTAB NOT ((N2<Z%))\n90 GOSUB 80:Z%=ASC(\"A\"):PRINT B;\"HI\";\n100 READ XY:PRINT XY OR XY:B%=5>1E3:GOTO 70\n110 M%=W^C%+FN F(M%)-((NOT C%+-2)):C%=-W\n120 B%=W\n130 GOSUB 110:VTAB -B%:IF (VAL(C$+Z$)) THEN RETURN\n140 RUN:IF (W) THEN RUN:COLOR=18060\n150 XY=49152>B%:XY=XY AND XY\n160 B=X:VTAB C%:GOSUB 110\n",
+ "options": {
+  "library": 16384,
+  "program": 24576,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 40\nSYNTAX\n\n REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

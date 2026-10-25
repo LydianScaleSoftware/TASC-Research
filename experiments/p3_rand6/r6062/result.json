@@ -1,0 +1,98 @@
+{
+ "id": "r6062",
+ "key": "9d84cce6aae00f1e",
+ "source": "10 REM! INTEGER *\n20 DIM P$(11)\n30 DEF FN F(T)=A\n40 PRINT:RUN:PRINT:X=1\n50 DATA 1:M=A\n60 M=((36492^256-2.25))/POS(-2):A=M OR M:Z%=.5 OR 880\n70 GOTO 170:LOAD \"F\"\n80 IF (Y>=W*Z%) THEN TRACE:C$=CHR$(-24):ON LOG(LEN(C$)) GOTO 160,40\n90 RUN:FOR Y=(W) TO (((M OR 631))^X>((Z%<=80=A))):GOTO 80:STORE B,C\n100 GOTO 100\n110 IF (-((-((NOT 20))))) THEN HTAB W:& \"X:Y\",1\n120 ON ((W%-X))*1000<=M GOTO 130,120,20:Z%=A>FN F(Z%)+((M AND Z%)):Y=Z% OR Z%:IF (B%+M<=((Z%/41676<W-W))) THEN LOMEM: 16384\n130 W$=LEFT$(A$(X*A),B%)\n140 M=((W=100))+M:TRACE:W=M:STORE B,C\n150 IF (40>((N2% AND ((B% OR M))))) THEN W=W\n160 P$(A>=-Y)=RIGHT$(MID$(RIGHT$(\"TASC\",W),24743,33468-N2%),VAL(RIGHT$(\"HI\",A))):IF (M+1) THEN PRINT MID$(M$,((33503=154))^W%),INT(NOT ((B%=B%))),:N2%=M<=Z%-A-0:A=N2% AND FN F(EXP(X-N2%))\n170 A=FRE(\"HI\"):PRINT POS(W$)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1109,
+ "obj_sha256": "387c56fd0bf82342a64ab5d60f3fa753a3091e947076e180a0c4e9232ed5dc4b",
+ "cycles": 123047633,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6094
+  },
+  {
+   "line": 50,
+   "addr": 6106
+  },
+  {
+   "line": 60,
+   "addr": 6120
+  },
+  {
+   "line": 70,
+   "addr": 6189
+  },
+  {
+   "line": 80,
+   "addr": 6192
+  },
+  {
+   "line": 90,
+   "addr": 6238
+  },
+  {
+   "line": 100,
+   "addr": 6241
+  },
+  {
+   "line": 110,
+   "addr": 6244
+  },
+  {
+   "line": 120,
+   "addr": 6269
+  },
+  {
+   "line": 130,
+   "addr": 6386
+  },
+  {
+   "line": 140,
+   "addr": 6404
+  },
+  {
+   "line": 150,
+   "addr": 6425
+  },
+  {
+   "line": 160,
+   "addr": 6463
+  },
+  {
+   "line": 170,
+   "addr": 6670
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S002.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7172",
+  "LOCAL VARIABLES": "7173 - 7256",
+  "HIGHEST MEMORY LOCATION": "7256"
+ }
+}

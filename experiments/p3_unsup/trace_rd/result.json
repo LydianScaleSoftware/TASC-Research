@@ -1,0 +1,34 @@
+{
+ "id": "trace_rd",
+ "key": "953c0b41afb9e4ac",
+ "source": "10 TRACE:PRINT:LIST:X=1\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 61,
+ "obj_sha256": "b35e9799005fc5d7cb5cba828ef978984313578be1b2a1e71e9ccb8d756776a5",
+ "cycles": 54225549,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S002.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6124",
+  "LOCAL VARIABLES": "6125 - 6129",
+  "HIGHEST MEMORY LOCATION": "6129"
+ }
+}

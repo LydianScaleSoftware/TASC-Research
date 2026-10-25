@@ -1,0 +1,23 @@
+{
+ "id": "r6033",
+ "key": "322ca8065b3f4226",
+ "source": "10 REM! INTEGER I,J\n20 DIM A%(9),B(11,2)\n30 SPEED=N2%:DATA 300:M=PEEK(SIN(B(7,1E3))) AND COS(N2%):M=FRE(M)+POS(-XY%*((I*B%))*((A%<=((M<=A%)))))\n40 IF (Z) THEN & \"X:Y\",1:W=TAN(XY%)\n50 REM! CLEAR CHAIN:J=((7<AB))*((((908<=1000))-((W OR 252)))):Y=J AND J\n60 IF (ATN(M)^Y) THEN RUN:AB=Z+((A%-B%+W))\n70 AB=N2%:IF (AB OR AB) THEN 180:DATA HI,X,\"A,B\":IF (D%((0),1000)^-((Z*W))) THEN 70\n80 IF (1000) THEN DATA -2.5\n90 GOTO 50:REM! CLEAR CHAIN:I=TAN(ATN(256)):IF (I OR I) THEN 210:CONT\n100 GOTO 70:STORE B,C:PLOT NOT ((A%(XY%)+VAL(Z$))),B(256 OR D%(I,A%),-((D%(I,256)+20)))\n110 W=(3<=40<=POS(M)):& \"X:Y\",1:Y=W:RUN:PRINT:X=1\n120 B(I<Y,B%)=B(N2%*J>=N2%*7,(A%)*((1E3 AND B%))):RECALL A:STORE B,C\n130 RUN\n140 GOTO 140:SHLOAD:B%=-((89-457+((3<=W)))):IF (B% AND B%) THEN 80:INPUT \"\";W$,Z,D%(((B(2,A%) OR XY%))-D%(40,22) OR VAL(\"\")-Z,(A%(N2%))<=5)\n150 DEL 10,20\n160 Z=AB:RUN\n170 ON -(Z) GOTO 130,180:N2$=Z$+STR$(40-A%(N2%))\n180 Y=B%:W=Y OR Y:GOTO 110:& \"X:Y\",1\n190 SAVE\n200 & \"X:Y\",1:GOTO 120:SHLOAD\n210 W$=W$+W$+CHR$(Y):B%=Z*I:LIST 10-20:Z=B%:GOTO 40\n220 W=ATN(J):W=FRE(W)+POS(INT(127))\n",
+ "options": {
+  "library": null,
+  "program": "HGR1",
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 50\nSYNTAX\n\n REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

@@ -27,7 +27,7 @@ from tasc.harness import (
 ROOT = Path(__file__).resolve().parent.parent
 BASE = ROOT / "images" / "work" / "tasc201.dsk"
 EXPERIMENTS = ROOT / "experiments"
-JOBS_PER_DISK = 20
+JOBS_PER_DISK = 8  # 20 filled the disk with PASS-sized random programs (p3_rand6: DISK FULL)
 
 
 @dataclass(frozen=True)

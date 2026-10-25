@@ -1,0 +1,23 @@
+{
+ "id": "r5290",
+ "key": "3dc3b3072017362a",
+ "source": "10 DIM D(5),P%(11,12)\n20 DEF FN F(Z)=21842\n30 SPEED=P%(W=C,FN F(W%))<>W\n40 COLOR=N2<>((W%=M)):IF (M%) THEN DATA 1,X,\"A,B\",-2.5\n50 Q1%=((40 AND -M))*-FRE(A$):Q1=Q1% OR Q1%:IF (0.1) THEN RUN\n60 POKE EXP(LOG(N2 AND Q1%)),612:IF (N2-((273>W))) THEN HLIN 40000,(N2) AT ((-20 OR -Q1%))+Q1:READ M:PRINT M OR M\n70 W%=M:IF (M) THEN DATA \"A,B\"\n80 PRINT M%<((Q1%<=FRE(\"TASC\")));:W=C:W=FRE(MID$(STR$(Q1),A%)):PRINT POS(AB$)\n90 Q1%=-FN F(W%^M%):N2=Q1% OR ((A%*354 AND C))>=VAL(\"TASC\"+\"HI\"):HTAB 127+256-24<315+COS(A%):N2=39\n100 READ Q1%:PRINT Q1% OR Q1%:Q1%=D(Q1%<>Q1-Q1%):IF (Q1% OR Q1%) THEN 180:DATA 300,1,\"A,B\",-2.5\n110 Q1%=10:IF (Q1% AND Q1%) THEN 250:D(544)=N2\n120 PRINT CHR$(-M%);:VTAB 195 OR W%<P%(Q1%,Q1%)+D(Q1%)\n130 Q1=FN F(956):GET M%:A%=M% OR (W%)\n140 M=TAN(-((65535*40000)))\n150 Q1=D(FRE(A$)):W=Q1 OR Q1\n160 C=((W/C))^M*P%(-A%,A%/0):IF (C AND C) THEN 190:CALL -((Q1+SQR(Q1%)))\n170 PRINT MID$(RIGHT$(\"A\"+\"123\",C*A%),1.5);:C=-C:FOR Q1=(-13813) TO (-N2)\n180 RUN 100:PLOT -W,0\n190 IF (VAL(Y$)) THEN RUN 210:N2=FRE(Y$):PRINT POS(Y$)\n200 REM! CLEAR COMMON:RUN:PRINT:X=1\n210 REM! CLEAR COMMON:PRINT NOT FRE(821);((W%-W%>-A%))+40;1000=-C+Q1;:RETURN\n220 IF (W) THEN SPEED=N2-((10 AND D(Q1%))):PRINT FN F(RND(P%(Q1%,A%)>=32767));N2;Q1%;\n230 DATA ,\"A,B\",\"A,B\",1\n240 GET Q1:A%=Q1 OR (C):PRINT:IF (M) THEN 140\n250 A%=A%:C=N2:IF (D(-FN F(255))) THEN D(FN F(M%))=((W%+M))^C-RND(M%^N2)\n260 IF (TAN(M%>=RND(Q1))) THEN GOSUB 100:W=LEN(\"HI\"):W=1=20\n270 C=FN F(Q1%):W=C AND D(NOT W%)+Q1:IF (LEN(AB$+Y$)) THEN RUN 170\n280 DATA X,\"A,B\"\n290 GOSUB 60:FOR W=(Q1%) TO (LOG(P%(LOG(C),W%))):GOTO 30\n300 HTAB 7:N2=FRE(A$+\"X Y\"):PRINT POS(AB$)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 200\nSYNTAX\n\n REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

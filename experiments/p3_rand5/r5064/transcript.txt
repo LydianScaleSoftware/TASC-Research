@@ -1,0 +1,105 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S004
+
+
+OBJECT CODE FILE:
+(DEFAULT S004.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION? NO
+
+COMPILATION LISTING:
+(DEFAULT YES)? YES
+
+PAUSE ON ERRORS:
+(DEFAULT YES)? YES
+
+INTEGER ARITHMETIC:
+(DEFAULT YES)? YES
+
+INTEGER CONSTANTS:
+(DEFAULT YES)? NO
+
+RESUME/DEBUG CODE:
+(DEFAULT NO)? YES
+
+*****BEGINNING PASS 1
+
+
+
+10
+RECOGNIZED  REM ! INTEGER K,I
+20  IF ((I)) THEN  RUN :I = 2.25 +  FRE
+("") * ((C / 0.1))
+30  FOR C = ( EXP (((C OR Z)) * (C))) TO
+ ( - 14354)
+40  VTAB N2
+50  GET C%:M% = C% AND ( - Y%)
+60  POKE  LEN ( CHR$ (AB)),3: POKE 49286
+,2.25: RUN 140
+70 B =  - (( ASC ("123") / 3)):C =  FRE
+(B) +  POS (5)
+80 C =  FRE (Z < N2 < Y%)
+90 B =  FRE (M$): PRINT  POS (M$):A% = 2
+ - Y% OR 256: IF (A% OR A%) THEN 60
+
+*****WARNING
+LINE NUMBER 90
+IGNORED
+
+: SCALE=  FRE (B%(20 > M%))
+
+
+100 M$ =  LEFT$ (Z$ + Z$ + Z$,A%): SPEED
+= C + ((AB <  > M%)) < M%: READ M$
+110 M% = 10:AB =  FRE (M%) +  POS (A%(Y%
+)): DATA
+120  FOR C = (523) TO (5 + B%((B))) STEP
+ (B%( - (( - C%)))): ON  NOT ((K <  = ((
+I <  = A%)))) GOTO 180,80,90,130:C =  EX
+P (I)
+130  ONERR  GOTO 140:A% = 255 =  - ((K >
+ B)):C = A% AND A%
+140 B%( - 7) = B + AB:C = B%( SIN (255))
+:C = C OR  NOT (( - C% <  =  NOT 100)):
+END
+150 M% = C%: IF (M% AND M%) THEN 50:C =
+ NOT B
+
+*****WARNING
+LINE NUMBER 150
+IGNORED
+
+: STOP
+
+
+160  PRINT M$;C - N2; NOT ((3 / ((C = A%
+(1.5))))),
+170  READ A%: PRINT A% AND A%: READ Z: P
+RINT Z AND Z: PRINT
+180  NEXT C: GET B:M% = B AND (.5)
+190  READ C%: IF (N2) THEN  IF (A%(((.5
++ B%(Y%))) / ((A%(M%) - 2)))) THEN M$ =
+ MID$ (M$ + Z$,3,K <  = 46067) +  RIGHT$
+ ( LEFT$ (M$,46019), - A%(Y%)): GOSUB 19
+0
+200  PRINT 24; NOT C, - 2.25;
+
+*****FATAL ERROR
+LINE NUMBER 200
+SYNTAX
+
+: REM ! CLEAR CHAIN !ERR!
+
+TYPE CNTRL-C TO ABORT

@@ -1,0 +1,23 @@
+{
+ "id": "r6095",
+ "key": "e065d0b2c2bfa03e",
+ "source": "10 DIM A(6,4),P(4)\n20 DEF FN F(T)=A(M%,RND(XY))<=-((-N2%))\n30 Z$=CHR$(Q1)+\"HI\":NOTRACE:N2%=N2%\n40 NOTRACE:XY=((N2%<=32767))*((N2%+N2%))<ATN(B)\n50 IF (C%) THEN RUN:PRINT LEFT$(RIGHT$(\"A\",822-X%),B);POS(D$(C%)+\"\");:READ B:PRINT B OR B\n60 IF (M%-((C%-N2%+143*X%))) THEN RUN\n70 FOR XY=(NOT ((NOT ABS(P(255))))) TO (C%):M%=B\n80 XY=((ATN(49152)=.001*A(M%,0.1)))^((VAL(\"\")^SGN(10))):Q1=FRE(XY)+POS(-((NOT ((N2%-A(X%,X%)))))):IF (M) THEN 250\n90 STORE B,C\n100 SAVE:N2%=-((AB/((7653>M%)))):SHLOAD:XY=N2%\n110 M%=-1+((16664-M<>893)):CONT\n120 IF (M) THEN NOTRACE:DEL 10,20\n130 IF (AB) THEN M%=M%\n140 IF (3.14159) THEN 60\n150 IF (P(10)) THEN COLOR=NOT M\n160 AB=X%:GOTO 320:REM! CLEAR COMMON:M=VAL(X$):XY=M AND M\n170 LIST:Q1=P(P(N2%)*AB)+C%*XY*((B AND P(366))):M=C%:IF (M AND M) THEN 190\n180 RECALL A\n190 XY=X%*((AB/40765)) OR 789:RUN:GOTO 100:REM! CLEAR COMMON\n200 PRINT:IF (ASC(MID$(D$(M%),AB,M^20))) THEN SHLOAD:PRINT A$;1 AND 24,AB;\n210 READ N2%,M%\n220 IF (XY/XY+7*32767-2.25) THEN IF (M%) THEN SHLOAD:A(X%,C%)=M<X%<=B+.5<=((P(5)<P(M%)<>((P(M%)<>7)))):PLOT POS(POS(\"TASC\"+A$)),ASC(D$(X%))\n230 FOR XY=(N2%<=COS(-A(61,M%))) TO (XY>=((1E3 AND ABS(M%)))):REM! CLEAR CHAIN:GOTO 280\n240 GOTO 180:CONT:IF (Q1^NOT N2%) THEN & \"X:Y\",1:A$=D$(INT(X%/M%))\n250 CONT:A$=D$(M%)+X$:STORE B,C\n260 NEXT XY:AB=((M>=N2%))*5<M%:M=AB AND AB\n270 M%=0:GOTO 270:LOMEM: 16384\n280 GOSUB 190:CALL C%\n290 M%=-((-M)):LIST 10-20:M=M%\n300 GOSUB 60:NOTRACE\n310 N2%=32767+P(32767)=P(N2%)=XY:B=N2% AND N2%:READ B:PRINT B AND B\n320 READ C%:HLIN C%,(VAL(\"\")-N2%) AT C%:Z$=MID$(A$+A$,-((-2)),Q1)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 160\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

@@ -1,0 +1,23 @@
+{
+ "id": "r6079",
+ "key": "30fdb21c5c131798",
+ "source": "10 REM! INTEGER K\n20 DIM D(10),B(7)\n30 DEF FN F(Z)=20\n40 COLOR=B^D(14482)+((Y>=1))<>ATN(B(K))\n50 W$=LEFT$(\"HI\"+X$,36869):B=412^Y:M=B AND Z%:Z%=M+B(W%):IF (Z% OR Z%) THEN 10\n60 AB=D(1)\n70 PRINT:GOSUB 170\n80 Q1%=Z%-B:AB=Q1% AND Q1%:GOTO 160:REM! CLEAR CHAIN:Y=W%\n90 Y=AB:X$=LEFT$(X$,W%)\n100 B(Q1%)=((2975 OR 28883))+M:GOSUB 10:IF (VAL(W$)/24) THEN RECALL A\n110 IF (-M/Z%) THEN 210:READ W%:PRINT W% OR W%:HOME\n120 SPEED=EXP(RND(10)*RND(K))\n130 & \"X:Y\",1:AB%=100:LOMEM: 16384\n140 TRACE:Y=D(858*AB):IF (D(M<>M)) THEN RECALL A\n150 GOTO 260:REM! CLEAR COMMON:M=PEEK(SIN(AB%<Z%)):M=FRE(M)+POS(K):PLOT NOT ((Y^((W%>=Z%)))),((NOT Z%-M))*NOT ((513-7))\n160 IF (W%/PEEK(127)<FRE(1)) THEN GOTO 140:REM! CLEAR CHAIN:Y=SGN(B(W%)^Z)-RND(-39)\n170 M=B(Q1%):LOAD \"F\":M=M\n180 SPEED=255:IF (256) THEN M=Q1%\n190 ON FN F(SQR(256>AB)) GOTO 220,190,100\n200 PRINT B;((-M+((AB%+AB%))))/PEEK(Q1% OR Q1%);\n210 END:CONT:Z=40=((1.5<((24 OR Z))))\n220 FOR M=(TAN(Q1%)) TO (((NOT 40 OR 49152))<=127+((K OR 0))) STEP (NOT Y AND LOG(Z) AND AB):Q1%=D(ABS(ASC(W$))):B=FRE(Q1%)+POS(NOT B>2-((W%>649))):LIST 10-20\n230 AB=Y:M=FRE(AB)+POS(Y):DATA \"A,B\",300,HI,\"A,B\"\n240 IF (-((W%+25471<>W%))) THEN RUN:PRINT INT(39407>W%*2);:W%=FRE(XY$):IF (W% AND W%) THEN 70\n250 POKE Z%,LEN(\"123\") AND M+179:READ Z:PRINT Z OR Z\n260 D(AB-256)=FRE(FN F(LEN(XY$))):LIST:XY$=W$\n270 XY$=MID$(XY$,((0 AND K))>Q1%,.5-3^35358):SAVE\n280 FOR Y=(B(K)) TO (NOT Z%-5) STEP (((K^39628=B(Q1%)))/((D(Q1%)*((B+714)))))\n290 Z%=((AB-Q1%))*FRE(W$)-RND(AB<K)\n300 FOR B=(12029) TO (Z%):M=FRE(LEFT$(X$+W$,SGN(Z))):PRINT POS(XY$):GOSUB 170\n310 GOTO 110:LOMEM: 16384:IF (Z<=((23044=2))*NOT 255) THEN Q1%=LEN(W$+RIGHT$(\"A\",40000)):M=Q1% OR Q1%:PLOT B(20),-7\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 80\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

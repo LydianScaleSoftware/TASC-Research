@@ -1,0 +1,103 @@
+{
+ "id": "r6001",
+ "key": "e7be18a428582d87",
+ "source": "10 REM! INTEGER I,J\n20 DIM P(7,7)\n30 AB$=XY$+M$+M$+M$:A=C\n40 IF (((NOT 0.1+AB%))*((((Q1%-P(AB%,Z%)))*((.001=Z%))))) THEN LIST:PRINT XY$;AB%>((2>=X% AND C));:IF (594) THEN GOTO 40:REM! CLEAR CHAIN\n50 Q1%=-10<-39<=((J=-0)):Q1%=-Q1:Q1=FRE(Q1%)+POS(X%):Q1%=X%:XY=Q1% AND 5\n60 XY=Q1\n70 GOTO 110:CONT:READ Q1:PRINT Q1 AND Q1:Z=FRE(M$+\"TASC\"+M$+XY$):PRINT POS(M$)\n80 LIST:DATA 1,X\n90 M$=AB$:READ C:PRINT C AND C:GOTO 10\n100 C=Q1%--X%<X%:& \"X:Y\",1:Q1=C:GOTO 160:RECALL A\n110 RUN\n120 XY$=LEFT$(XY$,127):HTAB SIN(Z)\n130 XY=243=(((197)<=Z%-A)):IF (XY AND XY) THEN 60\n140 GOTO 180:SHLOAD\n150 DEL 10,20\n160 A=J=((XY>=Q1%))*27031:J=Q1%:IF (J AND J) THEN 140\n170 & \"X:Y\",1:GET C:J=C OR (P(Q1 AND Z,X%)<=LOG(65535)):I=Z%:IF (I OR I) THEN 20\n180 HCOLOR=X%\n",
+ "options": {
+  "library": 16384,
+  "program": 24576,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 24576,
+ "obj_len": 916,
+ "obj_sha256": "5db88ae9828b44967e8f0f3c04e6ab0d93960a81baf4dd095af806e228fa43a7",
+ "cycles": 110840940,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 24596
+  },
+  {
+   "line": 20,
+   "addr": 24596
+  },
+  {
+   "line": 30,
+   "addr": 24596
+  },
+  {
+   "line": 40,
+   "addr": 24629
+  },
+  {
+   "line": 50,
+   "addr": 24722
+  },
+  {
+   "line": 60,
+   "addr": 24815
+  },
+  {
+   "line": 70,
+   "addr": 24821
+  },
+  {
+   "line": 80,
+   "addr": 24864
+  },
+  {
+   "line": 90,
+   "addr": 24874
+  },
+  {
+   "line": 100,
+   "addr": 24898
+  },
+  {
+   "line": 110,
+   "addr": 24922
+  },
+  {
+   "line": 120,
+   "addr": 24925
+  },
+  {
+   "line": 130,
+   "addr": 24946
+  },
+  {
+   "line": 140,
+   "addr": 24975
+  },
+  {
+   "line": 150,
+   "addr": 24978
+  },
+  {
+   "line": 160,
+   "addr": 24978
+  },
+  {
+   "line": 170,
+   "addr": 25013
+  },
+  {
+   "line": 180,
+   "addr": 25084
+  }
+ ],
+ "info": {
+  "LIBRARY": "16384 - 20396",
+  "RECOGNIZED": "REM ! CLEAR CHAIN",
+  "OBJECT FILE": "S001.OBJ",
+  "PROGRAM": "24576 - 25491",
+  "LOCAL VARIABLES": "25492 - 25864",
+  "HIGHEST MEMORY LOCATION": "25864"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "r5124",
+ "key": "c9724ee38ae204ed",
+ "source": "10 IF (EXP(Z%+A%)) THEN FOR B=(N2) TO (Z%):ON XY=AB GOTO 50,20,30\n20 N2=(-A%)*Z%:AB=N2 OR X%\n30 X%=32767\n40 XY=(((B) OR ((127 OR 127))))/C:B=XY OR XY:IF (XY) THEN FOR N2=(INT(Z%)*-((NOT B%))) TO (-B*((100 OR 127))>=((((XY AND B%))=((AB=2.25))))):Z%=N2-(B%>B%):N2=Z% OR Z%\n50 X%=SIN(X%):AB=X% OR A%:AB=20:B=AB AND B%\n60 Z%=NOT N2>Z% OR Z%*XY<>12944-45801:VTAB (VAL(M$))\n70 A%=X%:HLIN XY,(C/SGN(B%)-Z%) AT 32767>=((0 OR AB))*COS(C):READ C\n80 READ Z%,A%:HTAB XY<=NOT B%^NOT X%:PRINT \"A\";\n90 CALL 24:IF (B) THEN DATA HI,:AB=Z%:IF (AB AND AB) THEN 140\n100 XY=32767:READ Z%:PRINT Z% OR Z%\n110 AB$=AB$\n120 READ N2,N2:B=N2>LEN(MID$(A$,XY)):XY=B AND X%\n130 READ A%:PRINT A% OR A%\n140 IF (B-B%) THEN 170\n150 C=17917-B%<>((-X%>Z%))\n160 RUN\n170 IF (XY) THEN IF (B) THEN 50:CALL B%\n180 HTAB B%:REM! CLEAR COMMON:Z%=A%\n190 N2=X%:C=N2 OR A%:FOR B=(POS(XY)*FRE(A$)=1-((766=Z%))) TO (127)\n200 PRINT B%;M$+A$;Z%-((C*Z%--Z%)),:HCOLOR=SQR(C+1<AB):PLOT 256,ATN(1.5+X%)\n210 AB=NOT B AND ((Z%>=B))/Z%:PLOT X%/((((N2<=Z%))-((AB<>B)))),XY\n220 A%=N2:PRINT NOT ((-((3 OR 24))));127;AB;\n230 FOR N2=(B% OR VAL(M$+M$)) TO (B)\n240 POP:B%=VAL(\"123\"):XY=B% AND B%\n",
+ "options": {
+  "library": 16384,
+  "program": 24576,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 180\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

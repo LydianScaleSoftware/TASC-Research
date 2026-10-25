@@ -82,6 +82,8 @@ class Unknown(Node):
     """FRE/POS argument: allocated but never evaluated.  The decompiler puts an otherwise
     unreferenced local here (sym), so that it is entered into the symbol table."""
     sym: Sym | None = None
+    addr: int = 0  # address of the FRE/POS call
+    lit: bytes | None = None  # a string literal argument (its data emitted at scan time)
 
 
 SWAP = {"=": "=", "<>": "<>", "<": ">", ">": "<", "<=": ">=", ">=": "<="}
@@ -126,6 +128,8 @@ class Lifted:
     temps: set[Sym]
     line_starts: set[int]
     unknowns: list[Unknown] = field(default_factory=list)
+    free_lits: list[Op] = field(default_factory=list)  # literal data no STRLIT uses (FRE/POS argument)
+    fre_decisions: list[int] = field(default_factory=list)  # FRE/POS that took a pending string
 
 
 def _has_peep(n: object) -> bool:
@@ -156,6 +160,18 @@ class Machine:
         self.temps = temps
         self.fns = fns
         self.stmts: list[Stmt] = []
+        self.fre_choice: dict[int, bool] = {}
+        # string temp stores that are FRE/POS's own (unconsumed) argument: FRE/POS follows and
+        # the temp is not read before it is written again
+        self.fre_spills: set[int] = set()
+        ops = w.ops
+        for k, o in enumerate(ops[:-1]):
+            if (o.kind == "ent" and o.op == 1 and o.sym in temps and o.sym.vtype == "str"
+                    and ops[k + 1].kind == "rt" and ops[k + 1].name in ("FRE", "POS")):
+                nxt = next((x for x in ops[k + 1:] if x.sym is o.sym), None)
+                if nxt is None or (nxt.kind == "ent" and nxt.op == 1):
+                    self.fre_spills.add(o.addr)
+        self.fre_decisions: list[int] = []
         self.unknowns: list[Unknown] = []
         self.reset()
 
@@ -180,7 +196,9 @@ class Machine:
         self.print_: Stmt | None = None
         self.stmt_start: int | None = None
         self.boundary = False  # a DEBUG call or line start since the last statement
-        self.last_val = ""  # what the previous op produced: num / stack / load / ''
+        self.last_val = ""  # what the previous op produced: num / stack / load / spill / ''
+        self.spilled: Node | None = None
+        self.spill_val: Node | None = None
 
     # -- helpers --------------------------------------------------------
     def take_num(self, o: Op) -> Node:
@@ -279,13 +297,20 @@ class Machine:
             i = self.step(ops, i, o)
 
     def step(self, ops: list[Op], i: int, o: Op) -> int:
-        before = (id(self.num), len(self.sstack), id(self.sload))
+        before = (id(self.num), id(self.sstack[-1]) if self.sstack else 0, id(self.sload))
+        self.spilled = None
+        keep = self.last_val
         nxt = self._step(ops, i, o)
-        if self.num is not None and id(self.num) != before[0]:
+        if (o.kind == "rt" and o.name == "FLOAT") or (o.kind == "rom" and o.name == "AYINT"):
+            self.last_val = keep  # conversions leave the value in the accumulator
+        elif self.spilled is not None:
+            self.last_val = "spill"
+            self.spill_val = self.spilled
+        elif self.num is not None and id(self.num) != before[0] and not (isinstance(self.num, Leaf) and self.num.peep):
             self.last_val = "num"
-        elif len(self.sstack) > before[1]:
+        elif self.sstack and id(self.sstack[-1]) != before[1]:
             self.last_val = "stack"
-        elif self.sload is not None and id(self.sload) != before[2]:
+        elif self.sload is not None and id(self.sload) != before[2] and not (isinstance(self.sload, Leaf) and self.sload.peep):
             self.last_val = "load"
         else:
             self.last_val = ""
@@ -394,6 +419,8 @@ class Machine:
                 v = self.take_str(o)
                 if s in self.temps:
                     self.tval[s] = v
+                    if o.addr in self.fre_spills:
+                        self.spilled = v  # spilled FRE/POS argument (PASS1 6330-6375)
                 else:
                     self.emit("LET", o, Leaf(s), v)
                     self.load_str(Leaf(s, peep=True))
@@ -495,12 +522,17 @@ class Machine:
             self.num = None
         elif n in ("FRE", "POS"):
             # a complex argument is computed right before the call; a simple one never loaded
-            if self.last_val == "num":
+            if self.last_val == "spill":
+                self.num = CallN(n, [self.spill_val])
+            elif self.last_val == "num":
                 self.num = CallN(n, [self.take_num(o)])
-            elif self.last_val in ("stack", "load"):
+            elif self.last_val in ("stack", "load") and self.fre_choice.get(o.addr, True):
+                # the pending string may instead belong to a later consumer: lift() retries
+                # with this choice flipped if the rest does not lift
+                self.fre_decisions.append(o.addr)
                 self.num = CallN(n, [self.take_str(o)])
             else:
-                u = Unknown()
+                u = Unknown(addr=o.addr)
                 self.unknowns.append(u)
                 self.num = CallN(n, [u])
         elif n in ("PEEK", "PDL"):
@@ -541,6 +573,10 @@ class Machine:
             self.emit(n, o)
         elif n == "DEBUG":
             self.close_print()
+            if self.stmts and self.stmts[-1].kind == "IF" and self.stmts[-1].end == o.addr:
+                # the first statement after THEN gets no debug call unless something reset the
+                # flag in between: an empty statement (THEN :, PASS1 2435 -> 310) has no code
+                self.stmts.append(Stmt("EMPTY", [], o.addr, o.addr))
             self.boundary = True
         elif n in ARG1:
             self.emit(n, o, self.take_num(o))
@@ -727,6 +763,8 @@ def _terminal(o: Op, cands: set[Sym], fns: dict[int, FnDef]) -> bool:
         return o.target not in fns
     if o.kind in ("jmp", "rts", "bne3", "beq3", "beq1", "data", "end", "jmprt", "run"):
         return True
+    if o.kind == "lit":
+        return True  # literal data is emitted when an expression is scanned, before its code
     if o.kind == "rt":
         return o.name in STMT_RT
     if o.kind == "rom":
@@ -769,7 +807,15 @@ def find_temps(w: Walk, fns: dict[int, FnDef], line_starts: set[int]) -> set[Sym
                 continue
             if o.kind == "ent" and o.op == 1:
                 written = True
+                prv = ops[k - 1] if k else None
+                if prv is not None and prv.kind == "rt" and prv.name.split(".")[0] in ("READ", "GET", "INPUT"):
+                    return False  # stored by READ/GET/INPUT: a variable, never a temp
                 nxt = ops[k + 1] if k + 1 < len(ops) else None
+                if (nxt is not None and nxt.kind == "rt" and nxt.name in ("FRE", "POS") and s.vtype == "str"):
+                    # PASS1 6330-6375: a string result left unconsumed by FRE/POS, spilled to a
+                    # temp that is never read
+                    reads += 1
+                    continue
                 if nxt is None or nxt.sym is s or not _producer(nxt):
                     return False
             elif not written:
@@ -822,11 +868,41 @@ def line_targets(w: Walk) -> set[int]:
     return out
 
 
-def lift(w: Walk) -> Lifted:
+def lift(w: Walk, choice: dict[int, bool] | None = None) -> Lifted:
+    """Lift, retrying FRE/POS string-argument choices (latest first) when a lift fails.
+    `choice` presets decisions (address -> consume the pending string)."""
+    choice = dict(choice or {})
+    for _ in range(64):
+        try:
+            lf = _lift(w, choice)
+            lf.fre_decisions = list(dict.fromkeys(lf.fre_decisions))
+            return lf
+        except _Retry as r:
+            choice[r.addr] = False
+    raise LiftError("FRE/POS argument choices exhausted")
+
+
+class _Retry(Exception):
+    def __init__(self, addr: int) -> None:
+        self.addr = addr
+
+
+def _lift(w: Walk, choice: dict[int, bool]) -> Lifted:
     fns = find_fns(w)
     starts = line_targets(w) - set(fns)
     temps = find_temps(w, fns, starts)
     m = Machine(w, temps, fns)
+    m.fre_choice = choice
+    try:
+        return _lift_run(w, m, fns, starts, temps)
+    except LiftError:
+        open_ = [a for a in m.fre_decisions if choice.get(a, True)]
+        if open_:
+            raise _Retry(open_[-1])
+        raise
+
+
+def _lift_run(w: Walk, m: "Machine", fns: dict[int, FnDef], starts: set[int], temps: set[Sym]) -> Lifted:
     ops = w.ops
     at = w.op_at()
     # FN bodies first (their code sits in place; the DEF statement is emitted where it stands)
@@ -858,4 +934,6 @@ def lift(w: Walk) -> Lifted:
             m.boundary = True
         i = m.step(ops, i, o)
     m.close_print()
-    return Lifted(w, m.stmts, fns, temps, starts, m.unknowns)
+    refs = {o.words[0] for o in ops if o.kind == "rt" and o.name in ("STRLIT", "STRLIT.PROMPT")}
+    free = [o for o in ops if o.kind == "lit" and o.addr + 3 not in refs]
+    return Lifted(w, m.stmts, fns, temps, starts, m.unknowns, free, list(m.fre_decisions))

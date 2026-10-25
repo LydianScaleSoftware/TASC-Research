@@ -1,0 +1,23 @@
+{
+ "id": "r6266",
+ "key": "b23cfec7bbe68b0f",
+ "source": "10 REM! INTEGER K\n20 DEF FN F(X)=NOT VAL(\"\")\n30 ON LEN(\"123\") GOTO 10:GOTO 180:REM! CLEAR COMMON:Q1=Y%>81:A=FRE(Q1)+POS(((((A<65535))+((255-X))))*863)\n40 A=FRE(LEFT$(Q1$,NOT X)):PRINT POS(A$):IF (-AB) THEN TRACE:PRINT\n50 READ Q1$:FOR Y=(W%) TO (K):AB=POS(K>=Y%=NOT X)\n60 REM! CLEAR COMMON:PRINT\n70 IF (ATN(Y%)<>W% AND -((Y<Y))) THEN Y=POS(K)+7 AND ((-A OR A)):LIST 10-20:FOR A=(277) TO (PEEK(10)^ABS(65535)*((XY%*((6259+1))))) STEP (X)\n80 GOTO 190:REM! CLEAR COMMON\n90 REM! CLEAR CHAIN:ROT=X>=((A*A<=X))\n100 &:Y%=((-W% AND Y-Y))>=Q1:X=Y% AND Y%:IF (FN F(A)) THEN GOTO 40:LOMEM: 16384\n110 IF (X) THEN CONT:Y%=((Y% OR X))<>NOT ((916*X))\n120 A$=RIGHT$(Y$,AB+((AB+AB))):PRINT A$;NOT A%/((A*XY%))>=XY%+((Y+127));\n130 PRINT A$,:XY%=10\n140 Q1$=CHR$(Y%+((A%=Y%)))\n150 FOR K=(W%) TO (Y%):PRINT A$;\n160 AB=XY%:LIST:FOR Q1=(Y%) TO (NOT 40)\n170 Y=((X<=Y))-((-Y%-W%*K)):IF (Y AND Y) THEN 30\n180 PRINT NOT ((LEN(\"X Y\")--822));:FOR Y=(1000) TO (SQR(XY%)):AB=X OR Q1:RECALL A:AB=AB\n190 Q1=Q1:AB=Q1 AND NOT ((A>=Q1<X)):IF (XY%) THEN & \"X:Y\",1:Q1=POS(LEFT$(LEFT$(\"HI\",W%),RND(3)))\n200 & \"X:Y\",1:RECALL A\n210 A=691*A:PRINT \"123\",Y% AND ((15817>Y% AND X+W%));:K=XY%<X\n220 IF (Y% OR SQR(987 AND AB)) THEN SAVE\n230 ON 15779 GOTO 190,50\n240 TRACE:X=FN F(ABS(383<=XY%)):IF (X OR X) THEN 170:A%=-0.1\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 30\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

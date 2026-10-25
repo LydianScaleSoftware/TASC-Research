@@ -1,0 +1,86 @@
+{
+ "id": "r6119",
+ "key": "229b2253f90e3a75",
+ "source": "10 REM! INTEGER K\n20 DIM A%(6)\n30 DEF FN F(T)=386<=A%(3.14159>=X)\n40 HLIN XY%-XY%-AB%,(X) AT M:X=FN F(((20<>Y))+((W>M)))\n50 IF (49152/((Y-W))) THEN LOAD \"F\":RECALL A\n60 B(EXP(X))=X\n70 GOSUB 50:A%(B<=-X)=FN F(EXP(A%(0)))*((Y-FN F(B)))\n80 B(Q1%)=100>=FN F(39)\n90 TRACE:IF (40) THEN RUN\n100 RUN 60:FOR Y=(ASC(\"123\")) TO (5) STEP (B(SGN(100^AB%))):XY%=XY%\n110 K=X:TRACE:W=K:GOSUB 50\n120 RUN:XY%=M:AB$=\"HI\"\n130 RUN 120:PRINT NOT PEEK(10)*((W-B(B%)));\n140 B%=FN F(ASC(AB$)>M):B=B% OR B%:AB%=A%(B%):M=AB% OR 1E3\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 673,
+ "obj_sha256": "b18267070e3380f84d9fc4c4c0a4304c3dfdff4247468df127db6b5eb0f46406",
+ "cycles": 95435361,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6115
+  },
+  {
+   "line": 50,
+   "addr": 6175
+  },
+  {
+   "line": 60,
+   "addr": 6191
+  },
+  {
+   "line": 70,
+   "addr": 6209
+  },
+  {
+   "line": 80,
+   "addr": 6269
+  },
+  {
+   "line": 90,
+   "addr": 6290
+  },
+  {
+   "line": 100,
+   "addr": 6301
+  },
+  {
+   "line": 110,
+   "addr": 6313
+  },
+  {
+   "line": 120,
+   "addr": 6328
+  },
+  {
+   "line": 130,
+   "addr": 6351
+  },
+  {
+   "line": 140,
+   "addr": 6357
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S019.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6736",
+  "LOCAL VARIABLES": "6737 - 6852",
+  "HIGHEST MEMORY LOCATION": "6852"
+ }
+}

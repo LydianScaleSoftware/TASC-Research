@@ -1,0 +1,23 @@
+{
+ "id": "r6058",
+ "key": "8554b5623433ce63",
+ "source": "10 REM! INTEGER I\n20 DIM P%(2,8)\n30 Y%=(-(1.5))\n40 RECALL A:X%=((569*X+((C%<22904))))*((X OR 2 AND X)):GOTO 160:REM! CLEAR CHAIN\n50 SPEED=XY:A$(EXP(P%(Y%,X%)<=2))=\"123\":IF (-((((29947-P%(X%,Q1%)))*10))) THEN 180\n60 B$=\"X Y\":GOTO 50:A$(C%)=LEFT$(\"HI\",SIN(P%(Q1%,I)))\n70 HTAB 2:GOTO 10:REM! CLEAR COMMON\n80 C=FRE(\"A\"):PRINT POS(W$):C=(C-P%(I,255)):C=FRE(C)+POS(49152):IF (PEEK(EXP(C))) THEN READ I:PRINT I OR I\n90 LIST 10-20:IF (COS(NOT ((X=20)))) THEN SAVE\n100 XY=-((N2*941)):X=XY OR XY\n110 SHLOAD:SHLOAD\n120 Q1%=256>126/N2/((Q1%+3)):STORE B,C:A=Q1%:LOAD \"F\"\n130 I=P%(908,X%)*I>=((C%>=P%(96,X%)))>.001:RECALL A\n140 W$=CHR$(A)\n150 A=-A\n160 SHLOAD:PRINT\n170 GOTO 30:&:IF (-((SQR(C)<((C AND N2))))) THEN IF (X%) THEN TRACE\n180 PRINT X%*C,\"123\"+MID$(\"123\",N2,XY)+STR$(P%(C%,3));\n190 GOTO 100:CONT:GOTO 80:REM! CLEAR CHAIN:C=Y%<=((I<P%(Y%,Y%)^C%)):A=C AND (24>I)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 190\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

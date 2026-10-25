@@ -1,0 +1,82 @@
+{
+ "id": "r5200",
+ "key": "a6abaef5771bc006",
+ "source": "10 REM! INTEGER I\n20 DIM B%(11,5),D%(11,3)\n30 DEF FN F(X)=ATN(-((256>=X)))\n40 X=0.1:CALL -256 OR XY%\n50 M$=RIGHT$(MID$(Q1$,2.25,M),100)+M$:GOTO 50\n60 READ AB%:PRINT AB% OR AB%:DATA ,1,HI\n70 RUN 40:PRINT:X=1:FOR I=(D%(D%(759,498)=XY%,Q1%<=Q1%)/FN F(256)) TO (Q1%):IF (100*W) THEN RUN 120\n80 READ AB%:PRINT AB% OR AB%\n90 FOR A=(AB% AND 10) TO (A/Q1%):A=FRE(Q1$):PRINT POS(M$):M$=LEFT$(LEFT$(\"A\",39),AB%^A)+MID$(M$,40,VAL(Q1$))\n100 GOTO 20\n110 COLOR=SGN(M)-XY:A=LEN(\"TASC\"+Q1$):IF (A OR A) THEN 60\n120 A=((X%+NOT Q1%))^B%(X%,FN F(255)):X%=-VAL(RIGHT$(\"TASC\",D%(AB%,AB%))):X=X% OR X%:Q1%=A:W=Q1% AND FN F(XY*I-((43 OR XY%)))\n130 GOSUB 50:IF (NOT FRE(D%(X%,5)>AB%)) THEN RUN:XY=((((422 OR X%))<=25734))-((127^W>=A+I))\n",
+ "options": {
+  "library": 16384,
+  "program": 24576,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 24576,
+ "obj_len": 962,
+ "obj_sha256": "b91c606eae8976c9ddc54b6e2a0cd3a64cab6db6e35c31b4dcfec5078c39de72",
+ "cycles": 107485017,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 24596
+  },
+  {
+   "line": 20,
+   "addr": 24596
+  },
+  {
+   "line": 30,
+   "addr": 24596
+  },
+  {
+   "line": 40,
+   "addr": 24618
+  },
+  {
+   "line": 50,
+   "addr": 24642
+  },
+  {
+   "line": 60,
+   "addr": 24675
+  },
+  {
+   "line": 70,
+   "addr": 24711
+  },
+  {
+   "line": 80,
+   "addr": 24723
+  },
+  {
+   "line": 90,
+   "addr": 24747
+  },
+  {
+   "line": 100,
+   "addr": 24855
+  },
+  {
+   "line": 110,
+   "addr": 24858
+  },
+  {
+   "line": 120,
+   "addr": 24915
+  },
+  {
+   "line": 130,
+   "addr": 25048
+  }
+ ],
+ "info": {
+  "LIBRARY": "16384 - 20396",
+  "OBJECT FILE": "S000.OBJ",
+  "PROGRAM": "24576 - 25537",
+  "LOCAL VARIABLES": "25538 - 25833",
+  "HIGHEST MEMORY LOCATION": "25833"
+ }
+}

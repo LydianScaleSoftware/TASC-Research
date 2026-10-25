@@ -1,0 +1,23 @@
+{
+ "id": "r6083",
+ "key": "ae74cd10a7ce24f9",
+ "source": "10 REM! INTEGER J,I\n20 DIM P%(12,7)\n30 DEF FN F(Z)=127\n40 IF (FRE(AB$)/W%^FRE(D(W%,20))) THEN RUN 70:GOTO 100:NOTRACE\n50 REM! CLEAR CHAIN:Z=Z%:IF (Z OR Z) THEN 10:REM! CLEAR COMMON\n60 Z%=Z%:Z=Z% OR Z%:& \"X:Y\",1\n70 J=D(XY%,RND(B))\n80 IF (3>FN F(20)) THEN A$(D(700,10^542)*W)=CHR$(10^((XY%*W))):GOSUB 150:GOSUB 80\n90 Z=6188+P%(Z/127,404):Z=Z OR Z\n100 IF (AB) THEN 30\n110 X%=X%^W%:& \"X:Y\",1:Z=X%\n120 IF (D(I,NOT D(XY%,XY%))) THEN IF (LEN(\"\")) THEN RUN 90\n130 IF (ATN(((Z>W%))^AB)) THEN LOAD \"F\"\n140 & \"X:Y\",1:IF (-XY%) THEN SHLOAD\n150 AB$=\"A\":DRAW VAL(\"HI\") AT P%(I,SQR(I))/((((B+24))/LEN(\"HI\"))),(760):GOTO 90:LOAD \"F\"\n",
+ "options": {
+  "library": null,
+  "program": "HGR1",
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 50\nSYNTAX\n\n REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

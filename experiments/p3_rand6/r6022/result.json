@@ -1,0 +1,74 @@
+{
+ "id": "r6022",
+ "key": "2cab3782e56f1c23",
+ "source": "10 REM! INTEGER I,K\n20 DIM D$(2)\n30 DEF FN F(Z)=XY>((K OR AB))<((M%^A(Y%)<=AB))\n40 READ Z$,XY:GET Q1:I=Q1 OR (39):K=AB<=ATN(PEEK(XY))\n50 SAVE\n60 B=K<=XY-I:AB=K:LOAD \"F\":AB=AB\n70 PLOT A(SQR(XY)-W),FN F(POS(B%*2.25))\n80 B=FRE(\"A\"):PRINT POS(N2$)\n90 PRINT D$(SQR(AB));D$(Y%)+Z$+\"A\";:N2$=N2$+MID$(D$(I),A(65535),B%):K=Q1\n100 GOSUB 70\n110 NOTRACE\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 522,
+ "obj_sha256": "18fc6027f95078865a5d531847a941a7a1e58849bd5c286f338516cb66d2316a",
+ "cycles": 85914766,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6136
+  },
+  {
+   "line": 50,
+   "addr": 6187
+  },
+  {
+   "line": 60,
+   "addr": 6187
+  },
+  {
+   "line": 70,
+   "addr": 6211
+  },
+  {
+   "line": 80,
+   "addr": 6253
+  },
+  {
+   "line": 90,
+   "addr": 6273
+  },
+  {
+   "line": 100,
+   "addr": 6355
+  },
+  {
+   "line": 110,
+   "addr": 6358
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S002.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6585",
+  "LOCAL VARIABLES": "6586 - 6695",
+  "HIGHEST MEMORY LOCATION": "6695"
+ }
+}

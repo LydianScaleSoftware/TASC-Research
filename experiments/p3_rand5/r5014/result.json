@@ -1,0 +1,147 @@
+{
+ "id": "r5014",
+ "key": "b701a976f9b24fe1",
+ "source": "10 REM! INTEGER K\n20 DATA -2.5,1,,\n30 FOR K=(TAN(Y%)<=AB%*((AB%+Y%))) TO (541):IF (869 AND ((127>K))/((AB*N2))) THEN Y$=\"TASC\":PLOT C,AB\n40 FOR AB=(C+8674) TO (((7+B%))^C+((SGN(X)<>35))) STEP (AB%):READ K:PRINT K OR K:IF (FRE(Y%)) THEN 260\n50 REM! CLEAR CHAIN\n60 IF (283>=N2=B%) THEN X=VAL(C$):AB=X AND AB% OR (A%)/-K:DATA ,300\n70 Y=X*((-X*-.5)):N2=Y OR Y:FOR Y=(0=K^N2-AB) TO (395/((407/Y%<>N2+Y%)))\n80 A%=Y:AB=FRE(A%)+POS(7):Y%=POS(MID$(\"X Y\",C))=NOT 514\n90 B%=ABS((Y%-N2))\n100 IF (X) THEN AB%=8319:AB=AB% OR AB%:X=B%\n110 AB%=(K)\n120 C=ATN(-48141)\n130 RUN 30:READ Y:PRINT Y AND Y\n140 IF (RND(Y*3)<=ASC(Y$)-N2) THEN PRINT K<-AB+-K;Y%;\n150 X=((160+K))*((Y%<>K<>-Y)):N2=X AND X\n160 PRINT LEN(LEFT$(XY$,AB%));K>((K<LEN(XY$)));-AB;:PRINT\n170 READ AB\n180 FOR C=(K) TO (SQR(LEN(MID$(Y$,K)))):POP:IF ((A%)) THEN 260\n190 FOR AB=(Y) TO (885):B%=LEN(\"123\")<24:X=B% AND B%:AB%=LOG(INT(K-Y%))\n200 PRINT\n210 Y%=Y%:N2=Y<=((C>2))+((N2<=AB))\n220 Y$=C$:C$=XY$\n230 Y=TAN(1E3)/256+X:N2=FRE(COS(C)) OR ((48674 AND X))>-Y:N2=N2 AND (K>NOT B%)\n240 K=B%\n250 IF (B%<=(N2)+K) THEN RUN:HLIN Y^A%,(C) AT AB%\n260 IF (-390) THEN RUN:B%=680:Y=B% AND B%:PRINT\n270 PRINT \"TASC\";MID$(\"X Y\",577,A%);\n280 FOR C=(42716) TO (A%=X):PRINT 2,C$+\"\";MID$(C$,1.5,A%);\n290 PRINT \"X Y\",:VTAB Y%+((Y<597))<ABS(NOT Y%):B%=INT(Y):C=B% OR B%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1826,
+ "obj_sha256": "6673c3ab66713fbe526316911587af79c8aaefb958cd04c9b6bd3d039a1af175",
+ "cycles": 158342205,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6099
+  },
+  {
+   "line": 40,
+   "addr": 6203
+  },
+  {
+   "line": 50,
+   "addr": 6293
+  },
+  {
+   "line": 60,
+   "addr": 6296
+  },
+  {
+   "line": 70,
+   "addr": 6369
+  },
+  {
+   "line": 80,
+   "addr": 6455
+  },
+  {
+   "line": 90,
+   "addr": 6518
+  },
+  {
+   "line": 100,
+   "addr": 6530
+  },
+  {
+   "line": 110,
+   "addr": 6556
+  },
+  {
+   "line": 120,
+   "addr": 6562
+  },
+  {
+   "line": 130,
+   "addr": 6574
+  },
+  {
+   "line": 140,
+   "addr": 6580
+  },
+  {
+   "line": 150,
+   "addr": 6657
+  },
+  {
+   "line": 160,
+   "addr": 6702
+  },
+  {
+   "line": 170,
+   "addr": 6750
+  },
+  {
+   "line": 180,
+   "addr": 6756
+  },
+  {
+   "line": 190,
+   "addr": 6799
+  },
+  {
+   "line": 200,
+   "addr": 6873
+  },
+  {
+   "line": 210,
+   "addr": 6876
+  },
+  {
+   "line": 220,
+   "addr": 6915
+  },
+  {
+   "line": 230,
+   "addr": 6927
+  },
+  {
+   "line": 240,
+   "addr": 7014
+  },
+  {
+   "line": 250,
+   "addr": 7020
+  },
+  {
+   "line": 260,
+   "addr": 7040
+  },
+  {
+   "line": 270,
+   "addr": 7070
+  },
+  {
+   "line": 280,
+   "addr": 7113
+  },
+  {
+   "line": 290,
+   "addr": 7184
+  }
+ ],
+ "info": {
+  "EAD K": "PRINT K OR K: IF ( FRE (Y%)) THEN",
+  "OBJECT FILE": "S014.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7889",
+  "LOCAL VARIABLES": "7890 - 7942",
+  "HIGHEST MEMORY LOCATION": "7942"
+ }
+}

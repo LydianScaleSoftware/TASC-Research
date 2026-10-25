@@ -1,0 +1,23 @@
+{
+ "id": "r6037",
+ "key": "c9ea515bc1a4ccd9",
+ "source": "10 REM! INTEGER *\n20 REM! DEFCOMMON B%,N2,M\n30 DIM B%(3),P(6),A%(10,1)\n40 DEF FN F(T)=Y\n50 ON 100 GOTO 200,150\n60 RUN 120\n70 CALL B OR ASC(LEFT$(\"123\",A%(N2%,N2%))):C$=AB$\n80 GOTO 160:REM! CLEAR CHAIN:B%(POS(20*B) OR INT(0.1))=65535 AND A%^SIN(N2%)\n90 AB$=XY$:AB%=-FN F(Y*32767)\n100 HCOLOR=SGN(XY)\n110 COLOR=SGN(N2%):IF (INT(A%(B%,N2) AND B%)) THEN LOAD \"F\":COLOR=P(N2)>10\n120 RECALL A:P(XY)=M:GET N2:A%=N2 AND (NOT ((XY*((P(965) AND A%)))))\n130 C$=MID$(\"TASC\",B):Y=5:M=((B<Y))-Y:RECALL A:Y=M\n140 GOTO 110\n150 M=B\n160 INPUT \"Q\";XY$:C$=MID$(XY$,ATN(ATN(N2%))):LIST\n170 FOR XY=(EXP(FN F(A%-2.25))) TO (127):M=((921>=XY AND N2))--XY:IF (M AND M) THEN 80\n180 Y=-((NOT ((AB%/M)))):GOSUB 60:B=N2%*B%>B+B\n190 HOME\n200 IF (XY) THEN NOTRACE:ON ATN(N2%)=((NOT N2% AND B%(43540)<>B)) GOTO 60:RUN\n210 READ N2%:PRINT N2% AND N2%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 80\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

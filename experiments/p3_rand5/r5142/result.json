@@ -1,0 +1,23 @@
+{
+ "id": "r5142",
+ "key": "7bfb21defc3f22e3",
+ "source": "10 REM! INTEGER I\n20 REM! USECOMMON Z$,W%,X\n30 DIM A%(4,3)\n40 REM! CLEAR CHAIN:IF (-((103-255*Z))) THEN PRINT STR$(Y%)+LEFT$(M$+P$(366,2),Z+5),:GET I:W%=I AND (Z)\n50 I=49152:IF (((100=((M<Z))))^((N2%-14440<>ASC(\"\")))) THEN RUN 90\n60 I=-471\n70 IF (POS(Y%)/Y) THEN RUN 10:C%=TAN(W%):N2%=M:X=N2% AND N2%\n80 X=POS(Z$):IF (W%) THEN 160\n90 A%(W%,(I))=255:HTAB 0:B=Y%:Z=B OR W%\n100 GET C%:Y%=C% OR (C%):N2%=-((-10>16372/B)):HOME\n110 FOR Y=(((C%*-C%))^C%) TO (Y%):HLIN PEEK(NOT Z)-((B+(Z))),(C% OR W%) AT 40+((I+X)) OR 24\n120 W%=W%:Y=W% OR W%:PRINT Z$+LEFT$(\"123\",N2%)+\"X Y\";\n130 IF (32767) THEN PRINT -2;Y;\n140 GOTO 40:N2%=SGN(38031<>0.1)>NOT 33353:IF (N2% AND N2%) THEN 170\n150 GOTO 30:NEXT Y:HTAB (M)\n160 PRINT 2,:W%=24:X=W% OR W%\n170 RESTORE\n180 Z$=P$(N2%,ASC(\"X Y\")):READ N2%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 40\nSYNTAX\n\n REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

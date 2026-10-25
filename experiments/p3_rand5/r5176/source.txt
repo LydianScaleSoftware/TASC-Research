@@ -1,0 +1,9 @@
+10 REM! INTEGER K
+20 GET N2:Z%=N2 OR (A)
+30 FOR A=(-((((65535 AND N2))-X))) TO (LEN(X$)):SPEED=K
+40 ON 479-K GOTO 80,70,70,50:READ K:PRINT K OR K
+50 W=M%:W=W OR W
+60 PRINT PEEK(D%(W%))+((D%(W%)>=D%(K)))<Z%,N2+X+(X)+((-C OR N2)),A;
+70 W%=A-X:W=-D%(M%) OR C
+80 A=((20=W%))*-A-VAL(B$):IF (A AND A) THEN 30:HLIN ASC(B$+W$),(N2) AT FRE(CHR$(PEEK(W%)))
+90 IF (-((W+C<>((M% AND Z%))))) THEN HTAB 365:D%((XY%))=D%(M%)

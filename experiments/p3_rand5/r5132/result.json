@@ -1,0 +1,82 @@
+{
+ "id": "r5132",
+ "key": "a182c2f27752cc4e",
+ "source": "10 REM! INTEGER *\n20 READ W%:PRINT W% AND W%\n30 RUN 100:PRINT:X=1\n40 IF (W%) THEN W=AB:M=W AND AB%:IF (W>3.14159) THEN 130:CALL M\n50 CALL X%:RUN 90:PRINT:X=1:RETURN\n60 ONERR GOTO 20\n70 C%=1.5:N2=W:M=FRE(N2)+POS(W*W%>=X>=.001)\n80 X%=((C%>=ABS(X%)))+AB:FOR W=(NOT M) TO (-ATN(W%)-POS(AB))\n90 Y$=Y$:FOR AB=(POS(((M OR X))<=(40))) TO (W) STEP (7)\n100 AB%=40000:X=AB% OR 311\n110 GET AB:AB%=AB OR (3<>2>=((1=C%))<>1.5):FOR M=(-460) TO (AB%*(C%))\n120 PRINT W;N2-W%=((M AND 49152))-N2,:AB=AB:X=AB OR W%\n130 ON X% GOTO 50,60,20,40:FOR X=(((M+X%))^((W%<M))<>((AB%<=X%))) TO (607):PRINT \"\"+B$,AB,\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 923,
+ "obj_sha256": "1960a7741fe384b3ae0ab980ff9dd25ffcb7dde7c8ee8fa9c4ff16926b6f0a7e",
+ "cycles": 105544384,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6108
+  },
+  {
+   "line": 40,
+   "addr": 6120
+  },
+  {
+   "line": 50,
+   "addr": 6163
+  },
+  {
+   "line": 60,
+   "addr": 6181
+  },
+  {
+   "line": 70,
+   "addr": 6186
+  },
+  {
+   "line": 80,
+   "addr": 6234
+  },
+  {
+   "line": 90,
+   "addr": 6290
+  },
+  {
+   "line": 100,
+   "addr": 6334
+  },
+  {
+   "line": 110,
+   "addr": 6355
+  },
+  {
+   "line": 120,
+   "addr": 6429
+  },
+  {
+   "line": 130,
+   "addr": 6498
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S012.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6986",
+  "LOCAL VARIABLES": "6987 - 7015",
+  "HIGHEST MEMORY LOCATION": "7015"
+ }
+}

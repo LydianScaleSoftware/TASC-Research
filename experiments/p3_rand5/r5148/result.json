@@ -1,0 +1,78 @@
+{
+ "id": "r5148",
+ "key": "09312b5c97f460a6",
+ "source": "10 REM! INTEGER I,K\n20 DIM B%(10)\n30 DEF FN F(T)=((X%+B%(Q1%)))^((1.5+3)) AND SIN(1.5-B%(M%))\n40 HCOLOR=M:READ C:PRINT C OR C:AB=Y\n50 IF (AB) THEN HLIN Q1% OR C<=783,(((W%=-W%))+FRE(\"\"+X$)) AT AB+NOT 694:CALL W%:FOR K=(32767) TO (M%*LEN(RIGHT$(XY$,N2)))\n60 NEXT:B%(X%)=SQR(N2)+M%:GET W%:Q1%=W% AND (M%<I-K)\n70 CALL 255>M\n80 Y=Y-((112 OR NOT I)):READ AB,K\n90 IF (-((K/424))^((((C<100))*M%))) THEN 70:GET M:M%=M OR (TAN(I)*-((-M)))\n100 READ Q1%,Y,AB$:K=M%>((127<>-I)):N2=K OR K:X%=NOT INT(I)<ASC(\"X Y\"+\"\")\n110 HCOLOR=RND(B%(M%)<=X%)+SIN(FN F(1))\n120 RETURN:GOSUB 90\n",
+ "options": {
+  "library": null,
+  "program": "HGR1",
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 16384,
+ "obj_len": 931,
+ "obj_sha256": "8d9528854383ef33855a1b258cb48e48d67fa92b4242ff621033656e2e36c6bc",
+ "cycles": 105914637,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 16404
+  },
+  {
+   "line": 20,
+   "addr": 16404
+  },
+  {
+   "line": 30,
+   "addr": 16404
+  },
+  {
+   "line": 40,
+   "addr": 16459
+  },
+  {
+   "line": 50,
+   "addr": 16486
+  },
+  {
+   "line": 60,
+   "addr": 16604
+  },
+  {
+   "line": 70,
+   "addr": 16660
+  },
+  {
+   "line": 80,
+   "addr": 16672
+  },
+  {
+   "line": 90,
+   "addr": 16705
+  },
+  {
+   "line": 100,
+   "addr": 16772
+  },
+  {
+   "line": 110,
+   "addr": 16882
+  },
+  {
+   "line": 120,
+   "addr": 16915
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "OBJECT FILE": "S008.OBJ",
+  "PROGRAM": "16384 - 17314",
+  "LOCAL VARIABLES": "17315 - 17396",
+  "HIGHEST MEMORY LOCATION": "17396"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "r5081",
+ "key": "9ac7d18923ff17e2",
+ "source": "10 REM! INTEGER I\n20 GOTO 200\n30 A$=STR$(127>=X)+A$:RUN 50\n40 FOR X=(N2%) TO ((610)) STEP (X%)\n50 GOTO 200\n60 PRINT ASC(MID$(A$,X*M)),A$;W$,:IF (N2) THEN RETURN:A$=LEFT$(LEFT$(\"123\",40)+\"\",I)\n70 X=X%:N2=FRE(X)+POS(W AND ATN(N2)=FRE(Y)):M=COS(Y)<=RND(M+10310):W=M AND M:GOTO 10\n80 REM! CLEAR COMMON:GET XY%:XY%=XY% AND (-PEEK(-10)):FOR W=(NOT W+N2 OR LOG(ASC(\"\"))) TO (NOT ((-1000^((X*307))))) STEP (2)\n90 FOR X=(N2%) TO (W):DATA 1,300\n100 IF (.001) THEN 150\n110 GET X:N2%=X AND (20^((W<10)) AND VAL(\"X Y\"+Y$)):X%=0>W^256:FOR M=(-((Y-X))) TO (10<=40)\n120 IF (.001) THEN READ W:IF (N2) THEN RUN 90:Y%=20\n130 PRINT 703;\n140 HCOLOR=11452-N2%/17280*((I<X)):IF (Y-(((M)<=N2%))) THEN PRINT RIGHT$(Y$,I)+W$;X;:XY%=POS(ASC(\"HI\")):IF (XY% AND XY%) THEN 150\n150 Y$=W$:X%=I^ASC(A$)<=((M OR I<>X%))\n160 PRINT:I=0.1:IF (I AND I) THEN 60:NEXT M\n170 A$=RIGHT$(Y$+\"\",Y%^X%):W=FRE(Y$):PRINT POS(A$):X%=49152+X%\n180 XY%=FRE(\"\")+10>N2%\n190 PRINT LEFT$(W$,((I<3))^((109<=N2%))),I;FRE(W$)>W OR NOT ((32767*Y%)),\n200 X=M>Y%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 80\nSYNTAX\n\n REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

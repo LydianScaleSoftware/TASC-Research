@@ -1,0 +1,87 @@
+{
+ "id": "r6220",
+ "key": "fecb30e5181ef781",
+ "source": "10 DEF FN F(Z)=((B%+40>=Y-Y))--W%\n20 GOTO 50:LIST 10-20\n30 M%=((C AND 0))+C%+ASC(Z$):N2=M% AND M%\n40 W=C%+ABS(-127):IF (NOT FRE(65535)-7) THEN 110:SHLOAD\n50 M%=-ASC(MID$(Z$,5))\n60 DEL 10,20\n70 IF (C^((24 OR SGN(W%)))) THEN STORE B,C:CALL ((20+Y<=255/Y))+727:READ Y:PRINT Y AND Y\n80 W%=-127:Y=W% OR W%\n90 PRINT ATN(C%),3,Z$,\n100 B$=\"123\"+Z$:M%=((W%>Y))^W AND Y\n110 GOSUB 60\n120 IF (-SIN(Y)) THEN SPEED=NOT COS(127):M%=5:W=N2:N2=W AND W\n130 GET C%:B%=C% OR (M%):RUN 20:PRINT:X=1:RUN 30\n140 IF (1000) THEN LOAD \"F\"\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 867,
+ "obj_sha256": "3c37a3be30680d3ee55afb5ecf11c813169c5826081a0d548853c397fd5521d9",
+ "cycles": 104226054,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6127
+  },
+  {
+   "line": 30,
+   "addr": 6130
+  },
+  {
+   "line": 40,
+   "addr": 6181
+  },
+  {
+   "line": 50,
+   "addr": 6229
+  },
+  {
+   "line": 60,
+   "addr": 6250
+  },
+  {
+   "line": 70,
+   "addr": 6250
+  },
+  {
+   "line": 80,
+   "addr": 6338
+  },
+  {
+   "line": 90,
+   "addr": 6368
+  },
+  {
+   "line": 100,
+   "addr": 6401
+  },
+  {
+   "line": 110,
+   "addr": 6458
+  },
+  {
+   "line": 120,
+   "addr": 6461
+  },
+  {
+   "line": 130,
+   "addr": 6527
+  },
+  {
+   "line": 140,
+   "addr": 6572
+  }
+ ],
+ "info": {
+  "AD Y": "PRINT Y AND Y",
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6930",
+  "LOCAL VARIABLES": "6931 - 6984",
+  "HIGHEST MEMORY LOCATION": "6984"
+ }
+}

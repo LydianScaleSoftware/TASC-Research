@@ -1,0 +1,78 @@
+{
+ "id": "r6180",
+ "key": "8bee1e73428d3278",
+ "source": "10 REM! INTEGER J\n20 Q1%=-A%<>(N2)<A%-((2<=B)):N2=FRE(Q1%)+POS(FRE(\"123\")+B% OR M>((B%>=2))):COLOR=1.5\n30 IF (-A%) THEN 50:SHLOAD\n40 A%=Y:LOMEM: 16384:N2=A%\n50 IF (M-32767*J<((Q1^41119>=((B<>49002))))) THEN RUN 100:GOTO 20:SAVE\n60 B=30855:DEL 10,20:M=B:J=(Q1%)^((J>B)):& \"X:Y\",1:Y=J\n70 PLOT Q1/ATN(N2%+N2),-((NOT B%))\n80 Q1=-B+((A%/B%))^((Y>J)):GOTO 110:RECALL A:LIST\n90 B=TAN(N2%):IF (B OR B) THEN 70:READ N2:PRINT N2 AND N2:DATA \"A,B\",\"A,B\",1,\n100 IF (Q1>((Q1%>N2))) THEN Q1=A%*((N2%+A%))*((40/B<Q1/J)):DATA 300,HI,300:B=FRE(Z$):PRINT POS(AB$)\n110 &:RUN\n120 READ Z$,M\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 781,
+ "obj_sha256": "69fd038d121e817c10e979a87e3e1c1f12c10be6c14be9e6b2ec7873d3d27c21",
+ "cycles": 105118375,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6184
+  },
+  {
+   "line": 40,
+   "addr": 6199
+  },
+  {
+   "line": 50,
+   "addr": 6211
+  },
+  {
+   "line": 60,
+   "addr": 6270
+  },
+  {
+   "line": 70,
+   "addr": 6303
+  },
+  {
+   "line": 80,
+   "addr": 6330
+  },
+  {
+   "line": 90,
+   "addr": 6372
+  },
+  {
+   "line": 100,
+   "addr": 6406
+  },
+  {
+   "line": 110,
+   "addr": 6497
+  },
+  {
+   "line": 120,
+   "addr": 6500
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6844",
+  "LOCAL VARIABLES": "6845 - 6895",
+  "HIGHEST MEMORY LOCATION": "6895"
+ }
+}

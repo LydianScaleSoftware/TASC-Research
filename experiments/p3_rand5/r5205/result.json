@@ -1,0 +1,86 @@
+{
+ "id": "r5205",
+ "key": "1d54f3c92dce476e",
+ "source": "10 CALL 255<=967*X%>(W)*0:IF (NOT ((W+28367))/A) THEN PRINT X%;:A=A:A=A AND A\n20 ON NOT SGN(X%) GOTO 140\n30 IF (170) THEN RUN 100:IF (PEEK(Q1-AB%)/3) THEN A$(POS(\"TASC\"+Y$+Y$),-((NOT Y%*AB%)))=Q1$\n40 RUN 30:READ N2\n50 N2=SIN(NOT N2*((W OR 1000))):IF (N2 OR N2) THEN 50\n60 A$(((W OR C))<LEN(\"123\"+\"A\"),FRE(X%*-A))=\"123\":PRINT 39;:Q1%=7\n70 INVERSE\n80 IF (N2) THEN ON X%-((24>=NOT W)) GOTO 10:IF (((X% AND 24-Y%))/X%) THEN RUN 130:Q1$=\"123\"\n90 HCOLOR=AB%:C=3.14159\n100 HPLOT 256,((A>=W)>=Q1%) TO A,(Q1%):W=-((-3+((5=Q1%)))):W=FRE(W)+POS(W<100):GET C:AB%=C AND (NOT Y%)\n110 ON -((NOT (N2))) GOTO 140,70,20,100\n120 C=FRE(XY$):PRINT POS(XY$)\n130 N2=FRE(C<W*Q1%):A=N2 AND N2:FOR Q1=(AB%>N2) TO (Y%-Q1%)\n140 Q1%=2:A$(AB%,255)=XY$:END\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1100,
+ "obj_sha256": "984bcba4338fde04f2a1d9a9addc989d31402e2e42a88e3dc72fd6e860d0dc56",
+ "cycles": 113149536,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6177
+  },
+  {
+   "line": 30,
+   "addr": 6197
+  },
+  {
+   "line": 40,
+   "addr": 6214
+  },
+  {
+   "line": 50,
+   "addr": 6223
+  },
+  {
+   "line": 60,
+   "addr": 6270
+  },
+  {
+   "line": 70,
+   "addr": 6385
+  },
+  {
+   "line": 80,
+   "addr": 6388
+  },
+  {
+   "line": 90,
+   "addr": 6478
+  },
+  {
+   "line": 100,
+   "addr": 6496
+  },
+  {
+   "line": 110,
+   "addr": 6622
+  },
+  {
+   "line": 120,
+   "addr": 6646
+  },
+  {
+   "line": 130,
+   "addr": 6667
+  },
+  {
+   "line": 140,
+   "addr": 6732
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S005.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7163",
+  "LOCAL VARIABLES": "7164 - 7447",
+  "HIGHEST MEMORY LOCATION": "7447"
+ }
+}

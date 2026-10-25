@@ -1,0 +1,137 @@
+{
+ "id": "r5136",
+ "key": "6147d7f8075bfb99",
+ "source": "10 REM! INTEGER K\n20 REM! USECOMMON Z,AB$,W%\n30 DIM P(9)\n40 X%=NOT 32759+SQR(POS(W)):COLOR=C%\n50 GOSUB 100:XY=K:IF (XY OR XY) THEN 190:P(W%)=254*((95+((P(W%)<Z%))))\n60 IF (W) THEN DATA 300\n70 REM! CLEAR COMMON\n80 FOR XY=(NOT ((M+Y))-XY) TO (Y<>Y):W=K:READ C%\n90 C%=C%:Z%=NOT 24:M=Z% AND Z%\n100 Z%=0>((X% OR X%<=Y)):GET X%:C%=X% AND (XY):DATA -2.5\n110 C%=-VAL(\"A\"):X%=((LOG(Z%)+P(W%)))*XY\n120 Y=FRE(XY$):PRINT POS(W$)\n130 PRINT CHR$(((5+C%))*14498),VAL(RIGHT$(\"A\",K)+AB$);\n140 M=((P(X%)^Z OR SGN(56)))^Y:C%=K:IF (SIN(FRE(M))+Y) THEN IF (X%-P(Z%)) THEN IF (P(K)) THEN RUN 180\n150 READ K:PRINT K OR K\n160 IF (-RND(P(.5)^M)) THEN W%=NOT LEN(\"\"):IF (W% AND W%) THEN 140:M=X%:IF (M OR M) THEN 60:X%=(W%^2.25)*ASC(AB$)\n170 C%=M*W:P(C%)=P(K)*K\n180 HCOLOR=10^((NOT Z<=TAN(3.14159)))\n190 Z=FRE(XY$):PRINT POS(AB$):READ XY:PRINT XY OR XY:CALL ((40709+P(X%)<W))+POS(LEFT$(W$,P(2.25)))\n200 Z=K:Y=Z OR Z\n210 IF (K^1) THEN RUN 180\n220 P(INT(X%))=M*((LEN(\"\")=((K OR K)))):PRINT CHR$((M)<>M);K;\n230 READ M:PRINT M OR M\n240 M=FRE(RIGHT$(AB$,POS(W$))):PRINT POS(W$):HLIN (Z<=256)^W%,(-32767>VAL(XY$)) AT (W)\n250 NORMAL:HLIN 52,(P(NOT ((Z%-X%)))) AT Y:PRINT\n260 POKE P(1E3)<=40-5,FRE(STR$(Z))>=255:Z%=XY<=((35819>((C%>W))))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6073,
+ "obj_len": 1548,
+ "obj_sha256": "3b6e21fcf29e507cdfb7a51799cf3202c13cff92d198b6ce75d17043f7e56833",
+ "cycles": 141270516,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6093
+  },
+  {
+   "line": 40,
+   "addr": 6093
+  },
+  {
+   "line": 50,
+   "addr": 6123
+  },
+  {
+   "line": 60,
+   "addr": 6167
+  },
+  {
+   "line": 70,
+   "addr": 6185
+  },
+  {
+   "line": 80,
+   "addr": 6188
+  },
+  {
+   "line": 90,
+   "addr": 6240
+  },
+  {
+   "line": 100,
+   "addr": 6270
+  },
+  {
+   "line": 110,
+   "addr": 6329
+  },
+  {
+   "line": 120,
+   "addr": 6372
+  },
+  {
+   "line": 130,
+   "addr": 6387
+  },
+  {
+   "line": 140,
+   "addr": 6433
+  },
+  {
+   "line": 150,
+   "addr": 6530
+  },
+  {
+   "line": 160,
+   "addr": 6554
+  },
+  {
+   "line": 170,
+   "addr": 6657
+  },
+  {
+   "line": 180,
+   "addr": 6684
+  },
+  {
+   "line": 190,
+   "addr": 6714
+  },
+  {
+   "line": 200,
+   "addr": 6789
+  },
+  {
+   "line": 210,
+   "addr": 6801
+  },
+  {
+   "line": 220,
+   "addr": 6823
+  },
+  {
+   "line": 230,
+   "addr": 6895
+  },
+  {
+   "line": 240,
+   "addr": 6910
+  },
+  {
+   "line": 250,
+   "addr": 6985
+  },
+  {
+   "line": 260,
+   "addr": 7025
+  }
+ ],
+ "info": {
+  "AD XY": "PRINT XY OR XY: CALL ((40709 + P(",
+  "OBJECT FILE": "S016.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6073 - 7620",
+  "NUMERIC COMMON": "6064 - 6070",
+  "STRING COMMON": "6071 - 6072",
+  "LOCAL VARIABLES": "7621 - 7709",
+  "HIGHEST MEMORY LOCATION": "7709"
+ }
+}

@@ -1,0 +1,74 @@
+{
+ "id": "r5278",
+ "key": "751cb006fb14525f",
+ "source": "10 DIM D$(12),B%(2),A(9)\n20 DEF FN F(X)=AB%\n30 AB=((3.14159>Y%))*A=Y%-100:Z=AB OR XY%:AB%=5\n40 C%=-256+((X+Y%)):GOSUB 110:D$(3.14159 AND 127 AND NOT XY)=\"TASC\"+RIGHT$(CHR$(AB%),X)\n50 Y%=FN F(XY%)<=-ABS(A):A=Y% AND 1000*39+((((XY%>B%(Y%)))+Y%)):VTAB NOT ((((0.1<>XY))^((A(255)+27204))))\n60 A=XY%>=C%:A=A OR A:AB=-INT(LOG(A)):C%=1:A=C% OR C%\n70 IF (391>=XY) THEN A=FRE(C%-1)<>C%:IF (A AND A) THEN 10:X=3*((A AND A AND 3)):IF (X AND X) THEN 40\n80 ON -A(XY%) GOTO 90,20:Y$=MID$(D$(337)+X$,A)+RIGHT$(\"TASC\",XY%):GOTO 70\n90 PRINT A;:AB%=AB%=COS(X=Y%):X=AB% OR AB%:IF (20^AB) THEN GET A:Y%=A AND (7+FRE(40<>C%))\n100 FOR Z=(X OR NOT A) TO (252):IF (SQR(AB*Z)^C%) THEN 40:X=LEN(LEFT$(\"X Y\",B%(AB%)>A(770))):Z=X OR AB%\n110 RUN:AB%=FN F(B%(C%)):AB=FRE(AB%)+POS(-((255/255))):XY=FRE(Q1$):PRINT POS(Q1$)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1229,
+ "obj_sha256": "ba9434de6f466486ee2838ced1550d3fb945684e15329de97811d7db15f866dd",
+ "cycles": 122964507,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6094
+  },
+  {
+   "line": 40,
+   "addr": 6142
+  },
+  {
+   "line": 50,
+   "addr": 6227
+  },
+  {
+   "line": 60,
+   "addr": 6331
+  },
+  {
+   "line": 70,
+   "addr": 6382
+  },
+  {
+   "line": 80,
+   "addr": 6443
+  },
+  {
+   "line": 90,
+   "addr": 6515
+  },
+  {
+   "line": 100,
+   "addr": 6603
+  },
+  {
+   "line": 110,
+   "addr": 6714
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S018.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7292",
+  "LOCAL VARIABLES": "7293 - 7427",
+  "HIGHEST MEMORY LOCATION": "7427"
+ }
+}

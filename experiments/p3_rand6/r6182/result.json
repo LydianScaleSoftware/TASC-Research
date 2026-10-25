@@ -1,0 +1,23 @@
+{
+ "id": "r6182",
+ "key": "ebe876e71b97eb95",
+ "source": "10 REM! INTEGER I\n20 PRINT Y%,\n30 W$=\"A\"\n40 GOTO 80:LIST 10-20:X=AB%:IF (X AND X) THEN 40\n50 X=Y:GOSUB 120\n60 W=I AND SGN(Q1)<20-24:IF (W AND W) THEN 130:IF (RND(N2)) THEN LIST\n70 Z%=20>(W*X):SAVE:X=Z%:DATA 300,-2.5,X:COLOR=127\n80 IF (X) THEN W$=N2$\n90 COLOR=Z%\n100 PRINT X;VAL(LEFT$(X$,NOT 1000));:N2=FRE(STR$(W)) AND Q1:& \"X:Y\",1:Q1=N2\n110 REM! CLEAR CHAIN:Y%=PEEK(3 OR ATN(127)):X=Y% OR Y%\n120 GOSUB 170\n130 I=Y:IF (I OR I) THEN 190:IF ((((Q1 OR N2))*((14787-Z%)))) THEN RUN 90:Y%=Y\n140 A%(ASC(N2$+\"TASC\"))=Y%\n150 IF (45758) THEN TRACE\n160 LIST 10-20:LOAD \"F\"\n170 D%(.001)=127:GOSUB 120:Q1=Z%*AB%>=Y:IF (Q1 OR Q1) THEN 140\n180 X=W:GOTO 210:AB%=((14=A%(Z%)))-Y:SHLOAD:N2=AB%\n190 IF (Y) THEN IF (W% AND W%) THEN 20:W=-((AB%-D%(W%) OR POS(20)))\n200 Q1=7--Z%:N2=Q1 AND Q1:REM! CLEAR COMMON:FOR Y=(NOT SGN(Z%) OR 2<=(Y)) TO (SGN(D%(AB%))/Y%/((779 OR ((W OR 65535)))))\n210 ON SGN(RND(X+127)) GOTO 10,80,30:FOR X=(AB%) TO (-Y%+I):SAVE\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 110\nSYNTAX\n\n REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

@@ -1,0 +1,23 @@
+{
+ "id": "r6298",
+ "key": "057b7a12971f0f66",
+ "source": "10 REM! INTEGER K,J\n20 DIM B$(5),D%(5)\n30 ON SQR(SGN(J)) GOTO 130,180,220,170\n40 GOTO 150:REM! CLEAR CHAIN:A=SQR(W):GOTO 210:REM! CLEAR COMMON\n50 SPEED=Y\n60 CONT:Y%=Y:TRACE:B=Y%\n70 B=FRE(\"A\"):PRINT POS(Z$):RUN 160:DATA \"A,B\",1\n80 PRINT B;LEN(\"A\")+((10=D%(49152)));:LIST\n90 A=W-K:& \"X:Y\",1:W=A\n100 RUN 170:PRINT:X=1:IF (P(N2%)) THEN 10:&\n110 XY=XY:GOTO 140:NOTRACE\n120 ONERR GOTO 70:GOSUB 50:VTAB -A+XY AND Y%:GOTO 220:SHLOAD\n130 PRINT:SHLOAD:A=XY%:W=A OR A\n140 Y%=0:A=Y% OR ABS(40):Y=7:IF (Y AND Y) THEN 170\n150 HTAB PEEK(Y%)-XY%:GOTO 110:TRACE\n160 Y=W+40:IF (VAL(RIGHT$(B$,40))<XY%+-K) THEN RUN 50\n170 Y=FRE(A)^(10-D%(K))\n180 N2%=A+Z%=((XY<=737))<>-((NOT W)):IF (N2% AND N2%) THEN 100\n190 COLOR=NOT 525:PRINT -((J>=1.5)),835,:J=D%(1.5/K)+256:B=J OR J\n200 K=K\n210 A=((NOT K<=K+Y))-((Z%*K AND NOT 40000)):PRINT 100;Y;\n220 FOR J=(39) TO (K) STEP (ABS(-Y%^((Y%+1000)))):A=LOG(-RND(24)):IF (A AND A) THEN 210:GET A:K=A OR (SQR(P(J)))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 40\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

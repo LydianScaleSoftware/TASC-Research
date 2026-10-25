@@ -1,0 +1,76 @@
+{
+ "id": "r5166",
+ "key": "e4604442e16548aa",
+ "source": "10 REM! USECOMMON B,N2,N2%\n20 DIM A%(10),B(8),D%(2,1)\n30 IF (POS(607)) THEN RUN:A%(B%)=-B<=((39>A%>=W)):C$=Z$\n40 Z$=MID$(\"\",Q1%):IF (1000-A) THEN 10:RUN 40:PRINT:X=1\n50 W=1E3-((.5<=A)) OR ((N2% OR 0))<N2-N2%:W=W OR W\n60 PRINT VAL(Z$)<>B-XY OR .5;\"A\";10+((N2%>=N2<XY)),\n70 VTAB (Q1%):B=LOG(-((-B%))):GET W:Q1%=W AND (B(B%))\n80 A%(N2%)=B%:VTAB 256^((B(Q1%)^B))<40:IF (ASC(C$)) THEN A%=ATN(NOT ((26064>=XY))):IF (A% OR A%) THEN 30\n90 HLIN B(-315)-D%(B<=A,NOT A),(Q1%) AT W:XY=W\n100 A%=.001:IF (A% AND A%) THEN 110:HCOLOR=N2%<=B%:HCOLOR=10\n110 IF (B(NOT 12700)+((B<=1.5))*((B+N2))) THEN 90:FOR N2=(65535) TO (XY):NORMAL\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6076,
+ "obj_len": 932,
+ "obj_sha256": "705683be7fd7b8efd2962a312856c4b14347d47fc29aa8e4a9cf421583fadbdb",
+ "cycles": 110452939,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6096
+  },
+  {
+   "line": 30,
+   "addr": 6096
+  },
+  {
+   "line": 40,
+   "addr": 6159
+  },
+  {
+   "line": 50,
+   "addr": 6196
+  },
+  {
+   "line": 60,
+   "addr": 6253
+  },
+  {
+   "line": 70,
+   "addr": 6320
+  },
+  {
+   "line": 80,
+   "addr": 6365
+  },
+  {
+   "line": 90,
+   "addr": 6457
+  },
+  {
+   "line": 100,
+   "addr": 6529
+  },
+  {
+   "line": 110,
+   "addr": 6552
+  }
+ ],
+ "info": {
+  "GET W": "Q1% = W AND (B(B%))",
+  "OBJECT FILE": "S006.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6076 - 7007",
+  "NUMERIC COMMON": "6064 - 6075",
+  "LOCAL VARIABLES": "7008 - 7126",
+  "HIGHEST MEMORY LOCATION": "7126"
+ }
+}

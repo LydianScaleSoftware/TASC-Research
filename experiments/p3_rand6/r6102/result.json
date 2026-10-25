@@ -1,0 +1,23 @@
+{
+ "id": "r6102",
+ "key": "d9bb26eee7d8aab0",
+ "source": "10 REM! INTEGER K,J\n20 DIM D$(6),A%(12),P$(12)\n30 DEF FN F(T)=K\n40 N2$=\"X Y\":IF (FN F(256)<>Y%) THEN IF (N2) THEN TRACE\n50 GOTO 60:DEL 10,20\n60 XY%=A%(38004)/LEN(LEFT$(W$,K)):A=FRE(XY%)+POS(SIN(NOT A%(XY%))):IF (A%(2)) THEN 180\n70 NOTRACE\n80 AB=5:A=AB OR X:PRINT MID$(Y$,-ABS(10),Y);:READ A,A,A\n90 J=AB>=((K>.001<=AB)):GOTO 20:DEL 10,20\n100 REM! CLEAR COMMON:IF (AB) THEN LIST:STORE B,C\n110 GOSUB 160:INVERSE:XY%=39>K=Y%^A<=((Q1%-X<FN F(A%(Y%))))\n120 Z%=190:STORE B,C:Y=Z%:CONT:W$=CHR$(A)+Y$\n130 HPLOT A%(COS(N2+Y%)),(NOT ((N2 OR AB))) TO -((A%(Z%)+Y-A%(XY%))),(10381):Y%=-X:SAVE:X=Y%\n140 GOTO 20:CONT\n150 CALL AB:HTAB AB\n160 A=A%(SIN(J-N2)):N2=A OR A:PRINT LEFT$(W$,7);Y$;AB>=NOT 3.14159;\n170 X=((X AND A))*((Y>K))/-N2:A=FRE(X)+POS(((591=((Z% AND XY%))))+A%(Y%))\n180 HTAB 32767-Y%:A=10:AB=A AND A\n190 IF (A) THEN LOAD \"F\":CONT\n200 RUN:READ A:PLOT 862,FN F(Q1%+AB)<=N2\n210 SAVE:GOTO 100:REM! CLEAR COMMON:IF (40000 AND A) THEN LOAD \"F\"\n220 Y=A%(PEEK(A%(5))) OR Q1%*1.5 AND A:COLOR=-XY%:XY%=COS(N2>=J)>K\n230 FOR AB=(X) TO (POS(D$(10))*-((-256)))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 100\nSYNTAX\n\n REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

@@ -1,0 +1,23 @@
+{
+ "id": "r5159",
+ "key": "8aa6c99470305df4",
+ "source": "10 REM! INTEGER *\n20 REM! USECOMMON Q1$,X%,W$\n30 B=M:IF (B AND B) THEN 100\n40 READ X%:PRINT:GET A:Q1%=A AND (NOT 1000)\n50 X%=A-N2%:M=X% OR B:N2%=((A)):N2%=581\n60 ON X%+X GOSUB 180,220,170\n70 Q1$=N2$:N2$=CHR$(SGN(FRE(N2%)))\n80 A=1.5>=((1<C)):X=A AND C%:B=A:IF (-49152-((-C<=((C>=C))))) THEN GR\n90 B=TAN(N2%)+((C>=127>=250^1000)):X=B AND B\n100 A=((-24 OR ASC(\"A\")))<=M:FOR M=(798) TO (((506+C<1))*((((Q1% AND C))<B))):RESTORE\n110 RUN\n120 FOR M=(FRE(W$)*C%) TO ((X))\n130 IF (B>=2.25) THEN 80:C=X*((M>=1<=N2%-C%))\n140 POP:NEXT M:VTAB 530\n150 HOME:M=255:X%=M:X=X% OR B*(M)--((7/127))\n160 A=A-X:PRINT B;\n170 READ B,Q1$:C%=((594))/POS(N2$)\n180 ONERR GOTO 80\n190 X=A:GOTO 60\n200 GOSUB 90:GET X:C%=X AND (C%+Q1% OR -B):N2%=(C%):A=N2% OR X%\n210 C%=X\n220 B=B:NEXT M:X%=X+((M=763))/-X\n230 M=FRE(MID$(RIGHT$(\"HI\",-.5),((A=M))/-X)):PRINT POS(Q1$):C=B:HTAB SIN(X%=M)>=((X>=X^X%))\n240 X%=SIN(Q1%)<>A>=937:M=X% OR N2%:X=C%\n250 IF (C%*32767 AND ((256))) THEN 40:POKE C%=N2%<>127+256<N2%,M:ON 34294 GOTO 20,140,150,200\n260 REM! CLEAR COMMON:B=((C%--C))*-X:A=B AND B\n270 HCOLOR=(.5/X)>=N2%:PRINT LOG(LEN(Q1$+W$));M,Q1$,\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: unexpected input wait during compile:\n\n*****BEGINNING PASS 1\n\n\n\n10\nRECOGNIZED  REM ! INTEGER *\n20\nRECOGNIZED  REM ! USECOMMON Q1$,X%,W$\n30 B = M: IF (B AND B) THEN 100\n40  READ X%: PRINT : GET A:Q1% = A AND (\n NOT 1000)\n50 X% = A - N2%:M = X% OR B:N2% = ((A)):\nN2% = 581\n60  ON X% + X GOSUB 180,220,170\n70 Q1$ = N2$:N2$ =  CHR$ ( SGN ( FRE (N2\n%)))\n80 A = 1.5 >  = ((1 < C)):X = A AND C%:B\n = A\n\nDISK FULL\n\nBREAK IN 0\n]?",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

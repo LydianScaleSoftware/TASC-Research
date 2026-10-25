@@ -1,0 +1,82 @@
+{
+ "id": "r5035",
+ "key": "67c686c8a57b0032",
+ "source": "10 REM! INTEGER K\n20 GET Y:AB%=Y AND (20):POKE K-123,POS(8697+((AB%>=K))):READ X,W$\n30 READ Q1$\n40 Y=SIN(X/((B-Q1%))):GET A:XY%=A OR (((Q1%=((48529 OR AB%))))+-Q1%)\n50 FOR X=(XY%) TO (AB<40) STEP (ATN(2)^((B-10))-VAL(\"A\"+Q1$)):GOTO 70\n60 W$=\"A\"\n70 NEXT:FOR A=(INT(40)<=A) TO (AB):AB=POS(Q1$):AB=AB AND AB\n80 GOTO 30:A=NOT (44645)>(N2% AND AB):AB%=PEEK(AB=27<>EXP(AB%))\n90 COLOR=1000:AB=-((NOT N2%))-AB%:X=AB AND ((256 AND A))^((((AB%-AB))*K))\n100 GOTO 60:CALL Y\n110 XY%=-24>((((A AND 981))<((X=N2%)))):Y=XY% AND XY%:READ AB:PRINT AB AND AB\n120 PRINT\n130 ON 9 GOTO 80,100:HCOLOR=-Q1%:AB=VAL(\"123\") AND 4409 AND NOT ((B*X))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 931,
+ "obj_sha256": "e1b690bc4c2683c504d2f3b6c2afb7a0b5a51d3cf45d5ece5c6b62774b479ede",
+ "cycles": 109143275,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6141
+  },
+  {
+   "line": 40,
+   "addr": 6147
+  },
+  {
+   "line": 50,
+   "addr": 6207
+  },
+  {
+   "line": 60,
+   "addr": 6282
+  },
+  {
+   "line": 70,
+   "addr": 6295
+  },
+  {
+   "line": 80,
+   "addr": 6341
+  },
+  {
+   "line": 90,
+   "addr": 6404
+  },
+  {
+   "line": 100,
+   "addr": 6467
+  },
+  {
+   "line": 110,
+   "addr": 6470
+  },
+  {
+   "line": 120,
+   "addr": 6545
+  },
+  {
+   "line": 130,
+   "addr": 6548
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S015.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6994",
+  "LOCAL VARIABLES": "6995 - 7043",
+  "HIGHEST MEMORY LOCATION": "7043"
+ }
+}

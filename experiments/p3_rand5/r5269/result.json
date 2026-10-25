@@ -1,0 +1,23 @@
+{
+ "id": "r5269",
+ "key": "1271d970707c8e32",
+ "source": "10 REM! INTEGER I,K\n20 DIM P(10,9)\n30 GET N2:X%=N2 OR (AB% OR AB%<>I)\n40 AB$=STR$(39):D$(I)=XY$\n50 COLOR=Z%:IF (ASC(M$+AB$+\"HI\")) THEN GET B%:Z%=B% OR (3>=Q1):XY$=M$\n60 C=39+((AB<>413))<=P(X%,-519):ON INT(C) GOTO 170:POKE ((X%<>NOT C))*-((X-K)),(Z%)=Q1\n70 COLOR=X:CALL 1000:REM! CLEAR CHAIN\n80 INVERSE:N2=EXP(36161)<=((C<>N2))<((K*AB>P(B%,X%)*N2)):FOR K=(((SQR(C) OR AB)) AND ((3.14159 AND N2+AB))) TO (ASC(LEFT$(\"A\",(P(I,I)))))\n90 NEXT:N2=LEN(D$(X%)):FOR I=(10029) TO (NOT X) STEP (364 OR NOT N2^NOT X)\n100 X%=(967+-C):HLIN AB,(AB%) AT SQR(X%)\n110 AB=10348:X%=P(K,(7*40000)):Q1=X% OR X%\n120 RUN 220:C=N2\n130 PRINT AB$,:C=INT(7=P(K,1000)/20):N2=FRE(C)+POS(B%<>AB AND ((X AND 32767))>778)\n140 PRINT \"HI\",:GOTO 170:IF (1.5+-COS(2)) THEN PRINT AB$;\n150 READ C:IF (TAN(K)) THEN RUN:READ XY$\n160 REM! CLEAR CHAIN:Z%=P(FRE(D$(X%)),554<=P(X%,AB%)-K)\n170 Q1=X%:X=Q1 AND Q1:FOR C=(1000) TO (RND(24303)-NOT 688-((AB+34148)))\n180 I=AB^-Q1:M$=AB$:GOSUB 150\n190 READ N2:PRINT N2 OR N2\n200 FOR X=(P(B%,(P(X%,I)))*1) TO (C) STEP (((1 AND LOG(1000)))+AB):B%=SQR(P(220,AB%))<>P(0<=AB,3.14159)\n210 HTAB Z%:PLOT -I,-INT(LEN(AB$))\n220 PRINT \"A\";POS(MID$(\"A\",Q1)),M$;:VTAB I\n230 D$(INT(B%>=C)*INT(I))=XY$:NEXT X\n240 D$(NOT B%)=STR$(Z%>=-I):GOSUB 70:PRINT 255<=I^((X=255));AB$+MID$(D$(20),Z%)+MID$(\"\",P(5,255));AB;\n250 IF (P(X%,B%)*N2) THEN 150:PRINT NOT Q1;P(-((-P(X%,2))),K);\n260 C=FRE(M$+STR$(AB%)):PRINT POS(AB$)\n270 RUN:DATA :REM! CLEAR CHAIN\n280 FOR AB=(LOG(P(I,31255)+P(B%,I))<=NOT Z%*-AB%) TO (COS(100*24-((B%+X)))):M$=M$+AB$\n290 HCOLOR=SIN(Q1)+X+EXP(POS(1000))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 160\nSYNTAX\n\n REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

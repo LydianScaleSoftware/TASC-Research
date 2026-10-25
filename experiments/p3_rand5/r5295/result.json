@@ -1,0 +1,164 @@
+{
+ "id": "r5295",
+ "key": "e9e53c2f27372aec",
+ "source": "10 REM! INTEGER I\n20 REM! DEFCOMMON X,W,I\n30 DEF FN F(X)=-I\n40 Q1=Z%:IF (((INT(2) AND A%))>Y) THEN DATA X\n50 IF (FRE(STR$(127)+\"A\")) THEN RUN 330:IF (POS(Q1*((W*127)))) THEN XY%=((X^A OR Y%=Y))--((Y%+5)):W$=\"A\"\n60 A%=COS(X+631<=XY%^255):X=A% AND X:VTAB Z%:PRINT I,CHR$(32767);\n70 IF (10) THEN RUN 180:VTAB Y%\n80 Z%=Y/Z%:X=Z% OR Z%:HTAB FN F(POS(PEEK(A))):READ A\n90 HCOLOR=2:IF (Y) THEN A%=A%<>-((XY%<=A)):TEXT\n100 IF (Q1 OR ABS(Y) OR FN F(NOT A%)) THEN IF (Y/((2.25+Z%))) THEN IF (-9) THEN GOSUB 290:READ W:PRINT W OR W\n110 DATA ,HI,X,:HLIN ((SQR(A%)+W))/((W*A%/ATN(Y%))),(FRE(AB$)<W) AT Y:READ Y:PRINT Y OR Y\n120 GET W:A%=W AND (32767):PRINT W$,:READ M$,Y\n130 PRINT\n140 ON I GOTO 60:Y=I*((-Y%+Y%)):Y=Y OR Y\n150 A=EXP(1000):Q1=A OR A:IF (-((A+48217))) THEN IF (A%) THEN 250\n160 M$=M$:RESTORE:PRINT\n170 IF (39) THEN 190:Z%=Z%:IF (Z% OR Z%) THEN 180\n180 HLIN Y%,(256) AT -W=((Z%<>((I>Y%)))):Y%=-((((W+96))^X)):Y=Y% OR LOG(((Y% OR 5))^POS(XY%)):POKE 1000,XY%\n190 PRINT \"123\",X<=2;:GOTO 180:A=Y\n200 A=W:X=FRE(M$):PRINT POS(AB$):HCOLOR=100-Y<=X\n210 IF (FRE(I/((A+32767)))) THEN PRINT MID$(M$,X+100 OR NOT 2.25),RIGHT$(AB$,W-Y%)+RIGHT$(W$+\"HI\",FRE(M$));:IF (POS(A*10*((.001<=W)))) THEN COLOR=XY%-ATN(Y%)<=-((W<=Z%))\n220 I=-X>A%:A=FRE(I)+POS(W AND X):READ AB$,W$\n230 W=W*((X*1490))/((((W<>Y%))*((XY%>=X)))):A=W OR Q1:W$=AB$:IF (Y%) THEN GET Y:Y%=Y OR (POS(FN F(X>=24)))\n240 IF (Z% OR A%>=I AND A%) THEN 90\n250 Q1=10:PLOT ((Z%>Y))*1000,((W OR 568)) AND -((3 AND Z%)):READ Y,AB$\n260 W$=M$:POKE SGN(-((NOT XY%))),X+((SQR(194)>Z%*I))\n270 A%=EXP(Y%/I)=LEN(RIGHT$(M$,Z%)):Q1=A% AND A%:Y=NOT ((NOT 13))+((W-((A AND A%)))):IF (Y AND Y) THEN 200\n280 A=ATN(31252):Y=FRE(A)+POS(XY%):Y%=Z%:DATA HI,-2.5,HI,-2.5\n290 PRINT AB$+M$+\"TASC\"+AB$+CHR$(A%);W$;MID$(MID$(M$+W$,0<=X,-W),-Q1),:GET Y%:Z%=Y% OR (((40000*2.25 OR FN F(599)))-((Q1+Y%))):FOR I=(POS(40612)) TO (SQR(Q1>=7)-Y*NOT A%) STEP (POS(Q1)>FRE(Y)<=XY%)\n300 GOTO 200\n310 HLIN 28188--A%>=((115^Q1 OR I/Q1)),(40209) AT 283:Y%=100\n320 A=-PEEK(-A%):XY%=X^NOT ((X=Q1)):XY%=NOT ((544<=X)) AND -((I<=A%)):W=XY% AND XY%\n330 Y=24:X=((1.5<Y*Q1))*3:W=X AND X:CALL XY%\n",
+ "options": {
+  "library": null,
+  "program": 20480,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 20492,
+ "obj_len": 2691,
+ "obj_sha256": "0b2376305afef7c942980a9b50adecdea81f346b44ebc7a4c4a8d91fd07e2d0d",
+ "cycles": 210654602,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 20500
+  },
+  {
+   "line": 20,
+   "addr": 20500
+  },
+  {
+   "line": 30,
+   "addr": 20512
+  },
+  {
+   "line": 40,
+   "addr": 20528
+  },
+  {
+   "line": 50,
+   "addr": 20568
+  },
+  {
+   "line": 60,
+   "addr": 20616
+  },
+  {
+   "line": 70,
+   "addr": 20685
+  },
+  {
+   "line": 80,
+   "addr": 20699
+  },
+  {
+   "line": 90,
+   "addr": 20750
+  },
+  {
+   "line": 100,
+   "addr": 20788
+  },
+  {
+   "line": 110,
+   "addr": 20872
+  },
+  {
+   "line": 120,
+   "addr": 20954
+  },
+  {
+   "line": 130,
+   "addr": 20993
+  },
+  {
+   "line": 140,
+   "addr": 20996
+  },
+  {
+   "line": 150,
+   "addr": 21029
+  },
+  {
+   "line": 160,
+   "addr": 21068
+  },
+  {
+   "line": 170,
+   "addr": 21080
+  },
+  {
+   "line": 180,
+   "addr": 21094
+  },
+  {
+   "line": 190,
+   "addr": 21214
+  },
+  {
+   "line": 200,
+   "addr": 21253
+  },
+  {
+   "line": 210,
+   "addr": 21289
+  },
+  {
+   "line": 220,
+   "addr": 21457
+  },
+  {
+   "line": 230,
+   "addr": 21511
+  },
+  {
+   "line": 240,
+   "addr": 21609
+  },
+  {
+   "line": 250,
+   "addr": 21641
+  },
+  {
+   "line": 260,
+   "addr": 21710
+  },
+  {
+   "line": 270,
+   "addr": 21761
+  },
+  {
+   "line": 280,
+   "addr": 21850
+  },
+  {
+   "line": 290,
+   "addr": 21905
+  },
+  {
+   "line": 300,
+   "addr": 22136
+  },
+  {
+   "line": 310,
+   "addr": 22139
+  },
+  {
+   "line": 320,
+   "addr": 22202
+  },
+  {
+   "line": 330,
+   "addr": 22292
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "X AND X": "CALL XY%",
+  "OBJECT FILE": "S015.OBJ",
+  "PROGRAM": "20492 - 23182",
+  "NUMERIC COMMON": "20480 - 20491",
+  "LOCAL VARIABLES": "23183 - 23230",
+  "HIGHEST MEMORY LOCATION": "23230"
+ }
+}

@@ -1,0 +1,66 @@
+{
+ "id": "r6165",
+ "key": "ee31d6cce5abd7f8",
+ "source": "10 DEF FN F(X)=51\n20 GOTO 80:LIST\n30 PRINT \"X Y\";:COLOR=W%:C=FRE(MID$(\"\",N2%+Q1%)):PRINT POS(XY$)\n40 PRINT Q1,\n50 Q1=W%:CONT:XY=Q1\n60 A$=C$\n70 PRINT \"\";:P%(((-C AND ATN(P%(W%,0.1))))+7,20+RND(36538)^40)=W%:DRAW W OR P%(XY^Q1%,P%(3,Z%)+Z%) AT LEN(MID$(XY$,W%))<>499,(W%)\n80 RETURN:Q1=POS(P%(N2%,534))*Z% OR W%:W=Q1 AND Q1\n90 Q1%=Q1-P%(N2%,5)/FN F(C):C=Q1% AND Q1\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 682,
+ "obj_sha256": "6dca61ab92c1752c49232d7bf65640231ae94c00fecc79843d6553ba0da98a7c",
+ "cycles": 88352532,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6094
+  },
+  {
+   "line": 30,
+   "addr": 6097
+  },
+  {
+   "line": 40,
+   "addr": 6151
+  },
+  {
+   "line": 50,
+   "addr": 6160
+  },
+  {
+   "line": 60,
+   "addr": 6169
+  },
+  {
+   "line": 70,
+   "addr": 6175
+  },
+  {
+   "line": 80,
+   "addr": 6343
+  },
+  {
+   "line": 90,
+   "addr": 6383
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S005.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6745",
+  "LOCAL VARIABLES": "6746 - 7033",
+  "HIGHEST MEMORY LOCATION": "7033"
+ }
+}

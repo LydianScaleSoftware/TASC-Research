@@ -1,0 +1,23 @@
+{
+ "id": "r6063",
+ "key": "7d53106ec0c649e4",
+ "source": "10 DIM D$(3),P%(12)\n20 RECALL A:READ AB:PRINT AB AND AB:RECALL A\n30 REM! CLEAR COMMON:READ Z$:Z$=Y$+Y$+LEFT$(AB$,N2%=A%(X%,X%))\n40 GOSUB 20\n50 READ AB:W=FRE(Y$):N2=FRE(W)+POS(Y^((N2%=2.25))*POS(127-A%))\n60 PRINT:HTAB W\n70 GOSUB 130:Y=X%<>-((NOT 14671)):Y=Y AND W<>INT(Y)<((W<>W^40000))\n80 FOR Q1=((X%) AND LEN(Z$)) TO (TAN(A%)*((ASC(\"HI\") OR 7)))\n90 LOAD \"F\"\n100 READ N2:PRINT N2 OR N2:A%(-((((M%<N2%))^((X%*24)))),2)=2+((W+266))=A%\n110 SAVE:IF (P%(39<>((M%<559)))) THEN END:N2%=((100<AB))^W<=X%:W=N2% AND N2%\n120 AB$=\"\":SPEED=10\n130 DATA \"A,B\",-2.5,HI\n140 N2%=X%+W+((49152-7))+((A%(X%,N2%)+268+P%(A%)))\n150 A%=25:&\n160 & \"X:Y\",1\n170 GOTO 130:REM! CLEAR CHAIN:IF (((LEN(AB$)<>P%(768)))/SIN(A%)) THEN LIST:RUN\n180 LIST 10-20:FOR Q1=(N2) TO (N2%) STEP (P%(W OR AB+A%))\n190 SHLOAD:Q1=-X%>RND(1000)\n200 FOR N2=(((W<=W-M%))/((P%(M%) AND A%(28485,A%)))) TO (X%+LEN(\"TASC\"+D$(X%)))\n210 GET A%:X%=A% AND (39):IF (P%(ASC(Z$)*((A%>=.001)))) THEN A%((65535=Q1),M%)=FRE(Y$+AB$+Y$)\n220 COLOR=(((P%(3.14159))<>0))+INT(46753+32767)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 30\nSYNTAX\n\n REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

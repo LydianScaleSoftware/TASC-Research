@@ -1,0 +1,23 @@
+{
+ "id": "r6068",
+ "key": "29f8c98f2261172b",
+ "source": "10 DIM D$(9)\n20 READ B:PRINT B OR B\n30 M$=M$\n40 GET A%:PRINT\n50 Q1%=-((9512*AB%=-B)):AB%=B:Y=FRE(AB%)+POS(M+(M)):HTAB AB\n60 Q1=23644:B=A%:LOMEM: 16384:AB=B:IF (VAL(M$)) THEN N2$=N2$\n70 GOTO 10:REM! CLEAR COMMON\n80 GOTO 150:REM! CLEAR COMMON:IF (((X%/((Q1+1))))^((SIN(AB)>256))) THEN PRINT CHR$(Y);RIGHT$(\"TASC\",(AB%));\n90 GOTO 160:LOAD \"F\"\n100 HTAB 7\n110 PRINT -B<Y<TAN(2)+((AB>Q1%)),B;:GOTO 140:REM! CLEAR COMMON\n120 IF (M) THEN READ M:PRINT M OR M:IF (NOT ((2<>M+1000))) THEN RECALL A\n130 IF (-((Q1% OR 1000>Q1%))) THEN 50\n140 IF (A%) THEN 150:GOTO 30:REM! CLEAR COMMON:PRINT 5;N2$;\n150 RECALL A:AB%=POS(RIGHT$(N2$,Q1%))<>((Q1%<=Q1))--2.25:SAVE:Y=AB%:RECALL A\n160 N2$=A$:AB=EXP(M):B=FRE(AB)+POS(Q1%^((24*1000)) AND FRE(A% OR AB)):RUN 70\n170 GOTO 60:REM! CLEAR CHAIN\n180 RUN 40:PRINT:X=1:GET AB:Q1%=AB OR (X%/2>=Q1)\n190 M$=MID$(N2$,896*Q1%/COS(1.5),127)\n200 A%=5:LOAD \"F\":M=A%:XDRAW ((27349 AND B))*((A%+M))<>AB%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 80\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

@@ -1,0 +1,23 @@
+{
+ "id": "r6221",
+ "key": "416611c7906c24d9",
+ "source": "10 REM! INTEGER *\n20 DEF FN F(T)=(FRE(XY)-AB)\n30 XY=-VAL(B$):LIST:XY=XY:SAVE\n40 GOTO 70:IF (RND(XY%)) THEN IF (-((NOT D(200) AND 218=C))) THEN XY=D(XY>=256)<((TAN(2) OR M% AND 116)):IF (Z%) THEN 20\n50 GOTO 70:GOTO 70:REM! CLEAR CHAIN:FOR Q1=(C) TO (C)\n60 DEL 10,20:GOTO 70:&:IF (D(-Q1)<1000*255) THEN AB=((21707<=AB))-X/-267\n70 IF (-32767<=B%+B%<>D(X)+RND(Z%)) THEN 60:IF (Z%) THEN 100:PRINT Y$;LEFT$(MID$(Y$,Q1),ASC(\"HI\"));MID$(MID$(\"\",C),40+AB+NOT Q1);\n80 IF (X) THEN SHLOAD:AB=M%\n90 CALL 889:Q1=XY:XY=Q1 AND 40:PRINT B$,B$;\n100 GOTO 100:REM! CLEAR COMMON\n110 RUN:Q1=((XY-C))*39>=Z%\n",
+ "options": {
+  "library": 16384,
+  "program": 24576,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 50\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

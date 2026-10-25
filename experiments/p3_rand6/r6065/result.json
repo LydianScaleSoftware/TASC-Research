@@ -1,0 +1,23 @@
+{
+ "id": "r6065",
+ "key": "9a3b3c8dd2113f81",
+ "source": "10 REM! INTEGER J,I\n20 DEF FN F(Z)=FRE(CHR$(-Y))\n30 IF (((C%<>AB))/((Y>((A%>=7))))) THEN RUN 190\n40 GOTO 90:TRACE:C=J<>20\n50 SPEED=((COS(N2%) OR LEN(XY$)))^.5:LIST 10-20\n60 I=C:AB=I OR I\n70 PRINT NOT ((A<Y<>FN F(Y))),X;\n80 A=-((40-X)):C=A AND A\n90 J=J:SHLOAD:A=J:FOR AB=(LEN(STR$(32767))) TO (-154):A=-RND(C)+PEEK(Y*X)\n100 FOR A=(AB) TO (A)\n110 GOTO 10:C%=1\n120 IF (NOT FN F(ASC(XY$))) THEN DEL 10,20:NOTRACE\n130 J=((SQR(X)<A))-FRE(\"A\"+X$):IF (J OR J) THEN 50:IF (LEN(STR$(-A%))) THEN SAVE:GOTO 110:LOAD \"F\"\n140 AB=C>=1000*((X AND Y)):A=AB OR A:X$=MID$(W$,C)\n150 W$=CHR$(-X+((N2%-M%)))\n160 IF (I) THEN NOTRACE:IF (NOT ((I=AB))) THEN SAVE\n170 NOTRACE:I=A OR M%:C=FRE(I)+POS(INT(0))\n180 C%=LEN(XY$):IF (C% AND C%) THEN 50:GOTO 40:REM! CLEAR CHAIN:Y=N2%\n190 READ Y:PRINT Y AND Y\n200 IF (A%) THEN IF (((A%-C% OR 168))*((A*I))) THEN RUN 60:PRINT \"TASC\"+W$,:LIST 10-20\n210 DATA 1,HI\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 180\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

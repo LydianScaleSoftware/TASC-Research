@@ -1,0 +1,95 @@
+{
+ "id": "r6008",
+ "key": "59c00d40f99c19b9",
+ "source": "10 REM! INTEGER I\n20 DIM P$(3,10)\n30 DEF FN F(T)=XY%\n40 IF (B%<>((100=X*Y))) THEN RUN 120:Q1$=LEFT$(W$,-((Y<C)))\n50 DATA -2.5\n60 PRINT W$;((A%(XY%,137) OR Z))^X+B%;\n70 IF (PEEK(B%)) THEN 40:STORE B,C:DATA 300,-2.5,\n80 RUN 150:PRINT:X=1:CALL PEEK(833+XY)+B%:XY=Z:IF (XY AND XY) THEN 150\n90 C=NOT AB%:GET Z:X%=Z OR (-XY)\n100 IF (I+B%+24-Y) THEN SHLOAD\n110 IF (C+SGN(XY)-Z) THEN LOAD \"F\":IF (XY<-((C=A%(5,I)))) THEN CONT:LOMEM: 16384\n120 READ Z:PRINT Z AND Z:Z=XY:AB%=FN F(SGN(39072)+A%(65535,I)):Y=AB% AND AB%\n130 FOR Z=(A%(AB%^XY,XY AND 39)-RND(I)) TO (5)\n140 I=PEEK(Y):IF (I AND I) THEN 40\n150 GOTO 130:REM! CLEAR CHAIN\n160 X%=-1000:LIST:X=X%:C=7:XY=FRE(STR$(RND(Y+XY))):PRINT POS(Q1$)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 871,
+ "obj_sha256": "0430a6a7962b3d03bc2e428893f79423e09c517d4c168a955397a8c3657ebf5a",
+ "cycles": 105949911,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6094
+  },
+  {
+   "line": 50,
+   "addr": 6144
+  },
+  {
+   "line": 60,
+   "addr": 6155
+  },
+  {
+   "line": 70,
+   "addr": 6194
+  },
+  {
+   "line": 80,
+   "addr": 6225
+  },
+  {
+   "line": 90,
+   "addr": 6243
+  },
+  {
+   "line": 100,
+   "addr": 6273
+  },
+  {
+   "line": 110,
+   "addr": 6301
+  },
+  {
+   "line": 120,
+   "addr": 6364
+  },
+  {
+   "line": 130,
+   "addr": 6436
+  },
+  {
+   "line": 140,
+   "addr": 6495
+  },
+  {
+   "line": 150,
+   "addr": 6512
+  },
+  {
+   "line": 160,
+   "addr": 6518
+  }
+ ],
+ "info": {
+  "RECOGNIZED": "REM ! CLEAR CHAIN",
+  "OBJECT FILE": "S008.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6934",
+  "LOCAL VARIABLES": "6935 - 7315",
+  "HIGHEST MEMORY LOCATION": "7315"
+ }
+}

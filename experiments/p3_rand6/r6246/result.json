@@ -1,0 +1,23 @@
+{
+ "id": "r6246",
+ "key": "7db46d5ae2b1160d",
+ "source": "10 REM! INTEGER I,K\n20 DIM A$(10)\n30 POP:RESTORE\n40 I=A:C=I OR M%+((I-M%<24)):GOTO 140:REM! CLEAR COMMON\n50 Z=FRE(XY$):K=A%\n60 A$(B%)=Y$:TRACE\n70 PRINT -.5/((256<B% OR 100>K));MID$(A$(-B%),A=XY OR C*32767),763;\n80 LIST 10-20:GOTO 50:REM! CLEAR CHAIN:C=Z\n90 M%=((N2 AND XY))>((Z OR 10*127)):A=M% AND 1E3:PRINT 255<>-N2;-((Z+24))<=N2*N2;\n100 A%=Z:N2=A% AND A>=K:N2%=254\n110 Y$=\"X Y\":READ A$(B%),I,AB$:IF (C<K+M%) THEN C=K\n120 ON 34542 GOTO 70,190,140,100\n130 K=3:IF (K AND K) THEN 190:IF ((881<255)) THEN READ Z:PRINT Z OR Z:I=((A>.001))-((271+N2))=((32343<>A)):XY=I OR I\n140 A%=-A:PRINT AB$;Y$;24;\n150 A%=N2% AND Z:XY=FRE(A%)+POS(N2%)\n160 LIST:IF (A) THEN RUN 140\n170 K=127^NOT ((NOT M%)):Z=K OR N2:IF (-LOG(C)) THEN B%=(C*1=1E3):A$(230)=A$(N2%)+AB$+A$(4185)+LEFT$(MID$(XY$,A,K),K)\n180 IF (-((NOT 3.14159))>NOT M%+((844-M%))) THEN IF (XY) THEN RECALL A\n190 SHLOAD:GOSUB 90:A=I:ROT=-K\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 80\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

@@ -45,18 +45,69 @@ CASES: list[tuple[str, str, Options]] = [
 ]
 
 
-def main() -> None:
-    jobs = [Job(i, s, o) for i, s, o in CASES]
-    res = run_family("p3_lift", jobs, workers=8)
-    for i, s, o in CASES:
+# PASS1 2485: unsupported keywords (and RESUME with the RESUME/Debug option off) are skipped
+# with a warning; PASS1 330: REM and DATA are exempt from the dead-code skip
+UNSUP = ["DEL", "SHLOAD", "TRACE", "NOTRACE", "LOMEM:", "RECALL", "STORE", "&", "LOAD", "SAVE", "CONT", "LIST"]
+UNSUP_CASES: list[tuple[str, str, Options]] = [
+    ("del", "10 DEL 10,20\n20 PRINT\n", Options()),
+    ("shload", "10 SHLOAD\n20 X=1\n", Options()),
+    ("trace", "10 TRACE\n", Options()),
+    ("notrace", "10 NOTRACE:PRINT\n", Options()),
+    ("lomem", "10 LOMEM: 16384:X=2\n", Options()),
+    ("recall", "10 RECALL A:PRINT A\n", Options()),
+    ("store", "10 STORE ZZ:PRINT B\n", Options()),
+    ("amper", '10 & "A:B",Q:PRINT Q\n', Options()),
+    ("load", '10 LOAD "X":PRINT\n', Options()),
+    ("save", "10 SAVE\n", Options()),
+    ("cont", "10 X=1:CONT:PRINT X\n", Options()),
+    ("list", "10 LIST 10-20:PRINT \"A:B\";C$\n", Options()),
+    ("trace_then", "10 IF X THEN TRACE:PRINT\n20 END\n", Options()),
+    ("trace_then_rd", "10 IF X THEN TRACE:PRINT\n20 END\n", Options(resume=True)),
+    ("trace_rd", "10 TRACE:PRINT:LIST:X=1\n", Options(resume=True)),
+    ("trace_dead", "10 GOTO 10:TRACE:X=1\n", Options()),
+    ("resume_off", "10 RESUME:PRINT\n", Options()),
+    ("resume_then_rd", "10 IF X THEN RESUME:PRINT\n", Options(resume=True)),
+    ("rem_dead", "10 GOTO 20:REM! CLEAR COMMON\n20 PRINT\n", Options()),
+    ("rem_dead_rd", "10 GOTO 20:REM! CLEAR CHAIN\n20 PRINT\n", Options(resume=True)),
+    ("unsup_all", "10 " + ":".join(UNSUP[:6]) + "\n20 " + ":".join(UNSUP[6:]) + "\n30 PRINT 1\n", Options()),
+    ("unsup_vars", "10 X=1:STORE Q,R:Y=X\n20 PRINT R\n", Options()),
+]
+
+
+# PASS1 1335-1405 / 2435 -> 310: an empty statement right after THEN takes the normal
+# statement-end path (general IF form; after-THEN flag cleared)
+THEN_CASES: list[tuple[str, str, Options]] = [
+    ("then_colon_goto", "10 IF X THEN :GOTO 10\n", Options()),
+    ("then_colon_return", "10 IF X THEN :RETURN\n", Options()),
+    ("then_colon_print_rd", "10 IF X THEN :PRINT\n", Options(resume=True)),
+    ("then_colon_end", "10 IF X THEN :\n20 PRINT\n", Options()),
+    ("then_colon2_print_rd", "10 IF X THEN ::PRINT:PRINT\n", Options(resume=True)),
+    ("then_return_colon", "10 IF X THEN RETURN:\n20 PRINT\n", Options()),
+]
+
+
+def check(family: str, cases: list[tuple[str, str, Options]]) -> None:
+    jobs = [Job(i, s, o) for i, s, o in cases]
+    res = run_family(family, jobs, workers=8)
+    for i, s, o in cases:
         r = res[i]
         if not r.ok:
             print(f"{i:16} TASC failed: {r.error[:60]}")
             continue
-        real = r.obj("p3_lift")
+        real = r.obj(family)
         pred = compile_program(tokenize_program(s), o)
         same = pred.data == real and pred.load == r.obj_addr
         print(f"{i:16} {'match' if same else 'MISMATCH'}  {s.strip()!r}")
+
+
+def main() -> None:
+    import sys
+    if "--unsup" in sys.argv:
+        check("p3_unsup", UNSUP_CASES)
+    elif "--then" in sys.argv:
+        check("p3_then", THEN_CASES)
+    else:
+        check("p3_lift", CASES)
 
 
 if __name__ == "__main__":

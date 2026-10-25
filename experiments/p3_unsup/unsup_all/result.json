@@ -1,0 +1,41 @@
+{
+ "id": "unsup_all",
+ "key": "0597926d1e6dd005",
+ "source": "10 DEL:SHLOAD:TRACE:NOTRACE:LOMEM::RECALL\n20 STORE:&:LOAD:SAVE:CONT:LIST\n30 PRINT 1\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 43,
+ "obj_sha256": "6fa7e5c76322e9a5d6095700c2bd122b8e40c23c125a724e7d0e3a5ed9a6f10d",
+ "cycles": 57849099,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S002.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6106",
+  "HIGHEST MEMORY LOCATION": "6106"
+ }
+}

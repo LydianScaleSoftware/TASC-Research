@@ -1,0 +1,84 @@
+{
+ "id": "r5057",
+ "key": "717d776f666538fb",
+ "source": "10 REM! INTEGER J\n20 REM! DEFCOMMON X$,J,AB\n30 DIM D$(10),P$(4)\n40 DEF FN F(T)=Z\n50 XY=FRE(\"HI\"):PRINT POS(M$)\n60 A=A+Y%:IF (A AND A) THEN 40:GOSUB 50:ON A%=NOT FRE(\"X Y\") GOTO 100,30,120,70\n70 PRINT LOG(B%+A%) OR XY,CHR$(3);LEN(MID$(\"TASC\",AB))=J-((10 OR XY));:J=J\n80 XY=-7:FOR A=(-((3<=669+XY))) TO (VAL(LEFT$(C$,B%))>=((3>((65535<=J))))) STEP (508):PRINT B%;49152,X$+LEFT$(LEFT$(X$,Q1),A%);\n90 X$=LEFT$(\"TASC\"+X$+M$,A%+24):AB=10*-((100+AB%))\n100 RUN:Z=SGN(-((AB%*47224))):IF (Z OR Z) THEN 70:Z=A%:AB=Z OR A%\n110 M$=\"HI\":GET AB%:Y%=AB% OR (VAL(C$)<40+5208)\n120 PRINT:GET Y%:Y%=Y% OR (FN F(B%<J>-491))\n130 GR:C$=\"HI\"\n",
+ "options": {
+  "library": 16384,
+  "program": 24576,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 24585,
+ "obj_len": 879,
+ "obj_sha256": "a79ef4cadf63353ae5f7cd983910cea757defbd0496273d5c739a8e646c5d8c5",
+ "cycles": 104855899,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 24596
+  },
+  {
+   "line": 20,
+   "addr": 24596
+  },
+  {
+   "line": 30,
+   "addr": 24605
+  },
+  {
+   "line": 40,
+   "addr": 24605
+  },
+  {
+   "line": 50,
+   "addr": 24615
+  },
+  {
+   "line": 60,
+   "addr": 24636
+  },
+  {
+   "line": 70,
+   "addr": 24653
+  },
+  {
+   "line": 80,
+   "addr": 24741
+  },
+  {
+   "line": 90,
+   "addr": 24857
+  },
+  {
+   "line": 100,
+   "addr": 24915
+  },
+  {
+   "line": 110,
+   "addr": 24951
+  },
+  {
+   "line": 120,
+   "addr": 25007
+  },
+  {
+   "line": 130,
+   "addr": 25058
+  }
+ ],
+ "info": {
+  "LIBRARY": "16384 - 20396",
+  "OBJECT FILE": "S017.OBJ",
+  "PROGRAM": "24585 - 25463",
+  "NUMERIC COMMON": "24576 - 24582",
+  "STRING COMMON": "24583 - 24584",
+  "LOCAL VARIABLES": "25464 - 25539",
+  "HIGHEST MEMORY LOCATION": "25539"
+ }
+}

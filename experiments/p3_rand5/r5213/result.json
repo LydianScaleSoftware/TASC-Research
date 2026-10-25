@@ -1,0 +1,23 @@
+{
+ "id": "r5213",
+ "key": "29bbf62debea6cc0",
+ "source": "10 REM! INTEGER *\n20 DIM B(3)\n30 M=FRE(\"\"):PRINT POS(Q1$):XY=FRE(\"\"):PRINT POS(Y$):DATA X,\"A,B\",-2.5\n40 FOR W=(19276) TO (Z-((X% AND 100=M))):B%=M%<((B%<XY))<=B(-B(9013)):M=B% AND B%:M=((X%=24))-B=RND(M)\n50 Q1$=\"TASC\"\n60 READ Q1$\n70 NEXT W\n80 GOSUB 90:Y$=RIGHT$(Y$,B/M% OR Z)\n90 REM! CLEAR COMMON:W=FRE(X$+LEFT$(\"HI\",B(B)=W)):PRINT POS(Q1$)\n100 FOR W=(W) TO (ATN(W)-((Z-W))-XY) STEP (B(FRE(Y$)<3*M)):X$=MID$(MID$(\"TASC\",M),B%+B(X%))+\"TASC\":B(XY%+((39>XY%-XY)))=INT(65535)+((873>B(24) OR -3.14159))\n110 IF (Z*449) THEN READ W:PRINT W OR W\n120 W=W:IF (W AND W) THEN 10\n130 PRINT LEN(LEFT$(\"HI\"+Q1$,20-B)),:PRINT 5,\n140 B(NOT 2.25)=TAN(5)\n150 W=39+XY:W=W AND M:Y$=Q1$+RIGHT$(X$+\"X Y\",589):W=FRE(Q1$+X$):PRINT POS(X$)\n160 IF (-((256/XY%>=XY))) THEN 100\n170 REM! CLEAR COMMON:M%=(24)/((EXP(XY%)-Z)):XY=M% OR X%:NORMAL\n180 B%=POS(LEFT$(X$,NOT 10)):XY=B:RUN 60:PRINT:X=1\n190 W=-B%:GOSUB 180\n200 RUN:Z=TAN(-B(Z)):M=Z OR Z:M=655\n210 XY=NOT ((W+M>=LOG(B%))):B%=(B(Z)<>X%)-W:REM! CLEAR CHAIN\n220 PRINT -M<((W OR 2*M%)),CHR$(255),Q1$;:GOSUB 140\n230 SPEED=M*M OR B+32767\n240 M%=-SGN(Z):XY=M% OR X%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 90\nSYNTAX\n\n REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

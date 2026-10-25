@@ -1,0 +1,23 @@
+{
+ "id": "r6099",
+ "key": "5c1cbfe17ea861d1",
+ "source": "10 REM! INTEGER K\n20 DIM D(9),B%(12),A%(10)\n30 A%(POS(C$)-2.25)=LEN(Y$+LEFT$(\"A\",40))\n40 LOAD \"F\":GOTO 40:REM! CLEAR COMMON:PRINT\n50 Z%=((127^K<FRE(Y$)))+((512^B%(N2%)-Z*1)):A=FRE(Z%)+POS(-ATN(-5))\n60 TRACE:K=A%(K^AB) OR AB-((X%+10)):Z%=NOT ((VAL(B$)+Z)):Z=FRE(Z%)+POS(X)\n70 WAIT X%,(A),(ASC(Y$)):N2=N2%*((283 OR NOT N2%)):GOTO 220:&\n80 GOTO 40:RECALL A:REM! CLEAR CHAIN\n90 READ X%:PRINT X% AND X%:Z%=K:AB=W%<5\n100 W%=(((X)<Z))+((W% AND N2)):PRINT STR$(W%*((127 OR AB)));CHR$(K-537);\n110 DATA -2.5\n120 N2%=A:TRACE:AB=N2%\n130 READ Z%,K,B%(1>=Z%-AB-NOT 49152):X%=B%(((W%*Z%))^((Z%>=B%(N2%))))\n140 N2=(N2%):IF (N2 AND N2) THEN 190:PRINT AB*((-N2%+((A-W%))));\"TASC\",Y$,:K=K^K\n150 N2%=N2%:Z=FRE(N2%)+POS(B%(.5)/Z%<AB+22373<>((N2%>A>=FRE(B%(K)))))\n160 STOP:HTAB 0\n170 GOTO 240:STORE B,C:CALL POS(D(2)+NOT 48885)\n180 PRINT MID$(Y$+C$+B$,255);\n190 A=N2:X=Z:GOTO 30:REM! CLEAR COMMON\n200 HTAB NOT B%(N2%)*-A<=((39>D(N2%)>=.001-0)):IF (-A) THEN IF (ASC(\"HI\")) THEN 140\n210 REM! CLEAR CHAIN\n220 GOTO 190:& \"X:Y\",1:RUN 20\n230 AB=-100:Y$=RIGHT$(B$+Y$+Y$,255-Z<=W%):PRINT RND((899+940));Z%<=A%(N2%)/((256-D(40)));\n240 STORE B,C:READ K:PRINT K AND K:& \"X:Y\",1\n",
+ "options": {
+  "library": null,
+  "program": 20480,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 40\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

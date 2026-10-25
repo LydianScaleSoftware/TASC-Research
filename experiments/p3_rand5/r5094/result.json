@@ -1,0 +1,23 @@
+{
+ "id": "r5094",
+ "key": "728a67e14ac8c0c5",
+ "source": "10 DEF FN F(X)=VAL(Z$+W$)^X%\n20 READ C%,X\n30 Z$=Y$:FOR N2=(B^((0.1<X%))-((M AND 10/N2%))) TO (VAL(\"HI\"+\"HI\"+Y$+Y$))\n40 READ Y$,N2\n50 REM! CLEAR CHAIN:READ X\n60 B=N2:IF (X) THEN 70\n70 FOR B=(N2) TO (NOT X) STEP (879)\n80 FOR Q1=(1000-((X<>((B(C%)=127))))) TO (B(M%)<X*((1000+M%))):M=1000:M=M OR M\n90 NEXT Q1:B=C%:IF (B OR B) THEN 70:X=N2\n100 M%=476^((X+8328))-M%\n110 X=X-SGN(X%)+((B+N2))*B(3)\n120 N2=-233:N2=FRE(N2)+POS(-((936*X%)))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 50\nSYNTAX\n\n REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

@@ -1,0 +1,66 @@
+{
+ "id": "r5286",
+ "key": "5fae11bb46d249fa",
+ "source": "10 DIM A$(9,5),B%(7)\n20 GOTO 30:RUN 80\n30 B=((14027<M%<=((M<C))))^D%(Q1% OR XY):READ XY\n40 C=XY:B=C AND Q1%\n50 B=FRE(A$(M%-Q1% AND 24,Q1%>B%(M%))):PRINT POS(Z$)\n60 C=LEN(\"HI\"):READ X%:PRINT X% OR X%:HLIN (M%),(M) AT B%(Z%)<=-X%\n70 PRINT LEFT$(\"HI\"+M$,Z%)+\"\";LEFT$(\"123\",NOT ((Z+Z%)));\"\"+M$,\n80 GET Z%:Z%=Z% OR (Q1%)\n90 PRINT LEFT$(Z$,X%-3.14159-XY);CHR$(33522)+\"A\";AB$+MID$(M$,5),:PLOT M AND C>X%^M,256\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 734,
+ "obj_sha256": "27c70454164c5f3270e1b29e5c369ca33e8aeb800b150afe8c2e530b2549e5c2",
+ "cycles": 88995213,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6087
+  },
+  {
+   "line": 40,
+   "addr": 6153
+  },
+  {
+   "line": 50,
+   "addr": 6171
+  },
+  {
+   "line": 60,
+   "addr": 6228
+  },
+  {
+   "line": 70,
+   "addr": 6308
+  },
+  {
+   "line": 80,
+   "addr": 6402
+  },
+  {
+   "line": 90,
+   "addr": 6423
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S006.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6797",
+  "LOCAL VARIABLES": "6798 - 7001",
+  "HIGHEST MEMORY LOCATION": "7001"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "r5064",
+ "key": "fe77ec23415d2582",
+ "source": "10 REM! INTEGER K,I\n20 IF ((I)) THEN RUN:I=2.25+FRE(\"\")*((C/0.1))\n30 FOR C=(EXP(((C OR Z))*(C))) TO (-14354)\n40 VTAB N2\n50 GET C%:M%=C% AND (-Y%)\n60 POKE LEN(CHR$(AB)),3:POKE 49286,2.25:RUN 140\n70 B=-((ASC(\"123\")/3)):C=FRE(B)+POS(5)\n80 C=FRE(Z<N2<Y%)\n90 B=FRE(M$):PRINT POS(M$):A%=2-Y% OR 256:IF (A% OR A%) THEN 60:SCALE=FRE(B%(20>M%))\n100 M$=LEFT$(Z$+Z$+Z$,A%):SPEED=C+((AB<>M%))<M%:READ M$\n110 M%=10:AB=FRE(M%)+POS(A%(Y%)):DATA \n120 FOR C=(523) TO (5+B%((B))) STEP (B%(-((-C%)))):ON NOT ((K<=((I<=A%)))) GOTO 180,80,90,130:C=EXP(I)\n130 ONERR GOTO 140:A%=255=-((K>B)):C=A% AND A%\n140 B%(-7)=B+AB:C=B%(SIN(255)):C=C OR NOT ((-C%<=NOT 100)):END\n150 M%=C%:IF (M% AND M%) THEN 50:C=NOT B:STOP\n160 PRINT M$;C-N2;NOT ((3/((C=A%(1.5))))),\n170 READ A%:PRINT A% AND A%:READ Z:PRINT Z AND Z:PRINT\n180 NEXT C:GET B:M%=B AND (.5)\n190 READ C%:IF (N2) THEN IF (A%(((.5+B%(Y%)))/((A%(M%)-2)))) THEN M$=MID$(M$+Z$,3,K<=46067)+RIGHT$(LEFT$(M$,46019),-A%(Y%)):GOSUB 190\n200 PRINT 24;NOT C,-2.25;:REM! CLEAR CHAIN:NEXT\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 200\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

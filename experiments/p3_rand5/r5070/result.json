@@ -1,0 +1,119 @@
+{
+ "id": "r5070",
+ "key": "be7146fe4051ab83",
+ "source": "10 DIM B(3)\n20 DEF FN F(T)=((-W% OR B<=B(Y%)))>32767\n30 HTAB NOT C>=255:XY=40000:XY=XY OR XY:POKE SGN(SQR(C)),NOT 1000+((0-24))>C\n40 DATA HI,1,1\n50 READ Z,Y%:ON C% GOTO 190,30\n60 B=NOT Y%:XY=0<FRE(N2$):Y=XY AND XY\n70 B(100)=POS(N2$):Y=B-SIN(Z OR W%):READ N2$,C%\n80 ON FRE(B<>D(594,Y%)) GOTO 110,160,10,80:READ Z:PRINT Z AND Z:IF (10) THEN RUN\n90 HTAB 595:IF (POS(POS(Z))<=.5) THEN 10\n100 IF (C^429) THEN 10:GOTO 120\n110 W%=VAL(MID$(XY$,POS(\"123\"),169-X%)):IF (PEEK(-Y)) THEN RUN 60\n120 POKE 7,C%\n130 PRINT 32767;:INPUT \"NAME\";C%,D(FN F(XY),32767),Z:FOR C=(1000) TO (XY)\n140 Q1$=Q1$+MID$(XY$,NOT XY)\n150 READ W%,Z:IF (FRE(Q1$)+Y%) THEN GET XY:Y%=XY OR (10+((B(Y%)-B=40*B)))\n160 B=D(W%-Z,5908=Z)-Y:B=B OR 421:RESTORE\n170 C=1000:XY$=CHR$(ASC(N2$))\n180 PRINT ((0.1<>Z AND X%/C))*((1+XY*Y%));Q1$;\"A\",:GOSUB 40\n190 D(POS(D(B>=Y%,24-1000)),-((-D(X%,C%)))<>FRE(\"HI\"))=EXP(49152)\n200 READ Y:PRINT Y OR Y:RUN:PRINT:X=1\n210 POKE B<>C,XY+((X%<C<>Y))\n220 IF (-Y) THEN RUN 200:C=Y:IF (C AND C) THEN 220\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": 28672,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1477,
+ "obj_sha256": "c541834616ca7dd3478a260bd86763eb22dee8303548115d1c62275288964aa8",
+ "cycles": 133154741,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6127
+  },
+  {
+   "line": 40,
+   "addr": 6193
+  },
+  {
+   "line": 50,
+   "addr": 6206
+  },
+  {
+   "line": 60,
+   "addr": 6229
+  },
+  {
+   "line": 70,
+   "addr": 6256
+  },
+  {
+   "line": 80,
+   "addr": 6304
+  },
+  {
+   "line": 90,
+   "addr": 6366
+  },
+  {
+   "line": 100,
+   "addr": 6395
+  },
+  {
+   "line": 110,
+   "addr": 6411
+  },
+  {
+   "line": 120,
+   "addr": 6478
+  },
+  {
+   "line": 130,
+   "addr": 6490
+  },
+  {
+   "line": 140,
+   "addr": 6574
+  },
+  {
+   "line": 150,
+   "addr": 6595
+  },
+  {
+   "line": 160,
+   "addr": 6668
+  },
+  {
+   "line": 170,
+   "addr": 6725
+  },
+  {
+   "line": 180,
+   "addr": 6743
+  },
+  {
+   "line": 190,
+   "addr": 6810
+  },
+  {
+   "line": 200,
+   "addr": 6900
+  },
+  {
+   "line": 210,
+   "addr": 6924
+  },
+  {
+   "line": 220,
+   "addr": 6957
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "N  GET XY": "Y% = XY OR (10 + ((B(Y%) - B =",
+  "OBJECT FILE": "S010.OBJ",
+  "PROGRAM": "6064 - 7540",
+  "LOCAL VARIABLES": "28672 - 29354",
+  "HIGHEST MEMORY LOCATION": "29354"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "r6151",
+ "key": "4caab245cebe89a0",
+ "source": "10 REM! INTEGER J,K\n20 DIM B(8)\n30 DEF FN F(T)=-213\n40 ON Z%-287*713+Y GOTO 100,70,60,120\n50 LIST 10-20\n60 IF (FRE(K)=Z%<>5) THEN B(J)=5:Z%=173<>-FN F(49152):N2=Z% AND Y\n70 N2=((179<Y%))*((B(1)=Y%))-((W%/W%=((852<N2)))):Y=N2 OR N2:DATA ,1\n80 GOTO 110:REM! CLEAR COMMON:J=692\n90 GOTO 180:LOAD \"F\":B(Z%)=FN F(234)*((27754-883-NOT N2%))\n100 PRINT:& \"X:Y\",1:GET Y:K=Y AND (1.5<>308)\n110 Q1$=CHR$(FN F(Q1))+Q1$:Q1=N2:Q1=Q1 AND K\n120 N2=N2%<=COS(B(N2%))>POS(J)\n130 PRINT B(W%<=B/Y%);Y;:IF (LOG(2<=K>((J AND B(J))))) THEN RUN\n140 Y=COS(Q1):Q1=Y AND Y:GET AB$:B(1E3)=Y%\n150 DATA X,300:N2%=W\n160 IF (POS(39>3051)*-2) THEN SHLOAD\n170 N2=ATN(Q1):B=ABS(91*49152)/1.5\n180 N2%=-((N2+W%>=((N2=K)))):SHLOAD:W=N2%\n190 W$=STR$(N2%)\n200 REM! CLEAR CHAIN\n210 RUN 60:TRACE:GOTO 210\n220 &\n230 VTAB LEN(MID$(AB$,FRE(65535))):B=W:N2=B AND B\n240 LOAD \"F\":IF (((((10 OR N2%))+((B(Y%)=N2))))*Y) THEN &:SPEED=-K\n250 READ Y%:PRINT Y% AND Y%:Q1=Y%+0-N2%:PRINT\n260 GOTO 270:REM! CLEAR COMMON:CALL Y:DRAW N2%\n270 W$=MID$(Q1$+\"TASC\"+MID$(W$,J),3.14159<=W%+Y)\n280 Z%=ASC(MID$(Q1$,J,Q1))/W%:B=Z% AND Z%:Y%=Z%^Y%:TRACE:N2=Y%\n290 IF (((Z%<=B))+N2%*B(Z%)<=((2<>7=0.1))) THEN PRINT CHR$(-40),:GOTO 90:REM! CLEAR CHAIN\n300 IF (3.14159) THEN SAVE:LOAD \"F\"\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 80\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

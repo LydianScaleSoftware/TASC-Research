@@ -1,0 +1,23 @@
+{
+ "id": "r6125",
+ "key": "a92989314b65ed3e",
+ "source": "10 REM! INTEGER K\n20 IF (A/((P%(K,XY%)<=B%))<>AB*65535^A%) THEN NOTRACE\n30 IF ((1000)) THEN NOTRACE:XY=((P%(B%,W%)/A*((Q1=XY%))))^POS(AB$):IF (XY AND XY) THEN 30\n40 NOTRACE:Q1=0:RECALL A:AB=Q1:DATA \"A,B\",,X,\n50 A=X:SPEED=FRE(K=A>7)\n60 SPEED=XY<=((W%<=((K<=XY%))))\n70 GOTO 210:REM! CLEAR COMMON:A=.001-SQR(Q1) AND 2^TAN(39197):XY=A AND A\n80 RUN 130:PRINT:X=1:A=40000:P%(XY%,XY%-K+((XY<=K))-Q1)=ASC(\"\")\n90 READ A%,AB$:FOR Q1=(W%) TO (X)\n100 Q1$=Q1$\n110 HCOLOR=AB=((X<>XY)) AND .001+P%(XY%,24)<=((675>X)):IF (SQR(Q1=NOT XY%)) THEN RUN 60:NEXT Q1\n120 VTAB 100:LIST 10-20\n130 GOTO 120:LIST 10-20:READ W%:PRINT W% OR W%:AB=(A%) AND 0.1\n140 AB=40:LOMEM: 16384:AB=AB:IF (-(A)-40) THEN LOMEM: 16384\n150 GOSUB 170:GOTO 20:REM! CLEAR CHAIN\n160 IF (VAL(\"123\")) THEN RUN 170:IF (K) THEN 70\n170 A%=B%:SPEED=196-X\n180 AB=((8144-XY-((B%>127))))^X:PRINT MID$(AB$,POS(\"A\")+XY*P%(0,XY%),100),-((NOT P%(2,XY%)))+-((P%(B%,XY%)>=2)),W%,:A=-(AB)>=K\n190 IF (XY) THEN B%=1000:AB=K:GOTO 140:REM! CLEAR CHAIN\n200 FOR XY=(ASC(AB$)^37819/A%) TO ((XY%)):AB=FRE(Q1$):PRINT POS(Q1$):DEL 10,20\n210 GOSUB 160\n220 XY%=XY:STOP:IF ((XY%/AB+-185)) THEN &\n230 GOSUB 30\n240 GOTO 220:LOAD \"F\":A=-XY:XY=A AND Q1+49152-K>=((1.5+2 AND (A%)))\n250 GOTO 240:& \"X:Y\",1:IF (W%) THEN LOMEM: 16384:IF (PEEK(NOT 155-SIN(B%))) THEN 170\n",
+ "options": {
+  "library": 4096,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 70\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

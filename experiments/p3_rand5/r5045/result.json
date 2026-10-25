@@ -1,0 +1,83 @@
+{
+ "id": "r5045",
+ "key": "404130f07d948714",
+ "source": "10 REM! INTEGER K\n20 REM! DEFCOMMON N2%,X,C%\n30 DIM B$(12)\n40 DEF FN F(Z)=B%^A>A%(X%)+N2%<>X\n50 A=2.25:A=A AND A\n60 CALL -TAN(K)<=B:X=FRE(B$(255)+MID$(MID$(B$(B%),B%,X%),C%)):PRINT POS(A$)\n70 A=INT(NOT ((NOT X%))):B=NOT 65535:READ K:PRINT K OR K\n80 GOTO 30:PRINT NOT ((-C>=((N2%>=1)))),CHR$(255>=C% AND 921-5);-((A>=3*100));\n90 B=X AND C%+N2%:B=B AND B:C%=FN F(C)\n100 XY=XY+C:IF (XY AND XY) THEN 50:RUN 50:X%=X:A=X% AND X%\n110 N2%=40000\n120 XY=256\n130 PRINT A$,:X%=FN F(A%(N2%)^K-1):X=X% AND X%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6073,
+ "obj_len": 611,
+ "obj_sha256": "86a26f7cdbf00617d1aed38d0c6eeb2746a1ae996fcf96e6e22329e192e7dba1",
+ "cycles": 92794369,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6093
+  },
+  {
+   "line": 40,
+   "addr": 6093
+  },
+  {
+   "line": 50,
+   "addr": 6136
+  },
+  {
+   "line": 60,
+   "addr": 6148
+  },
+  {
+   "line": 70,
+   "addr": 6220
+  },
+  {
+   "line": 80,
+   "addr": 6268
+  },
+  {
+   "line": 90,
+   "addr": 6271
+  },
+  {
+   "line": 100,
+   "addr": 6301
+  },
+  {
+   "line": 110,
+   "addr": 6339
+  },
+  {
+   "line": 120,
+   "addr": 6345
+  },
+  {
+   "line": 130,
+   "addr": 6351
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S005.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6073 - 6683",
+  "NUMERIC COMMON": "6064 - 6072",
+  "LOCAL VARIABLES": "6684 - 6771",
+  "HIGHEST MEMORY LOCATION": "6771"
+ }
+}

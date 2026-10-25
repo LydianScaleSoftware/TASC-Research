@@ -1,0 +1,23 @@
+{
+ "id": "r5008",
+ "key": "425fe802caf015da",
+ "source": "10 REM! INTEGER I\n20 DIM P(12),A(12),B(11)\n30 DEF FN F(Z)=M%\n40 Q1%=158\n50 READ W$\n60 C=255*C:IF (RND(M)) THEN GET Y:GET X:Q1%=X OR (-Y)\n70 Z$=W$:COLOR=2:POKE M%,127\n80 CALL -B(65535)<>-FRE(\"X Y\"):PRINT Z$;MID$(MID$(\"HI\",M%*P(Q1%)),FRE(1/M),3),POS(\"123\");:W$=Z$\n90 ON POS(Y*AB%/M) GOTO 190,40\n100 PRINT 127,:CALL A(256)\n110 REM! CLEAR CHAIN:B(FRE(FN F(1000-40000)))=2339\n120 REM! CLEAR CHAIN\n130 M%=-POS(24)*((2+C%<>Q1%)):X=-((AB%+A(C%)))<C\n140 M=FRE(Q1$):COLOR=255\n150 C=Y:IF (C AND C) THEN 90:Z$=LEFT$(LEFT$(STR$(M%),-X),3)\n160 REM! CLEAR CHAIN:Z$=Z$+Q1$+\"\"+Z$:AB%=M%/49152:M=AB% AND AB%\n170 Y=VAL(Q1$):RUN:END\n180 CALL C:C=((LOG(C) AND A(568)*M%))=X+A*C%:A=C OR M\n190 FOR Y=(X) TO (16940):PRINT:M=M\n200 PR#C%:NEXT:IF (-M) THEN FOR A=(316) TO (I+-A-SQR(2.25))\n210 READ Q1%:PRINT Q1% OR Q1%:HLIN P(((B(Q1%) AND C%))-RND(C%)),(P(370+39 OR X)) AT FN F(-1E3):FOR I=(((Q1%=FRE(M%)))^((LOG(0) AND 7<Q1%))) TO (P(38655)) STEP (-((Q1%+Y)))\n220 M=1*C*VAL(Q1$):X=A-1000\n230 PRINT\n240 M=-COS(Y):Z$=\"X Y\":Y=.001<>7\n250 C=865\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 110\nSYNTAX\n\n REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

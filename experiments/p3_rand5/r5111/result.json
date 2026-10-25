@@ -1,0 +1,23 @@
+{
+ "id": "r5111",
+ "key": "b9c60c6c5a8d2f63",
+ "source": "10 REM! INTEGER K,J\n20 DEF FN F(Z)=B<=((6172<=C))^((B AND J))\n30 A=-((K+A)):SPEED=POS(B$):GET Q1%:Z%=Q1% AND (Z%)\n40 RUN:PRINT:X=1:GOTO 50\n50 ON C GOTO 50,280:GET W:K=W OR (((256 AND -C))<=W)\n60 RUN\n70 AB$=LEFT$(B$+\"X Y\",Y%)\n80 IF (255) THEN Z%=-((-255<>NOT Y)):C=Z% AND B<>255:FOR A=(SQR(1)) TO (X%):AB$=RIGHT$(\"HI\"+B$,B-C)+\"A\"\n90 A=255<>Y%+W:HLIN FN F(Y),(NOT 278) AT FN F(100)\n100 GET J:Q1%=J OR (642)\n110 DRAW LOG(TAN(7<49754)):PRINT\n120 Z%=VAL(B$)\n130 AB$=MID$(\"\",1.5)+\"A\"\n140 READ Z%:K=Y/((Q1%=C))*((C-W<57)):B=K OR Z%:PRINT \"TASC\",-((A<=SIN(32767)));K;\n150 K=FRE(Y)\n160 Z%=W:A=FRE(Z%)+POS(39^C)\n170 X%=LOG(5):B=FRE(X%)+POS(W):PRINT -RND(K);FN F(40000);PEEK(2*C)^POS(AB$),\n180 REM! CLEAR COMMON:FOR W=(A) TO (-((((K AND W))*VAL(\"HI\"))))\n190 C=SIN(TAN(Z%)*((Y%<Y))):C=C OR POS(STR$(A)):AB$=MID$(B$,FRE(VAL(\"X Y\")),Y%<=-A)\n200 W=1211:Y%=-((349>=K)):W=Y% AND Y%:IF (FN F(446)^VAL(\"TASC\")) THEN IF (100<>Y) THEN RUN 260\n210 B=FRE(\"TASC\"+\"X Y\"):PRINT POS(AB$):READ Y%:PRINT Y% OR Y%\n220 XY$=\"HI\":B$=\"A\":PRINT\n230 REM! CLEAR COMMON:IF (0=-Y%) THEN X%=C-J:C=FRE(X%)+POS(1000):Q1%=COS(255>=510=-J)\n240 B$=XY$+LEFT$(RIGHT$(\"TASC\",Q1%),-486)\n250 PLOT J AND 20*((Q1%<>A)),A:READ Y%\n260 HCOLOR=NOT ((FRE(Q1%)-A^X%))\n270 B=((Y AND NOT 125))/FRE(C*Y%):IF (B OR B) THEN 30\n280 A=2 AND 127:C=FRE(A)+POS(2.25):Y%=X%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 180\nSYNTAX\n\n REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

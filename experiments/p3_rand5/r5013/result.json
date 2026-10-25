@@ -1,0 +1,78 @@
+{
+ "id": "r5013",
+ "key": "b0fa4c889a75bf56",
+ "source": "10 REM! INTEGER *\n20 DEF FN F(Z)=W%\n30 DATA X\n40 ON W% GOSUB 80,120,50\n50 AB%=B%:M=FRE(AB%)+POS(M)\n60 COLOR=NOT Y\n70 PRINT W%,:PRINT 347;AB$+Q1$+Q1$;\"123\",:GET W%:B%=W% AND (NOT LOG(W%-AB))\n80 XY=B%/M:GET AB:AB%=AB OR (-10):PRINT\n90 DATA -2.5,\"A,B\"\n100 M=AB%:HTAB NOT ((-40)):IF (FN F(XY) OR W%) THEN GET W%:Q1=W% OR (POS(AB-Q1%))\n110 PLOT VAL(MID$(\"TASC\"+AB$,FN F(Q1))),XY:PRINT \"A\",:B%=-Q1%\n120 GET XY:B%=XY AND (AB%)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 588,
+ "obj_sha256": "b36e01f7cde93785090580ff3c85edfe68f173c24cdb49295917776f8976a65e",
+ "cycles": 85319936,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6094
+  },
+  {
+   "line": 40,
+   "addr": 6102
+  },
+  {
+   "line": 50,
+   "addr": 6115
+  },
+  {
+   "line": 60,
+   "addr": 6139
+  },
+  {
+   "line": 70,
+   "addr": 6148
+  },
+  {
+   "line": 80,
+   "addr": 6237
+  },
+  {
+   "line": 90,
+   "addr": 6273
+  },
+  {
+   "line": 100,
+   "addr": 6288
+  },
+  {
+   "line": 110,
+   "addr": 6360
+  },
+  {
+   "line": 120,
+   "addr": 6428
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S013.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6651",
+  "LOCAL VARIABLES": "6652 - 6683",
+  "HIGHEST MEMORY LOCATION": "6683"
+ }
+}

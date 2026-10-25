@@ -1,0 +1,127 @@
+{
+ "id": "r6041",
+ "key": "3baa9229b044e715",
+ "source": "10 REM! INTEGER I\n20 W%=I^((M*A<>-198)):A=W% OR I^((527^11088-A))\n30 GOTO 200:LOAD \"F\":FOR I=(B%) TO (I) STEP (A)\n40 SPEED=A<(M<AB%)\n50 GET W%:I=W% OR (A):XY$=\"123\"\n60 W%=POS(M):IF (W% AND W%) THEN 50:XY$=\"\":GOTO 200:REM! CLEAR COMMON\n70 GOTO 80:LOMEM: 16384:LIST 10-20\n80 M=M:IF (1000) THEN SHLOAD\n90 DEL 10,20:I=0:AB=I AND I\n100 IF (SGN(Z)) THEN LIST\n110 SAVE:ON (25) GOTO 160,100,230,210:PRINT INT(A<=Q1);LEN(LEFT$(XY$,7)) AND FRE(1+W%);\n120 PRINT A$+XY$+C$+C$,:A$=C$+C$+A$\n130 C$=C$:STOP:PRINT RIGHT$(C$+MID$(C$,Z,5),48415+AB% OR Q1);A$;\"X Y\",\n140 NOTRACE\n150 GOTO 50:REM! CLEAR COMMON\n160 RUN 130:GOTO 200:REM! CLEAR CHAIN\n170 PRINT \"\"+STR$(ABS(AB%));LEN(\"X Y\");C$;:Q1=2.25*W%:IF (Q1 OR Q1) THEN 60:GOSUB 200\n180 AB=I=W%:Q1=-A:SHLOAD:AB=Q1\n190 IF (1.5) THEN LIST\n200 HPLOT TO I+Q1,(SGN(LEN(XY$)))\n210 Q1=-((((849>B%))/W%)):A$=STR$(Y%)\n220 GOTO 30:TRACE:IF (B%) THEN STORE B,C\n230 Y%=Y%:Z=Y% OR W%\n240 M=FRE(MID$(XY$+\"123\",49152)+XY$):PRINT POS(C$):LOMEM: 16384\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 938,
+ "obj_sha256": "d347652ee65c5960a6f58505e407c6dc2ee2598a332b6403951bed7a4de8bd02",
+ "cycles": 118044083,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6153
+  },
+  {
+   "line": 40,
+   "addr": 6156
+  },
+  {
+   "line": 50,
+   "addr": 6174
+  },
+  {
+   "line": 60,
+   "addr": 6210
+  },
+  {
+   "line": 70,
+   "addr": 6239
+  },
+  {
+   "line": 80,
+   "addr": 6242
+  },
+  {
+   "line": 90,
+   "addr": 6256
+  },
+  {
+   "line": 100,
+   "addr": 6268
+  },
+  {
+   "line": 110,
+   "addr": 6281
+  },
+  {
+   "line": 120,
+   "addr": 6350
+  },
+  {
+   "line": 130,
+   "addr": 6401
+  },
+  {
+   "line": 140,
+   "addr": 6410
+  },
+  {
+   "line": 150,
+   "addr": 6410
+  },
+  {
+   "line": 160,
+   "addr": 6416
+  },
+  {
+   "line": 170,
+   "addr": 6425
+  },
+  {
+   "line": 180,
+   "addr": 6490
+  },
+  {
+   "line": 190,
+   "addr": 6514
+  },
+  {
+   "line": 200,
+   "addr": 6522
+  },
+  {
+   "line": 210,
+   "addr": 6546
+  },
+  {
+   "line": 220,
+   "addr": 6579
+  },
+  {
+   "line": 230,
+   "addr": 6582
+  },
+  {
+   "line": 240,
+   "addr": 6603
+  }
+ ],
+ "info": {
+  "RECOGNIZED": "REM ! CLEAR CHAIN",
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7001",
+  "LOCAL VARIABLES": "7002 - 7049",
+  "HIGHEST MEMORY LOCATION": "7049"
+ }
+}

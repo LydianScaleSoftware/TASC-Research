@@ -1,0 +1,23 @@
+{
+ "id": "r6245",
+ "key": "900bfe16ed5b8d5f",
+ "source": "10 REM! INTEGER I\n20 DEF FN F(Z)=((((M% AND B%))=RND(Y)))+((I<>((Q1>C))))\n30 GOTO 120:SHLOAD:PRINT 0;X$+X$,\n40 X%=775+((PEEK(480)+((Y OR 40)))):Z=X% OR X%:I=127:Z=((C%-Q1))*33930>=159^Y:XY=Z OR Z\n50 GOTO 140:REM! CLEAR CHAIN\n60 PRINT 473;COS(B%<C)^((((XY<=Q1))-((X%>Q1))));:Y=FRE(MID$(M$,100<=Q1)+N2$):PRINT POS(N2$)\n70 HTAB -M% OR C% OR -32767=-C%\n80 M$=MID$(LEFT$(\"TASC\"+\"TASC\",XY-Z),Z OR 908-I):IF (C) THEN RETURN\n90 LOAD \"F\":GOSUB 160:SPEED=39\n100 FOR XY=(PEEK(((C%>39046))*((Y>1.5)))) TO (LEN(\"A\")):IF (24) THEN X%=-((24+40))\n110 READ X%:PRINT X% OR X%\n120 STORE B,C:Q1=RND(X%^Z/256)\n130 IF (I) THEN Q1=I AND Y:IF (XY) THEN LOAD \"F\"\n140 TRACE:C%=C%:Q1=FRE(C%)+POS(.001):GOTO 30:SHLOAD\n150 X%=NOT XY<=B%=((X%*X%=-X%))\n160 Y=XY/((B%-C%/Y)):IF (INT(Z)) THEN LOMEM: 16384\n170 I=((Y=ASC(M$)))-COS(ABS(B%)):Y=I AND I:PRINT Y;\n180 B%=1E3-65535-40:NOTRACE:Q1=B%\n190 REM! CLEAR CHAIN:C%=2.25 AND 826>=Q1\n200 XY=-I<>((POS(255) AND -Y))\n210 READ Q1:Q1=TAN(((C% OR I))+32767):NOTRACE:Z=Q1\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 190\nSYNTAX\n\n REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

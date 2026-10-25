@@ -1,0 +1,23 @@
+{
+ "id": "r5271",
+ "key": "637d4bbd74952823",
+ "source": "10 DEF FN F(Z)=829+N2%\n20 PRINT 39;M$+CHR$(5);:XY$=M$+M$\n30 PRINT B$,B$+B$,XY%;\n40 PLOT X%-((39-EXP(100))),((Q1<=((20<=29047))))+((41947-Y))\n50 VTAB 447:HCOLOR=-712+Y>1\n60 GOSUB 260:X%=-N2% AND N2%:B$=B$\n70 DATA -2.5:CALL VAL(B$)\n80 SPEED=45051-((X%-C))*((W%>=0)):Q1=FN F(24) AND 39\n90 REM! CLEAR CHAIN:READ AB:HCOLOR=XY%\n100 M$=B$:GOSUB 170:DATA ,1,\"A,B\"\n110 IF (39351) THEN RUN 250:FOR B=(XY%) TO (AB)\n120 C=N2%:W%=Q1\n130 RUN 50\n140 Y=Q1*XY%:C=-LEN(\"A\")<=659-((W%+W%)):AB=FRE(C)+POS(AB):READ X%:PRINT X% AND X%\n150 IF (AB AND VAL(\"A\")) THEN B=B\n160 Q1=XY%:B=Q1 AND Q1\n170 N2%=C<>((XY%<XY%))+FN F(XY%):AB=N2% OR AB:NEXT\n180 IF (Q1) THEN VTAB Q1:READ Q1:PRINT Q1 OR Q1:C=FRE(AB)\n190 XY%=NOT ((XY%+X%)) AND ASC(MID$(\"A\",N2%,C)):AB=XY% AND XY%\n200 B$=XY$+M$+M$+M$:B=X%<ASC(M$) OR 256:B=B OR B\n210 PRINT\n220 GOSUB 110:HTAB INT(24):GET XY%:W%=XY% OR (0)\n230 RUN 140\n240 C=PEEK(-C<=Q1/10):B=C AND C:SPEED=Q1\n250 FOR Y=(-376) TO (-POS(C<N2%)) STEP (ASC(LEFT$(XY$+M$,N2%))):NEXT Y:B=((((B<N2%))+((32767+Q1))))*((((W%>40000))-((N2%>=76)))):IF (B AND B) THEN 20\n260 X%=-((-288-SIN(XY%))):Y=X% AND Y:Q1=C>=-AB:AB=Q1 OR Q1\n270 AB=24:Q1=AB OR Q1:Y=FN F(SIN(X%))--256:AB=Y AND Y:ON Q1-((W%<608))>((-N2%=-XY%)) GOTO 50,230,150,260\n280 NORMAL:GOSUB 20\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 90\nSYNTAX\n\n REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

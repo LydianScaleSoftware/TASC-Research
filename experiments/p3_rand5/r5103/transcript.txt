@@ -1,0 +1,143 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S003
+
+
+OBJECT CODE FILE:
+(DEFAULT S003.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION?
+
+*****BEGINNING PASS 1
+
+
+
+10
+RECOGNIZED  REM ! INTEGER J,K
+20
+RECOGNIZED  REM ! USECOMMON B$,Z,Q1
+30  DEF  FN F(X) =  - (( NOT K))
+40 P%(626) = 127 - ((C% + Q1 + ((AB - X)
+))):K = ((J + 24 ^ Q1%)) *  LEN ("A"):Q1
+ = K OR K:B$ =  RIGHT$ ( RIGHT$ (C$,P%(X
+Y%) * Z),0.1)
+50  GOTO 40:C% = P%( COS (P%(XY%)))
+60 W = P%(K) / ((24 >  = 100 / 142)):X =
+  FRE ( MID$ (B$,XY% ^ X,((X AND Z)) <
+= ((1000 < J)))): PRINT  POS (M$)
+70  PRINT Q1; MID$ ("TASC", FRE (C$ + "X
+ Y")); SGN (Z - AB >  = Q1);
+80 M$ =  RIGHT$ ( CHR$ (39575 - P%(B%)),
+ - W < 24 / 1000)
+90  SPEED= 40000
+100 B% = P%( - 40 + ((K = P%(C%)))):J =
+7:P%(2) = XY%
+110 M$ =  LEFT$ ( RIGHT$ (M$,2 + X),X):
+DATA ,HI: GOTO 10
+120  IF ( FRE (B$ + M$) + ((C% - XY% = P
+%(.5)))) THEN  GOSUB 130: POKE W,((Q1% -
+ J OR XY%)) = Q1%
+130 Q1 = XY%:Q1% =  - K < 2 +  NOT Z: IF
+ (Q1% AND Q1%) THEN 80
+140  RUN 120
+
+*****WARNING
+LINE NUMBER 140
+IGNORED
+
+: PRINT
+
+
+:X = 1
+150  IF (W + B%) THEN  HTAB  - XY% < XY%
+
+160  PLOT 17172 ^  FN F( FN F(24)), FN F
+(AB)
+170  SPEED= W
+180  HCOLOR= Z AND P%( FRE ("A")):P%( -
+(( - W))) =  FN F(P%(B%))
+190  FOR Q1 = (((49152 <  > 40)) ^ ((XY%
+ AND Z)) >  = 39) TO ( - ((P%(2.25) * J)
+)):B% = P%(C%) * 5 = W AND  NOT 10: IF (
+B% AND B%) THEN 250
+200  ON Z GOTO 50,80:X = Q1%
+210 W = W: PRINT :XY% = AB:Z =  FRE (XY%
+) +  POS ( FN F(P%(XY%)) * (( FN F(40000
+) <  > W)))
+220  GOTO 130:AB =  COS (C%)
+230 X = B%:W = X OR X
+240 X =  NOT ((Q1 <  > P%(.5))) <  NOT (
+(C% ^ Q1)):P%( - ((J * K)) <  =  FN F(3
+- W)) = P%(XY% OR  NOT J)
+250  PRINT :K = P%(B%) = 3 <  = ((W >  =
+ C%)) <  =  FN F(C% - Q1%): IF (K AND K)
+ THEN 150
+260  ON P%(Q1%) GOTO 190,50:X =  FRE (M$
+ + "HI"): PRINT  POS (B$): GOSUB 200
+270 B% = 20: IF (B% AND B%) THEN 120
+
+*****WARNING
+LINE NUMBER 270
+IGNORED
+
+: FOR Z = (W) TO ( FN F(C%))
+
+
+:C$ = C$ + C$
+
+
+
+*****BEGINNING PASS 2
+
+
+.....
+
+
+*****CODE GENERATION COMPLETE
+
+
+COMPILATION INFORMATION AND LINE NUMBER
+REFERENCE TABLE? YES
+
+
+SOURCE FILE: S003
+OBJECT FILE: S003.OBJ
+LIBRARY OCCUPIES 2051 - 6063
+PROGRAM OCCUPIES 6076 - 7973
+
+USE COMMON BLOCK:
+NUMERIC COMMON OCCUPIES 6064 - 6073
+STRING COMMON OCCUPIES 6074 - 6075
+
+LOCAL VARIABLES OCCUPY 7974 - 8045
+
+HIGHEST MEMORY LOCATION: 8045
+
+
+LINE# ADDR   LINE# ADDR   LINE# ADDR
+
+10    6084   20    6084   30    6096
+40    6112   50    6224   60    6248
+70    6347   80    6417   90    6459
+100   6465   110   6516   120   6550
+130   6635   140   6685   150   6697
+160   6725   170   6752   180   6758
+190   6814   200   6929   210   6946
+220   7009   230   7021   240   7033
+250   7137   260   7211   270   7263
+
+*****COMPILATION COMPLETE
+
+
+]?

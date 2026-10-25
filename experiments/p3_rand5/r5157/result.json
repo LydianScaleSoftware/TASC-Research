@@ -1,0 +1,23 @@
+{
+ "id": "r5157",
+ "key": "e373da897d8af6de",
+ "source": "10 REM! INTEGER I\n20 REM! DEFCOMMON A%,M$,Z\n30 DIM B%(9)\n40 B%(POS(Z%))=A:PRINT 741^39+Y;M$+MID$(\"HI\",NOT 827,Y OR AB%),\n50 AB=NOT AB%:RUN 200\n60 PRINT AB$;AB$,AB%;:READ A%:PRINT A% AND A%:RUN\n70 M$=\"A\":IF (SGN(FRE(\"HI\"))) THEN READ Y:PRINT Y OR Y\n80 N2=N2^(AB%):IF (N2 AND N2) THEN 180:NORMAL\n90 PRINT:AB%=6671>(Z):A=AB% OR AB%\n100 B%=((VAL(\"HI\") AND N2))>558-1000-((2271>3)):Z=B% OR I\n110 PRINT\n120 READ Z%,B%:AB=-Z*((Z-B%(Z%)+FRE(B%))):HCOLOR=40^-((-276))\n130 READ Z:PRINT Z OR Z\n140 IF (NOT 413^((ASC(M$)>25017^AB))) THEN 180:Y=((2 OR P(Z%)))<=N2/AB%>=NOT Y\n150 AB%=454>=3:AB=AB%+717:Y=AB AND A%\n160 PRINT MID$(CHR$(A%-39),Z);Z%;:IF ((Y=INT(AB%))) THEN IF (619) THEN 200:Z%=AB:A=Z% AND ((NOT A%(127) OR A%(I)-Z%))>=(P(I)-100)\n170 AB=10\n180 POKE -((-465<=I-A)),((Y OR TAN(P(3.14159))))<>(A%(Z%)*A)\n190 B%=AB>AB:Z=B% OR B%:FOR A=(B%) TO (NOT ((Z<>B%))+(B%(714)<699))\n200 REM! CLEAR CHAIN:Z=-AB%:N2=Z OR Z:B%=A%(256):A=B% OR B%\n210 PRINT N2;FRE(-446),N2^Y/((Z+P(I)-B%(A%)*Z));:AB=((3.14159 OR 2^Z))>=-20\n220 Z=B%:IF (Z AND Z) THEN 40\n230 PRINT:IF (A OR N2/((3<>A%))) THEN B%=ABS(586)\n240 AB=A%>=19311:N2=AB OR 0.1\n250 Z=506:P(24)=NOT 21679:A%=-ABS(1):N2=A% AND AB\n260 ON ((30181+AB%))*((.5<>A))<=((A<>P(I)=AB%^P(47145))) GOTO 90\n270 Y=40:IF (Y OR Y) THEN 110:I=(LOG(Y) AND A%<Z%):N2=FRE(I)+POS(-AB OR 555):GOSUB 250\n280 GOTO 280:NORMAL:NEXT A\n290 SPEED=828:N2=AB:Z=N2 AND N2\n300 N2=B%(AB%):N2=N2 OR N2:IF (A) THEN A=FRE(AB$):PRINT POS(AB$):FOR I=(0.1) TO (B%(((A%(Z%)>=AB))-980)) STEP (ATN(2))\n310 READ Y:PRINT Y OR Y\n320 PRINT -((B%(.5)>=48349>N2)),:I=B%(A%+A) AND Y:Z=I OR (1E3+B%>=P(I)-919)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 200\nSYNTAX\n\n REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

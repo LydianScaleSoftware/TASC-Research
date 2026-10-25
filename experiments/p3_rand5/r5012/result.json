@@ -1,0 +1,23 @@
+{
+ "id": "r5012",
+ "key": "499e32007294c32b",
+ "source": "10 REM! USECOMMON W%,Q1%,X$\n20 DIM A(10),P$(4,3)\n30 X$=X$\n40 POP\n50 SPEED=X%>((0=NOT 3)):X$=X$:A=SGN(NOT B)\n60 FOR W=(X%) TO (SGN(X%)) STEP (7)\n70 X$=\"\"\n80 W=2.25:N2=W OR W\n90 W=NOT ((X%+X%))<NOT ((N2>Z)):REM! CLEAR COMMON:IF (-((((X%>607))*D(C%)))) THEN FOR N2=(B) TO (-20)\n100 Z=1.5\n110 C%=NOT ((-Q1%))+W%:N2=FRE(C%)+POS(2):PLOT 40,X%>=D(Q1%):C%=((C%/X%>=((702>=Z))))*D(VAL(X$)):IF (C% OR C%) THEN 110\n120 IF (NOT Q1%) THEN 310:GOSUB 70:A=A(X%)*.5\n130 W=-((A-W%))\n140 FOR N2=(ASC(CHR$(A(X%)+X%))) TO (W):FOR W=(N2) TO (B>A(W%)<((W=289))>=N2-W%*W%) STEP (3-W%/C%+((-X%+NOT X%)))\n150 FOR B=(FRE(40-19793<((W<A)))) TO (NOT Z):Z=.001*256 OR FRE(\"123\") OR A(W%):PRINT STR$(((22294<=993))-(X%));LEFT$(LEFT$(B$,A(W%))+\"123\",W%-10);C$;\n160 HOME\n170 SPEED=FRE(PEEK(RND(C%)))\n180 GOSUB 110:W=-((Q1%*A)):A=100-(.001=10)\n190 C%=2<(-A(W%)):FOR Z=(INT(N2<>W%)) TO (D(LOG(C%<>1E3))):PRINT X$,ATN(W% OR .001 OR ((44220 OR C%)));Q1%,\n200 IF (SIN((C%))) THEN 270\n210 A=W%\n220 RUN 260:A(7-B)=255\n230 END:Q1%=B:IF (Q1% AND Q1%) THEN 30:W=FRE(P$((2),W%)+RIGHT$(P$(20,X%),W% AND Z)):PRINT POS(X$)\n240 READ W%:N2=FRE(C$):PRINT POS(X$)\n250 A=Z*((W*B=PEEK(X%)))\n260 W%=-(C%)*C%:A=W% OR C%\n270 X$=C$\n280 PRINT (W>=A),TAN(-((B^W))),B$;:C%=1:IF (C% OR C%) THEN 250:PRINT D(NOT SIN(W%)),34829,\n290 RESUME:X%=B:Z=FRE(X%)+POS(SGN(127 AND 18054/N2)):Q1%=-((C%*D(643)-((A-Q1%)))):B=Q1% OR Q1%\n300 REM! CLEAR COMMON:W=N2-COS(W=Q1%)\n310 CALL C%:Q1%=1.5\n320 IF (((100<>(X%)))+N2) THEN 20:READ B$:IF ((((W% AND X%))/((X%<>3)))) THEN 10\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 90\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

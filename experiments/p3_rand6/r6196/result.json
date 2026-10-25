@@ -1,0 +1,23 @@
+{
+ "id": "r6196",
+ "key": "bbc75640f403bf45",
+ "source": "10 REM! INTEGER *\n20 DEF FN F(X)=M%+((W*1000-1))\n30 RECALL A\n40 W=FRE(Z$):PRINT POS(B$):N2=ABS(XY%):C=N2 AND N2\n50 GOTO 220\n60 PRINT SIN(255^-C),\n70 W=W:CALL ((XY%+N2))*FRE(C)<>AB:Z$=STR$(C<>N2)+Z$\n80 M=3.14159:ON W GOTO 70,90\n90 AB=LOG(COS(2)):AB=FRE(AB)+POS(20)\n100 PRINT LEFT$(B$,-W<-A%(XY%)),B$,\n110 NOTRACE:PRINT AB,VAL(RIGHT$(M$,N2%))=65535;:RUN 90\n120 IF (FN F(W)) THEN LOAD \"F\":GOTO 140:REM! CLEAR CHAIN:SPEED=2*((A%(M)>=W))\n130 RUN:LIST 10-20:Z$=M$\n140 X%=-0.1+TAN(M)+X%:AB=X% AND X%:PRINT:FOR W=(A%(XY%)) TO (C)\n150 GOTO 110:RECALL A\n160 N2=C:AB=N2 AND N2\n170 END:M$=B$:ON ((M*AB AND N2))-((10-A%(256)=N2-M%)) GOTO 30,140\n180 W=NOT M%:FOR M=(M%) TO (7)\n190 IF (XY%) THEN LOAD \"F\"\n200 IF (XY%*((((M%<=W))+N2%))) THEN LIST 10-20:AB=RND(C^37112+-20):READ W,W\n210 GOTO 90:DEL 10,20:FOR AB=(AB) TO (W) STEP (POS(283))\n220 IF (-N2%<>W*X%) THEN 160:W=LEN(LEFT$(B$,583)):IF (W OR W) THEN 70:IF (((XY% OR W)) AND 256) THEN RUN\n230 RUN 220\n240 B$=LEFT$(\"123\"+M$,N2-N2+N2):PRINT W;\n",
+ "options": {
+  "library": null,
+  "program": 20480,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 120\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

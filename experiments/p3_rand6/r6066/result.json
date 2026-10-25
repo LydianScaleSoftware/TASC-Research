@@ -1,0 +1,97 @@
+{
+ "id": "r6066",
+ "key": "6b3ae1454e2032b1",
+ "source": "10 REM! USECOMMON N2%,XY$,Y$\n20 DIM A$(6),P$(6)\n30 GOTO 160:SAVE:GOTO 70:LIST\n40 Q1=FRE(\"TASC\"+STR$(Q1)+\"X Y\"):PRINT POS(XY$):ON TAN(M) GOTO 50,60,110,120\n50 C%=XY% AND 39:Y=FRE(P$(INT(0)<=INT(786))):PRINT POS(A$):RUN 10:PRINT:X=1\n60 Q1=M+((M<B*Y)):TRACE:M=Q1:FOR B=(10 OR -32767*NOT C%) TO (0)\n70 IF (M) THEN 70:IF (M>=Y<>((ASC(XY$) AND A))) THEN 70:PLOT SQR(N2%),Q1<=LOG(FRE(XY$))\n80 M=((386 AND XY%))+ASC(\"X Y\")+Q1:NEXT B\n90 READ B:GET C%:XY%=C% OR ((N2%)<NOT ((A-N2%))):IF (XY%) THEN &\n100 M=40000\n110 & \"X:Y\",1:LIST 10-20:GOTO 10:REM! CLEAR COMMON\n120 P$(M+Y)=\"123\"\n130 B=-((B+24887))-N2%:Y=B AND B:M=FRE(\"\"):PRINT POS(XY$):READ Z%:PRINT Z% OR Z%\n140 Y=XY%*Y:GOTO 40:REM! CLEAR COMMON\n150 M=N2%:SAVE:Q1=NOT N2%:IF (Q1 OR Q1) THEN 10\n160 B=B\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6070,
+ "obj_len": 788,
+ "obj_sha256": "ff7d08fad855039f339945f1e9e8a63a5b8d2a0c6e49c0bffefa246ec835aa20",
+ "cycles": 105923383,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6090
+  },
+  {
+   "line": 30,
+   "addr": 6090
+  },
+  {
+   "line": 40,
+   "addr": 6093
+  },
+  {
+   "line": 50,
+   "addr": 6163
+  },
+  {
+   "line": 60,
+   "addr": 6232
+  },
+  {
+   "line": 70,
+   "addr": 6291
+  },
+  {
+   "line": 80,
+   "addr": 6299
+  },
+  {
+   "line": 90,
+   "addr": 6343
+  },
+  {
+   "line": 100,
+   "addr": 6392
+  },
+  {
+   "line": 110,
+   "addr": 6398
+  },
+  {
+   "line": 120,
+   "addr": 6404
+  },
+  {
+   "line": 130,
+   "addr": 6431
+  },
+  {
+   "line": 140,
+   "addr": 6501
+  },
+  {
+   "line": 150,
+   "addr": 6516
+  },
+  {
+   "line": 160,
+   "addr": 6539
+  }
+ ],
+ "info": {
+  "RECOGNIZED": "REM ! CLEAR COMMON",
+  "OBJECT FILE": "S006.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6070 - 6857",
+  "NUMERIC COMMON": "6064 - 6065",
+  "STRING COMMON": "6066 - 6069",
+  "LOCAL VARIABLES": "6858 - 6928",
+  "HIGHEST MEMORY LOCATION": "6928"
+ }
+}

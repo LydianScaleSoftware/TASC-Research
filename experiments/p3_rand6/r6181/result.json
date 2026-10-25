@@ -1,0 +1,103 @@
+{
+ "id": "r6181",
+ "key": "7d74e22ad72c4fd1",
+ "source": "10 REM! INTEGER K,J\n20 PRINT NOT ((LEN(XY$)>100));XY$,M$,:GOTO 10:REM! CLEAR CHAIN\n30 GOTO 80:REM! CLEAR CHAIN\n40 IF (M%*((Y>=295))) THEN B(((Z>N2))-((A%-32767))>=Y,FRE(N2))=612:PRINT 1000;VAL(\"HI\"),A$,:Z=20/((W>40)):DEL 10,20:W=Z\n50 POKE FRE(A$)*Y,N2/(B(B%,B%))+815:Y=Y:A=Y OR Y:PRINT\n60 B%=(Z OR -A):TRACE:A=B%\n70 GET Z:W%=Z OR (40):M%=((NOT 40 OR K+40))>=A:SAVE:W=M%:HTAB B%\n80 IF (((Y AND 32767))<=A+255=((20>=-Y))) THEN IF (Z/ASC(XY$+XY$)) THEN RECALL A\n90 IF (LOG(Y-A%<=-J)) THEN DEL 10,20:GET W%:K=W% AND (NOT 1)\n100 N2=((M%>K))*2:W=N2 AND N2\n110 DATA -2.5,\n120 IF (3.14159<M%) THEN REM! CLEAR COMMON\n130 IF (255) THEN SHLOAD\n140 PRINT XY$;MID$(M$,W);B(32767<=W,3)<>A%;:DATA 300,300\n150 IF (24) THEN LIST 10-20\n160 RUN 100:PRINT:X=1:Y=(Y):Y=Y AND Y:A=((A% OR W% OR Z))>=483:IF (A AND A) THEN 60\n170 Y=ASC(A$+LEFT$(M$,0)):W=Y AND K\n180 B(697,B%)=COS(Z):LIST:FOR Z=(-W) TO (B(Y<=M%,255) OR B(A%-753,B(A%,K)>J))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1327,
+ "obj_sha256": "3906a4f94add266e1910f3d3fcc1e8b07dbe4a89604cde4bc1aefe7801c74963",
+ "cycles": 132459770,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6126
+  },
+  {
+   "line": 40,
+   "addr": 6132
+  },
+  {
+   "line": 50,
+   "addr": 6258
+  },
+  {
+   "line": 60,
+   "addr": 6303
+  },
+  {
+   "line": 70,
+   "addr": 6324
+  },
+  {
+   "line": 80,
+   "addr": 6384
+  },
+  {
+   "line": 90,
+   "addr": 6462
+  },
+  {
+   "line": 100,
+   "addr": 6520
+  },
+  {
+   "line": 110,
+   "addr": 6541
+  },
+  {
+   "line": 120,
+   "addr": 6553
+  },
+  {
+   "line": 130,
+   "addr": 6570
+  },
+  {
+   "line": 140,
+   "addr": 6578
+  },
+  {
+   "line": 150,
+   "addr": 6646
+  },
+  {
+   "line": 160,
+   "addr": 6654
+  },
+  {
+   "line": 170,
+   "addr": 6705
+  },
+  {
+   "line": 180,
+   "addr": 6741
+  }
+ ],
+ "info": {
+  "RECOGNIZED": "REM ! CLEAR CHAIN",
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7390",
+  "LOCAL VARIABLES": "7391 - 8050",
+  "HIGHEST MEMORY LOCATION": "8050"
+ }
+}

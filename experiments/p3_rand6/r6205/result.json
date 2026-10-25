@@ -1,0 +1,23 @@
+{
+ "id": "r6205",
+ "key": "71b9e118c25baae2",
+ "source": "10 REM! INTEGER K,I\n20 PRINT:INPUT \"NAME\";B$,M$,Y\n30 GOTO 120:REM! CLEAR CHAIN:M%=VAL(\"X Y\"):& \"X:Y\",1\n40 PRINT I;678,:PRINT -POS(B$)=.5;\"\";\n50 K=I:Y=FRE(K)+POS(233)\n60 RETURN:X=-SIN(AB%*N2):Z=X OR K:IF (-((6406^I))<PEEK(376)) THEN DEL 10,20\n70 GOTO 100:REM! CLEAR COMMON\n80 IF (RND(N2%=I=N2-C)) THEN LOAD \"F\":GET N2%:I=N2% OR (NOT ((Z>AB% AND Y))):GOTO 300:STORE B,C\n90 C=INT(C AND PEEK(Z)):IF (C OR C) THEN 50:RUN:PRINT:X=1:READ M%:PRINT M% AND M%\n100 I=C%+SQR(39525)=I:IF (I OR I) THEN 290:GOTO 110:REM! CLEAR COMMON\n110 HTAB INT(PEEK(X) OR M%):I=SIN(940^((M%>640))):Y=I OR I:RECALL A\n120 CONT:AB%=SGN(NOT ((255+255))):FOR X=(LEN(\"HI\")/C%) TO (127)\n130 I=COS(871=Y*N2%):IF (I AND I) THEN 60:C=-PEEK(1000):NOTRACE:Y=C:C%=C%\n140 AB%=24:RECALL A\n150 GOSUB 250:HOME\n160 GOTO 290:REM! CLEAR CHAIN:VTAB 2611<>(-N2)\n170 ON 903 GOTO 80,60,290\n180 COLOR=C%:K=N2<>N2%-C+((785+20)):M$=\"\"\n190 DATA -2.5,300\n200 GOTO 90:&\n210 POKE 100*0,Z:RUN:Z=Y\n220 GOTO 190:REM! CLEAR CHAIN\n230 I=221:& \"X:Y\",1:Z=I:NOTRACE\n240 NOTRACE\n250 GOTO 150:NOTRACE:PRINT M%,49152;\n260 IF (I<>408) THEN &:TRACE\n270 IF (40000) THEN GET C:N2%=C AND (I):IF (((C%+C AND RND(2.25)))<VAL(MID$(B$,3))) THEN & \"X:Y\",1:N2%=527\n280 IF (-((C OR 5115))-LEN(STR$(N2))) THEN 220:C=AB%+FRE(M$):IF (C+-((X/5))) THEN LIST\n290 IF (32767-N2) THEN CONT:RUN:M$=B$\n300 Y=I^((Y*-K)):RUN:C%=X>((20>=AB%))\n310 PRINT\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 30\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

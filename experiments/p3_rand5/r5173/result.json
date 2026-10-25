@@ -1,0 +1,78 @@
+{
+ "id": "r5173",
+ "key": "9d65bdff5c2db464",
+ "source": "10 Z%=XY%:Y=A\n20 Z%=24:IF (C*INT(Y OR AB%)) THEN RUN\n30 A=PEEK(SIN(XY))\n40 AB%=((Y+5>.5+W%))-(XY%<>41533):IF (AB% AND AB%) THEN 110\n50 PRINT XY-C,TAN(SIN(XY%<>1));\n60 HCOLOR=LOG(COS(AB%=XY%)):W%=M:XY=FRE(W%)+POS(AB%)\n70 CALL M<>M:RUN:PRINT:X=1:IF (-((W%+A))) THEN RUN\n80 ON C GOTO 10,100:IF (((C=47577>XY))^((W% AND XY+XY%))) THEN 100\n90 COLOR=100\n100 C=W%:XY=C OR -((5+49152*Z%)):IF (AB%) THEN RUN 40:Z%=NOT 256+NOT 10<=LOG(AB%^M)\n110 A=M<((XY%>W%)):INVERSE:GOSUB 70\n120 TEXT:IF (W%) THEN GOTO 10:HCOLOR=((-C OR 127-M))>=SQR(0)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 718,
+ "obj_sha256": "2339d61850d5b063f58623a7cbdc358161059a0573799aba063a8b39b99eb997",
+ "cycles": 96768055,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6096
+  },
+  {
+   "line": 30,
+   "addr": 6127
+  },
+  {
+   "line": 40,
+   "addr": 6142
+  },
+  {
+   "line": 50,
+   "addr": 6198
+  },
+  {
+   "line": 60,
+   "addr": 6228
+  },
+  {
+   "line": 70,
+   "addr": 6270
+  },
+  {
+   "line": 80,
+   "addr": 6291
+  },
+  {
+   "line": 90,
+   "addr": 6348
+  },
+  {
+   "line": 100,
+   "addr": 6354
+  },
+  {
+   "line": 110,
+   "addr": 6437
+  },
+  {
+   "line": 120,
+   "addr": 6461
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S013.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6781",
+  "LOCAL VARIABLES": "6782 - 6824",
+  "HIGHEST MEMORY LOCATION": "6824"
+ }
+}

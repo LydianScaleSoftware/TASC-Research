@@ -1,0 +1,82 @@
+{
+ "id": "r5183",
+ "key": "89f1f52e93daf3ea",
+ "source": "10 REM! INTEGER K,J\n20 DIM D(1)\n30 PRINT:A$=M$\n40 FOR C=(X) TO (-255):READ K:PRINT K AND K\n50 GET B:J=B OR (K+B)\n60 W=FRE(M$):PRINT POS(M$):B=Q1%*W%+B AND K:SCALE=(M/W)+-X*K\n70 A$=\"TASC\"\n80 GOTO 40\n90 GET C:Q1%=C AND (Y%):D(143)=X<>ABS(40)\n100 W$=\"123\"\n110 B=W%:M=B OR W%:HTAB ((((C AND 683))>=Q1%-24))*M\n120 SPEED=7:PRINT\n130 C=VAL(RIGHT$(W$,LOG(55))):X=C OR Q1%:GET M:C%=M OR (1):GOTO 20\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 707,
+ "obj_sha256": "cabdf141f7bde44ed84dc8716ff1aaa58922614d4624f7d24b05ea0e81635b4e",
+ "cycles": 90843210,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6099
+  },
+  {
+   "line": 50,
+   "addr": 6152
+  },
+  {
+   "line": 60,
+   "addr": 6179
+  },
+  {
+   "line": 70,
+   "addr": 6254
+  },
+  {
+   "line": 80,
+   "addr": 6273
+  },
+  {
+   "line": 90,
+   "addr": 6276
+  },
+  {
+   "line": 100,
+   "addr": 6324
+  },
+  {
+   "line": 110,
+   "addr": 6342
+  },
+  {
+   "line": 120,
+   "addr": 6402
+  },
+  {
+   "line": 130,
+   "addr": 6417
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S003.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6770",
+  "LOCAL VARIABLES": "6771 - 6828",
+  "HIGHEST MEMORY LOCATION": "6828"
+ }
+}

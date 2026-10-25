@@ -1,0 +1,23 @@
+{
+ "id": "r6061",
+ "key": "e1a115413f6bf34b",
+ "source": "10 REM! INTEGER J,K\n20 DIM D%(2)\n30 D%(((20*B%+((Y%>C))))*D%(PEEK(0.1)))=D%(M%)>=B%+K>=((W OR X)):IF (ASC(X$)) THEN ON J*0 GOTO 120\n40 READ B%,Y%\n50 SAVE:RUN 140:PRINT:X=1:COLOR=Z/LEN(\"X Y\")\n60 CALL C:ON -K GOTO 20,60:PRINT\n70 READ M%,C\n80 PRINT MID$(\"\"+CHR$(.001),XY,ASC(C$)),D%(-.001)+K;:C$=MID$(RIGHT$(\"TASC\",D%(K)),Z)+MID$(\"HI\",X)+X$\n90 GOTO 100:K=1000:READ K:PRINT K OR K\n100 W$=\"X Y\"+C$:READ W:PRINT W OR W:XY=NOT ((-C^-D%(865))):W=XY AND Y%\n110 X=ABS(W):IF (X OR X) THEN 100:IF (C) THEN TRACE:M%=D%(J):C=M% OR M%\n120 GET X:B%=X OR (X OR -((NOT 2))):Y%=D%(34471+.5+((.001=40000))):W=Y% OR Y%\n130 XY=D%(ASC(\"A\"))<1.5:Z=LEN(C$+STR$(C)):W=Z AND Z:W$=C$\n140 X=NOT 1.5/XY>=NOT ((W*XY)):C=X AND X:IF (X-J) THEN XY=X>C:X=((D%(Y%)+XY*Z))*W\n150 Z=K:& \"X:Y\",1:Z=Z:K=-((((M% OR 0))-X%))\n160 GOTO 100:REM! CLEAR COMMON:FOR K=(POS(NOT K<X%)) TO (K) STEP (317):RUN\n170 STORE B,C\n180 X%=11300-XY:PRINT \"TASC\",LEFT$(X$+X$,D%(J))+C$;FRE(\"\"),:GOTO 170:REM! CLEAR COMMON\n190 PRINT POS(\"A\"),X$;7;:RECALL A\n200 &:ON ASC(\"HI\") GOSUB 140,180\n210 GOTO 30:TRACE:LOAD \"F\"\n220 GET J\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 160\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

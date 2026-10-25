@@ -1,0 +1,23 @@
+{
+ "id": "r6090",
+ "key": "40d3f32d07f4ff02",
+ "source": "10 DIM A$(2,12)\n20 DEF FN F(X)=Q1%\n30 IF (5>XY+XY<>B%) THEN CONT\n40 IF (SGN(Q1%)) THEN RECALL A:STORE B,C:Q1%=AB<((2<>Q1))-((Y-Q1%))\n50 RUN:N2%=RND(FN F(100)/((B(B%)+1))):AB=N2% AND N2%:HPLOT 1,(1296<>SGN(Y-XY)) TO 254,(AB%)\n60 IF (-XY*Y) THEN LOMEM: 16384:READ Q1%:PRINT Q1% OR Q1%\n70 GOTO 180:SHLOAD\n80 Q1%=37:Y=Q1% OR AB%:LIST\n90 X=FRE(X$):PRINT POS(X$)\n100 GOTO 180:SAVE\n110 A$(PEEK(XY)>=762/((20<=2503)),((B(B%) AND Q1+B(B%)))<N2%)=XY$:HLIN SGN(B%)-PEEK(N2%)+65535,(AB/LOG(AB)) AT ASC(\"A\")=N2%*Q1%+((Y+811)):GET Q1%:AB%=Q1% OR (N2%)\n120 N2%=Y:Q1=N2% AND N2%:GOTO 30:SHLOAD\n130 Y=B(INT(-P(N2%))):IF (Y AND Y) THEN 10:VTAB NOT XY+((Q1 OR 15845))+((Q1%-FRE(\"HI\"))):AB=N2%<=((38795 OR 40000))*B%:Q1=AB OR AB\n140 GOTO 150:LOMEM: 16384\n150 PRINT TAN(519),RIGHT$(\"\",-P(Q1%)^P(Q1%)),LEFT$(A$(Q1%/N2%,N2%>=Q1),32767),:ON N2%/B(256 OR 20485) GOTO 90,90,210\n160 XY$=CHR$(NOT 0):PRINT\n170 XY$=RIGHT$(X$,COS(INT(Q1))):PRINT:GOTO 100:REM! CLEAR COMMON\n180 DATA X,1:GOTO 120:REM! CLEAR CHAIN:Q1=FN F(-3--B%):SHLOAD:Q1=Q1\n190 IF (N2%) THEN GOTO 170:NOTRACE:IF (-24) THEN SAVE:X$=\"\"+XY$\n200 B%=AB%:NOTRACE:Y=B%:X$=LEFT$(X$,Q1%<>24>=AB):Q1=PEEK(39>=P(3)):Q1=Q1 OR Q1\n210 IF (961>NOT XY) THEN SPEED=XY:READ Q1:Q1%=XY^Q1%>AB%:SAVE:Q1=Q1%\n220 P(NOT ((B(B%)/40)) OR FN F(B%))=XY:RUN 180:PRINT:X=1\n",
+ "options": {
+  "library": null,
+  "program": "HGR1",
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 180\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

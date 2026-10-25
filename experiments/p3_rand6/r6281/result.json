@@ -1,0 +1,87 @@
+{
+ "id": "r6281",
+ "key": "8c3ca41d84250c01",
+ "source": "10 W$=XY$+\"TASC\"+\"A\"+A$(AB%):A$=CHR$(B)+XY$:FOR N2=(39-(Q1%)/((M%*46562))) TO (33254)\n20 IF (INT(-AB%)) THEN FOR XY=(B-Q1%--540) TO (-((XY%*INT(Q1%))))\n30 &:NEXT:PRINT \"X Y\",(Q1%<=((B<>100)));W$+MID$(XY$,Q1%)+\"\"+\"X Y\"+\"X Y\";\n40 N2=24*VAL(\"X Y\")+39\n50 ON XY GOTO 90\n60 HCOLOR=B<0:A$((XY%)-Q1%^A)=A$:W$=\"123\"\n70 RUN:PRINT:X=1:GOSUB 70\n80 PLOT ((24-Q1%<((3>XY))))*C,XY%>=((N2=XY))<A\n90 RUN\n100 AB%=SGN(-1E3)<>((5>=3<=((15673<=M%)))):N2=AB% AND AB%:ON 256 GOTO 10\n110 RUN:GOTO 130:REM! CLEAR CHAIN\n120 M%=(XY)^((((N2<=2))-C)):Q1%=M%*M%/((AB%>Q1%))/N2:B=Q1% AND Q1%\n130 XY%=AB%:IF (XY% AND XY%) THEN 40:CALL RND(N2)\n140 AB%=M%:IF (AB% AND AB%) THEN 50:GOTO 40\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1152,
+ "obj_sha256": "05eacb1ef9ead98e8040fa59e6b92d79bbad07518f27e65bb241890203ee8b5d",
+ "cycles": 115050314,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6187
+  },
+  {
+   "line": 30,
+   "addr": 6247
+  },
+  {
+   "line": 40,
+   "addr": 6354
+  },
+  {
+   "line": 50,
+   "addr": 6381
+  },
+  {
+   "line": 60,
+   "addr": 6393
+  },
+  {
+   "line": 70,
+   "addr": 6453
+  },
+  {
+   "line": 80,
+   "addr": 6468
+  },
+  {
+   "line": 90,
+   "addr": 6525
+  },
+  {
+   "line": 100,
+   "addr": 6531
+  },
+  {
+   "line": 110,
+   "addr": 6612
+  },
+  {
+   "line": 120,
+   "addr": 6624
+  },
+  {
+   "line": 130,
+   "addr": 6708
+  },
+  {
+   "line": 140,
+   "addr": 6737
+  }
+ ],
+ "info": {
+  "RECOGNIZED": "REM ! CLEAR CHAIN",
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7215",
+  "LOCAL VARIABLES": "7216 - 7293",
+  "HIGHEST MEMORY LOCATION": "7293"
+ }
+}

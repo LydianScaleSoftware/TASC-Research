@@ -1,0 +1,94 @@
+{
+ "id": "r5074",
+ "key": "355d8f3671e93889",
+ "source": "10 REM! INTEGER I,K\n20 DIM D(11,4)\n30 DEF FN F(Z)=B%\n40 Q1=FN F(VAL(AB$)):IF (Q1 AND Q1) THEN 90\n50 N2=XY:W=N2 OR 1000\n60 PRINT\n70 Q1%=I:PRINT STR$(N2+((W=1000))),\n80 GET B:W%=B AND (256/-Q1-D(-N2,C%))\n90 HCOLOR=RND(NOT ((K<>I))):K=NOT N2:N2=K OR K\n100 INVERSE:READ XY:PRINT XY OR XY\n110 ON 49152<W%+((D(C%,B%)+B)) GOTO 70,70:GET XY:I=XY AND (D(NOT ((-578)),W%))\n120 AB$=LEFT$(CHR$(XY)+N2$,0.1)\n130 D(K,((1.5-C%))*0)=N2:ON N2 GOTO 10,140\n140 AB$=N2$+AB$+RIGHT$(N2$,XY)+LEFT$(A$,3.14159-K)\n150 Q1=FRE(LEFT$(AB$+A$+A$+AB$,XY)):PRINT POS(A$)\n160 RUN:P(65535,Q1%)=XY+NOT ((K^40))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 966,
+ "obj_sha256": "a6f078fc57e5d65b0a0f9a5aeab6bfe767e0ed53f7ed6ecea7b3176cd2f3d118",
+ "cycles": 105661248,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6094
+  },
+  {
+   "line": 50,
+   "addr": 6126
+  },
+  {
+   "line": 60,
+   "addr": 6150
+  },
+  {
+   "line": 70,
+   "addr": 6156
+  },
+  {
+   "line": 80,
+   "addr": 6189
+  },
+  {
+   "line": 90,
+   "addr": 6249
+  },
+  {
+   "line": 100,
+   "addr": 6300
+  },
+  {
+   "line": 110,
+   "addr": 6330
+  },
+  {
+   "line": 120,
+   "addr": 6415
+  },
+  {
+   "line": 130,
+   "addr": 6439
+  },
+  {
+   "line": 140,
+   "addr": 6480
+  },
+  {
+   "line": 150,
+   "addr": 6537
+  },
+  {
+   "line": 160,
+   "addr": 6588
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S014.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7029",
+  "LOCAL VARIABLES": "7030 - 7994",
+  "HIGHEST MEMORY LOCATION": "7994"
+ }
+}

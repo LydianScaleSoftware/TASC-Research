@@ -1,0 +1,87 @@
+{
+ "id": "r5155",
+ "key": "393772706bce6f98",
+ "source": "10 REM! INTEGER J,I\n20 REM! USECOMMON M,M%,Z%\n30 DIM B$(3)\n40 DEF FN F(X)=AB*-112\n50 HCOLOR=Z%:J=M:W%=39<M%\n60 READ Q1:PRINT Q1 OR Q1:GOTO 30\n70 HCOLOR=TAN(A)<=NOT AB*((432+2))\n80 Q1=245\n90 PRINT POS(NOT A);:C=FRE(MID$(N2$+LEFT$(Y$,A),-((-26947)))):PRINT POS(B$)\n100 PRINT I,\n110 GOTO 80:B$=RIGHT$(CHR$(255),FN F(I)):A=J\n120 GOTO 140:J=I:A=J AND J:PRINT MID$(STR$(32767),A);Y$;100;\n130 IF (((-5+TAN(I)))^C) THEN RETURN:IF (AB) THEN 60:GET W%:N2%=W% AND (Z%)\n140 W%=Q1:A=W% OR Z%:IF (AB+((A-C+VAL(\"HI\")))) THEN CALL AB:PRINT N2%,1;\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6073,
+ "obj_len": 766,
+ "obj_sha256": "f54907c1912887347ac71d92fc09cd53720797e107a9c3ba70abb348e95095ff",
+ "cycles": 97151958,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6093
+  },
+  {
+   "line": 40,
+   "addr": 6093
+  },
+  {
+   "line": 50,
+   "addr": 6109
+  },
+  {
+   "line": 60,
+   "addr": 6142
+  },
+  {
+   "line": 70,
+   "addr": 6172
+  },
+  {
+   "line": 80,
+   "addr": 6211
+  },
+  {
+   "line": 90,
+   "addr": 6220
+  },
+  {
+   "line": 100,
+   "addr": 6283
+  },
+  {
+   "line": 110,
+   "addr": 6295
+  },
+  {
+   "line": 120,
+   "addr": 6328
+  },
+  {
+   "line": 130,
+   "addr": 6358
+  },
+  {
+   "line": 140,
+   "addr": 6411
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S015.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6073 - 6838",
+  "NUMERIC COMMON": "6064 - 6072",
+  "LOCAL VARIABLES": "6839 - 6895",
+  "HIGHEST MEMORY LOCATION": "6895"
+ }
+}

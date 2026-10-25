@@ -1,0 +1,23 @@
+{
+ "id": "r6144",
+ "key": "891cef0ef545f422",
+ "source": "10 DIM D(9)\n20 LOMEM: 16384:B=M%:DATA X,\n30 GOTO 180:LOAD \"F\":RECALL A:RUN 90:PRINT:X=1\n40 LIST\n50 GET Y%:Y%=Y% AND (NOT A):&\n60 FOR X=(D(VAL(X$+Y$))) TO ((-X))\n70 M%=644>=((-M%=((A>A)))):B=FRE(M%)+POS(Y%)\n80 AB%=A AND -A+A:IF (AB% AND AB%) THEN 50:IF (M%) THEN SHLOAD\n90 DEL 10,20:D(EXP(C%)-((7>C%))<>((X<=255)))=AB%\n100 AB=FRE(Y$):PRINT POS(A$):A=FRE(Y$):PRINT POS(Y$):GET AB%:Y%=AB% OR (-C%)\n110 LOAD \"F\"\n120 GOTO 110:REM! CLEAR CHAIN:B=FRE(MID$(X$,M%)):PRINT POS(A$)\n130 PRINT 744>=((-AB%>10));\n140 C%=Z+AB:Z=C% AND C%:HLIN VAL(X$)+NOT C%,(880) AT -Z:GOTO 170:REM! CLEAR CHAIN\n150 IF (A) THEN 40\n160 PRINT:IF (-256^256) THEN ON FRE(-Y%) AND FRE(C%) GOTO 80,110,50,40:READ Z:PRINT Z AND Z\n170 NEXT X:IF (COS(NOT 744)+((FRE(Y$)=((Z AND AB))))) THEN SAVE:LIST\n180 GOTO 130:LIST 10-20:GOSUB 100\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 120\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

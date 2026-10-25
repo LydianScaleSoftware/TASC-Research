@@ -1,0 +1,183 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S000
+
+
+OBJECT CODE FILE:
+(DEFAULT S000.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION?
+
+*****BEGINNING PASS 1
+
+
+
+10
+RECOGNIZED  REM ! INTEGER I
+20  VTAB Y: PLOT  POS (B <  = 27184) * 0
+,M% = A <  = 0 / N2 > X% * B / M%
+30  PRINT  - ((((20 + Y)) *  - B)); CHR$
+ (X%) + M$;Y;:A = 40:B = A AND A
+
+*****WARNING
+LINE NUMBER 30
+IGNORED
+
+: LIST
+
+
+40  IF (A) THEN 250:Y =  LEN (M$ +  MID$
+ (M$,M%,I))
+
+*****WARNING
+LINE NUMBER 40
+IGNORED
+
+: NOTRACE
+
+
+:Y = Y
+50
+
+*****WARNING
+LINE NUMBER 50
+IGNORED
+
+ TRACE
+
+
+:X% = A < 10 >  =  VAL (M$) OR N2 + ((5
+AND Y)): IF ( - (B <  > N2)) THEN M% = X
+% >  = ((((B OR 24)) > ((A AND M%))))
+
+*****WARNING
+LINE NUMBER 50
+IGNORED
+
+: LOMEM: 16384
+
+
+:N2 = M%
+60
+
+*****WARNING
+LINE NUMBER 60
+IGNORED
+
+ IF ( NOT Q1% >  = ((B >  = I - Y))) THE
+N  TRACE
+
+
+70  RUN
+80
+
+*****WARNING
+LINE NUMBER 80
+IGNORED
+
+ IF (((Y = Y)) *  SGN (24) * ((M% > ((25
+5 <  = 65535))))) THEN  & "X:Y",1
+
+
+90 I = X%:A = I OR  SGN (AB) ^ A * A
+100
+
+*****WARNING
+LINE NUMBER 100
+IGNORED
+
+ SAVE
+
+
+: GOTO 100
+RECOGNIZED : REM ! CLEAR CHAIN
+110  IF ( - ((A < B))) THEN 170
+
+*****WARNING
+LINE NUMBER 110
+IGNORED
+
+: IF (I) THEN  PRINT  RIGHT$ (C$,5),
+
+
+120  GOTO 20
+
+*****WARNING
+LINE NUMBER 120
+IGNORED
+
+: GOSUB 280
+
+
+
+
+*****WARNING
+LINE NUMBER 120
+IGNORED
+
+: GR
+
+
+130 M% =  - (( VAL (AB$) < X%)):B = M% A
+ND  VAL ( MID$ ("A",AB)):A = I * ((5 = 2
+)) >  = ((39 >  = Y >  = A)):N2 = 7
+140  HCOLOR=  EXP (AB):N2 =  -  RND (278
+32) > (( - AB% >  =  SGN (M%))):N2 =  IN
+T ( - 934 < 255):N2 =  FRE (N2) +  POS (
+AB% AND A)
+150 I = A - ((B + M% / AB%)):Y = I AND I
+
+160  RUN 190:C$ = "TASC" + D$(I)
+
+*****WARNING
+LINE NUMBER 160
+IGNORED
+
+: PRINT  LEN ( MID$ ("TASC",0)), LEFT$ (
+AB$, NOT (( NOT 39)));M$ + C$ + "X Y";
+
+
+170  DATA 300,X: CALL N2: READ I: PRINT
+I AND I
+180  FOR B = ((5) OR 256) TO ( ASC ( LEF
+T$ (M$ + M$, NOT 256)))
+190
+
+*****WARNING
+LINE NUMBER 190
+IGNORED
+
+ & "X:Y",1
+
+
+200
+
+*****WARNING
+LINE NUMBER 200
+IGNORED
+
+ IF (20) THEN  RECALL A
+
+
+210  PRINT : GET X%:Q1% = X% AND ( VAL (
+ MID$ ( STR$ (I),N2 = A, POS (D$(I)))))
+220  GOTO 290
+
+*****FATAL ERROR
+LINE NUMBER 220
+SYNTAX
+
+: REM ! CLEAR CHAIN !ERR!
+
+TYPE CNTRL-C TO ABORT

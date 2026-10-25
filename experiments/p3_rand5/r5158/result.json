@@ -1,0 +1,23 @@
+{
+ "id": "r5158",
+ "key": "9cea341d9489304f",
+ "source": "10 REM! INTEGER J\n20 IF (-(X<>Q1)) THEN 170\n30 Y$=W$:Q1=FRE(MID$(XY$,-W%>=Q1,(Q1+XY%))):PRINT POS(Y$):GET XY:N2%=XY OR (W%)\n40 VTAB ASC(MID$(XY$,100,X))>W:GOSUB 80\n50 READ W$:PRINT:N2%=127:X=N2% OR N2%\n60 GET X:N2%=X AND (3.14159):IF (FRE(J)<>((Q1<Y%<>(45594)))) THEN A=-((N2%*XY%*((A=854))))\n70 CALL COS(5)\n80 Q1=256:IF (Q1 OR Q1) THEN 160:W$=Y$\n90 HPLOT 7,(-((NOT J/((W%<>Q1))))):Q1=2+ASC(Y$):ON J GOTO 110\n100 W=FRE(RIGHT$(XY$,101)):PRINT POS(XY$):HLIN ((7 AND W))>=256*XY%+20,(605) AT FRE((1.5>W)):Q1=-N2%*INT(3)+W*((W%<>XY)):XY=Q1 OR 127*Q1\n110 Y$=\"HI\":READ Y%\n120 Y%=XY%:XY=XY%\n130 GOSUB 240:Y%=Y%*XY% OR Q1:X=Y% OR Y%:HCOLOR=W-W>W% AND 32767\n140 INVERSE\n150 GOTO 20:XY=W%:X=FRE(XY)+POS(W AND POS(W$+\"HI\"))\n160 HPLOT 24<((NOT Y%<X)),(24+XY%<((24<=((235>=XY%))))):N2%=Q1-((N2% OR ((2 OR Y%)))):X=(W)>A\n170 W=161:Q1=FRE(XY$):PRINT POS(W$)\n180 XY=XY%:A=XY AND XY:REM! CLEAR CHAIN:IF (SQR(COS(J))) THEN 10\n190 DATA -2.5,-2.5,X,X:Q1=POS(3*24)-VAL(\"123\"):XY=FRE(Q1)+POS(-X):CALL X\n200 XY$=STR$(ATN(Y% AND 3.14159)):Q1=-((X<>1>=EXP(Y%))):X=Q1 AND Q1\n210 PRINT XY$,((Y%<256))+-X>((X>149))+256;Y%+1-548+((Y%=Y%<N2%-N2%));:W=W:RUN\n220 J=J-A=(Q1)<N2%\n230 DATA X,HI,300,HI:X=Q1:IF (X AND X) THEN 200:IF (((N2%-XY%<=LEN(\"TASC\")))+XY) THEN RUN 200\n240 ON NOT ((((39>XY))^3)) GOTO 70,20:READ W,W\n250 IF ((ASC(\"123\"))) THEN RUN\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 180\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

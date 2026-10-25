@@ -1,0 +1,151 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S005
+
+
+OBJECT CODE FILE:
+(DEFAULT S005.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION? NO
+
+COMPILATION LISTING:
+(DEFAULT YES)? YES
+
+PAUSE ON ERRORS:
+(DEFAULT YES)? YES
+
+INTEGER ARITHMETIC:
+(DEFAULT YES)? YES
+
+INTEGER CONSTANTS:
+(DEFAULT YES)? YES
+
+RESUME/DEBUG CODE:
+(DEFAULT NO)? YES
+
+*****BEGINNING PASS 1
+
+
+
+10
+RECOGNIZED  REM ! INTEGER J
+20  DEF  FN F(X) =  - ((A%(7,Q1%) < ((J
+>  = 1.5))))
+30 W =  FRE ( MID$ ("X Y",752 <  > ((W >
+ X)), VAL (C$ + X$))): PRINT  POS (X$):Z
+ =  - Z%
+40 Q1 = (( ASC (X$) + W)) * ((((X AND X)
+) - Q1%)):W = Q1 AND W: GET Q1%:Z% = Q1%
+ AND (((AB% * B AND  - Z)) >  - W)
+50  GOSUB 170: FOR B = ( NOT ((Z% * 10))
+ OR 255 ^ ((364 = Q1))) TO ( FRE (Z$ + C
+$ + C$)) STEP ( POS (1000) * B)
+60
+
+*****WARNING
+LINE NUMBER 60
+IGNORED
+
+ SAVE
+
+
+
+
+*****WARNING
+LINE NUMBER 60
+IGNORED
+
+: & "X:Y",1
+
+
+70  GOTO 30
+
+*****WARNING
+LINE NUMBER 70
+IGNORED
+
+: IF (5) THEN  DEL 10,20
+
+
+80 J = 5 + Q1:Q1 = J AND A%(0.1, - 31448
+ <  =  NOT X)
+90 X =  FRE ("HI"): PRINT  POS (C$)
+100 Z% = ((Z% < 39)) *  FN F(A%(Q1%,AB%)
+) >  = B:Z% = ((49152 AND B <  = Q1%)) ^
+ ((W <  > 5 - Q1%)):W = Z% OR Z%: PRINT
+A%( NOT (( - Q1%)),Z +  NOT 675),"HI", N
+OT 127 / ((AB% OR A%(39,Z%))) <  = 3.141
+59,
+110 X = J * (( NOT AB% * 238)):Z = X AND
+ X: DATA X,-2.5,300: INVERSE
+120  CALL  - ((Q1% ^ A%(1E3,Q1%) =  - Q1
+))
+130  FOR W = ( INT (20) *  - 40 <  > A%(
+ POS (Z%),Q1%)) TO ( ABS ( - A%(Z%,AB%)
++  - B)):Q1% = AB%
+
+*****WARNING
+LINE NUMBER 130
+IGNORED
+
+: IF (X) THEN  LOAD "F"
+
+
+140 J =  NOT B:B = J OR Y%
+150  PRINT "X Y";
+
+*****WARNING
+LINE NUMBER 150
+IGNORED
+
+: IF (2) THEN  LOAD "F"
+
+
+:W = J
+
+*****WARNING
+LINE NUMBER 150
+IGNORED
+
+: STORE B,C
+
+
+:W = W
+160  PLOT  FN F(((J OR Q1%)) AND 219 > 3
+9),((Z% <  > Q1 + A%(Y%,.001))) ^  FN F(
+ - Z%)
+170  PRINT 586 ^ ((((AB% OR W)) <  = Z%
++ X));
+180  POKE B > ((529 < ((Z < AB%)))),100:
+ RETURN
+
+*****WARNING
+LINE NUMBER 180
+IGNORED
+
+: GOTO 80
+
+
+
+RECOGNIZED : REM ! CLEAR CHAIN
+190  PRINT :AB% = Q1% / Y%: RUN
+200  GOSUB 160: GOTO 40
+
+*****FATAL ERROR
+LINE NUMBER 200
+SYNTAX
+
+: REM ! CLEAR CHAIN !ERR!
+
+TYPE CNTRL-C TO ABORT

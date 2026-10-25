@@ -1,0 +1,23 @@
+{
+ "id": "r6007",
+ "key": "271ddc9994b569e9",
+ "source": "10 REM! INTEGER J,K\n20 REM! USECOMMON W,M$,Z\n30 DEF FN F(Z)=VAL(\"TASC\")\n40 DATA HI:HTAB Z:IF (255) THEN DEL 10,20\n50 Y=-((B%-J>=3)):M=Y-Y:IF (M OR M) THEN 230:GOTO 160:REM! CLEAR CHAIN\n60 CALL ((-Z%<=Y%*Y))+((ATN(7) AND Z)):PRINT\n70 K=K*J=AB:Z=K OR COS(Y):GOTO 130:SHLOAD\n80 K=NOT Z%:FOR J=(256) TO (FRE(FN F(Y)))\n90 SHLOAD:PRINT\n100 LIST 10-20:HLIN ((594-M))/-J-LEN(Z$),(3.14159=3) AT ((B%<Z=.001))^20:K=954>=W\n110 Y=Z%:RECALL A:Y=Y:B%=W>-Y:COLOR=1.5\n120 &:SPEED=((X%=2))*Z<=((J<B%-Z%))\n130 SAVE:GOTO 70:REM! CLEAR COMMON:TRACE\n140 Y%=M*J:Z=FRE(Y%)+POS(((Z%<Y%))*FN F(Y%)):CONT\n150 SHLOAD:CONT\n160 PRINT \"\"+RIGHT$(MID$(\"HI\",AB),POS(Y%));:AB=J:IF (AB OR AB) THEN 20\n170 Z%=K\n180 Z=190^Z^K+((13=AB*X%)):AB=Z OR NOT Z%\n190 PRINT POS(LEFT$(CHR$(X%),M)),POS(K*((Y<>J))),X%>103<>197 AND J;:LOAD \"F\"\n200 IF (24/26788/K OR Z%) THEN B%=J:WAIT K AND K>AB,(Y*((Y% OR W))/FN F(M+7)),(SGN(-POS(Z)))\n210 RECALL A:IF (1) THEN TRACE:GOTO 20:REM! CLEAR CHAIN\n220 Y$=Y$+MID$(CHR$(7765),FRE(AB)):IF (FRE(2^X%<=LEN(Z$))) THEN Z=NOT 2.25:Z=FN F(B%)+M:IF (Z AND Z) THEN 90\n230 Z$=\"123\"+MID$(Y$,J>=256):ON J GOTO 10,90,180,160:IF (PEEK(FRE(M$))-39) THEN LIST\n240 X%=127\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 130\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

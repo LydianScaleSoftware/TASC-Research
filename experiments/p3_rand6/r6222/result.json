@@ -1,0 +1,74 @@
+{
+ "id": "r6222",
+ "key": "1035e0be75fa09da",
+ "source": "10 REM! INTEGER J,K\n20 DIM B%(6,2),D$(7,10),A$(5,2)\n30 GOSUB 20:STORE B,C\n40 SAVE:A=Z:Z=J/NOT Z AND XY+POS(1000)\n50 GOTO 70:NOTRACE\n60 K=802\n70 M=Y%\n80 FOR AB=(-EXP(B%(J,8430))) TO (-B%(3.14159,Y%)+INT(Z>Y%)) STEP (PEEK(M AND Z^A)):IF (((A%=NOT X%))*((538/((B%(X%,256)<>K))))) THEN RUN 80\n90 CONT:NOTRACE:PRINT M$+M$;J;\n100 IF (XY>=X%) THEN LOMEM: 16384:Y%=M\n110 A%=VAL(Q1$):TRACE:A=A%\n",
+ "options": {
+  "library": null,
+  "program": "HGR1",
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 16384,
+ "obj_len": 535,
+ "obj_sha256": "798372680427dec3356fa94b9361403a49cfa4f48968062b5e463bacc62a8889",
+ "cycles": 92896001,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 16404
+  },
+  {
+   "line": 20,
+   "addr": 16404
+  },
+  {
+   "line": 30,
+   "addr": 16404
+  },
+  {
+   "line": 40,
+   "addr": 16407
+  },
+  {
+   "line": 50,
+   "addr": 16443
+  },
+  {
+   "line": 60,
+   "addr": 16446
+  },
+  {
+   "line": 70,
+   "addr": 16452
+  },
+  {
+   "line": 80,
+   "addr": 16458
+  },
+  {
+   "line": 90,
+   "addr": 16596
+  },
+  {
+   "line": 100,
+   "addr": 16617
+  },
+  {
+   "line": 110,
+   "addr": 16637
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "OBJECT FILE": "S002.OBJ",
+  "PROGRAM": "16384 - 16918",
+  "LOCAL VARIABLES": "16919 - 17218",
+  "HIGHEST MEMORY LOCATION": "17218"
+ }
+}

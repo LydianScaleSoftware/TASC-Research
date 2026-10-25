@@ -1,0 +1,79 @@
+{
+ "id": "r6210",
+ "key": "19d5cb50651bccd5",
+ "source": "10 REM! INTEGER K,I\n20 DIM P(11)\n30 B%=C/A(XY-C):READ X%:PRINT X% AND X%\n40 PRINT POS(B$);CHR$(((10<>B%))-P(I));\n50 RUN\n60 B=LOG(39)^-X:M=B OR B\n70 X=(M)<>XY:XY=X AND X\n80 &:GOTO 40:REM! CLEAR CHAIN\n90 HLIN (((M%)<XY+B))-C,(B%^M%-513) AT P(B%)\n100 XY=FRE(MID$(\"TASC\",M-P(49152))):PRINT POS(W$):AB%=((C*P(X%) OR X-B))=B%\n110 XY=NOT ((ABS(I)/POS(W$))):LOAD \"F\"\n120 PRINT M+-3,M$;20;:W$=W$:LOAD \"F\"\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 639,
+ "obj_sha256": "a383eef50dd9b496dce5db2c6aa88f99d16c4c36856123aa59e547124af74dba",
+ "cycles": 89134875,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6126
+  },
+  {
+   "line": 50,
+   "addr": 6159
+  },
+  {
+   "line": 60,
+   "addr": 6162
+  },
+  {
+   "line": 70,
+   "addr": 6192
+  },
+  {
+   "line": 80,
+   "addr": 6210
+  },
+  {
+   "line": 90,
+   "addr": 6216
+  },
+  {
+   "line": 100,
+   "addr": 6270
+  },
+  {
+   "line": 110,
+   "addr": 6346
+  },
+  {
+   "line": 120,
+   "addr": 6372
+  }
+ ],
+ "info": {
+  "RECOGNIZED": "REM ! CLEAR CHAIN",
+  "OBJECT FILE": "S010.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6702",
+  "LOCAL VARIABLES": "6703 - 6865",
+  "HIGHEST MEMORY LOCATION": "6865"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "r5053",
+ "key": "a8b12ae23cda3166",
+ "source": "10 REM! INTEGER K,J\n20 DEF FN F(T)=FRE(XY$)\n30 A$=\"\"\n40 M=-LEN(XY$)\n50 CALL AB+C/((W AND C))\n60 REM! CLEAR COMMON:XY$=CHR$(-W<>B%-AB):DATA 300,-2.5,,X\n70 GET B%:Q1%=B% OR (AB)\n80 K=Q1%:FOR J=(FN F(1000<>B%)--C) TO (FRE(C)+((W%<>((40>=J))))) STEP (292):AB=INT(W% OR A)<>((POS(127)<=A/5))\n90 B%=K:DATA 300:J=J:M=FRE(J)+POS(-ABS(722))\n100 C=W\n110 GET W:K=W OR (W):SPEED=256:GOTO 160\n120 A$=\"A\":IF (980*-B%+Q1%) THEN RUN\n130 XY%=B%:A=FRE(XY%)+POS(499)\n140 POKE ((W% AND 127))-M/A<((W<W)),((XY%>XY%))/0.1\n150 C=FRE(CHR$(FRE(J)^-XY%)):PRINT POS(XY$):PRINT\n160 PLOT J+49152,1:COLOR=TAN(NOT ((Q1%>W%))):PLOT M,XY%-FN F(W)\n170 XY%=POS(1000)-XY%:C=XY% OR XY%\n180 PRINT LEN(\"HI\"),:AB=1E3*127:A=AB AND AB\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 60\nSYNTAX\n\n REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

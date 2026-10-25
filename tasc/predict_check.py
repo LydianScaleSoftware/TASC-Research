@@ -28,11 +28,27 @@ def check(prefix: str = "p1_", verbose: bool = False) -> None:
     errors: collections.Counter[str] = collections.Counter()
     mism: list[str] = []
     for d in sorted(EXPERIMENTS.glob(f"{prefix}*/*")):
-        if not (d / "result.json").exists() or not (d / "source.bas").exists():
+        if not (d / "result.json").exists():
             continue
+        if not (d / "source.bas").exists():
+            from tasc.applesoft import tokenize_program
+            if not (d / "source.txt").exists():
+                continue
+            (d / "source.bas").write_bytes(tokenize_program((d / "source.txt").read_text()))
         r = load_result(d.parent.name, d.name)
         if not r.ok:
+            if "FATAL ERROR" in r.error:
+                # TASC rejected the program: the predictor must reject it too
+                kind = r.error.split("LINE NUMBER")[-1].split("\n")[1:3]
+                try:
+                    compile_program((d / "source.bas").read_bytes(), options_of(r.options))
+                    stats["tasc_rejects_pred_accepts"] += 1
+                    mism.append(f"{d.parent.name}/{d.name}: TASC {' '.join(k.strip() for k in kind)}, predictor accepts")
+                except Exception:  # noqa: BLE001
+                    stats["both_reject"] += 1
             continue
+        if not (d / "OBJ.bin").exists():
+            continue  # being written by a running batch
         stats["total"] += 1
         opts = options_of(r.options)
         try:

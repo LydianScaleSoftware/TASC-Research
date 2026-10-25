@@ -1,0 +1,98 @@
+{
+ "id": "r6107",
+ "key": "2f0b1bb5edf1f909",
+ "source": "10 DIM P%(8)\n20 DEF FN F(X)=LEN(C$+Z$)\n30 &\n40 GOTO 120:Z=XY:B=Z AND Z:VTAB FN F(-A%)\n50 X%=-B>((Z%<TAN(818))):GOTO 80\n60 DATA 1,HI\n70 RUN 130\n80 X%=FN F(FN F(XY%))+7:CONT:A=X%:STORE B,C\n90 IF (X) THEN SAVE:PRINT X%,X%,10;\n100 VTAB LOG(A%)\n110 RUN:Z=FRE(\"HI\"):PRINT POS(Z$):GET XY:Z%=XY AND (XY%)\n120 SPEED=P%(P%(XY%)*5)-XY%:X%=28530:IF (X% AND X%) THEN 90\n130 IF (A) THEN SHLOAD:Z=Z:XY=Z AND Z\n140 PRINT SGN(A%(X%,B<>127));MID$(RIGHT$(Z$+W$,153 AND X),((P%(XY%)<127))/((XY*A)),SQR(40)),:READ Z%:PRINT Z% AND Z%:READ B:PRINT B AND B\n150 STORE B,C:FOR A=(((X% AND 127))>NOT A%(256,A%) OR X%/Z<>0) TO (-.5>=Z%) STEP (A):STOP\n160 ON A%=FN F(39*898) GOTO 150,30,30\n170 C$=W$:X%=A%<=Z%:B=X% AND X%:XY%=A%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1062,
+ "obj_sha256": "de95753ac43c769e1ea71b0c500f54f5b2d48c91f03f45f50046a3788ec997ae",
+ "cycles": 118437446,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6109
+  },
+  {
+   "line": 40,
+   "addr": 6109
+  },
+  {
+   "line": 50,
+   "addr": 6136
+  },
+  {
+   "line": 60,
+   "addr": 6172
+  },
+  {
+   "line": 70,
+   "addr": 6183
+  },
+  {
+   "line": 80,
+   "addr": 6192
+  },
+  {
+   "line": 90,
+   "addr": 6219
+  },
+  {
+   "line": 100,
+   "addr": 6257
+  },
+  {
+   "line": 110,
+   "addr": 6269
+  },
+  {
+   "line": 120,
+   "addr": 6305
+  },
+  {
+   "line": 130,
+   "addr": 6361
+  },
+  {
+   "line": 140,
+   "addr": 6396
+  },
+  {
+   "line": 150,
+   "addr": 6564
+  },
+  {
+   "line": 160,
+   "addr": 6653
+  },
+  {
+   "line": 170,
+   "addr": 6684
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S007.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7125",
+  "LOCAL VARIABLES": "7126 - 7439",
+  "HIGHEST MEMORY LOCATION": "7439"
+ }
+}

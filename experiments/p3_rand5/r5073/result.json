@@ -1,0 +1,78 @@
+{
+ "id": "r5073",
+ "key": "6ed1bf00c742b887",
+ "source": "10 REM! INTEGER J\n20 DEF FN F(Z)=65535\n30 X%=49152:Q1=X% AND 485\n40 Q1=J>=-((2+B)):DATA ,\"A,B\",-2.5\n50 A%=Y*N2%\n60 READ AB$,XY$,XY$\n70 GET X%:Q1%=X% OR (INT(A%>=X%))\n80 VTAB FN F(45849-NOT Q1):A=873\n90 CALL NOT ((A%<B))*((618 AND NOT Y))\n100 IF (FN F(23728*A<>ASC(XY$))) THEN RUN:GET A:A%=A AND (POS(FRE(32767))<475/FRE(477))\n110 VTAB -ATN(B+40)\n120 FOR XY=(X%) TO (-((A%-Q1%<=LOG(XY))))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 636,
+ "obj_sha256": "8e372faaf715863355981faad44e732c8ac71937851d5264f9f96e6799d5155f",
+ "cycles": 88895606,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6094
+  },
+  {
+   "line": 40,
+   "addr": 6115
+  },
+  {
+   "line": 50,
+   "addr": 6149
+  },
+  {
+   "line": 60,
+   "addr": 6158
+  },
+  {
+   "line": 70,
+   "addr": 6176
+  },
+  {
+   "line": 80,
+   "addr": 6206
+  },
+  {
+   "line": 90,
+   "addr": 6227
+  },
+  {
+   "line": 100,
+   "addr": 6260
+  },
+  {
+   "line": 110,
+   "addr": 6327
+  },
+  {
+   "line": 120,
+   "addr": 6342
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S013.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6699",
+  "LOCAL VARIABLES": "6700 - 6750",
+  "HIGHEST MEMORY LOCATION": "6750"
+ }
+}

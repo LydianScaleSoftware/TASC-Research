@@ -1,0 +1,23 @@
+{
+ "id": "r6040",
+ "key": "bed601fc6095f9cf",
+ "source": "10 REM! INTEGER J,K\n20 DIM A(12),D%(6,5)\n30 W=Y:Y=W OR C+M\n40 GOTO 10:&\n50 J=A(W<>M)<=127\n60 IF (XY*M) THEN XY=Q1%:STORE B,C:XY=XY:FOR XY=(XY) TO (NOT ((NOT M))<1.5) STEP (VAL(N2$))\n70 W=LEN(\"HI\")\n80 A(ABS(EXP(M))=7)=37430\n90 RETURN:IF (LOG(3.14159<=LOG(255))) THEN TRACE:REM! CLEAR COMMON\n100 STORE B,C:SAVE\n110 XY%=W:TRACE:READ W:PRINT W AND W\n120 REM! CLEAR CHAIN\n130 GOTO 160:LIST 10-20\n140 IF (39) THEN A(FRE(FRE(C AND J)))=FRE(Z$):GOTO 70:REM! CLEAR COMMON:GOTO 270:& \"X:Y\",1\n150 GOTO 50:SAVE:REM! CLEAR COMMON:DEL 10,20\n160 &:GOTO 20:TRACE:READ Q1%\n170 GOTO 230:LOAD \"F\":LIST 10-20\n180 LOAD \"F\":IF (719) THEN RUN 110\n190 D%(ASC(B$)+((555>141*Y)),(256^TAN(49152)))=((-24=24))+(XY-Q1%)\n200 READ XY,K\n210 XY=((Y>=W))+1000=2:W=FRE(XY)+POS(-J-COS(255)):PRINT\n220 A(1)=XY:IF (((XY%<>Y>((C=957))))*((-A%+AB%))) THEN SAVE:D%(-14847<=W<>XY%,5)=AB%\n230 W=XY=XY:POKE K,((LOG(Y)=Q1%+645))+D%((5),10 AND XY)\n240 GOTO 210:SAVE:A%=ABS(-32767)<A%:IF (ATN(A%)) THEN DEL 10,20\n250 PRINT:CONT:A%=7:C=FRE(A%)+POS(A%)\n260 XY%=D%(((AB% OR A%))<=A(A%),J)\n270 GOTO 40:REM! CLEAR CHAIN\n280 GOTO 240:&:RUN:VTAB Y OR 10\n290 HTAB A(40000)=K<=((3<>M))<-((C<>2))\n300 W=((-AB%>A%))*M:READ N2$,C\n310 GOTO 50:TRACE:REM! CLEAR COMMON\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 140\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

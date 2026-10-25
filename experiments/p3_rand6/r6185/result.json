@@ -1,0 +1,23 @@
+{
+ "id": "r6185",
+ "key": "308997205f2db47e",
+ "source": "10 DIM A(5,5)\n20 IF (A(XY%,16564*A%<=C)) THEN LOAD \"F\":& \"X:Y\",1:GET Q1%:XY%=Q1% OR (1000)\n30 N2=-((256<A(Q1%,A%)))\n40 GOSUB 210:PRINT 41090;D$(NOT 1.5)+\"TASC\";\n50 B=FRE(D$(Q1%+N2)):PRINT POS(XY$):READ AB:PRINT AB AND AB\n60 READ AB$:RECALL A\n70 FOR B=(AB) TO (39) STEP (34118<557-610<=((A% OR 644)))\n80 XY$=D$(-Z%)\n90 A%=.001<((1<>15171))/ATN(20):STORE B,C:B=A%:DEL 10,20:END\n100 M=127*((AB-256))\n110 AB=((C+XY% AND 3-41901))<XY%:C=AB OR AB:LOMEM: 16384\n120 GOTO 120:REM! CLEAR COMMON:RUN\n130 ON XY%>=A(208,A%+40000) GOTO 220:N2=5=ATN(N2)\n140 IF (3) THEN LOAD \"F\":ON AB*((100<AB))*((SIN(C)<ABS(20))) GOTO 240,150,100:XY$=\"TASC\"+XY$+B$+D$(XY%)\n150 PRINT -.5;M,\n160 LOAD \"F\":XY%=10\n170 GET N2:A%=N2 OR (((28321 AND C))*M):IF (ASC(LEFT$(\"\"+AB$,B<>C))) THEN SPEED=100:N2=TAN(INT(A%))+Z%\n180 A(((-M AND B<B))/-((495*A(Z%,46917))),Z%)=(Q1%):PRINT NOT ((((127<>Z%))-A(XY%,Z%)));XY$;:AB$=XY$\n190 IF (AB) THEN LOMEM: 16384:DEL 10,20\n200 XY$=XY$\n210 GOTO 210:LIST\n220 IF (((N2<=6681))^A(LOG(C),127+A(A%,287))) THEN 200\n230 AB=A(A(65535,Z%)*40,24^B)>=((Z%<NOT 20)):DEL 10,20:N2=AB\n240 IF (-A(POS(\"A\"),255<C)) THEN & \"X:Y\",1\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 120\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

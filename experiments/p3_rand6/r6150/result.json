@@ -1,0 +1,23 @@
+{
+ "id": "r6150",
+ "key": "969f58639548f7ed",
+ "source": "10 REM! INTEGER K,I\n20 DIM P(9)\n30 DEF FN F(Z)=M\n40 LOAD \"F\":IF (-((P(I)/B))) THEN & \"X:Y\",1:Q1=15683:M=Q1 OR Q1\n50 PRINT FN F(P(M%) AND K)>((XY<>866-A%(W%)));-A%(3286),24,\n60 HOME:GOTO 190:NOTRACE\n70 PRINT B;AB$+CHR$(Q1)+A$;\n80 K=M\n90 PLOT Q1,TAN(I)-((C%>((W%<>X))))\n100 P(ABS(M%))=XY:W%=5-W%*W%+C%/((3<>X)):XY=W% AND B\n110 PRINT XY;256;((A%(C%) AND EXP(K)))+LEN(Y$),:IF (3) THEN M%=-((NOT 566)):RUN\n120 PRINT\n130 ON FN F(NOT 255) GOTO 30,170:K=((M%-24 OR LEN(Y$)))^((((M<=X))+((M%+P(C%))))):IF (B-88-((3.14159-XY))>((VAL(\"123\")=127))) THEN M%=M-K=((XY+P(C%)))*ASC(\"A\")\n140 GOTO 100:LIST 10-20:RUN:IF (129-P(C%)+.001) THEN DEL 10,20\n150 READ M:PRINT M OR M:PRINT \"TASC\";Q1/NOT X*((M%*-K)),:FOR Q1=(((-I OR B))<=Q1%*SIN(B)) TO (-P(NOT 65535))\n160 IF (32767) THEN DEL 10,20\n170 X=FRE(A$):PRINT POS(A$):M=Q1+-X:IF (M OR M) THEN 190:FOR I=(-((P(M%)>20))) TO (-ASC(RIGHT$(\"\",P(Q1%))))\n180 GOSUB 230\n190 DATA ,,X:CONT\n200 NOTRACE:LIST\n210 READ K:PRINT K AND K:TEXT:DATA 1\n220 IF (828+LEN(AB$)<>Q1) THEN 20\n230 A$=CHR$(COS(K)>=K/.001):GOTO 290:DEL 10,20\n240 PR#B+2:LIST\n250 AB$=A$:PRINT A$;MID$(AB$,Q1<>I,3.14159)+CHR$(1*39);C%;:GET X\n260 GOTO 210:GOTO 30:REM! CLEAR COMMON:GOTO 210:CONT\n270 XY=Q1%\n280 READ C%:PRINT C% AND C%\n290 IF (FN F(X<X=977*40000)) THEN & \"X:Y\",1:IF (M) THEN RUN\n300 GET M%:C%=M% OR (I):RETURN:INPUT AB$,B\n310 READ B:PRINT B OR B\n320 IF (-((-((A%(W%)>=95))))) THEN 190:POKE XY^-W%+((Q1<=ABS(K))),-((NOT X))-((67>=M%))^((24*I)):C%=((ASC(\"HI\")<ATN(I)))^A%(255/M)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 260\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

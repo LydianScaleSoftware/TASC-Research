@@ -1,0 +1,99 @@
+{
+ "id": "r6243",
+ "key": "b6e053b2b8cbb17d",
+ "source": "10 REM! INTEGER K,I\n20 DIM D%(4),B%(5)\n30 IF (((AB%<=M% OR Z))+B) THEN CONT\n40 IF (FRE(MID$(X$,Y-Z,49152*.001))) THEN 30:D%(XY%)=255*POS(K)^39\n50 IF (((2.25=255+0))*C) THEN IF (1) THEN RECALL A\n60 COLOR=FRE(Z):IF (ASC(CHR$(B))) THEN LOAD \"F\":REM! CLEAR COMMON\n70 POKE X%,Y:XY%=-A\n80 ON VAL(XY$+RIGHT$(\"\",A)) GOTO 140,40,120,90\n90 HTAB -889:GOTO 40:DEL 10,20\n100 READ X%:PRINT X% AND X%\n110 K=1000:Z=FRE(K)+POS(TAN(617)):GOTO 50:LIST 10-20:SPEED=COS(K)\n120 IF (B^((XY%<=40))) THEN STORE B,C\n130 PRINT CHR$(-B^((X% AND 1000)));\"TASC\"+Z$,:X$=Z$+X$+Z$+X$\n140 TEXT:GOSUB 20:FOR I=(A(I,XY%)<=AB% OR -((B<Y))) TO (28233/X%)\n150 IF (I) THEN RECALL A:A=((Z-B))^LEN(\"123\")*B:Y=A AND A\n160 RUN:PRINT:X=1\n170 PRINT NOT POS(CHR$(I)),(-AB%)<((D%(XY%)<>A));:PRINT B<((21665+B%(I)<-40));RIGHT$(\"123\",X%);-K AND A,\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1126,
+ "obj_sha256": "3a2ad4841446e3476537aaa01362e1d12d22e6a9611c5f4496aa33816078f746",
+ "cycles": 120734018,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6109
+  },
+  {
+   "line": 50,
+   "addr": 6182
+  },
+  {
+   "line": 60,
+   "addr": 6215
+  },
+  {
+   "line": 70,
+   "addr": 6242
+  },
+  {
+   "line": 80,
+   "addr": 6263
+  },
+  {
+   "line": 90,
+   "addr": 6299
+  },
+  {
+   "line": 100,
+   "addr": 6311
+  },
+  {
+   "line": 110,
+   "addr": 6335
+  },
+  {
+   "line": 120,
+   "addr": 6368
+  },
+  {
+   "line": 130,
+   "addr": 6390
+  },
+  {
+   "line": 140,
+   "addr": 6478
+  },
+  {
+   "line": 150,
+   "addr": 6540
+  },
+  {
+   "line": 160,
+   "addr": 6593
+  },
+  {
+   "line": 170,
+   "addr": 6602
+  }
+ ],
+ "info": {
+  "RECOGNIZED": "REM ! CLEAR COMMON",
+  "OBJECT FILE": "S003.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7189",
+  "LOCAL VARIABLES": "7190 - 7876",
+  "HIGHEST MEMORY LOCATION": "7876"
+ }
+}

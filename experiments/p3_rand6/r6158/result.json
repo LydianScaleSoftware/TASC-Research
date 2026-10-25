@@ -1,0 +1,82 @@
+{
+ "id": "r6158",
+ "key": "d7731c5eeb88392c",
+ "source": "10 REM! INTEGER J,I\n20 B%=49152:I=Y:XY=I AND COS(C OR 100) AND I:Z=Y:IF (Z AND Z) THEN 70\n30 IF (NOT ((-((C*C%))))) THEN NOTRACE:Q1%=100:STORE B,C:C=Q1%:C%=Y:Z=C% AND J\n40 Q1$=\"A\"\n50 Q1%=255:IF (M%) THEN GET Y:Q1%=Y AND (NOT I)\n60 N2=XY:C$=LEFT$(MID$(\"123\",N2,J<>M%),0):Q1%=FRE((C AND Y)):Z=Q1% AND Q1%\n70 HCOLOR=LEN(Q1$)+(Z)<=Q1%\n80 COLOR=C:Y=127:RECALL A:N2=Y\n90 LIST 10-20:READ C%:PRINT C% AND C%\n100 J=Y/((-M%+255)):C=FRE(J)+POS(ASC(\"123\")):RUN 80\n110 C%=5:IF (C% AND C%) THEN 110:RESTORE:GOTO 50:RECALL A\n120 FOR Z=(C%) TO (SQR(Z)) STEP (((Y-2*256))/127)\n130 PRINT NOT ((-((J<=5))));\"\";\"123\";:PLOT FRE(RIGHT$(Q1$,Q1%)),.001\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 822,
+ "obj_sha256": "f07f063be6c12aac855bb6741d74cb0b1239c41bc3cf287cc8c235b5ccdc4c46",
+ "cycles": 100106578,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6143
+  },
+  {
+   "line": 40,
+   "addr": 6195
+  },
+  {
+   "line": 50,
+   "addr": 6208
+  },
+  {
+   "line": 60,
+   "addr": 6243
+  },
+  {
+   "line": 70,
+   "addr": 6324
+  },
+  {
+   "line": 80,
+   "addr": 6345
+  },
+  {
+   "line": 90,
+   "addr": 6360
+  },
+  {
+   "line": 100,
+   "addr": 6384
+  },
+  {
+   "line": 110,
+   "addr": 6441
+  },
+  {
+   "line": 120,
+   "addr": 6455
+  },
+  {
+   "line": 130,
+   "addr": 6493
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6885",
+  "LOCAL VARIABLES": "6886 - 6931",
+  "HIGHEST MEMORY LOCATION": "6931"
+ }
+}

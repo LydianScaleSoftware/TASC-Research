@@ -1,0 +1,23 @@
+{
+ "id": "r6143",
+ "key": "a4aab4b8b71ae2fe",
+ "source": "10 REM! INTEGER *\n20 DIM P$(12),D$(8,10),A$(4)\n30 DEF FN F(T)=C-((AB-39))+-B\n40 GOTO 210:REM! CLEAR COMMON:POP\n50 PRINT AB$;STR$(2),\n60 AB=-((W%+M)):CALL W%\n70 IF (C<>((LOG(100)<M))) THEN M$=AB$+MID$(Z$+AB$,18006):GOTO 320:LOAD \"F\"\n80 M=908:C=M AND M:GOTO 20:REM! CLEAR CHAIN:AB$=CHR$(65535+A%>=-2)\n90 READ C:Z$=Z$:AB=ABS(256)*FRE(A%)<=65535:B=FRE(AB)+POS(M>A%^((AB*443)))\n100 N2%=3.14159:A=N2% AND C:VTAB INT(Q1%)\n110 SPEED=20:DEL 10,20\n120 DEL 10,20\n130 VTAB ((C<AB+1000))+((38140 AND M))\n140 VTAB A%/((1.5/M>NOT M)):A=5:C=A AND W%:DATA X,\"A,B\"\n150 IF (AB<>((B OR W%/B))) THEN RUN 280\n160 GOTO 120\n170 RECALL A\n180 W%=Q1%:SAVE:B=W%:M=675 OR 100:IF (((978-FRE(\"TASC\")))^N2%) THEN HLIN N2%<>((AB>=10)),(((((C AND AB))>=((N2%<=32767))))^Q1%) AT SQR(ASC(P$(AB))=B)\n190 PRINT FRE(M)+A%+ASC(D$(A%,M)),969;\n200 VTAB -32767^C:GR\n210 GOTO 300:REM! CLEAR CHAIN\n220 GOTO 240:& \"X:Y\",1:P$(A%)=\"TASC\":AB$=CHR$(NOT FRE(Z$))\n230 C=LEN(M$)=FN F(24)=POS(-W%)\n240 SHLOAD:A=-2*((AB-Q1%-N2%))\n250 GOTO 70:LOMEM: 16384:GOTO 100\n260 IF (10) THEN &:A=FRE(RIGHT$(\"X Y\",1.5/W%<>Q1%)):PRINT POS(M$)\n270 REM! CLEAR CHAIN:HLIN -((1000+764)) AND 32767,(-INT(41046)-40000) AT A^-127:CALL 49152*((820*B*2.25))\n280 IF (TAN(2538)) THEN & \"X:Y\",1:GOTO 180:REM! CLEAR COMMON:PRINT \"X Y\";Z$;\n290 LOMEM: 16384\n300 P$(Q1%+M<ATN(A+100))=P$(A%):LIST:GOTO 160:REM! CLEAR CHAIN\n310 AB=A:TRACE:AB$=Z$+CHR$(Q1%*20)\n320 PRINT \"HI\"+\"X Y\",CHR$(W%);:IF (-M) THEN Q1%=((A OR 3.14159<=B))+ASC(LEFT$(M$,AB)):A=Q1% AND Q1%:LOAD \"F\"\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 40\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

@@ -1,0 +1,70 @@
+{
+ "id": "r6263",
+ "key": "c908a0c5a528bc4c",
+ "source": "10 DIM A$(6),D(3,1)\n20 AB=VAL(STR$(M)+\"A\"):B%=AB:AB=B% AND AB:LIST 10-20\n30 RECALL A:W%=RND(NOT XY)+NOT ((38400>=AB)):SAVE:Z=W%\n40 IF (M) THEN Z=1000:PRINT:M$=RIGHT$(\"123\",POS(\"A\"))\n50 LOAD \"F\":AB=(W%):RECALL A:M=AB\n60 DATA \"A,B\",X,:WAIT 2.25-B%,(SGN(AB))\n70 IF (X%*-((44114=39550))) THEN PRINT:IF (XY) THEN 100:Q1$=RIGHT$(Y$,TAN(B%)<>-D(X%,Y%))\n80 IF (B) THEN LIST 10-20:& \"X:Y\",1:GOTO 70\n90 CALL 100\n100 &\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 523,
+ "obj_sha256": "2cca687b714373ce00a8c59e136fb590610c5c1c64b2defe2531830bd8eec2c3",
+ "cycles": 94258198,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6127
+  },
+  {
+   "line": 40,
+   "addr": 6163
+  },
+  {
+   "line": 50,
+   "addr": 6206
+  },
+  {
+   "line": 60,
+   "addr": 6215
+  },
+  {
+   "line": 70,
+   "addr": 6246
+  },
+  {
+   "line": 80,
+   "addr": 6318
+  },
+  {
+   "line": 90,
+   "addr": 6329
+  },
+  {
+   "line": 100,
+   "addr": 6335
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S003.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6586",
+  "LOCAL VARIABLES": "6587 - 6684",
+  "HIGHEST MEMORY LOCATION": "6684"
+ }
+}

@@ -1,0 +1,75 @@
+{
+ "id": "r6124",
+ "key": "b67af09e0d5a3368",
+ "source": "10 REM! INTEGER K\n20 DIM P(9,7)\n30 PRINT\n40 GET B:XY%=B OR (K*24+M<AB):GOTO 10:CONT:PRINT -65535 OR K<((20<>B));X;\n50 IF (-((((B OR N2%))+A(990)))) THEN TRACE:READ N2%:PRINT N2% OR N2%:REM! CLEAR COMMON\n60 LOMEM: 16384:PRINT -((-((A(5) AND C)))),\"\"+A$+X$;:FOR M=(1000) TO (NOT K)\n70 IF (-((P(1,M%)=AB))-((1 OR 10))) THEN & \"X:Y\",1:AB$=\"X Y\":HLIN AB,(AB) AT A(N2%)\n80 IF (COS(256)=ASC(AB$+AB$)) THEN SAVE:PRINT:IF ((3.14159=N2%>=P(797,XY%)+P(M%,.001))) THEN NOTRACE\n90 B=7:B=B OR M%:GOTO 20:SHLOAD\n100 LOAD \"F\"\n110 X=-127:C=FRE(X)+POS(-PEEK(24)>=2):K=.001:CONT:C=K\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 800,
+ "obj_sha256": "17a935839eafd58e5693803ca617ab7eddc5fa1df13e08db1379fba914d444a6",
+ "cycles": 100113505,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6087
+  },
+  {
+   "line": 50,
+   "addr": 6120
+  },
+  {
+   "line": 60,
+   "addr": 6178
+  },
+  {
+   "line": 70,
+   "addr": 6249
+  },
+  {
+   "line": 80,
+   "addr": 6331
+  },
+  {
+   "line": 90,
+   "addr": 6425
+  },
+  {
+   "line": 100,
+   "addr": 6446
+  },
+  {
+   "line": 110,
+   "addr": 6446
+  }
+ ],
+ "info": {
+  "RECOGNIZED": "REM ! CLEAR COMMON",
+  "OBJECT FILE": "S004.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6863",
+  "LOCAL VARIABLES": "6864 - 7367",
+  "HIGHEST MEMORY LOCATION": "7367"
+ }
+}

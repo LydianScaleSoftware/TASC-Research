@@ -1,0 +1,23 @@
+{
+ "id": "r5098",
+ "key": "9a2c6b92b7d77da6",
+ "source": "10 REM! INTEGER *\n20 FOR W=(X) TO (X%) STEP (POS(LEFT$(P$(X%),Z))<>W+598+X)\n30 READ Z:PRINT Z AND Z:HTAB Z\n40 RUN 40:PRINT:X=1:VTAB 32767=Z:M=B:M=M AND M\n50 REM! CLEAR CHAIN:A%=SGN(PEEK(M))*(X%):M=A% OR A%:ON ((M+M))*POS(ABS(W)) GOTO 10,140\n60 Z=AB%:FOR Z=(2) TO (X%) STEP (-((NOT A%))<=((POS(Z)>((X<>40000)))))\n70 C$=C$:RUN 90\n80 X=LEN(RIGHT$(\"123\",255)):PRINT AB%<=-W-Z*B%;X$;\n90 GET B:B%=B AND (RND(AB%^NOT AB%)):X=FRE(\"A\"):IF (X AND X) THEN 190:IF (TAN(SQR(255<>X))) THEN 190\n100 X%=A%:Z=FRE(X%)+POS(A%):M=-ABS(AB%-A%):B=302\n110 RUN:PRINT:X=1:PRINT Z;P$(255*127);:NEXT\n120 P$(24 AND B*3)=C$:RUN 150:PRINT:X=1:M=Z\n130 A%=M:X=A% AND POS(32767) AND 255:FOR X=(W>POS(73)-EXP(M)) TO (B):B%=(A%):Z=B% AND B%\n140 RUN 130:PRINT:X=1:X%=W:IF (X% OR X%) THEN 140:IF (LOG(M)) THEN 60\n150 PRINT (Z);X;256^X-COS(AB%) OR Z,\n160 W$=W$:COLOR=(B%)\n170 GET X%:X%=X% AND (ATN((AB%))):X=X%\n180 IF ((Z)) THEN RUN:B%=616\n190 NEXT X:A%=AB% AND AB%:IF (A% OR A%) THEN 160\n",
+ "options": {
+  "library": null,
+  "program": "HGR1",
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 50\nSYNTAX\n\n REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

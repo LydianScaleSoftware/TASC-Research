@@ -1,0 +1,23 @@
+{
+ "id": "r5280",
+ "key": "b74715cfacd1b0a1",
+ "source": "10 REM! INTEGER *\n20 REM! USECOMMON Z$,B%,C\n30 DEF FN F(Z)=C\n40 B%=65535:W=B% AND B%:Z$=LEFT$(M$,ABS(40)):FOR W=(NOT FN F(10 AND X%)) TO (ASC(M$))\n50 W=EXP(A%)/Z<>X%*B%:W=W OR 24<=((B>((256 AND B)))):A=5\n60 RESTORE:CALL B%:B=W:B=FRE(B)+POS(LEN(\"\"))\n70 VTAB ((50 OR C))<((156<>C))<B%:HCOLOR=X%\n80 B=Z%\n90 A%=ATN(A):IF (A% OR A%) THEN 160:IF (FN F(NOT 255) OR A%>=-W) THEN C=W\n100 B=Z%:B=FRE(B)+POS(24):FOR C=(C) TO (Z)\n110 M$=Z$\n120 IF (A) THEN 110:A%=Z%\n130 COLOR=EXP(((X%<27971))+769):NEXT C:RUN 140\n140 REM! CLEAR COMMON:A%=C<>C\n150 FOR A=(A) TO (Z):DATA X,,\n160 GOSUB 110:FOR Z=(A) TO (C):X%=A%+NOT W\n170 GOSUB 150:B=A:B=SGN(Z%):IF (B OR B) THEN 150\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 140\nSYNTAX\n\n REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

@@ -1,0 +1,96 @@
+{
+ "id": "r6018",
+ "key": "a72865f8eecc1dab",
+ "source": "10 REM! INTEGER K\n20 REM! DEFCOMMON K,Y%,C%\n30 LOMEM: 16384:LIST\n40 XY=EXP(918 AND -C%):Y=XY OR XY\n50 AB=ASC(Y$+CHR$(AB%)):TRACE:W=AB:GOTO 80:REM! CLEAR CHAIN\n60 CALL W%+(W%) AND ((FRE(\"X Y\") AND 1000))\n70 IF (FRE(NOT Y%)>=32767^AB) THEN LIST:RUN 160\n80 PRINT NOT ((763-W%));((Y%>W% OR ((50 OR AB))))=AB%;POS(NOT ((Y*W%)));:LIST:W=AB:Y=W AND X\n90 GOSUB 10:GOTO 110:DEL 10,20\n100 ON AB%-W GOTO 130,150:CALL 4373:READ XY:PRINT XY AND XY\n110 SHLOAD\n120 PRINT 32767;LEFT$(\"X Y\",C%=40);\n130 X$=A$\n140 VTAB XY:GOTO 150:CONT\n150 CALL W%:A$=Y$\n160 HCOLOR=(32767)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6070,
+ "obj_len": 578,
+ "obj_sha256": "2f49d9db0adadfc9f02a0de1c7bd3ce41acd0e3684ba837eb1f5ffe2f5dd3371",
+ "cycles": 97786359,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6090
+  },
+  {
+   "line": 40,
+   "addr": 6090
+  },
+  {
+   "line": 50,
+   "addr": 6117
+  },
+  {
+   "line": 60,
+   "addr": 6147
+  },
+  {
+   "line": 70,
+   "addr": 6187
+  },
+  {
+   "line": 80,
+   "addr": 6225
+  },
+  {
+   "line": 90,
+   "addr": 6315
+  },
+  {
+   "line": 100,
+   "addr": 6321
+  },
+  {
+   "line": 110,
+   "addr": 6356
+  },
+  {
+   "line": 120,
+   "addr": 6356
+  },
+  {
+   "line": 130,
+   "addr": 6389
+  },
+  {
+   "line": 140,
+   "addr": 6395
+  },
+  {
+   "line": 150,
+   "addr": 6404
+  },
+  {
+   "line": 160,
+   "addr": 6416
+  }
+ ],
+ "info": {
+  "RECOGNIZED": "REM ! CLEAR CHAIN",
+  "OBJECT FILE": "S004.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6070 - 6647",
+  "NUMERIC COMMON": "6064 - 6069",
+  "LOCAL VARIABLES": "6648 - 6689",
+  "HIGHEST MEMORY LOCATION": "6689"
+ }
+}

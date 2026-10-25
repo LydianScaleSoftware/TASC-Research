@@ -1,0 +1,23 @@
+{
+ "id": "r6115",
+ "key": "6d03fbbf9d4607f5",
+ "source": "10 REM! INTEGER K\n20 DIM B$(1),P(10)\n30 C=Q1%=((256<EXP(Y))):&:N2=C:RUN:M=M^2.25:XY=M OR M\n40 PRINT M,Z$;\n50 GOTO 40:&:N2$=MID$(W$,1E3):GET XY\n60 M%=-((((K-C))*((M% AND M%)))):C=M% AND M%:K=40\n70 LOMEM: 16384:RUN:PRINT:X=1\n80 PRINT Y;:FOR N2=(((N2<Y))*(C)+((1-((65535>N2))))) TO (N2-Y>=M OR 3.14159):NEXT N2\n90 REM! CLEAR CHAIN:LOAD \"F\":PRINT \"A\",-((P(M%) AND P(Q1%)^793));VAL(STR$(Q1%^K)),\n100 XY=FRE(N2$):PRINT POS(Z$):Z$=\"A\"+N2$:VTAB ATN(M)*Z%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 90\nSYNTAX\n\n REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

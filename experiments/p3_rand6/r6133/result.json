@@ -1,0 +1,23 @@
+{
+ "id": "r6133",
+ "key": "d175718064176f84",
+ "source": "10 REM! INTEGER K\n20 DIM A(4)\n30 DEF FN F(X)=M\n40 LIST:W=((FN F(Z%)>=A))-W:A=W AND W:M=K\n50 GOTO 210:REM! CLEAR CHAIN:DATA ,,,-2.5\n60 IF (Z+100) THEN LOAD \"F\":PR#A%<>-20:ON 7-W GOTO 260,250,160,290\n70 PRINT W$;P$(40);\n80 PRINT \"A\";M,:A(-((SQR(875) AND XY)))=A(Q1%)\n90 Z%=RND(Z):W=Z% AND Z%:M=Y%\n100 VTAB 21340:Q1%=W:LOAD \"F\":XY=Q1%:&\n110 A=XY:IF (-K) THEN READ Z%:PRINT Z% AND Z%:M=LOG(ATN(10)):IF (M OR M) THEN 290\n120 C$=MID$(\"\"+C$+C$,-((0.1*255)),EXP(M)):GET Z%:A%=Z% OR (130<A%)\n130 RUN 160:HOME:HCOLOR=-XY+POS(A) AND -A=K\n140 FOR K=(A(Z^2)<>A(FN F(256))) TO (RND(Q1% AND A)<Z) STEP (256)\n150 M=Y%:LIST\n160 W=A<>M:Z=W OR Z%<>ASC(CHR$(A%)):GOTO 250\n170 GOTO 300:STORE B,C:IF (((XY OR A(551)))<>39<>29744) THEN STORE B,C\n180 SPEED=Q1%-((A% AND 127 AND Q1%)):IF (A%=VAL(M$)>=FN F(489=Q1%)) THEN LOMEM: 16384:W=2\n190 W=5:W=W OR W:STORE B,C\n200 Z=399<=Y%:A=Z AND Z:W=FRE(M$):PRINT POS(W$)\n210 LIST 10-20\n220 GOSUB 30:Z%=TAN(XY)-FN F(XY):XY=FRE(Z%)+POS(A%*((FN F(M)/-K)))\n230 SPEED=FN F(1)>279:HCOLOR=A%\n240 GOTO 190:&:GOTO 60:REM! CLEAR COMMON:GOTO 150\n250 PRINT \"X Y\"+P$(44465),K,\n260 ON Z GOTO 120\n270 FOR Z=(A%) TO (100) STEP (K)\n280 PRINT:Q1%=A%:M=Q1% OR Q1%:A=A%:NOTRACE:A=A\n290 DATA -2.5,-2.5\n300 LIST:COLOR=NOT K\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 50\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

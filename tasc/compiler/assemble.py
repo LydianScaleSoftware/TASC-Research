@@ -75,7 +75,9 @@ def assemble(c: Compiler, opts: Options) -> Result:
                 line_addr[ln] = prog_start + 20
 
     # constant pool
-    consts = _symbol_order([k for k in c.consts.values() if k.ops or k.used])  # unused forms only fix the order
+    # PASS2 505-515 (confirmed p3_rand5): a real constant is written to the pool before the
+    # "never referenced -> unlink" test, so only unreferenced integer constants are dropped
+    consts = _symbol_order([k for k in c.consts.values() if k.ops or k.used or k.vtype == "real"])
     for k in consts:
         k.addr, pc = pc, pc + len(k.raw)
 

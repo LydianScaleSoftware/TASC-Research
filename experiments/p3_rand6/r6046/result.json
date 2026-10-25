@@ -1,0 +1,23 @@
+{
+ "id": "r6046",
+ "key": "5c1ddb050f068633",
+ "source": "10 REM! INTEGER J\n20 DEF FN F(X)=-((A%(7,Q1%)<((J>=1.5))))\n30 W=FRE(MID$(\"X Y\",752<>((W>X)),VAL(C$+X$))):PRINT POS(X$):Z=-Z%\n40 Q1=((ASC(X$)+W))*((((X AND X))-Q1%)):W=Q1 AND W:GET Q1%:Z%=Q1% AND (((AB%*B AND -Z))>-W)\n50 GOSUB 170:FOR B=(NOT ((Z%*10)) OR 255^((364=Q1))) TO (FRE(Z$+C$+C$)) STEP (POS(1000)*B)\n60 SAVE:& \"X:Y\",1\n70 GOTO 30:IF (5) THEN DEL 10,20\n80 J=5+Q1:Q1=J AND A%(0.1,-31448<=NOT X)\n90 X=FRE(\"HI\"):PRINT POS(C$)\n100 Z%=((Z%<39))*FN F(A%(Q1%,AB%))>=B:Z%=((49152 AND B<=Q1%))^((W<>5-Q1%)):W=Z% OR Z%:PRINT A%(NOT ((-Q1%)),Z+NOT 675),\"HI\",NOT 127/((AB% OR A%(39,Z%)))<=3.14159,\n110 X=J*((NOT AB%*238)):Z=X AND X:DATA X,-2.5,300:INVERSE\n120 CALL -((Q1%^A%(1E3,Q1%)=-Q1))\n130 FOR W=(INT(20)*-40<>A%(POS(Z%),Q1%)) TO (ABS(-A%(Z%,AB%)+-B)):Q1%=AB%:IF (X) THEN LOAD \"F\"\n140 J=NOT B:B=J OR Y%\n150 PRINT \"X Y\";:IF (2) THEN LOAD \"F\":W=J:STORE B,C:W=W\n160 PLOT FN F(((J OR Q1%)) AND 219>39),((Z%<>Q1+A%(Y%,.001)))^FN F(-Z%)\n170 PRINT 586^((((AB% OR W))<=Z%+X));\n180 POKE B>((529<((Z<AB%)))),100:RETURN:GOTO 80:REM! CLEAR CHAIN\n190 PRINT:AB%=Q1%/Y%:RUN\n200 GOSUB 160:GOTO 40:REM! CLEAR CHAIN:HLIN W,(B) AT Y%\n210 J=((Q1%-LEN(C$)))*.5:Z=FRE(J)+POS(((49152 OR Z))<=((X>435))<=((J>W))-FN F(1000)):GET Q1%:Q1%=Q1% AND (W<>FN F(3.14159)+((W<>20)))\n220 X=FRE(CHR$(255)):PRINT POS(Z$)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 200\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

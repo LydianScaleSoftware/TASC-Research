@@ -1,0 +1,23 @@
+{
+ "id": "r6117",
+ "key": "6d1760ab169b07d5",
+ "source": "10 REM! INTEGER K\n20 DIM A(6)\n30 DEF FN F(Z)=W\n40 FOR W=(K) TO (ASC(LEFT$(AB$,.5))):RUN 80\n50 N2=FRE(MID$(\"TASC\",((X<=C))/C,X<=COS(K))):PRINT POS(XY$)\n60 NEXT:CONT:A(Q1%)=ASC(AB$)\n70 GOTO 20:REM! CLEAR CHAIN:W=A:X=W OR W:HTAB A(M%+5707=M%)\n80 SPEED=A%\n90 READ X\n100 A=ASC(\"HI\"):X=FRE(A)+POS(32767):A(((A<>A(A%) OR Q1%))*C)=N2:READ A\n110 GET C:Y%=C AND (1000)\n120 COLOR=1.5*((C-X))-((A+390 AND 10)):IF (A(LOG(Q1%>=46460))) THEN STORE B,C:N2=N2^((A+X))+100:N2=N2 AND 23262+-12599\n130 GET M%:M%=M% AND (-Q1%)\n140 C=X:READ A:PRINT A OR A\n150 IF (NOT M%=A) THEN & \"X:Y\",1\n160 READ A:PRINT A AND A:FOR A=(K) TO (A+RND(7>A(K))) STEP (1000<=18006*W):IF (A%) THEN PRINT\n170 IF (SIN(X-M%)=((Q1% OR NOT M%))) THEN 40\n180 X=1/A(A%):CONT:A=X\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 70\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

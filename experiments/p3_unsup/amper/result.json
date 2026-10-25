@@ -1,0 +1,34 @@
+{
+ "id": "amper",
+ "key": "1df32746f4bf2641",
+ "source": "10 & \"A:B\",Q:PRINT Q\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 41,
+ "obj_sha256": "932dc4383100083252183c5be9b824e29bf1e566a7271f4df94d05c6c946eb42",
+ "cycles": 54022605,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6104",
+  "LOCAL VARIABLES": "6105 - 6109",
+  "HIGHEST MEMORY LOCATION": "6109"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "r6057",
+ "key": "7314e0992976b535",
+ "source": "10 DEF FN F(Z)=C\n20 XY=NOT ((FN F(C) OR C*538)):LOMEM: 16384:X$=A$+X$\n30 Z=AB%-AB%:IF (Z AND Z) THEN 40\n40 AB%=((M>XY%))-256<=((N2>=SQR(M))):TRACE:STOP\n50 PRINT:PRINT AB%;-((NOT ((A%-27132))));\n60 Q1%=((Q1%+Q1% AND A%<>XY))*ATN(XY%):GOTO 80:REM! CLEAR COMMON:RUN 80:PRINT:X=1\n70 HCOLOR=A%>=M:C=N2:IF (C AND C) THEN 20\n80 HLIN XY,(FN F(A%)) AT NOT ((((7>=N2))-XY%)):PRINT PEEK(AB%);XY%,TAN(Z<((XY% OR Q1%)));:PRINT\n90 XY%=20:IF (XY% OR XY%) THEN 80:FOR XY=(M<>40) TO (32767^A%)\n100 Q1%=AB%:C=Q1% OR N2:XY%=A%\n110 PRINT LOG(503<>XY);XY%;X$,\n",
+ "options": {
+  "library": null,
+  "program": 20480,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 60\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

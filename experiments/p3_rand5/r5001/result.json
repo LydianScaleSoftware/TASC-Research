@@ -1,0 +1,115 @@
+{
+ "id": "r5001",
+ "key": "4eca3771aceaad2e",
+ "source": "10 DIM A$(7),D%(6)\n20 DEF FN F(T)=LOG(LEN(\"HI\"+XY$))\n30 N2$=XY$:AB=VAL(XY$+AB$):IF (AB AND AB) THEN 110\n40 M%=C%*B:Y=-((Q1%^((1.5<=3))))\n50 READ Q1:PRINT Q1 OR Q1:AB$=LEFT$(STR$(10),Q1%^-30907)\n60 IF (958) THEN AB$=\"A\":IF (POS(256>=ABS(Q1))) THEN X%=Y*C%:C%=FRE(RND(X%))^FRE(\"123\"):B=C% OR 32767\n70 PRINT:A$(FRE(AB$+AB$)*((((7<>336))-FRE(10))))=\"HI\"\n80 X%=VAL(CHR$(Q1))=Q1:RESTORE\n90 M=FRE(A$(20>568^127)):PRINT POS(AB$):IF (((AB/M-NOT 3))^ATN(POS(A$(40000)))) THEN 10\n100 GR:N2$=RIGHT$(XY$,D%(C%)):XY$=N2$\n110 Q1=1.5:B=40000<>-D%(Q1%):AB=B OR B\n120 M=249\n130 B=255:AB=Q1\n140 AB$=AB$+AB$:IF (Q1%) THEN 120:B$(Q1%)=N2$+CHR$(Y)+\"HI\"\n150 B=Q1%:AB=FRE(B)+POS(LEN(N2$)):C%=NOT 222:Q1=FRE(C%)+POS(SIN(0))\n160 B=FRE(\"123\"+AB$+XY$):PRINT POS(N2$):PRINT N2$+AB$,\n170 A$(39/((D%(X%)>((C%<7)))))=MID$(XY$,20,Q1):XY$=STR$(M+Y<65535*C%):ON -((((1000+M))^Q1%)) GOTO 160\n180 VTAB FN F(-C%<>Q1+20):PRINT:Y=FN F(AB):IF (Y OR Y) THEN 160\n190 READ Q1%:PRINT Q1% AND Q1%\n200 N2$=N2$:Y=ASC(AB$)\n210 READ AB$:RUN:GR\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1447,
+ "obj_sha256": "35ab94d18d4c567bfa8320ca813dc9f12602fc39167a6d1071924edc87cbc378",
+ "cycles": 132441537,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6120
+  },
+  {
+   "line": 40,
+   "addr": 6152
+  },
+  {
+   "line": 50,
+   "addr": 6182
+  },
+  {
+   "line": 60,
+   "addr": 6221
+  },
+  {
+   "line": 70,
+   "addr": 6321
+  },
+  {
+   "line": 80,
+   "addr": 6386
+  },
+  {
+   "line": 90,
+   "addr": 6407
+  },
+  {
+   "line": 100,
+   "addr": 6495
+  },
+  {
+   "line": 110,
+   "addr": 6516
+  },
+  {
+   "line": 120,
+   "addr": 6549
+  },
+  {
+   "line": 130,
+   "addr": 6555
+  },
+  {
+   "line": 140,
+   "addr": 6567
+  },
+  {
+   "line": 150,
+   "addr": 6625
+  },
+  {
+   "line": 160,
+   "addr": 6691
+  },
+  {
+   "line": 170,
+   "addr": 6751
+  },
+  {
+   "line": 180,
+   "addr": 6853
+  },
+  {
+   "line": 190,
+   "addr": 6900
+  },
+  {
+   "line": 200,
+   "addr": 6924
+  },
+  {
+   "line": 210,
+   "addr": 6942
+  }
+ ],
+ "info": {
+  "NT": "Y =  FN F(AB): IF (Y OR Y) THEN 160",
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7510",
+  "LOCAL VARIABLES": "7511 - 7620",
+  "HIGHEST MEMORY LOCATION": "7620"
+ }
+}

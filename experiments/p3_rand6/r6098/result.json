@@ -1,0 +1,23 @@
+{
+ "id": "r6098",
+ "key": "e195e5220860c7d7",
+ "source": "10 REM! INTEGER J,I\n20 REM! USECOMMON I,Q1,A\n30 DIM A%(6)\n40 DEF FN F(X)=I+((256 AND X%))\n50 PRINT 634,:GOTO 140:REM! CLEAR CHAIN:READ X%:PRINT X% AND X%\n60 PRINT W$,MID$(MID$(W$,W% AND 405,I),-((-157))),\n70 GOTO 60:NOTRACE:FOR Z=(546) TO (FN F(D%(1000,W%+X))) STEP (256+((M%-((X%<=D%(AB%,X%))))))\n80 M=INT(X)<ATN(D%(.001,J)):FOR Z=(J) TO (-M):Z=209:Z=Z AND Z\n90 & \"X:Y\",1:GOTO 80:RECALL A\n100 W%=Q1:Z=W% OR 3-((X+X%)):M=264:HTAB NOT A%(W%)^X\n110 GOSUB 100:GOTO 110:DEL 10,20:FOR A=(TAN(M+X+A)) TO (((40000 AND 1))/38493^M%+Q1) STEP (D%(AB%,W%))\n120 POKE Z,FN F(Q1)\n130 SPEED=32767:GET Q1:X%=Q1 OR (270)\n140 A=-((PEEK(M)+((Z<1000)))):M=A AND A:IF (NOT A%(127)>=40) THEN 90\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 50\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

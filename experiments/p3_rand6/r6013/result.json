@@ -1,0 +1,116 @@
+{
+ "id": "r6013",
+ "key": "f2b5deb938eed57d",
+ "source": "10 REM! INTEGER J\n20 REM! DEFCOMMON C,X$,Q1\n30 DIM P(3)\n40 W%=P(NOT P(873)+496):IF (-(N2)-N2%) THEN & \"X:Y\",1\n50 Z=N2%:IF (Z OR Z) THEN 100:X$=RIGHT$(MID$(Z$,10),ABS(Z))+\"X Y\"\n60 X$=Z$\n70 GET M:J=M AND (SQR(-((1000*Q1)))):Z$=RIGHT$(X$,0.1<>40000/N2%)\n80 READ J:PRINT J AND J:W%=-((M-N2>=POS(Z$))):C=W% AND W%:GOTO 180:CONT\n90 N2%=N2:IF (N2% OR N2%) THEN 190:DATA -2.5,X,-2.5:PRINT\n100 M=((0.1<=100))+((P(XY%) OR N2)):TRACE:C=M\n110 GOTO 160:SAVE\n120 IF (ASC(A$+MID$(A$,887,P(.001)))) THEN TRACE\n130 M=N2%:Z=FRE(M)+POS(-39=((TAN(20)>=-P(N2%)))):GOTO 30:LOMEM: 16384\n140 GOSUB 200:IF (127) THEN DEL 10,20:GOTO 160:& \"X:Y\",1\n150 IF (C) THEN TRACE:Q1=N2:PRINT J;\n160 & \"X:Y\",1\n170 CALL -N2\n180 REM! CLEAR COMMON\n190 XY%=ATN(C/((P(XY%)*1))):C=XY% AND XY%\n200 C=1:RECALL A:C=C:IF (M) THEN 80:LIST\n210 Y%=Z:HLIN P(937)^Z<>Y%>=C,(VAL(X$)) AT 2.25+((P(1)<J=XY%))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6076,
+ "obj_len": 1130,
+ "obj_sha256": "8ffcd4c3649eecd58615c5058318bce8e49f18cb19ca3f05445a238f41d1e4f5",
+ "cycles": 123175865,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6096
+  },
+  {
+   "line": 40,
+   "addr": 6096
+  },
+  {
+   "line": 50,
+   "addr": 6145
+  },
+  {
+   "line": 60,
+   "addr": 6210
+  },
+  {
+   "line": 70,
+   "addr": 6219
+  },
+  {
+   "line": 80,
+   "addr": 6276
+  },
+  {
+   "line": 90,
+   "addr": 6357
+  },
+  {
+   "line": 100,
+   "addr": 6404
+  },
+  {
+   "line": 110,
+   "addr": 6446
+  },
+  {
+   "line": 120,
+   "addr": 6449
+  },
+  {
+   "line": 130,
+   "addr": 6497
+  },
+  {
+   "line": 140,
+   "addr": 6569
+  },
+  {
+   "line": 150,
+   "addr": 6586
+  },
+  {
+   "line": 160,
+   "addr": 6615
+  },
+  {
+   "line": 170,
+   "addr": 6615
+  },
+  {
+   "line": 180,
+   "addr": 6627
+  },
+  {
+   "line": 190,
+   "addr": 6633
+  },
+  {
+   "line": 200,
+   "addr": 6672
+  },
+  {
+   "line": 210,
+   "addr": 6701
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S013.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6076 - 7205",
+  "NUMERIC COMMON": "6064 - 6073",
+  "STRING COMMON": "6074 - 6075",
+  "LOCAL VARIABLES": "7206 - 7266",
+  "HIGHEST MEMORY LOCATION": "7266"
+ }
+}

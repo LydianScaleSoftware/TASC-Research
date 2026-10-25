@@ -1,0 +1,70 @@
+{
+ "id": "r5208",
+ "key": "b1c6e7716a410636",
+ "source": "10 DIM A%(4,12),B$(8,8)\n20 DEF FN F(T)=7\n30 IF (256*127) THEN 100\n40 HOME\n50 IF (A%(FRE(\"\"),NOT X AND X+7)) THEN 40:PRINT\n60 IF (-((Z/573))<=B/((5+M%))) THEN RUN:PRINT:X=1:IF (XY<=FN F(1000*AB)) THEN X%=PEEK(32767/X AND FRE(AB))\n70 B=FRE(\"TASC\"):PRINT POS(AB$):Z=LEN(\"\")\n80 ON ((A%(C%,M%)<>65535>24-Z))/AB GOSUB 70,70:VTAB -((X+457=((Z=C%)))):GOSUB 30\n90 X%=AB<=LEN(AB$):XY=FRE(X%)+POS(FN F(C%)):Z$=\"\":READ M$\n100 READ X%:PRINT X% AND X%:AB$=CHR$(-Z AND 1E3^M%)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 716,
+ "obj_sha256": "54c14b0455898ca14c0d22fd315fbee51d87591feae0589aa4e254524cf4da92",
+ "cycles": 92890371,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6094
+  },
+  {
+   "line": 40,
+   "addr": 6107
+  },
+  {
+   "line": 50,
+   "addr": 6110
+  },
+  {
+   "line": 60,
+   "addr": 6158
+  },
+  {
+   "line": 70,
+   "addr": 6199
+  },
+  {
+   "line": 80,
+   "addr": 6240
+  },
+  {
+   "line": 90,
+   "addr": 6326
+  },
+  {
+   "line": 100,
+   "addr": 6386
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S008.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6779",
+  "LOCAL VARIABLES": "6780 - 7123",
+  "HIGHEST MEMORY LOCATION": "7123"
+ }
+}

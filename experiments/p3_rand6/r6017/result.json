@@ -1,0 +1,71 @@
+{
+ "id": "r6017",
+ "key": "9b3300280530e797",
+ "source": "10 DEF FN F(X)=M>=X%<((320>Z%))=0/((127<=Z%))\n20 Z=100:GOSUB 100\n30 READ X$,Z:XY=POS(X%=B(Z%))=N2:XY=XY AND XY\n40 DATA -2.5,HI,\"A,B\",300:XY%=((Z%<XY%))*((Z%<=20)) AND X%:Z=XY% OR XY%:B(ASC(M$) AND Z)=X\n50 END\n60 IF (EXP(VAL(\"A\")>0-84)) THEN LOMEM: 16384\n70 TRACE:IF (X) THEN 10\n80 GOSUB 40\n90 M=POS(FN F(XY%))^((7=((A% AND A%)))):LIST:Z=M:HLIN 33^((X>Z%))*((X<>Z%=((3=B(A%))))),(X) AT -Z%:Z=XY:SHLOAD:X=Z\n100 N2=120\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 748,
+ "obj_sha256": "c993499b111425a7182507affde32b35c292e29ae01fcb4701e72b2e61a5c0b5",
+ "cycles": 95779569,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6139
+  },
+  {
+   "line": 30,
+   "addr": 6148
+  },
+  {
+   "line": 40,
+   "addr": 6193
+  },
+  {
+   "line": 50,
+   "addr": 6290
+  },
+  {
+   "line": 60,
+   "addr": 6293
+  },
+  {
+   "line": 70,
+   "addr": 6334
+  },
+  {
+   "line": 80,
+   "addr": 6342
+  },
+  {
+   "line": 90,
+   "addr": 6345
+  },
+  {
+   "line": 100,
+   "addr": 6465
+  }
+ ],
+ "info": {
+  "OMEM": "16384",
+  "OBJECT FILE": "S003.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6811",
+  "LOCAL VARIABLES": "6812 - 6925",
+  "HIGHEST MEMORY LOCATION": "6925"
+ }
+}

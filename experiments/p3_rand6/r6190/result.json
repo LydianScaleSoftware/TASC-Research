@@ -1,0 +1,118 @@
+{
+ "id": "r6190",
+ "key": "257952b7b070c169",
+ "source": "10 REM! INTEGER I,J\n20 REM! DEFCOMMON W$,AB%,A$\n30 DIM B%(3)\n40 DEF FN F(X)=-COS(C*I)\n50 FOR Y=(J) TO (B%):CALL NOT ((256-127))*((5*FN F(I)))\n60 GOTO 160:&\n70 IF (65<>C) THEN 120:J=-((863 OR AB%))\n80 ON FN F(Y<=C) GOTO 90,190:GET AB:Y%=AB AND (20>((LEN(A$)<>709-B%(623)))):B%(FRE(ASC(LEFT$(N2$,Z%))))=Z\n90 PRINT A$+\"A\",\n100 WAIT J,(((225-Y))*PEEK(B%(AB%))*FN F(I)),(857-((((0 OR 39)) AND TAN(B%(39461))))):AB%=7:LOAD \"F\"\n110 B%(2)=Z-B%(B%)+((((2.25 AND 100))<Y-AB))\n120 A$=RIGHT$(STR$(Z),NOT ((B%(555)+AB)))\n130 IF (ASC(LEFT$(W$,.001>=7))) THEN CALL LOG(((0.1 OR Y)) AND 24<>W):GOTO 100:LOMEM: 16384\n140 B%=Y\n150 B%=Y%:Y=B% OR B%:IF (W) THEN 90\n160 Y%=B%:IF (Y% AND Y%) THEN 30\n170 B%(B%)=B%(B%-AB)=49152+0.1\n180 COLOR=FN F(SGN(B%(Z%)<C))\n190 Y%=Z%:IF (Y% AND Y%) THEN 110:AB=Z<=LEN(N2$):GOTO 120:REM! CLEAR COMMON\n200 IF (FN F(ABS(3.14159))) THEN STORE B,C\n210 STORE B,C\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6070,
+ "obj_len": 1163,
+ "obj_sha256": "f67d93de4b2dd7ea0ec2630ffc65487702f35ae826d963a148ade80a8d4a3ba0",
+ "cycles": 119979293,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6090
+  },
+  {
+   "line": 40,
+   "addr": 6090
+  },
+  {
+   "line": 50,
+   "addr": 6109
+  },
+  {
+   "line": 60,
+   "addr": 6155
+  },
+  {
+   "line": 70,
+   "addr": 6158
+  },
+  {
+   "line": 80,
+   "addr": 6190
+  },
+  {
+   "line": 90,
+   "addr": 6291
+  },
+  {
+   "line": 100,
+   "addr": 6316
+  },
+  {
+   "line": 110,
+   "addr": 6409
+  },
+  {
+   "line": 120,
+   "addr": 6463
+  },
+  {
+   "line": 130,
+   "addr": 6492
+  },
+  {
+   "line": 140,
+   "addr": 6555
+  },
+  {
+   "line": 150,
+   "addr": 6561
+  },
+  {
+   "line": 160,
+   "addr": 6581
+  },
+  {
+   "line": 170,
+   "addr": 6595
+  },
+  {
+   "line": 180,
+   "addr": 6634
+  },
+  {
+   "line": 190,
+   "addr": 6658
+  },
+  {
+   "line": 200,
+   "addr": 6693
+  },
+  {
+   "line": 210,
+   "addr": 6709
+  }
+ ],
+ "info": {
+  "AB": "Y% = AB AND (20 > (( LEN (A$) <  > 70",
+  "RECOGNIZED": "REM ! CLEAR COMMON",
+  "OBJECT FILE": "S010.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6070 - 7232",
+  "NUMERIC COMMON": "6064 - 6065",
+  "STRING COMMON": "6066 - 6069",
+  "LOCAL VARIABLES": "7233 - 7294",
+  "HIGHEST MEMORY LOCATION": "7294"
+ }
+}

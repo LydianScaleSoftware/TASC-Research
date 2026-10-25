@@ -1,0 +1,98 @@
+{
+ "id": "r5236",
+ "key": "fdbff5acd5732eec",
+ "source": "10 DIM A$(1)\n20 COLOR=Q1%*NOT ((B^Q1%))\n30 IF (36077>-((W AND C))) THEN IF (955) THEN READ M:PRINT M AND M:FOR W=(VAL(Z$)) TO (Q1%):GET Q1%:XY%=Q1% OR (C)\n40 A$(32767)=\"A\"\n50 IF ((AB)) THEN PRINT Z$,Y%;POS(B>=5)*((((C OR .5))<=24));\n60 B$(40)=B$(Y%):DATA :POKE NOT ((-((B+M)))),Q1%\n70 COLOR=Y%-((C*256))^((3^AB))\n80 DATA X,HI,X,:POKE POS(STR$(127)+LEFT$(AB$,XY%)),((NOT 0=39*Y%))+178:N2%=INT(COS(XY%))<=M\n90 PRINT:N2%=(Y%):IF (10) THEN 150\n100 DATA HI,\"A,B\",,X\n110 PRINT \"X Y\";POS(NOT Y%)+((M-.001));B$(Q1%)+Z$;\n120 AB$=CHR$(((W>1.5))*-N2%):IF (VAL(MID$(Z$+Z$,N2%,552>39))) THEN RUN\n130 RETURN\n140 REM! CLEAR CHAIN\n150 PRINT B<>100,((N2% AND B))/W/W;\n160 GOTO 150:C=W OR M:B=XY%:AB=B AND B\n170 M=((10=Y%))^Q1%:B=M OR AB:VTAB N2%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1124,
+ "obj_sha256": "8caa3d4b39dba124d7c3390f087dae306e9c79ea8ac8fa7bb8ea83e44a2e7011",
+ "cycles": 116910381,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6104
+  },
+  {
+   "line": 40,
+   "addr": 6191
+  },
+  {
+   "line": 50,
+   "addr": 6210
+  },
+  {
+   "line": 60,
+   "addr": 6269
+  },
+  {
+   "line": 70,
+   "addr": 6314
+  },
+  {
+   "line": 80,
+   "addr": 6344
+  },
+  {
+   "line": 90,
+   "addr": 6433
+  },
+  {
+   "line": 100,
+   "addr": 6450
+  },
+  {
+   "line": 110,
+   "addr": 6466
+  },
+  {
+   "line": 120,
+   "addr": 6520
+  },
+  {
+   "line": 130,
+   "addr": 6596
+  },
+  {
+   "line": 140,
+   "addr": 6597
+  },
+  {
+   "line": 150,
+   "addr": 6600
+  },
+  {
+   "line": 160,
+   "addr": 6648
+  },
+  {
+   "line": 170,
+   "addr": 6675
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S016.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7187",
+  "LOCAL VARIABLES": "7188 - 7259",
+  "HIGHEST MEMORY LOCATION": "7259"
+ }
+}

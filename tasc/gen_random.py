@@ -3,7 +3,7 @@
 Programs are syntactically valid for TASC (compile-only: they are never run),
 mix most statement kinds and expression shapes, and use random options.
 
-    python -m tasc.gen_random <family> <count> [seed]
+    python -m tasc.gen_random <family> <count> [seed] [--v2 | --v3] [--unsup]
 """
 
 from __future__ import annotations
@@ -32,6 +32,8 @@ class Ctx:
     fns: list[str]
     depth: int = 0
     v2: bool = False
+    v3: bool = False  # session 5: RUN, FRE/POS with complex arguments, AND/OR right after a store
+    unsup: bool = False  # session 5: unsupported keywords (skipped with a warning), REM! in dead code
 
 
 def num_lit(r: random.Random) -> str:
@@ -86,6 +88,9 @@ def nexpr(c: Ctx, parent: int = 0, want_int: bool = False) -> tuple[str, int]:
             a, pa = nexpr(c, 8)
             return wrap("NOT " + wrap(a, pa, 8), 7, parent), 7
         if k < 0.9:
+            if c.v3 and r.random() < 0.3:
+                f = r.choice(["FRE", "POS"])
+                return f"{f}({sexpr(c) if r.random() < 0.4 else nexpr(c)[0]})", 9
             f = r.choice(["ABS", "INT", "SGN", "SQR", "PEEK", "RND", "SIN", "COS", "ATN", "EXP", "LOG", "TAN"])
             return f"{f}({nexpr(c)[0]})", 9
         if k < 0.95:
@@ -146,8 +151,59 @@ def target(c: Ctx) -> tuple[str, str]:
     return r.choice(c.strs), "str"
 
 
+def v3_statement(c: Ctx, lines: list[int], cur: int) -> str:
+    r = c.r
+    k = r.random()
+    v = r.choice(c.reals + c.ints)
+    o = r.choice(c.reals + c.ints)
+    andor = r.choice(["AND", "OR"])
+    if k < 0.12:
+        return "RUN" + (f" {r.choice(lines)}" if r.random() < 0.5 else "") + (":PRINT:X=1" if r.random() < 0.3 else "")
+    if k < 0.3:
+        return f"{v}={nexpr(c)[0]}:{r.choice(c.reals)}={v} {andor} {v}"
+    if k < 0.42:
+        return f"{v}={nexpr(c)[0]}:IF ({v} {andor} {v}) THEN {r.choice(lines)}"
+    if k < 0.54:
+        return f"{v}={nexpr(c)[0]}:{r.choice(c.reals)}={v} {andor} {r.choice([o, nexpr(c)[0]])}"
+    if k < 0.64:
+        return f"READ {v}:PRINT {v} {andor} {v}"
+    if k < 0.72:
+        return f"GET {v}:{r.choice(c.ints)}={v} {andor} ({nexpr(c)[0]})"
+    if k < 0.8:
+        return f"{v}={nexpr(c)[0]}:{r.choice(c.reals)}=FRE({v})+POS({nexpr(c)[0]})"
+    if k < 0.88:
+        return f"{r.choice(c.reals)}=FRE({sexpr(c)}):PRINT POS({r.choice(c.strs)})"
+    if k < 0.94:
+        return r.choice(["REM! CLEAR COMMON", "REM! CLEAR CHAIN"])
+    return f"IF ({nexpr(c)[0]}) THEN RUN" + (f" {r.choice(lines)}" if r.random() < 0.5 else "")
+
+
+UNSUPPORTED = ["DEL 10,20", "SHLOAD", "TRACE", "NOTRACE", "LOMEM: 16384", "RECALL A", "STORE B,C", '& "X:Y",1',
+               'LOAD "F"', "SAVE", "CONT", "LIST 10-20", "LIST", "&"]
+
+
+def unsup_statement(c: Ctx, lines: list[int], cur: int) -> str:
+    r = c.r
+    k = r.random()
+    u = r.choice(UNSUPPORTED)
+    if k < 0.4:
+        return u
+    if k < 0.6:
+        return f"IF ({nexpr(c)[0]}) THEN {u}"
+    if k < 0.75:
+        return f"GOTO {r.choice(lines)}:{u}"
+    if k < 0.85:
+        return f"GOTO {r.choice(lines)}:REM! " + r.choice(["CLEAR COMMON", "CLEAR CHAIN"])
+    t = r.choice(c.reals + c.ints)
+    return f"{t}={nexpr(c)[0]}:{u}:{r.choice(c.reals)}={t}"
+
+
 def statement(c: Ctx, lines: list[int], cur: int, for_stack: list[str]) -> str:
     r = c.r
+    if c.unsup and r.random() < 0.25:
+        return unsup_statement(c, lines, cur)
+    if c.v3 and r.random() < 0.3:
+        return v3_statement(c, lines, cur)
     k = r.random()
     later = [n for n in lines if n > cur] or [cur]
     if k < 0.35:
@@ -225,7 +281,8 @@ def statement(c: Ctx, lines: list[int], cur: int, for_stack: list[str]) -> str:
     return f"GOSUB {r.choice(lines)}:{statement(c, lines, cur, [])}"
 
 
-def program(seed: int, v2: bool = False) -> tuple[str, Options]:
+def program(seed: int, v2: bool = False, v3: bool = False, unsup: bool = False) -> tuple[str, Options]:
+    v2 = v2 or v3
     r = random.Random(seed)
     names = [n for n in ["A", "B", "C", "X", "Y", "Z", "AB", "XY", "Q1", "M", "N2", "W"] if ok_name(n)]
     reals = r.sample(names, 5)
@@ -251,7 +308,7 @@ def program(seed: int, v2: bool = False) -> tuple[str, Options]:
             dims.append(f"{nm}{suffix}({','.join(str(r.randint(1, 12)) for _ in range(nd))})")
     if dims:
         head.append("DIM " + ",".join(dims))
-    c = Ctx(r, reals, ints, strs, arrays, [], v2=v2)
+    c = Ctx(r, reals, ints, strs, arrays, [], v2=v2, v3=v3, unsup=unsup)
     if r.random() < 0.4:
         head.append(f"DEF FN F({r.choice(['Z', 'T', 'X'])})={nexpr(c)[0]}")
         c.fns = ["F"]
@@ -282,9 +339,11 @@ def main() -> None:
     fam, count = sys.argv[1], int(sys.argv[2])
     seed0 = int(sys.argv[3]) if len(sys.argv) > 3 else 1000
     v2 = "--v2" in sys.argv
+    v3 = "--v3" in sys.argv
+    unsup = "--unsup" in sys.argv
     jobs = []
     for i in range(count):
-        src, opts = program(seed0 + i, v2)
+        src, opts = program(seed0 + i, v2, v3, unsup)
         jobs.append(Job(f"r{seed0 + i}", src, opts))
     run_family(fam, jobs, workers=12)
 

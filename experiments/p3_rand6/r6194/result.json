@@ -1,0 +1,23 @@
+{
+ "id": "r6194",
+ "key": "92b42d03d9316762",
+ "source": "10 REM! INTEGER *\n20 & \"X:Y\",1:GOTO 70:NOTRACE:IF (-(114)) THEN RUN\n30 X$=\"HI\"+MID$(XY$+XY$,8,M%/Z%)\n40 TEXT:READ C%:PRINT C% AND C%:RUN 30:PRINT:X=1\n50 CALL 65535:Y=Z:X$=LEFT$(B$,Z)\n60 HPLOT W,(7) TO SQR(M%<>Z-Z),(ASC(\"HI\"+B$) OR NOT ((Y-W))):PRINT -AB,\n70 RUN 110:PRINT:X=1:X$=STR$(FRE(B$)-((M%<>W))):W%=49152\n80 GOSUB 130:M%=POS(RIGHT$(X$,C%)+LEFT$(XY$,Z)):LIST 10-20:N2=M%\n90 W=W%<=Y:Y=W AND W\n100 ON -((Z%>AB))/TAN(-M%) GOSUB 140,10\n110 &:IF (ATN(C%)-ABS(344)<>AB) THEN LOAD \"F\":HTAB -((((Y<>N2))*((N2<>Y))))\n120 FOR N2=(Y) TO (M%-1000<>-N2-AB) STEP (((C%+N2 OR 0*W))>FRE(AB))\n130 REM! CLEAR CHAIN:REM! CLEAR CHAIN\n140 CALL NOT ((((42346>45269))*((Y+W))))\n150 Y=FRE(XY$):PRINT POS(X$)\n160 W%=-((46^Y<=POS(7))):IF (ABS(C%)) THEN LIST:HCOLOR=M%\n170 N2=((AB-0))*N2-W:AB=N2 AND N2:IF (C%) THEN READ C%:PRINT C% OR C%:VTAB 49152>=Z\n",
+ "options": {
+  "library": 16384,
+  "program": 24576,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 130\nSYNTAX\n\n REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

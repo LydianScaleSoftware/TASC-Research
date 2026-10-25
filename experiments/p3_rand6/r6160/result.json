@@ -1,0 +1,23 @@
+{
+ "id": "r6160",
+ "key": "46ffaabccc147875",
+ "source": "10 DIM A%(5)\n20 REM! CLEAR COMMON:B%=P%(AB%):W=B% AND X\n30 A%(Z%^40<ASC(\"HI\"))=(-W):LIST 10-20:ON (32767*((B%*6059))) GOTO 70,30,10,70\n40 A%(RND(P%(AB%))--((P%(Z%)*100)))=P%(PEEK(P%(38370)))*N2:Z%=((AB%>=P%(B%)))+((B>.001))-XY\n50 CALL 3:GET Z%:B%=Z% AND (B%):PRINT Q1$+\"X Y\";\n60 N2=NOT ((NOT N2+((N2-XY)))):X=N2 AND N2\n70 FOR N2=(W) TO (ASC(Z$)):READ XY:PRINT XY OR XY:AB$=\"A\"+Z$\n80 X=LEN(CHR$(W))-256:N2=X AND B%:IF (X) THEN SHLOAD\n90 HTAB PEEK(-((0/0)))\n100 FOR W=(W%) TO (AB% AND 24):PRINT 39;B;Z$;:FOR N2=(B%) TO (X<>ATN(39))\n110 FOR XY=(X) TO (AB%) STEP (((SQR(B%)+3))/39):HCOLOR=-((W%<=7))>=20:B%=256:B=FRE(B%)+POS(-((XY AND W)))\n120 GOTO 200:REM! CLEAR COMMON\n130 GET N2:AB%=N2 OR (W*((RND(.001)+((39=A%(8591)))))):GOTO 90:REM! CLEAR CHAIN\n140 W%=LOG(W%):AB%=-AB%^((((X AND 772))-0)):ON NOT ((-39-((N2-24)))) GOSUB 160\n150 PRINT (W%)>((5>AB%)) AND -((Z%^B));24+W%;:X=(AB%)^-B%:W=X OR W:GET Z%:AB%=Z% AND (B%)\n160 A%(AB%=(((B)<=FRE(32767))))=B:ON 26865+W% GOTO 70,220,130,170:READ N2:PRINT N2 AND N2\n170 RUN 140\n180 LIST\n190 PRINT Z%,:HCOLOR=40<12705:READ X:PRINT X OR X\n200 XY=FRE(AB$):PRINT POS(Z$):GOTO 220:SAVE\n210 IF (AB%) THEN TRACE:IF (N2-((7 AND B%))-N2) THEN RUN\n220 PLOT TAN(127),LOG(X)^24:READ W%:PRINT W% OR W%:REM! CLEAR CHAIN\n230 W%=(XY)>X:LIST:N2=W%\n240 DATA 300,,300:AB%=W%:B%=A%(ABS(40))+W%:W=B% OR B%\n250 XY=X-((-B+5)):XY=XY OR AB%:AB%=Z%=B>W%<=B:SHLOAD:XY=AB%\n260 B%=B%:NOTRACE:PRINT 611;LEFT$(Z$,X/XY=B%/20);\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 20\nSYNTAX\n\n REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

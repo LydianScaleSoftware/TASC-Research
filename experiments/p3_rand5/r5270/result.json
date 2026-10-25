@@ -1,0 +1,111 @@
+{
+ "id": "r5270",
+ "key": "9a9e1c3cde03e4e0",
+ "source": "10 REM! INTEGER K\n20 DEF FN F(X)=-((0-Z%))<-X%\n30 IF (-EXP(ABS(C))) THEN AB%=NOT FN F(40+K):X=AB% AND AB%:IF (Z%) THEN 90:PRINT STR$(B)+B$(SQR(0),X>Y);\n40 C$=XY$\n50 A$=XY$\n60 B=48288:FOR X=(AB%) TO (7)\n70 HTAB W OR C:AB%=AB%^-((11+N2%)):C=AB% AND X%\n80 COLOR=X%\n90 X=LEN(\"HI\"+CHR$(X%)):X=X OR X:HCOLOR=W+K:PRINT\n100 X%=COS(N2%):IF (X% AND X%) THEN 50:X=127:IF (X AND X) THEN 100\n110 IF (N2%) THEN IF (X%+AB%<>C+((65535<>0))) THEN POKE 24,Y<=.001:READ N2%:PRINT N2% AND N2%\n120 IF (((Z%>X%-AB%))-((POS(127)<((B AND 523))))) THEN 30:AB%=K-N2%:FOR W=(2.25) TO (((X%-((K<=W))))^X%) STEP (NOT 930+((544<W))=((LOG(Y)>=X)))\n130 FOR C=(39) TO (X):ON INT(N2%>=Y<POS(P$(AB%,K))) GOTO 60,30\n140 GOSUB 120:IF (FRE(POS(XY$)<N2%)) THEN B$(FRE(AB%<>21844>=65535),K)=XY$:XY$=LEFT$(A$,X%-W)+C$\n150 IF (K AND LEN(C$) OR -20/127) THEN FOR Y=(((Y>127 OR C))^((24>=INT(K)))) TO (N2%):PRINT C<>C>K<=24;\n160 X=AB%:IF (X AND X) THEN 200:X=((W AND -N2%))>=C\n170 IF (LEN(MID$(XY$,NOT 732))) THEN RUN 20\n180 IF (((0.1^B AND 7*AB%))+766) THEN READ C:PRINT C OR C:CALL B<-W:HLIN N2%,(AB%) AT POS(AB% AND K>1000)\n190 C$=C$+MID$(\"HI\",W)+\"HI\":PRINT SQR(3.14159);XY$;\n200 X%=AB%:W=X% AND X%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1610,
+ "obj_sha256": "68ecafd21bab2b5f7fe3d7bccbdef65740ee29686a198c4374ee0a1381d341a9",
+ "cycles": 137854583,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6115
+  },
+  {
+   "line": 40,
+   "addr": 6186
+  },
+  {
+   "line": 50,
+   "addr": 6195
+  },
+  {
+   "line": 60,
+   "addr": 6204
+  },
+  {
+   "line": 70,
+   "addr": 6233
+  },
+  {
+   "line": 80,
+   "addr": 6290
+  },
+  {
+   "line": 90,
+   "addr": 6299
+  },
+  {
+   "line": 100,
+   "addr": 6364
+  },
+  {
+   "line": 110,
+   "addr": 6405
+  },
+  {
+   "line": 120,
+   "addr": 6496
+  },
+  {
+   "line": 130,
+   "addr": 6557
+  },
+  {
+   "line": 140,
+   "addr": 6627
+  },
+  {
+   "line": 150,
+   "addr": 6718
+  },
+  {
+   "line": 160,
+   "addr": 6845
+  },
+  {
+   "line": 170,
+   "addr": 6895
+  },
+  {
+   "line": 180,
+   "addr": 6928
+  },
+  {
+   "line": 190,
+   "addr": 7046
+  },
+  {
+   "line": 200,
+   "addr": 7107
+  }
+ ],
+ "info": {
+  "THEN  READ C": "PRINT C OR C: CALL B <  -",
+  "OBJECT FILE": "S010.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7673",
+  "LOCAL VARIABLES": "7674 - 8212",
+  "HIGHEST MEMORY LOCATION": "8212"
+ }
+}

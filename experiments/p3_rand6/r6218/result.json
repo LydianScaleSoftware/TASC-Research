@@ -1,0 +1,23 @@
+{
+ "id": "r6218",
+ "key": "a5ba4d99f3228d8d",
+ "source": "10 REM! INTEGER I\n20 DIM P%(12),B(11)\n30 A%=N2 AND B(C%)<52<=POS(A$):PRINT\n40 GOTO 60:REM! CLEAR COMMON:GOTO 100:CONT\n50 GOTO 130:STORE B,C:IF ((SGN(Z%))) THEN LIST:Z$=\"TASC\"\n60 W=3.14159:M=W AND W:GET W:C%=W OR (A%(NOT N2)):A$=MID$(\"\",.5,39)\n70 M$=RIGHT$(M$,711)\n80 NOTRACE:M=A%(0):PRINT STR$(2);\"123\";\n90 GET I:W%=I AND (NOT A%):SPEED=P%(M AND 65535):READ Y:PRINT Y AND Y\n100 GOTO 130:RECALL A:IF ((W%^39)-B(RND(0))) THEN DATA HI,X,X:IF (A%) THEN RECALL A\n110 RUN 30\n120 IF (A%) THEN 160:X=1:SAVE:X=X\n130 X=B(A% OR Y*3):N2=X OR C%:GOTO 110:LOAD \"F\"\n140 DATA 300,300,-2.5,X\n150 RUN 90:A%=A%:IF (A% AND A%) THEN 80:PRINT \"\"+\"TASC\";X;\n160 Y=SQR(W%+W<=N2):Y=Y AND Y:M$=MID$(RIGHT$(STR$(C%),Y^W%),Y^W% OR W)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 40\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

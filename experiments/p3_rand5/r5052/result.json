@@ -1,0 +1,23 @@
+{
+ "id": "r5052",
+ "key": "afb53a6eb084f66e",
+ "source": "10 REM! INTEGER I\n20 DEF FN F(Z)=((1.5 OR I<1000))+((N2% AND Y/403))\n30 HTAB XY\n40 PRINT 5-Y;((FRE(24)<=((31817<=AB))))-PEEK(Z%);:A%=7:FOR XY=(((LOG(Y) OR N2%))+((637*XY<=B(N2%)/N2))) TO (POS(LEFT$(Z$,.001))/((((5>=C%))-((B(A%)+32250)))))\n50 HLIN B(A%)^Y,(611) AT NOT I:RETURN\n60 STOP:HTAB I\n70 N2%=Z%+I:N2=N2% OR N2%\n80 GOSUB 130\n90 HTAB 604:XY=-INT(PEEK(A%)):IF (RND(A%*C%)*((B(A%)^9269+XY))) THEN GOTO 60\n100 XY=1000:B(VAL(Z$)=Y>=POS(B(Z%)*Y))=-AB:N2=FRE(\"TASC\"):PRINT POS(Q1$)\n110 XY=((XY--32767))*40\n120 I=A%:IF (I) THEN Y=FRE(CHR$(-((AB<=Z%)))):PRINT POS(B$)\n130 DATA X,X,-2.5:N2=-((FN F(B(Z%))/FN F(XY)))\n140 READ AB:PRINT AB OR AB:XY=FN F(C%)\n150 REM! CLEAR COMMON:XY=NOT 5:I=3.14159\n160 NEXT XY:N2=POS(\"\")+((Z%<=A%))-N2:Y=FN F(AB+B(279)<=LEN(\"TASC\"))\n170 IF (39) THEN RUN 100:PRINT N2% AND Z%<>C%;Q1$;:PRINT 100;\n180 PRINT 607,XY,XY=40525;:ON Y GOTO 10,50\n190 B$=Q1$\n200 IF (397) THEN Y=Y:PRINT FRE(AB>=1.5>-AB),\n210 GOSUB 140\n220 B$=LEFT$(MID$(MID$(Z$,40),NOT 255),-((N2%/B(127))))\n230 IF (-((-FN F(32767)))) THEN AB=FRE(RIGHT$(LEFT$(Z$+Z$,6085*N2),XY)):PRINT POS(Z$)\n240 PRINT Z$;LEFT$(Z$,127/I),:AB=A%:XY=AB OR XY:HCOLOR=-B(C%)+I+((POS(3.14159) OR N2%))\n250 CALL I\n260 GOSUB 110:IF (18086) THEN 190:XY=LEN(B$)\n270 XY=FRE(MID$(STR$(-C),N2%)):PRINT POS(Q1$):INPUT \"NAME\";B(271),B$:PRINT C;\n280 IF (C%) THEN RUN 110:AB=NOT ((C%/3.14159)) AND ((-B(A%) AND Y-AB)):Y=AB AND I\n290 REM! CLEAR COMMON:ON ((C+FN F(Y)))/-PEEK(606) GOTO 290,140,270\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 150\nSYNTAX\n\n REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

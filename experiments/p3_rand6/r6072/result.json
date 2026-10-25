@@ -1,0 +1,23 @@
+{
+ "id": "r6072",
+ "key": "1a4b0add9580e265",
+ "source": "10 REM! INTEGER I\n20 REM! DEFCOMMON X%,I,M\n30 DIM A(2,7)\n40 C%=ASC(RIGHT$(Y$,X%))-Q1:RECALL A\n50 Z=FRE(Y$):PRINT POS(AB$):B$=AB$+Y$+LEFT$(RIGHT$(\"\",Q1),POS(AB$)):GOTO 40:REM! CLEAR COMMON\n60 ON -I GOTO 70:TRACE:IF (FRE(Y OR P(XY%))<=((X% AND NOT Z))) THEN IF (VAL(Y$)) THEN RUN 150\n70 DATA X,-2.5,\"A,B\",300\n80 LOMEM: 16384\n90 LIST:HOME\n100 SAVE:CONT:GOTO 90:DEL 10,20\n110 IF (TAN(Q1-Z)) THEN 140:IF (127) THEN 80\n120 IF (256^Z%-P(C%)+((C%>X+1))) THEN 60:B$=MID$(\"HI\"+Y$+MID$(\"TASC\",XY%),Y):ONERR GOTO 70\n130 & \"X:Y\",1:IF (C% OR 25308) THEN IF (M>=XY%) THEN X=FRE(I*0.1=X):& \"X:Y\",1:Y=X:GOTO 220:NOTRACE\n140 SAVE:M=ASC(MID$(AB$,VAL(AB$))):SAVE:X=M:Z=Z<((I>7*Y)):Z=FRE(Z)+POS(Y+C%-((C%<>(C%))))\n150 REM! CLEAR COMMON:PLOT X,-((TAN(P(32767)) OR VAL(AB$))):LIST 10-20\n160 READ AB$:M=Q1:CONT:Z=M\n170 IF (-40) THEN 140:IF (D%(M-X%,X OR 40000)+(((X%) AND X*M))) THEN DEL 10,20\n180 I=C%+((-XY%=((M>=Z)))):X=(I/C%+Z%):IF (-Y) THEN SAVE\n190 Q1=FRE(\"TASC\"):PRINT POS(AB$):GOTO 170:CONT\n200 Z=((X%>2.25+I))/((X-Z)):Z=FRE(Z)+POS(P(X%)):GOSUB 70\n210 IF (-((-Q1))>=Z%) THEN PRINT Z%,-Z%^((X%*Y))*((39208^Z*((Y>=Y))));.5;\n220 IF (M<>COS(-X)) THEN DEL 10,20\n230 IF (1000 OR 100-Z) THEN RUN:I=C%+-((39=X%)):IF (I AND I) THEN 140\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 150\nSYNTAX\n\n REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

@@ -1,0 +1,23 @@
+{
+ "id": "r5169",
+ "key": "c95b1f62fd693a71",
+ "source": "10 REM! INTEGER J,K\n20 ON Q1 OR Z GOTO 210,70,80\n30 REM! CLEAR CHAIN\n40 IF (NOT 16163/(((J)*ASC(B$)))) THEN 230\n50 J=65535:REM! CLEAR COMMON:HCOLOR=Q1/VAL(B$)\n60 VTAB W%<>ABS(J)\n70 IF (A) THEN 240\n80 IF ((NOT W%)) THEN RUN:RUN 20:PRINT:X=1\n90 COLOR=M>=Z--K:IF (A%) THEN J=((Q1>=7))/Q1/((A>A%)):IF (J OR J) THEN 30\n100 CALL M:A=Z-3623:A=A AND A:IF (Z) THEN 150\n110 PRINT:RUN:FOR A=(Q1) TO (W%)\n120 Q1=32767-ABS(INT(986)):M=Q1 AND Q1:IF (J) THEN RUN:GOTO 230\n130 PRINT STR$(FRE(M))+CHR$(Q1*Z),B$;Z;:DATA -2.5,300,X:GOTO 200\n140 N2$=STR$(J):IF (M) THEN M=W%<Z:Q1=(A%)<>VAL(\"123\")\n150 C%=C\n160 GOTO 250:M=141:IF (M AND M) THEN 290\n170 PRINT M;:HLIN -RND(Y%)>M*(K),(A%) AT 256:K=J-POS(7-J):Z=K AND M\n180 W%=NOT (J):IF (M) THEN 80:A=C%/W%:A=FRE(A)+POS(40218)\n190 A=256:Z=855:FOR C=(SIN(Z>10)) TO (NOT 65535) STEP (Z)\n200 Q1=M:C%=NOT A:IF (((M<=C))*((A% OR Z))<>J) THEN 130\n210 C=Z:C=C AND .5<39\n220 ON ASC(\"TASC\") GOTO 230,290:FOR C=(Z) TO (-A%):A%=ASC(\"\"):IF (A% OR A%) THEN 110\n230 FOR Z=((100<=J)-((ABS(W%)=Y%))) TO (Y%)\n240 PRINT STR$(798),VAL(\"X Y\");\n250 NEXT Z:J=C:C=J AND J\n260 COLOR=A%\n270 X$=X$+B$\n280 C=Y%\n290 Q1=W%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 50\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

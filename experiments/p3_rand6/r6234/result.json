@@ -1,0 +1,23 @@
+{
+ "id": "r6234",
+ "key": "c33908c24d983b5f",
+ "source": "10 DEF FN F(T)=NOT N2%\n20 SAVE:CONT\n30 Y%=AB%:IF (EXP(C)+N2) THEN LIST\n40 M$=W$+W$+MID$(M$,AB%*M%,FN F(256)):Y%=NOT ((2599<>N2%)):X=FRE(Y%)+POS(POS(W$))\n50 AB=7:C=FRE(AB)+POS(33301):READ Z$,N2%,W$:M%=37401\n60 IF (957) THEN M$=\"A\":HOME:COLOR=Y%\n70 N2%=-((-5)):IF (N2% AND N2%) THEN 270\n80 AB%=N2%\n90 IF (5) THEN RUN\n100 IF (2/C) THEN 40:AB=127:IF (AB OR AB) THEN 130:GOTO 190:REM! CLEAR CHAIN\n110 Z$=M$\n120 AB=M%*M:IF (AB OR AB) THEN 160\n130 W$=Z$:GOTO 270:STORE B,C\n140 W$=RIGHT$(Z$,EXP(916))+M$:AB%=1000\n150 M=266+M%:STORE B,C:N2=M\n160 X=-FN F(AB%)<>FN F(M)\n170 RESUME:IF (442) THEN RUN 50\n180 READ M:PRINT M OR M:HTAB N2%\n190 GOTO 140:REM! CLEAR CHAIN\n200 CALL X\n210 RUN 240\n220 PRINT RIGHT$(Z$,AB%);:AB=FN F(Y%+Y%)\n230 REM! CLEAR CHAIN:IF (M%) THEN 20\n240 PRINT ((FRE(M%)>=AB-100))*((M-N2));Z$;:IF (C) THEN READ X:PRINT X AND X:PRINT ABS(N2^Y%);LEN(\"X Y\"),\n250 HCOLOR=-((NOT ((39-C)))):PRINT:READ M:PRINT M OR M\n260 AB%=FRE(M%):DATA ,-2.5,HI\n270 READ Z$,W$:DEL 10,20\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 230\nSYNTAX\n\n REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

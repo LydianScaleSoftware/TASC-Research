@@ -1,0 +1,91 @@
+{
+ "id": "r5040",
+ "key": "370927d56f29e939",
+ "source": "10 REM! INTEGER K\n20 DIM D%(3),B%(4,6)\n30 DEF FN F(Z)=VAL(\"123\")>=((X% AND 127)) AND N2%\n40 PRINT:W=FRE(XY$):PRINT POS(XY$):REM! CLEAR COMMON\n50 M%=-((-M%=FN F(X%))):C$=C$:W=D%(B%)+W>FRE(82)<-((AB=D%(N2%)))\n60 N2%=FN F(COS(W/40000)):A=FRE(N2%)+POS(32767):B=PEEK(256<ASC(\"HI\")):IF (B AND B) THEN 140:PRINT B%(LOG(X%),100-W)*-((A+1));\n70 IF (3.14159) THEN HCOLOR=X%+INT(B%)+W:PRINT XY$+LEFT$(\"HI\",B%),LEFT$(CHR$(N2<=B%),-((NOT 745))),:A=TAN(AB):IF (A AND A) THEN 30\n80 GOTO 130:ON X%/N2 GOSUB 150,20:X%=B%:N2=X% AND B%\n90 K=((((A AND 49152))=N2*B%(B%,B%)))*((SIN(A)*B)):K=.001=B%(40<>50000,X%+15445)\n100 IF (K) THEN 130:ON NOT ((NOT 608)) GOTO 30:X%=5:N2=X% OR A\n110 ON FN F(FN F(0)) GOTO 100,10,80,90\n120 IF (-W) THEN RETURN:PLOT B%(A*3,B%*A)+AB,AB\n130 TEXT:ON NOT 241 GOTO 120,10,20:INPUT D%(N2%),D%(-((A<=-K))),B\n140 VTAB 1E3:N2%=-B%:N2=N2% AND N2%:PRINT W<>N2;\n150 B%=B%(NOT N2%,38637)+RND(SIN(N2%)):GOTO 140\n",
+ "options": {
+  "library": null,
+  "program": "HGR1",
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 16384,
+ "obj_len": 1278,
+ "obj_sha256": "6a35ac713bb350b9bebcceb347d43e44d68a307a20bacf659e8f280f9678df1d",
+ "cycles": 123462278,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 16404
+  },
+  {
+   "line": 20,
+   "addr": 16404
+  },
+  {
+   "line": 30,
+   "addr": 16404
+  },
+  {
+   "line": 40,
+   "addr": 16456
+  },
+  {
+   "line": 50,
+   "addr": 16489
+  },
+  {
+   "line": 60,
+   "addr": 16585
+  },
+  {
+   "line": 70,
+   "addr": 16676
+  },
+  {
+   "line": 80,
+   "addr": 16793
+  },
+  {
+   "line": 90,
+   "addr": 16823
+  },
+  {
+   "line": 100,
+   "addr": 16925
+  },
+  {
+   "line": 110,
+   "addr": 16963
+  },
+  {
+   "line": 120,
+   "addr": 16987
+  },
+  {
+   "line": 130,
+   "addr": 17001
+  },
+  {
+   "line": 140,
+   "addr": 17083
+  },
+  {
+   "line": 150,
+   "addr": 17137
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "RECOGNIZED": "REM ! CLEAR COMMON",
+  "OBJECT FILE": "S000.OBJ",
+  "PROGRAM": "16384 - 17661",
+  "LOCAL VARIABLES": "17662 - 17795",
+  "HIGHEST MEMORY LOCATION": "17795"
+ }
+}

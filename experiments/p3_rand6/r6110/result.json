@@ -1,0 +1,78 @@
+{
+ "id": "r6110",
+ "key": "b5958fc8d20b728d",
+ "source": "10 DIM B$(12)\n20 XY%=Q1%>127\n30 LOMEM: 16384:STORE B,C:B$(Q1%)=Y$\n40 GET Q1%:C%=Q1% OR (((NOT 3.14159+AB))*X%):RUN 110:XY%=ABS(W-((965<>W))):W=FRE(XY%)+POS((39))\n50 SAVE\n60 X%=Q1%:N2=X% OR XY%:& \"X:Y\",1:GET W:XY%=W OR (W)\n70 DATA \"A,B\":GOSUB 50:IF (A) THEN RECALL A\n80 RUN 70:PRINT:X=1\n90 FOR A=(W) TO (((W/N2 AND AB<=255))+((AB+((A>C%))))) STEP (POS(C%-VAL(C$))):IF (((D(X%)^W/C%))^D(B<N2)) THEN IF (ABS(NOT ((-XY%)))) THEN RUN:TRACE\n100 N2=957<((AB>=W<((10<>W)))):C$=B$(39):DATA 1,,1,300\n110 IF (.001) THEN SAVE:GET W:C%=W AND (-X%)\n120 CONT:IF (AB) THEN 70:IF (24^255) THEN GOTO 40:LOAD \"F\"\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 747,
+ "obj_sha256": "592b632eaa83d0dfbebb7167c28fd6217e4c75c14a0e7702a12b92126ae9f1f5",
+ "cycles": 105421097,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6096
+  },
+  {
+   "line": 40,
+   "addr": 6108
+  },
+  {
+   "line": 50,
+   "addr": 6180
+  },
+  {
+   "line": 60,
+   "addr": 6180
+  },
+  {
+   "line": 70,
+   "addr": 6213
+  },
+  {
+   "line": 80,
+   "addr": 6234
+  },
+  {
+   "line": 90,
+   "addr": 6246
+  },
+  {
+   "line": 100,
+   "addr": 6393
+  },
+  {
+   "line": 110,
+   "addr": 6453
+  },
+  {
+   "line": 120,
+   "addr": 6482
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S010.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6810",
+  "LOCAL VARIABLES": "6811 - 6938",
+  "HIGHEST MEMORY LOCATION": "6938"
+ }
+}

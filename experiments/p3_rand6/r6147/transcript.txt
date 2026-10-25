@@ -1,0 +1,96 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S001
+
+
+OBJECT CODE FILE:
+(DEFAULT S001.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION?
+
+*****BEGINNING PASS 1
+
+
+
+10  DIM B(2,3)
+20  DEF  FN F(T) =  POS (Z)
+30  FOR Q1 = (B) TO ( - 196):M% =  FRE (
+Z$) * ((N2% + M%)) <  > ((Z =  PEEK (Z%)
+)):Z =  FRE (M%) +  POS (Y)
+40  GOSUB 140: COLOR=  ATN ( - W)
+50  PRINT 5,"HI",:B( - ((2.25 + W)), FN
+F(Q1% * Q1 OR Z < B(N2%,Q1%))) = M%
+60  GET B:M% = B OR (M% * ((B(Z%,N2%) *
+Z%)))
+70  GOSUB 30
+
+*****WARNING
+LINE NUMBER 70
+IGNORED
+
+: SHLOAD
+
+
+80  HTAB ((216 >  = 3 * 127)) - ((((20 >
+  = B)) +  - 1000))
+90  GOTO 230
+
+*****WARNING
+LINE NUMBER 90
+IGNORED
+
+: NOTRACE
+
+
+:B(Z%,N2%) = ((B(Z%,N2%) <  = .5)) - B
+
+*****WARNING
+LINE NUMBER 90
+IGNORED
+
+: RUN
+
+
+100 W = 45
+110  NEXT Q1:Z% = Z%
+120 Z% =  - .001 * ((31 < W)) OR M% <  =
+ B(Q1%,1000) <  = 5 ^ M%
+
+*****WARNING
+LINE NUMBER 120
+IGNORED
+
+: & "X:Y",1
+
+
+:Q1 = Z%
+
+*****WARNING
+LINE NUMBER 120
+IGNORED
+
+: LIST
+
+
+130  READ Q1%: PRINT Q1% AND Q1%: GET W:
+M% = W OR (N2%)
+140  GOTO 260
+
+*****FATAL ERROR
+LINE NUMBER 140
+SYNTAX
+
+: REM ! CLEAR CHAIN !ERR!
+
+TYPE CNTRL-C TO ABORT

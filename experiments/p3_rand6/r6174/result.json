@@ -1,0 +1,23 @@
+{
+ "id": "r6174",
+ "key": "6a331833c5c42869",
+ "source": "10 REM! INTEGER J,I\n20 DIM A(5)\n30 DEF FN F(Z)=167\n40 PRINT J-X<J>I,MID$(Q1$,LEN(\"\") AND C);LEFT$(Q1$,C)+M$;:RUN 60\n50 SAVE:COLOR=FN F(0.1)<>20 AND SIN(682):SHLOAD\n60 W=-32767:N2=W AND W\n70 IF (C) THEN RUN 110\n80 NOTRACE\n90 REM! CLEAR CHAIN:GOSUB 150\n100 Y%=32767:IF (Y% AND Y%) THEN 280:N2=255<((7 OR W))>=((LEN(\"X Y\") OR FN F(Z)))\n110 N2=LOG(POS(C$))<>100\n120 GOTO 110:&:Z=100:IF (Z OR Z) THEN 180\n130 LOMEM: 16384:READ X\n140 C=SQR(ATN(65535))-A(Z%^J):N2=FRE(C)+POS(RND(32767)):FOR C=(J) TO (EXP(Z-X)+N2)\n150 LOAD \"F\":LIST\n160 IF (X*FN F(ATN(J))) THEN 40:GOTO 300:SAVE:B%=((1E3-D(B%)-49152))*((M%-((C<C)))):C=FRE(B%)+POS(C<=-Z<-256)\n170 IF (FN F(181)+((B%(Z%,M%)-J))<=N2) THEN STORE B,C:POKE INT(19868),W\n180 M%=NOT INT(J>=M%):REM! CLEAR COMMON\n190 GOTO 100:TRACE:Z=FRE(M$):PRINT POS(C$):ON 946/Z% GOTO 300,300,310\n200 IF (C) THEN RECALL A\n210 DATA -2.5,\"A,B\",1:GOSUB 20:READ M%:PRINT M% OR M%\n220 N2=20<>A(M%=B%)\n230 LOAD \"F\":GOSUB 170\n240 HOME:IF (-((Z/M%))) THEN CONT\n250 ON Y% GOTO 200:VTAB J:COLOR=B%\n260 & \"X:Y\",1:IF (RND(ASC(Q1$))) THEN 30:I=SQR(Z)>=W\n270 Y%=((5733<J))+((Z+((39<>W)))):LOMEM: 16384:W=Y%:DATA HI,300,1,\"A,B\":C=B%\n280 Z%=I<>C:COLOR=C\n290 N2=SIN(((3.14159>=I))/A(M%)):N2=FRE(Q1$):PRINT POS(M$):C=B%(I,3):X=FRE(C)+POS(B%(238,N2<=I))\n300 RETURN\n310 GET B%:M%=B% OR (ATN(J)):RECALL A\n320 PRINT 40,N2*POS(\"TASC\"),:RUN 160:PRINT:X=1\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 90\nSYNTAX\n\n REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

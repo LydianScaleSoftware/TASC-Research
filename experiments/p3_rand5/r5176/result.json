@@ -1,0 +1,66 @@
+{
+ "id": "r5176",
+ "key": "7f7755effcb10d51",
+ "source": "10 REM! INTEGER K\n20 GET N2:Z%=N2 OR (A)\n30 FOR A=(-((((65535 AND N2))-X))) TO (LEN(X$)):SPEED=K\n40 ON 479-K GOTO 80,70,70,50:READ K:PRINT K OR K\n50 W=M%:W=W OR W\n60 PRINT PEEK(D%(W%))+((D%(W%)>=D%(K)))<Z%,N2+X+(X)+((-C OR N2)),A;\n70 W%=A-X:W=-D%(M%) OR C\n80 A=((20=W%))*-A-VAL(B$):IF (A AND A) THEN 30:HLIN ASC(B$+W$),(N2) AT FRE(CHR$(PEEK(W%)))\n90 IF (-((W+C<>((M% AND Z%))))) THEN HTAB 365:D%((XY%))=D%(M%)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 607,
+ "obj_sha256": "4d0509acd367754be70985c8f941c847b3152436a55d839c7ec0725d23964743",
+ "cycles": 96761446,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6102
+  },
+  {
+   "line": 40,
+   "addr": 6146
+  },
+  {
+   "line": 50,
+   "addr": 6188
+  },
+  {
+   "line": 60,
+   "addr": 6200
+  },
+  {
+   "line": 70,
+   "addr": 6287
+  },
+  {
+   "line": 80,
+   "addr": 6314
+  },
+  {
+   "line": 90,
+   "addr": 6358
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S016.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6670",
+  "LOCAL VARIABLES": "6671 - 6740",
+  "HIGHEST MEMORY LOCATION": "6740"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "r6004",
+ "key": "9ecf8eb80ede2aed",
+ "source": "10 REM! INTEGER J\n20 DEF FN F(T)=M\n30 Z=-ABS(A%):Y=Y%:N2$=\"\"\n40 DRAW XY AT A%,(FRE(B$(XY>Y%))):J=J:CONT:Z=J\n50 RUN:PRINT:X=1:B$(-Y%<=((40000 AND 256)))=N2$\n60 LOMEM: 16384\n70 FOR Z=(B%) TO (B%):STORE B,C:PRINT FN F(POS(A%=J)),\n80 XY=40:XY=XY AND M AND Y%\n90 B$(A%)=\"TASC\"+Y$+N2$+STR$(1>40)\n100 IF (SQR(431+32767)<=-((J-3))) THEN ON SQR(24)*Y%/((Y%=J<((40<=Q1)))) GOTO 130,240,10,90:Q1=A%:COLOR=NOT 325\n110 GOTO 90:LOMEM: 16384\n120 Y%=((J-Q1-NOT 135))*((VAL(Y$)/39)):LOAD \"F\":Z=Y%:GOTO 40:REM! CLEAR COMMON\n130 XY$=STR$(32767 OR 599):RUN:Y%=M%:M=FRE(Y%)+POS(B%)\n140 LIST 10-20\n150 GOTO 150:REM! CLEAR CHAIN:FOR Y=(2) TO (FN F(M%<=A%)+9573) STEP (-((100-((XY>=3)))))\n160 XY=Y%:A%=Y-M:STORE B,C:M=A%\n170 GOSUB 50:HLIN ((Q1 AND M^Q1))<>3+5,(-((Y^J=PEEK(M%)))) AT Y\n180 GOTO 30:REM! CLEAR COMMON\n190 Y=Y%\n200 PRINT LEFT$(\"X Y\",0>814<>J*J);:Y%=Y\n210 RUN:PRINT:X=1:ONERR GOTO 20:Y%=-TAN(XY)\n220 Q1=NOT TAN(A%):CONT:Q1=Q1\n230 GOTO 250:DEL 10,20:Z=255:XY=Z AND 32767:PRINT\n240 Y=Z:SAVE\n250 Y$=XY$\n260 GOTO 40:STORE B,C:FOR J=(XY) TO (-Z/-ATN(M%)):IF (Z) THEN M=XY:LIST 10-20:M=M\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 150\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

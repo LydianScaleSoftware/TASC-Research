@@ -1,0 +1,23 @@
+{
+ "id": "r5141",
+ "key": "6e42d896e59f3bcd",
+ "source": "10 DEF FN F(X)=20\n20 REM! CLEAR CHAIN:C=RND(RND(A^W)):IF (C OR C) THEN 80\n30 C=FRE(\"\"):PRINT POS(A$)\n40 Y$=LEFT$(\"HI\"+\"TASC\",POS(INT(5))):XY$=\"123\"\n50 HCOLOR=-C\n60 B%=Q1<((XY<=C))=B%\n70 Y$=\"HI\"+Y$+Y$+MID$(Y$,M%,10)\n80 HLIN 40,(FN F(NOT M%)*B%) AT C<>B%>=Q1\n90 IF (-((-((W*C%))))) THEN 40:PRINT:READ AB%:PRINT AB% AND AB%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 20\nSYNTAX\n\n REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

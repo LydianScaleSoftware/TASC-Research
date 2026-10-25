@@ -1,0 +1,23 @@
+{
+ "id": "r5233",
+ "key": "a85ce3ef869a689b",
+ "source": "10 DEF FN F(Z)=255\n20 M%=W:C=M% OR M%:IF (EXP(EXP(M%))>=AB%) THEN PRINT X;:M$=M$\n30 POKE M%,C%+NOT ((X>=C))\n40 C=Y%<=((C%<>Y% AND FRE(XY))):X=C AND C\n50 PRINT M%+C%;\n60 W=ATN(M%)*((312>=132)):IF (W AND W) THEN 10:IF (AB%) THEN RUN:REM! CLEAR COMMON\n70 HCOLOR=LEN(RIGHT$(STR$(C),C))\n80 GOSUB 10:RUN:AB=1.5*FN F(Y%<=7):W=AB OR AB\n90 IF (((AB%+127))*-40<>NOT ((W*M%))) THEN Y%=FN F(X<=C%):PRINT C,M$+M$,XY;\n100 X=1000:AB=X AND X:SPEED=C%:VTAB -((((394<C%))+((699<100))))\n110 HLIN XY*1000,(C) AT -10\n120 PRINT CHR$(-W+LEN(\"HI\")),:IF (W) THEN 60\n130 AB$=MID$(\"X Y\",Y%)\n140 GOTO 80:IF (X) THEN 250\n150 C=Y%:AB=-((ABS(C%)/ATN(M%))):W=AB AND AB\n160 XY=XY+Y%:X=XY AND XY:PRINT \"X Y\";:IF (LEN(AB$)+NOT ((C^AB%))) THEN 60\n170 AB%=FRE(\"HI\"):X=FRE(AB%)+POS(X):SPEED=XY OR VAL(AB$)+((X<=40000))\n180 ON M% GOTO 30,290:Y%=PEEK(7<=AB%)+M%^((40+AB%))\n190 VTAB LEN(LEFT$(\"X Y\",1))^C%:READ XY:PRINT XY AND XY\n200 Y%=NOT XY:FOR AB=(40000) TO (LOG(-W)):SPEED=329-255<-((48231<>Y%))\n210 READ C%:PRINT C% AND C%:PRINT AB$+M$,LEFT$(M$+M$+M$,ABS(AB/.001)),:GOSUB 60:AB$=LEFT$(RIGHT$(XY$,.001)+M$,W-M%=177-Y%)\n220 DATA X,HI:REM! CLEAR COMMON:WAIT AB AND AB^M%,(XY)\n230 XY$=\"123\":C%=Y%:IF (C% AND C%) THEN 210:GR\n240 C%=C%\n250 IF (-ABS(XY<XY)) THEN HOME\n260 GET C%:Y%=C% OR (POS(AB+((.5<=AB)))):INPUT \"\";M%:PRINT M$;((127<=W))-((Y% AND .001))/((W-1E3));Y%,\n270 HCOLOR=C\n280 PRINT MID$(AB$,292),0.1;M$,:GOSUB 180:C%=-((M%>M%))-VAL(M$+\"A\"):IF (C% AND C%) THEN 220\n290 AB=LEN(AB$)+FN F(C% OR C%)\n300 ON -((X AND AB%))+FN F(AB/357) GOTO 60,310:XY$=MID$(MID$(AB$,256),((20<0))+1E3*1.5)\n310 SPEED=W:FOR AB=(XY) TO (405<>X-C%+10)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 220\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

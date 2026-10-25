@@ -1,0 +1,23 @@
+{
+ "id": "r6073",
+ "key": "831ec90650e35206",
+ "source": "10 REM! INTEGER I,K\n20 DEF FN F(Z)=LEN(\"A\")<=C+XY%>((65535>=3>((X>.5))))\n30 P$(M/M%,NOT 20+((I AND X=M)))=Q1$\n40 X$=M$:IF (335) THEN 190:HTAB M%\n50 FOR C=(((W% OR X))^((I/255))-PEEK(3 AND XY)) TO (POS(M$))\n60 SPEED=FN F(XY%<=0.1)-((((X OR AB%))<=C))\n70 XY%=XY:X=FN F(FN F(M%)+((AB%<>C))):W=FRE(X)+POS(XY%)\n80 PRINT Q1$+\"123\"+X$+M$;:C=C\n90 NEXT C:GOTO 70:& \"X:Y\",1\n100 FOR K=(((I=255<W%))-((M% OR XY%))^-M) TO (M%<=2.25>=X=C):NOTRACE\n110 GOTO 80:LIST:GOTO 160:REM! CLEAR CHAIN:IF (-16992>255*3=7+M%+C^AB%) THEN IF (M) THEN STORE B,C\n120 GET M%:K=M% OR (((LEN(\"123\") OR AB%))-W%)\n130 K=XY^C-414+((925<C)):X=FRE(K)+POS(W):K=((1=XY+W))-W:DEL 10,20:M=K\n140 GOTO 100\n150 M%=NOT ((X+LOG(W)))\n160 HLIN X,(M) AT -((592+W))^3.14159:CALL XY%\n170 XY%=LEN(Q1$):X=XY% AND -((POS(127) OR -C))\n180 SPEED=-FN F(X^XY)\n190 ON M>=741 GOTO 100,50\n200 RECALL A:K=((FRE(89)>5))+XY:IF (FRE(\"X Y\"+\"A\")) THEN 200\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 110\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

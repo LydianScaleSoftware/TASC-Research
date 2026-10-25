@@ -1,0 +1,23 @@
+{
+ "id": "r6032",
+ "key": "d5375117fa3c2c2e",
+ "source": "10 REM! INTEGER I\n20 DEF FN F(T)=Q1\n30 PRINT Q1;((W<=1*100))*((I<((XY%>P(B%,W%)))));:SPEED=SQR(FN F(B)^B):GOSUB 50\n40 W%=B%*874+32767>Q1:W=W% AND NOT LEN(AB$):P(W%,I/NOT ((NOT W)))=B>=X\n50 IF (EXP(W*P(XY%,B%)-W^X)) THEN LOMEM: 16384:IF (-((Z<Q1%))<>LEN(STR$(256))) THEN RUN\n60 FOR W=(P(P(Q1%,127) OR 256,Q1%)) TO (24<=20+((W%<10))):READ W\n70 Q1=PEEK(FN F(B*I)):Q1=Q1 OR TAN(LEN(Y$+A$(W%,XY%)))\n80 FOR X=(EXP(-32767 OR P(988,Q1%))) TO (-ASC(\"A\")):GOTO 30:SHLOAD:ON SQR(B) GOTO 300,80,230,60\n90 SPEED=FRE(P(I,284))=B%+W-((I+Z)):PLOT -W^((W%>=W)),-COS(P(XY%,I))-NOT W:READ Q1:PRINT Q1 OR Q1\n100 IF (100) THEN NOTRACE:RUN 190:PRINT:X=1:P(758,XY%)=-((-Q1))\n110 GOTO 270:RECALL A:Y$=LEFT$(B$+CHR$(Z),((Q1%>Z))+5)\n120 GOTO 230:IF (VAL(CHR$(B%>40000))) THEN RUN 60\n130 A$(Q1%,((Q1% AND I=W))<>FRE(\"123\"))=STR$(FN F(Z)):HOME\n140 B$=\"\"\n150 IF (456+XY%*X) THEN 220:IF (B%-((P(Q1%,W%)*I AND Q1/0))) THEN TRACE:XY%=W%\n160 W=P(B%,Q1%)*24<=XY%\n170 Z=FRE(B$):PRINT POS(B$):IF (POS(I)-ASC(\"HI\")) THEN RUN 260\n180 GOTO 290:&\n190 GOTO 90\n200 GOTO 270:REM! CLEAR CHAIN:Q1=P(0,Q1%):B=Q1 AND XY%:Q1=P(XY%,((.5=842))+X)\n210 GOSUB 300\n220 FOR X=(-XY%) TO (-((3+I>=B%))) STEP (P(B%,Q1%)+((((B% AND W))<>NOT 514))):GOSUB 110\n230 CONT:DEL 10,20\n240 SHLOAD:IF (Q1) THEN 60\n250 RUN\n260 IF (I>=NOT ((P(W%,B%)-B%))) THEN & \"X:Y\",1:GOTO 190:&:GOTO 180:REM! CLEAR COMMON\n270 IF (((P(10,XY%)<>P(XY%,W%)))*Q1%-255) THEN RUN\n280 NEXT X:DATA -2.5,1,1,HI\n290 W%=FRE(B+POS(40000)):PRINT Z;:NEXT X\n300 GOTO 130:TRACE:PRINT:CONT\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 200\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

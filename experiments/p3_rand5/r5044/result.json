@@ -1,0 +1,23 @@
+{
+ "id": "r5044",
+ "key": "55184783b8202319",
+ "source": "10 REM! INTEGER I,K\n20 DIM D(11,9)\n30 DEF FN F(T)=Q1%^((Y% AND K<>I))\n40 INVERSE:READ I:PRINT I OR I\n50 REM! CLEAR COMMON:X=W>=LEN(Z$):DATA \n60 Y%=((41377>10173))*AB:X=Y% OR Y%:Z=W%-C%+INT(X)>=39:DATA X\n70 GOTO 100:Y%=N2\n80 VTAB ((20149<-K))^((Z+((W%>=P%(W%))))):READ Z$\n90 IF (-((32767>=AB))) THEN W=-AB:DATA X:FOR Z=(FN F(A(K,C%))^ATN(32767)) TO (7)\n100 N2=FRE(LEFT$(CHR$(32767<=W),100<((D(Y%,Q1%)<15027)))):PRINT POS(M$)\n110 HCOLOR=-((FN F(W%)<((C%=W)))):Q1%=FN F(Q1%/NOT A(Q1%,W%)):X=FRE(Q1%)+POS(VAL(\"A\"))\n",
+ "options": {
+  "library": 4096,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 50\nSYNTAX\n\n REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

@@ -1,0 +1,23 @@
+{
+ "id": "r6026",
+ "key": "cb5611cf15074193",
+ "source": "10 REM! INTEGER K\n20 DIM B(7)\n30 X=FRE(LEFT$(W$+\"A\",Z%<X-Z%)):PRINT POS(W$):FOR N2=(X<Z) TO (LEN(RIGHT$(\"X Y\",POS(\"HI\"))))\n40 DEL 10,20:INPUT N2$,B,N2\n50 GET B:A%=B AND (A):B=((COS(X)*((45414+B))))^K\n60 B=FRE(W$):PRINT POS(W$):K=-77:B=VAL(W$)<=N2\n70 K=3:K=N2:TRACE:A=K:IF ((NOT ((K>=0.1)))) THEN LIST\n80 NEXT:ON A*((B(A%)*577)) GOTO 30,70\n90 PRINT \"\";\n100 INVERSE\n110 STORE B,C\n120 X=N2:IF (X AND X) THEN 20\n130 SPEED=33941:A=-C%<100>B(256)+N2%+D%(Z%,65535)/Z%\n140 IF (135*1000) THEN GOTO 160:REM! CLEAR COMMON:ON NOT FRE(N2$) OR ((X+25404))*N2^382 GOTO 110,110,100,220\n150 FOR A=(Z%) TO (N2):CONT:RUN\n160 N2%=((B<>32767))+X>N2%:RECALL A:A=N2%\n170 COLOR=NOT N2:Z%=ASC(RIGHT$(\"\",19393)):IF (Z% OR Z%) THEN 40:N2=FRE(C%)+PEEK(N2%)\n180 IF (ABS(N2)) THEN STORE B,C:Z=A\n190 GET Z%:K=Z% OR (N2):RUN 210\n200 Z=A%:IF (Z AND Z) THEN 120\n210 PRINT K-N2 OR COS(C%)>A;NOT TAN(X);\n220 A%=32767\n230 DATA ,1,300,HI:FOR B=(FRE(NOT ((39+39)))) TO (INT(N2)>=B):Z%=C%:B=Z% OR B\n",
+ "options": {
+  "library": null,
+  "program": 20480,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 140\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

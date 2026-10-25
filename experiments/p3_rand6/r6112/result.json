@@ -1,0 +1,113 @@
+{
+ "id": "r6112",
+ "key": "fc825e746e9d27b2",
+ "source": "10 REM! INTEGER I,K\n20 DIM D%(4,3)\n30 PRINT PEEK(NOT ((617+127)));STR$(LEN(LEFT$(Y$,W%)));Y$;\n40 IF (NOT VAL(Y$)+SGN(N2%>=K)) THEN CONT:CALL AB\n50 K=((24 OR XY/N2))>=3:AB=K OR K:END\n60 IF (M) THEN FOR B=(5) TO (FRE(B))\n70 PRINT\n80 IF (W%-578<>TAN(NOT K)) THEN TRACE:GOSUB 40\n90 GET K:N2%=K AND (VAL(\"123\")):I=B(NOT W%=20*W%):M=I AND I\n100 NOTRACE\n110 HCOLOR=0\n120 READ N2%:PRINT N2% OR N2%:N2%=.5*2\n130 A$=Y$+Y$+LEFT$(\"HI\",AB%):TEXT:GOTO 140:REM! CLEAR CHAIN\n140 RUN 180:IF (20) THEN & \"X:Y\",1\n150 IF (49152<N2) THEN 90:CONT:PRINT A$,\n160 B=-((K+A(K)+N2%)):IF (B AND B) THEN 130:N2=(K<=AB%=595):VTAB SIN(AB^AB%=NOT 255)\n170 GET W%:I=W% OR (TAN(A(AB%))<=W%*(7))\n180 NOTRACE:M=N2:SHLOAD:N2=M:M=FRE(\"\"):PRINT POS(Y$)\n190 GOTO 200:STORE B,C:&:PRINT Y$,\n200 GOTO 120:& \"X:Y\",1:M$=MID$(A$,B)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 924,
+ "obj_sha256": "b7d0b74b0e44c478963f44889380679d7204470e7460b10e6f5f5f860f93cf4c",
+ "cycles": 111725118,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6130
+  },
+  {
+   "line": 50,
+   "addr": 6172
+  },
+  {
+   "line": 60,
+   "addr": 6214
+  },
+  {
+   "line": 70,
+   "addr": 6239
+  },
+  {
+   "line": 80,
+   "addr": 6242
+  },
+  {
+   "line": 90,
+   "addr": 6274
+  },
+  {
+   "line": 100,
+   "addr": 6355
+  },
+  {
+   "line": 110,
+   "addr": 6355
+  },
+  {
+   "line": 120,
+   "addr": 6361
+  },
+  {
+   "line": 130,
+   "addr": 6394
+  },
+  {
+   "line": 140,
+   "addr": 6444
+  },
+  {
+   "line": 150,
+   "addr": 6450
+  },
+  {
+   "line": 160,
+   "addr": 6464
+  },
+  {
+   "line": 170,
+   "addr": 6508
+  },
+  {
+   "line": 180,
+   "addr": 6553
+  },
+  {
+   "line": 190,
+   "addr": 6581
+  },
+  {
+   "line": 200,
+   "addr": 6584
+  }
+ ],
+ "info": {
+  "R K": "END",
+  "XT": "GOTO 140",
+  "RECOGNIZED": "REM ! CLEAR CHAIN",
+  "OBJECT FILE": "S012.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6987",
+  "LOCAL VARIABLES": "6988 - 7187",
+  "HIGHEST MEMORY LOCATION": "7187"
+ }
+}

@@ -1,0 +1,94 @@
+{
+ "id": "r5120",
+ "key": "d56a49d861c76e95",
+ "source": "10 REM! INTEGER K,I\n20 DIM D$(6)\n30 DEF FN F(X)=5\n40 Y%=((A%-A%))*1E3\n50 COLOR=K:W=256\n60 COLOR=FN F(C):GR:C=FRE(RIGHT$(AB$,-((41827/B)))):PRINT POS(W$)\n70 Y=FN F(FN F(1)):HTAB A%\n80 REM! CLEAR COMMON\n90 A%=B:IF (A% AND A%) THEN 70\n100 SPEED=EXP(0+((A% OR A%))):FOR K=(FN F(SIN(C))) TO (-POS(W)):W=W%\n110 RUN 80:W$=\"A\"\n120 READ A%:PRINT A% AND A%\n130 Y%=Y<((C OR W))-FRE(Y):IF (Y% OR Y%) THEN 140:READ N2%:PRINT N2% AND N2%:RUN 100\n140 PRINT FN F(K>=65535)<=FN F(C)+40;RIGHT$(\"X Y\",B);\n150 IF (B) THEN COLOR=Z:PRINT:PRINT \"HI\",AB$;\n160 GOSUB 120\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 649,
+ "obj_sha256": "3979db6ce1186bc474fb2ca3c164580d98b72874d3c9fe14c6865fb72d697f56",
+ "cycles": 94867103,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6094
+  },
+  {
+   "line": 50,
+   "addr": 6106
+  },
+  {
+   "line": 60,
+   "addr": 6118
+  },
+  {
+   "line": 70,
+   "addr": 6160
+  },
+  {
+   "line": 80,
+   "addr": 6178
+  },
+  {
+   "line": 90,
+   "addr": 6181
+  },
+  {
+   "line": 100,
+   "addr": 6204
+  },
+  {
+   "line": 110,
+   "addr": 6257
+  },
+  {
+   "line": 120,
+   "addr": 6276
+  },
+  {
+   "line": 130,
+   "addr": 6300
+  },
+  {
+   "line": 140,
+   "addr": 6344
+  },
+  {
+   "line": 150,
+   "addr": 6398
+  },
+  {
+   "line": 160,
+   "addr": 6438
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6712",
+  "LOCAL VARIABLES": "6713 - 6775",
+  "HIGHEST MEMORY LOCATION": "6775"
+ }
+}

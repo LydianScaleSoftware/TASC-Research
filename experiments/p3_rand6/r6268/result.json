@@ -1,0 +1,87 @@
+{
+ "id": "r6268",
+ "key": "79b658641a369c38",
+ "source": "10 REM! INTEGER *\n20 DIM D%(5)\n30 A%=C=B:LIST:XY=A%:IF (LEN(Z$+\"123\"+Z$)) THEN A%=Q1 AND D%(A%):XY=A% OR A%:RUN\n40 XDRAW A%(698+B)*2\n50 PRINT:POKE LEN(\"A\"),POS(NOT AB%>=B)\n60 SCALE=B<>2:RUN 100\n70 XY=FRE(MID$(STR$(X%)+M$,347)):PRINT POS(Z$):IF ((2.25)) THEN 140\n80 RUN 120:COLOR=2\n90 FOR C=(B) TO (NOT 20 OR D%(0) OR EXP((XY))):A%=-((NOT D%(A%))):Q1=A% AND Q1 AND Q1%\n100 D%(B)=(((Q1%) AND X%>=A%(Q1%)))^((-A%(121)^B)):IF (((XY+-49710))/(((M)-COS(A%)))) THEN RUN\n110 CONT:GOSUB 140\n120 Q1%=40:RUN:PRINT:X=1:REM! CLEAR COMMON\n130 LIST:PRINT M$;:AB%=C\n140 RUN:X%=PEEK(C/0)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 792,
+ "obj_sha256": "ae796afd2942bece2200673f7d3294826dbf760e4ba81db2df9452ba1faf33a0",
+ "cycles": 100523589,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6177
+  },
+  {
+   "line": 50,
+   "addr": 6192
+  },
+  {
+   "line": 60,
+   "addr": 6229
+  },
+  {
+   "line": 70,
+   "addr": 6247
+  },
+  {
+   "line": 80,
+   "addr": 6288
+  },
+  {
+   "line": 90,
+   "addr": 6294
+  },
+  {
+   "line": 100,
+   "addr": 6383
+  },
+  {
+   "line": 110,
+   "addr": 6480
+  },
+  {
+   "line": 120,
+   "addr": 6483
+  },
+  {
+   "line": 130,
+   "addr": 6501
+  },
+  {
+   "line": 140,
+   "addr": 6513
+  }
+ ],
+ "info": {
+  "RECOGNIZED": "REM ! CLEAR COMMON",
+  "OBJECT FILE": "S008.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6855",
+  "LOCAL VARIABLES": "6856 - 6918",
+  "HIGHEST MEMORY LOCATION": "6918"
+ }
+}

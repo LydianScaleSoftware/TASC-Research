@@ -1,0 +1,74 @@
+{
+ "id": "r5294",
+ "key": "fa87bfd29cbafcd1",
+ "source": "10 REM! INTEGER K\n20 DEF FN F(T)=A\n30 IF (Y%) THEN 40:IF (K) THEN RUN\n40 K=B:B=K AND K\n50 B=EXP(W%):IF (B OR B) THEN 70\n60 FOR Q1=(-((Y%<=AB%))>=FRE(Q1)) TO (FN F(NOT AB%)<>((20>=K<VAL(\"HI\")))) STEP (Z%):M=Z%:Q1=M AND M:GET AB:Z%=AB OR (ATN(AB))\n70 PRINT A,:B=INT(W%*Y%)=((M<>Y%))-((256>K))\n80 B=((M+Q1<>LEN(Y$)))+Z%\n90 READ M,Y$:AB=FRE(CHR$(2445)):PRINT POS(Z$)\n100 PRINT NOT 162;\n110 IF (-((3<>-0))) THEN 110:AB%=-B=.001+1:B=SGN(W%)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 738,
+ "obj_sha256": "d5cb27e571c3c2b98145bc05d8349fbbbfd512d9c38ed1191e3c3022cfc0e412",
+ "cycles": 96619271,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6094
+  },
+  {
+   "line": 40,
+   "addr": 6105
+  },
+  {
+   "line": 50,
+   "addr": 6132
+  },
+  {
+   "line": 60,
+   "addr": 6161
+  },
+  {
+   "line": 70,
+   "addr": 6303
+  },
+  {
+   "line": 80,
+   "addr": 6363
+  },
+  {
+   "line": 90,
+   "addr": 6396
+  },
+  {
+   "line": 100,
+   "addr": 6438
+  },
+  {
+   "line": 110,
+   "addr": 6450
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S014.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6801",
+  "LOCAL VARIABLES": "6802 - 6855",
+  "HIGHEST MEMORY LOCATION": "6855"
+ }
+}

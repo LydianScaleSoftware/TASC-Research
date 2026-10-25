@@ -1,0 +1,23 @@
+{
+ "id": "r6003",
+ "key": "180ccc4e8fc09fda",
+ "source": "10 REM! INTEGER J\n20 DEF FN F(Z)=XY%\n30 SPEED=145\n40 M=49152+7:DATA ,HI,1\n50 IF (NOT 0.1) THEN 160\n60 GET N2:J=N2 AND (VAL(C$)):PRINT \"\",STR$(FRE(ASC(\"\"))),:N2=FRE(\"TASC\"+MID$(N2$+AB$,374)):PRINT POS(C$)\n70 C$=\"HI\":GOSUB 20\n80 GOTO 280:REM! CLEAR CHAIN:IF (W) THEN RETURN:VTAB -1.5=B%\n90 XY%=((5<N2%>=1E3))/((Y>=VAL(\"123\"))):N2$=C$\n100 GOTO 40:LOMEM: 16384:IF (B%) THEN LOAD \"F\":M=SQR(100):X=M OR M\n110 M=B%^((LEN(N2$)*((N2%<=W)))):M=FRE(M)+POS(40):B%=Y:DEL 10,20:N2=B%\n120 STORE B,C\n130 J=-PEEK(A%):X=FRE(J)+POS(-32767<=((((48305 OR N2))=((M AND 10))))):SAVE\n140 PRINT SIN(FN F(N2%))<=Y-((A(B%,XY%)>=A(J,A%)));10;:N2$=AB$+\"\"+N2$:PRINT\n150 J=N2%+((POS(A%)=X)):IF (J OR J) THEN 150:M=255:A%=30665<=-B%:X=A% OR XY%\n160 ON A(X/J,J) GOTO 310\n170 PRINT:SAVE\n180 HTAB M\n190 IF (((M+X))*((W>7))+ASC(MID$(\"123\",1000,A%))) THEN IF (-((-FN F(N2%)))) THEN STORE B,C\n200 RUN 300:READ N2%:PRINT N2% OR N2%:CALL A(XY%,3)+A(36015,2) OR M\n210 A(A%,W^((N2%^1.5<=B%)))=B%:NOTRACE\n220 Y=FRE(LEFT$(MID$(C$,-100),M)):PRINT POS(AB$)\n230 X=40000:IF (X AND X) THEN 140\n240 N2=((X=A(10,J)))^556>POS(N2$):RECALL A:N2=N2\n250 N2%=X:PRINT\n260 C$=N2$:REM! CLEAR COMMON:ONERR GOTO 190\n270 AB$=AB$:B%=RND(-M):X=B% AND FRE(VAL(AB$+N2$))\n280 HCOLOR=-FN F(A(B%,B%))\n290 RUN\n300 B%=J+39+((N2=A(N2%,J)))>=((NOT J<=-W)):DEL 10,20:N2=B%:RUN 320:W=NOT B%\n310 XY%=FRE(AB$)>2:IF (XY% OR XY%) THEN 30\n320 N2%=3:SAVE:Y=N2%:GOTO 230:STORE B,C\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 80\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

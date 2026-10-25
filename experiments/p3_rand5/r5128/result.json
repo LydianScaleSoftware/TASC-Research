@@ -1,0 +1,123 @@
+{
+ "id": "r5128",
+ "key": "27dc68c5e3e86f3d",
+ "source": "10 REM! INTEGER I,J\n20 DIM D%(5,11)\n30 A%=X:IF (A% OR A%) THEN 20:PRINT N2*378*((J<=XY%));24,Y%,\n40 M=40>LOG(M<A%):N2=W*707\n50 FOR C=(Y%) TO (ASC(LEFT$(Z$,ASC(\"X Y\")))):M=D%(I,-A%<>X):N2=FRE(M)+POS(XY%)\n60 GOTO 60:IF (M<>((Y%>3.14159))-D%(Y%,255)) THEN IF (((NOT .5=W^I))-((SIN(256)>=3))) THEN IF (ATN(-J=M)) THEN 70\n70 B$=\"\":N2=NOT ((X-D%(J,I)))=A%:M=N2 OR N2:D%(A%,((20983 OR (C%)))+3)=I>FRE(B$+Z$)\n80 RUN 180\n90 I=C/I*C<>((VAL(B$)=I)):IF (5) THEN RESTORE\n100 READ N2,W$\n110 READ M,J:Y%=42966:X=FRE(Y%)+POS(-A%)\n120 IF (3) THEN RUN\n130 FOR C=(1000) TO ((Y%^C%)) STEP ((I*25357)-N2)\n140 W$=MID$(MID$(W$,I),415,M*XY%)+MID$(\"TASC\",20/19)\n150 X=D%(C%*N2>(182),XY%):M=X OR X\n160 C=VAL(RIGHT$(\"X Y\",C))\n170 GOSUB 130:B$=\"TASC\"\n180 READ J:PRINT J OR J\n190 COLOR=J-C%:GOSUB 20:HTAB VAL(RIGHT$(\"HI\"+\"TASC\",D%(J,.001)))\n200 READ J\n210 IF (INT(40)) THEN 190\n220 READ M,C:PRINT I*C*((Y%+(N2)));\n230 C=A%:W=C AND C:READ X:PRINT X OR X:COLOR=Y%/D%(XY%,XY%)<=-X<>C^X*256\n",
+ "options": {
+  "library": null,
+  "program": 20480,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 20480,
+ "obj_len": 1235,
+ "obj_sha256": "0a3c6cf21edb57d52b111db0dc1fa68114ea40cf4c803f712881b997a7b3bef5",
+ "cycles": 123213557,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 20500
+  },
+  {
+   "line": 20,
+   "addr": 20500
+  },
+  {
+   "line": 30,
+   "addr": 20500
+  },
+  {
+   "line": 40,
+   "addr": 20523
+  },
+  {
+   "line": 50,
+   "addr": 20553
+  },
+  {
+   "line": 60,
+   "addr": 20639
+  },
+  {
+   "line": 70,
+   "addr": 20642
+  },
+  {
+   "line": 80,
+   "addr": 20740
+  },
+  {
+   "line": 90,
+   "addr": 20746
+  },
+  {
+   "line": 100,
+   "addr": 20790
+  },
+  {
+   "line": 110,
+   "addr": 20802
+  },
+  {
+   "line": 120,
+   "addr": 20847
+  },
+  {
+   "line": 130,
+   "addr": 20858
+  },
+  {
+   "line": 140,
+   "addr": 20896
+  },
+  {
+   "line": 150,
+   "addr": 20960
+  },
+  {
+   "line": 160,
+   "addr": 21002
+  },
+  {
+   "line": 170,
+   "addr": 21026
+  },
+  {
+   "line": 180,
+   "addr": 21045
+  },
+  {
+   "line": 190,
+   "addr": 21069
+  },
+  {
+   "line": 200,
+   "addr": 21132
+  },
+  {
+   "line": 210,
+   "addr": 21138
+  },
+  {
+   "line": 220,
+   "addr": 21151
+  },
+  {
+   "line": 230,
+   "addr": 21184
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "OR X": "COLOR= Y% / D%(XY%,XY%) <  =  - X",
+  "OBJECT FILE": "S008.OBJ",
+  "PROGRAM": "20480 - 21714",
+  "LOCAL VARIABLES": "21715 - 21908",
+  "HIGHEST MEMORY LOCATION": "21908"
+ }
+}

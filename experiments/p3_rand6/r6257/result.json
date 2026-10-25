@@ -1,0 +1,23 @@
+{
+ "id": "r6257",
+ "key": "372dc899978c1cb2",
+ "source": "10 REM! INTEGER K,I\n20 W$=\"123\":CONT:ON ((K OR AB%))-((Y>=30434))--SGN(7) GOTO 70,120,30,100\n30 READ AB%:PRINT AB% OR AB%\n40 X=SGN(Z%)+256:N2=X AND X:END:FOR N2=(I) TO (5)\n50 GOTO 100:REM! CLEAR COMMON:AB%=N2+AB%=POS(\"X Y\")>=-((M<>100))\n60 W$=STR$(I):FOR Y=(141) TO (-((-((.5>=2))))) STEP (N2+((N2<K)))\n70 X=39:GOTO 100\n80 READ I:PRINT I AND I:I=Y:LIST:M=I\n90 IF (NOT ((-Y)) AND AB%) THEN IF (AB/ABS(1768)) THEN N2=NOT Z%:IF (N2 AND N2) THEN 120:HTAB LEN(A$):ON NOT ((X=C%))^((N2*((Z%*M)))) GOTO 90,20\n100 GOTO 20:& \"X:Y\",1:REM! CLEAR CHAIN\n110 I=N2<>ASC(A$):X=I OR I\n120 IF (NOT X) THEN SHLOAD\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 50\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

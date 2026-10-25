@@ -1,0 +1,83 @@
+{
+ "id": "r6204",
+ "key": "58a25c5f2c16bf6a",
+ "source": "10 REM! INTEGER *\n20 SPEED=B:IF (NOT 255) THEN & \"X:Y\",1:W=1E3=((D(Q1%) AND X)):SHLOAD:W=W\n30 TEXT\n40 IF (ATN((1)<POS(\"\"))) THEN A$=\"X Y\"\n50 GOTO 100:CONT:HLIN X,(W) AT Q1%\n60 NOTRACE:DATA \"A,B\"\n70 CALL -A*X/W:STORE B,C:DATA \"A,B\",X\n80 PRINT ASC(Z$)*ATN(Q1%)-D(Q1%);Z;\n90 PRINT:IF (((607<=3.14159))+40000^202 AND A) THEN Z=FRE(\"123\"):PRINT POS(Z$)\n100 GET B:X%=B OR (A)\n110 A=FRE(\"123\"):PRINT POS(A$):PRINT:VTAB SIN((W<B))\n120 M%=W:IF (SQR(M%+24)+((D(12370)<=W OR 66<255))) THEN A=TAN(230)*((A<>W))^((D(1)<=3)):IF (INT(D(B)-((Q1%+127)))) THEN W=NOT RND(A)*FRE(POS(24)):IF (W OR W) THEN 120\n130 IF (Z) THEN 20\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 859,
+ "obj_sha256": "ee1071d2036a5051b4a8d85328bf5e3236027505d44908f245313fd9e4b3c142",
+ "cycles": 105761245,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6131
+  },
+  {
+   "line": 40,
+   "addr": 6134
+  },
+  {
+   "line": 50,
+   "addr": 6172
+  },
+  {
+   "line": 60,
+   "addr": 6175
+  },
+  {
+   "line": 70,
+   "addr": 6185
+  },
+  {
+   "line": 80,
+   "addr": 6221
+  },
+  {
+   "line": 90,
+   "addr": 6263
+  },
+  {
+   "line": 100,
+   "addr": 6326
+  },
+  {
+   "line": 110,
+   "addr": 6347
+  },
+  {
+   "line": 120,
+   "addr": 6387
+  },
+  {
+   "line": 130,
+   "addr": 6567
+  }
+ ],
+ "info": {
+  "RINT": "VTAB  SIN ((W < B))",
+  "OBJECT FILE": "S004.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6922",
+  "LOCAL VARIABLES": "6923 - 6976",
+  "HIGHEST MEMORY LOCATION": "6976"
+ }
+}

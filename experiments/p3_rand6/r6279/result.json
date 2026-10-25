@@ -1,0 +1,86 @@
+{
+ "id": "r6279",
+ "key": "9ff1775d64765830",
+ "source": "10 REM! INTEGER K,I\n20 IF (((XY%-I))*((((M%-641))*(A)))) THEN RUN 70\n30 REM! CLEAR CHAIN\n40 A=FRE(XY$):PRINT POS(C$):GOTO 70:RECALL A\n50 DEL 10,20:XY%=XY%:W=XY% AND XY%:XY%=Y%\n60 HCOLOR=NOT K:GOTO 90:STORE B,C:IF (2.25) THEN 120\n70 Y%=I:AB=Y% OR Y%\n80 Z=FRE(CHR$(I)):PRINT POS(XY$):GOTO 110:CONT:GOTO 10:LOAD \"F\"\n90 Z=SIN(M%-C%)*A:GOTO 30\n100 C%=K/((((AB AND M%))+533)):ONERR GOTO 130\n110 XY%=-((XY%>=((20<I)))):W=FRE(XY%)+POS(7+((((X=568))-((Y%=W))))):HLIN -5--Y%>=NOT ((W-Y%)),(AB*1.5*(M%)+((-Y%+K*24))) AT C%\n120 LIST:C%=NOT I:W=C% AND C%:A=AB AND 2.25+AB:Z=FRE(A)+POS(FRE(127))\n130 IF (Y%=XY%) THEN X=.001 OR C%:& \"X:Y\",1:A=X:C%=A>=24:Z=C% OR C%\n140 GOTO 70:LOMEM: 16384\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 819,
+ "obj_sha256": "76bd92c1e6a94ab51e9848ea3cad0639c5585647c77c56ec3c2e7c3e077f751c",
+ "cycles": 108999470,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6118
+  },
+  {
+   "line": 40,
+   "addr": 6121
+  },
+  {
+   "line": 50,
+   "addr": 6139
+  },
+  {
+   "line": 60,
+   "addr": 6157
+  },
+  {
+   "line": 70,
+   "addr": 6169
+  },
+  {
+   "line": 80,
+   "addr": 6181
+  },
+  {
+   "line": 90,
+   "addr": 6205
+  },
+  {
+   "line": 100,
+   "addr": 6226
+  },
+  {
+   "line": 110,
+   "addr": 6249
+  },
+  {
+   "line": 120,
+   "addr": 6401
+  },
+  {
+   "line": 130,
+   "addr": 6461
+  },
+  {
+   "line": 140,
+   "addr": 6514
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S004.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6882",
+  "LOCAL VARIABLES": "6883 - 6935",
+  "HIGHEST MEMORY LOCATION": "6935"
+ }
+}

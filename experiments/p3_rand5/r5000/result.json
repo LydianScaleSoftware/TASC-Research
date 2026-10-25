@@ -1,0 +1,127 @@
+{
+ "id": "r5000",
+ "key": "488f0482228e1e8a",
+ "source": "10 REM! INTEGER *\n20 DIM A$(6,7),D$(12)\n30 DEF FN F(T)=FRE(B)\n40 READ AB%:PRINT AB% OR AB%\n50 Q1%=AB%:AB=Q1% AND Q1%:CALL SGN(ASC(\"\"))=Q1%*-991\n60 SPEED=7:NORMAL\n70 W%=ASC(CHR$(AB%)) OR 7:GOSUB 90\n80 ON X GOTO 220,110:CALL LEN(\"HI\"+B$)<>Q1%\n90 READ B$,B:GOSUB 120:XY=FRE(B$):PRINT POS(M$):HCOLOR=B\n100 RESTORE:FOR Z=(-((AB%<>144-39))) TO (FN F(TAN(AB))<=-XY)\n110 PRINT A$(2.25*XY-((X+X)),FN F(XY-AB));LEFT$(\"123\"+\"123\",XY*AB>=AB);:READ X:PRINT X OR X:W%=W%:IF (W% AND W%) THEN 220\n120 NEXT Z:SPEED=RND(AB):X=B:B=X OR B\n130 AB=((W%-AB%-AB))*((1000>127)):RUN 190\n140 HLIN 474+26,(POS(AB)) AT ((XY-X))/39/((100<AB%>=W%)):AB%=XY:PRINT\n150 IF (((Z AND RND(127)))+VAL(B$+\"HI\")) THEN 60\n160 Y$=Y$:Z%=XY:IF (Z% OR Z%) THEN 170:B=B:AB=B AND XY\n170 PRINT Z%;B$,:HCOLOR=B\n180 PRINT CHR$(3);XY;D$(40);:PRINT\n190 AB%=B<TAN(XY)<=((AB-Z%>=319)):B=AB% OR -Z\n200 GOTO 170:Q1%=B:B=Q1% OR AB%:RESTORE\n210 ON AB+((((Z>=1000))+((XY<Z)))) GOSUB 10,160,230\n220 B=FRE(MID$(Y$,B))\n230 PRINT \"\";Y$+LEFT$(B$,B)+Y$+\"123\";:M$=MID$(Y$,POS(3))+Y$:XY=32767*-((B OR AB))\n240 GET Z%:Z%=Z% OR (B*EXP(100=AB)):PRINT XY/X>100 AND VAL(B$);M$;AB%,\n",
+ "options": {
+  "library": 4096,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 8109,
+ "obj_len": 1472,
+ "obj_sha256": "147f0da49a11f7f6f3c7a82a99392d3377e1e8106c805bdabe3fe36bc7dd9ca8",
+ "cycles": 136004933,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 8129
+  },
+  {
+   "line": 20,
+   "addr": 8129
+  },
+  {
+   "line": 30,
+   "addr": 8129
+  },
+  {
+   "line": 40,
+   "addr": 8139
+  },
+  {
+   "line": 50,
+   "addr": 8163
+  },
+  {
+   "line": 60,
+   "addr": 8217
+  },
+  {
+   "line": 70,
+   "addr": 8226
+  },
+  {
+   "line": 80,
+   "addr": 8250
+  },
+  {
+   "line": 90,
+   "addr": 8293
+  },
+  {
+   "line": 100,
+   "addr": 8329
+  },
+  {
+   "line": 110,
+   "addr": 8385
+  },
+  {
+   "line": 120,
+   "addr": 8522
+  },
+  {
+   "line": 130,
+   "addr": 8557
+  },
+  {
+   "line": 140,
+   "addr": 8596
+  },
+  {
+   "line": 150,
+   "addr": 8662
+  },
+  {
+   "line": 160,
+   "addr": 8713
+  },
+  {
+   "line": 170,
+   "addr": 8754
+  },
+  {
+   "line": 180,
+   "addr": 8775
+  },
+  {
+   "line": 190,
+   "addr": 8802
+  },
+  {
+   "line": 200,
+   "addr": 8856
+  },
+  {
+   "line": 210,
+   "addr": 8880
+  },
+  {
+   "line": 220,
+   "addr": 8917
+  },
+  {
+   "line": 230,
+   "addr": 8932
+  },
+  {
+   "line": 240,
+   "addr": 9022
+  }
+ ],
+ "info": {
+  "LIBRARY": "4096 - 8108",
+  "XY": "PRINT",
+  "OBJECT FILE": "S000.OBJ",
+  "PROGRAM": "8109 - 9580",
+  "LOCAL VARIABLES": "9581 - 9754",
+  "HIGHEST MEMORY LOCATION": "9754"
+ }
+}

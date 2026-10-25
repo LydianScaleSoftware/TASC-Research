@@ -1,0 +1,66 @@
+{
+ "id": "r6059",
+ "key": "224a5e7344ba801c",
+ "source": "10 DIM D(5),A%(10)\n20 Q1%=W:LOAD \"F\"\n30 POKE ASC(C$),Q1%:RUN\n40 W=-RND(C%)=40000*((Q1% OR 24)):Q1=W:N2=Q1 OR Q1\n50 D(.5)=M OR RND(W%)\n60 GOSUB 60\n70 HCOLOR=EXP(VAL(C$))\n80 IF (5) THEN C$=C$:NOTRACE\n90 RUN 70:W%=NOT 7:B=Q1:SAVE:W=B\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 403,
+ "obj_sha256": "a89e5149cb938a558a74f703592e2b1bb30f4f91597601aaaceb6c56f5b2880f",
+ "cycles": 75917456,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6093
+  },
+  {
+   "line": 40,
+   "addr": 6117
+  },
+  {
+   "line": 50,
+   "addr": 6180
+  },
+  {
+   "line": 60,
+   "addr": 6207
+  },
+  {
+   "line": 70,
+   "addr": 6210
+  },
+  {
+   "line": 80,
+   "addr": 6225
+  },
+  {
+   "line": 90,
+   "addr": 6242
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S005.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6466",
+  "LOCAL VARIABLES": "6467 - 6556",
+  "HIGHEST MEMORY LOCATION": "6556"
+ }
+}

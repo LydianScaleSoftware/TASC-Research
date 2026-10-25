@@ -1,0 +1,135 @@
+{
+ "id": "r6270",
+ "key": "1208a2ef5ad97e4d",
+ "source": "10 REM! INTEGER J\n20 REM! DEFCOMMON Z%,J,B%\n30 DEF FN F(X)=Q1\n40 READ B$,Y\n50 FOR Y=(-((Y<>100))) TO (B%):Z%=Y:Q1=FRE(Z%)+POS(SIN(Y=X%>=COS(AB)))\n60 IF (X%) THEN LIST 10-20\n70 Q1=-((((Y AND XY%))>=FN F(39)))\n80 SHLOAD:GOTO 180:AB$=MID$(RIGHT$(B$(XY%),SGN(XY%)),-XY)\n90 CALL ((24 AND .001-X%))*((SGN(J)>POS(Z%))):DATA HI\n100 LOAD \"F\":READ Q1:PRINT Q1 AND Q1:TRACE\n110 NOTRACE:IF (-39) THEN SHLOAD:GET X%:J=X% OR (256)\n120 IF (Z%<=-((-Z%))) THEN 80\n130 TRACE\n140 SPEED=B%\n150 IF (209) THEN TRACE\n160 AB=-3.14159:IF (AB OR AB) THEN 230\n170 READ XY%:PRINT XY% AND XY%:PRINT -((Y-AB))=((VAL(B$(B%)) OR 179+Q1));\n180 READ B$,AB:J=39221:M=J OR J\n190 Z%=1*11244^256:Q1=FRE(Z%)+POS(B%):READ Q1:PRINT Q1 AND Q1\n200 M=((B%^XY=J))+18216:LOAD \"F\":HTAB X%<>J=X%-J+XY\n210 READ AB$\n220 &:DEL 10,20:PRINT B$;\n230 Q1=20:XY=Q1 AND XY%\n240 X%=ATN(273):XY=X% AND X%:IF (-LEN(STR$(M))) THEN LIST 10-20\n250 POKE FN F(Y+Y OR FN F(1)),VAL(W$)\n260 DATA -2.5,HI,X\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6070,
+ "obj_len": 1230,
+ "obj_sha256": "47e8e0f55010c6f83745b983188913addb8e101152a467bd5cf3645d824518b9",
+ "cycles": 127637994,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6090
+  },
+  {
+   "line": 40,
+   "addr": 6100
+  },
+  {
+   "line": 50,
+   "addr": 6115
+  },
+  {
+   "line": 60,
+   "addr": 6201
+  },
+  {
+   "line": 70,
+   "addr": 6212
+  },
+  {
+   "line": 80,
+   "addr": 6245
+  },
+  {
+   "line": 90,
+   "addr": 6278
+  },
+  {
+   "line": 100,
+   "addr": 6332
+  },
+  {
+   "line": 110,
+   "addr": 6359
+  },
+  {
+   "line": 120,
+   "addr": 6402
+  },
+  {
+   "line": 130,
+   "addr": 6425
+  },
+  {
+   "line": 140,
+   "addr": 6425
+  },
+  {
+   "line": 150,
+   "addr": 6434
+  },
+  {
+   "line": 160,
+   "addr": 6445
+  },
+  {
+   "line": 170,
+   "addr": 6474
+  },
+  {
+   "line": 180,
+   "addr": 6552
+  },
+  {
+   "line": 190,
+   "addr": 6594
+  },
+  {
+   "line": 200,
+   "addr": 6660
+  },
+  {
+   "line": 210,
+   "addr": 6720
+  },
+  {
+   "line": 220,
+   "addr": 6729
+  },
+  {
+   "line": 230,
+   "addr": 6738
+  },
+  {
+   "line": 240,
+   "addr": 6762
+  },
+  {
+   "line": 250,
+   "addr": 6816
+  },
+  {
+   "line": 260,
+   "addr": 6855
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S010.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6070 - 7299",
+  "NUMERIC COMMON": "6064 - 6069",
+  "LOCAL VARIABLES": "7300 - 7371",
+  "HIGHEST MEMORY LOCATION": "7371"
+ }
+}

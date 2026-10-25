@@ -1,0 +1,87 @@
+{
+ "id": "r5180",
+ "key": "396c1de3467e95c1",
+ "source": "10 REM! INTEGER K,J\n20 REM! USECOMMON M%,A,W%\n30 RUN 10:GOSUB 90\n40 M%=-((990*.001))/((C^N2%<>-M%)):C=M% OR M%:WAIT SIN(N2%)^((179-N2))*((K OR 2)),(M%/((-X%<-32767))),(A):W=SIN(23117)\n50 SPEED=C-(Y):Y=EXP(SGN(TAN(K))):IF (Y OR Y) THEN 70\n60 RUN 140:IF (J) THEN 130:K=((((A%(X%,M%)-1E3))*X%))^((N2*((35625<X%))))\n70 W=861:W$=W$\n80 FOR J=(255) TO (-((-Y AND 10574>=K))):GET N2:J=N2 AND (N2):D$(1E3)=\"\"\n90 PRINT W$;\"HI\",:PRINT \"X Y\",:N2=N2%-SQR(A%(N2%,N2%))+24\n100 PRINT:GOTO 60:IF (Y<=N2+39<N2%) THEN 130\n110 Y=N2%:IF (M%) THEN C=2\n120 FOR J=(5) TO (EXP(255)):M%=C-M%\n130 W=A:A%(-C AND W OR N2,((N2% OR 3))<=A%(X%,(A)))=W%:PLOT FRE(M%)/((NOT X%-W*3)),-((((K-W%))/20))\n140 VTAB NOT K:FOR A=(-((ASC(\"123\") AND A))) TO (ASC(Q1$))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6073,
+ "obj_len": 1105,
+ "obj_sha256": "8ba38d7af8c78339eed71bf7b502b1abe954609dc0e33fae5731b89c8fa031ea",
+ "cycles": 117109419,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6093
+  },
+  {
+   "line": 40,
+   "addr": 6099
+  },
+  {
+   "line": 50,
+   "addr": 6240
+  },
+  {
+   "line": 60,
+   "addr": 6272
+  },
+  {
+   "line": 70,
+   "addr": 6329
+  },
+  {
+   "line": 80,
+   "addr": 6341
+  },
+  {
+   "line": 90,
+   "addr": 6415
+  },
+  {
+   "line": 100,
+   "addr": 6483
+  },
+  {
+   "line": 110,
+   "addr": 6489
+  },
+  {
+   "line": 120,
+   "addr": 6509
+  },
+  {
+   "line": 130,
+   "addr": 6538
+  },
+  {
+   "line": 140,
+   "addr": 6670
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6073 - 7177",
+  "NUMERIC COMMON": "6064 - 6072",
+  "LOCAL VARIABLES": "7178 - 7483",
+  "HIGHEST MEMORY LOCATION": "7483"
+ }
+}

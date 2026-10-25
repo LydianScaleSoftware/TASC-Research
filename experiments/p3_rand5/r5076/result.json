@@ -1,0 +1,110 @@
+{
+ "id": "r5076",
+ "key": "83bb8cfdf4d13eda",
+ "source": "10 DEF FN F(X)=A%+Z%\n20 IF (LOG(SQR(VAL(Y$)))) THEN VTAB 32767\n30 SPEED=7:A%=-B\n40 P(((SIN(39)--10))^ABS(422))=-((Z%<((M<=P(A%)))))\n50 READ A%:PRINT A% AND A%:HLIN 10 AND ((Z<>Z))*AB,(SQR(M%)=FN F(B) AND AB^((W%=M))) AT ((((Z% OR M))=A%))-W%:PRINT STR$(Z<>A%<((49152 OR N2)));LEFT$(A$,-W%+A%),\n60 RUN 80:PRINT:X=1:FOR B=(1000-Z%) TO (TAN(N2)-302-A%)\n70 AB=FN F(M%/W%=((P(Z%)>=A%))):M=W%:IF (M OR M) THEN 90:N2=B:M=N2 AND LEN(LEFT$(RIGHT$(Y$,W%),W%))\n80 VTAB ((3.14159 OR 20))-FN F(A%)-((M%-1960-0)):RUN:PRINT:X=1\n90 N2=AB+((532<=3 AND 1000)):P(NOT A%>-((W% OR 5)))=N2*65535+FRE(2>=285)\n100 W%=-51+P(NOT P(A%)):IF (W% OR W%) THEN 40\n110 N2=Z:IF (N2 AND N2) THEN 70:P(A%)=-((((928+3))*40)):AB=B:B=AB OR B\n120 Z%=B:SPEED=-((N2+2))+M%:N2=Z%\n130 RUN 80:GET N2:W%=N2 OR (NOT A%)\n140 N2=-((N2+B)):B=INT(N2^W%)<>W%\n150 AB=AB:IF (AB OR AB) THEN 200:GR\n160 N2=N2:DATA 1:Z%=FRE(100>=255=26542*100):IF (Z% AND Z%) THEN 160\n170 N2=M% OR M%:IF (N2 AND N2) THEN 90:GET B:M%=B AND (((Z<M%))+RND(N2)<=NOT ((1.5*P(A%)))):GOTO 70\n180 RESTORE:GOTO 50:GOTO 160\n190 CALL Z%:A%=N2<>-Z%:PRINT\n200 Z%=-991:IF (-((((P(Z%)<=Z))^N2))) THEN 100\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1538,
+ "obj_sha256": "fadcd76f13dd4c13f37772a72e09a9d585d47bd4439d554dcf9ebe47d7bfcb09",
+ "cycles": 148686492,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6100
+  },
+  {
+   "line": 30,
+   "addr": 6125
+  },
+  {
+   "line": 40,
+   "addr": 6140
+  },
+  {
+   "line": 50,
+   "addr": 6203
+  },
+  {
+   "line": 60,
+   "addr": 6380
+  },
+  {
+   "line": 70,
+   "addr": 6392
+  },
+  {
+   "line": 80,
+   "addr": 6472
+  },
+  {
+   "line": 90,
+   "addr": 6526
+  },
+  {
+   "line": 100,
+   "addr": 6610
+  },
+  {
+   "line": 110,
+   "addr": 6657
+  },
+  {
+   "line": 120,
+   "addr": 6710
+  },
+  {
+   "line": 130,
+   "addr": 6737
+  },
+  {
+   "line": 140,
+   "addr": 6758
+  },
+  {
+   "line": 150,
+   "addr": 6791
+  },
+  {
+   "line": 160,
+   "addr": 6805
+  },
+  {
+   "line": 170,
+   "addr": 6866
+  },
+  {
+   "line": 180,
+   "addr": 6942
+  },
+  {
+   "line": 190,
+   "addr": 6948
+  },
+  {
+   "line": 200,
+   "addr": 6975
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S016.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7601",
+  "LOCAL VARIABLES": "7602 - 7708",
+  "HIGHEST MEMORY LOCATION": "7708"
+ }
+}

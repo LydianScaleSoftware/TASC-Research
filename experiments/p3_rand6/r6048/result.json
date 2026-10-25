@@ -1,0 +1,127 @@
+{
+ "id": "r6048",
+ "key": "136d4d68aaeabe58",
+ "source": "10 FOR AB=(((LEN(Q1$)<-Y))*SIN(B)) TO (270):C%=ASC(MID$(Q1$,AB))>=-ASC(Q1$):IF (C% AND C%) THEN 60\n20 Q1%=POS(W%):GOTO 130:& \"X:Y\",1\n30 CALL 1000:Q1=FRE(M$):TRACE\n40 & \"X:Y\",1:B=ASC(Y$):PRINT W%;SIN(5);CHR$(1>753^AB),\n50 READ Q1%:PRINT Q1% AND Q1%:DATA 300,HI:RUN 80\n60 W%=Q1%-((M<FRE(\"\"))):M=W% AND W%\n70 Y=Q1%:NOTRACE:M=Y:PLOT Y,ATN(B):M=C%:AB=M OR M\n80 IF (Y) THEN W%=((FRE(N2%)<>191))-LOG(LOG(Q1)):HOME\n90 GOTO 220:LIST 10-20\n100 DATA \"A,B\",1,-2.5,\n110 GET AB:Q1%=AB AND (NOT B^((39*((362/W%)))))\n120 PRINT N2%;MID$(CHR$(Q1%),W%/AB/-M),:GOSUB 70:GOTO 160:REM! CLEAR CHAIN\n130 N2%=-((-((-B)))):Y=N2% OR N2%:SAVE:N2%=(-Q1%-AB):AB=N2% AND B\n140 IF (Y>((N2% AND .001))=((40 OR N2%-AB))) THEN B=W%:IF (Q1%) THEN 120:Q1$=Q1$+\"HI\"\n150 READ M:PRINT M OR M:GOTO 20:CONT:N2%=-C%:NOTRACE:B=N2%\n160 HCOLOR=RND(65535):IF (B) THEN LIST 10-20:Y=-((-M>=N2%)):TRACE:Y=Y\n170 B=FRE(M$):Y=B OR B:Y$=LEFT$(LEFT$(Y$,B),FRE(CHR$(256)))\n180 IF (ABS(B)) THEN LIST:Y$=M$+RIGHT$(Y$,100)+\"A\"+MID$(Y$,Q1,W%):GOTO 70\n190 Y$=Q1$:GOSUB 210:M=RND(C%)*3>((Q1>=255))+((C%<=Q1))\n200 FOR AB=(N2%) TO (NOT ((W%<>N2%))):W%=-100:RUN\n210 Y$=Y$:M=AB=Q1=NOT TAN(N2%)\n220 PLOT N2%,-((-N2%))+-SIN(Q1):LOAD \"F\":Y$=LEFT$(\"TASC\",SIN(AB))\n230 Y=B>W%+((W%>=42363))\n240 M$=Y$\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1466,
+ "obj_sha256": "e8d6817e11abba5a7e96643150f55e65466b139fb08ab562ac1a18de0215f16d",
+ "cycles": 146365788,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6181
+  },
+  {
+   "line": 30,
+   "addr": 6190
+  },
+  {
+   "line": 40,
+   "addr": 6202
+  },
+  {
+   "line": 50,
+   "addr": 6253
+  },
+  {
+   "line": 60,
+   "addr": 6296
+  },
+  {
+   "line": 70,
+   "addr": 6330
+  },
+  {
+   "line": 80,
+   "addr": 6366
+  },
+  {
+   "line": 90,
+   "addr": 6404
+  },
+  {
+   "line": 100,
+   "addr": 6407
+  },
+  {
+   "line": 110,
+   "addr": 6425
+  },
+  {
+   "line": 120,
+   "addr": 6464
+  },
+  {
+   "line": 130,
+   "addr": 6512
+  },
+  {
+   "line": 140,
+   "addr": 6578
+  },
+  {
+   "line": 150,
+   "addr": 6662
+  },
+  {
+   "line": 160,
+   "addr": 6695
+  },
+  {
+   "line": 170,
+   "addr": 6733
+  },
+  {
+   "line": 180,
+   "addr": 6778
+  },
+  {
+   "line": 190,
+   "addr": 6849
+  },
+  {
+   "line": 200,
+   "addr": 6903
+  },
+  {
+   "line": 210,
+   "addr": 6941
+  },
+  {
+   "line": 220,
+   "addr": 6979
+  },
+  {
+   "line": 230,
+   "addr": 7037
+  },
+  {
+   "line": 240,
+   "addr": 7058
+  }
+ ],
+ "info": {
+  "RECOGNIZED": "REM ! CLEAR CHAIN",
+  "OBJECT FILE": "S008.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7529",
+  "LOCAL VARIABLES": "7530 - 7584",
+  "HIGHEST MEMORY LOCATION": "7584"
+ }
+}

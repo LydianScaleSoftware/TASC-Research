@@ -1,0 +1,98 @@
+{
+ "id": "r5273",
+ "key": "2d454f528bea19fc",
+ "source": "10 REM! INTEGER I,J\n20 DEF FN F(X)=(B(J,C%)>=I) OR -255\n30 N2$=\"123\"\n40 PRINT A$,:B(32767,-FN F(Z%>Y))=X/J\n50 B$=STR$(J)+A$+\"\"+STR$(FRE(5))\n60 ON -A GOTO 70,80,70,90\n70 X=B(A*7,C%)-((ASC(B$)<-Z))\n80 RUN:FOR A=(Q1%) TO (20):Q1=I\n90 RUN 30:PRINT:X=1:C%=J AND 1.5:X=W% AND ((J AND W%<Q1%)):Y=X OR Z\n100 END\n110 J=NOT W%>((C%>I))>((Z% AND 2.25))+B(3.14159,Q1%):Z%=X AND -ASC(\"123\"):RUN:PRINT:X=1\n120 PRINT Z*COS(W%)+((B(0.1,Q1%)+184));Q1%+INT(J);\"TASC\";:RUN 90\n130 N2$=LEFT$(STR$(10),Z%-((X>Z))):J=-849:Y=J AND A:RUN\n140 PRINT:HPLOT FN F(0.1)+-((0+Q1)),(100-W%) TO X,(NOT LEN(A$))\n150 POKE FN F(100),J-FN F(B(C%,3)):PRINT\n160 J=((Z%<=W%))*LEN(B$)-Z:IF (J OR J) THEN 50\n170 Q1=255:Z=FRE(Q1)+POS(POS(STR$(C%))>Y):X=FN F(Y):W%=Q1%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1239,
+ "obj_sha256": "55c01ccce8248b9c5a0e23886430e4babbff5828d050895233bce14566d3db7f",
+ "cycles": 117580366,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6124
+  },
+  {
+   "line": 40,
+   "addr": 6139
+  },
+  {
+   "line": 50,
+   "addr": 6184
+  },
+  {
+   "line": 60,
+   "addr": 6226
+  },
+  {
+   "line": 70,
+   "addr": 6244
+  },
+  {
+   "line": 80,
+   "addr": 6298
+  },
+  {
+   "line": 90,
+   "addr": 6307
+  },
+  {
+   "line": 100,
+   "addr": 6376
+  },
+  {
+   "line": 110,
+   "addr": 6379
+  },
+  {
+   "line": 120,
+   "addr": 6487
+  },
+  {
+   "line": 130,
+   "addr": 6557
+  },
+  {
+   "line": 140,
+   "addr": 6608
+  },
+  {
+   "line": 150,
+   "addr": 6666
+  },
+  {
+   "line": 160,
+   "addr": 6699
+  },
+  {
+   "line": 170,
+   "addr": 6752
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S013.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7302",
+  "LOCAL VARIABLES": "7303 - 7974",
+  "HIGHEST MEMORY LOCATION": "7974"
+ }
+}

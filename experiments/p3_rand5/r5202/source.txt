@@ -1,0 +1,12 @@
+10 DIM A%(1)
+20 FOR C=(((39 OR X%<>W%))*W%) TO (M^XY%):HLIN (255),(-((-((-Z))))) AT ((10>=17565))^A%(12838)--((-127))
+30 C=VAL(B$)
+40 FOR Q1=(NOT C) TO (406-POS(XY%^1E3))
+50 NEXT Q1:PRINT "HI"+Y$;
+60 P$(((Z)+((71+255))),-((10-.001 AND W%)))=""
+70 M=M:Z=A%(451)
+80 M=FRE(STR$(-AB)+Y$):PRINT POS(Y$):PLOT X%,100:AB=LEN("123"+Y$+CHR$(463))
+90 RUN:IF (W%) THEN 10
+100 C=FRE(C$):PRINT POS(B$)
+110 B$=Y$:X%=LEN("A"+"TASC")
+120 Q1=M*1000:B%(M%,ASC("X Y")*((Q1<>XY%)) OR FRE(POS(AB)))=C

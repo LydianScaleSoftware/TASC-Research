@@ -1,0 +1,99 @@
+{
+ "id": "r6272",
+ "key": "b5a6599664b871b8",
+ "source": "10 REM! INTEGER K\n20 DIM P%(9)\n30 DEF FN F(X)=Z%\n40 Z=LOG(P%(LOG(65535))):AB=Z OR -((M%=Z%))>((M%<=A))/-N2%:PRINT ((FRE(A)+41850/M))^((((A<>961))-D%(Z%,977))),\n50 PRINT LEFT$(\"TASC\",FN F(Z%)+1000);\n60 AB=((32767 AND LEN(\"X Y\")))*Z%\n70 HCOLOR=A%(A%(171)<=Z%)<>M%\n80 Z=TAN(27782):COLOR=Z OR LOG(65535)>((N2% OR C%)):& \"X:Y\",1\n90 Z=NOT ((-A%(Z%)))-((((N2%>=1.5))-((C<=24)))):C=Z OR Z\n100 IF (Z<>256<C*256<>VAL(RIGHT$(\"X Y\",M%))) THEN TRACE:PLOT NOT ASC(\"TASC\"+B$),P%(K):PLOT 2,20+((Z%-NOT 0.1))\n110 RUN:PRINT:X=1\n120 GOSUB 50\n130 Z=Z:STORE B,C:Z=Z:C=D%(K<>20,N2%):AB=C OR C:GOTO 90:REM! CLEAR COMMON\n140 Z=FRE(\"X Y\"):READ C:PRINT C OR C:GOTO 60:REM! CLEAR COMMON\n150 IF (1) THEN SAVE\n160 C%=FRE(FN F(NOT 17641)):M=C% AND C%\n170 & \"X:Y\",1:K=AB:C=K OR K:GOTO 140\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1096,
+ "obj_sha256": "da50dcdcdc47bfcbd53d41c3a62c8c356c5d54f588dc1745990a2f8289049b0d",
+ "cycles": 115358841,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6094
+  },
+  {
+   "line": 50,
+   "addr": 6226
+  },
+  {
+   "line": 60,
+   "addr": 6254
+  },
+  {
+   "line": 70,
+   "addr": 6284
+  },
+  {
+   "line": 80,
+   "addr": 6311
+  },
+  {
+   "line": 90,
+   "addr": 6356
+  },
+  {
+   "line": 100,
+   "addr": 6412
+  },
+  {
+   "line": 110,
+   "addr": 6536
+  },
+  {
+   "line": 120,
+   "addr": 6545
+  },
+  {
+   "line": 130,
+   "addr": 6548
+  },
+  {
+   "line": 140,
+   "addr": 6602
+  },
+  {
+   "line": 150,
+   "addr": 6636
+  },
+  {
+   "line": 160,
+   "addr": 6644
+  },
+  {
+   "line": 170,
+   "addr": 6674
+  }
+ ],
+ "info": {
+  "RECOGNIZED": "REM ! CLEAR COMMON",
+  "OBJECT FILE": "S012.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7159",
+  "LOCAL VARIABLES": "7160 - 7500",
+  "HIGHEST MEMORY LOCATION": "7500"
+ }
+}

@@ -1,0 +1,66 @@
+{
+ "id": "r6077",
+ "key": "6d6f9b5c573796f8",
+ "source": "10 DIM A(3),P(8)\n20 M%=Z-32767*Z>((N2+D%(XY%)))/-1:Z=FRE(M%)+POS(N2):LIST:GOTO 10:DEL 10,20\n30 N2=0+((40-M% AND NOT M%)):M%=AB%\n40 XY%=3*((255*M% OR XY%)):& \"X:Y\",1:FOR Z=((100)/AB%<=2) TO (ATN((AB))>=FRE(3.14159))\n50 RUN:PRINT:X=1:GOTO 40:TRACE\n60 READ XY%:PRINT XY% OR XY%:HTAB XY\n70 Y%=23077:XY=FRE(Y%)+POS(ASC(W$)):RECALL A\n80 HLIN 24,(Z) AT XY>=ABS(AB%)\n90 GET Y%:Y%=Y% OR (M/M%)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 648,
+ "obj_sha256": "74198da3887424c4c69fdb8ef70e74cb54eb213ddf6984abbf61f0af294c36be",
+ "cycles": 94515802,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6150
+  },
+  {
+   "line": 40,
+   "addr": 6183
+  },
+  {
+   "line": 50,
+   "addr": 6245
+  },
+  {
+   "line": 60,
+   "addr": 6254
+  },
+  {
+   "line": 70,
+   "addr": 6284
+  },
+  {
+   "line": 80,
+   "addr": 6317
+  },
+  {
+   "line": 90,
+   "addr": 6344
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6711",
+  "LOCAL VARIABLES": "6712 - 6848",
+  "HIGHEST MEMORY LOCATION": "6848"
+ }
+}

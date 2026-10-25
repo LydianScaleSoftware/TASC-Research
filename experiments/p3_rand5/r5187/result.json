@@ -1,0 +1,23 @@
+{
+ "id": "r5187",
+ "key": "544605e4e5fc5568",
+ "source": "10 REM! INTEGER I\n20 GOTO 60:B(B%)=971>=B%\n30 IF (32767*((B(40218)*B OR B(A%)))) THEN 130\n40 TEXT:B(ASC(CHR$(W%)))=(LEN(\"X Y\")/Q1)\n50 COLOR=M:IF (PEEK(C>32767<>((10<>A%)))) THEN DRAW ((Z%>=B%))/((B(I)-40))<32767-M:HCOLOR=(SGN(B(I))+B)\n60 B%=65535:B=B% AND B%:W%=W%<(-40):B=W% OR Q1:I=M<=Z%\n70 IF (Z%*((24<C))*32767) THEN M=A%:B%=B%\n80 B=5=65535:IF (B AND B) THEN 120\n90 C=1000:C=FRE(C)+POS(255):REM! CLEAR COMMON:HCOLOR=ABS(B%)\n100 PRINT XY$;B(W%),RIGHT$(Q1$,((B(B%) OR 109))<>B(I));:C=0:B=FRE(C)+POS(NOT ((5+A%))<((W%+20610>W-W%)))\n110 W%=W%+(C)+Q1:W=FRE(W%)+POS(W%*((2.25 AND 39)) OR VAL(\"A\")=W%-B(I)):Q1=M-A%\n120 Q1$=LEFT$(LEFT$(\"TASC\",B%>=W%),C):FOR C=(0 OR B) TO (M)\n130 RUN 10:GET Q1:I=Q1 AND (Z%)\n140 RUN 100:PRINT:X=1\n150 W=42480\n160 Z%=ABS(I*3.14159):C=7<ASC(Q1$+\"A\"):Q1=C AND C:READ Z%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 90\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

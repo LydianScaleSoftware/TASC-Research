@@ -1,0 +1,23 @@
+{
+ "id": "r6045",
+ "key": "28e30b195cdadd1c",
+ "source": "10 REM! INTEGER I\n20 PRINT B$(NOT LOG(I));\"HI\",FRE(N2%);\n30 REM! CLEAR COMMON:RETURN\n40 LIST 10-20:A%=613>=N2%:XY=A% OR A%\n50 C=255 OR (Z)<C:XY=C OR C\n60 SAVE\n70 IF (N2%) THEN RUN:B%=A%:XY=B% OR B%:XY=C\n80 TRACE\n90 PRINT NOT COS(I<=3);FRE(\"\"),INT(1E3)>=((FRE(A$)<=18490));:A%=FRE(\"123\")\n100 STORE B,C\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 30\nSYNTAX\n\n REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

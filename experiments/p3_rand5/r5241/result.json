@@ -1,0 +1,70 @@
+{
+ "id": "r5241",
+ "key": "a4eb1d4e2b9c33f9",
+ "source": "10 REM! INTEGER I,K\n20 DEF FN F(T)=100<>XY\n30 PRINT\n40 M=XY\n50 RUN:HLIN -45041,(Z%<=((NOT Z% OR 1000^N2%))) AT Q1:FOR N2=(N2%^NOT ((20*Z%))) TO (FN F(LOG(XY>=K)))\n60 PRINT:GOSUB 30\n70 ON Z% GOSUB 20:N2%=A:IF (N2% OR N2%) THEN 20:FOR Q1=(INT(-N2)/-((M%-XY))) TO (437*Q1 OR -M) STEP (Q1+-W%<((-M% OR 3)))\n80 X$=\"\":READ K:PRINT K AND K\n90 HLIN NOT ((M%=20977)),(RND(K)+-((A(Z%)<Q1))) AT ABS(M)<>FN F(NOT W%):READ Q1:PRINT Q1 AND Q1:DATA -2.5,\"A,B\",300,1\n100 I=40000/32767>=NOT K OR 601>=M/N2\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 510,
+ "obj_sha256": "1a0bf028c885f68a445f8ac5c9ca578b52e0a48ead206f79e2a4a9333f4484ec",
+ "cycles": 85994705,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6100
+  },
+  {
+   "line": 40,
+   "addr": 6103
+  },
+  {
+   "line": 50,
+   "addr": 6109
+  },
+  {
+   "line": 60,
+   "addr": 6112
+  },
+  {
+   "line": 70,
+   "addr": 6118
+  },
+  {
+   "line": 80,
+   "addr": 6150
+  },
+  {
+   "line": 90,
+   "addr": 6186
+  },
+  {
+   "line": 100,
+   "addr": 6294
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6573",
+  "LOCAL VARIABLES": "6574 - 6677",
+  "HIGHEST MEMORY LOCATION": "6677"
+ }
+}

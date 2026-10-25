@@ -1,0 +1,62 @@
+{
+ "id": "r5135",
+ "key": "1477f3b56a821cd8",
+ "source": "10 POP\n20 W=Q1:RUN 10:Y%=A% AND Y:Q1=FRE(Y%)+POS(Y)\n30 XY%=C:C=XY% OR Y%:PRINT Y%,MID$(LEFT$(\"123\",C-168),((C AND XY%))-((3<=W)));:Y%=C^W/((XY%<Q1*C))\n40 COLOR=(A% OR 39)<-((XY%=Q1))\n50 RUN:RUN\n60 B%=Q1--39:IF (W) THEN ON ((XY%+Q1<>((X<>Y))))*NOT ((W*B%)) GOTO 30,20:CALL X\n70 HPLOT TO -((W OR B%))^SQR(670),(Y%<=Q1):A%=((SGN(B%)<=W))+W\n80 VTAB C:GET Y%:B%=Y% AND (((765 AND W/Y%))*((255/((B%*100))))):Y%=((A%+X<=B%))+42402\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 719,
+ "obj_sha256": "31c8a9e8cec2b2d597978a7215e75aecdf63a6039491c36321f8d3930ee62e71",
+ "cycles": 99559931,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6087
+  },
+  {
+   "line": 30,
+   "addr": 6132
+  },
+  {
+   "line": 40,
+   "addr": 6243
+  },
+  {
+   "line": 50,
+   "addr": 6279
+  },
+  {
+   "line": 60,
+   "addr": 6282
+  },
+  {
+   "line": 70,
+   "addr": 6357
+  },
+  {
+   "line": 80,
+   "addr": 6417
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S015.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6782",
+  "LOCAL VARIABLES": "6783 - 6820",
+  "HIGHEST MEMORY LOCATION": "6820"
+ }
+}

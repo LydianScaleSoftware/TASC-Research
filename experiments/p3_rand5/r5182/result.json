@@ -1,0 +1,23 @@
+{
+ "id": "r5182",
+ "key": "ff81291ed537c37b",
+ "source": "10 REM! INTEGER I\n20 REM! DEFCOMMON A%,I,B$\n30 DIM A%(9),D(10,11)\n40 DEF FN F(X)=A%<SQR(-I)\n50 GR:B$=\"\"+MID$(B$,1E3)\n60 FOR Y=(Y%>=32767) TO (3.14159):IF (FRE(Z$)<=((39-W%<=320^I))) THEN X%=FN F(C-40) AND LEN(X$):AB=X% AND X%\n70 HCOLOR=Y:TEXT\n80 HLIN RND(I),(FRE(AB^RND(916))) AT FN F(A%(A%/255)):REM! CLEAR COMMON:READ AB\n90 PRINT:I=-Y%:IF (I AND I) THEN 240\n100 B$=RIGHT$(LEFT$(X$+Z$,Y AND 665),.001)\n110 SPEED=SIN(A%):A%=-Y*A%(211)--((0+A)):C=A% OR Y:W%=X% OR FN F(AB)\n120 AB=5310 AND XY:PRINT A%(NOT 32767)-((A<>((X% OR A)))),\n130 Y=A%(A%)+((1E3<>XY)):IF (I) THEN RUN:RUN 200\n140 DATA X,1,\"A,B\":D(((29886 OR I))--940<=LEN(X$+X$),X%)=A%(1000)-INT(3 OR 0)\n150 I=W%:IF (NOT A%(A%)/((39<>A))-((I OR FN F(A%(149))))) THEN 110\n160 C=EXP(Y%):A=C OR C\n170 B$=LEFT$(B$,A%(A%))+Z$+B$+X$:A%=-270^C>20\n180 PRINT AB<>((ASC(X$)<>2.25));\n190 A%=100:XY=A% OR A%\n200 END\n210 XY=COS(10)=((127 OR 100))>=255:IF (XY OR XY) THEN 150:C=ABS(-I) OR AB<X%:A=FRE(C)+POS(0)\n220 X%=((7 OR A%(Y%)))*RND(AB)*((((0<W%))+((20<=D(X%,X%))))):AB=X% AND X%:A=128:NEXT Y\n230 Z$=\"X Y\":ON ((D(I,W%)+Y%<=Y%))*TAN(W%) GOTO 50,180,100:HPLOT Y/7>FN F(C)<>((721 OR -D(24,A%))),(49152+W%)\n240 IF (-((ABS(I)*((A%+256))))) THEN A=FRE(LEFT$(\"\",Y)):PRINT POS(Z$):REM! CLEAR COMMON\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 80\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

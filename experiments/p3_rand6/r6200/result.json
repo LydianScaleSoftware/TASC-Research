@@ -1,0 +1,79 @@
+{
+ "id": "r6200",
+ "key": "d53805303f1bd7d7",
+ "source": "10 DIM D$(5),B(8,1)\n20 PRINT LEFT$(B$,B(C%+C,1-W%));:X=-M%^-A<M%*N2*((N2-B(M%,C%)))\n30 READ M$\n40 STORE B,C:FOR M=(1+((M+C))-((49152*32767 AND A))) TO (M+Q1%):REM! CLEAR COMMON\n50 READ X:PRINT X OR X\n60 N2=(40)^.001:STOP\n70 LOAD \"F\":PLOT 40,LEN(RIGHT$(LEFT$(M$,A),W%+5)):HLIN POS(M)*((SIN(3)+X*1)),(NOT M) AT 3\n80 LIST\n90 PRINT D$(M%);\n100 IF (INT(13678)) THEN PRINT B$,-((NOT X))-((0+-N2)),\n110 PRINT \"TASC\";296-FRE((C)),\n120 GOSUB 70:B(M%,((W% AND X))-((N2>=W%))>M%)=B(M%^673,Q1%)*(-W%):IF (RND(0.1)) THEN IF (M%) THEN LIST\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 863,
+ "obj_sha256": "1404ef62a28314ab3c4d6ea781b36fba3debc5fdf814bbfd9cedf2099452f48d",
+ "cycles": 104984300,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6180
+  },
+  {
+   "line": 40,
+   "addr": 6186
+  },
+  {
+   "line": 50,
+   "addr": 6233
+  },
+  {
+   "line": 60,
+   "addr": 6248
+  },
+  {
+   "line": 70,
+   "addr": 6263
+  },
+  {
+   "line": 80,
+   "addr": 6338
+  },
+  {
+   "line": 90,
+   "addr": 6338
+  },
+  {
+   "line": 100,
+   "addr": 6347
+  },
+  {
+   "line": 110,
+   "addr": 6399
+  },
+  {
+   "line": 120,
+   "addr": 6427
+  }
+ ],
+ "info": {
+  "RECOGNIZED": "REM ! CLEAR COMMON",
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6926",
+  "LOCAL VARIABLES": "6927 - 7077",
+  "HIGHEST MEMORY LOCATION": "7077"
+ }
+}

@@ -1,0 +1,103 @@
+{
+ "id": "r5011",
+ "key": "1cf2ff7db7e9a6c5",
+ "source": "10 FOR N2=(XY% OR (Z%+A%)) TO (XY%)\n20 B=XY%:X%=Q1:Q1=X% OR X%\n30 C=Z%\n40 N2=FRE(\"A\"):PRINT POS(Z$):ON Q1 GOSUB 110:C=((A%+1))*-C<PEEK(X%<>XY%)\n50 IF (NOT X%-.5+XY%/ATN(C)) THEN IF (XY%) THEN GET C:Z%=C AND (Z%-NOT X):ON Z%^((SQR(XY%)<=XY%)) GOTO 80:RUN\n60 N2=A%:Q1=N2 OR Q1^((((66 OR Q1))=Z%))\n70 XY%=102>=(X%)<=24814/X:C=951:Q1=C OR VAL(N2$):XY%=ATN(Q1>=Q1=22411)\n80 B$=B$:XY%=255\n90 A%=NOT ((-((B^Q1))))\n100 IF (POS(LEFT$(\"\",256)+Z$)) THEN X=FRE(MID$(B$,44244)):PRINT POS(N2$):FOR Q1=(X) TO (ASC(RIGHT$(B$,43286*A%)))\n110 C=B:X=C OR Z%\n120 FOR B=(((2 AND 32767))/SGN(B)<=XY%) TO (X-NOT 39+256)\n130 RUN 30:PRINT:X=1:Z%=1\n140 A%=48749:IF (65535) THEN X=A%:HCOLOR=Q1\n150 FOR B=(POS(B AND 24)) TO ((-((A%*C)))):PRINT (Z%^51+Z%);N2$,LEFT$(\"TASC\",XY%-1>-1);\n160 FOR B=((3)<-((100*X))) TO (3+Z%):PLOT C,X%\n170 A%=FRE(STR$(XY%+1000)):C=65:REM! CLEAR COMMON\n180 PRINT MID$(LEFT$(LEFT$(N2$,B),Z%-553),Z%-X),:GOSUB 90:IF (X%) THEN X=-((Z%*Z%))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1375,
+ "obj_sha256": "31136a30103cfa57049aa3316cd1aa14f21e89d13faec498006dfb0145100ba4",
+ "cycles": 130482855,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6113
+  },
+  {
+   "line": 30,
+   "addr": 6140
+  },
+  {
+   "line": 40,
+   "addr": 6146
+  },
+  {
+   "line": 50,
+   "addr": 6220
+  },
+  {
+   "line": 60,
+   "addr": 6316
+  },
+  {
+   "line": 70,
+   "addr": 6355
+  },
+  {
+   "line": 80,
+   "addr": 6421
+  },
+  {
+   "line": 90,
+   "addr": 6433
+  },
+  {
+   "line": 100,
+   "addr": 6453
+  },
+  {
+   "line": 110,
+   "addr": 6539
+  },
+  {
+   "line": 120,
+   "addr": 6557
+  },
+  {
+   "line": 130,
+   "addr": 6610
+  },
+  {
+   "line": 140,
+   "addr": 6628
+  },
+  {
+   "line": 150,
+   "addr": 6654
+  },
+  {
+   "line": 160,
+   "addr": 6750
+  },
+  {
+   "line": 170,
+   "addr": 6794
+  },
+  {
+   "line": 180,
+   "addr": 6821
+  }
+ ],
+ "info": {
+  "RECOGNIZED": "REM ! CLEAR COMMON",
+  "OBJECT FILE": "S011.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7438",
+  "LOCAL VARIABLES": "7439 - 7484",
+  "HIGHEST MEMORY LOCATION": "7484"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "r6203",
+ "key": "3c632c9df269a7c1",
+ "source": "10 REM! INTEGER I,J\n20 DEF FN F(T)=FRE(B%)>((24<=X<-C))\n30 HLIN XY%+J+LEN(\"HI\")<=SIN(-X%),(B%) AT FN F(B)\n40 IF (1) THEN RUN 130:RUN:ON POS(FRE(B$)) GOTO 10,130\n50 RUN 130:PRINT:X=1:I=NOT ((J-FN F(24))):IF (-((B>B+X))) THEN 120\n60 PRINT:IF (1.5) THEN STORE B,C\n70 X%=LEN(\"TASC\"+B$):LOAD \"F\"\n80 C%=100+0-40-AB:LOMEM: 16384:B%=B\n90 CALL C%:FOR I=(RND(NOT B) OR C%) TO (FRE(PEEK(XY% AND B))):Z=AB\n100 IF (37474) THEN 140\n110 Z=FRE(RIGHT$(AB$,POS(STR$(39)))):PRINT POS(AB$):PRINT XY$;\"X Y\";STR$(C),\n120 XY$=AB$\n130 IF (J) THEN RUN:VTAB C:XY$=B$\n140 REM! CLEAR CHAIN:Z=NOT XY%\n150 ON B% GOTO 170,70:CALL NOT ((127*B))*((-Z AND ((C% AND X%))))\n160 GOSUB 170:AB=X%:IF (AB AND AB) THEN 150:RUN 110:PRINT:X=1\n170 ON ((VAL(B$)>X))--((-B%)) GOTO 110,50,190,40:REM! CLEAR COMMON\n180 PRINT ASC(AB$)^B;B>C<>POS(I)^((XY%<=Z));:COLOR=-FN F(I<=X):X=J\n190 J=-I<C%:IF (SQR(X)) THEN STORE B,C:GOTO 60:SAVE\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 140\nSYNTAX\n\n REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

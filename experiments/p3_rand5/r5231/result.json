@@ -1,0 +1,74 @@
+{
+ "id": "r5231",
+ "key": "c6f583cf7271ecbd",
+ "source": "10 GET W:B%=W AND (-(-Y)):Y=FRE(C$+D$(5 AND M%,M%+M%)):PRINT POS(C$)\n20 IF (Y/LEN(X$)<=B%) THEN 30:XY$=\"TASC\":P%(C%)=-((((10<=330))+XY%))\n30 C%=20:READ Y:PRINT Y AND Y\n40 P%(C%)=C%:M%=ASC(\"A\")>=Q1:Z=M% OR M%:W=FRE(XY$):PRINT POS(X$)\n50 PRINT:Y=C%\n60 GOTO 40:Q1=B%(2,POS(MID$(X$,805,Z)))\n70 C%=65535:FOR M=((45176)<((B%>=Q1)) OR 255*VAL(\"HI\")) TO (Z):IF (NOT 3+((M%<>C%)) OR (Q1)-XY%) THEN RETURN\n80 Z=305:Z=40\n90 M=FRE(C$):PRINT POS(C$)\n100 Q1=-C%+-((-175)):C%=1E3\n110 IF ((B%>=Q1)>=M%) THEN RUN 110:IF (-W) THEN 60:D$(1000,LOG(127))=CHR$(470)+XY$+C$\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 927,
+ "obj_sha256": "956e1b6f66250b015ee7d044ab813c58f057a2616e5ba64dd6ca7eb6b60fd043",
+ "cycles": 101658069,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6162
+  },
+  {
+   "line": 30,
+   "addr": 6228
+  },
+  {
+   "line": 40,
+   "addr": 6249
+  },
+  {
+   "line": 50,
+   "addr": 6316
+  },
+  {
+   "line": 60,
+   "addr": 6325
+  },
+  {
+   "line": 70,
+   "addr": 6361
+  },
+  {
+   "line": 80,
+   "addr": 6461
+  },
+  {
+   "line": 90,
+   "addr": 6473
+  },
+  {
+   "line": 100,
+   "addr": 6488
+  },
+  {
+   "line": 110,
+   "addr": 6521
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S011.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6990",
+  "LOCAL VARIABLES": "6991 - 7542",
+  "HIGHEST MEMORY LOCATION": "7542"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "r6000",
+ "key": "e5b403de37ee0976",
+ "source": "10 REM! INTEGER I,K\n20 READ Y:PRINT Y AND Y:HLIN D(M>=Z),(Y%/((((Z%=7))-((D(Y%)<>Q1%))))) AT W*AB%:M=D(33961)^((W>=3.14159 OR Z%=39))\n30 FOR Y=(Z%) TO (956) STEP (Q1%<AB%<Y%*3.14159 OR -((NOT 100)))\n40 AB$=N2$\n50 POKE Z%,D(LOG(D(AB%)) AND D(Q1%)+D(10))\n60 FOR I=(Y+TAN(FRE(I))) TO (NOT Z%=515):READ K:PRINT K AND K:IF (Z) THEN 270\n70 GOSUB 190:PRINT:GOSUB 240\n80 IF (((22453/W<=((I<>39))))+((-D(Z%) OR AB%))) THEN STORE B,C:AB%=VAL(STR$(NOT AB%)):M=AB% OR AB%\n90 FOR C=(127) TO (ABS(AB%)) STEP (-40000)\n100 SHLOAD\n110 AB%=0.1=42\n120 Z%=Z AND AB%:Z=FRE(Z%)+POS(100/AB%)\n130 C=POS(NOT Y):Z=FRE(C)+POS(5*((FRE(Y)<((24=10)))))\n140 C=(-TAN(I)):GOTO 130:REM! CLEAR COMMON:IF (FRE(\"TASC\"+A$(AB%,K))) THEN STORE B,C\n150 & \"X:Y\",1\n160 GOTO 210:REM! CLEAR COMMON\n170 INVERSE:READ AB%:PRINT AB% AND AB%:I=D(EXP(1000))\n180 K=188*2019+((C-Z%+(127)))\n190 AB%=Y:W=FRE(AB%)+POS(AB%):IF (D(20)) THEN RETURN\n200 M=-((C AND Y%<>3)):M=M OR M\n210 M=NOT Z%:IF (M AND M) THEN 110:IF (C) THEN 250\n220 Z=32767\n230 AB$=A$(K^1000,10 OR 1000)+RIGHT$(LEFT$(W$,D(AB%)),AB%):PRINT:K=W\n240 GOTO 90\n250 IF (ABS(256)) THEN I=(Z):AB%=D(LEN(A$(Y%,2651))<SQR(100))\n260 Z%=NOT ((372/10)):M=Z% AND Z%:IF (Y) THEN 70:HCOLOR=255\n270 C=5:LOMEM: 16384:M=C\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 140\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

@@ -1,0 +1,78 @@
+{
+ "id": "r5250",
+ "key": "3dfe9a0f3c6b3fa5",
+ "source": "10 DIM P(2)\n20 DATA HI,X,X:HCOLOR=B%<>((C-M%<>39/P(Z%))):IF (1) THEN FOR C=(Z) TO (255/127) STEP (ASC(LEFT$(\"X Y\",M))>=LEN(W$))\n30 M%=(20<=.5<PEEK(Z)):W=FRE(M%)+POS(XY%):PRINT \"TASC\";RIGHT$(Q1$,INT(W))+\"\";:GOSUB 50\n40 ON Z GOTO 100,50,90\n50 XY%=VAL(\"A\") AND P(ASC(\"X Y\")):IF (B%+2>=XY%) THEN 50:M=XY%>NOT Z%+B%\n60 XY%=XY%:W=Z%\n70 CALL AB/-((B%<>Z%)):FOR Z=(1=1000) TO (POS(XY%)) STEP (344):C=FRE(Z)--10 AND ((Z%=M))/RND(AB)\n80 W=Z:C=W OR W:Z=VAL(Y$)>((P(B%)<15408 OR FRE(W$))):W=Z AND Z\n90 XY%=W--((10*M))\n100 IF (SIN(B%)-(((Z)>=XY%))) THEN FOR Z=(32767) TO (TAN(897+XY%<AB/0)):PRINT\n110 Z=NOT (M%):C=Z OR Z:Q1$=LEFT$(\"X Y\"+Q1$,C+C*32767)\n120 Q1$=Y$:B%=AB:Z=B% OR B%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1072,
+ "obj_sha256": "334e5833b700c2f27bca153536423bca44ecdd141a8b03d2e4821f4a57663f2f",
+ "cycles": 112850107,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6194
+  },
+  {
+   "line": 40,
+   "addr": 6288
+  },
+  {
+   "line": 50,
+   "addr": 6301
+  },
+  {
+   "line": 60,
+   "addr": 6379
+  },
+  {
+   "line": 70,
+   "addr": 6391
+  },
+  {
+   "line": 80,
+   "addr": 6483
+  },
+  {
+   "line": 90,
+   "addr": 6543
+  },
+  {
+   "line": 100,
+   "addr": 6558
+  },
+  {
+   "line": 110,
+   "addr": 6627
+  },
+  {
+   "line": 120,
+   "addr": 6678
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S010.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7135",
+  "LOCAL VARIABLES": "7136 - 7201",
+  "HIGHEST MEMORY LOCATION": "7201"
+ }
+}

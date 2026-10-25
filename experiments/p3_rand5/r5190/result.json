@@ -1,0 +1,78 @@
+{
+ "id": "r5190",
+ "key": "a12cd8ba2840a79b",
+ "source": "10 Y%=ATN(((7<=C))^X):IF (Y% OR Y%) THEN 20\n20 GET XY%:XY%=XY% OR (Z):IF (24>=M) THEN GET Z:Y%=Z AND ((Z>B%)+VAL(\"HI\")*((XY%>A))):IF (X) THEN COLOR=-((A>=3 OR X))\n30 PRINT LEFT$(M$,723-C-A);:FOR A=(LEN(M$)) TO (-((B%*XY%)) OR NOT Z)\n40 HCOLOR=ASC(LEFT$(STR$(51),A-A)):PRINT 1000^(C);:A=3\n50 GET X:XY%=X AND (Y%)\n60 Z=B%:NEXT A\n70 C=0.1:ON XY% GOTO 90,90\n80 IF (FRE(\"\")) THEN SPEED=LEN(M$)*((XY%<>((A%>2.25)))):FOR A=(ASC(MID$(A$,X))<>NOT POS(A)) TO (POS(LEFT$(B$,B%))*POS(M$+\"HI\"))\n90 FOR A=(-Z) TO (256) STEP (Y%):PRINT\n100 GOSUB 60\n110 FOR M=(COS(39)) TO (X):XY%=((100 AND M>=B%))>=NOT ((A<Y%)):B%=-((COS(A%)<NOT 512))\n120 A%=POS(\"X Y\"):IF (A% AND A%) THEN 30:M=((Y%-40 OR (XY%)))>=39:C=M AND A%=Y%:IF (FRE(POS(MID$(A$,256,Z)))) THEN RUN 60\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1059,
+ "obj_sha256": "1aad0bcf1180c52b3dff32abb5f5f03b14be1a7841a4e0835659cb9b899c023e",
+ "cycles": 112051153,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6125
+  },
+  {
+   "line": 30,
+   "addr": 6248
+  },
+  {
+   "line": 40,
+   "addr": 6316
+  },
+  {
+   "line": 50,
+   "addr": 6355
+  },
+  {
+   "line": 60,
+   "addr": 6373
+  },
+  {
+   "line": 70,
+   "addr": 6384
+  },
+  {
+   "line": 80,
+   "addr": 6401
+  },
+  {
+   "line": 90,
+   "addr": 6531
+  },
+  {
+   "line": 100,
+   "addr": 6557
+  },
+  {
+   "line": 110,
+   "addr": 6560
+  },
+  {
+   "line": 120,
+   "addr": 6646
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S010.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7122",
+  "LOCAL VARIABLES": "7123 - 7175",
+  "HIGHEST MEMORY LOCATION": "7175"
+ }
+}

@@ -1,0 +1,70 @@
+{
+ "id": "r6199",
+ "key": "d017174cf236f543",
+ "source": "10 DIM B$(7,5),D$(10,5)\n20 X=VAL(\"HI\"):C=FRE(X)+POS(((XY%-Y%<=XY%-Q1%))/Y%):GOTO 70:LIST 10-20\n30 B=Q1%:W=B AND N2\n40 FOR B=(55*((XY%<>Q1%<=39-XY%))) TO (422):D$(((B OR Q1%))+((440 AND C)) AND X%>=((X=39)),LOG(980)+((C<>X%)) OR 32767)=\"HI\":B=W<XY%*B AND X%:TRACE:C=B\n50 X=NOT ABS(386+40000)\n60 IF (SIN(X<X%)*XY%) THEN X=FRE(\"HI\"+\"\"+\"A\"):W=FRE(X)+POS(C)\n70 Y%=2*((40=B))\n80 Y$=A$:GOTO 20:RECALL A\n90 W=-((Q1%<XY%)):IF (W OR W) THEN 40:CONT\n100 COLOR=X%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 780,
+ "obj_sha256": "35dcd27d16a69245a7327778883bf7434500c4b65a5c6c161d581189fddd3efa",
+ "cycles": 96807337,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6152
+  },
+  {
+   "line": 40,
+   "addr": 6170
+  },
+  {
+   "line": 50,
+   "addr": 6351
+  },
+  {
+   "line": 60,
+   "addr": 6368
+  },
+  {
+   "line": 70,
+   "addr": 6453
+  },
+  {
+   "line": 80,
+   "addr": 6468
+  },
+  {
+   "line": 90,
+   "addr": 6477
+  },
+  {
+   "line": 100,
+   "addr": 6500
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S019.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6843",
+  "LOCAL VARIABLES": "6844 - 7120",
+  "HIGHEST MEMORY LOCATION": "7120"
+ }
+}

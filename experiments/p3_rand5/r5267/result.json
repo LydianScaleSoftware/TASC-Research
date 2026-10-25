@@ -1,0 +1,79 @@
+{
+ "id": "r5267",
+ "key": "9440935e6fb21032",
+ "source": "10 REM! INTEGER *\n20 DEF FN F(Z)=2<NOT X%<>C%\n30 GOSUB 100:GET A%:A%=A% OR (623)\n40 READ C:PRINT C OR C:ON 24 GOTO 90,100,110,120:B=W:W=B OR 24-Z+A\n50 NORMAL\n60 IF (24+((W+7)) AND FN F(B<=C)) THEN 50:GET Z:C=Z AND (2.25)\n70 A=FRE(LEFT$(AB$,EXP(A))):W=A AND A:Z=-((((575>=3))/X%))\n80 HLIN 49152,(FRE(X%)=A) AT A:READ X%\n90 IF (C%) THEN RUN:READ C%:PRINT C% OR C%:READ Z,C\n100 FOR B=(W>Z%) TO (C*VAL(\"X Y\")<>A+C%*A):IF (ASC(AB$)) THEN 120:X%=B*RND(A%)*((LEN(AB$)+-Z%))\n110 Z%=LEN(N2$):Z%=345:Z=Z% AND B:CALL POS(XY$)\n120 XY$=N2$\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 842,
+ "obj_sha256": "a6900063636db5e452740fe16702ab3877242bf4b7516e62711b992dfadbaf49",
+ "cycles": 100251519,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6109
+  },
+  {
+   "line": 40,
+   "addr": 6139
+  },
+  {
+   "line": 50,
+   "addr": 6220
+  },
+  {
+   "line": 60,
+   "addr": 6223
+  },
+  {
+   "line": 70,
+   "addr": 6279
+  },
+  {
+   "line": 80,
+   "addr": 6345
+  },
+  {
+   "line": 90,
+   "addr": 6381
+  },
+  {
+   "line": 100,
+   "addr": 6395
+  },
+  {
+   "line": 110,
+   "addr": 6511
+  },
+  {
+   "line": 120,
+   "addr": 6559
+  }
+ ],
+ "info": {
+  "A AND A": "Z =  - ((((575 >  = 3)) / X%))",
+  "OBJECT FILE": "S007.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6905",
+  "LOCAL VARIABLES": "6906 - 6941",
+  "HIGHEST MEMORY LOCATION": "6941"
+ }
+}

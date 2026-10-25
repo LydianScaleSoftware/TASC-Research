@@ -1,0 +1,74 @@
+{
+ "id": "r5287",
+ "key": "2dc1a6ca173274df",
+ "source": "10 REM! INTEGER I\n20 DIM D%(2)\n30 M=N2%:IF (M OR M) THEN 10:ON 255 GOTO 90:IF (M) THEN W%=SIN(A<D%(24))=AB:IF (W% OR W%) THEN 30\n40 FOR AB=(-VAL(Q1$)) TO (POS(I-I)<>LEN(CHR$(AB%))):HCOLOR=-(W)\n50 I=A:D%(-(A)^((AB%-M OR NOT D%(1000))))=W:AB%=W/D%(AB%>7):AB=FRE(AB%)+POS(((LEN(XY$)<-5))-(((256)<>C%)))\n60 I=824:I=RND(Q1=((Q1 AND Q1))):Q1=I AND I\n70 DATA 300,,,\"A,B\":VTAB 111:IF (-Q1^127+AB%) THEN RUN 40\n80 AB%=TAN(2)\n90 FOR W=(27179+((.001 AND D%(2) OR NOT Q1))) TO (N2%):XY$=N2$:IF (M) THEN SPEED=34477\n100 IF (AB-INT(41509)>(EXP(AB))) THEN RUN:GOSUB 70\n110 C%=Q1-W=D%(M-C%):AB=C% AND C%:PRINT Q1$;256>=W,LEFT$(MID$(STR$(Q1),AB AND M),C%),:Q1$=XY$\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 926,
+ "obj_sha256": "66be7c611bbbc58080c3a83c30f4f1bfa15d8165665327d43fc6c21bbc0393dc",
+ "cycles": 106019381,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6098
+  },
+  {
+   "line": 50,
+   "addr": 6157
+  },
+  {
+   "line": 60,
+   "addr": 6295
+  },
+  {
+   "line": 70,
+   "addr": 6337
+  },
+  {
+   "line": 80,
+   "addr": 6390
+  },
+  {
+   "line": 90,
+   "addr": 6399
+  },
+  {
+   "line": 100,
+   "addr": 6463
+  },
+  {
+   "line": 110,
+   "addr": 6495
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S007.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6989",
+  "LOCAL VARIABLES": "6990 - 7046",
+  "HIGHEST MEMORY LOCATION": "7046"
+ }
+}

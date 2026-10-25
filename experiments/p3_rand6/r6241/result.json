@@ -1,0 +1,119 @@
+{
+ "id": "r6241",
+ "key": "5a9fcb5fb28c330a",
+ "source": "10 REM! INTEGER J,K\n20 DIM A(4),P$(12,6)\n30 DEF FN F(X)=A\n40 ON LEN(CHR$(A(C%)=K)) GOTO 100,170,10:GOTO 200:CONT\n50 FOR A=(A(K)*A(K+Q1%)) TO (1):PRINT Q1%+LEN(MID$(\"X Y\",N2%,C%));\n60 A(Y%)=-((Q1%*127*((B*Q1))))\n70 IF (B) THEN REM! CLEAR CHAIN\n80 M=FRE(\"\"):PRINT POS(XY$)\n90 DEL 10,20:SPEED=A(POS(12870))>1000\n100 C%=B\n110 B=M/-((.5<=C%)):IF (B OR B) THEN 130\n120 A=-B\n130 ON A(K) GOTO 60,180,150,70\n140 C%=N2:N2=A:N2=N2 AND N2\n150 N2%=A(127):Q1=N2% OR J\n160 IF (SGN(M>=Q1%)) THEN P$(0.1,Y% OR 22313)=Y$:RETURN:ON NOT LOG(0) GOTO 130\n170 K=2.25\n180 RUN:Q1=B*K\n190 CONT:IF (SIN(255)) THEN RECALL A:SHLOAD\n200 NEXT:GOSUB 210\n210 B=Y%:SAVE:N2=B\n220 Q1%=FRE(A+N2%)>=Y%+C%:M=B:Q1=M AND Y%:GOTO 140:REM! CLEAR CHAIN\n",
+ "options": {
+  "library": 4096,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 8109,
+ "obj_len": 799,
+ "obj_sha256": "834bccfa6da48ff3ae180b4310f153cf350f08bbb6c76dec1a436b340191b08e",
+ "cycles": 103307477,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 8129
+  },
+  {
+   "line": 20,
+   "addr": 8129
+  },
+  {
+   "line": 30,
+   "addr": 8129
+  },
+  {
+   "line": 40,
+   "addr": 8139
+  },
+  {
+   "line": 50,
+   "addr": 8170
+  },
+  {
+   "line": 60,
+   "addr": 8238
+  },
+  {
+   "line": 70,
+   "addr": 8268
+  },
+  {
+   "line": 80,
+   "addr": 8279
+  },
+  {
+   "line": 90,
+   "addr": 8298
+  },
+  {
+   "line": 100,
+   "addr": 8313
+  },
+  {
+   "line": 110,
+   "addr": 8319
+  },
+  {
+   "line": 120,
+   "addr": 8345
+  },
+  {
+   "line": 130,
+   "addr": 8354
+  },
+  {
+   "line": 140,
+   "addr": 8372
+  },
+  {
+   "line": 150,
+   "addr": 8390
+  },
+  {
+   "line": 160,
+   "addr": 8414
+  },
+  {
+   "line": 170,
+   "addr": 8464
+  },
+  {
+   "line": 180,
+   "addr": 8470
+  },
+  {
+   "line": 190,
+   "addr": 8482
+  },
+  {
+   "line": 200,
+   "addr": 8495
+  },
+  {
+   "line": 210,
+   "addr": 8503
+  },
+  {
+   "line": 220,
+   "addr": 8512
+  }
+ ],
+ "info": {
+  "LIBRARY": "4096 - 8108",
+  "RECOGNIZED": "REM ! CLEAR CHAIN",
+  "OBJECT FILE": "S001.OBJ",
+  "PROGRAM": "8109 - 8907",
+  "LOCAL VARIABLES": "8908 - 9167",
+  "HIGHEST MEMORY LOCATION": "9167"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "r6208",
+ "key": "e60ba90c62416ffa",
+ "source": "10 REM! INTEGER K,J\n20 DIM P$(3,12)\n30 DEF FN F(Z)=-N2<>-((255=Y%))\n40 Y%=7:IF (-B%(B>N2)) THEN 50\n50 CONT\n60 & \"X:Y\",1:N2%=Y%:NOTRACE:XY=N2%\n70 FOR J=(65535=COS(FN F(M%))) TO (VAL(\"X Y\"))\n80 READ K,Q1%:IF (Y%) THEN LOMEM: 16384:CONT\n90 IF (-Q1%) THEN N2%=3.14159:IF (((((10 AND N2%))<=328))+((XY<=XY))*((23654 AND A))) THEN XY=FRE(\"X Y\"):PRINT POS(Q1$)\n100 K=XY:Z=K AND K:C$=C$\n110 GOTO 320:CONT:IF (802=PEEK(B%(M%))) THEN RUN 20\n120 Z=Z:B=Z OR Z:GOTO 200:&:GOSUB 90\n130 REM! CLEAR COMMON:GET K:K=K OR (K)\n140 J=((((B%(M%)<=B))-B%(Q1%)))*NOT ((-A)):N2=J AND J:XY=M%:POKE ((B+100))*((40000 AND Z))>N2%,N2-XY+B%(Y%)\n150 IF (M%<=K) THEN CONT:XY=Y%\n160 J=K<=B+((1000 AND .001)):XY=J AND J:A=FN F(.5):IF (A OR A) THEN 220\n170 A=B%(N2%):SHLOAD:A=A:J=B%(Y%)-PEEK(Y%)*-Y%:GOTO 10:LIST\n180 Q1$=MID$(C$+Q1$,3.14159/3<>39336)\n190 POKE B,XY*((((1000<=XY))*((XY<2))))\n200 IF (Z) THEN LIST\n210 P$(B%(SQR(256))<POS(N2/N2%),Y%)=\"\":IF (((J>=B))/NOT XY=Y%) THEN STORE B,C\n220 Z=0:N2=Z AND Z:J=((EXP(1E3)=FN F(B%(525))))+Z:& \"X:Y\",1:Z=J:M%=B\n230 GET J:J=J OR (NOT Q1%^LEN(B$))\n240 CONT\n250 LIST 10-20:RESTORE:Q1%=-((-XY)):TRACE:B=Q1%\n260 DEL 10,20\n270 DATA -2.5,300:NEXT J\n280 HTAB SGN(7):Z=-((B%(32767)<>Z<=Q1%)):COLOR=FN F(FN F(40)>=EXP(5))\n290 LIST:Y%=A\n300 Z=Q1%-N2<=((B%(1000)<J)) AND M%:J=A^FRE(0)+K:&:N2=J:GOTO 210:LIST\n310 PRINT:IF (256) THEN & \"X:Y\",1\n320 POKE PEEK(A<>A)>B,5:READ Q1%,B\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 130\nSYNTAX\n\n REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

@@ -1,0 +1,23 @@
+{
+ "id": "r6035",
+ "key": "db41c3ae02148214",
+ "source": "10 REM! INTEGER K,I\n20 SAVE:IF (SQR(Y%)^((SIN(27755) AND 2-255))) THEN LOMEM: 16384\n30 CONT\n40 PRINT ((-Z-AB))*Q1,\"X Y\";:AB=FRE(Z$):PRINT POS(M$):GOSUB 70\n50 ONERR GOTO 30:Y%=A\n60 READ K:PRINT K OR K:& \"X:Y\",1\n70 GOTO 30:REM! CLEAR COMMON\n80 VTAB 100:N2%=Z%-RND(C OR 2):IF (N2% OR N2%) THEN 280\n90 Z=Z%\n100 CONT:Z=((((I OR N2%)) AND K))*1.5:ON -AB GOTO 50,70,70\n110 CALL (-7)+NOT 389:ON LOG((VAL(Y$))) GOTO 70,130,80,110:GOTO 100:REM! CLEAR COMMON\n120 IF (Z) THEN SAVE\n130 PRINT M$+LEFT$(Y$,A);\"123\",Y%,:DATA X,300,X:Z=Z<AB>=255>1+((7+24))\n140 RUN:IF (A) THEN RUN 100:CONT\n150 K=Z%-((C<=24))<=297:RECALL A:Q1=K:GOTO 80\n160 Y$=M$:HLIN FRE(256+((A+761))),(((A<=((C%>=Z%))))-Q1) AT -((Z^I))>C%-POS(Z%)\n170 SAVE\n180 C=Q1*INT(C):ON -((-ASC(Y$))) GOTO 170,180,310:NOTRACE\n190 NOTRACE:IF (N2%) THEN FOR A=(I) TO (N2% AND K):C=FRE(CHR$(5)+\"X Y\"+\"\"+M$):PRINT POS(Z$)\n200 Z=-40000+LOG(-2):Z=FRE(Z)+POS(((Z>N2% OR A))+(299))\n210 PRINT CHR$(NOT ((24/0)));49-Z%,:PRINT:K=K+Z OR ((SGN(N2%) OR NOT Y%)):TRACE:Z=K\n220 N2%=A<=((POS(N2%)>=A+20)):Q1=FRE(N2%)+POS(FRE((C%))):GOTO 310:REM! CLEAR COMMON:SHLOAD\n230 GOSUB 20:LOAD \"F\":PRINT AB,-((-((-Y%))));\n240 END:I=I<>AB:Q1=FRE(I)+POS(Q1):AB=FRE(I*834)\n250 GET Z%:Z%=Z% OR (K^((FRE(\"A\")-Z^A)))\n260 GOTO 290:LOAD \"F\"\n270 K=EXP(Z):A=FRE(K)+POS(ABS(((C<>AB))-AB)):FOR C=(1872-28) TO (Y%)\n280 READ I:PRINT I AND I:C=FRE(Y$):PRINT POS(Z$)\n290 VTAB N2%<=7<>A>=((AB^Z AND C=C))\n300 DEL 10,20:& \"X:Y\",1\n310 A=N2%:Z=A AND N2%:HLIN A,(255) AT Y%:IF (EXP(-AB)) THEN SPEED=-0.1\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 220\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

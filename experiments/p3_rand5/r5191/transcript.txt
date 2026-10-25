@@ -1,0 +1,188 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S011
+
+
+OBJECT CODE FILE:
+(DEFAULT S011.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION? NO
+
+COMPILATION LISTING:
+(DEFAULT YES)? YES
+
+PAUSE ON ERRORS:
+(DEFAULT YES)? YES
+
+INTEGER ARITHMETIC:
+(DEFAULT YES)? NO
+
+INTEGER CONSTANTS:
+(DEFAULT YES)? YES
+
+RESUME/DEBUG CODE:
+(DEFAULT NO)? NO
+
+*****BEGINNING PASS 1
+
+
+
+10
+RECOGNIZED  REM ! INTEGER *
+20  DIM P(11,3)
+30  DEF  FN F(T) = AB + 32767
+40  ON  PEEK ( POS (B$)) AND N2 GOTO 60,
+70
+50  GOTO 270
+
+*****WARNING
+LINE NUMBER 50
+IGNORED
+
+: HTAB B
+
+
+60  ON N2% + 24 GOTO 200: FOR B = ( COS
+(P(Y% - N2, NOT 65535))) TO (Y%):P(5,((
+INT (P(Y%,N2%)) = P(N2%,W) - XY%)) * AB)
+ =  VAL (AB$)
+70  IF ( FN F(AB) <  = ((Z >  = 528)) -
+((Z + N2%))) THEN  RUN
+80 Z = P(B <  = ((Y% AND Z)),XY% / N2%)
+90 Y$ = "X Y" + "" +  LEFT$ (B$,M% <  >
+AB)
+100  HLIN  POS (AB$),( FN F(AB) ^  ASC (
+Y$) AND B >  = ((M% < N2))) AT  FRE (B)
+110  PRINT  STR$ ( VAL ("")) + B$; LEFT$
+ ( CHR$ (AB <  = XY%),P(49152,W) ^ XY% >
+  =  TAN (N2%));: READ W: PRINT W AND W:
+N2 = M% +  FRE (P(Z,.5) * Z)
+120  FOR Z = (0) TO (AB >  = 65535 = Y%
+<  >  - ((65535 * B))) STEP (P( LEN (AB$
+) <  > W - XY%, SIN ( - N2))):XY% = AB:
+IF (XY% AND XY%) THEN 80:Y$ =  RIGHT$ ("
+X Y" + "A" + "X Y",894 * P(W,XY%) <  >
+VAL (AB$))
+130  HLIN  - Z,(B * N2) AT 40000 >  = M%
+
+RECOGNIZED : REM ! CLEAR CHAIN
+140  IF ( - N2%) THEN P( NOT ((B ^ B)) A
+ND M%,7667) = 32138:B = 40: COLOR= B - M
+%
+150 AB =  LEN ( CHR$ ( NOT N2)): FOR B =
+ (Z >  = ((N2 <  = 100 + 1E3))) TO (XY%
++ P(Z,N2%)):W = (( ASC (B$) OR 3 <  > B)
+) * 32767: IF (W OR W) THEN 100
+160 Z =  NOT Z:P( SQR ( - N2%) + ((W OR
+0)),Y%) = AB
+170 XY% = Z /  FN F(P(Y%,Y%)) > (( COS (
+1) AND N2 / 5)):B = XY% OR XY%: GOSUB 23
+0: GET B:M% = B AND ( PEEK (110 = N2) +
+912)
+180  WAIT 100,(N2)
+190  FOR W = ( VAL (B$ + B$) <  > ((N2%
+- AB = ((3 = M%))))) TO (M% - ((N2 = AB)
+)) STEP (W)
+200 AB =  FRE ( STR$ (1000)): PRINT  POS
+ (AB$)
+210  RESTORE
+220 M% = 56:AB =  FRE (M%) +  POS (N2% <
+  =  FN F(127)): INVERSE
+230 Y$ = AB$:N2% = 847 - P(10,Y%) >  =
+- ((256 - N2))
+240  PRINT AB$;: GOTO 230
+250  IF (((B + ((AB + Y%)))) ^ (( SGN (N
+2) OR 3))) THEN  SPEED= B: VTAB (( ATN (
+N2) <  - W)) ^ N2
+260  GET N2:Y% = N2 OR (B - 256): FOR W
+= (0.1 = (( - Y% < AB))) TO ( FRE (AB$ +
+ B$) <  NOT ((914 ^ N2%)))
+270  READ N2: PRINT N2 AND N2:AB = (( -
+Y% <  >  FN F(B))) -  FRE (P(M%,1000)) ^
+ ((P(24,XY%) * B)):W = M% ^ ((AB <  >  P
+OS (N2%)))
+280 B = P(40 AND XY%,N2% / Y%) <  ASC (A
+B$) *  FN F(256):AB = B OR B:AB =  - ((X
+Y% <  > N2)) = N2%:AB = P(256 - P(Y%,W),
+ TAN (P(XY%,1000))) < P(N2% AND B, - 1)
+290 P( SIN (N2 + AB),Y%) =  - N2%: VTAB
+2
+300  HLIN 127,(((((P(N2%,100) <  > N2))
++ ((N2 AND AB)))) ^  NOT ((N2 - 167))) A
+T 40 + Y% AND 255:AB = 426 <  = P(43200
+^ N2%,Y%):B = AB AND AB
+310  IF (B) THEN  RUN 290
+
+*****WARNING
+LINE NUMBER 310
+IGNORED
+
+: NEXT W
+
+
+
+
+*****WARNING
+LINE NUMBER 310
+IGNORED
+
+: PRINT AB$;"A",
+
+
+
+
+
+*****BEGINNING PASS 2
+
+
+........
+
+
+*****CODE GENERATION COMPLETE
+
+
+COMPILATION INFORMATION AND LINE NUMBER
+REFERENCE TABLE? YES
+
+
+SOURCE FILE: S011
+OBJECT FILE: S011.OBJ
+LIBRARY OCCUPIES 2051 - 6063
+PROGRAM OCCUPIES 6064 - 8910
+
+NO COMMON BLOCK
+
+LOCAL VARIABLES OCCUPY 8911 - 9051
+
+HIGHEST MEMORY LOCATION: 9051
+
+
+LINE# ADDR   LINE# ADDR   LINE# ADDR
+
+10    6084   20    6084   30    6084
+40    6097   50    6120   60    6123
+70    6257   80    6301   90    6343
+100   6397   110   6460   120   6595
+130   6789   140   6822   150   6897
+160   7009   170   7069   180   7177
+190   7189   200   7263   210   7284
+220   7287   230   7326   240   7371
+250   7380   260   7459   270   7550
+280   7667   290   7862   300   7907
+310   8041
+
+*****COMPILATION COMPLETE
+
+
+]?

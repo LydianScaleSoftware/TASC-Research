@@ -1,0 +1,23 @@
+{
+ "id": "r5061",
+ "key": "053722dd9d120ec7",
+ "source": "10 REM! INTEGER J,K\n20 DEF FN F(X)=C\n30 B=LOG(K):A=C*24\n40 C=-((-K)):C=C AND C:POP\n50 HTAB FRE(A/XY%-C):B=Z%\n60 READ XY$,J:IF (Z%) THEN 50\n70 READ AB%:PRINT AB% OR AB%:REM! CLEAR CHAIN:PRINT ((FRE(C$)+B))/((((AB OR A)) AND K>=M));\n80 A=((FRE(AB%) AND K))+((20-NOT 653)):J=AB:A=J OR C:IF (K<A) THEN RUN\n90 IF (NOT ((-XY%))^B) THEN RUN 100:GOSUB 60\n100 IF (FN F(100)) THEN 30:B=FRE(XY$):PRINT POS(C$):HCOLOR=-AB\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 70\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

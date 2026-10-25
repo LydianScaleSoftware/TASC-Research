@@ -1,0 +1,82 @@
+{
+ "id": "r6081",
+ "key": "4e3f7b5c444ea2f5",
+ "source": "10 REM! INTEGER J,K\n20 DIM B(11,4)\n30 DEF FN F(X)=Y-X%\n40 IF (B%) THEN B%=((FN F(Q1)<>((Q1>W))))/K\n50 J=J:TRACE:M=J:Q1=-((-J)):IF (Q1 OR Q1) THEN 40\n60 IF (B(SGN(B(X%,Z%)),32767>42165)^NOT K) THEN &:ON W GOTO 30\n70 IF (B(J,114^Q1 OR LEN(M$))) THEN K=Q1*((33944>=626))+((K<-39)):RECALL A\n80 Q1=1-XY:XY$=Y$\n90 DATA -2.5:RUN 110\n100 Z%=Z%:Y=M:Y=Y OR Y:XY$=Y$\n110 FOR J=(NOT B(PEEK(256),X%)) TO (40000=RND(W) AND B(AB%,SIN(J))):POKE J,VAL(RIGHT$(XY$,J))\n120 W=NOT POS(-J):IF (-24+35548^((Q1*1E3))) THEN & \"X:Y\",1\n130 Y$=MID$(XY$,-FRE(35711)):SPEED=255\n",
+ "options": {
+  "library": 4096,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 8109,
+ "obj_len": 879,
+ "obj_sha256": "c5b4c9525ddd9a2402a34bed2f40808c8efb6f5ba28d89c0f003b7d6ada6855a",
+ "cycles": 104703951,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 8129
+  },
+  {
+   "line": 20,
+   "addr": 8129
+  },
+  {
+   "line": 30,
+   "addr": 8129
+  },
+  {
+   "line": 40,
+   "addr": 8142
+  },
+  {
+   "line": 50,
+   "addr": 8186
+  },
+  {
+   "line": 60,
+   "addr": 8218
+  },
+  {
+   "line": 70,
+   "addr": 8288
+  },
+  {
+   "line": 80,
+   "addr": 8359
+  },
+  {
+   "line": 90,
+   "addr": 8374
+  },
+  {
+   "line": 100,
+   "addr": 8391
+  },
+  {
+   "line": 110,
+   "addr": 8415
+  },
+  {
+   "line": 120,
+   "addr": 8507
+  },
+  {
+   "line": 130,
+   "addr": 8557
+  }
+ ],
+ "info": {
+  "LIBRARY": "4096 - 8108",
+  "OBJECT FILE": "S001.OBJ",
+  "PROGRAM": "8109 - 8987",
+  "LOCAL VARIABLES": "8988 - 9342",
+  "HIGHEST MEMORY LOCATION": "9342"
+ }
+}

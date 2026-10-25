@@ -1,0 +1,23 @@
+{
+ "id": "r5229",
+ "key": "404273e78296d4aa",
+ "source": "10 REM! INTEGER K,J\n20 Y=-EXP(255) OR 7-W\n30 IF ((Y+20) AND 5<40000) THEN IF (((M<=J))-65535<=71) THEN GOSUB 200:TEXT:J=Y:W=J OR J\n40 READ Z%,A:TEXT\n50 J=J^A:C=FRE(J)+POS(5):C=M+20:READ W:PRINT W AND W\n60 READ Y:PRINT Y AND Y:W=K^K:W=W AND SGN(C AND 46541)-INT(5):N2%=C:M=FRE(N2%)+POS((C%))\n70 IF ((SGN(Z%)=-Y)) THEN M$=\"123\":Y=J/Y\n80 PRINT 255 AND (M)*((Z%+N2%)),M;:REM! CLEAR CHAIN:ON LOG(ASC(AB$))-M GOTO 120,140\n90 Q1$=STR$(A%)+LEFT$(AB$+\"\",39)\n100 PRINT FRE(3.14159<>C);40000,\n110 GET A%:K=A% AND (C)\n120 Y=SIN(M*A*533):N2%=SIN(A%>N2%-W)\n130 PRINT N2%;A%/-((J>N2%));Q1$+Q1$;:C=K:IF (C OR C) THEN 260\n140 READ N2%,Q1$:Q1$=CHR$(586):ON M+Z%+N2%^K GOTO 10,30\n150 IF (LEN(STR$(143))*EXP(Y)^N2%) THEN IF (SQR(-Z%)<>255) THEN RUN:Z%=Z%\n160 NORMAL\n170 C=Z%:IF (-FRE(Q1$+AB$)) THEN 40:W=.5:C=W AND W\n180 Q1$=\"X Y\":K=Z%\n190 INPUT \"\";J,AB$\n200 K=J<M+C\n210 Z%=-M>Z%\n220 Y=A%\n230 IF (NOT ((W<K))+SGN(C%>=C)) THEN RUN:K=NOT ((-W=A%-7)):REM! CLEAR COMMON\n240 GOTO 20:GET Z%:N2%=Z% AND (ASC(M$))\n250 C%=RND(1.5+C%)+A:FOR K=(J+NOT ((M+W))) TO (C% AND A%>K^255)\n260 W=FRE(\"HI\"):PRINT POS(AB$)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 80\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

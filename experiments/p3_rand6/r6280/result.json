@@ -1,0 +1,70 @@
+{
+ "id": "r6280",
+ "key": "bf7a9c5451a64f76",
+ "source": "10 DIM A(7),P%(11)\n20 TEXT:Q1%=40:LOAD \"F\":Z=Q1%:IF (NOT 7) THEN SPEED=((W% AND Q1%+10))*-VAL(Y$)\n30 IF (100^((P%(20)>=3))<Y) THEN LOAD \"F\"\n40 Z=INT(NOT ((803=W%))):Q1%=2:W%=-W%\n50 IF (P%(Q1%+B)) THEN 90\n60 M%=(W%)<AB%:Y=M% AND M%:PRINT A;38<=POS(Q1%),5;\n70 IF (A) THEN 50:B=M:A=B OR Z:A=M%:IF (A AND A) THEN 100\n80 PRINT:GOSUB 90:Y=W%\n90 IF (24) THEN RECALL A:AB%=17191:IF (AB% OR AB%) THEN 30:Y=ASC(A$+\"HI\") AND ((Z AND P%(AB%))):LOMEM: 16384:Z=Y\n100 B=B>A^Q1%:B=B OR B\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 682,
+ "obj_sha256": "9604da960078a9e9f2c0e233c55d5f8436bcfadb25a612d4203c8bd1bf736d21",
+ "cycles": 96848750,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6143
+  },
+  {
+   "line": 40,
+   "addr": 6172
+  },
+  {
+   "line": 50,
+   "addr": 6205
+  },
+  {
+   "line": 60,
+   "addr": 6222
+  },
+  {
+   "line": 70,
+   "addr": 6276
+  },
+  {
+   "line": 80,
+   "addr": 6308
+  },
+  {
+   "line": 90,
+   "addr": 6320
+  },
+  {
+   "line": 100,
+   "addr": 6395
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6745",
+  "LOCAL VARIABLES": "6746 - 6853",
+  "HIGHEST MEMORY LOCATION": "6853"
+ }
+}

@@ -1,0 +1,99 @@
+{
+ "id": "r5151",
+ "key": "3f26bf8e337a2d2e",
+ "source": "10 REM! INTEGER J,I\n20 DIM A$(6)\n30 DEF FN F(Z)=-((SQR(X)*ATN(10)))\n40 N2$=LEFT$(N2$,VAL(MID$(A$(268),3.14159))):IF (FRE(A$(135))<=D(J) OR D(N2%)) THEN RUN 160\n50 DATA 1,300,300,300:FOR Z=(LEN(MID$(\"123\"+A$(J),B,J))) TO (Z):I=NOT J:B=I OR A%\n60 PRINT CHR$(D(B+X));:PLOT 297^((D(58)^((Y%>10)))),-292-((.5-N2%))<>-((-40))\n70 SPEED=D(-((N2% OR N2%))):TEXT\n80 PRINT 3.14159,\n90 Y$=A$(.5):DATA \"A,B\",300,:X=I:IF (X OR X) THEN 140\n100 FOR X=(576=((J AND 1.5))^COS(X)) TO (Y%) STEP (D(-C%)):RUN 10:RUN 170\n110 X=FN F(A%):X=X AND X:I=-C%:IF (I AND I) THEN 40:IF (AB*127-((Y%+AB))>=J) THEN RUN 70\n120 GET N2%:J=N2% AND (B):A$(NOT I)=LEFT$(LEFT$(N2$,0),-((Y% AND J))):READ AB:PRINT AB AND AB\n130 AB=INT(D(N2%)):IF (AB OR AB) THEN 130\n140 NEXT X:CALL D(A%):D(-D(B<>D(C%)))=B-((I<>((D(N2%) AND AB))))\n150 READ J,I\n160 HPLOT FRE(RIGHT$(XY$,I AND J)),(B)\n170 RUN\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1090,
+ "obj_sha256": "a666ccb7742ce83aee67407239a70faa8a81c554ce0f937de41c4d18460fa1c4",
+ "cycles": 117665512,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6112
+  },
+  {
+   "line": 50,
+   "addr": 6186
+  },
+  {
+   "line": 60,
+   "addr": 6280
+  },
+  {
+   "line": 70,
+   "addr": 6370
+  },
+  {
+   "line": 80,
+   "addr": 6397
+  },
+  {
+   "line": 90,
+   "addr": 6406
+  },
+  {
+   "line": 100,
+   "addr": 6447
+  },
+  {
+   "line": 110,
+   "addr": 6512
+  },
+  {
+   "line": 120,
+   "addr": 6553
+  },
+  {
+   "line": 130,
+   "addr": 6631
+  },
+  {
+   "line": 140,
+   "addr": 6651
+  },
+  {
+   "line": 150,
+   "addr": 6716
+  },
+  {
+   "line": 160,
+   "addr": 6728
+  },
+  {
+   "line": 170,
+   "addr": 6758
+  }
+ ],
+ "info": {
+  "OT J": "B = I OR A%",
+  "OBJECT FILE": "S011.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7153",
+  "LOCAL VARIABLES": "7154 - 7275",
+  "HIGHEST MEMORY LOCATION": "7275"
+ }
+}

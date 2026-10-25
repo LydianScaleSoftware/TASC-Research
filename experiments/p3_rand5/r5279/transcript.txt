@@ -1,0 +1,122 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S019
+
+
+OBJECT CODE FILE:
+(DEFAULT S019.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION? NO
+
+COMPILATION LISTING:
+(DEFAULT YES)? YES
+
+PAUSE ON ERRORS:
+(DEFAULT YES)? YES
+
+INTEGER ARITHMETIC:
+(DEFAULT YES)? YES
+
+INTEGER CONSTANTS:
+(DEFAULT YES)? YES
+
+RESUME/DEBUG CODE:
+(DEFAULT NO)? YES
+
+*****BEGINNING PASS 1
+
+
+
+10
+RECOGNIZED  REM ! INTEGER I
+20  DIM B$(1,10)
+30 W% = Y%: IF (W% AND W%) THEN 170:Z% =
+  - (( - D%(Z%,B%)))
+
+*****WARNING
+LINE NUMBER 30
+IGNORED
+
+: READ I
+
+
+
+
+*****WARNING
+LINE NUMBER 30
+IGNORED
+
+: PRINT I OR I
+
+
+40  FOR I = (I) TO (B%): POKE D%( ABS (W
+ <  > Y%),W%),1000
+50  DATA -2.5: FOR W = (Y) TO ( VAL ("TA
+SC"))
+60 XY =  FRE (N2$): PRINT  POS (W$)
+70 XY =  TAN ( NOT ((I - 1E3))):XY = D%(
+W%,((Z% OR D%(537,I))) - Z% * W): PRINT
+Z% -  - Y%; FRE ( RIGHT$ ("A",B% < 256))
+,"";
+80  FOR W = (D%((39) / XY,B%)) TO (7674
+= ((Q1 AND XY)) <  > D%(W% > W%,486)): C
+OLOR=  FRE ( STR$ (W)) ^  NOT 40
+90  HCOLOR= B%: PRINT W,W$ + B$(Y%,B%) +
+  MID$ (A$(Y%), ASC (A$)),XY,
+100 Z% = X + Y:XY =  FRE (Z%) +  POS (W%
+ * 951 = Z% - Z% <  - ((D%(I,5) <  = W))
+):Q1 = W
+110  FOR Y = (W%) TO (Z% - 3):Z% = 39:I
+= Y% * B%
+120 N2$ =  RIGHT$ ( STR$ ( - 10),XY + ((
+I OR X))):B% = ((1000 - 7)) ^ I - 3: IF
+(B% OR B%) THEN 140:X =  - D%((3.14159),
+Y%)
+130  READ A$( - 0)
+140 B% = Q1 / 23012:W =  FRE (B%) +  POS
+ (Q1): CALL D%(.001 < Y,I <  = Y) >  = (
+( LOG (194) OR  - D%(I,W%))):Z% = I:Y =
+Z% AND Z%
+150  FOR W = (Z%) TO (((W% AND Q1)) * ((
+Y * D%(B%,Z%))) *  NOT ((3.14159 <  = Z%
+))) STEP ( ATN ((2)) * (( TAN (Y) / W%))
+)
+160 W% = 3.14159:Q1 =  FRE (W%) +  POS (
+256)
+170 XY =  FRE (N2$ + "A"): PRINT  POS (A
+$):A$ = N2$
+180 N2$ = B$( - Q1 OR Z% <  = W%,(Q1)):Y
+% = 5466: PRINT  MID$ ("" + A$(2),Y) + "
+123",
+190  READ W$
+200  PRINT  EXP (32767);"TASC" +  MID$ (
+"",39) + W$ +  LEFT$ ("123",D%(B%,10));:
+Q1 =  FRE ( CHR$ (XY)): PRINT  POS (W$)
+210  PRINT  SQR (B%),39, FRE ( - 662) AN
+D  LEN (A$(40000) + A$(Y%));
+220  ON X - 2 * Y + W% GOTO 160,50:W$ =
+""
+230  IF (Z%) THEN A$ = A$ + A$(0 / Y%)
+240 W = W%:X = W OR W:Y = (( PEEK (1675)
+ OR  - X)) + B%
+250 W% = 10: IF (W% OR W%) THEN 30
+260
+
+*****FATAL ERROR
+LINE NUMBER 260
+SYNTAX
+
+ REM ! CLEAR COMMON !ERR!
+
+TYPE CNTRL-C TO ABORT

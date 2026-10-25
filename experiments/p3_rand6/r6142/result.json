@@ -1,0 +1,66 @@
+{
+ "id": "r6142",
+ "key": "c3a5aa539b23f208",
+ "source": "10 READ Q1$,XY\n20 AB=39*Z:W=FRE(AB)+POS(1000):COLOR=W\n30 &\n40 POKE LOG(AB%),Q1%:XY=-(NOT Y%):AB=XY OR XY:NORMAL\n50 Z=AB%:CONT:Z=Z\n60 GOTO 40:RECALL A:LIST\n70 VTAB 20\n80 XY=XY>Y%:SPEED=INT(AB):X%=Z:XY=FRE(X%)+POS(40000>=INT(PEEK(X)))\n90 READ XY:PRINT XY OR XY:GOTO 70:X=Z:AB=X OR X\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 461,
+ "obj_sha256": "2aa8109a77c8a777e42b6b94f9476d537c13f84ea6ba05e081c7269358ec71e9",
+ "cycles": 79648500,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6099
+  },
+  {
+   "line": 30,
+   "addr": 6141
+  },
+  {
+   "line": 40,
+   "addr": 6141
+  },
+  {
+   "line": 50,
+   "addr": 6192
+  },
+  {
+   "line": 60,
+   "addr": 6210
+  },
+  {
+   "line": 70,
+   "addr": 6213
+  },
+  {
+   "line": 80,
+   "addr": 6222
+  },
+  {
+   "line": 90,
+   "addr": 6297
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S002.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6524",
+  "LOCAL VARIABLES": "6525 - 6564",
+  "HIGHEST MEMORY LOCATION": "6564"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "r5185",
+ "key": "75dd8d3cb6361766",
+ "source": "10 REM! INTEGER K,J\n20 DEF FN F(X)=((J>=37971))^((5+20/127))\n30 ONERR GOTO 90\n40 B=-((FRE(M)*3428)):REM! CLEAR CHAIN:PRINT W%;.001/((B%*B*2.25));MID$(MID$(B$+\"X Y\",K,W%-5),6046);\n50 IF (Z) THEN IF (40000) THEN N2$=MID$(\"123\",FN F(39497)):N2=((M*49152))^((Z%-W%))<20:REM! CLEAR COMMON\n60 N2$=\"\"\n70 Z=20:IF (Z AND Z) THEN 140\n80 PRINT C%<C%,N2$;:AB$=MID$(LEFT$(STR$(N2),127),585<=((C%<>599))):Z=NOT ((-((B%^40000))))\n90 IF (NOT ((0*N2))+40) THEN 10:IF (N2) THEN 100:PRINT J>=J;PEEK(C%);255*-B% OR Z,\n100 W%=100+((K=B>-B%)):AB=W% OR W%\n110 IF (PEEK(M)) THEN AB$=N2$\n120 N2$=CHR$(-((N2-B))):GOTO 110\n130 IF (AB) THEN 130:B$=AB$\n140 IF (COS(1)>=((B>=0.1))-((W% AND 0))) THEN RUN 140:DATA -2.5:READ N2\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 40\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

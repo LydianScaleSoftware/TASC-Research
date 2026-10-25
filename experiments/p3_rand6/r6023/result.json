@@ -1,0 +1,79 @@
+{
+ "id": "r6023",
+ "key": "79e0fe00d3fcb3c7",
+ "source": "10 REM! INTEGER K,I\n20 DIM A%(12)\n30 DEF FN F(X)=FRE(B)\n40 TEXT:DEL 10,20:IF (((C% OR Z%))>=1000 OR I-((B<7))) THEN IF (AB>=W%) THEN GOTO 90:REM! CLEAR COMMON\n50 W%=AB\n60 C%=36156:LIST:XY%=Y:M=XY% AND XY%\n70 & \"X:Y\",1:IF (((FRE(20) OR -1000))^I) THEN RETURN:GOTO 100:REM! CLEAR COMMON\n80 RUN:HTAB 1:C=FRE(MID$(CHR$(AB),VAL(\"123\")<NOT W%)):PRINT POS(X$)\n90 READ B:M=FRE(MID$(MID$(\"HI\",-3262,ASC(B$)),10/-0,Z%=M>((32767=24)))):PRINT POS(X$):B=I+((Y*B AND C%)):C=B OR B\n100 HTAB TAN(100)*XY%<C%:IF (XY%) THEN GOTO 80:STORE B,C\n110 RUN\n120 RUN:Z%=.5:READ W%:PRINT W% OR W%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 772,
+ "obj_sha256": "1ba5c4d21067cab672fc5dbc904cd65bf702ec20a6ce429c4b4a0169c38a8158",
+ "cycles": 100154039,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6094
+  },
+  {
+   "line": 50,
+   "addr": 6158
+  },
+  {
+   "line": 60,
+   "addr": 6164
+  },
+  {
+   "line": 70,
+   "addr": 6191
+  },
+  {
+   "line": 80,
+   "addr": 6226
+  },
+  {
+   "line": 90,
+   "addr": 6280
+  },
+  {
+   "line": 100,
+   "addr": 6426
+  },
+  {
+   "line": 110,
+   "addr": 6452
+  },
+  {
+   "line": 120,
+   "addr": 6455
+  }
+ ],
+ "info": {
+  "RECOGNIZED": "REM ! CLEAR COMMON",
+  "OBJECT FILE": "S003.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6835",
+  "LOCAL VARIABLES": "6836 - 6923",
+  "HIGHEST MEMORY LOCATION": "6923"
+ }
+}

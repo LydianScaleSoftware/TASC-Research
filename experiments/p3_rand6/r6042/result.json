@@ -1,0 +1,119 @@
+{
+ "id": "r6042",
+ "key": "9603d3e45bfdbf70",
+ "source": "10 GOTO 140:NOTRACE:W=B%:GOTO 150\n20 RUN 20:END\n30 W=127:END:A%=A\n40 RUN 180:LIST 10-20\n50 Q1=2:A=FRE(Q1)+POS(65535+Q1*((XY%*AB%)))\n60 POKE A,((XY%+C))*W>W:&\n70 XY=-((LEN(B$)-AB%)):XY=XY OR AB%:REM! CLEAR CHAIN\n80 FOR XY=(100/((((AB%<W))-((B%>.001))))) TO (-LOG(39 AND AB%)) STEP (A%):A=65535:A=FRE(A)+POS(W):GOTO 130:SAVE\n90 GOSUB 190:Q1=2*((W*Q1))-W:W=Q1 AND XY%\n100 XY=47720:B$=STR$(AB%)+MID$(\"\",255,B%)+B$:READ B$\n110 IF (743) THEN LOAD \"F\"\n120 W=A\n130 IF (ABS(ABS(W))) THEN 180\n140 W$=\"A\"+N2$+B$:RUN 60:PRINT:X=1:W=XY%:XY=W OR W\n150 Q1=B%:IF (Q1 OR Q1) THEN 10:IF (XY%*XY^((Q1+809))) THEN POKE 65535,XY\n160 PRINT \"A\",\n170 SPEED=POS(W$):Q1=XY% OR B% AND (XY%):IF (Q1 AND Q1) THEN 40:A%=(256)\n180 XY=((40024)=XY-A%):READ XY,N2$\n190 RUN 180:IF (C) THEN SHLOAD:IF (A%) THEN XY=-((A*373-((A<=.001))))\n200 READ C:PRINT C OR C:RUN 80:C=INT((539))<(XY AND C)\n210 N2$=LEFT$(W$,C):RUN 20:B$=B$\n220 PRINT \"123\",CHR$(1000),\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1011,
+ "obj_sha256": "4b572741aba5ca8cce271131aa0b53e5de1ec50ec33ea8889abfa95e83b45661",
+ "cycles": 120545118,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6093
+  },
+  {
+   "line": 30,
+   "addr": 6099
+  },
+  {
+   "line": 40,
+   "addr": 6114
+  },
+  {
+   "line": 50,
+   "addr": 6120
+  },
+  {
+   "line": 60,
+   "addr": 6159
+  },
+  {
+   "line": 70,
+   "addr": 6183
+  },
+  {
+   "line": 80,
+   "addr": 6222
+  },
+  {
+   "line": 90,
+   "addr": 6305
+  },
+  {
+   "line": 100,
+   "addr": 6341
+  },
+  {
+   "line": 110,
+   "addr": 6398
+  },
+  {
+   "line": 120,
+   "addr": 6406
+  },
+  {
+   "line": 130,
+   "addr": 6412
+  },
+  {
+   "line": 140,
+   "addr": 6428
+  },
+  {
+   "line": 150,
+   "addr": 6480
+  },
+  {
+   "line": 160,
+   "addr": 6494
+  },
+  {
+   "line": 170,
+   "addr": 6510
+  },
+  {
+   "line": 180,
+   "addr": 6554
+  },
+  {
+   "line": 190,
+   "addr": 6581
+  },
+  {
+   "line": 200,
+   "addr": 6587
+  },
+  {
+   "line": 210,
+   "addr": 6635
+  },
+  {
+   "line": 220,
+   "addr": 6659
+  }
+ ],
+ "info": {
+  "RECOGNIZED": "REM ! CLEAR CHAIN",
+  "OBJECT FILE": "S002.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7074",
+  "LOCAL VARIABLES": "7075 - 7125",
+  "HIGHEST MEMORY LOCATION": "7125"
+ }
+}

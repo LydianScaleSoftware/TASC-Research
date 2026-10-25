@@ -1,0 +1,23 @@
+{
+ "id": "r6168",
+ "key": "8adc21264464a6a2",
+ "source": "10 REM! INTEGER I\n20 N2=FRE(Y$):PRINT POS(Y$)\n30 READ A%(N2+X):N2%=5-POS(MID$(\"A\",B%(XY%),I)):IF (N2% AND N2%) THEN 150\n40 GOTO 100:DEL 10,20:DEL 10,20\n50 REM! CLEAR COMMON:GOTO 50:REM! CLEAR COMMON\n60 SPEED=((N2%+XY%))*N2%-(N2%<>38398):B$=C$\n70 PRINT\n80 IF (-M<=XY) THEN SAVE:Y$=LEFT$(B$,ABS(N2))+MID$(B$,I<>550,Q1%+XY%)\n90 READ I:PRINT I AND I:XY=B\n100 M=5:CONT:XY=M\n110 RUN 70:SPEED=1000^PEEK(XY%)\n120 SHLOAD\n130 READ Y$:GOTO 110:REM! CLEAR COMMON:RESTORE\n140 XY=RND(A%(Q1%))\n150 X=I:LIST 10-20:N2=X:STORE B,C\n160 N2=FRE(Y$):PRINT POS(C$):SHLOAD\n170 XY=127 OR Y%+TAN(20):X=FRE(XY)+POS(B)\n180 A%(ASC(\"A\"+B$+\"123\"+Y$))=Y%:X=FRE(Q1%)<-24\n190 I=574:X=I OR I\n200 I=XY\n210 GOSUB 80:GOSUB 240:B=XY\n220 GOTO 120:REM! CLEAR CHAIN:HLIN ATN(X)+((XY AND (XY))),(653) AT XY\n230 PRINT STR$(Y%>A%(100))+C$;:&\n240 XY%=M*I:READ I:PRINT I OR I\n",
+ "options": {
+  "library": null,
+  "program": "HGR1",
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 50\nSYNTAX\n\n REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

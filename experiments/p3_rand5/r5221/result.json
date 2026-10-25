@@ -1,0 +1,98 @@
+{
+ "id": "r5221",
+ "key": "03a1cef533c07a0c",
+ "source": "10 REM! INTEGER K,J\n20 DIM A$(9,5),P(5)\n30 DEF FN F(Z)=X+POS(RIGHT$(C$,J))\n40 J=-N2\n50 A%=40:X=A% AND XY:PRINT P(COS(XY%-XY));C$;\n60 READ X:PRINT X OR X:IF (N2) THEN HCOLOR=((K AND A%))*N2%/X\n70 Y=FRE(MID$(\"TASC\",J-D%(811,XY%),A%+N2%)):PRINT POS(XY$):J=A%\n80 GOTO 90:RUN\n90 RUN:PRINT:X=1\n100 PRINT N2,ATN(24),:IF (FN F(ABS(1))*((FN F(A%)/-20))) THEN SPEED=XY\n110 VTAB J-J\n120 ON P(LEN(LEFT$(XY$,2))) GOTO 100,90:J=A%^Y:Y=J AND J:IF (10*N2>523>=430) THEN RUN\n130 N2%=SIN(J):PLOT J-FN F(XY),-20\n140 SPEED=3170:Y=PEEK(SIN(J*256)):N2=FRE(Y)+POS(N2):PRINT\n150 FOR X=(N2%) TO (NOT 7):RUN:PRINT:X=1\n160 GET W%:XY%=W% AND (FN F(-D%(J,J))+LOG(1763)):IF (65535) THEN A=N2%:A$(SIN(POS(A$(W%,N2%)))=-XY%,XY%)=MID$(Y$,K AND XY%)+XY$\n170 Y=ABS(256) AND LEN(A$(3,2497)):A=FRE(Y)+POS(2.25)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1319,
+ "obj_sha256": "cf63e3c4727058f5f49f5347802f6443b6c70cd408185af84cb825ef16c96760",
+ "cycles": 120062701,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6109
+  },
+  {
+   "line": 50,
+   "addr": 6121
+  },
+  {
+   "line": 60,
+   "addr": 6175
+  },
+  {
+   "line": 70,
+   "addr": 6240
+  },
+  {
+   "line": 80,
+   "addr": 6322
+  },
+  {
+   "line": 90,
+   "addr": 6325
+  },
+  {
+   "line": 100,
+   "addr": 6340
+  },
+  {
+   "line": 110,
+   "addr": 6416
+  },
+  {
+   "line": 120,
+   "addr": 6428
+  },
+  {
+   "line": 130,
+   "addr": 6516
+  },
+  {
+   "line": 140,
+   "addr": 6552
+  },
+  {
+   "line": 150,
+   "addr": 6612
+  },
+  {
+   "line": 160,
+   "addr": 6650
+  },
+  {
+   "line": 170,
+   "addr": 6814
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7382",
+  "LOCAL VARIABLES": "7383 - 7838",
+  "HIGHEST MEMORY LOCATION": "7838"
+ }
+}

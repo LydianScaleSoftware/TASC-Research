@@ -1,0 +1,23 @@
+{
+ "id": "r6031",
+ "key": "946aa19d1e9045b2",
+ "source": "10 REM! INTEGER J,K\n20 DIM A$(8),P$(2)\n30 K=C%:GOTO 120:PRINT Y$,\n40 DRAW LEN(\"A\"+B$(Y%)+STR$(C)):PRINT PEEK(1763>Q1)>((Q1<=W%))-2*N2;:IF (Y%) THEN TRACE\n50 P$(Y%)=A$(AB^((Q1<Q1)))\n60 GOTO 90:REM! CLEAR CHAIN:Z%=127<3<>N2:C=Z% OR Z%:PLOT J,12281\n70 W%=C%*ABS((764)):Y%=XY:FOR Q1=(NOT ((24-AB))>=XY/-N2) TO (-0*((XY+W%-Q1)))\n80 FOR K=((W%-Z% AND C%)) TO (J/SQR(PEEK(Y%))) STEP (57)\n90 GOSUB 80:IF (C%) THEN 130\n100 FOR K=(-((Z%-C%))) TO (K)\n110 J=((687+256 AND Y%<Y%))>=((ABS(C)=Z%/367)):AB=J AND K:RUN\n120 GET N2:C%=N2 OR (-AB)\n130 RUN 60\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 60\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

@@ -13,7 +13,7 @@ from fractions import Fraction
 from tasc.compiler import fp
 from tasc.compiler.fin import fin
 from tasc.compiler.parse import (
-    Bin, Builtin, Expr, FnCall, Num, ParseError, Stmt, Str, Unary, VarRef, iter_statements, read_program,
+    TOK, Bin, Builtin, Expr, FnCall, Num, ParseError, Stmt, Str, Unary, VarRef, is_str, iter_statements, read_program,
 )
 from tasc.harness import Options
 
@@ -179,7 +179,14 @@ class Compiler:
         self.next_line: dict[int, int] = {}
         self.in_if = False
         self.rem_after_then = False
-        self.lit_data: dict[int, str] = {}
+        self.d2 = 2  # PASS1 D2: 2 = declarations allowed, 1 = after COMMON, 0 = after a statement
+        self.common_kind: str | None = None
+        self.table: dict[int, int] | None = None
+        self.table_str: list[int] = []
+        # literal data emitted at scan time, keyed by id() with the node kept alive (a stale
+        # entry, e.g. a literal FRE/POS argument that is never generated, must not match a
+        # later node that reuses the id)
+        self.lit_data: dict[int, tuple[Expr, str]] = {}
         self.depth = 0
 
     # -- symbols ------------------------------------------------------
@@ -372,13 +379,18 @@ class Compiler:
 
         Observed: TASC parses a whole expression before generating code, so the data of
         all its string literals is emitted first, in source order."""
+        own_table = self.depth == 0 and self.table is None
         if self.depth == 0:
             self.prescan(e)
+        if own_table:
+            self.begin_table([e])
         self.depth += 1
         try:
             t = self._gen(e, want)
         finally:
             self.depth -= 1
+            if own_table:
+                self.table = None
         if want == "real" and t == "int":
             self.jsr_rt("FLOAT")
             return "real"
@@ -393,7 +405,8 @@ class Compiler:
             self.entry(self.const(fp.literal_value(e.text), "real", e.text), 0)
             return "real"
         if isinstance(e, Str):
-            lab = self.lit_data.pop(id(e), None)
+            ent = self.lit_data.pop(id(e), None)
+            lab = ent[1] if ent is not None and ent[0] is e else None
             if lab is None:
                 lab = self.strlit_data(e.text)
             self.jsr_rt("STRLIT")
@@ -705,6 +718,8 @@ class Compiler:
         if isinstance(e, Bin):
             return self.uses(e.l) | self.uses(e.r)
         if isinstance(e, Builtin):
+            if e.name in ("FRE", "POS") and self.simple_or_str(e.args[0]):
+                return {"num"}  # the operand is not loaded (PASS1 6250)
             out = {"str" if self.etype(e) == "str" else "num"}
             for x in e.args:
                 out |= self.uses(x)
@@ -738,8 +753,16 @@ class Compiler:
             # computed (its own triples)
             if self.simple_or_str(a[0]):
                 self.touch(a[0])
-            else:
-                self.gen(a[0], "str" if self.etype(a[0]) == "str" else self.want_any(a[0]))
+            elif self.etype(a[0]) == "str":
+                self.gen(a[0], "str")
+                # PASS1 6330-6375 (p3_rand5 r5030): FRE/POS do not consume a string result; if
+                # another string-producing triple follows in the same table, the result is spilled
+                # to a string temp, which is never used and so never freed
+                me = self.table.get(id(e)) if self.table is not None else None
+                if me is not None and any(i > me for i in self.table_str):
+                    self.entry(self.temp("str"), 1)
+            else:  # a numeric operand is wanted as a real (p3_rand5: JSR POS / FLOAT / JSR FRE)
+                self.gen(a[0], "real")
             self.jsr_rt(n)
             return "real" if n == "FRE" else "int"
         if n == "PEEK":
@@ -840,15 +863,57 @@ class Compiler:
     def scan(self, e: Expr) -> None:
         """Observed: a string literal's data is emitted when the (bottom-up) parser
         scans it; its STRLIT call comes at the reduction that consumes it."""
-        if isinstance(e, Str) and id(e) not in self.lit_data:
-            self.lit_data[id(e)] = self.strlit_data(e.text)
+        if isinstance(e, Str) and not (id(e) in self.lit_data and self.lit_data[id(e)][0] is e):
+            self.lit_data[id(e)] = (e, self.strlit_data(e.text))
 
     # -- statements ----------------------------------------------------
+    # -- triple tables (PASS1 builds one per expression; an array target and its subscripts
+    # form their own) -------------------------------------------------------------------
+    def begin_table(self, exprs: list[Expr]) -> None:
+        """Remember the order in which the triples of this table are generated (post-order),
+        for TASC's look-ahead at a pending string result (PASS1 6330-6375)."""
+        order: list[Expr] = []
+
+        def walk(e: Expr) -> None:
+            if isinstance(e, Bin):
+                walk(e.l)
+                walk(e.r)
+            elif isinstance(e, Unary):
+                walk(e.e)
+            elif isinstance(e, Builtin):
+                for x in e.args:
+                    walk(x)
+            elif isinstance(e, FnCall):
+                walk(e.arg)
+            elif isinstance(e, VarRef) and e.subs is not None:
+                for x in e.subs:
+                    walk(x)
+            else:
+                return  # operands, not triples
+            order.append(e)
+
+        for e in exprs:
+            walk(e)
+        self.table = {id(e): i for i, e in enumerate(order)}
+        self.table_str = [i for i, e in enumerate(order) if self.str_related(e)]
+
+    def str_related(self, e: Expr) -> bool:
+        """String-related triples, those PASS1's look-ahead (6330-6345) stops at: concatenation,
+        string array element, string comparison, and LEN STR$ VAL ASC CHR$ LEFT$ RIGHT$ MID$
+        (op codes 16, 20, 23-28, >=46)."""
+        if isinstance(e, VarRef):
+            return e.subs is not None and e.suffix == "$"
+        if isinstance(e, Bin):
+            return is_str(e.l) and (e.op == "+" or e.op in CMP)
+        return isinstance(e, Builtin) and e.name in ("LEN", "STR$", "VAL", "ASC", "CHR$", "LEFT$", "RIGHT$", "MID$")
+
     def store(self, v: VarRef, rhs: Expr) -> None:
         if v.subs is not None:
             self.prescan(v)  # observed: all target subscripts are scanned before any code
             s = self.var(v.name, v.suffix, True, len(v.subs))
+            self.begin_table([v])
             self.subscripts(v.subs)
+            self.table = None
             s.ops.add(1)
             self.emit(JSR, Ref("entry", s, 1), f"{s!r}.op1")
             if s.vtype == "str":
@@ -1151,33 +1216,47 @@ class Compiler:
         self.label(after)
 
     def rem(self, text: bytes) -> None:
+        """REM! declarations.  Errors as in PASS1 (1475-1865): INTEGER only while D2=2 (before
+        any statement but REM, and before COMMON), COMMON while D2<>0 and of one kind
+        (DECLARATION); a declaration list or CLEAR COMMON/CHAIN must end the line (SYNTAX)."""
         t = text.decode("ascii", "replace").lstrip(" ")
         if not t.startswith("!"):
             return
         body = t[1:].strip()
         up = body.replace(" ", "")
         if up.startswith("INTEGER"):
+            if self.d2 != 2:
+                raise CompileError(f"line {self.cur_line}: DECLARATION")
             rest = up[len("INTEGER"):]
             if rest.startswith("*"):
+                if rest != "*":
+                    raise CompileError(f"line {self.cur_line}: SYNTAX")
                 self.int_all = True
                 return
-            for nm, suf, dims in _decl_list(rest):
+            for nm, suf, dims in _decl_list(rest, self.cur_line):
                 if dims:
                     self.int_arrays[nm] = dims
                 else:
                     self.int_names.add(nm)
                 self.var(nm, suf, bool(dims), len(dims) or 1)  # observed: entered at the declaration
         elif up.startswith("DEFCOMMON") or up.startswith("USECOMMON"):
+            kind = up[:3]
+            if self.d2 == 0 or self.common_kind not in (None, kind):
+                raise CompileError(f"line {self.cur_line}: DECLARATION")
+            self.d2, self.common_kind = 1, kind
             self.common_last_line = self.cur_line
             if up.startswith("USECOMMON"):
                 self.common_flag = 0xFF
-            for nm, suf, dims in _decl_list(up[9:]):
+            for nm, suf, dims in _decl_list(up[9:], self.cur_line):
                 if dims:
                     self.dims[(nm, suf)] = dims
                 s = self.var(nm, suf, bool(dims), len(dims) or 1)
                 s.common = len(self.common)
                 self.common.append(s)
         elif up.startswith("CLEARCOMMON") or up.startswith("CLEARCHAIN"):
+            if up not in ("CLEARCOMMON", "CLEARCHAIN"):
+                raise CompileError(f"line {self.cur_line}: SYNTAX")  # PASS1 1625 -> 1805
+            self.d2 = 0  # PASS1 1610
             # PASS1 1585-1615: these go through the debug emitter (line 5380)
             if self.o.resume and not self.rem_after_then:
                 self.jsr_rt("DEBUG")
@@ -1198,7 +1277,19 @@ class Compiler:
             dead = False
             pending_ret: Stmt | None = None
             try:
-                for kw, is_data, parse in iter_statements(body):
+                for kw, is_data, unsupported, parse, tok in iter_statements(body):
+                    if tok != TOK["REM"]:
+                        self.d2 = 0  # PASS1 320
+                    if unsupported:
+                        # PASS1 2485 (confirmed p3_unsup): an unsupported keyword prints a warning
+                        # and is skipped unparsed (no code, no symbols) to the next ':' outside
+                        # quotes; parsing resumes at 310, which also clears the after-THEN flag
+                        parse(True)
+                        if pending_ret is not None:
+                            self.stmt(pending_ret, n)
+                            pending_ret = None
+                        self.in_if = False
+                        continue
                     if dead and kw and not is_data:
                         # observed: after GOTO / THEN line / RETURN / END / STOP / NEW, statements
                         # that begin with a keyword are skipped unparsed (no code, no symbols);
@@ -1220,6 +1311,12 @@ class Compiler:
                             continue
                         self.stmt(pending_ret, n)
                         pending_ret = None
+                    if st.kind == "IF" and st.then_colon:
+                        # PASS1 1355 sees ':' (not RETURN): general IF form; the empty statement
+                        # ends through 2435 -> 310, clearing the after-THEN flag (confirmed p3_then)
+                        self.stmt(st, n)
+                        self.in_if = False
+                        continue
                     if st.kind == "IF":
                         pending_ret = st  # decide once the next statement is known
                         continue
@@ -1235,8 +1332,10 @@ class Compiler:
         self.emit(JMP, Ref("rt", RT["END"]))
 
 
-def _decl_list(s: str) -> list[tuple[str, str, tuple[int, ...]]]:
+def _decl_list(s: str, line: int = 0) -> list[tuple[str, str, tuple[int, ...]]]:
     import re
+    if not re.fullmatch(r"[A-Z][A-Z0-9]*[%$]?(\(\d+(,\d+)*\))?(,[A-Z][A-Z0-9]*[%$]?(\(\d+(,\d+)*\))?)*", s):
+        raise CompileError(f"line {line}: SYNTAX")
     out = []
     for m in re.finditer(r"([A-Z][A-Z0-9]*)([%$]?)(?:\(([\d,]+)\))?", s):
         dims = tuple(int(x) for x in m.group(3).split(",")) if m.group(3) else ()

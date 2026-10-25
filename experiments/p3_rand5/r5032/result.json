@@ -1,0 +1,98 @@
+{
+ "id": "r5032",
+ "key": "56bbd25aa668f2dd",
+ "source": "10 CALL EXP(X*817-((Q1%-3.14159))):IF (LEN(STR$(.001))>=C%+FRE(B%)) THEN RUN\n20 ON ATN(5) GOTO 50,100:PRINT LEFT$(\"HI\",32767);\"X Y\";\n30 RUN:READ C%,Q1:READ B$,M%\n40 GET Q1%:C%=Q1% AND (C%<M%):GOTO 90\n50 HTAB 32767:PRINT -((Q1%<20 AND 10*672));:PRINT AB;\n60 C%=M%:IF (C% OR C%) THEN 40\n70 Z=FRE(B$):PRINT POS(Q1$)\n80 AB=INT(B)<=X:Q1%=X:B=Q1% AND Q1%:INVERSE\n90 Q1=B%<>NOT Q1%\n100 READ B:PRINT B AND B:DATA ,X,1,1\n110 HCOLOR=AB\n120 B=0:IF (Q1%) THEN 50\n130 READ M%:PRINT M% AND M%:READ B%\n140 PRINT NOT 24;\"123\";:READ AB,B\n150 HCOLOR=B:HLIN Q1% AND 7,(Q1>POS(B)+((13+480))) AT ((((X OR 41231))>=((Q1%<B))))+M%:PLOT -((AB<=B))/((COS(AB) AND C%)),B%\n160 Q1=Q1%:Q1$=MID$(W$,EXP(Z<=152))\n170 X=3 AND 10:IF (X OR X) THEN 160:B=C%:Z=B OR Z=1697:PRINT NOT ((127-NOT 24));CHR$(-POS(B$)),\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1000,
+ "obj_sha256": "a53fefe27248087e886176b69300021116cbf338f21cedd231bdc55a97173a66",
+ "cycles": 110392830,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6140
+  },
+  {
+   "line": 30,
+   "addr": 6189
+  },
+  {
+   "line": 40,
+   "addr": 6192
+  },
+  {
+   "line": 50,
+   "addr": 6222
+  },
+  {
+   "line": 60,
+   "addr": 6264
+  },
+  {
+   "line": 70,
+   "addr": 6278
+  },
+  {
+   "line": 80,
+   "addr": 6293
+  },
+  {
+   "line": 90,
+   "addr": 6332
+  },
+  {
+   "line": 100,
+   "addr": 6347
+  },
+  {
+   "line": 110,
+   "addr": 6375
+  },
+  {
+   "line": 120,
+   "addr": 6381
+  },
+  {
+   "line": 130,
+   "addr": 6395
+  },
+  {
+   "line": 140,
+   "addr": 6425
+  },
+  {
+   "line": 150,
+   "addr": 6461
+  },
+  {
+   "line": 160,
+   "addr": 6584
+  },
+  {
+   "line": 170,
+   "addr": 6611
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S012.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7063",
+  "LOCAL VARIABLES": "7064 - 7109",
+  "HIGHEST MEMORY LOCATION": "7109"
+ }
+}

@@ -1,0 +1,107 @@
+{
+ "id": "r6131",
+ "key": "9df6d17c8799e076",
+ "source": "10 REM! INTEGER K\n20 DEF FN F(T)=-((-Q1%*-M%))\n30 AB%=M+FN F(NOT M%):AB=AB% OR AB%:RUN:GOTO 10:LIST\n40 NORMAL:FOR N2=(M) TO (AB):AB=AB%\n50 SAVE:XY$=Y$+Y$\n60 N2=Q1%:STORE B,C:XY=N2\n70 RUN:PRINT:X=1\n80 AB=NOT ((-((2 AND M)))):AB=FRE(AB)+POS(X)\n90 GOTO 40:& \"X:Y\",1:A%=ABS(FRE(XY))\n100 M=RND(K):HPLOT ((127>AB OR -AB%))<ATN(X+A%),(N2/((-AB+ATN(AB))))\n110 IF (POS(M% OR AB)<>((39 AND NOT K))) THEN 150:DEL 10,20:AB%=M%\n120 PRINT MID$(XY$+MID$(Y$,A%),NOT M<((AB%>.001)));\n130 NEXT N2:SPEED=M\n140 IF (256) THEN DEL 10,20\n150 PRINT RND(AB%)/((1000+12360))*((32941*VAL(Y$))),X;M%-((127+-N2)),\n160 N2=2\n170 FOR XY=(5*745) TO (255):RUN:PRINT:X=1:Q1%=AB%\n180 READ A%,K\n190 XY=X:REM! CLEAR COMMON\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 877,
+ "obj_sha256": "266535c75dce9d27cbb9518e1e91b2160d7127dbe8b36cba6f469749eb6df77a",
+ "cycles": 110369035,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6115
+  },
+  {
+   "line": 40,
+   "addr": 6148
+  },
+  {
+   "line": 50,
+   "addr": 6174
+  },
+  {
+   "line": 60,
+   "addr": 6189
+  },
+  {
+   "line": 70,
+   "addr": 6198
+  },
+  {
+   "line": 80,
+   "addr": 6207
+  },
+  {
+   "line": 90,
+   "addr": 6248
+  },
+  {
+   "line": 100,
+   "addr": 6260
+  },
+  {
+   "line": 110,
+   "addr": 6338
+  },
+  {
+   "line": 120,
+   "addr": 6388
+  },
+  {
+   "line": 130,
+   "addr": 6433
+  },
+  {
+   "line": 140,
+   "addr": 6444
+  },
+  {
+   "line": 150,
+   "addr": 6452
+  },
+  {
+   "line": 160,
+   "addr": 6518
+  },
+  {
+   "line": 170,
+   "addr": 6524
+  },
+  {
+   "line": 180,
+   "addr": 6559
+  },
+  {
+   "line": 190,
+   "addr": 6571
+  }
+ ],
+ "info": {
+  "RECOGNIZED": "REM ! CLEAR COMMON",
+  "OBJECT FILE": "S011.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6940",
+  "LOCAL VARIABLES": "6941 - 6993",
+  "HIGHEST MEMORY LOCATION": "6993"
+ }
+}

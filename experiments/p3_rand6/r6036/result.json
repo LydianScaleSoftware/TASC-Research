@@ -1,0 +1,151 @@
+{
+ "id": "r6036",
+ "key": "3b13d6ee0ea97ab4",
+ "source": "10 DIM D%(11),A(5),P(12)\n20 DEF FN F(X)=X+.5*M%<=255\n30 READ N2%:PRINT N2% OR N2%:Z=A:XY=FRE(Z)+POS(822):READ X,AB$\n40 IF (EXP(846)) THEN GET Z:M%=Z OR (PEEK(N2%)):Z=255:W=Z OR Z:CALL W\n50 READ Y%,M%:IF (N2%>ABS(65535) OR M%) THEN RUN:XY=3:XY=FRE(XY)+POS(A)\n60 Y%=39\n70 NOTRACE:GET Z:M%=Z OR (LOG(Y%)):W=((D%(23726)=3>TAN(A)))-NOT ((AB%^AB%)):W=W AND W\n80 GOTO 180:REM! CLEAR CHAIN\n90 ON VAL(STR$(N2%))=X GOTO 30,60,170,160\n100 FOR W=(255) TO (AB%) STEP (VAL(\"X Y\")*24 OR AB%):A=100:PRINT \"A\";NOT X;\n110 FOR Z=(W<=LOG(X=Y%)) TO (-AB%^FN F(A(AB%))*AB%):A=FN F(-LEN(AB$)):Z=A OR A\n120 HLIN Z*FRE(\"X Y\")^LEN(A$),(Y%) AT 1000:READ W:PRINT W OR W:LIST\n130 GET Y%:AB%=Y% AND (256):X$=AB$+X$+STR$(Z)+MID$(AB$,-N2%,1 AND N2%):FOR A=(Z<=LEN(X$)) TO (Z) STEP (1)\n140 M%=NOT D%(SQR(P(990))):XY=M% AND NOT 14950-X\n150 GET X:AB%=X OR (-((M%>=Y%))>=ATN(-XY))\n160 IF (XY/NOT ((A-XY))) THEN & \"X:Y\",1:Z=N2%:NOTRACE:Z=Z:X=-((N2%*16009))>X:IF (X AND X) THEN 210\n170 VTAB Z\n180 HTAB LEN(CHR$(M%))>X^((40*A)):IF (X) THEN LIST:SAVE\n190 POKE -((255+D%(M%)))>=((((N2% AND W))<>VAL(\"X Y\"))),LEN(\"TASC\")*((XY<X)) OR X\n200 XY=1E3:XY=XY AND XY:COLOR=((A(M%)+1))*A(M%)>Z:NOTRACE\n210 A=ATN(Z):IF (A OR A) THEN 250\n220 NEXT:LIST\n230 TEXT:A(21493)=EXP(40*FRE(X$)):IF (POS(A$)+((1000-((A=A))))) THEN PRINT\n240 X$=MID$(X$+\"\"+MID$(\"\",Y%),345):GOTO 100\n250 READ X:GOTO 170:DEL 10,20\n260 IF (N2%^D%(M%)+-24>W) THEN 250:A=-((Y%+A(255))):XY=A OR A:IF (Z) THEN W=XY--XY*Y%:W=W AND W\n270 Y%=A-A:IF (Y% AND Y%) THEN 90:IF (SQR(P(M%)*-A(Y%))) THEN RUN\n280 A=NOT ((891/Y%>SQR(P(Y%)))):A=A OR A:X=Y%:IF (X AND X) THEN 160:STORE B,C\n290 LOMEM: 16384:IF (294) THEN SAVE:XY=AB%<((.5+Y%))/AB%\n300 N2%=W:W=N2% AND XY:IF (INT(Z<>SGN(X))) THEN TRACE:IF (XY) THEN LIST\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 2017,
+ "obj_sha256": "af43a55a9996220e48f3e7fa32db4ba50afd0bf0150d8dcc6d82882803777720",
+ "cycles": 178671204,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6106
+  },
+  {
+   "line": 40,
+   "addr": 6166
+  },
+  {
+   "line": 50,
+   "addr": 6215
+  },
+  {
+   "line": 60,
+   "addr": 6280
+  },
+  {
+   "line": 70,
+   "addr": 6286
+  },
+  {
+   "line": 80,
+   "addr": 6363
+  },
+  {
+   "line": 90,
+   "addr": 6369
+  },
+  {
+   "line": 100,
+   "addr": 6396
+  },
+  {
+   "line": 110,
+   "addr": 6468
+  },
+  {
+   "line": 120,
+   "addr": 6548
+  },
+  {
+   "line": 130,
+   "addr": 6609
+  },
+  {
+   "line": 140,
+   "addr": 6737
+  },
+  {
+   "line": 150,
+   "addr": 6785
+  },
+  {
+   "line": 160,
+   "addr": 6830
+  },
+  {
+   "line": 170,
+   "addr": 6889
+  },
+  {
+   "line": 180,
+   "addr": 6895
+  },
+  {
+   "line": 190,
+   "addr": 6936
+  },
+  {
+   "line": 200,
+   "addr": 7036
+  },
+  {
+   "line": 210,
+   "addr": 7078
+  },
+  {
+   "line": 220,
+   "addr": 7095
+  },
+  {
+   "line": 230,
+   "addr": 7100
+  },
+  {
+   "line": 240,
+   "addr": 7152
+  },
+  {
+   "line": 250,
+   "addr": 7206
+  },
+  {
+   "line": 260,
+   "addr": 7215
+  },
+  {
+   "line": 270,
+   "addr": 7289
+  },
+  {
+   "line": 280,
+   "addr": 7315
+  },
+  {
+   "line": 290,
+   "addr": 7365
+  },
+  {
+   "line": 300,
+   "addr": 7397
+  }
+ ],
+ "info": {
+  "RECOGNIZED": "REM ! CLEAR CHAIN",
+  "OBJECT FILE": "S016.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 8080",
+  "LOCAL VARIABLES": "8081 - 8252",
+  "HIGHEST MEMORY LOCATION": "8252"
+ }
+}

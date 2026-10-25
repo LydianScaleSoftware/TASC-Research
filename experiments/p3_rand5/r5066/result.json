@@ -1,0 +1,23 @@
+{
+ "id": "r5066",
+ "key": "9a7cc55a93afe50b",
+ "source": "10 REM! INTEGER I,K\n20 REM! USECOMMON I,Y$,K\n30 DIM B%(3),A%(11)\n40 X$=Y$:INVERSE:I=SIN(-C%+56):AB=I OR I\n50 READ B%:POKE X%,PEEK((1.5*X%)):ON 3 GOTO 140,20\n60 Y$=\"123\"\n70 I=((40<A))+((Q1*C+K))\n80 PLOT RND(-524+-B%),(I-M%)-B%(M% OR Q1):I=-((7972<POS(\"\"))):C=I OR I:B%=0.1:IF (B% AND B%) THEN 170\n90 Q1=LEN(Y$+Y$):A=FRE(Q1)+POS(C%):Q1=Q1:READ Q1:PRINT Q1 AND Q1\n100 SPEED=Q1\n110 GOTO 70\n120 CALL FRE(A)>Q1=P%((A%(C%))):PRINT:PRINT \"TASC\";\n130 COLOR=ABS(-20<=C%+398):AB=FRE(LEFT$(STR$(AB-C%),C%)):PRINT POS(X$):FOR A=(7) TO (X%<=FRE(3)+40000) STEP (RND(C%))\n140 PLOT -((AB>AB))+.001,C:REM! CLEAR CHAIN:C%=I:AB=FRE(C%)+POS(C%)\n150 PRINT Y$+RIGHT$(Q1$,5);MID$(\"X Y\"+\"A\",PEEK(Q1))+X$+Q1$;:HTAB B%-C%\n160 NEXT A:Q1$=Q1$\n170 FOR C=(((C/720 OR VAL(X$)))<=X) TO (ABS(B%<=2.25)<=-LEN(Y$))\n180 IF (ASC(LEFT$(Q1$+Q1$,A/40))) THEN 100\n190 FOR AB=(X%+FRE(AB)) TO (RND(.5=P%(M%))+C) STEP (100)\n200 READ X%:PRINT X% AND X%:NEXT:A=POS(915+X%--AB)\n210 FOR X=(X%) TO (A) STEP (X%)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 140\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

@@ -1,0 +1,94 @@
+{
+ "id": "r5260",
+ "key": "0bdec8d6a0543454",
+ "source": "10 REM! INTEGER I,J\n20 DIM D%(9)\n30 DEF FN F(T)=VAL(STR$(N2 AND C%))\n40 W=W AND XY%>=SQR(I):CALL NOT Y%:B(ATN(J),B%)=Y%<=Y%\n50 B=FRE(W$):PRINT POS(W$)\n60 C%=-((J+XY%)) OR VAL(N2$):XY=C% AND C:HTAB NOT ((XY%*3<>((Y%>N2))))\n70 Y%=-((256-C%))-N2:C=Y% OR Y%\n80 W=NOT ((-XY/N2)):C%=J+13388:IF (C% OR C%) THEN 70\n90 J=J OR FN F(N2)^Y%:IF (J OR J) THEN 80\n100 AB$=N2$:XY=-C%-B%<>W:N2=XY AND XY\n110 READ Y%:PRINT Y% OR Y%\n120 W=C% OR D%(Y%<>B):W=W AND XY>((XY<>255<=((B%>=W))))\n130 IF (Y%) THEN FOR I=(J/EXP(C<>N2)) TO (40):FOR I=(FRE(LOG(929))+127) TO (FRE(C%/C%)*((N2<J>393))):DATA \n140 PLOT NOT ((FRE(N2$)+30890)),N2:PRINT NOT W+POS(N2$),POS(LEN(AB$))>((XY OR Y%))*((B%-I));\n150 COLOR=32767+((W=XY-255)):B%=XY\n160 IF (15041) THEN 110:B=XY:IF (XY%) THEN RESTORE\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1116,
+ "obj_sha256": "1035009fb75d4d343ce8ebcdf152a67616f32a9e463f35bbf40e24619eadda43",
+ "cycles": 118164966,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6106
+  },
+  {
+   "line": 50,
+   "addr": 6172
+  },
+  {
+   "line": 60,
+   "addr": 6187
+  },
+  {
+   "line": 70,
+   "addr": 6262
+  },
+  {
+   "line": 80,
+   "addr": 6298
+  },
+  {
+   "line": 90,
+   "addr": 6347
+  },
+  {
+   "line": 100,
+   "addr": 6391
+  },
+  {
+   "line": 110,
+   "addr": 6430
+  },
+  {
+   "line": 120,
+   "addr": 6454
+  },
+  {
+   "line": 130,
+   "addr": 6523
+  },
+  {
+   "line": 140,
+   "addr": 6620
+  },
+  {
+   "line": 150,
+   "addr": 6712
+  },
+  {
+   "line": 160,
+   "addr": 6736
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7179",
+  "LOCAL VARIABLES": "7180 - 7859",
+  "HIGHEST MEMORY LOCATION": "7859"
+ }
+}

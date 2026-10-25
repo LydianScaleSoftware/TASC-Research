@@ -1,0 +1,23 @@
+{
+ "id": "r6015",
+ "key": "6792085dfbbcfcf1",
+ "source": "10 STORE B,C:TRACE:X=187+((Q1<=X<=Q1)):W=X AND X\n20 RECALL A:GOTO 10:REM! CLEAR CHAIN\n30 X=W%:IF (X OR X) THEN 30\n40 HOME:GOTO 210:TRACE:GOTO 210:RECALL A\n50 GOTO 190:STORE B,C\n60 PRINT Z%;:Z%=460:PRINT W%<Q1*C;M$,-((((Z% OR Y%)) AND 100>=C));\n70 X=Y%:W=(-24)\n80 DATA \"A,B\",X,X\n90 Y%=RND(Q1):& \"X:Y\",1:W=Y%\n100 Z%=NOT (C^X):C=Z% OR Z%\n110 LOAD \"F\"\n120 N2$=Z$+Z$:READ Y%:PRINT Y% AND Y%\n130 DATA HI,300,:W%=ASC(\"\"+\"A\"+RIGHT$(N2$,Y%)):C=W% OR W%\n140 N2$=M$+Z$:Q1%=435:Z%=C:SHLOAD:C=Z%\n150 Z%=-(255):END\n160 PRINT:B=((.5+ABS(X)))/((POS(Q1%)+((Q1+Z%)))):READ B:PRINT B OR B\n170 X=Z%+TAN(Y%)*W:GET Q1:Y%=Q1 OR (Q1%)\n180 W%=PEEK(331+Y%-((Q1%<>1E3))):NOTRACE:X=FRE(MID$(Z$,Q1+Z%*2.25,797)):PRINT POS(N2$)\n190 READ Y%\n200 FOR Q1=((Y%)) TO (((2<C))^((C=Z%))-((.5>-Y%))):GOTO 120:REM! CLEAR CHAIN:& \"X:Y\",1\n210 IF ((W%)) THEN LIST 10-20:HCOLOR=39:READ Q1%,N2$\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 200\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

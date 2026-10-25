@@ -1,0 +1,62 @@
+{
+ "id": "r6030",
+ "key": "20276cfc64f54bbb",
+ "source": "10 DATA -2.5,-2.5,-2.5,X\n20 FOR Z=((ASC(\"A\"))) TO (B):LOMEM: 16384:RUN 30\n30 STOP:IF (NOT ((Z<=B<FRE(1000)))) THEN RUN:PRINT LEFT$(\"\",ASC(N2$+\"X Y\"));AB$,\n40 GOSUB 40:PRINT:Q1%=B%\n50 READ Z%:PRINT Z% AND Z%:IF (B) THEN SHLOAD:NEXT Z\n60 IF (XY%) THEN IF (VAL(LEFT$(LEFT$(\"X Y\",B),VAL(AB$)))) THEN 70\n70 ON B GOTO 50,30:IF (32767) THEN SHLOAD\n80 CALL XY%*XY>=((372 AND Z))>=Z^D(255,XY%)+((Z AND XY%))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 426,
+ "obj_sha256": "f206ae055392274c58e2821c21c33a31fd60f3715d98b954969c688b5b488c03",
+ "cycles": 77100767,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6107
+  },
+  {
+   "line": 30,
+   "addr": 6140
+  },
+  {
+   "line": 40,
+   "addr": 6143
+  },
+  {
+   "line": 50,
+   "addr": 6155
+  },
+  {
+   "line": 60,
+   "addr": 6192
+  },
+  {
+   "line": 70,
+   "addr": 6243
+  },
+  {
+   "line": 80,
+   "addr": 6262
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S010.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6489",
+  "LOCAL VARIABLES": "6490 - 7131",
+  "HIGHEST MEMORY LOCATION": "7131"
+ }
+}

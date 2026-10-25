@@ -1,0 +1,23 @@
+{
+ "id": "r5016",
+ "key": "ed9f8d13188772ad",
+ "source": "10 REM! INTEGER K\n20 DEF FN F(X)=PEEK(-C)\n30 REM! CLEAR COMMON:FOR Q1=(M) TO (M) STEP (N2)\n40 VTAB NOT SIN(A%)+((AB% OR NOT B%)):HLIN ((K<>M))-N2<>M-FRE(K),(AB%) AT B%<=FRE(B%):GOSUB 110\n50 IF (9996) THEN RUN:GOSUB 110\n60 HLIN COS(Y)+((B% OR ASC(\"TASC\"))),(((A%*Q1 OR 256 AND 1))-AB%) AT N2:READ Q1%:PRINT Q1% AND Q1%\n70 PRINT\n80 GET Z$:NORMAL:C=ATN(NOT 640)^NOT C:IF (C OR C) THEN 150\n90 N2=FN F(Q1*Q1%)+PEEK(M*2.25):C=N2 AND N2:GOTO 30:B$=\"\"\n100 Z$=\"\"+Z$:READ Z$:Y=C\n110 NORMAL:K=FN F(Y)\n120 COLOR=B%-C:M=PEEK(AB%+((C>N2))):IF (M OR M) THEN 200:FOR Q1=(A%) TO (Y)\n130 PRINT MID$(Z$,A%,Q1%),:REM! CLEAR COMMON:IF (N2) THEN RUN 10\n140 K=M<>-B%^1.5:IF (K AND K) THEN 120:K=((AB%=FN F(N2)))-((Q1>A%))\n150 PRINT:ON AB% GOTO 120,10,170,140:A%=PEEK(((32767 AND 23169))^Q1%):C=A% AND A%\n160 IF (((C>((C OR 40))))^((K>N2/A%))) THEN Y=Q1<>K:ONERR GOTO 180\n170 IF (A%*B%--B%<=Q1%) THEN RUN 80\n180 PRINT B$;:N2=FRE(\"A\"+B$):PRINT POS(Z$):IF (2.25) THEN 50\n190 NEXT Q1:Z$=B$\n200 K=A%+((((M=N2))-FRE(Y))):Q1=K OR K\n210 K=-FN F(23924)\n220 B%=AB%<>Y:Q1$=LEFT$(\"\",M<Q1/7):READ Y\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 30\nSYNTAX\n\n REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

@@ -1,0 +1,70 @@
+{
+ "id": "r5015",
+ "key": "8b54578c9db9dec9",
+ "source": "10 DIM P$(3)\n20 DEF FN F(X)=20\n30 GOSUB 30:ON 21738 GOTO 70,50\n40 IF (FN F(B)) THEN PRINT A$;:RUN 70:NORMAL\n50 IF (XY%) THEN N2%=Z%:IF (N2% OR N2%) THEN 100:B%=FN F(6796 OR XY%+XY):AB=B% AND B:P$(-1.5 OR VAL(MID$(M$,B,B%)))=\"\"\n60 IF (Z%) THEN IF (ABS(255<>XY%)+B%) THEN 80:FOR Z=(Z) TO (A/-Z)\n70 IF (Z%+((256/3+((N2%>=N2%))))) THEN 50\n80 XY=XY:XY=XY OR Z%:A$=\"A\"\n90 N2%=-Z%<A+B-((5=725)):PRINT\n100 P$(327)=MID$(\"123\",26134^XY+N2%*B%):FOR Z=(B<>Z%) TO (((1E3*B<((B OR 1))))/((N2%>((XY<=.5))))) STEP (ATN(127)):READ Z:PRINT Z AND Z\n",
+ "options": {
+  "library": null,
+  "program": 20480,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 20480,
+ "obj_len": 849,
+ "obj_sha256": "5481f9af35cd6184367c52d135eb489450d8cfa137acae63f677b2e63345dcc2",
+ "cycles": 101454918,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 20500
+  },
+  {
+   "line": 20,
+   "addr": 20500
+  },
+  {
+   "line": 30,
+   "addr": 20510
+  },
+  {
+   "line": 40,
+   "addr": 20524
+  },
+  {
+   "line": 50,
+   "addr": 20549
+  },
+  {
+   "line": 60,
+   "addr": 20655
+  },
+  {
+   "line": 70,
+   "addr": 20685
+  },
+  {
+   "line": 80,
+   "addr": 20716
+  },
+  {
+   "line": 90,
+   "addr": 20747
+  },
+  {
+   "line": 100,
+   "addr": 20789
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "OBJECT FILE": "S015.OBJ",
+  "PROGRAM": "20480 - 21328",
+  "LOCAL VARIABLES": "21329 - 21385",
+  "HIGHEST MEMORY LOCATION": "21385"
+ }
+}

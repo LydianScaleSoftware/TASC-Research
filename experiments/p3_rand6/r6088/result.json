@@ -1,0 +1,101 @@
+{
+ "id": "r6088",
+ "key": "2c8056d5d108e4e4",
+ "source": "10 REM! DEFCOMMON Y,N2%,AB$\n20 DIM A$(5,9),B%(1)\n30 GOTO 120:REM! CLEAR CHAIN\n40 XY=SIN(N2%/XY)-((443 AND XY))*Y%:N2%=C%:RESTORE\n50 DEL 10,20\n60 N2%=A:AB=N2% OR A\n70 IF (A) THEN 100:PRINT X$,((C%>=Y%))*Y%+((Y AND 100 OR (A)));N2%;\n80 Q1%=N2%:Q1=Q1% OR Q1%\n90 GOSUB 70:Q1=N2%:IF (Q1 OR Q1) THEN 170:PRINT LEN(RIGHT$(\"\",AB))<B%(1000)^XY+-49227,RIGHT$(X$+\"TASC\",NOT AB)+CHR$(478);B%(INT(Q1%))-((Y<>C%))*Y%,\n100 Y=((ASC(X$) AND NOT 1))*ASC(\"X Y\"):A=Y AND B%(B%(Y%)^B%(N2%)):NOTRACE\n110 GOTO 30:LIST 10-20:A=100:Y=A AND Q1%:PRINT 1000;\n120 GOTO 120:&\n130 INPUT XY,A$(C%,A>TAN(Q1>B%(C%))),XY$\n140 GOSUB 170:VTAB Y\n150 TRACE:FOR Y=(Q1) TO (66):&\n160 AB$=XY$+LEFT$(AB$,A-B%(995)):FOR XY=(65535*B%(N2%)+((Y<AB))<((Y/B%(25)<>-N2%))) TO (Q1):REM! CLEAR CHAIN\n170 LOAD \"F\"\n",
+ "options": {
+  "library": null,
+  "program": "HGR1",
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 16393,
+ "obj_len": 810,
+ "obj_sha256": "407e83a65104c80cb5bf010e68b3baab50cd0fdd76a8788417c691ab2101da13",
+ "cycles": 105811257,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 16404
+  },
+  {
+   "line": 20,
+   "addr": 16413
+  },
+  {
+   "line": 30,
+   "addr": 16413
+  },
+  {
+   "line": 40,
+   "addr": 16422
+  },
+  {
+   "line": 50,
+   "addr": 16470
+  },
+  {
+   "line": 60,
+   "addr": 16470
+  },
+  {
+   "line": 70,
+   "addr": 16497
+  },
+  {
+   "line": 80,
+   "addr": 16508
+  },
+  {
+   "line": 90,
+   "addr": 16535
+  },
+  {
+   "line": 100,
+   "addr": 16564
+  },
+  {
+   "line": 110,
+   "addr": 16660
+  },
+  {
+   "line": 120,
+   "addr": 16687
+  },
+  {
+   "line": 130,
+   "addr": 16690
+  },
+  {
+   "line": 140,
+   "addr": 16750
+  },
+  {
+   "line": 150,
+   "addr": 16762
+  },
+  {
+   "line": 160,
+   "addr": 16782
+  },
+  {
+   "line": 170,
+   "addr": 16901
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "RECOGNIZED": "REM ! CLEAR CHAIN",
+  "OBJECT FILE": "S008.OBJ",
+  "PROGRAM": "16393 - 17202",
+  "NUMERIC COMMON": "16384 - 16390",
+  "STRING COMMON": "16391 - 16392",
+  "LOCAL VARIABLES": "17203 - 17368",
+  "HIGHEST MEMORY LOCATION": "17368"
+ }
+}

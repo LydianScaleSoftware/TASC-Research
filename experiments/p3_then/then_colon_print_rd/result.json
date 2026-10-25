@@ -1,0 +1,34 @@
+{
+ "id": "then_colon_print_rd",
+ "key": "371a5f7e23150d8e",
+ "source": "10 IF X THEN :PRINT\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 49,
+ "obj_sha256": "7bd8e0c41acd36d65919ee02d0a24523ee0af63ac3aab1588c8eee345c127bef",
+ "cycles": 55623776,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6112",
+  "LOCAL VARIABLES": "6113 - 6117",
+  "HIGHEST MEMORY LOCATION": "6117"
+ }
+}

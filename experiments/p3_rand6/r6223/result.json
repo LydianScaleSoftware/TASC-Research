@@ -1,0 +1,159 @@
+{
+ "id": "r6223",
+ "key": "671ee37392f3dec8",
+ "source": "10 REM! INTEGER J\n20 DIM B(9)\n30 DEF FN F(Z)=256\n40 TRACE:Z=FRE(Z$):PRINT POS(B$):REM! CLEAR CHAIN\n50 IF (B(0.1*A-XY)) THEN SHLOAD:LOAD \"F\"\n60 READ M%:J=A%:M%=2\n70 FOR XY=(J) TO (((-A%+991))*POS(Q1%/3.14159)):IF (FN F(ABS(J)+M)) THEN RUN:NEXT XY\n80 IF (ASC(\"123\")) THEN A=0:J=35580\n90 READ A:PRINT A AND A:GOSUB 220\n100 POKE M,24:SPEED=49152:IF (J) THEN 90\n110 GOTO 50:TRACE:PRINT:M=Z:Z=M OR Z%\n120 N2=.001:XY=N2 OR N2:RUN:PRINT:X=1:&\n130 RUN 220\n140 IF (NOT Z%/((Z%/255>PEEK(A%)))) THEN GOTO 140:LIST\n150 Q1%=A%:IF (Q1% OR Q1%) THEN 310:IF (J) THEN CONT:GOTO 320:REM! CLEAR COMMON\n160 GOTO 290:&:IF (Z^A*((((1 AND 20))+B(Z%)))) THEN GOTO 320:RUN 290\n170 M%=A%\n180 READ Z%:PRINT Z% OR Z%:Z=VAL(\"A\")+((J>=((5 OR B(M%)))))\n190 Q1%=3.14159:A=Q1% OR Q1%\n200 VTAB 527:READ XY:PRINT XY OR XY:RECALL A\n210 N2=N2<>((Z% AND 19))*10:PRINT M%,Z%;FN F(A%<A);:GOTO 200\n220 B$=MID$(\"X Y\"+\"TASC\",A=3.14159,5714)+\"HI\":GET Q1%:Q1%=Q1% AND (39):IF (-((B(Q1%)+A%)) AND ((655 AND N2))) THEN DEL 10,20\n230 PRINT 10-POS(LEFT$(\"HI\",Z)),MID$(RIGHT$(Y$,Q1%),ABS(32767));\n240 IF (N2) THEN 100:N2=FRE(Z$):PRINT POS(Z$)\n250 NOTRACE:PLOT 30583,415:RUN 130\n260 J=Z:IF (J AND J) THEN 220:HPLOT Z<>-A%,(N2=((TAN(N2)>=A%-20))) TO Q1%<Z>((ABS(Q1%)<=32767+XY)),(-M%):CONT\n270 M%=A%:N2=FRE(M%)+POS(1000):PRINT ((ATN(112)-307))*SIN(65535 OR B(M%)),J,:TRACE\n280 GOTO 280:NOTRACE:POKE Q1% OR Q1%,1 OR -LEN(\"TASC\")\n290 GET M%:A%=M% OR (86)\n300 HOME:HLIN ((B(A%)<=FRE(M)))+866,(243) AT Z:N2=Q1%:IF (N2 AND N2) THEN 10\n310 DEL 10,20\n320 Z=FN F(NOT ((Z%<=N2))):M=FRE(Z)+POS(32767):PLOT ((TAN(A)+J))^((Z*2=M%)),127:J=N2:N2=J AND J\n",
+ "options": {
+  "library": null,
+  "program": 20480,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 20480,
+ "obj_len": 1639,
+ "obj_sha256": "0ab4b0cf9b2574ab7fb0f7aa6f877b9693c9539451c21855b29026d61da79edf",
+ "cycles": 162135900,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 20500
+  },
+  {
+   "line": 20,
+   "addr": 20500
+  },
+  {
+   "line": 30,
+   "addr": 20500
+  },
+  {
+   "line": 40,
+   "addr": 20510
+  },
+  {
+   "line": 50,
+   "addr": 20528
+  },
+  {
+   "line": 60,
+   "addr": 20554
+  },
+  {
+   "line": 70,
+   "addr": 20572
+  },
+  {
+   "line": 80,
+   "addr": 20632
+  },
+  {
+   "line": 90,
+   "addr": 20668
+  },
+  {
+   "line": 100,
+   "addr": 20686
+  },
+  {
+   "line": 110,
+   "addr": 20712
+  },
+  {
+   "line": 120,
+   "addr": 20733
+  },
+  {
+   "line": 130,
+   "addr": 20754
+  },
+  {
+   "line": 140,
+   "addr": 20760
+  },
+  {
+   "line": 150,
+   "addr": 20803
+  },
+  {
+   "line": 160,
+   "addr": 20820
+  },
+  {
+   "line": 170,
+   "addr": 20823
+  },
+  {
+   "line": 180,
+   "addr": 20829
+  },
+  {
+   "line": 190,
+   "addr": 20896
+  },
+  {
+   "line": 200,
+   "addr": 20917
+  },
+  {
+   "line": 210,
+   "addr": 20938
+  },
+  {
+   "line": 220,
+   "addr": 20995
+  },
+  {
+   "line": 230,
+   "addr": 21120
+  },
+  {
+   "line": 240,
+   "addr": 21170
+  },
+  {
+   "line": 250,
+   "addr": 21184
+  },
+  {
+   "line": 260,
+   "addr": 21202
+  },
+  {
+   "line": 270,
+   "addr": 21225
+  },
+  {
+   "line": 280,
+   "addr": 21300
+  },
+  {
+   "line": 290,
+   "addr": 21303
+  },
+  {
+   "line": 300,
+   "addr": 21324
+  },
+  {
+   "line": 310,
+   "addr": 21377
+  },
+  {
+   "line": 320,
+   "addr": 21377
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "RECOGNIZED": "REM ! CLEAR COMMON",
+  "OBJECT FILE": "S003.OBJ",
+  "PROGRAM": "20480 - 22118",
+  "LOCAL VARIABLES": "22119 - 22231",
+  "HIGHEST MEMORY LOCATION": "22231"
+ }
+}

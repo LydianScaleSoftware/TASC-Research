@@ -1,0 +1,90 @@
+{
+ "id": "r5262",
+ "key": "bceb6623b3f17a2f",
+ "source": "10 DIM P$(11)\n20 VTAB Z*ABS(3) OR -Q1%=FRE(X):Q1%=FRE(1.5)\n30 ON PEEK(XY%)>=(Y) AND Z GOTO 130,140,130:FOR W=(ATN(B(Q1%)>=255)*B%) TO (273-N2%)\n40 Y=Q1%>INT(W*B(Q1%)):W=Y OR Q1%:DATA 300,X,\"A,B\"\n50 N2%=-857\n60 Q1%=XY%<2-W-NOT B%:GR\n70 FOR X=(B(B(XY%)^B)*((((N2%>=B(Q1%)))*-X))) TO (10):W=0:Z=W AND W\n80 GR:ON (Q1%^Q1%)-((N2%-B<>((B%>B(XY%))))) GOTO 10\n90 N2%=Z AND W^127^((XY%+3)):W=N2% AND N2%\n100 PRINT:IF (VAL(\"HI\"+Z$+Z$)) THEN FOR X=(XY%) TO (B%):IF (1.5<Q1%<Y-255>=-.5) THEN 120\n110 Q1%=TAN(W OR B(N2%)<=22675):POKE 100,Y*((49152=X<790)):NEXT X\n120 IF (B(-X)) THEN 150\n130 N2%=24154:B=N2% OR XY%\n140 RUN:PRINT:X=1\n150 FOR W=(RND(((B%<>Q1%))^((1<=N2%)))) TO (Y) STEP (654*((Y OR Y))^((554 AND Q1%))):SPEED=N2%-X+(Z)-ATN(NOT N2%)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1183,
+ "obj_sha256": "c9b17e1589612835a5be228ed32a1f8d2679c29f35f420a5dd2712cd38b32dc2",
+ "cycles": 122538197,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6129
+  },
+  {
+   "line": 40,
+   "addr": 6195
+  },
+  {
+   "line": 50,
+   "addr": 6244
+  },
+  {
+   "line": 60,
+   "addr": 6253
+  },
+  {
+   "line": 70,
+   "addr": 6283
+  },
+  {
+   "line": 80,
+   "addr": 6360
+  },
+  {
+   "line": 90,
+   "addr": 6411
+  },
+  {
+   "line": 100,
+   "addr": 6459
+  },
+  {
+   "line": 110,
+   "addr": 6559
+  },
+  {
+   "line": 120,
+   "addr": 6615
+  },
+  {
+   "line": 130,
+   "addr": 6632
+  },
+  {
+   "line": 140,
+   "addr": 6653
+  },
+  {
+   "line": 150,
+   "addr": 6662
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S002.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7246",
+  "LOCAL VARIABLES": "7247 - 7370",
+  "HIGHEST MEMORY LOCATION": "7370"
+ }
+}

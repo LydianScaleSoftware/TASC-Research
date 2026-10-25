@@ -1,0 +1,23 @@
+{
+ "id": "r6012",
+ "key": "5c3da811fd380fc1",
+ "source": "10 REM! INTEGER K,I\n20 DIM D$(3,10)\n30 IF (POS(40)) THEN 30:PRINT:N2%=XY%:XY=N2% OR N2%\n40 M$=\"A\":ON FRE(\"TASC\"+Y$)-((0*3<=((X AND 5)))) GOTO 150,130\n50 GOTO 160:REM! CLEAR CHAIN\n60 GOTO 40:A=11482:Q1=A AND A\n70 LIST:XY%=-((Y%+((A AND A))))\n80 A%=((P(A%)*I<>(735)))-XY%:A=A% AND A%:A=((3 AND I OR X))<>-ASC(\"\"):IF (Y%*20) THEN RUN 160\n90 REM! CLEAR COMMON\n100 HTAB (I)-((XY%-A(A%))) OR P(39*23838)\n110 Q1=XY%:&:Q1=Q1:IF (NOT ((NOT A%))) THEN SHLOAD\n120 GOSUB 250:IF (274) THEN &\n130 GOTO 140:LIST 10-20:ONERR GOTO 230\n140 GOTO 50:RECALL A:STORE B,C\n150 RUN:PRINT:X=1:IF (P(NOT 39/((Q1+X)))) THEN 230\n160 RUN 80\n170 REM! CLEAR COMMON\n180 GOTO 190:REM! CLEAR CHAIN:X=NOT 3:XY=X AND X\n190 NOTRACE:N2%=P(-1000):A=FRE(N2%)+POS(XY%)\n200 I=((A%<>Y%<=K))-((XY%+Y%>=NOT XY%)):A=I OR I:IF (100) THEN & \"X:Y\",1:P(Q1<=((N2%>=127))/VAL(\"TASC\"))=(XY^A(XY%)-((M+A)))\n210 RUN 80:Y%=TAN((XY% AND A)):SAVE:XY=Y%\n220 XY$=LEFT$(CHR$(XY/39),Q1^-0):RUN 20\n230 IF (XY) THEN & \"X:Y\",1:READ N2%:Y$=MID$(\"X Y\",-24118)\n240 GOTO 50:LOAD \"F\":POKE ((M OR XY))*((XY/577))>39,-2\n250 FOR M=(I) TO (((K<>Y%))/1E3+A) STEP (TAN(57))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 180\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

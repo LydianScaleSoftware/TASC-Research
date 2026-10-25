@@ -1,0 +1,123 @@
+{
+ "id": "r5116",
+ "key": "eccd2a2f73dc499f",
+ "source": "10 REM! INTEGER J,K\n20 DIM B(11),A(11)\n30 A%=940-((Q1=J))>=0.1:Q1=A% OR A%\n40 GET Y:Y%=Y OR (39):IF (B(FRE(Y%)<5)) THEN 230:J=19740/NOT M%:X=J AND J\n50 M%=FRE(B%+XY)-X:GET Y:K=Y OR (255):IF (-((-((P(1000)>B%))))) THEN 210\n60 PRINT:X=J\n70 DATA HI,300,-2.5,\"A,B\":Y%=J:SPEED=10/M%>=3 AND XY\n80 RUN\n90 Q1=B%:IF (Q1 AND Q1) THEN 160\n100 SPEED=Y+20+((J<>5))<2:PRINT:FOR K=(J) TO (X<>FRE(K) OR 127)\n110 RUN 20:PRINT:X=1:FOR J=(49152) TO (Y):RUN 160\n120 J=SIN((M%)) AND INT(X+1000):X=J OR J\n130 COLOR=Y%:Y$=\"\":Q1=B(J)<-((A%<N2)):X=Q1 AND Q1\n140 PRINT:Y=LEN(Y$):XY=Y AND Y\n150 GOSUB 10\n160 RUN 10:PRINT:X=1\n170 XY=INT(B%)*B(A%)<>LEN(RIGHT$(Y$,Y%)):IF (XY OR XY) THEN 190:PRINT MID$(A$,((3<>A%))*3984),127>(J)^((X=J));\n180 READ Y%:B%=((POS(XY) AND B(24)<=A(B%)))<=1000*((N2<>Y%)):Y=B% OR B%\n190 PLOT M%,1\n200 WAIT X+100^((10+XY)),(7<((NOT 24>=Y/P(40)))):IF (X*LEN(\"TASC\")) THEN 170\n210 GOSUB 100\n220 GOSUB 190\n230 GOSUB 170:W$=STR$(J AND Y)+\"TASC\"\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1239,
+ "obj_sha256": "2befb25a80d1b1513cac995164acca4fff07ac1ba780d5b63bdfc036c145b3ff",
+ "cycles": 126026865,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6120
+  },
+  {
+   "line": 50,
+   "addr": 6185
+  },
+  {
+   "line": 60,
+   "addr": 6249
+  },
+  {
+   "line": 70,
+   "addr": 6258
+  },
+  {
+   "line": 80,
+   "addr": 6307
+  },
+  {
+   "line": 90,
+   "addr": 6310
+  },
+  {
+   "line": 100,
+   "addr": 6324
+  },
+  {
+   "line": 110,
+   "addr": 6389
+  },
+  {
+   "line": 120,
+   "addr": 6401
+  },
+  {
+   "line": 130,
+   "addr": 6443
+  },
+  {
+   "line": 140,
+   "addr": 6497
+  },
+  {
+   "line": 150,
+   "addr": 6518
+  },
+  {
+   "line": 160,
+   "addr": 6521
+  },
+  {
+   "line": 170,
+   "addr": 6533
+  },
+  {
+   "line": 180,
+   "addr": 6586
+  },
+  {
+   "line": 190,
+   "addr": 6667
+  },
+  {
+   "line": 200,
+   "addr": 6679
+  },
+  {
+   "line": 210,
+   "addr": 6759
+  },
+  {
+   "line": 220,
+   "addr": 6762
+  },
+  {
+   "line": 230,
+   "addr": 6765
+  }
+ ],
+ "info": {
+  "RINT": "FOR K = (J) TO (X <  >  FRE (K) O",
+  "OBJECT FILE": "S016.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7302",
+  "LOCAL VARIABLES": "7303 - 7525",
+  "HIGHEST MEMORY LOCATION": "7525"
+ }
+}

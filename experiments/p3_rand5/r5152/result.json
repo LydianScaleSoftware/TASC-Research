@@ -1,0 +1,23 @@
+{
+ "id": "r5152",
+ "key": "786a2064b3e1fb58",
+ "source": "10 REM! INTEGER K,J\n20 REM! DEFCOMMON Z,J,AB%\n30 DIM D%(1,6)\n40 DEF FN F(X)=684*((AB%+AB%))/Z\n50 A=FN F(91):J=SGN(10370)<=((X^D%(XY%,K)<>((M=24))))\n60 J=NOT W%/((XY%+J>=W%)):AB%=NOT POS(CHR$(24)):Z=AB% OR AB%:ON K GOTO 210,60\n70 B$=B$:IF (FN F(FN F(X%*Z))) THEN RUN\n80 A=40190:HTAB K<=INT(EXP(XY%))\n90 IF (504) THEN PRINT CHR$(-((K>=A)));\n100 AB%=XY%:DATA -2.5,HI\n110 IF (7) THEN RUN:IF (12976<=372) THEN 110\n120 D%(49152,AB%+Z-A<=NOT ((J+7)))=231:READ J\n130 REM! CLEAR CHAIN:READ B$:M=NOT ((-COS(XY%))):IF (M OR M) THEN 260\n140 VTAB -AB%:HLIN W%,(M<=B(X*XY%,Z=895)) AT J>AB%\n150 X%=123:X=X% OR INT(LEN(W$+\"123\")):XY%=D%(POS(B$),374<B(1.5,W%) AND J):DATA HI,X,,-2.5\n160 ON J GOTO 60,240\n170 PLOT POS(LEFT$(LEFT$(\"X Y\",1E3),M<=37711)),XY%:PLOT ((B-K))*-2,1.5\n180 COLOR=((B(K,X%)>XY%))+36419:HLIN 579,(AB%) AT -K*((POS(W%)=42446))\n190 GOTO 90\n200 PRINT LEFT$(STR$(-X%),NOT X-M);\n210 B=X\n220 ON RND(POS(W%))>=((251>=A^X%)) GOTO 40,50,20,200\n230 FOR B=(FN F(X>=XY%)) TO (7):REM! CLEAR COMMON\n240 M=-XY%:B(W%,TAN(VAL(A$)))=NOT B:CALL FN F(-AB%) OR B(XY%,100)/3<>((B AND B(XY%,J)))\n250 RUN\n260 FOR Z=(2) TO (B(NOT FRE(A$),AB%)):DATA -2.5,,1\n270 X=-EXP(32767)+M:NEXT:GET K:W%=K AND (PEEK(EXP(NOT XY%)))\n280 K=1:J=AB%*SQR(NOT A):HLIN LEN(MID$(\"X Y\",B(W%,XY%),K)+B$+W$),(D%(AB%<>49152,EXP(K))<SGN(256=X)) AT POS(K-A)*((J*AB%<((J AND .001))))\n290 READ XY%:PRINT XY% OR XY%:HCOLOR=LOG(NOT SQR(X%))\n300 REM! CLEAR COMMON:A=FRE(W$):PRINT POS(W$)\n310 Z=((-24-A))^((NOT K=((B OR W%)))):X=Z OR Z:B=FRE(\"A\"):PRINT POS(B$)\n320 M=10:X=M OR M\n330 B$=B$\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 130\nSYNTAX\n\n REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

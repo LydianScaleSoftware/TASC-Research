@@ -1,0 +1,23 @@
+{
+ "id": "r6233",
+ "key": "d25ab05cc88753bd",
+ "source": "10 REM! INTEGER I,K\n20 DIM D%(10)\n30 XY%=2:X=XY% AND XY%\n40 READ I:PRINT I OR I:IF (SQR(ATN(D%(I)))) THEN 110\n50 GOTO 80:REM! CLEAR CHAIN:W=49152:B=W AND W\n60 COLOR=I<>255>=Z-XY<D%(W%)\n70 XY%=NOT B^((XY*100 OR W%<W%)):IF (XY% OR XY%) THEN 70:LOMEM: 16384\n80 B=((-Z-255))*SGN(1+31639):W=B AND D%(XY%):GOTO 10:REM! CLEAR COMMON:C$=MID$(LEFT$(C$+\"\",COS(W)),.5)\n90 D%(((W%*XY%>=W+D%(256)))-D%(XY%^1E3))=D%(X%)\n100 GOTO 70\n110 PRINT ((C%<=ATN(34688)))*((255+255-W));NOT XY%,XY$;:W%=((B<W%<>.5))*D%(40):Z=FRE(W%)+POS(127)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 50\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

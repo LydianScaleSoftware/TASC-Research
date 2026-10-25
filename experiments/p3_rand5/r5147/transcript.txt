@@ -1,0 +1,180 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S007
+
+
+OBJECT CODE FILE:
+(DEFAULT S007.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION?
+
+*****BEGINNING PASS 1
+
+
+
+10
+RECOGNIZED  REM ! INTEGER I,J
+20
+RECOGNIZED  REM ! USECOMMON X,I,Q1$
+30  DIM D%(11)
+40  DEF  FN F(T) = XY
+50  VTAB Y:Y =  SQR (P%(A%) - XY OR B% <
+ D%(5)):Q1 = Y OR W%: IF (3 * 255) THEN
+ IF ( LOG ( VAL (AB$))) THEN B% =  POS (
+ NOT Y)
+60 XY = W%:W% = 40:W% = 7:Q1 = W% OR W%
+70  IF (Y) THEN B% =  SGN (Y - P%(0)) *
+(( LEN (C$) * ((I * J)))): IF ( FRE (24)
+ + 40) THEN B% =  NOT ((100 AND Y AND B%
+)):XY = B% AND Q1: RUN
+80  GOSUB 310: FOR X = (W%) TO ( ABS ( P
+OS (C$))):Y = W OR 45999 * 256 - Y * 799
+:XY = Y AND Y
+90 P%(B%) = Y:P%( - ((W * 32767)) OR C%)
+ =  PEEK ( POS ( TAN (B%))):C$ = Q1$
+100 Q1 = B%: GOTO 180:A% = Q1 ^ P%(121)
+>  = A%
+110 D%(W%) = 528 - 1E3
+120  HTAB 65535:X =  - (( - 49152)) ^ P%
+(A% AND 20): IF (256 - 39856) THEN 180
+130 D%( NOT A%) = ((A% < ((40 < J)))) +
+W: HCOLOR= 256
+140  SPEED=  FN F(A%)
+150 W = ((Q1 AND 0 - B%)) + I: GOTO 160
+
+*****WARNING
+LINE NUMBER 150
+IGNORED
+
+: PRINT 3;I;
+
+
+160 Q1 =  FRE (AB$):W = XY
+170 Q1 = P%(J <  = XY <  = D%(A%) ^ P%(W
+%)): IF ( - ((D%(W%) - P%(C%))) +  FN F(
+65535 <  > X)) THEN Y =  FRE (AB$): PRIN
+T  POS (C$):Q1$ = "A"
+180 XY = ((C% - 0 >  =  FN F(I))) + ((W
+= C% <  > 10)): HLIN  NOT J - A% AND 10,
+( POS (XY) + ((Y <  > W))) AT B%:X = 1 <
+  = W
+190  READ B%: ON C% GOTO 40,80,320,160:J
+ = XY: IF (J AND J) THEN 320
+200  PRINT  SQR ( COS (X >  = A%)); - Q1
+ ^ ((D%(C%) ^ I)) -  FN F(10 <  = D%(W%)
+);D%(A%) <  NOT I AND 3,
+210 X =  - ((W% - ((P%(255) AND 49152)))
+): IF (X OR X) THEN 290
+
+*****WARNING
+LINE NUMBER 210
+IGNORED
+
+: READ J
+
+
+
+
+*****WARNING
+LINE NUMBER 210
+IGNORED
+
+: PRINT J OR J
+
+
+:X = W%
+220  IF ( FN F(742 + ((I - Y)))) THEN 50
+:Q1 = 10
+RECOGNIZED : REM ! CLEAR COMMON
+230 C% = X: IF (C% OR C%) THEN 250:J = J
+
+
+*****WARNING
+LINE NUMBER 230
+IGNORED
+
+: IF (J OR J) THEN 300
+
+
+240  IF ( VAL (C$)) THEN  POKE (( FRE (Y
+) > XY ^ 705)) * ((P%(W%) < 997 = 3)), N
+OT ((569 +  RND (Q1)))
+250  ON I GOTO 200:Q1 = X:XY = Q1 AND Q1
+:AB$ =  STR$ (X)
+260  GET W%:B% = W% OR ( LOG ( FRE ( LEF
+T$ (AB$,XY))))
+270 C$ = Q1$ + "HI" +  MID$ (Q1$,Q1,A%):
+ DATA X: PRINT C$;20 - W%; VAL ( MID$ ("
+A" + "X Y",Q1 + J));
+280  READ C%,Q1: DATA X,"A,B",300:C$ =
+LEFT$ (C$ + C$ + "",33561)
+290  NEXT I:I =  SIN (Y <  = I): IF (B%)
+ THEN Y =  FRE (Q1$): PRINT  POS (AB$)
+300  RUN 190
+310 W = B% AND 21084:Y = W AND W:X =  CO
+S (C%) +  EXP ( - W):XY = X OR XY
+320 W = X >  = Y = Q1 / B(B%) >  = (( FR
+E (I) >  LEN (AB$))):J = 809
+330 W% =  EXP (X) - ((20 > Y)) > 844: SP
+EED= Q1 + B(255) > ((W OR 20)) < J
+340  IF ( FN F(256)) THEN 280
+
+
+
+*****BEGINNING PASS 2
+
+
+.......
+
+
+*****CODE GENERATION COMPLETE
+
+
+COMPILATION INFORMATION AND LINE NUMBER
+REFERENCE TABLE? YES
+
+
+SOURCE FILE: S007
+OBJECT FILE: S007.OBJ
+LIBRARY OCCUPIES 2051 - 6063
+PROGRAM OCCUPIES 6073 - 8500
+
+USE COMMON BLOCK:
+NUMERIC COMMON OCCUPIES 6064 - 6070
+STRING COMMON OCCUPIES 6071 - 6072
+
+LOCAL VARIABLES OCCUPY 8501 - 8654
+
+HIGHEST MEMORY LOCATION: 8654
+
+
+LINE# ADDR   LINE# ADDR   LINE# ADDR
+
+10    6084   20    6084   30    6093
+40    6093   50    6103   60    6209
+70    6233   80    6344   90    6403
+100   6463   110   6496   120   6511
+130   6572   140   6614   150   6623
+160   6644   170   6656   180   6784
+190   6895   200   6939   210   7050
+220   7085   230   7113   240   7142
+250   7220   260   7250   270   7283
+280   7396   290   7457   300   7500
+310   7506   320   7563   330   7629
+340   7695
+
+*****COMPILATION COMPLETE
+
+
+]?

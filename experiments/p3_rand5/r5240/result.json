@@ -1,0 +1,82 @@
+{
+ "id": "r5240",
+ "key": "215330fb43a6bc92",
+ "source": "10 REM! INTEGER *\n20 Q1=COS(-((3-Q1))):HCOLOR=((15182 AND W%))>=C:PRINT RND(40)*(Y%) OR -((Y%>AB)),\"A\",\n30 IF (COS(C)) THEN RETURN:M$=LEFT$(W$+M$+\"X Y\"+\"A\",M*A-((47228<=C))):IF (8450^((Y%*264*AB))) THEN RUN 90:M$=N2$+W$+MID$(\"TASC\",A)\n40 COLOR=((Y%<>AB))--C-EXP(Q1):PRINT N2$;(M>=((2431 AND AB%))),:CALL ((((806<A))+((100>=A))))^-((W%*C))\n50 HCOLOR=AB:W$=CHR$(-SGN(557)):DATA \"A,B\",1,\n60 M=1E3:IF (A%) THEN IF (SGN(45272)) THEN IF (Y%<=((Q1<=9201))) THEN RUN 40\n70 PRINT NOT ((W%/-691));(Y%);\"\";\n80 STOP:FOR C=(LEN(N2$)) TO (Y%<=-AB%) STEP (-32767):ONERR GOTO 10\n90 M=((A<Q1))+C=((A=C+20032)):GOSUB 30\n100 WAIT 255,(1E3),(2035)\n110 M$=N2$:Y%=-((Q1+((835<>C))))\n120 FOR A=(((W%-AB%))*A=M-10900) TO (27633^-((A*447))):FOR M=(AB%) TO (COS(AB%)>=((A%>=Q1))) STEP (((AB%=A))-POS(\"\")+(Q1))\n130 VTAB W%:Q1=A-M+W%=AB:Q1=Q1 OR AB\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1154,
+ "obj_sha256": "12b1bcda880cc6c7fa713118bf66d7c868761607ea8207351eddae64d63781e8",
+ "cycles": 118829914,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6175
+  },
+  {
+   "line": 40,
+   "addr": 6296
+  },
+  {
+   "line": 50,
+   "addr": 6413
+  },
+  {
+   "line": 60,
+   "addr": 6447
+  },
+  {
+   "line": 70,
+   "addr": 6500
+  },
+  {
+   "line": 80,
+   "addr": 6538
+  },
+  {
+   "line": 90,
+   "addr": 6541
+  },
+  {
+   "line": 100,
+   "addr": 6580
+  },
+  {
+   "line": 110,
+   "addr": 6598
+  },
+  {
+   "line": 120,
+   "addr": 6622
+  },
+  {
+   "line": 130,
+   "addr": 6741
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7217",
+  "LOCAL VARIABLES": "7218 - 7250",
+  "HIGHEST MEMORY LOCATION": "7250"
+ }
+}

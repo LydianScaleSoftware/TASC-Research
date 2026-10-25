@@ -1,0 +1,76 @@
+{
+ "id": "r6288",
+ "key": "4904b2c296805775",
+ "source": "10 REM! USECOMMON Z%,W$,B%\n20 DIM D$(4),P%(5)\n30 DEF FN F(T)=10<Y%+0 AND A>Y%-X\n40 DEL 10,20:Y%=X\n50 Q1$=\"TASC\"\n60 IF (A) THEN RUN:X=FRE(\"TASC\"):PRINT POS(W$):B=B% OR P%(Y%)<>B%\n70 IF (AB) THEN SAVE:FOR A=(808) TO (B*A/39/((0+667))^ASC(\"X Y\"))\n80 AB=-((B OR 7*A)):M=AB AND AB:GOTO 90\n90 B=W%:IF (20) THEN GOTO 20:LIST\n100 HTAB FN F(5>=W%)\n110 Z%=SIN(ASC(W$+W$)):M=Z% OR X\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6070,
+ "obj_len": 591,
+ "obj_sha256": "2f98fb26d09320e4b1af06a0848bde656416cc2f7409a7c121f1efff282498ce",
+ "cycles": 90619447,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6090
+  },
+  {
+   "line": 30,
+   "addr": 6090
+  },
+  {
+   "line": 40,
+   "addr": 6130
+  },
+  {
+   "line": 50,
+   "addr": 6136
+  },
+  {
+   "line": 60,
+   "addr": 6152
+  },
+  {
+   "line": 70,
+   "addr": 6201
+  },
+  {
+   "line": 80,
+   "addr": 6277
+  },
+  {
+   "line": 90,
+   "addr": 6304
+  },
+  {
+   "line": 100,
+   "addr": 6318
+  },
+  {
+   "line": 110,
+   "addr": 6333
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S008.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6070 - 6660",
+  "NUMERIC COMMON": "6064 - 6067",
+  "STRING COMMON": "6068 - 6069",
+  "LOCAL VARIABLES": "6661 - 6730",
+  "HIGHEST MEMORY LOCATION": "6730"
+ }
+}

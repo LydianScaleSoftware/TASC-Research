@@ -1,0 +1,102 @@
+{
+ "id": "r6239",
+ "key": "20bc66ae02067e33",
+ "source": "10 REM! INTEGER J\n20 CALL 21643\n30 PRINT B%;MID$(\"TASC\",-A,LEN(\"X Y\"));:PRINT:AB$=C$+N2$+CHR$(5)\n40 C%=((32767+255))/XY^A*W%:CONT:Z=C%\n50 B%=-B%:LIST 10-20:M=B%\n60 N2=N2:C$=MID$(N2$,B%)\n70 J=C%:PRINT \"X Y\",LEFT$(C$+AB$,VAL(N2$))+AB$;:N2=EXP(XY)>=W%*XY OR -Z:A=N2 OR N2\n80 STORE B,C:AB$=CHR$(W%)\n90 CALL (Z-C%+10):N2$=\"TASC\"\n100 C$=LEFT$(MID$(\"HI\",C%),Z):GOSUB 150:N2$=CHR$(C%)+MID$(N2$,Y%,313)+MID$(C$,B%)+C$:B%=0.1:XY=B% OR B%\n110 J=B%\n120 GOTO 80:IF (C%) THEN &:IF (POS(\"HI\")+SIN(SGN(3))) THEN &\n130 A=-(N2<=W%):SHLOAD\n140 N2=2*((W%+((1000<>2)))):& \"X:Y\",1:Z=N2:N2=39:Z=N2 AND A\n150 IF (255) THEN J=Y%:XY=J AND Z:PRINT -((NOT C%));INT(J);\n160 GOTO 60:CONT:IF (((Z) OR Y%)) THEN 150:GOSUB 140\n170 TRACE:HTAB -SGN(A)=RND(N2)\n180 END:IF (J=255/W% OR SGN(J+J)) THEN RUN\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 931,
+ "obj_sha256": "0a62145db79d43d334a55057b424c91c8cff4738c01db67af3ee65e93d17fe2e",
+ "cycles": 113015735,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6090
+  },
+  {
+   "line": 40,
+   "addr": 6184
+  },
+  {
+   "line": 50,
+   "addr": 6217
+  },
+  {
+   "line": 60,
+   "addr": 6232
+  },
+  {
+   "line": 70,
+   "addr": 6250
+  },
+  {
+   "line": 80,
+   "addr": 6355
+  },
+  {
+   "line": 90,
+   "addr": 6364
+  },
+  {
+   "line": 100,
+   "addr": 6392
+  },
+  {
+   "line": 110,
+   "addr": 6499
+  },
+  {
+   "line": 120,
+   "addr": 6505
+  },
+  {
+   "line": 130,
+   "addr": 6508
+  },
+  {
+   "line": 140,
+   "addr": 6523
+  },
+  {
+   "line": 150,
+   "addr": 6562
+  },
+  {
+   "line": 160,
+   "addr": 6612
+  },
+  {
+   "line": 170,
+   "addr": 6615
+  },
+  {
+   "line": 180,
+   "addr": 6642
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S019.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6994",
+  "LOCAL VARIABLES": "6995 - 7044",
+  "HIGHEST MEMORY LOCATION": "7044"
+ }
+}

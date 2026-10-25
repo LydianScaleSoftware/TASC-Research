@@ -1,0 +1,23 @@
+{
+ "id": "r6228",
+ "key": "601cf3de63096aed",
+ "source": "10 REM! INTEGER J\n20 DIM B$(11)\n30 DEF FN F(Z)=((Q1%<1))^((P%(XY%,M%)=20))-FRE(SQR(J))\n40 RUN:PRINT:X=1:LIST:& \"X:Y\",1\n50 Q1$=B$\n60 PRINT\n70 XY%=P%(-((X=XY%)),-LEN(\"HI\")):SHLOAD:B=XY%:READ W$:B=B\n80 W$=\"A\"\n90 WAIT W,(3),(-((B*J))<Q1*LEN(Q1$)):ON XY%>=XY GOSUB 80,30,150:HTAB P%(2.25,Q1 OR 5)^P%(5>1,127+Q1)\n100 SPEED=W\n110 GOTO 30:B%=-ASC(\"X Y\"):FOR XY=(XY) TO (Q1%)\n120 IF (Q1%) THEN READ B%\n130 M%=FRE(B%):Q1=M% OR J/2.25=B%-Q1%>((B<=FN F(J))):GOTO 70:REM! CLEAR CHAIN:XY=1.5:B=FRE(XY)+POS(-ASC(B$(J)))\n140 B$(B%)=Q1$\n150 IF (Q1) THEN SHLOAD\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 130\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

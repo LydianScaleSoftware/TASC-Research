@@ -1,0 +1,23 @@
+{
+ "id": "r5277",
+ "key": "fa92147396a7689e",
+ "source": "10 REM! USECOMMON X%,Y,W%\n20 Q1%=ABS(Q1%)<-Q1%>((X% OR W)):Y=Q1% OR Q1%:Z=B\n30 B=NOT ((((X% OR 1000))>=Q1%)):B=B AND B\n40 XY%=X%:X%=B:B=((-40000)):IF (B OR B) THEN 180\n50 PRINT \"X Y\",:PRINT N2,:XY$=\"123\"\n60 REM! CLEAR COMMON:IF (Z) THEN 10\n70 NORMAL:PRINT Q1$;\"X Y\";\n80 RETURN:VTAB NOT N2^XY%/XY%:GOSUB 50\n90 READ X%:COLOR=INT(Y)\n100 RUN:ON XY%>=LEN(XY$)<=Z+LEN(N2$) GOTO 240,80,60,260\n110 POKE ((ABS(31289) AND SIN(Y)))<Z+W%,10\n120 W%=W%-X%:Z=W% OR W%:IF (40) THEN W%=(B):Q1$=LEFT$(XY$,7)\n130 Q1$=\"X Y\"\n140 TEXT\n150 FOR N2=(ATN(XY%=Y)-Z) TO (N2) STEP (COS(VAL(\"HI\") OR W/0))\n160 XY$=N2$:DATA \"A,B\",300,-2.5:Z=0:IF (Z OR Z) THEN 50\n170 B=X%*((N2/XY%))/((NOT 2-((1-Q1%)))):W=B OR B\n180 RUN 120:PRINT:X=1\n190 NEXT N2:HLIN NOT 5=(W%),(((-Q1%-B))*VAL(Q1$)) AT Q1%:REM! CLEAR CHAIN\n200 REM! CLEAR CHAIN:RUN:PRINT:X=1\n210 W=B*((1/29723+255)):RUN 110:PRINT:X=1\n220 IF (-((N2>Y))) THEN READ Y,XY%:FOR Y=(NOT 39) TO (20>((W=5))) STEP (49152<W):PRINT LEFT$(\"123\",10)+XY$+XY$+RIGHT$(\"123\",10<XY%),Z;NOT (Z)/(EXP(W%));\n230 NEXT Y\n240 IF (XY%) THEN 60:W%=.001\n250 IF (NOT ((((Q1% AND Q1%))^((43644^5951))))) THEN W=B OR ((X%-Z))*((XY%>=W)):PRINT INT(-W%);Z=7,\n260 XY$=N2$:Z=PEEK(0):N2=FRE(Z)+POS(N2 AND W):NORMAL\n",
+ "options": {
+  "library": 16384,
+  "program": 24576,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 60\nSYNTAX\n\n REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

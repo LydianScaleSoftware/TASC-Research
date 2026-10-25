@@ -1,0 +1,91 @@
+{
+ "id": "r5192",
+ "key": "7584084ef2450544",
+ "source": "10 DEF FN F(Z)=NOT 2914\n20 Q1$=\"A\"+Q1$+MID$(LEFT$(Q1$,M%),B)\n30 Q1=FRE(\"X Y\"):PRINT POS(Q1$):Y%=3.14159\n40 RUN:A$=\"HI\":XY%=M%\n50 FOR Q1=(((32767*W OR Q1/Y%))*((B>XY% OR M%))) TO (W):IF (Y%) THEN 140\n60 IF (LOG(POS(20))>((VAL(Q1$) OR W))) THEN ON XY GOTO 30,120,110\n70 ON Y% GOTO 50\n80 GOTO 120:ON FRE(((1E3 OR 815))=((W>=AB))) GOTO 60\n90 ON Y% GOTO 140:PLOT 542*Z%,Q1:COLOR=Y%>=Y%\n100 AB=W:XY=B\n110 PRINT -((32210=B<>NOT Z%));:IF (XY%) THEN Z%=TAN(Z%)\n120 Q1$=\"TASC\":XY=XY%>=Y%:Q1=XY AND XY:B=-((W*((20<Y%))))\n130 AB=FRE(\"HI\"+Q1$):PRINT POS(A$):GOTO 140:NEXT Q1\n140 GOSUB 40:M%=127-0>PEEK(ABS(M%))\n150 AB=Y%:Q1=XY%:M%=POS(M%)-((B<=W))-((PEEK(20)>=ATN(B))):B=M% OR B\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 857,
+ "obj_sha256": "1b1b05889bbb099d733e16c32bc3df6ede8e6d690c19b737bede945aaa1bb700",
+ "cycles": 104936375,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6097
+  },
+  {
+   "line": 30,
+   "addr": 6143
+  },
+  {
+   "line": 40,
+   "addr": 6171
+  },
+  {
+   "line": 50,
+   "addr": 6194
+  },
+  {
+   "line": 60,
+   "addr": 6261
+  },
+  {
+   "line": 70,
+   "addr": 6309
+  },
+  {
+   "line": 80,
+   "addr": 6318
+  },
+  {
+   "line": 90,
+   "addr": 6321
+  },
+  {
+   "line": 100,
+   "addr": 6357
+  },
+  {
+   "line": 110,
+   "addr": 6369
+  },
+  {
+   "line": 120,
+   "addr": 6416
+  },
+  {
+   "line": 130,
+   "addr": 6468
+  },
+  {
+   "line": 140,
+   "addr": 6506
+  },
+  {
+   "line": 150,
+   "addr": 6536
+  }
+ ],
+ "info": {
+  "Y AND XY": "B =  - ((W * ((20 < Y%))))",
+  "OBJECT FILE": "S012.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6920",
+  "LOCAL VARIABLES": "6921 - 6971",
+  "HIGHEST MEMORY LOCATION": "6971"
+ }
+}

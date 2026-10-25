@@ -1,0 +1,23 @@
+{
+ "id": "r5218",
+ "key": "e49c8e5b8b55c143",
+ "source": "10 REM! INTEGER I\n20 PRINT N2%,B<>EXP(39)-Y%;W$;\n30 REM! CLEAR CHAIN:IF ((((0)<>3))-((X%-.001))) THEN 40\n40 I=949:VTAB 3\n50 IF (C) THEN 250:REM! CLEAR CHAIN:Y%=-((N2% AND 2))+VAL(LEFT$(W$,256))\n60 GOSUB 140\n70 B=2:Z=FRE(A$+\"X Y\"):PRINT POS(W$):Z=((N2 OR 10+N2))=18483\n80 GOTO 40:M=FRE(RIGHT$(Z$,-X%)):PRINT POS(W$)\n90 Q1%=((Z OR Q1%+C))-((256<=I))/-B\n100 W$=A$\n110 C=10:N2%=((N2/3.14159<>((Q1%>=I))))-((Z AND C)):M=N2% OR N2%:IF (B AND M) THEN IF (((B+((Y%+C))))^39) THEN 30\n120 Z$=\"X Y\"\n130 ROT=Q1%:INVERSE:VTAB LOG(((B+0.1))*((C AND Z)))\n140 HCOLOR=-((43507-((I>0)))):X%=Y%<>X% AND B OR B:IF (255) THEN RUN 150\n150 I=ASC(\"X Y\"):Z=I OR I:HTAB ((N2=256))-Y%^X%<=Y%:HTAB .001 AND X%\n160 C=NOT ((C OR M)):C=C OR M:Z=FRE(STR$(N2 AND N2-X%)):PRINT POS(W$):PRINT SIN(1000 AND Z)<ASC(LEFT$(W$,C)),(N2)-B>-C,\n170 I=Q1%\n180 X%=Y%:B=X% OR 1\n190 READ Y%:PRINT Y% AND Y%\n200 Q1%=N2%+NOT ((I*N2)):Z=FRE(Q1%)+POS(I):IF (I) THEN IF (((INT(M)<>I))+((256<ASC(\"123\")))) THEN RUN\n210 B=Q1%=X%:IF (((B+Z))*((NOT 40<=((N2<=C))))) THEN 50:N2%=NOT ((Q1%/N2%))\n220 CALL ABS(Z):N2=FRE(RIGHT$(\"TASC\",-10<COS(C))):PRINT POS(A$):N2=N2\n230 HTAB Y%^((POS(M)-610)):I=FRE(1)+SQR(X%)-2.25:B=I AND X%:REM! CLEAR CHAIN\n240 PRINT ATN(5);\n250 IF (Q1%) THEN W$=RIGHT$(A$,SQR(10+I))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 30\nSYNTAX\n\n REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

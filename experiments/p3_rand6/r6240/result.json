@@ -1,0 +1,23 @@
+{
+ "id": "r6240",
+ "key": "d4676f127f3f3ce7",
+ "source": "10 DIM P$(11),A%(9)\n20 TRACE\n30 C%=-((-((A%(X%)*A%(32767))))):C$=A$:GOTO 80:STORE B,C\n40 N2%=((M*N2%>=((X%=A%))))-20:DEL 10,20:AB=N2%:GOTO 60:REM! CLEAR COMMON:GOSUB 40\n50 IF (Q1) THEN RETURN:IF (0) THEN SHLOAD:IF (AB) THEN GET AB:A%=AB OR (X%)\n60 PRINT 15700<C% AND ABS(A%*40);C$;ATN(M)-32291;:P$(20<A%(0)<Y OR A%(.001))=P$(N2%)+CHR$(20 AND 1.5):N2%=LEN(C$):IF (N2% OR N2%) THEN 10\n70 IF (C%+Y) THEN RETURN:HTAB AB\n80 Z=INT(LEN(A$)-C%):IF (M) THEN &\n90 GOTO 80:GET Y:X%=Y OR (Y^X%=M*((N2% AND N2%)))\n100 A$=RIGHT$(W$,NOT AB):GET M:A%=M OR (A%)\n110 TEXT:ON 127 GOTO 10,60,60,100:&\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 40\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

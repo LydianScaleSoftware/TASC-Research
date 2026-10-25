@@ -1,0 +1,75 @@
+{
+ "id": "r5089",
+ "key": "4d827e38634f7827",
+ "source": "10 REM! INTEGER J\n20 X%=764+N2\n30 PLOT NOT 3,COS(NOT 11755 AND N2<>3):FOR N2=(618) TO (M%)\n40 C=X%^((127-((N2>=7)))):HTAB -M%<>((A%(C%)<=((XY<N2)))):ON -C GOTO 70\n50 GOSUB 50\n60 A%(AB%)=X%:W=C% AND 32767 AND 900<(C%):N2=W OR W\n70 READ W:PRINT W AND W:ON 48523 AND W GOTO 10,40\n80 C%=AB%+C%:W=C% AND AB%:IF (LOG(W)) THEN RUN 40\n90 C=LOG(2.25)<=((Y=716))^((20^Y)):W=W\n100 C=XY:Y=FRE(MID$(Q1$,W,((D%(J)=AB%))/ATN(AB%))):PRINT POS(Q1$):Q1$=STR$(X%)+\"X Y\"\n110 C%=X%:REM! CLEAR COMMON\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 896,
+ "obj_sha256": "8cc908bef817617898a4514b663b900d3566602520f1863421297956fd042728",
+ "cycles": 101814271,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6096
+  },
+  {
+   "line": 40,
+   "addr": 6158
+  },
+  {
+   "line": 50,
+   "addr": 6242
+  },
+  {
+   "line": 60,
+   "addr": 6245
+  },
+  {
+   "line": 70,
+   "addr": 6311
+  },
+  {
+   "line": 80,
+   "addr": 6358
+  },
+  {
+   "line": 90,
+   "addr": 6410
+  },
+  {
+   "line": 100,
+   "addr": 6467
+  },
+  {
+   "line": 110,
+   "addr": 6566
+  }
+ ],
+ "info": {
+  "RECOGNIZED": "REM ! CLEAR COMMON",
+  "OBJECT FILE": "S009.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6959",
+  "LOCAL VARIABLES": "6960 - 7054",
+  "HIGHEST MEMORY LOCATION": "7054"
+ }
+}

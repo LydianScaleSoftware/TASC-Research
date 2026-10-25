@@ -1,0 +1,70 @@
+{
+ "id": "r5026",
+ "key": "1b242cefb29a8bc3",
+ "source": "10 REM! INTEGER *\n20 DIM B(12)\n30 M=SIN(C):PRINT W+B(20)*555<>ATN(B%),C;.001;:Z=NOT ((24-B%-3)):Z=Z OR Z\n40 Q1%=NOT Q1+((W>=39))^AB%:W=LOG(Z):Q1=W OR W:READ B%:PRINT B% OR B%\n50 Q1=Q1-B%>=((Z+M>=((C<=Q1)))):C=Q1 AND Q1\n60 Q1%=7 AND SGN(127)<>B%:Q1=256:Q1=20-AB%\n70 POKE W*((10 AND PEEK(W))),RND(M)<=-Q1=((C>65535))\n80 HCOLOR=Z%<=Q1:B$=B$:HCOLOR=Q1%\n90 Z%=W:B$=\"HI\":READ B%\n100 PRINT:GOSUB 10\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 735,
+ "obj_sha256": "9a830b0b24467808ec4b1a29af58b1e599afbd4609ce2b488044d7b58f0bc12c",
+ "cycles": 97798596,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6179
+  },
+  {
+   "line": 50,
+   "addr": 6260
+  },
+  {
+   "line": 60,
+   "addr": 6317
+  },
+  {
+   "line": 70,
+   "addr": 6356
+  },
+  {
+   "line": 80,
+   "addr": 6419
+  },
+  {
+   "line": 90,
+   "addr": 6443
+  },
+  {
+   "line": 100,
+   "addr": 6469
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S006.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6798",
+  "LOCAL VARIABLES": "6799 - 6854",
+  "HIGHEST MEMORY LOCATION": "6854"
+ }
+}

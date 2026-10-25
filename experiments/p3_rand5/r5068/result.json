@@ -1,0 +1,83 @@
+{
+ "id": "r5068",
+ "key": "9f1ecefcde084ffc",
+ "source": "10 DIM B$(3),D%(1,12),P$(6,6)\n20 DEF FN F(X)=XY%-5\n30 PRINT Y-EXP(100),-FN F(XY%)*D%(LEN(AB$),714/W%);Z$;:GOTO 130:PRINT\n40 IF (Y=((XY% AND ((AB AND 257))))) THEN GOSUB 60\n50 AB=A%>POS(Z):Z=AB AND AB:Q1%=N2:AB=Q1% OR 1:P$(W%*((XY%/M))+0.1,POS(FN F(A%)))=Z$\n60 M=FN F(XY%):Z=FRE(M)+POS(Q1%):Z=FN F(NOT 215+((D%(A%,Q1%)<AB))):Q1%=-20/((Q1%/Y))-POS(NOT AB):N2=Q1% AND Q1%\n70 IF (AB>=20) THEN GET N2:IF (W%) THEN 110\n80 HTAB FN F(39)\n90 AB=M:N2=AB AND AB:A%=Y\n100 CALL LEN(CHR$(Q1%))/A%:Z$=P$(W%,40000<>((7<>M))):FOR N2=(AB) TO (M) STEP (POS(\"HI\"+\"123\"))\n110 Z=A%:GOTO 90\n120 SPEED=AB\n130 A%=-((AB/((Y-7)))):M=A% AND M:READ N2:M=3.14159\n",
+ "options": {
+  "library": 16384,
+  "program": 24576,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 24576,
+ "obj_len": 954,
+ "obj_sha256": "4a18cb78e8d623f9a61b5bc6e8a18e48691f95bc787e2bbc1391e8bcff7e577f",
+ "cycles": 109494669,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 24596
+  },
+  {
+   "line": 20,
+   "addr": 24596
+  },
+  {
+   "line": 30,
+   "addr": 24612
+  },
+  {
+   "line": 40,
+   "addr": 24681
+  },
+  {
+   "line": 50,
+   "addr": 24713
+  },
+  {
+   "line": 60,
+   "addr": 24794
+  },
+  {
+   "line": 70,
+   "addr": 24914
+  },
+  {
+   "line": 80,
+   "addr": 24942
+  },
+  {
+   "line": 90,
+   "addr": 24951
+  },
+  {
+   "line": 100,
+   "addr": 24969
+  },
+  {
+   "line": 110,
+   "addr": 25069
+  },
+  {
+   "line": 120,
+   "addr": 25078
+  },
+  {
+   "line": 130,
+   "addr": 25084
+  }
+ ],
+ "info": {
+  "LIBRARY": "16384 - 20396",
+  "D M": "READ N2:M = 3.14159",
+  "OBJECT FILE": "S008.OBJ",
+  "PROGRAM": "24576 - 25529",
+  "LOCAL VARIABLES": "25530 - 25736",
+  "HIGHEST MEMORY LOCATION": "25736"
+ }
+}

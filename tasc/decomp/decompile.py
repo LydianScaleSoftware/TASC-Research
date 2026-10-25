@@ -23,7 +23,7 @@ from dataclasses import dataclass, field
 from tasc.compiler.assemble import compile_program
 from tasc.compiler.parse import TOK
 from tasc.decomp import names as N
-from tasc.decomp.lift import BinN, FnDef, Leaf, Lifted, lift
+from tasc.decomp.lift import BinN, FnDef, Leaf, Lifted, Unknown, lift
 from tasc.decomp.lift import Node as ExprNode
 from tasc.decomp.render import Line, Renderer, layout, listing, program_bytes
 from tasc.decomp.walk import Sym, walk
@@ -55,6 +55,7 @@ class Unit:
     line_addr: dict[int, int] = field(default_factory=dict)  # line number -> original address
     program: bytes = b""
     text: str = ""
+    fre_choice: dict[int, bool] = field(default_factory=dict)
 
     @property
     def lifted(self) -> Lifted:
@@ -155,7 +156,13 @@ def _render(u: Unit, names: dict[Sym, str]) -> None:
         if sts:
             body = r.stmt(sts[0])
             for prev, st in zip(sts, sts[1:]):
-                body += (b"" if prev.kind == "IF" else b":") + r.stmt(st)  # IF c THEN stmt
+                if st.kind == "EMPTY":
+                    body += b":"  # THEN : (an empty statement)
+                    continue
+                # IF c THEN stmt; but THEN GOTO / THEN RETURN would compile as the short IF
+                # forms, so the BNE form with these needs THEN :GOTO / THEN :RETURN
+                tight = prev.kind == "IF" and st.kind not in ("GOTO", "RETURN")
+                body += (b"" if tight else b":") + r.stmt(st)
             u.body_lines.append((ln.number, body))
             u.line_addr[ln.number] = ln.addr
         elif ln.addr == final_end and final_end in lf.line_starts:
@@ -365,7 +372,17 @@ def fill_gaps(u: Unit) -> None:
     phantoms += [s for s in w.syms.values() if s.region == "local" and s.routine is not None and not s.array and s not in refd
                  and s not in phantoms]
     phantoms.sort(key=lambda s: s.addr)
+    # real constants nothing references (a FRE/POS literal argument, entered at scan time):
+    # PASS2 keeps them in the pool
+    phantoms += sorted((s for s in w.syms.values() if s.region == "const" and s.routine is None and s not in refd),
+                       key=lambda s: s.addr)
     unk = list(u.lifted.unknowns)
+    for lit in u.lifted.free_lits:  # each to the first FRE/POS call after its data
+        nxt = next((x for x in unk if x.addr > lit.addr), None)
+        if nxt is None:
+            raise DecompileError(f"{u.name}: literal at ${lit.addr:04X} with no FRE/POS argument for it")
+        nxt.lit = lit.text
+        unk.remove(nxt)
     for ph in phantoms:
         if ph.vtype == "int":
             continue  # REM! INTEGER enters it
@@ -376,7 +393,7 @@ def fill_gaps(u: Unit) -> None:
 
 def decompile_many(units: list[Unit]) -> list[Unit]:
     for u in units:
-        u.lf = lift(walk(u.data, u.load))
+        u.lf = lift(walk(u.data, u.load), u.fre_choice)
     complete_common(units)
     for u in units:
         fill_gaps(u)
@@ -437,7 +454,8 @@ def _pool(data: bytes, load: int) -> list[tuple[str, bytes]]:
 
 
 def _consts_in(n: object) -> set[tuple[str, bytes]]:
-    return {(x.sym.vtype, x.sym.const) for x in _nodes(n) if isinstance(x, Leaf) and x.sym.region == "const"}
+    return {(x.sym.vtype, x.sym.const) for x in _nodes(n)
+            if isinstance(x, (Leaf, Unknown)) and x.sym is not None and x.sym.region == "const"}
 
 
 def _repair_order(units: list[Unit], rounds: int = 12) -> None:
@@ -457,7 +475,8 @@ def _repair_order(units: list[Unit], rounds: int = 12) -> None:
 
     for u in units:
         flips = [n for st in u.lifted.stmts for n in _nodes(st.args) if isinstance(n, BinN) and n.flippable]
-        if not flips:
+        unks = [x for x in u.lifted.unknowns if x.lit is None]
+        if not flips and len(unks) < 2:
             continue
         best = score(u)
         for _ in range(rounds):
@@ -478,13 +497,52 @@ def _repair_order(units: list[Unit], rounds: int = 12) -> None:
                     best, improved = sc, True
                     break
                 n.flip = not n.flip
+            # FRE/POS arguments holding unreferenced symbols: which gets which is a guess
+            holder = [x for x in unks if x.sym is not None and (x.sym.vtype, x.sym.const) in (want, have)]
+            for h in holder if not improved else []:
+                for x in unks:
+                    if x is h:
+                        continue
+                    h.sym, x.sym = x.sym, h.sym
+                    decompile_names(units)
+                    sc = score(u)
+                    if sc > best:
+                        best, improved = sc, True
+                        break
+                    h.sym, x.sym = x.sym, h.sym
+                if improved:
+                    break
+            # a filler FRE/POS argument may enter a used constant early (e.g. POS(3) before 3 is
+            # used): give `want` to each filler argument in turn
+            wsym = next((x for x in u.lifted.walk.syms.values()
+                         if x.region == "const" and (x.vtype, x.const) == want), None)
+            for x in ([y for y in unks if y.sym is None] if not improved and wsym is not None else []):
+                x.sym = wsym
+                decompile_names(units)
+                sc = score(u)
+                if sc > best:
+                    best, improved = sc, True
+                    break
+                x.sym = None
             if not improved:
                 decompile_names(units)
                 break
 
 
 def decompile(data: bytes, load: int, opts: Options | None = None) -> Unit:
-    return decompile_many([Unit(data, load, opts or Options())])[0]
+    """Decompile one object.  A FRE/POS that took a pending string as its argument may be
+    wrong in a way that still lifts; if the recompile differs, those choices are flipped."""
+    u = decompile_many([Unit(data, load, opts or Options())])[0]
+    if compare(u) == "identical":
+        return u
+    for a in reversed(u.lifted.fre_decisions):
+        try:
+            v = decompile_many([Unit(data, load, opts or Options(), fre_choice={**u.fre_choice, a: False})])[0]
+        except Exception:  # noqa: BLE001
+            continue
+        if compare(v) == "identical":
+            return v
+    return u
 
 
 def compare(d: Unit, data: bytes | None = None, load: int | None = None, opts: Options | None = None) -> str:

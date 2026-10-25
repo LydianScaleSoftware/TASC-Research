@@ -1,0 +1,23 @@
+{
+ "id": "r6177",
+ "key": "c7cd019f53490e03",
+ "source": "10 REM! INTEGER K,J\n20 DEF FN F(T)=AB%\n30 J=B%:B=J AND M\n40 DATA 300,300,\"A,B\",-2.5:IF (3) THEN & \"X:Y\",1:B%=K-SQR(M) AND .5\n50 PRINT N2%;C<FN F(884)-((J=C)),\n60 NOTRACE:PRINT J;N2,\n70 Q1%=M:PLOT 32767,J\n80 W$=N2$+\"\":Q1%=C:IF (Q1% OR Q1%) THEN 180\n90 FOR M=(FRE(J)) TO (20)\n100 J=49152:M=J AND J\n110 ON VAL(W$) GOTO 190,100\n120 B=Z\n130 RUN:PRINT:X=1:FOR N2=(B%^((-N2-((M=B%))))) TO (-INT(2.25>=K))\n140 SAVE:PRINT N2$;:PRINT LEFT$(LEFT$(M$,1000-3),255);\n150 C=3:RECALL A:N2=C:M=M/24382:IF (M AND M) THEN 110\n160 PRINT \"X Y\",M,256;:SHLOAD\n170 DATA \"A,B\",HI,\"A,B\":POKE 825,B%:N2%=N2:IF (N2% AND N2%) THEN 210\n180 DEL 10,20:RECALL A\n190 GET C:J=C OR (32767/((Z<N2%))*J):Q1%=((N2%<Q1%))-((C AND Q1%))-((((M<=B%))+1000^AB%)):M=Q1% OR K:FOR M=(10) TO (J)\n200 N2$=N2$:Z=VAL(\"TASC\") OR ((K>=Q1%))*PEEK(N2%):IF (Z OR Z) THEN 210:M$=\"\"\n210 GOTO 30:REM! CLEAR CHAIN:PRINT N2%>FRE(M$)>=Z;\n220 IF (FN F(Z)-ASC(\"HI\")+TAN(5)) THEN 140\n230 NOTRACE:IF (1 AND K*EXP(B)) THEN RECALL A:NORMAL\n240 ON 1*B GOSUB 60:ON K GOTO 250,120,70,100\n250 LIST 10-20:& \"X:Y\",1\n260 Z=20<=((B<AB%-.001)):IF (Z OR Z) THEN 270:GOTO 100:REM! CLEAR CHAIN\n270 N2=-ASC(N2$)<N2%-Z+((M<>C)):CONT:M=N2:LIST\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 210\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

@@ -1,0 +1,80 @@
+{
+ "id": "r5017",
+ "key": "bbc1cc84f6faa04f",
+ "source": "10 REM! INTEGER J\n20 REM! USECOMMON C$,X,A%\n30 DATA 300,\"A,B\"\n40 RESTORE\n50 M=J:N2=-X^((VAL(\"123\") AND 256)):C%=887:X=C% AND C%\n60 HCOLOR=(LOG(W%-A%)):FOR N2=(39) TO (A%<255):M=FRE(N2$+STR$(40000)+\"TASC\"+\"TASC\"+XY$):PRINT POS(C$)\n70 RUN 70:PRINT:X=1\n80 DATA 1,-2.5,HI:Z=((47953 OR SGN(Y%)))+C%:J=32767\n90 C%=355:Z=C% AND C%\n100 PRINT C$;:IF (NOT A(X>=256)) THEN RUN\n110 DATA -2.5,-2.5,1:IF (NOT B) THEN DATA 1,300,300\n120 N2=FRE(C$):PRINT POS(C$):N2=-268:N2=N2 AND N2\n",
+ "options": {
+  "library": null,
+  "program": "HGR1",
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 16393,
+ "obj_len": 737,
+ "obj_sha256": "eaa7892ef1a09e75e23bd245816f39db9084b6e5979890935a6a4e089254d4be",
+ "cycles": 89249085,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 16404
+  },
+  {
+   "line": 20,
+   "addr": 16404
+  },
+  {
+   "line": 30,
+   "addr": 16413
+  },
+  {
+   "line": 40,
+   "addr": 16427
+  },
+  {
+   "line": 50,
+   "addr": 16430
+  },
+  {
+   "line": 60,
+   "addr": 16511
+  },
+  {
+   "line": 70,
+   "addr": 16626
+  },
+  {
+   "line": 80,
+   "addr": 16644
+  },
+  {
+   "line": 90,
+   "addr": 16690
+  },
+  {
+   "line": 100,
+   "addr": 16717
+  },
+  {
+   "line": 110,
+   "addr": 16755
+  },
+  {
+   "line": 120,
+   "addr": 16803
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "OBJECT FILE": "S017.OBJ",
+  "PROGRAM": "16393 - 17129",
+  "NUMERIC COMMON": "16384 - 16390",
+  "STRING COMMON": "16391 - 16392",
+  "LOCAL VARIABLES": "17130 - 17221",
+  "HIGHEST MEMORY LOCATION": "17221"
+ }
+}

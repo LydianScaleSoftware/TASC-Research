@@ -1,0 +1,82 @@
+{
+ "id": "r5188",
+ "key": "920426cec20a39a3",
+ "source": "10 REM! INTEGER K\n20 DIM P$(2),D%(2),B(4)\n30 DEF FN F(X)=370\n40 GET C:Q1%=C OR (INT(LOG(.5)+212)):DRAW VAL(CHR$(B(Z%)))\n50 ON COS(Z%)-((K<Z))-641 GOTO 50,70,90\n60 XY$=X$:C=Q1%:AB=FRE(C)+POS(AB% OR -((256-Q1%))):RUN\n70 RUN 10:Y=FRE(RIGHT$(X$,Z)):PRINT POS(X$)\n80 COLOR=49152:PRINT P$(256);POS(590)+Z%^((B>256)),\n90 FOR C=(B(517)) TO (XY%/K):Q1%=Y:Z=FRE(Q1%)+POS(Y)\n100 RUN 70:PRINT:X=1:FOR C=(AB%) TO (XY%) STEP (Q1%)\n110 FOR Y=(Y+INT(0)) TO (D%(K)>=((AB%>Y/Y))) STEP (AB%-169):COLOR=AB%+PEEK(23658):IF (AB<>ASC(AB$)^Y) THEN 30\n120 X$=P$(Z%)\n130 Z=Q1%>=K\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 874,
+ "obj_sha256": "d416500f0b91d9ca0f15a9303a7a5aa5d214e593c01c63ede98344ec086b964c",
+ "cycles": 101779269,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6094
+  },
+  {
+   "line": 50,
+   "addr": 6145
+  },
+  {
+   "line": 60,
+   "addr": 6188
+  },
+  {
+   "line": 70,
+   "addr": 6251
+  },
+  {
+   "line": 80,
+   "addr": 6278
+  },
+  {
+   "line": 90,
+   "addr": 6329
+  },
+  {
+   "line": 100,
+   "addr": 6385
+  },
+  {
+   "line": 110,
+   "addr": 6403
+  },
+  {
+   "line": 120,
+   "addr": 6506
+  },
+  {
+   "line": 130,
+   "addr": 6518
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S008.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6937",
+  "LOCAL VARIABLES": "6938 - 7032",
+  "HIGHEST MEMORY LOCATION": "7032"
+ }
+}

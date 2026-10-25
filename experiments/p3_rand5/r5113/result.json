@@ -1,0 +1,23 @@
+{
+ "id": "r5113",
+ "key": "0c02fa9dc0228155",
+ "source": "10 IF (N2%) THEN 220\n20 GOSUB 220:Q1=1000:XY=Q1 OR SQR(-((NOT N2%)))\n30 READ XY,A$:Q1=POS(VAL(A$)):IF (Q1 OR Q1) THEN 20\n40 READ AB:PRINT AB OR AB:HLIN AB,(B%/POS(MID$(W$,X))) AT M%\n50 GOSUB 240:REM! CLEAR CHAIN:COLOR=N2%\n60 N2%=797>M%^XY%-((XY%<=Z)):IF (N2% AND N2%) THEN 140\n70 Q1=M%:N2%=X-Z:READ Z:PRINT Z OR Z\n80 N2%=AB:IF (AB) THEN M$=A$:DATA X\n90 M%=X:AB=M% AND B%:PRINT 364;COS(XY);:AB=FRE(\"HI\"):PRINT POS(A$)\n100 GOSUB 210:N2%=1:Z=FRE(N2%)+POS(XY):IF (XY%-M%) THEN READ B%:PRINT B% AND B%\n110 IF (M%) THEN IF (XY^B%=N2%) THEN 20:GET Q1:B%=Q1 AND (Q1 OR (X>=X))\n120 READ Q1:PRINT Q1 OR Q1:M%=B%<AB<ABS(Z)>=XY%\n130 SPEED=(-10<=B%):AB=B%\n140 N2%=-EXP(-X):X=N2% OR N2%:VTAB X=554:HCOLOR=39\n150 POKE M%,M%:XY=Z+B%:Z=XY OR XY\n160 POKE VAL(\"123\"),TAN(B%):XY%=-((AB OR Z))\n170 X=(B%):Z=X OR Z\n180 RUN\n190 CALL TAN(POS(915)):PRINT:B%=COS(POS(MID$(A$,Z))):Z=B% OR N2%\n200 N2%=(M%)\n210 IF (M%+((VAL(M$)>=256^Q1))) THEN IF (AB) THEN Z=N2%:Z=Z OR Z:IF (B%) THEN RUN:M%=XY\n220 X=XY:Z=NOT RND(105):IF (Z AND Z) THEN 120\n230 IF (40) THEN 50:B%=Q1\n240 IF (Q1*((10+ATN(XY%)))) THEN A$=M$+MID$(W$,AB OR XY%)\n250 ON VAL(\"\") GOTO 160,240,80:RUN\n260 W$=W$:DATA \"A,B\",\"A,B\",-2.5:FOR Z=(-1.5) TO (127)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 50\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

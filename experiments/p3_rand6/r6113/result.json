@@ -1,0 +1,23 @@
+{
+ "id": "r6113",
+ "key": "2ab1a148d5af7401",
+ "source": "10 REM! INTEGER J,I\n20 DEF FN F(T)=((.001=Y))+I\n30 A(C%)=FRE(-24):RUN 140:PRINT:X=1\n40 HLIN J,(-204) AT FN F(7<=XY%>=W):GOTO 30:REM! CLEAR CHAIN:FOR N2=(Q1) TO (Y) STEP (-POS(P$(I)))\n50 END\n60 B%=NOT M%*256:Q1=40:Q1=Q1 OR B%\n70 B%=FN F(ASC(P$(691)) OR 127):Z=B% OR B%:PRINT P$(100*Z/2);Y$,((Y/((N2-Z))))^-((744/Z));:RUN:PRINT:X=1\n80 C$=C$+P$(C%)+P$(C%):NOTRACE\n90 XY%=39:Q1=XY% AND ((2.25=Z-A(38)))^FN F(N2)\n100 READ M%:PRINT M% OR M%:GOTO 130:REM! CLEAR CHAIN\n110 SAVE:Y=J:W=FRE(Y)+POS(Z):B%=127:& \"X:Y\",1:Q1=B%\n120 REM! CLEAR COMMON\n130 Y=0.1\n140 Z=((C%<>((J<>A(M%)))))+.001:SHLOAD:PRINT\n150 Y$=MID$(Z$,SQR(W)*C%)\n160 CALL -Y+B%:Z$=LEFT$(Z$,N2>((127<B%))):VTAB 5\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 40\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

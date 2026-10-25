@@ -1,0 +1,71 @@
+{
+ "id": "r6227",
+ "key": "ae680ceff44373e9",
+ "source": "10 REM! INTEGER K\n20 DIM P$(8),B$(2)\n30 GET W:AB%=W AND (TAN(-((A AND K)))):Y=K:W=Y AND Y\n40 POKE FRE(Z),1:IF (Z%=Y) THEN PRINT:Z%=(-C%)+A\n50 GOTO 90:LIST:LIST:Y=NOT 255\n60 A=FRE(N2$):PRINT POS(C$):IF (W) THEN LIST 10-20\n70 IF (INT(SIN(AB%))=XY) THEN LOMEM: 16384:LIST\n80 ON 516 GOTO 30,30,50:P$(-FRE(MID$(\"HI\",AB%,678)))=STR$(0):FOR XY=(LEN(N2$)) TO (((NOT Z=K*XY))*((NOT W OR AB%>=Z%))) STEP (LOG(K))\n90 W=Z%:XY=FRE(W)+POS(AB%):A=W:M%=3.14159\n100 IF (-((FRE(\"A\")/((24+AB%))))) THEN LOAD \"F\":HTAB XY^36761-ABS(3)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 725,
+ "obj_sha256": "3916da0d84a0bc6c0a5a7179065eff24a0e28b274502de0e4047d486859dd0cd",
+ "cycles": 93680314,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6126
+  },
+  {
+   "line": 50,
+   "addr": 6170
+  },
+  {
+   "line": 60,
+   "addr": 6182
+  },
+  {
+   "line": 70,
+   "addr": 6205
+  },
+  {
+   "line": 80,
+   "addr": 6225
+  },
+  {
+   "line": 90,
+   "addr": 6359
+  },
+  {
+   "line": 100,
+   "addr": 6395
+  }
+ ],
+ "info": {
+  "RINT": "Z% = ( - C%) + A",
+  "OBJECT FILE": "S007.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6788",
+  "LOCAL VARIABLES": "6789 - 6863",
+  "HIGHEST MEMORY LOCATION": "6863"
+ }
+}

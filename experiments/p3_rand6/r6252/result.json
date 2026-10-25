@@ -1,0 +1,23 @@
+{
+ "id": "r6252",
+ "key": "24de388ee487cc6b",
+ "source": "10 REM! INTEGER I\n20 DIM A(8)\n30 DEF FN F(T)=POS(352)/I>=POS(N2$+N2$)\n40 & \"X:Y\",1\n50 DATA \"A,B\",X:GOTO 30:TRACE\n60 RUN:&\n70 IF (FRE(N2$+W$)) THEN & \"X:Y\",1:LOMEM: 16384:Z%=ASC(LEFT$(RIGHT$(A$,C%),-W))\n80 Q1=FRE(\"TASC\"):PRINT POS(A$)\n90 READ C%:PRINT C% AND C%:Z%=W\n100 GOTO 120:REM! CLEAR CHAIN:REM! CLEAR CHAIN\n110 A%=A(1)*20:Q1=A% AND A%\n120 TRACE:GOTO 40:LOMEM: 16384:GET Z%:A%=Z% OR (-((-FN F(X))))\n130 VTAB Z+VAL(W$):GOTO 30:REM! CLEAR CHAIN\n140 A$=A$+\"TASC\":DATA \"A,B\",X,\"A,B\",1\n150 READ Z:PRINT Z AND Z:ON ATN(C%)=3990^20=LEN(MID$(\"123\",Y%,Z)) GOTO 90,100,140,110:C%=A%:Z=FRE(C%)+POS(FN F(-((NOT Y%))))\n160 Y%=Z%:HTAB Z\n170 GOSUB 150:W$=LEFT$(\"A\",C%):GOTO 70\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 100\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

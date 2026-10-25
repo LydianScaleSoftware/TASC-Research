@@ -1,0 +1,78 @@
+{
+ "id": "r5121",
+ "key": "6ce1fb0d90e51002",
+ "source": "10 REM! INTEGER *\n20 DIM A$(4)\n30 DEF FN F(Z)=334*-Q1\n40 AB%=ABS(1E3):B=AB% OR AB%\n50 RETURN:A$(FN F(3*256/C))=CHR$(-Q1):B=A%\n60 W=W:C=W AND W\n70 IN#C:Q1=POS(W):C=Q1 OR Q1:N2%=TAN(ATN(-C)):W=N2% OR N2%\n80 PLOT 11492-N2%<C>LEN(MID$(A$,A%,B)),C:B=W\n90 C=FRE(LEFT$(\"A\",FN F(A%-C))):PRINT POS(A$)\n100 IF (POS(20 AND AB%)/((Q1 OR A+B))) THEN 60:C=Q1\n110 GOTO 10:IF (1.5) THEN 10:DATA -2.5\n120 Q1=AB%:IF (Q1 AND Q1) THEN 60:C=1000\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 591,
+ "obj_sha256": "c1e43d2bf67099d77f3710609d37df59eb812d3d011e1b8d9a8c3a9c32161512",
+ "cycles": 87952544,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6103
+  },
+  {
+   "line": 50,
+   "addr": 6127
+  },
+  {
+   "line": 60,
+   "addr": 6173
+  },
+  {
+   "line": 70,
+   "addr": 6185
+  },
+  {
+   "line": 80,
+   "addr": 6236
+  },
+  {
+   "line": 90,
+   "addr": 6293
+  },
+  {
+   "line": 100,
+   "addr": 6333
+  },
+  {
+   "line": 110,
+   "addr": 6382
+  },
+  {
+   "line": 120,
+   "addr": 6396
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6654",
+  "LOCAL VARIABLES": "6655 - 6694",
+  "HIGHEST MEMORY LOCATION": "6694"
+ }
+}

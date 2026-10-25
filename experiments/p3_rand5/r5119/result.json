@@ -1,0 +1,143 @@
+{
+ "id": "r5119",
+ "key": "0a7237e445381963",
+ "source": "10 REM! INTEGER J,I\n20 DIM P$(9)\n30 DEF FN F(T)=43731\n40 A$=CHR$(W%)\n50 READ J:COLOR=5:HCOLOR=AB\n60 Y=2:W=Y AND Y\n70 SPEED=3\n80 Y=NOT ((LEN(P$(I))+J)):W=Y AND Y:N2=1.5:AB=N2 AND Y:IF (B(I)) THEN GET W%:W%=W% AND (100)\n90 SPEED=32767\n100 DATA 1,X,1\n110 GOSUB 110\n120 I=NOT FN F(I)/-((A OR A)):IF (I OR I) THEN 210:RUN\n130 GOTO 240:PRINT:ON Y=FN F(NOT W%) GOTO 90,110,230\n140 XDRAW ((LOG(W)=ABS(174)))^TAN(NOT I):W%=Y:Y=W% OR W%:X$=X$\n150 I=NOT ((N2%<W)):N2=I AND I:IF (65535=((5-49152<=((J=5))))) THEN A=FRE(CHR$(N2)):PRINT POS(X$):A=FRE(RIGHT$(\"HI\",RND(PEEK(N2%)))):PRINT POS(M$)\n160 HTAB N2%:Y=W:Y=FRE(STR$(POS(B%))+A$):PRINT POS(X$)\n170 W=A<=N2 OR B(I)>N2<=SGN(Z%)\n180 READ AB:PRINT AB AND AB\n190 N2%=AB:AB=N2% AND N2%\n200 COLOR=NOT ((NOT A))+((I+((J<=0.1)))):GET W%:N2%=W% OR (-EXP(AB+I)):W=J-B(Y/49152)\n210 DATA -2.5,X,HI:M$=RIGHT$(A$,W)\n220 GOTO 30:POKE EXP(Z%)>B%,FN F(49152)<>1.5-B(J)>=7*B(J)\n230 RUN:W=FN F(Z%):AB=W OR W:GOTO 250\n240 PLOT NOT ((-0.1)),-W%:W%=((I<B(W%) AND A+Y))-Y:Y=((B(N2%)+J>Z%^137))*A:W=Y AND LEN(A$)>POS(7)\n250 FOR Y=(Z%) TO (NOT 256>=7<>B(I)):N2=SQR(B%*0+FN F(Z%))\n260 AB=((((432<>100))+Z%*W))/((((A>=B%))-FN F(B(32767)))):A=AB AND AB:IF (-849) THEN B%=A+10<>32767:Y=B% AND B%\n270 X$=P$(317<W%):M$=LEFT$(X$+RIGHT$(M$,Y),LEN(P$(20)) AND AB):GOSUB 50\n280 IF (-I) THEN GET N2:B%=N2 OR (SQR(A))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1664,
+ "obj_sha256": "6174f345da43b18218b8c490d8c873da1957d43e2712826bcb60bc1ff2a5a8b6",
+ "cycles": 157370034,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6094
+  },
+  {
+   "line": 50,
+   "addr": 6103
+  },
+  {
+   "line": 60,
+   "addr": 6121
+  },
+  {
+   "line": 70,
+   "addr": 6133
+  },
+  {
+   "line": 80,
+   "addr": 6139
+  },
+  {
+   "line": 90,
+   "addr": 6218
+  },
+  {
+   "line": 100,
+   "addr": 6224
+  },
+  {
+   "line": 110,
+   "addr": 6236
+  },
+  {
+   "line": 120,
+   "addr": 6239
+  },
+  {
+   "line": 130,
+   "addr": 6288
+  },
+  {
+   "line": 140,
+   "addr": 6291
+  },
+  {
+   "line": 150,
+   "addr": 6360
+  },
+  {
+   "line": 160,
+   "addr": 6487
+  },
+  {
+   "line": 170,
+   "addr": 6529
+  },
+  {
+   "line": 180,
+   "addr": 6577
+  },
+  {
+   "line": 190,
+   "addr": 6592
+  },
+  {
+   "line": 200,
+   "addr": 6613
+  },
+  {
+   "line": 210,
+   "addr": 6691
+  },
+  {
+   "line": 220,
+   "addr": 6719
+  },
+  {
+   "line": 230,
+   "addr": 6722
+  },
+  {
+   "line": 240,
+   "addr": 6740
+  },
+  {
+   "line": 250,
+   "addr": 6862
+  },
+  {
+   "line": 260,
+   "addr": 6927
+  },
+  {
+   "line": 270,
+   "addr": 7030
+  },
+  {
+   "line": 280,
+   "addr": 7093
+  }
+ ],
+ "info": {
+  "ND Y": "N2 = 1.5:AB = N2 AND Y: IF (B(I)) T",
+  "OBJECT FILE": "S019.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7727",
+  "LOCAL VARIABLES": "7728 - 7864",
+  "HIGHEST MEMORY LOCATION": "7864"
+ }
+}

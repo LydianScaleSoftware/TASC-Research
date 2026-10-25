@@ -1,0 +1,78 @@
+{
+ "id": "r5298",
+ "key": "d0eb4a733645f50a",
+ "source": "10 DEF FN F(T)=C*C\n20 PLOT -256,C\n30 HOME:XDRAW 2>((100 AND COS(P%(W%))))\n40 REM! CLEAR CHAIN\n50 W%=-40:PRINT X%,:PRINT C OR P%(AB=A),\n60 NORMAL\n70 FOR AB=(X%) TO (A):A=-((X%<>AB))<>-W%^W:IF (A AND A) THEN 10:M%=VAL(B$(W%)+\"X Y\"):IF (M% AND M%) THEN 50\n80 PRINT:IF (NOT ((D(65535)<ASC(B$(3))))) THEN PRINT\n90 FOR C=(W) TO (M%) STEP (W%)\n100 AB=FRE(C):M=AB OR AB\n110 IF (256) THEN CALL M%:PRINT A,P%(TAN(D(256))),:IF (ASC(STR$(P%(N2%)<>N2%))) THEN RUN\n120 SPEED=7<=ASC(Q1$)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 640,
+ "obj_sha256": "4f7eae02d311e21c1ae8f681e6c5574b447262ee6a5d4d9aeb9f68ea91ae37ae",
+ "cycles": 88930874,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6097
+  },
+  {
+   "line": 30,
+   "addr": 6112
+  },
+  {
+   "line": 40,
+   "addr": 6145
+  },
+  {
+   "line": 50,
+   "addr": 6148
+  },
+  {
+   "line": 60,
+   "addr": 6193
+  },
+  {
+   "line": 70,
+   "addr": 6196
+  },
+  {
+   "line": 80,
+   "addr": 6290
+  },
+  {
+   "line": 90,
+   "addr": 6334
+  },
+  {
+   "line": 100,
+   "addr": 6354
+  },
+  {
+   "line": 110,
+   "addr": 6366
+  },
+  {
+   "line": 120,
+   "addr": 6440
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S018.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6703",
+  "LOCAL VARIABLES": "6704 - 6847",
+  "HIGHEST MEMORY LOCATION": "6847"
+ }
+}

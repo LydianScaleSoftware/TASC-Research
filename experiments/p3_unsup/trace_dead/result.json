@@ -1,0 +1,34 @@
+{
+ "id": "trace_dead",
+ "key": "07f4f2b26d6966f0",
+ "source": "10 GOTO 10:TRACE:X=1\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 55,
+ "obj_sha256": "5683533780569c668a856cebaa6b902cd22f17e726e6b12d0d9595fbc10bba55",
+ "cycles": 56492900,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6118",
+  "LOCAL VARIABLES": "6119 - 6123",
+  "HIGHEST MEMORY LOCATION": "6123"
+ }
+}

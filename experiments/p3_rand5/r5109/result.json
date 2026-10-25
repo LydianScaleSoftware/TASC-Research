@@ -1,0 +1,23 @@
+{
+ "id": "r5109",
+ "key": "ecfac5bc9f2e018f",
+ "source": "10 REM! INTEGER I\n20 PRINT B$(C%);\"HI\";Q1%;:GR:PRINT\n30 SPEED=B-I OR 280*-C%\n40 INVERSE:Q1%=Y:W=Q1% OR Q1%\n50 PRINT:AB$=AB$:AB$=LEFT$(\"X Y\",703)\n60 IF (-B+Y) THEN PRINT B$,FRE(B$);:Z=X%:IF (Z OR Z) THEN 130:IF (49152) THEN RUN 180\n70 PRINT:B=I:Y=FRE(B)+POS(W)\n80 B=(((2<=176))*((XY%<W))):REM! CLEAR COMMON:B$=MID$(\"\",Y,W)+AB$\n90 AB=FRE(RIGHT$(\"123\",2.25)):PRINT POS(B$):RUN:AB=FRE(CHR$(LOG(XY% OR AB))):PRINT POS(B$)\n100 CALL C%<((227<>RND(AB)))\n110 IF (74-AB) THEN IF (Y=Y OR ((I OR W))<NOT Z) THEN 60:FOR Y=(-((Q1%<C%))<>RND(B)) TO (SQR(XY%/((C%*W))))\n120 PRINT B$(FRE(CHR$(AB)));RIGHT$(Y$,-W);\"X Y\";\n130 FOR Z=(Z) TO (-((Q1%+B))-W):FOR W=(ASC(RIGHT$(STR$(I),W))) TO (AB)\n140 DATA -2.5,,HI:IF (B) THEN RUN 40\n150 READ Y:PRINT Y AND Y:PRINT B$,(X%>256);AB;\n160 W=Z:Z=W OR W:CALL 10099\n170 Z=((RND(W) OR NOT AB))>COS(Q1%-Z):IF (Z OR Z) THEN 90\n180 Y=B+((Z AND ASC(Y$))):ON 733 OR VAL(B$)<>I GOTO 100,200\n190 C%=VAL(MID$(\"TASC\",AB,1)+RIGHT$(\"A\",I)):Q1%=Y AND LEN(B$+AB$):AB=INT(ABS(I)) OR AB*NOT XY%:B=AB OR 127\n200 GOSUB 120\n210 PRINT C%,CHR$(-W),\"123\",:REM! CLEAR COMMON:READ Y:PRINT Y OR Y\n220 FOR B=(Q1%+FRE(MID$(Y$,959,AB))) TO (256)\n230 IF (C%) THEN RUN:IF (W) THEN I=B*((AB<32767))>ASC(\"X Y\")\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 80\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

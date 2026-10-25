@@ -1,0 +1,23 @@
+{
+ "id": "r6137",
+ "key": "05ba1b410f671c79",
+ "source": "10 REM! INTEGER K,J\n20 DIM D(4)\n30 VTAB XY%:IF (POS(VAL(\"HI\"))) THEN RECALL A:K=M-K<>39=ASC(B$+M$)\n40 W%=W:SAVE:W=W%:B=39722:N2=B AND B\n50 RUN 190:W=RND(W%):M=FRE(W)+POS(POS(-A)):M$=STR$(P(J,N2%+N2))\n60 SAVE\n70 P(VAL(B$),20)=((N2<>255))/RND(M)-D(24838):A=NOT ((127^N2% OR 65535+A)):GOTO 100:REM! CLEAR COMMON\n80 A=W:B=FRE(A)+POS(-((NOT J))>VAL(\"123\")*((N2+A))):GET M:A%=M OR (A%)\n90 B=2:IF (B OR B) THEN 90:RUN 150:PRINT:X=1:IF (-((A OR J))*((N2<>5+N2))) THEN 230\n100 PRINT B$;:J=W:CONT:A=J\n110 J=W%:& \"X:Y\",1:A=J:N2%=J\n120 W=A(TAN(12510)^LEN(XY$)):IF (B) THEN & \"X:Y\",1:P(-37610,-FRE(39+N2))=-LOG(W%<45039)\n130 PRINT:W=((W%+((XY%-B))))/((D(100)>-2)):RECALL A:A=W\n140 PRINT POS(\"123\");\n150 PRINT W%<A,XY$,-LOG(J),:GOTO 40:RECALL A\n160 IF (NOT (((J)<>((M<>1))))) THEN 120:XY%=N2%<>N2%<N2>P(J,A(A%)/K):RECALL A:N2=XY%:STORE B,C\n170 IF (255) THEN HLIN J,(M AND J) AT A%:LIST:M=FRE(LEFT$(B$,-((33582<>A)))):PRINT POS(XY$)\n180 TRACE\n190 ON 65535 GOTO 110,250\n200 M$=LEFT$(M$,J)+XY$:N2%=N2*-A(K)<=((N2+P(87,0.1) AND INT(W))):READ W%:PRINT W% OR W%\n210 REM! CLEAR COMMON:IF (COS(-692)^((W%*-24))) THEN 230\n220 PRINT J;M,M$;:SPEED=VAL(B$)<W%>=-756\n230 GOTO 30:REM! CLEAR COMMON:A=-A:SHLOAD\n240 SAVE\n250 LIST:A%=N2:IF (A% AND A%) THEN 10\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 210\nSYNTAX\n\n REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

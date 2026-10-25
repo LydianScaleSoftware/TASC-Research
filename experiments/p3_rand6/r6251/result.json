@@ -1,0 +1,23 @@
+{
+ "id": "r6251",
+ "key": "e1e990e8a6991476",
+ "source": "10 REM! INTEGER I\n20 &:STORE B,C:LOAD \"F\"\n30 IF (NOT 10) THEN LIST:IF (X/A%(40)/ASC(A$)+Y%) THEN RECALL A\n40 Z%=B^((NOT M%>=A%(M%)+40000)):IF (Z% AND Z%) THEN 110:A%(LOG(A%(Z%)-Y%-INT(15819)))=40*((Z%-AB)) OR 382+M<=.5/0:Q1=FRE(Q1$):PRINT POS(Q1$)\n50 Y$=Y$:Y%=40\n60 GET X:Y%=X AND (M):A%(NOT ((((M%-40))^Z%)))=Z%<=M-((1000+127)):REM! CLEAR CHAIN\n70 M%=X+24 AND M%:IF (M% OR M%) THEN 60\n80 I=-AB:AB=I AND I\n90 READ I:PRINT I OR I:GOTO 130:REM! CLEAR CHAIN:SPEED=M%\n100 Q1=ASC(LEFT$(Y$,M%)):CONT\n110 DEL 10,20:PRINT Q1$;I OR -((Q1%=AB));\"\";:IF (-ABS(Q1%) AND PEEK(49152)=Z%) THEN 70\n120 B=TAN(A%(1000)):READ M%:PRINT M% AND M%:GET Y%:Y%=Y% OR (Z%)\n130 LOAD \"F\":ON M^SQR(A%(Y%))+(-Q1) GOTO 30,100,20:Z%=PEEK(A%(I)>256>=AB)\n",
+ "options": {
+  "library": 4096,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 90\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

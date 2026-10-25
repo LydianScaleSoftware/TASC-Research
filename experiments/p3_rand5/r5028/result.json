@@ -1,0 +1,23 @@
+{
+ "id": "r5028",
+ "key": "21e21fc4188957d0",
+ "source": "10 M$=STR$(W%):RUN:PRINT:X=1\n20 GOSUB 160:Q1%=SGN(W)\n30 RUN:HLIN W-C OR W OR X,(C) AT 13121\n40 DATA \"A,B\",300:M%=20\n50 AB%=NOT ABS(2=AB%)\n60 PRINT Q1%,MID$(M$+AB$,M%,SGN(W)-((49152 AND 36476)));M$;\n70 GET M%:M%=M% AND (W%)\n80 RUN 150\n90 ON X GOSUB 180,110:Z=TAN((Q1%))\n100 RUN:TEXT:IF (X^X) THEN 200\n110 W=AB%-M%:POKE -((W%+W-SGN(W))),B\n120 FOR W=(ATN(5<>((255>C)))) TO (Q1%) STEP (W%):FOR C=(256) TO (((B<=((AB%>=W))))+46528):READ W%:PRINT W% OR W%\n130 PRINT\n140 X=FRE(AB$):PRINT POS(M$):ON W% GOTO 130,50:Q1%=FRE(Q1%)\n150 AB%=((Z AND Q1%))<Q1% AND X:X=FRE(AB%)+POS(Q1%>Q1%*W%^Z):AB$=\"A\"+LEFT$(\"123\",Q1%)\n160 IF (Q1%) THEN SPEED=((ATN(0) OR AB%<=M%))+SQR(B)/((M%<=B))\n170 NEXT C\n180 DRAW ((ATN(B)=(B)))*X:Z=FRE(M$):PRINT POS(AB$)\n190 GOSUB 90\n200 REM! CLEAR COMMON:Q1%=TAN((Q1%<=B)):PRINT ((10>=W))-((AB%<>0 OR 256));\"123\"+A$+M$;\n210 W%=M%:FOR X=(W%) TO (Q1%)\n220 READ W%:PRINT W% OR W%\n230 IF (B+((20*AB% OR 127^W))) THEN RUN 90:FOR Z=(AB%) TO (-255) STEP (7)\n240 NEXT Z:X=FRE(MID$(LEFT$(A$,C<=Z),-24<=B/Z,W%>=((23151<=Q1%)))):PRINT POS(AB$)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 200\nSYNTAX\n\n REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

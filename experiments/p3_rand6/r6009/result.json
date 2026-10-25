@@ -1,0 +1,23 @@
+{
+ "id": "r6009",
+ "key": "0b8b60428ba2eb2f",
+ "source": "10 DIM A%(5)\n20 DEF FN F(T)=((NOT Q1%<AB%*7))-((A%(Q1%)<(AB%)))\n30 REM! CLEAR CHAIN:N2%=1.5=20-Y:C=N2% AND N2%:Y=ASC(B$)\n40 Q1=Q1:SHLOAD:Q1=Q1:FOR Q1=(RND(24)/234=Q1%) TO (A%(Q1%)<M<((Q1%<5)))\n50 M%=FRE(C):M=M% AND M%\n60 FOR M=(FN F(7)) TO (NOT A%(A%(AB%)<=Q1%)):CONT:Q1=FRE(LEFT$(B$,VAL(MID$(X$,N2%)))):PRINT POS(B$)\n70 RECALL A\n80 N2%=40*7:X=N2% AND Q1:&:LOAD \"F\"\n90 X$=LEFT$(X$,((600>=40))--32767):C=((A%(M%)<=M%))/N2% AND 10*N2%<>NOT X:IF (C OR C) THEN 90:ON A%(PEEK(499<=39)) GOTO 60,80,20\n100 READ N2%,X\n110 IF (SIN(NOT M%)+A%(AB%)) THEN RECALL A:X=((AB%<>M%))+N2% AND 3.14159\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 30\nSYNTAX\n\n REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

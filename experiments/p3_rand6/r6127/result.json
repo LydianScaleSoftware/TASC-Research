@@ -1,0 +1,23 @@
+{
+ "id": "r6127",
+ "key": "a07cf0e3edb6375a",
+ "source": "10 REM! INTEGER J\n20 DIM A(12,8)\n30 PRINT RIGHT$(\"123\"+MID$(B$,A(2.25,255),1000),1 OR Y);\n40 ON -D%(39) GOTO 20,130,40:GET Y:X%=Y OR (1E3 OR 0)\n50 N2=RND(0)>N2:LOAD \"F\"\n60 X%=-A(X%,-N2):XY%=((Y% AND J+X%))*J:C=FRE(XY%)+POS(-A(1000,J)-B%<=((D%(XY%)<>Y%>=((Y<J))))):REM! CLEAR CHAIN\n70 XY%=POS(MID$(B$,39))>=24:C=XY% AND B%:IF (24<=-((C<C))) THEN & \"X:Y\",1:GOTO 50:STORE B,C\n80 FOR N2=(EXP(-C) AND ((-XY OR Y%*J))) TO (VAL(\"123\")):D%(-N2>Y%)=Y%*((Y%*A(.001,40)))\n90 Y%=LOG(VAL(B$))\n100 Y%=X:XY=Y% OR VAL(XY$+C$)^(Y):& \"X:Y\",1\n110 & \"X:Y\",1:GOTO 130:REM! CLEAR COMMON:NEXT N2\n120 Y=28573:RECALL A:Y=Y:FOR XY=(PEEK(ATN(D%(65535)))) TO (N2) STEP (-J)\n130 ON X% GOTO 20,20,30\n140 RUN 80:J=EXP(A(J AND XY,32767-Y%)):X=J OR J:LOMEM: 16384\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 110\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

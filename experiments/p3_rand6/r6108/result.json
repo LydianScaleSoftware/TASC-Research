@@ -1,0 +1,23 @@
+{
+ "id": "r6108",
+ "key": "089cbfde20891192",
+ "source": "10 REM! INTEGER K\n20 Q1=NOT M:IF (Q1 OR Q1) THEN 100:Q1=LOG(K<M)^((24-FRE(A))):GOTO 230:REM! CLEAR COMMON\n30 DATA ,,-2.5:LIST 10-20:SPEED=-XY%\n40 AB$=CHR$(Z)\n50 XY%=34689:SAVE\n60 IF (A) THEN RUN\n70 COLOR=Q1-X%\n80 Z=POS(NOT B%>=XY%):IF (FRE(X%)) THEN 120\n90 Q1=Z/FRE(Z)-((((B% AND Z))=POS(B%))):READ A%,K\n100 IF (XY%>Z) THEN 190:REM! CLEAR COMMON:GOTO 40\n110 AB$=Y$:IF (COS(B%)) THEN SHLOAD:GOTO 220:SAVE\n120 ON 1.5 GOTO 140,10,40:IF (-((NOT X%))) THEN RETURN:READ Q1:PRINT Q1 OR Q1\n130 M$=M$:IF (XY%) THEN RUN 200\n140 COLOR=Q1:GOTO 50:NOTRACE:M=648:&:N2=M\n150 IF (A) THEN DEL 10,20:COLOR=K\n160 DATA 300,:B%=29443>N2:SHLOAD:Q1=B%:B%=FRE(2)+A:CONT:Z=B%\n170 LOAD \"F\":ON EXP(X%<((775=Q1))) GOTO 170,160,20:PRINT STR$(Q1*-XY%),917>=Q1;RIGHT$(\"A\",Q1);\n180 Z=32767:Q1=Z OR Z:GOTO 250:CONT:M=255:&:M=M\n190 DEL 10,20:PRINT M$;N2*NOT Q1+637,\n200 GOTO 90:&\n210 RESTORE:RUN 170\n220 GOTO 240:LOMEM: 16384:RUN:PRINT 24,AB$;\n230 A%=-ABS(A%):GET A%:X%=A% AND (A%>NOT Z)\n240 A=Q1\n250 IF (N2) THEN TRACE:END\n260 PRINT MID$(Y$,SIN(B%))+\"A\"+\"\"+Y$;:HCOLOR=((Q1=-A))+SGN(A%<=M)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 100\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

@@ -92,6 +92,8 @@ class Renderer:
         if isinstance(n, Elem):
             return self.name(n.sym) + b"(" + b",".join(self.expr(x) for x in n.subs) + b")"
         if isinstance(n, Unknown):
+            if n.lit is not None:
+                return b'"' + n.lit + b'"'
             return self.name(n.sym) if n.sym is not None else self.filler
         if isinstance(n, UnN):
             inner = self.expr(n.e, 0x100)
@@ -198,6 +200,8 @@ class Renderer:
                 x, y = a[1]  # type: ignore[misc]
                 out += T("AT") + self.expr(x) + b"," + self.expr(y)
             return out
+        if k == "EMPTY":
+            return b""
         if k == "CLEARCOMMON":
             return T("REM") + b"! CLEAR COMMON"
         if k == "CLEARCHAIN":

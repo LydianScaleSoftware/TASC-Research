@@ -1,0 +1,23 @@
+{
+ "id": "r5020",
+ "key": "be8fbe2f5ab9cd6a",
+ "source": "10 M=VAL(X$)\n20 AB$=MID$(P$(256,M%)+STR$(M%),B):Z%=NOT ((ABS(B)-((Y+Z%)))):M=Z% AND XY\n30 REM! CLEAR CHAIN:Q1=Z%\n40 Z%=5577\n50 COLOR=NOT Z%>X%\n60 N2$=MID$(AB$,X%)\n70 IF (Y) THEN 40:P$(Y^X%,X%)=\"123\"+\"TASC\"+\"X Y\"+\"TASC\":ON LEN(AB$+P$(Q1%,24))^Q1% GOTO 120,60\n80 PLOT Z%+M%,RND(2 AND XY>=39):N2$=N2$:PLOT Q1,SIN(-40)\n90 B=M%:Q1=B OR M:XY=XY:B=XY AND XY:N2$=X$\n100 P$(POS(\"HI\"+MID$(N2$,7,3)),M%)=STR$(B):POKE M,-((1.5+100))*((256>Q1%<-B)):M%=X%\n110 ON SIN(Z%<>B)*Q1 GOTO 150,60,100,80:IF (Q1) THEN RUN\n120 FOR Q1=(-((Q1%>=B))<>X%) TO (Z%)\n130 B=-((XY*256))*(Q1%):M=NOT ((Y<=ASC(AB$))):Y=M AND LEN(CHR$(16859))\n140 Z%=M%:IF (Z% OR Z%) THEN 160:READ B:PRINT B OR B:Y=-Y+859>=((X%+Y))^7:Q1=FRE(Y)+POS(Q1%)\n150 READ Q1:PRINT Q1 AND Q1:RUN 140:PRINT:X=1:ON X% GOTO 20,50,60,70\n160 M%=M%:IF (M% OR M%) THEN 180:P$(X%,0*M%<>((X%<>1))<Q1)=X$+X$+\"TASC\"+AB$+\"X Y\"+\"A\":DATA ,-2.5,300\n170 READ Z%:PRINT Z% OR Z%:REM! CLEAR COMMON\n180 Y=X%:Y=Y AND Y\n190 M%=M:Y=FRE(M%)+POS(XY)\n200 FOR M=(10) TO (Z%)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 30\nSYNTAX\n\n REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

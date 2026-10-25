@@ -1,0 +1,23 @@
+{
+ "id": "r6286",
+ "key": "1f9da95e6778efa9",
+ "source": "10 REM! INTEGER I\n20 VTAB Y:PLOT POS(B<=27184)*0,M%=A<=0/N2>X%*B/M%\n30 PRINT -((((20+Y))*-B));CHR$(X%)+M$;Y;:A=40:B=A AND A:LIST\n40 IF (A) THEN 250:Y=LEN(M$+MID$(M$,M%,I)):NOTRACE:Y=Y\n50 TRACE:X%=A<10>=VAL(M$) OR N2+((5 AND Y)):IF (-(B<>N2)) THEN M%=X%>=((((B OR 24))>((A AND M%)))):LOMEM: 16384:N2=M%\n60 IF (NOT Q1%>=((B>=I-Y))) THEN TRACE\n70 RUN\n80 IF (((Y=Y))*SGN(24)*((M%>((255<=65535))))) THEN & \"X:Y\",1\n90 I=X%:A=I OR SGN(AB)^A*A\n100 SAVE:GOTO 100:REM! CLEAR CHAIN\n110 IF (-((A<B))) THEN 170:IF (I) THEN PRINT RIGHT$(C$,5),\n120 GOTO 20:GOSUB 280:GR\n130 M%=-((VAL(AB$)<X%)):B=M% AND VAL(MID$(\"A\",AB)):A=I*((5=2))>=((39>=Y>=A)):N2=7\n140 HCOLOR=EXP(AB):N2=-RND(27832)>((-AB%>=SGN(M%))):N2=INT(-934<255):N2=FRE(N2)+POS(AB% AND A)\n150 I=A-((B+M%/AB%)):Y=I AND I\n160 RUN 190:C$=\"TASC\"+D$(I):PRINT LEN(MID$(\"TASC\",0)),LEFT$(AB$,NOT ((NOT 39)));M$+C$+\"X Y\";\n170 DATA 300,X:CALL N2:READ I:PRINT I AND I\n180 FOR B=((5) OR 256) TO (ASC(LEFT$(M$+M$,NOT 256)))\n190 & \"X:Y\",1\n200 IF (20) THEN RECALL A\n210 PRINT:GET X%:Q1%=X% AND (VAL(MID$(STR$(I),N2=A,POS(D$(I)))))\n220 GOTO 290:REM! CLEAR CHAIN:DEL 10,20\n230 HCOLOR=(X%/706^I)\n240 AB$=D$(B*24)+C$:NEXT B\n250 LIST 10-20:IF (COS(LEN(M$))>=NOT ((N2 OR A))) THEN 130:AB$=AB$\n260 Q1%=EXP(AB%)>=24 AND 10:Y=-((AB<=54>FRE(Q1%))):Y=Y AND 24/B:REM! CLEAR COMMON\n270 TRACE:DEL 10,20\n280 GOTO 180:CALL NOT ((3.14159*40+((AB%<>I))))\n290 IF (Y) THEN IF (I+530=(N2)*((B-N2))) THEN M$=STR$(RND(Q1%+Q1%)):B=AB%*NOT ((Q1% AND 1000)):&:Y=B:IF (M%) THEN PRINT PEEK(491);Q1%;\n300 GOTO 110:REM! CLEAR CHAIN:AB%=(I):A=FRE(AB%)+POS(-ABS(X%<=AB%))\n310 AB=A*COS(0)*1810:Y=AB AND VAL(D$(POS(Y))):FOR B=(INT(POS(M$))+-((Y AND Y))) TO (350) STEP (49152):N2=B+((7889<AB%))-NOT ((Y=I)):B=N2 AND N2\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 220\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

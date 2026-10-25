@@ -1,0 +1,23 @@
+{
+ "id": "r6289",
+ "key": "6a1243ba16b4f319",
+ "source": "10 REM! INTEGER I,J\n20 DIM A$(2,3)\n30 IF (W%*((337<X>=N2^40))) THEN IF (X) THEN RECALL A:REM! CLEAR COMMON:Z$=A$(10,SIN(W%*AB))\n40 LIST\n50 W=SGN(LEN(\"A\"))*AB:X=FRE(\"TASC\"):PRINT POS(N2$):GOTO 140:REM! CLEAR CHAIN\n60 GOTO 250:LOAD \"F\":IF (Z) THEN LOAD \"F\"\n70 READ W,Z:W=15410<>((N2+AB%<=FRE(Z$))):N2=W OR W:N2%=ASC(A$(J,N2%)+\"A\")*((X+J AND J)):& \"X:Y\",1:X=N2%\n80 CONT\n90 X=((289-Z))*3:IF (X AND X) THEN 90:AB%=((((AB% AND W))<>INT(AB%)))+AB:Z=AB% AND AB%\n100 SPEED=RND(POS(A$(513,AB%)))*W:N2$=STR$(NOT ((I*3.14159))):J=COS(255+N2)=SIN(SQR(20))\n110 COLOR=ASC(A$(I,I)+A$+\"\")\n120 GOTO 160:LOAD \"F\":X=PEEK(0.1=1)+((25899 AND -W))\n130 N2%=100\n140 W=255-SGN((24)):REM! CLEAR CHAIN\n150 J=NOT ((AB%=NOT AB)):RECALL A:AB=J:NOTRACE\n160 A%=-(5584):N2=FRE(A%)+POS(10)\n170 HCOLOR=NOT ((W%*A%)):HTAB 24<=W\n180 GOTO 230:DEL 10,20\n190 &:IF (POS(2.25)) THEN 170\n200 READ N2:PRINT N2 OR N2\n210 I=((40<=A%))/N2%/((((238=W))*ATN(N2%))):SAVE:W=I:IF (LOG(TAN(N2%))) THEN LIST 10-20:& \"X:Y\",1\n220 IF (A%+(10)) THEN RUN 220:NOTRACE:CONT\n230 N2%=X:PRINT RIGHT$(MID$(Z$,AB%-Z),-AB),:SAVE\n240 A$(VAL(RIGHT$(N2$,3)),I)=LEFT$(\"TASC\",I)+\"A\":LIST:A$(ASC(N2$),39)=A$(-((AB+W)),104)\n250 &\n260 REM! CLEAR CHAIN:CALL ((J>N2))/((X*A%))/604\n270 PRINT W;A$,:X=FRE(A$):PRINT POS(N2$):J=-((X=J)):AB=J AND J\n280 IF (((J OR A%))-0) THEN IF (FRE(STR$(-217))) THEN 150:LIST:FOR J=((300=N2)=ASC(A$)) TO (((J>1000))-((AB%=Z)))\n290 FOR AB=(Z) TO (1.5) STEP (AB%):SHLOAD\n300 SPEED=796:RUN 100:GET AB%:I=AB% AND (Z)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 30\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

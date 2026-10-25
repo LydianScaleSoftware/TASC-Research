@@ -1,0 +1,23 @@
+{
+ "id": "r5170",
+ "key": "426e99f2ac22659c",
+ "source": "10 REM! INTEGER I\n20 REM! DEFCOMMON I,X,X$\n30 DEF FN F(Z)=W%\n40 Q1=255:Q1=-VAL(M$):X=FRE(Q1)+POS(M*N2-Y%=Y%)\n50 M=I:X=M AND Z%\n60 Q1=NOT ((M-I>=PEEK(W%))):COLOR=W%:HCOLOR=FN F(Y%+-W%)\n70 M=N2-X+Y%>-I:Y=FRE(M)+POS(I)\n80 RUN 190:HLIN LEN(CHR$(-W%)),(VAL(\"HI\"+M$+M$)) AT -((-((X<=Y)))):M%=-((-40))\n90 GR:REM! CLEAR COMMON:RETURN\n100 X$=RIGHT$(RIGHT$(\"HI\",M)+N2$,2.25*I--Z%):M%=VAL(M$)\n110 IF (1E3<M%>((W% AND M%))) THEN GET M:Z%=M AND (W%):GOSUB 30\n120 Z%=Y:Q1=Z% OR Z%:ON N2 GOTO 10,70,210,70:INVERSE\n130 IF (ASC(\"X Y\")+100) THEN RUN 20:RUN\n140 PRINT MID$(X$,I),:PRINT X$;N2$;\n150 Z%=ASC(LEFT$(MID$(M$,Y),-5)):M=Z% OR Z%:IF (Y%<>-3) THEN 30:M$=\"123\"\n160 GET Q1:FOR M=(M) TO (M):M=((40<=-1.5))*((((N2>=Y%))*0)):M=FRE(M)+POS(20689)\n170 Q1=M:I=ATN(M):N2=POS(N2$+X$)>=((-M%=((M<N2)))):M=N2 AND N2\n180 IF (-((((I OR 100))<>0.1^X))) THEN 90\n190 Z%=NOT RND(X)*((Z% AND M*256)):M=Z% OR Z%\n200 IF (VAL(M$)) THEN GOSUB 210:GOTO 210\n210 X=Y%:IF (X AND X) THEN 260\n220 FOR Q1=(ASC(MID$(CHR$(7),M%^M,1000))) TO (10)\n230 PRINT STR$(7769=24);MID$(X$,I);SIN(-((-Q1)));:W%=I-((M<=Y-M%)):IF (W% OR W%) THEN 90:READ M$\n240 W%=I:N2=W% AND M\n250 X=Z%+VAL(\"X Y\")^988:Z%=X:IF (((Y<Y%))^N2) THEN Q1=785\n260 SPEED=127^TAN(I)<>((N2 OR W%))*ATN(Q1):N2$=X$\n270 I=5*W%<=Z%<>Q1:IF (10*((Q1+N2+((Z% OR Z%))))) THEN RUN 190:X$=M$\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 90\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

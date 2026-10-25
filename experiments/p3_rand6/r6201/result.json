@@ -1,0 +1,23 @@
+{
+ "id": "r6201",
+ "key": "c12ce8dca51d49fa",
+ "source": "10 REM! INTEGER J\n20 DIM P$(7),D%(10)\n30 IF (LEN(Q1$)^((NOT D%(XY%)/((D%(W%)>W%))))) THEN ON D%(-((-1E3))) GOTO 300,150,250,30:PRINT Z%<LOG(B)--D%(7),W%+D%(ATN(XY%));W$;:IF (X) THEN TRACE\n40 COLOR=D%(38308)\n50 W%=X:SAVE:W=W%:IF (POS(W$+\"HI\")+((J+1000))/-C%) THEN RUN\n60 GOSUB 120:GOTO 60:REM! CLEAR CHAIN:POKE X<>D%(W=40),X*2>=((ASC(Q1$)=ATN(W)))\n70 IF (W-B<>FRE(7)) THEN RUN 190:IF (2) THEN NOTRACE\n80 B=((J AND X))<AB+906 OR POS(AB)\n90 RUN 200:PRINT:X=1\n100 READ X,B:HCOLOR=SIN((Z%))\n110 GOTO 80:REM! CLEAR COMMON:POP:VTAB D%(FRE(100)+127)\n120 P$(LEN(P$(W%)))=P$(J-NOT 148):PRINT:X=VAL(Q1$):&:B=X\n130 GET W:XY%=W OR (PEEK(M)):COLOR=24\n140 READ M:PRINT M AND M:END:RUN\n150 C%=36<=93:RUN\n160 &:GOTO 250:STORE B,C:M=3:IF (M OR M) THEN 220\n170 C%=-W%:X=FRE(C%)+POS(X/FRE(X)):SHLOAD\n180 IF (XY%) THEN LOMEM: 16384:C$=W$\n190 IF (1E3>=NOT AB<=X) THEN IF (255 OR M) THEN Q1$=C$:LOMEM: 16384\n200 Z%=-J-((0 AND W))=((1<>POS(C$))):AB=Z% AND Z%:IF (NOT ((J+(B)))) THEN GOSUB 220:REM! CLEAR COMMON\n210 IF (1) THEN LOAD \"F\"\n220 IF (B) THEN RUN:GET J:J=J OR (XY%<>10)\n230 GET XY%:Z%=XY% OR (PEEK(10))\n240 J=ATN(SGN(7)) AND AB:IF (J AND J) THEN 250:READ M:PRINT M AND M:ONERR GOTO 40\n250 READ W:PRINT W AND W\n260 B=LEN(W$+\"HI\"):IF (((POS(P$(1E3))-B^C%))/((X<835))) THEN PRINT ((AB>C%/2))+((W*B>((5 AND 10)))),FRE(P$(2.25));D%(C%)>=-1000,\n270 CALL M\n280 IF (256+33840) THEN STORE B,C:GOTO 250:Z%=AB+40<=34683 OR AB\n290 SPEED=NOT POS(AB-W)\n300 FOR AB=(POS(W$)) TO ((M)*(40)) STEP (65535/NOT ((X*1000))):XY%=XY%:B=-XY%+1000\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 60\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

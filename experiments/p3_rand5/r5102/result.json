@@ -1,0 +1,82 @@
+{
+ "id": "r5102",
+ "key": "8e5273e993345283",
+ "source": "10 REM! INTEGER J\n20 DIM A(9)\n30 Z%=N2%\n40 N2%=SIN(((Y*Y))^((302<>J))):Y=N2% AND N2%\n50 IF (N2) THEN 120:GOSUB 110\n60 READ J:PRINT J AND J\n70 W=FRE(A(A%))^Y\n80 FOR B=(NOT ((0.1 AND B))*((((1000 OR .001))=((10<A(Z%)))))) TO (N2+851) STEP (B):J=J+M+Q1%*256:N2=FRE(J)+POS(W>=768)\n90 B=FRE(W$):PRINT POS(N2$)\n100 B$=N2$\n110 W=A(Z%-NOT Q1%):N2=W OR W:RUN\n120 M=1:GOTO 40\n130 A%=B>24*((Q1% AND 114)):B=A% OR A%:PLOT 0,W=((A(Z%) OR ABS(0))):B=Q1%-Q1%*Y<B\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 829,
+ "obj_sha256": "2cf70e32cbc81e18991bef533731c920e4c47e0fcb2cdb83cb22df1ace753c0d",
+ "cycles": 99339492,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6093
+  },
+  {
+   "line": 50,
+   "addr": 6144
+  },
+  {
+   "line": 60,
+   "addr": 6155
+  },
+  {
+   "line": 70,
+   "addr": 6185
+  },
+  {
+   "line": 80,
+   "addr": 6209
+  },
+  {
+   "line": 90,
+   "addr": 6340
+  },
+  {
+   "line": 100,
+   "addr": 6361
+  },
+  {
+   "line": 110,
+   "addr": 6370
+  },
+  {
+   "line": 120,
+   "addr": 6412
+  },
+  {
+   "line": 130,
+   "addr": 6424
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S002.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6892",
+  "LOCAL VARIABLES": "6893 - 6993",
+  "HIGHEST MEMORY LOCATION": "6993"
+ }
+}

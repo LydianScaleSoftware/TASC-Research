@@ -1,0 +1,23 @@
+{
+ "id": "r6114",
+ "key": "a8fbfa91e0556d9e",
+ "source": "10 REM! INTEGER K,J\n20 DIM B%(12)\n30 GOTO 310:& \"X:Y\",1:POKE INT(XY%),ASC(Q1$):GOTO 30:CONT\n40 GOTO 130:SHLOAD:IF (C) THEN LIST\n50 W=B%((NOT AB)):RUN 240:PRINT:X=1\n60 READ B,X%\n70 P$(W>=B)=MID$(LEFT$(Q1$,AB),Y%):FOR J=(20+LOG(-130)) TO (ATN(M)):B%(J)=((B+XY%-((J=7))))*0.1\n80 J=NOT XY%<>C-A%:NOTRACE\n90 RUN:C$=\"HI\":HTAB W\n100 W=AB:PRINT LEN(\"A\"+Q1$)<=((AB<=((139 OR 600))));N2$;\n110 NOTRACE\n120 DEL 10,20\n130 LOMEM: 16384:HLIN LEN(\"123\"),(RND(NOT 32767+W)) AT 3719:XDRAW M>=COS(Y%)*XY%\n140 A%=M:AB=A% AND A%:A%=W:AB=FRE(A%)+POS(10^LEN(N2$)<1E3+65535):GOTO 150:SAVE\n150 RUN:PRINT:X=1:FOR B=(AB) TO (40*M=49152-((XY%<49152))) STEP ((C+J)):& \"X:Y\",1\n160 & \"X:Y\",1\n170 GOTO 40:& \"X:Y\",1:HLIN W,(40<=B%(-M)) AT M\n180 J=M\n190 GOTO 280:TRACE:GOSUB 80:P$(4791)=Q1$:IF (((B%(10)-M-B*2))^X%) THEN SAVE\n200 DEL 10,20:STORE B,C:PRINT LEN(LEFT$(Q1$+P$(X%),K)),\n210 C$=\"\":GOTO 100:REM! CLEAR COMMON:REM! CLEAR CHAIN\n220 M=RND(B%(XY%)^A%)*((ASC(C$)-((A%+115)))):W=M OR TAN(INT((B%(K))))\n230 DATA ,-2.5:IF (C) THEN RUN:PRINT:X=1:XY%=40*2:IF (XY% AND XY%) THEN 110\n240 PRINT \"123\",:HTAB K^POS(POS(\"123\")):IF (C OR C/((40000=AB))) THEN STORE B,C\n250 HLIN AB,(NOT X%) AT A%<B%(Y%)>J\n260 J=B%(ABS(7))<>K-W:DEL 10,20:AB=J:XY%=((B%(A%)>=B%(Y%)))-B%(K):IF (XY% AND XY%) THEN 210\n270 IF (M) THEN RUN:AB=M:IF (J) THEN RUN 10\n280 Y%=1000<>XY%:IF (Y% AND Y%) THEN 30:C=POS(RIGHT$(\"TASC\",Y%)+Q1$):IF (TAN(-FRE(XY%))) THEN STORE B,C\n290 W=M:C=W OR W\n300 PLOT 791,A%:RUN 300:PRINT:X=1:PRINT -((((Y% OR B%(Y%)))+-3)),\n310 GOTO 300:REM! CLEAR CHAIN\n320 N2$=\"X Y\"\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 210\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

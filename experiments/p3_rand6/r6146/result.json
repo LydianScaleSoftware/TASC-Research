@@ -1,0 +1,23 @@
+{
+ "id": "r6146",
+ "key": "06e76831eb84a08b",
+ "source": "10 REM! INTEGER K,I\n20 REM! USECOMMON Z,AB%,A%\n30 DIM A$(12)\n40 IF (VAL(\"TASC\"+\"TASC\"+\"A\")) THEN LOMEM: 16384\n50 N2=VAL(\"A\"):N2=N2 AND N2:C%=AB%^24\n60 LOMEM: 16384:HTAB 2:CALL A%-POS(W$)<=32767\n70 RUN 220:C=C OR A%:A=C AND C\n80 PRINT Q1%;\n90 K=3:N2=K AND C:GET I:I=I AND (0)\n100 SPEED=NOT C:PRINT (((AB%<>A%))/(A%));:D%(65535,608)=18037/AB%\n110 IF (((B=73))/((C<=((3 AND 872))))) THEN IF (D%(40,C%)) THEN SAVE\n120 N2=NOT ((AB% AND 628)):SAVE:N2=N2\n130 C=N2<>883^I\n140 N2=-((VAL(AB$)-((C%+N2))))\n150 REM! CLEAR CHAIN\n160 AB%=(A+A%)=((D%(I,C%) AND NOT 255)):N2=AB% AND Z\n170 C%=ASC(LEFT$(AB$,POS(256))):N2=C% AND C%:C%=N2+.5>=D%(Q1%,Q1%)=7:CONT:A=C%\n180 HLIN Q1%>(D%(256,K)=A),((1000)) AT Z:GOTO 180:REM! CLEAR COMMON:CALL NOT ((((3.14159-I))*1.5))\n190 A=FRE(RIGHT$(AB$,7+D%(I,Q1%))+LEFT$(AB$,K-I)):PRINT POS(N2$):LIST 10-20\n200 I=FRE(AB%+D%(I,AB%))+-((Q1%/Q1%)):N2=I OR I:Z=-((((65535>N2))-NOT Z))\n210 PRINT LEFT$(AB$,((Q1% OR C%))*-.5),A$(POS(W$)),:FOR K=((-C%<>EXP(1.5))) TO (Z<=C%):GOTO 240\n220 PRINT C;7*K,:PRINT:IF (D%(Q1%,A%+D%(I,127))<=((SIN(AB%) OR Z*849))) THEN SPEED=49152\n230 Q1%=C%:Z=FRE(Q1%)+POS(256):AB%=VAL(W$+CHR$(0.1))\n240 PLOT COS(C*ATN(Q1%)),-A%^127:N2$=A$(I):IF ((A)<=-((-Z))) THEN SAVE\n250 DEL 10,20\n260 N2=(0.1<AB%)-((K OR ((AB% OR B)))):IF (N2 AND N2) THEN 20:N2=35957:Q1%=10:LIST 10-20:N2=Q1%\n270 ON C% GOTO 50:HLIN 65535,(((I>A))/1.5-FRE(AB$)) AT N2:AB%=1E3<=7:IF (AB% OR AB%) THEN 140\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 180\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

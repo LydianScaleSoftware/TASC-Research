@@ -1,0 +1,38 @@
+{
+ "id": "rem_dead",
+ "key": "534619c8c8f61258",
+ "source": "10 GOTO 20:REM! CLEAR COMMON\n20 PRINT\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 32,
+ "obj_sha256": "aad6fd7ebadf8552f93a81de8a94794b80831a2540a872357948e1e3987c89bd",
+ "cycles": 55582402,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6090
+  }
+ ],
+ "info": {
+  "RECOGNIZED": "REM ! CLEAR COMMON",
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6095",
+  "HIGHEST MEMORY LOCATION": "6095"
+ }
+}

@@ -1,0 +1,66 @@
+{
+ "id": "r6100",
+ "key": "ff0fb1a5e36eeda6",
+ "source": "10 C=N2%:M%=((NOT AB>A%^Z))^B\n20 A=A%:CONT:AB=A:CONT:PRINT AB=VAL(Y$);\"HI\";\n30 FOR AB=(AB) TO (((990 OR ((AB OR C))))/((A<=65535))):FOR A=(B+A%+A>AB) TO (M%)\n40 A%=ASC(N2$):M%=M%\n50 C=FRE(MID$(N2$,N2%,C)):PRINT POS(Y$):LIST 10-20:B=Z:C=B OR B\n60 NOTRACE\n70 IF (NOT ((ASC(N2$)<VAL(Y$)))) THEN 60\n80 STORE B,C:& \"X:Y\",1\n90 AB=FRE(Y$):PRINT POS(Y$)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 451,
+ "obj_sha256": "3509f7f7695d7660d9a6a76fc3c2b62d10383a0ecc584c1febeecf6d580eadc1",
+ "cycles": 83465784,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6126
+  },
+  {
+   "line": 30,
+   "addr": 6164
+  },
+  {
+   "line": 40,
+   "addr": 6240
+  },
+  {
+   "line": 50,
+   "addr": 6255
+  },
+  {
+   "line": 60,
+   "addr": 6297
+  },
+  {
+   "line": 70,
+   "addr": 6297
+  },
+  {
+   "line": 80,
+   "addr": 6326
+  },
+  {
+   "line": 90,
+   "addr": 6326
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6514",
+  "LOCAL VARIABLES": "6515 - 6556",
+  "HIGHEST MEMORY LOCATION": "6556"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "r6273",
+ "key": "5c5be28e7a8543cc",
+ "source": "10 REM! INTEGER J,K\n20 DEF FN F(Z)=127 OR SQR(-7)\n30 GET Y:M%=Y AND (M%):GOTO 20:TRACE\n40 PRINT -24,\n50 IF (3.14159/X) THEN RUN\n60 M=-LEN(\"A\")-FRE(\"X Y\"):IF (M AND M) THEN 140:Y=NOT C-((Y%>=X%))=M%/((1.5<=K)):IF (Y OR Y) THEN 170:Y%=-X%<=-723:Y=Y% OR J\n70 K=B%:Z=FRE(K)+POS(-((X% OR Y%)))\n80 HTAB -((M%/5))/65535:RUN 200:LIST 10-20\n90 &:C=FRE(STR$(FN F(Z))):PRINT POS(A$):FOR K=(10027) TO (X)\n100 Y%=C:X=Y% OR Y%:X%=102<>K=127+K>=RND(Y%>=K):GOTO 190:STORE B,C\n110 Z=-((FN F(Y)+SQR(J))):Z=Z OR M:&:Z=J\n120 FOR M=(M%) TO (FN F(39))\n130 GOTO 180:REM! CLEAR CHAIN:COLOR=Z^1000>((Y%<M))<=((B% AND Y-M%)):FOR M=(X%) TO (LOG(M))\n140 M%=VAL(Q1$)*((Y% AND X))-((J AND X AND FN F(J))):ON 3>=((Y%>=271)) AND FN F(X%)*((K-24)) GOTO 60,60:PLOT -39,FRE(Y%+40)*((((M%<=X%))-((5 OR X%))))\n150 HOME:GOTO 130:CONT:C=X:RECALL A:M=C\n160 X=Y%:POKE B%,NOT ((-K^FRE(K))):TRACE\n170 GOTO 280:SHLOAD:IF (FN F(INT(K)<>510)) THEN CONT:M=NOT B%\n180 Y%=PEEK(1.5*Y)>X:M=Y% OR ABS(0)+127\n190 IF (5*Z) THEN 270:Y%=VAL(\"TASC\"):M=1.5\n200 X%=Y%:J=Y*-J\n210 IF (SGN(B%)) THEN 260:PRINT 20,Z;\n220 PRINT Z;X%;:M=K:Q1$=MID$(\"A\",ASC(AB$)>((2>=7)),LEN(\"HI\")-((C<=M%)))\n230 IF (M%) THEN C=Z:CONT\n240 NEXT:X=Z*32767:LOAD \"F\":C=X:STORE B,C\n250 IF (FN F(3)) THEN READ M:Z=B%:&:C=Z:VTAB 7\n260 A$=\"A\":X=40 OR M%\n270 NEXT\n280 K=.5:Z=K OR K:Y%=ABS(FN F(M)<FN F(Y%)):C=Y% OR Z\n",
+ "options": {
+  "library": 4096,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 130\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

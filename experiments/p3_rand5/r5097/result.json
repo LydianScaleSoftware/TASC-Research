@@ -1,0 +1,83 @@
+{
+ "id": "r5097",
+ "key": "8f20336a585c9bbe",
+ "source": "10 REM! INTEGER I,J\n20 DIM B$(4,4),D$(3,5)\n30 Z=Z%*7+FRE(\"\"):HLIN 100,(127) AT (ASC(\"HI\")/NOT A(255)):IF (A(SGN(0>=C%))) THEN Q1=ASC(D$(-100,POS(Y%)))\n40 GET A:W%=A AND (1):PLOT C,(Z):READ I:PRINT I AND I\n50 PRINT\n60 READ W%:PRINT W% OR W%:IF (A(24^A(J)+(Z%))) THEN 10\n70 GOTO 80\n80 Z%=FRE(A(999)):Z=FRE(Z%)+POS(-((RND(127)<W%)))\n90 C=Q1:C%=NOT ((((Y%*Y%))^INT(XY))):Z=C% OR XY:RESTORE\n100 RUN 50:PRINT:X=1\n110 XY=J\n120 RUN 120:PRINT:X=1\n130 ONERR GOTO 10:J=A(SGN(Z)/LEN(C$)):Z=FRE(J)+POS(J)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 782,
+ "obj_sha256": "b9f9fdaf5320583e6c8bf0f55c7968439199e07e7a8359777286e7c9f685f206",
+ "cycles": 97870811,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6203
+  },
+  {
+   "line": 50,
+   "addr": 6257
+  },
+  {
+   "line": 60,
+   "addr": 6260
+  },
+  {
+   "line": 70,
+   "addr": 6310
+  },
+  {
+   "line": 80,
+   "addr": 6313
+  },
+  {
+   "line": 90,
+   "addr": 6358
+  },
+  {
+   "line": 100,
+   "addr": 6411
+  },
+  {
+   "line": 110,
+   "addr": 6423
+  },
+  {
+   "line": 120,
+   "addr": 6429
+  },
+  {
+   "line": 130,
+   "addr": 6441
+  }
+ ],
+ "info": {
+  "AD I": "PRINT I AND I",
+  "OBJECT FILE": "S017.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6845",
+  "LOCAL VARIABLES": "6846 - 7049",
+  "HIGHEST MEMORY LOCATION": "7049"
+ }
+}

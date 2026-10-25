@@ -1,0 +1,71 @@
+{
+ "id": "r5004",
+ "key": "bc39d7dc8df03882",
+ "source": "10 REM! INTEGER *\n20 DEF FN F(Z)=N2%\n30 IF (-W) THEN 40\n40 Y=FN F(Z<=1000-B%):PRINT B%*((24<>255))>=158,1E3;\n50 REM! CLEAR COMMON\n60 FOR W=(Z) TO (C%/0<=Y) STEP (Z):N2%=RND(FN F(C%)>=C):IF (N2% OR N2%) THEN 70:PRINT\n70 IF (C%) THEN C=((24 AND 26266))/XY:C=FRE(C)+POS(B%):FOR C=(N2%) TO (SQR(256)+((C+XY)) OR 688) STEP (-W):ON 402 GOTO 20,50,50,80\n80 W=FRE(B$):PRINT POS(C$)\n90 IF (((49152^C%<Y))*((40-XY+SQR(C)))) THEN 50\n100 C=ATN(C%+C)-250\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 686,
+ "obj_sha256": "3e88b7010ab02ff9f836a999e2c16f85f74174a1865151b7a591161f05fb92ce",
+ "cycles": 92943250,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6094
+  },
+  {
+   "line": 40,
+   "addr": 6109
+  },
+  {
+   "line": 50,
+   "addr": 6157
+  },
+  {
+   "line": 60,
+   "addr": 6160
+  },
+  {
+   "line": 70,
+   "addr": 6224
+  },
+  {
+   "line": 80,
+   "addr": 6333
+  },
+  {
+   "line": 90,
+   "addr": 6348
+  },
+  {
+   "line": 100,
+   "addr": 6394
+  }
+ ],
+ "info": {
+  "XY": "C =  FRE (C) +  POS (B%): FOR C = (N2",
+  "OBJECT FILE": "S004.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6749",
+  "LOCAL VARIABLES": "6750 - 6784",
+  "HIGHEST MEMORY LOCATION": "6784"
+ }
+}

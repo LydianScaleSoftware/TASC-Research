@@ -1,0 +1,88 @@
+{
+ "id": "r5033",
+ "key": "9838300057fcc7c7",
+ "source": "10 REM! INTEGER *\n20 REM! USECOMMON Z,W,N2$\n30 DIM B(5)\n40 W=LOG(7534+10):C=W OR W:B(SGN(Q1))=Y:C=FRE(X$+\"A\"):PRINT POS(N2$)\n50 C=(N2%=Y)*((FRE(39)*((41417>=N2%))))\n60 GOTO 30:N2$=XY$+CHR$((Q1%))\n70 NORMAL\n80 END\n90 PRINT (.5-((854>Q1)));\n100 GOSUB 50\n110 GOTO 10\n120 X$=MID$(MID$(X$,C<>B(24),24-C),100)\n130 A%=A%:C=COS(C)+Q1 OR C:Q1%=C:Y=Q1% AND Q1%\n140 X$=X$+X$+\"X Y\"+RIGHT$(\"HI\",A%)+\"X Y\":IF (W*((((N2% AND Q1))=W+397))) THEN GET Q1%:N2%=Q1% OR (FRE(XY$)<A%):C%=Y:Y=C% OR -((C%>((Q1%>C))))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6070,
+ "obj_len": 774,
+ "obj_sha256": "679e905313708b8f9ed36488bd8ca94fef60507c2ac04f2ea9099adaa288670b",
+ "cycles": 98573504,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6090
+  },
+  {
+   "line": 40,
+   "addr": 6090
+  },
+  {
+   "line": 50,
+   "addr": 6169
+  },
+  {
+   "line": 60,
+   "addr": 6205
+  },
+  {
+   "line": 70,
+   "addr": 6223
+  },
+  {
+   "line": 80,
+   "addr": 6226
+  },
+  {
+   "line": 90,
+   "addr": 6229
+  },
+  {
+   "line": 100,
+   "addr": 6244
+  },
+  {
+   "line": 110,
+   "addr": 6247
+  },
+  {
+   "line": 120,
+   "addr": 6250
+  },
+  {
+   "line": 130,
+   "addr": 6301
+  },
+  {
+   "line": 140,
+   "addr": 6340
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S013.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6070 - 6843",
+  "NUMERIC COMMON": "6064 - 6067",
+  "STRING COMMON": "6068 - 6069",
+  "LOCAL VARIABLES": "6844 - 6885",
+  "HIGHEST MEMORY LOCATION": "6885"
+ }
+}

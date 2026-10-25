@@ -1,0 +1,99 @@
+{
+ "id": "r5056",
+ "key": "16eb6f85d2ae2243",
+ "source": "10 DIM P(4)\n20 DEF FN F(Z)=Y%\n30 AB$=A$(-M OR P(0)^5):IF (Y%) THEN 160\n40 DATA -2.5:HCOLOR=264=((X%=((113 OR C)))):DATA 300,-2.5,-2.5\n50 Y%=-((-Q1%)):M=Y% OR B%:RUN 50:X%=P(Q1%):C=X% AND M\n60 Y%=Z:Z=Y% AND Y%:PRINT X%^((Y%*Y%))>FN F(0)*((P(X%)-255));LEN(C$);\n70 A$(X%)=\"123\"\n80 GOTO 60:C=Z*((Q1%>=249*XY)):Z=C AND C:XY=1\n90 END:Z=362\n100 GOTO 80:Y%=Y%\n110 READ XY:PRINT XY OR XY:Z=49152<>P(X%)*870^691:Y$=A$(B%<=FN F(Z))\n120 XY=B%/((((B%=1.5))-C)):Z=FRE(XY)+POS(((B(B%) OR 0))<-11525<=X%)\n130 M=FRE(C$):PRINT POS(C$):Q1%=-EXP(LEN(A$(B%)))\n140 PRINT LEN(RIGHT$(\"123\"+C$,FN F(XY)));\n150 FOR M=(Z-FN F(3^B%)) TO (FN F(VAL(C$))):PRINT 916/((5+X%-ASC(\"A\"))),C,C$,\n160 READ B%:PRINT B% AND B%:IF (B%) THEN C=TAN(B%)<>SGN(P(B%)):M=C OR C:GOTO 90\n170 P(((XY--Y%))^ASC(A$(B%)))=((645<=Q1%<5-2))+((255>40000<=COS(C))):B(B-INT(FN F(C)))=255\n",
+ "options": {
+  "library": null,
+  "program": "HGR1",
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 16384,
+ "obj_len": 1500,
+ "obj_sha256": "cd1ad0b64f34d089237c3e1b4e48ae3ed0773ab88740b55b210b2f02913d4f77",
+ "cycles": 131155072,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 16404
+  },
+  {
+   "line": 20,
+   "addr": 16404
+  },
+  {
+   "line": 30,
+   "addr": 16414
+  },
+  {
+   "line": 40,
+   "addr": 16467
+  },
+  {
+   "line": 50,
+   "addr": 16528
+  },
+  {
+   "line": 60,
+   "addr": 16600
+  },
+  {
+   "line": 70,
+   "addr": 16693
+  },
+  {
+   "line": 80,
+   "addr": 16717
+  },
+  {
+   "line": 90,
+   "addr": 16765
+  },
+  {
+   "line": 100,
+   "addr": 16777
+  },
+  {
+   "line": 110,
+   "addr": 16789
+  },
+  {
+   "line": 120,
+   "addr": 16873
+  },
+  {
+   "line": 130,
+   "addr": 16960
+  },
+  {
+   "line": 140,
+   "addr": 17005
+  },
+  {
+   "line": 150,
+   "addr": 17044
+  },
+  {
+   "line": 160,
+   "addr": 17140
+  },
+  {
+   "line": 170,
+   "addr": 17226
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "C OR C": "GOTO 90",
+  "OBJECT FILE": "S016.OBJ",
+  "PROGRAM": "16384 - 17883",
+  "LOCAL VARIABLES": "17884 - 18041",
+  "HIGHEST MEMORY LOCATION": "18041"
+ }
+}

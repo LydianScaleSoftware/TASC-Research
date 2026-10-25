@@ -1,0 +1,23 @@
+{
+ "id": "r5245",
+ "key": "68f291e5a1d03a21",
+ "source": "10 REM! INTEGER J\n20 DIM A$(6,11)\n30 DEF FN F(T)=-X\n40 GET J:X%=J OR (A%):REM! CLEAR COMMON:IF (X) THEN Q1=AB%\n50 J=A%:RUN 110\n60 A$=\"HI\"\n70 A$(EXP(AB%)*FN F(AB%)/N2,193)=Y$:GET AB%:Z%=AB% AND (ABS(ATN(167)<>J))\n80 READ X%:PRINT X% AND X%:N2=N2*((127=255)):IF (N2 OR N2) THEN 200:GOTO 30\n90 Q1=SQR(13783):Q1=Q1 AND Q1:INVERSE:Z=LOG(J>=32767)^FN F(FN F(Z%))\n100 PRINT 2*Q1 OR Y,2.25;:PRINT -((NOT 65535));\n110 READ Z:PRINT Z OR Z:VTAB ((Z-A%))/((X<X%))-J\n120 PRINT NOT J,SIN(40)-((FN F(Y)<N2)),:W$=A$(Z%,((J OR AB%)) AND ((Y AND 1000))):N2=((X OR AB%))/-Y+TAN(A%<=AB%)\n130 REM! CLEAR CHAIN\n140 X=FRE(\"TASC\"+\"\"+\"A\"+Y$+W$):PRINT POS(A$)\n150 Q1=SQR(FRE(J>40000))\n160 PRINT\n170 RETURN:GET N2:J=N2 AND (COS(NOT Z))\n180 Y=0.1:FOR Q1=(ASC(\"HI\")/-((N2^J))) TO (X-N2)\n190 READ X:PRINT X OR X:AB%=FRE(-LOG(1)):Y=FRE(AB%)+POS(Z+((Q1+((Q1-J))))):IF (40^X%) THEN A%=ASC(A$+A$)\n200 TEXT:READ AB%:PRINT AB% OR AB%:AB%=J\n210 RUN 240:DATA HI,,HI,HI:IF (127+.001 AND LEN(CHR$(Y))) THEN HLIN FRE(Y OR Z%)<>J,(FN F(-((Z^24)))) AT A%\n220 Q1=A%:J=FRE(2):FOR Z=(3) TO (24)\n230 RUN:PRINT:X=1\n240 FOR Y=(127) TO (Y>=127<=AB%-Z%<>VAL(W$)):IF (POS(W$)) THEN FOR X=(Y) TO (X%):READ X%:PRINT X% AND X%\n250 IF (Q1>-X) THEN Y=Z:J=Y:Q1=J OR J\n260 A$(Z%,((10+Y>FN F(X)))*((N2>=Y*X%)))=Y$+RIGHT$(W$,6629=Q1):IF (Z%^65535) THEN Q1=A%:N2=Q1 AND A%:REM! CLEAR CHAIN\n270 X%=372>309<=TAN(J)/Y:Q1=X% AND FN F(NOT 127)\n280 GET Z%:A%=Z% AND (J):Q1=X%:X%=255\n290 GET J:Z%=J AND (SIN(J))\n300 Z%=Z%:Y$=A$\n310 Z%=AB%:N2=Z% OR ((1.5<Z))/((A%>N2))>NOT X:PRINT MID$(W$,Q1=AB%,Y),N2;A%;:Y=AB%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 40\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

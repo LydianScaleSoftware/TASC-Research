@@ -1,0 +1,23 @@
+{
+ "id": "r5161",
+ "key": "22a5cf5914ec173d",
+ "source": "10 REM! INTEGER J,K\n20 DIM D$(9),B%(4)\n30 SPEED=AB%>=J/N2%-((65535 AND 2))\n40 W%=-J:IF (W% AND W%) THEN 30\n50 SPEED=Y:SPEED=AB\n60 ON -((32543 AND ((N2% AND 24)))) GOTO 20,50:AB%=100:Z=AB% AND AB%:K=EXP(Z)\n70 READ M:PRINT M AND M\n80 Z=AB%^-((256-575)):PRINT\n90 IF (EXP(AB%+((1000+A(255))))) THEN 10:Y=NOT W%\n100 X=65535:IF (LOG(X)) THEN Q1$=X$\n110 AB%=B%((Y))/Y:M=FRE(AB%)+POS(A(-((-0.1))))\n120 POP:XDRAW LOG(256-NOT M) AT Z,(((1E3<=A%))*1^970<=-((24<>A(AB%)))):HCOLOR=N2%\n130 REM! CLEAR CHAIN:GET AB%:K=AB% AND (W%*((N2%+Z))=NOT X-N2%^A%)\n140 PRINT Y,D$(NOT 2-Z);\n150 PRINT M;\"TASC\"+Z$+\"A\"+LEFT$(Z$,M<W%);:W%=NOT N2%:IF (W% AND W%) THEN 110\n160 AB=7:Y=AB OR AB%:HTAB ((AB%>256=Z))+65535:ON K GOTO 80,130,40\n170 IF (NOT ((30601<=Y))+((528>=NOT A(W%)))) THEN RETURN:FOR K=(N2%) TO (A%>994*((A(743)*W%))) STEP (N2%):M=7:IF (M OR M) THEN 100\n180 A%=NOT 32767<NOT 40:IF (A% OR A%) THEN 140:W%=W%:IF (W% AND W%) THEN 110\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 130\nSYNTAX\n\n REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

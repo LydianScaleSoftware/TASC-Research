@@ -1,0 +1,23 @@
+{
+ "id": "r6285",
+ "key": "445cfcfb9b2d8f6c",
+ "source": "10 REM! INTEGER J\n20 REM! DEFCOMMON AB,Q1$,M%\n30 DIM P(11),D$(7,10)\n40 W=FRE(Q1$):PRINT POS(Q1$)\n50 Y%=ASC(\"\"):XY=Y% OR Y%:PRINT Y%^5^POS(W)*(Y%),\n60 SAVE:POKE J,B%(LEN(N2$))\n70 AB=-LEN(D$(J,M%))^((P(M%)-255^W%)):IF (AB OR AB) THEN 90:GOSUB 80:XY=NOT ((W%<100))>=Y%+((973 OR B%))\n80 RECALL A\n90 FOR AB=(B) TO (W) STEP ((Y%+B>=1E3-32767)):IF (-((((1-AB))/((P(B%)+B))))) THEN GOTO 70:GOTO 120:STORE B,C\n100 B=J:XY=B AND B\n110 XY=-AB:W$=W$\n120 GOTO 80:REM! CLEAR CHAIN:TRACE\n130 READ Y:PRINT Y OR Y:GOTO 140:SAVE\n140 CALL 127:FOR B=(J/Y%) TO (M% AND B%):D$(B%,B%)=RIGHT$(\"123\",Y%-0)\n150 GOTO 30:RECALL A:TRACE:& \"X:Y\",1\n160 GOSUB 120\n170 PRINT (Y=W)<-TAN(Y%);SQR((XY>=Y%));(Y%),\n180 B%(XY AND Y% AND -17726)=M%*M% OR 2354 OR 404:Y%=AB\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 120\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

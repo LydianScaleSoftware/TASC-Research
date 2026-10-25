@@ -1,0 +1,23 @@
+{
+ "id": "r5108",
+ "key": "e6038da272b896b6",
+ "source": "10 REM! INTEGER J,I\n20 DIM D(6)\n30 DEF FN F(X)=Q1%<>((LOG(1000) OR M%))\n40 Y=N2%:IF (Y AND Y) THEN 100:A%(LOG(39*N2%)-PEEK(I<>I),717 AND -((0-256)))=40>=X\n50 FOR J=(C-I<>A>Y-((7=C))) TO (ABS(FN F(FRE(\"A\")))):A=N2%:Z$=\"\"+LEFT$(\"123\",39)+B$(Z%)+Q1$\n60 REM! CLEAR COMMON:C=Q1%>=-((A-A%(M%,N2%)))\n70 J=ABS(D(3.14159))/((J-J))/Y:ON VAL(\"TASC\"+\"X Y\")+9633 GOTO 90,10,130,130:N2%=Y\n80 IF (2773*((A/D(J)))) THEN GOSUB 240:J=((10<>Z%))-FRE(W$):IF (J OR J) THEN 160\n90 C=INT(-((3.14159/I))):IF (2) THEN RUN:Y=Y:B=Y AND 81+C\n100 Z%=10:PRINT Z%*((-1-Y));SGN(896<I)+ASC(W$+B$(M%));\n110 Z$=CHR$(X):HLIN -((N2%>X)),(M%) AT 48244:IF (J^X=C<((M%>M% OR -Y))) THEN 260\n120 CALL Q1%^J\n130 HCOLOR=I*-Y-((-296<>((M% AND Y))))\n140 PRINT EXP(A%(Z%,49152));:Y=-((VAL(B$(Z%))^((32767>Y)))):IF (Y AND Y) THEN 20:PRINT B$(2),\"HI\";\n150 COLOR=256 OR Y+3-N2%\n160 PRINT D(((A OR 1.5)) AND M%),:SPEED=SGN(SQR(Y))\n170 GET Z%:N2%=Z% OR (X):PRINT FN F(J);A%(N2%,10)+NOT FRE(Z$),\n180 C=Z%*C*((35244 AND X))/((46278<=-Y)):C=C OR C:I=41009:C=I AND I:B=FRE(Z$):PRINT POS(W$)\n190 IF (TAN(B*65535)<FN F(1E3)) THEN B$(Q1%)=\"\":NEXT J:PRINT RIGHT$(CHR$(D(65535)<=C),Y/Z%>Q1%+40),EXP(1),\n200 M%=J:IF (M% OR M%) THEN 190:ON LEN(Z$) GOSUB 110\n210 X=844:B=FRE(X)+POS(FRE(CHR$(J)+MID$(\"HI\",3)))\n220 X=SGN(ABS(J) OR 49152):Q1$=B$(M%):Z%=((A>=1000))*D(Y OR M%)\n230 D(EXP(A%(256,.5)+((B>M%))))=((255 OR J))+760=C:FOR J=(-ASC(\"TASC\"+B$(I))) TO (-((A%(14881,.001)+723<Z%))) STEP (Q1%-LEN(\"\")):M%=J:IF (M% OR M%) THEN 290\n240 A%(((I OR Y OR B))<>N2%-A%(M%,I)-D(I),-Z%)=A%(B^C,Z% AND B)+((X/0 AND Q1%))\n250 Z$=CHR$(100)\n260 Q1%=LOG(-A) AND N2%+M%+Q1%:A=Q1% AND Q1%\n270 B=FRE(LEFT$(Q1$,A<>((20<>C)))):PRINT POS(W$)\n280 GET C:J=C AND (PEEK(A%(M%,100)>309-40))\n290 POKE -FRE(A%(N2%,M%)>B),-((127^((I<=.5)))):READ N2%:PRINT N2% AND N2%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 60\nSYNTAX\n\n REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

@@ -1,0 +1,86 @@
+{
+ "id": "r5118",
+ "key": "e57386151e60f62c",
+ "source": "10 REM! INTEGER *\n20 DIM B%(9,4),A(10)\n30 Q1=COS(32767):Q1=Q1 AND Y:C$=\"TASC\"\n40 PRINT SGN(B%(32767,Z))=LEN(C$) OR Q1;FRE(STR$(W%))<>Q1-256/M%;:FOR Y=(((17427+((44035 AND XY))))*476) TO (882)\n50 W%=X:X=FRE(W%)+POS(24*Q1/-A(944)<65535)\n60 PRINT -W%*((XY% OR Q1));:M%=VAL(C$+C$)=Z/XY%+C%:X=M% OR ((807>=Y>C%+1))-XY%\n70 X=(M%)>Y-1000<=C%:Q1=XY+TAN(M%):A(PEEK(XY%<=C%-A(M%)))=VAL(MID$(N2$,Y,XY))^C%\n80 M$=MID$(\"\",Y+((M%<C%)))\n90 HLIN FRE(CHR$(XY)+MID$(M$,B%(C%,M%))),(X) AT 31659:RUN 130:ON ((Y-Q1 AND -C%))<=XY% GOTO 110\n100 Z=3:XY=Z AND Z:IF ((40)) THEN RUN\n110 GOTO 30:XY=2:X=XY AND XY:C%=Q1\n120 GOSUB 90:SPEED=(X*1)\n130 XY=NOT B%(37404*20,C%):VTAB 127:IF (1000-613) THEN RUN 110\n140 Q1=((1<>A(634)))+((Y>648))+A(0)/A(W%):X=Q1 AND Q1:Z=1:IF (Z OR Z) THEN 130\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1335,
+ "obj_sha256": "4b7304a6ad744170c6def87c9604764876b65839be2f1f09ddd691138f993f87",
+ "cycles": 127042930,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6124
+  },
+  {
+   "line": 50,
+   "addr": 6234
+  },
+  {
+   "line": 60,
+   "addr": 6291
+  },
+  {
+   "line": 70,
+   "addr": 6399
+  },
+  {
+   "line": 80,
+   "addr": 6489
+  },
+  {
+   "line": 90,
+   "addr": 6516
+  },
+  {
+   "line": 100,
+   "addr": 6573
+  },
+  {
+   "line": 110,
+   "addr": 6605
+  },
+  {
+   "line": 120,
+   "addr": 6635
+  },
+  {
+   "line": 130,
+   "addr": 6647
+  },
+  {
+   "line": 140,
+   "addr": 6702
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S018.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7398",
+  "LOCAL VARIABLES": "7399 - 7558",
+  "HIGHEST MEMORY LOCATION": "7558"
+ }
+}

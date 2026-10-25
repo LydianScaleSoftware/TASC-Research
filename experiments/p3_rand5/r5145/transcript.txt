@@ -1,0 +1,159 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S005
+
+
+OBJECT CODE FILE:
+(DEFAULT S005.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION?
+
+*****BEGINNING PASS 1
+
+
+
+10
+RECOGNIZED  REM ! INTEGER J,K
+20  DIM P%(10),D%(3,2),A%(2,12)
+30 Z = C% > ((256 < X%)): GOSUB 260
+40  ON Y% GOTO 210,120
+50  READ W,A%(Y%,Y - M): PRINT  RIGHT$ (
+ LEFT$ (C$,M), - 2) + A$ +  CHR$ (M);((A
+B + J OR P%(K))) < J;:Y% =  - ((C% ^ X%
+- X%))
+60  PRINT C$;
+70  IF ( ASC (A$) >  = ((Z >  = 239 >  =
+  - Z))) THEN  PRINT : PRINT 256;: READ
+AB: PRINT AB OR AB
+80 A%((A%( - 20,(Y%))),C%) = C% >  = (AB
+): GOSUB 260: CALL  NOT W
+90 Y =  SQR (AB <  = Y) ^  SQR (10)
+100 C% = AB - A%(Q1%,Q1%) AND Q1%:K = 20
+ AND  NOT  LEN (C$):AB = K AND C%: IF (6
+44 + 1.5 + 963 ^ 40 +  VAL (C$)) THEN 10
+0
+110  PRINT
+120 C% =  NOT K >  = 20 <  VAL (A$) / ((
+45468 = Y%))
+130 W = Q1%:P%( - (( - A%(32767,C%) ^  A
+TN (AB)))) = K / ((1 * A%(Q1%,Q1%)))
+140  HTAB  LEN (XY$) * ((W + 20)) + 4527
+0
+150 M = C% <  > J < Z AND M * ((661 <  =
+ Z)):D%(C%,J) =  TAN (P%(J)) >  = AB AND
+ (Y) ^ ((571 - Z))
+160  GOSUB 170
+170  DATA 300,HI,X
+180 Z = AB = (585) * 961:AB = Z OR 1: RE
+AD X%,XY$
+190  IF ( ASC (A$)) THEN K = 2:Y =  FRE
+(K) +  POS (Z <  > ((W < M)) / (K)):W =
+ LEN (A$):W = W AND W
+200  SPEED=  SQR ((P%(5))): IF (AB) THEN
+ 170
+210  HOME : IF ( FRE (C$) <  = ((W AND Z
+ < W))) THEN Q1% =  - C% AND  VAL (XY$)
+OR  COS ( FRE ("")): IF (Q1% OR Q1%) THE
+N 10
+220  COLOR=  INT ( SQR (100 / K)): HTAB
+Q1% - Q1% AND AB
+230 C% =  - C%: IF (C% AND C%) THEN 190
+
+*****WARNING
+LINE NUMBER 230
+IGNORED
+
+: READ C%
+
+
+
+
+*****WARNING
+LINE NUMBER 230
+IGNORED
+
+: PRINT C% AND C%
+
+
+
+
+*****WARNING
+LINE NUMBER 230
+IGNORED
+
+: POP
+
+
+240  READ M: PRINT M AND M: PRINT : PLOT
+ J,C%
+250 W = 7 + ((Y - J <  = ((K <  > X%))))
+: IF (W AND W) THEN 50
+
+*****WARNING
+LINE NUMBER 250
+IGNORED
+
+: IF (AB - (K ^ A%(Q1%,K))) THEN  RUN 20
+0
+
+
+260 Z = Z: IF (Z OR Z) THEN 180
+270  PRINT  CHR$ (255); EXP ((276)) =  -
+ ((W AND 0.1)),X%;: PRINT M * ((P%(Y%) /
+  - Q1%));A%((Q1%),Q1%) <  =  ATN ( EXP
+(Y%)),: READ W
+
+
+
+*****BEGINNING PASS 2
+
+
+.....
+
+
+*****CODE GENERATION COMPLETE
+
+
+COMPILATION INFORMATION AND LINE NUMBER
+REFERENCE TABLE? YES
+
+
+SOURCE FILE: S005
+OBJECT FILE: S005.OBJ
+LIBRARY OCCUPIES 2051 - 6063
+PROGRAM OCCUPIES 6064 - 7919
+
+NO COMMON BLOCK
+
+LOCAL VARIABLES OCCUPY 7920 - 8100
+
+HIGHEST MEMORY LOCATION: 8100
+
+
+LINE# ADDR   LINE# ADDR   LINE# ADDR
+
+10    6084   20    6084   30    6084
+40    6105   50    6116   60    6242
+70    6248   80    6316   90    6379
+100   6409   110   6519   120   6522
+130   6567   140   6639   150   6663
+160   6759   170   6762   180   6777
+190   6819   200   6900   210   6923
+220   7021   230   7051   240   7068
+250   7098   260   7136   270   7150
+
+*****COMPILATION COMPLETE
+
+
+]?

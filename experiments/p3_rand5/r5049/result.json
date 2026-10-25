@@ -1,0 +1,23 @@
+{
+ "id": "r5049",
+ "key": "f971b0788918c123",
+ "source": "10 VTAB C%*NOT X*Z%:Y=FRE(CHR$(A)+B$+LEFT$(\"X Y\",10)):PRINT POS(B$):FOR X=(AB%) TO (225<62)\n20 HCOLOR=Y:FOR Y=(VAL(MID$(B$,(800)))) TO (2--AB%<>5) STEP (-A(RND(100)))\n30 IF (A(510)) THEN 210:HTAB RND(A%):READ A%:PRINT A% OR A%\n40 READ C%:PRINT C% OR C%:PRINT MID$(MID$(LEFT$(AB$,C%),NOT C),-((AB AND Z%)),NOT ((-.5)));\n50 NEXT Y:READ A:PRINT A OR A:AB%=Y:A=AB% AND Y\n60 RUN 170:AB$=B$\n70 COLOR=SGN(A<=A%)*-((AB%=5))\n80 IF (24/((X<=5))=C) THEN RUN 140:X=C:A=X OR X:FOR Y=(40 AND (Y+49152)) TO (FRE(M$)*COS(A(0))) STEP (((-A AND TAN(A(AB%))))^((A%<=Z%)))\n90 ON AB% GOTO 150,230,90\n100 RETURN:GOSUB 170:M$=MID$(B$,-((-2)),10<=Z% OR INT(C%))\n110 PRINT Z%,\n120 AB%=255:AB=AB% OR AB%\n130 PRINT 32767;Z%;AB$,\n140 A=1000:HTAB NOT X+X>=((0.1*C))^AB%:X=37882\n150 AB$=AB$\n160 AB$=STR$(NOT X):A=FRE(\"123\"):PRINT POS(M$)\n170 READ AB:PRINT AB OR AB\n180 PRINT RIGHT$(M$,X),C%,\"\";:C=ASC(\"123\")-((24530=933))+AB:A(C%)=A\n190 X=AB:AB%=C%\n200 RUN\n210 REM! CLEAR COMMON:GOTO 210\n220 Z%=AB:READ Y:PRINT Y OR Y:PRINT A(127),\n230 PRINT:A=A((Y)):Y=FRE(A)+POS(2.25):A%=C%\n240 PRINT COS(A(3.14159)^AB)*((32767*((7>=112))));RIGHT$(STR$(32767),A%/((A(C%)*C%)));STR$(A%)+B$;:GOSUB 230\n250 AB=A%:Y=AB OR AB%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 210\nSYNTAX\n\n REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

@@ -1,0 +1,23 @@
+{
+ "id": "r5114",
+ "key": "d54b57e4464302ee",
+ "source": "10 REM! INTEGER I\n20 DIM D$(3),A$(10)\n30 X=FRE(\"X Y\"):PRINT POS(AB$)\n40 Y%=X%<>Y%-505>=EXP(ASC(D$(I))):IF (Y% AND Y%) THEN 50\n50 X%=NOT ((P(Q1%)*39696)):M%=I<=((XY<>COS(X)))\n60 TEXT\n70 READ A,M%:IF (W) THEN REM! CLEAR COMMON:REM! CLEAR CHAIN\n80 XY=W:A=XY AND XY:SPEED=0:IF (3.14159) THEN RUN 140\n90 M%=-32767:Q1=M% AND M%\n100 PLOT VAL(A$),((X%-Q1%))*((X+M%)) OR LEN(A$(Q1%))<>((A<>M%))\n110 PRINT:HTAB LOG(SIN(2.25 OR P(I)))\n120 COLOR=-PEEK(484)/A:STOP:ON Q1 GOTO 70,90\n130 IF (((I-Y%))^((39*W<=W^X%))) THEN AB$=RIGHT$(N2$,I*(I)):POP\n140 I=Q1%*.001^X%*((P(Y%)+XY))^A:Y%=VAL(A$):A=NOT 0:Q1=A OR A\n150 GOTO 90:READ Y%:PRINT Y% AND Y%:ON INT(SGN(40)+X%) GOTO 70,10\n160 GOSUB 160:GOTO 110:XY=40000\n170 D$(255)=AB$:IF (-((-Y%))<NOT A) THEN 170\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n*****FATAL ERROR\nLINE NUMBER 70\nSYNTAX\n\n: IF (W) THEN  REM ! CLEAR COMMON !ERR!\n\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

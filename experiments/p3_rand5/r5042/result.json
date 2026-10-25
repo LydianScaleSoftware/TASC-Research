@@ -1,0 +1,86 @@
+{
+ "id": "r5042",
+ "key": "823c2df1e23cf3d6",
+ "source": "10 REM! INTEGER I\n20 M%=M%\n30 B=FRE(\"123\"):PRINT POS(Z$)\n40 C=3\n50 GOTO 140\n60 A=FRE(Z$):PRINT POS(B$):CALL A(I,X%):HPLOT TO I,(-A)\n70 READ X%:PRINT X% OR X%\n80 Z%=-127:C=Z% OR Z%:PRINT STR$(NOT 5)+Z$,B$(Z%),:B$(NOT (((I)<=Y%)))=RIGHT$(LEFT$(Z$,SQR(A(100,Z%))),B)\n90 Z$=Z$+B$(M%):B=3>ASC(\"\"):A=B AND B:PRINT MID$(CHR$(COS(1)),ABS(410+M%),-A(X%,100)+LEN(\"A\"));324,\n100 Z$=CHR$(M%*X%)\n110 READ X%:PRINT X% OR X%\n120 I=B=255+20>=A(Y%,127)*Q1:PRINT I;\n130 A(FRE(FRE(\"A\")),A(A(352,Z%)*B,Z%)*Q1)=255:CALL C:RESTORE\n140 C=474:IF (X) THEN M%=FRE(Q1)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1012,
+ "obj_sha256": "a4c30ea791c0ca6cbc3a9b3bfcb66274f08a866414693f02d60a5c35a2ad4671",
+ "cycles": 103266306,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6093
+  },
+  {
+   "line": 40,
+   "addr": 6121
+  },
+  {
+   "line": 50,
+   "addr": 6130
+  },
+  {
+   "line": 60,
+   "addr": 6133
+  },
+  {
+   "line": 70,
+   "addr": 6190
+  },
+  {
+   "line": 80,
+   "addr": 6220
+  },
+  {
+   "line": 90,
+   "addr": 6337
+  },
+  {
+   "line": 100,
+   "addr": 6488
+  },
+  {
+   "line": 110,
+   "addr": 6503
+  },
+  {
+   "line": 120,
+   "addr": 6533
+  },
+  {
+   "line": 130,
+   "addr": 6584
+  },
+  {
+   "line": 140,
+   "addr": 6667
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S002.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7075",
+  "LOCAL VARIABLES": "7076 - 7753",
+  "HIGHEST MEMORY LOCATION": "7753"
+ }
+}

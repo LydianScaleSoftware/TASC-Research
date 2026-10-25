@@ -1,0 +1,23 @@
+{
+ "id": "r6284",
+ "key": "69cfbcf1e5eedb1a",
+ "source": "10 REM! INTEGER J\n20 HLIN Y%*((W=A))>=((XY%<=M%)),(XY%*A%) AT -((A--A))\n30 LOMEM: 16384:XY%=AB:AB=XY% AND Y%\n40 IF (A%) THEN 250:PRINT SGN(FRE(709))=J;\"TASC\",\n50 AB=ABS(1+1000):A%=65535:W=A% OR AB:DATA ,-2.5\n60 RUN\n70 IF (-7-X-((256*A%>=W))) THEN RUN 220\n80 A%=(A):C=A% AND A%\n90 GOTO 180:LIST:GOTO 20:REM! CLEAR COMMON\n100 HTAB ((127<=POS(Y%)))+A%:IF (1=((Y%<=XY% AND 179+C))) THEN IF (1^((NOT C>47973-A%))) THEN 300:GOTO 100:&\n110 AB=(NOT ((-X))):IF (39) THEN 70:PRINT 32767;M% OR ABS(37646)/1000,J,\n120 AB=POS(LEFT$(C$,418-C)):B$=CHR$(J-970)+\"TASC\":RUN 260\n130 PRINT B$;\n140 A%=W\n150 IF (.5=XY%) THEN RETURN:PLOT 300,C:IF ((3<>645)>=((LEN(\"HI\")<>A%))) THEN SHLOAD\n160 PRINT FRE(B$);C$;44725;\n170 READ J:PRINT J OR J:LOAD \"F\"\n180 W=872:C=W OR W\n190 W=((.5<>INT(M%)))-W*20^C:AB=FRE(W)+POS(TAN(J>M%)^((1E3>=NOT 40000))):A%=M%-(XY%) OR Y%:AB=A% AND A%:PRINT LEN(B$);\n200 RUN:REM! CLEAR CHAIN:A=1\n210 READ J:C$=C$\n220 Q1$=CHR$(((A% AND 40))*J)\n230 X=ATN(XY%>=0+M%):C=W:&:X=C:IF (VAL(\"123\")--A%-24) THEN LOMEM: 16384\n240 VTAB NOT FRE(B$):Q1$=\"X Y\"+\"HI\"\n250 READ XY%:PRINT XY% AND XY%:W=(COS(255)-127/1.5):IF (W AND W) THEN 150\n260 IF (J>100) THEN RUN:X=((A+702>=X*A%))-((X+X)):X=X OR 40:A=FRE(MID$(LEFT$(B$,X),(C-M%),LEN(MID$(\"\",X,J)))):PRINT POS(Q1$)\n270 PRINT A;\n280 PRINT 20;\n290 GOSUB 120:POKE W,A%:W=POS(STR$(J)+\"A\"):LIST:C=W\n300 M%=SQR(A%<=255<((20>=AB))):PRINT A%;\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 200\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

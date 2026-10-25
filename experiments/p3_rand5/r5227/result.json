@@ -1,0 +1,23 @@
+{
+ "id": "r5227",
+ "key": "e881794d69d8e7d1",
+ "source": "10 REM! INTEGER *\n20 DIM A$(5,2)\n30 DEF FN F(T)=X%\n40 REM! CLEAR CHAIN:W=FN F(C%+((100>39))):AB=((Q1 OR B+AB))<=W%:B=AB OR AB\n50 HTAB VAL(Y$)\n60 REM! CLEAR CHAIN:A$(1000,LEN(MID$(STR$(Q1),W-C%)))=\"\"+AB$+\"X Y\":RUN 190\n70 X%=1000*((Y% OR X%>X)):Q1=X% AND INT(Q1)\n80 X=X%-NOT C%:IF (X OR X) THEN 10:Y%=X=((X>Q1))+((7>=39)):X%=((FN F(2.25)+256))*B\n90 C%=-X%:B=C% AND C%:X%=Q1<>PEEK(24):IF (X% OR X%) THEN 120\n100 Q1$=Y$+AB$+\"TASC\"+MID$(Q1$,C%,FRE(C%))\n110 FOR AB=(255) TO (-W):X%=EXP(Q1)\n120 PRINT AB<X%;:IF (LEN(\"TASC\")) THEN 130\n130 RUN 150:B=1<=-((3.14159-65535)):SPEED=VAL(Q1$+Q1$)=W\n140 PRINT:READ B,AB$\n150 GOSUB 120\n160 IF (-B-((W%-Q1))*SQR(AB)) THEN B=X%:A$(Y%,-FRE(Q1$))=A$(X,W% AND ((3.14159 OR W%)))\n170 CALL ((16564-Q1*B))*((W% AND AB))\n180 NORMAL\n190 Y%=B>=SGN(W)>=COS(-W%)\n200 READ AB$\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 40\nSYNTAX\n\n REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

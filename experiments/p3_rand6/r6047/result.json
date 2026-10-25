@@ -1,0 +1,23 @@
+{
+ "id": "r6047",
+ "key": "dabc4da447585376",
+ "source": "10 REM! INTEGER K,I\n20 REM! USECOMMON I,M$,Q1$\n30 DIM A(12,9),B$(8),D(10)\n40 Z%=5:M=Z% OR 40000:FOR XY=(-XY%-((N2<>1)) OR ((474<>N2))*I) TO (49152)\n50 N2=Z%:&:N2=N2\n60 IF (32767) THEN XY=FRE(Q1$):PRINT POS(Q1$):REM! CLEAR COMMON:READ I:PRINT I AND I\n70 NOTRACE:A=AB:PRINT XY$,D(((3 AND M))*M),\n80 A%=ASC(STR$(21892)):XY=A% OR NOT XY:XY=A%>=3.14159:IF (XY AND XY) THEN 50:IF (XY) THEN CONT\n90 N2=AB:XY%=255>AB<>20^A>=((A%=2<=D(XY%))):N2=XY% OR XY%:READ I:PRINT I OR I\n100 FOR N2=(((M+A%*A%))*((255*C%-889))) TO (A) STEP (-PEEK(100)>127):FOR A=(-M) TO (N2) STEP (VAL(STR$(N2)))\n110 N2=((Z%-A(C%,Z%)/A(K,I)))^((A%+M<=N2)):AB=N2 OR N2\n120 READ K:PRINT K OR K\n130 AB=NOT ((Z%*D(A%))):M=XY:SHLOAD:N2=M\n140 IF (3) THEN RECALL A:NEXT\n150 FOR I=(POS(K)-N2) TO (-XY%):GOTO 200:REM! CLEAR CHAIN\n160 GOTO 40:LIST 10-20:M=XY:XY=M AND VAL(\"X Y\")-TAN(I)<=((39/D(I)<=49152+65535))\n170 SAVE\n180 RUN:RUN:PRINT:X=1\n190 D(ASC(\"123\"))=(AB*.001-N2):AB=-((I<Z%=1000)):STORE B,C\n200 IF (AB*NOT D(0.1)) THEN LIST:&:& \"X:Y\",1\n210 LIST:READ C%:PRINT C% AND C%:GOTO 170:NOTRACE\n220 Z%=D(COS(2))>=AB:M=Z% OR Z%\n230 I=((Z% OR Z%*65535))/ASC(RIGHT$(M$,1000)):PRINT XY$;AB-N2,:RUN\n240 I=D(INT(Z%<A(255,Z%))):IF (A) THEN LOMEM: 16384\n250 RUN:PRINT:X=1:READ A%:PRINT A% OR A%\n260 PLOT D(A^A OR I+C%),XY\n270 IF (A(I,ASC(XY$))*1000) THEN RUN:READ AB:PRINT AB AND AB\n280 Q1$=CHR$(-((7 AND XY%))):A=POS(Q1$+B$(K))<>ATN(944)+K:LOAD \"F\":AB=A\n290 REM! CLEAR COMMON\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 60\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

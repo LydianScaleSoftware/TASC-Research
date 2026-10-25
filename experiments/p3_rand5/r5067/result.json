@@ -1,0 +1,88 @@
+{
+ "id": "r5067",
+ "key": "a83f78a294b92d76",
+ "source": "10 REM! INTEGER K\n20 REM! DEFCOMMON XY$,M,Q1\n30 DIM P%(9)\n40 VTAB -((NOT X%^XY))\n50 RETURN:XY%=39:M=XY% OR XY%\n60 XY$=LEFT$(CHR$(P%(255)),C%<=C% AND C%)\n70 X$=CHR$(K=P%(K))\n80 Z=C%:M=Z AND K:M%=719\n90 Z=1:IF (24) THEN DATA X,X,HI\n100 SPEED=((M=M/C%))*Z:VTAB VAL(LEFT$(RIGHT$(B$,K),ASC(XY$)))\n110 COLOR=-((.001>=M%>=NOT K)):READ X:PRINT X AND X\n120 Z=X%:GR:Q1=-((-((P%(K)<=M%))))\n130 CALL Q1:CALL -((SQR(X)*SQR(P%(1.5))))\n140 X=-LOG(0):GOTO 40\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6076,
+ "obj_len": 625,
+ "obj_sha256": "12637f3ac461f1818688532afd211ce677b590fd9d9dccc3978c9fc55cb86063",
+ "cycles": 89452788,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6096
+  },
+  {
+   "line": 40,
+   "addr": 6096
+  },
+  {
+   "line": 50,
+   "addr": 6117
+  },
+  {
+   "line": 60,
+   "addr": 6130
+  },
+  {
+   "line": 70,
+   "addr": 6163
+  },
+  {
+   "line": 80,
+   "addr": 6181
+  },
+  {
+   "line": 90,
+   "addr": 6205
+  },
+  {
+   "line": 100,
+   "addr": 6232
+  },
+  {
+   "line": 110,
+   "addr": 6280
+  },
+  {
+   "line": 120,
+   "addr": 6325
+  },
+  {
+   "line": 130,
+   "addr": 6355
+  },
+  {
+   "line": 140,
+   "addr": 6394
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S007.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6076 - 6700",
+  "NUMERIC COMMON": "6064 - 6073",
+  "STRING COMMON": "6074 - 6075",
+  "LOCAL VARIABLES": "6701 - 6756",
+  "HIGHEST MEMORY LOCATION": "6756"
+ }
+}

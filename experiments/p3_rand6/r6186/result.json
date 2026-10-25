@@ -1,0 +1,23 @@
+{
+ "id": "r6186",
+ "key": "3189e1f18b9c481e",
+ "source": "10 REM! INTEGER J\n20 DIM P$(7,2)\n30 GOTO 90:REM! CLEAR CHAIN:REM! CLEAR COMMON\n40 RUN:PRINT:X=1:C%=W%:Y=C% OR B%:RUN\n50 READ W%,N2$\n60 C%=Z:IF (C% AND C%) THEN 100:AB=SGN(Q1%):AB=AB OR W%:IF (-Z) THEN NOTRACE\n70 Z=EXP(Y>=J=63):&:AB=Z:IF (AB) THEN STORE B,C\n80 Q1%=(J):Q1%=Q1%*40<=NOT Q1 OR COS(B%):IF (Q1% OR Q1%) THEN 90:CALL NOT ((J+C% OR AB*Z))\n90 Y=LOG(J<B%*J):Y=Y AND RND(POS(B<B))\n100 HLIN -Q1%,(748) AT Q1>=39:GET B:J=B OR (VAL(MID$(\"123\",COS(Q1)))):FOR B=(Z) TO (-1.5-C%) STEP (Z)\n110 LIST\n120 IF (Z) THEN 20\n130 GOTO 110:& \"X:Y\",1:GOTO 130:P$(J,J)=\"A\"\n140 FOR AB=(177>PEEK(AB)=VAL(P$(J,B%))) TO ((-Z)+W%)\n150 W%=-532>=C%\n160 REM! CLEAR CHAIN:ON (FRE(P$(342,Q1%))) GOTO 30,130\n170 Z=POS(STR$(40>=.5)):GET AB:J=AB AND (C%):Z=C%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 30\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

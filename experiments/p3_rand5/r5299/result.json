@@ -1,0 +1,82 @@
+{
+ "id": "r5299",
+ "key": "3050ba0c41b6a710",
+ "source": "10 REM! INTEGER K,I\n20 Y=EXP(AB):C=Y OR -127:ONERR GOTO 50:RUN\n30 FOR Y=(AB) TO (Y):I=A%(N2-N2%):C=I AND I\n40 GOTO 110\n50 W%=XY%:Y=W% AND W%\n60 GOSUB 60:RUN 110\n70 X%=24\n80 A%(256)=AB:PLOT N2%,NOT M=FRE((XY%)):COLOR=N2\n90 I=XY%:M=I AND I:C=AB:IF (C OR C) THEN 130\n100 X%=((N2%-I<>AB))+((ATN(255)>W%-N2%))\n110 M=FRE(XY$):PRINT POS(XY$)\n120 REM! CLEAR COMMON\n130 PRINT Y;A$;LEN(\"123\")>40<>2.25;\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 549,
+ "obj_sha256": "0fd7307b0063bc2d48fb0864f29bacffc70d80e141bf56c6af465fd6dca80938",
+ "cycles": 88899103,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6113
+  },
+  {
+   "line": 40,
+   "addr": 6151
+  },
+  {
+   "line": 50,
+   "addr": 6154
+  },
+  {
+   "line": 60,
+   "addr": 6166
+  },
+  {
+   "line": 70,
+   "addr": 6175
+  },
+  {
+   "line": 80,
+   "addr": 6181
+  },
+  {
+   "line": 90,
+   "addr": 6229
+  },
+  {
+   "line": 100,
+   "addr": 6255
+  },
+  {
+   "line": 110,
+   "addr": 6303
+  },
+  {
+   "line": 120,
+   "addr": 6318
+  },
+  {
+   "line": 130,
+   "addr": 6321
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S019.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6612",
+  "LOCAL VARIABLES": "6613 - 6685",
+  "HIGHEST MEMORY LOCATION": "6685"
+ }
+}

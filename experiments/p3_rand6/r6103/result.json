@@ -1,0 +1,23 @@
+{
+ "id": "r6103",
+ "key": "a11c4c5666c4ad6b",
+ "source": "10 REM! INTEGER I,J\n20 DIM D%(12)\n30 DEF FN F(T)=EXP(Z%)\n40 GOSUB 230\n50 N2=NOT X%+((W% AND FRE(\"TASC\"))):Z=N2 OR N2:READ AB%:PRINT AB% OR AB%\n60 PRINT B%(((A*Z))^B%(24));Q1$;\"123\";\n70 M$=M$:GOTO 230:CONT:CALL 36408\n80 XY=FRE(RIGHT$(A$,AB%<=XY)):PRINT POS(M$)\n90 GOTO 30:REM! CLEAR COMMON:Z%=W%\n100 Z%=XY:TRACE:C=Z%:A=24*J\n110 Z%=SQR(Z%/24/-20):LOMEM: 16384:Z=Z%:IF (Z% AND FRE(B%(W%))) THEN RUN:PRINT MID$(CHR$(127),POS(345)<=((39<=255)));INT(C);I-X%>=((D%(X%)<=0+W%));\n120 W%=XY:C=W% OR W%:REM! CLEAR CHAIN:GOSUB 10\n130 IF (Z) THEN RUN\n140 PRINT XY;Q1$;:Z=-FN F(-5):N2=Z OR Z\n150 RUN:HLIN D%(B%(X%)+AB%)<>J,(X%<=A) AT 1.5:GOTO 240:LOAD \"F\"\n160 W%=J:REM! CLEAR COMMON:FOR I=(824-((X%>10))+((D%(W%)-SQR(N2)))) TO (X%-((49152+XY))+((660 OR -514)))\n170 CONT:GOTO 30:SHLOAD\n180 LOAD \"F\":GOTO 130:REM! CLEAR CHAIN:NEXT I\n190 VTAB -((NOT J))\n200 GOTO 20:STORE B,C:B%(ATN(-XY) OR D%(VAL(\"HI\")))=-D%(W%):PRINT \"123\";\n210 GOTO 230:REM! CLEAR COMMON:AB%=8982:A=AB% OR W% AND 40000\n220 DATA 1,X,-2.5,HI\n230 N2=FRE(\"123\"):PRINT POS(A$):ON 414+C GOTO 140,130:READ Z:PRINT Z OR Z\n240 D%(J+X%)=FN F(W%):VTAB -((X%+I))*((W%*D%(24)))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 90\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

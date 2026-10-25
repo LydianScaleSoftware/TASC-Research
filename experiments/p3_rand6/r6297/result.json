@@ -1,0 +1,23 @@
+{
+ "id": "r6297",
+ "key": "c5b5b1d6c2718e5a",
+ "source": "10 REM! USECOMMON AB,Y,X$\n20 DIM P%(9)\n30 DEF FN F(X)=Z%\n40 NOTRACE\n50 CONT\n60 IF (NOT P%(Q1%)+FN F(43128)-D(Q1%)) THEN &:RUN:PRINT:X=1:COLOR=((Z% OR NOT M))<=561\n70 DEL 10,20:Y=Z%*Z%:Z%=NOT ((405/702))-NOT XY%:Y=Z% AND AB\n80 LOMEM: 16384\n90 M=M*Q1%>256-B%(171)>=NOT 142:IF (Q1%) THEN IF (-FRE(20*Z)) THEN RUN\n100 READ Z,AB\n110 RUN:PRINT:X=1\n120 AB=540 AND 40000:CONT:M=AB:IF (((TAN(Y)=M%))^((D(612)/XY%+-855))) THEN LOMEM: 16384:W=Y+1:Z=FRE(W)+POS(-20-364>M%)\n130 SAVE:IF (100-((32767 OR 255))+M%) THEN 140\n140 READ Z,Z%:SAVE\n150 LIST\n160 READ M%:GOTO 80:PRINT NOT W=127+W+NOT 1;Y$,M%;\n170 RECALL A:M=-5 AND 1000:Y=M OR M\n180 Q1$=LEFT$(\"A\",Z%):GOTO 100:REM! CLEAR CHAIN:GET W:Z%=W OR (3.14159)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 180\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

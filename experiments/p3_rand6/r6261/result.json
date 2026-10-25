@@ -1,0 +1,23 @@
+{
+ "id": "r6261",
+ "key": "17abcf4fb100ca0c",
+ "source": "10 DIM A(4)\n20 READ AB%:PRINT AB% OR AB%:DATA \"A,B\"\n30 IF (SIN(((W%<Q1))*1446)) THEN PRINT X%;A(-0+-XY);:N2$=\"X Y\"+C$+C$\n40 IF (RND(VAL(N2$))<((256<XY))*Q1) THEN &\n50 AB%=NOT ((((X%<AB%))*((A(C%)-W)))):AB=AB% OR AB:HCOLOR=20/A(.5*W):IF (NOT ((SIN(N2)=((Q1=X%))))) THEN SAVE\n60 A$=\"\"\n70 W%=.5<>NOT ((N2 OR AB%)):N2=AB%:CALL (A(255))>LOG(W%)\n80 Q1=NOT ((FRE(\"A\")<>Q1))\n90 POKE -((POS(1E3)<A(C%))),3+3.14159-ASC(N2$)=(C%):Q1=ASC(C$):AB%=LEN(STR$(AB)+C$):Q1=AB% AND AB%\n100 N2=24809 AND XY<C%<=20:DEL 10,20:XY=N2:RUN\n110 IF (AB%*20>=-(AB%)) THEN RECALL A\n120 REM! CLEAR COMMON\n130 Q1=579:SHLOAD:AB=Q1\n140 Q1=RND(143):N2=Q1 OR AB%:READ AB%\n150 IF (FRE(Q1)) THEN IF (((127 AND Q1>=AB))<>32767+.5) THEN 70\n160 C%=W:N2=C% OR A(-TAN(X%)):READ XY:PRINT XY OR XY:PRINT\n170 X%=W%:W=X% OR XY:AB=VAL(MID$(A$,5,W))<((-156=XY*7)):N2=FRE(AB)+POS(AB%/((2+-5)))\n180 IF (C%) THEN 200:IF (-(C%)^10) THEN W%=24/C%:XY=N2-FRE(40 OR W%):W=XY AND INT(RND(32767<Q1))\n190 GOTO 180:RECALL A:W=AB%>=((COS(XY)<>NOT C%)):N2=FRE(W)+POS(2):HTAB NOT LEN(N2$)\n200 SPEED=XY-W%--A(32767)-(2):LOAD \"F\":HCOLOR=A(-W%)\n210 GOTO 80:REM! CLEAR CHAIN:STORE B,C\n220 AB%=-Q1/X%:AB=AB% OR AB:LIST:IF (W>=(-AB%)) THEN A(X%)=Q1>=(127)\n230 HCOLOR=((AB<W<=2*AB%))+39\n240 IF (AB%+C%<=XY) THEN A(-1000)=X%:AB%=TAN(FRE(A(AB%)<=AB%)):GOTO 180\n",
+ "options": {
+  "library": null,
+  "program": "HGR1",
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 210\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

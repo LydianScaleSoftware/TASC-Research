@@ -1,0 +1,23 @@
+{
+ "id": "r5137",
+ "key": "1b08c69a07cee77b",
+ "source": "10 DIM B(8)\n20 GOSUB 130\n30 DATA -2.5,-2.5:Y=((LEN(C$)>VAL(N2$)))*(B%)^B(32739):N2=Y OR Q1%\n40 IF ((A%+954)<1) THEN RUN\n50 HTAB N2-AB\n60 READ N2:A%=NOT 24<-A%\n70 IF (Q1%) THEN FOR M=(1000) TO (.5/B(744)<>X<3):PRINT\n80 READ N2:IF (((40000<>A%))-100) THEN M=VAL(\"A\"):Y=M AND M\n90 PRINT ((-P%(B%) AND Q1%=M))-(NOT X%);\n100 N2$=N2$+STR$(M)\n110 RUN 110\n120 HLIN M,(((((B(A%)<>16137))+((D(X%)<=X%))))/((POS(Y)<>B%+2018))) AT 154:REM! CLEAR COMMON\n130 CALL 251:CALL ((N2-M<=((24>N2))))-LOG(P%(X%))\n140 RUN 240:PRINT:X=1:P%(40)=((N2<=D(B%)>=A%))--X%^ATN(A%):GOSUB 90\n150 AB$=RIGHT$(C$+RIGHT$(\"\",X),P%(5166^109)):D(X OR M)=SIN(ASC(C$+AB$)):DATA 1\n160 Q1%=X*Q1%=21890+AB:X=N2\n170 IF (2) THEN N2=X%:AB=N2 OR X:PRINT EXP(Q1% AND X)-Y,:B%=D(X%+AB)-B%:M=FRE(B%)+POS(NOT M*D(X%) OR ((N2 OR A%*27641)))\n180 AB=B%:IF (AB AND AB) THEN 120:HCOLOR=A%:B%=23971:M=B% AND B%\n190 IF (B%) THEN C$=\"TASC\":REM! CLEAR CHAIN:GR\n200 RUN:CALL X:PRINT 32767;-255;\n210 IF (ATN(P%(24 OR X%))) THEN X%=1000:M=X% AND X%\n220 READ B%,AB:FOR M=(37779 AND NOT ((NOT 69))) TO (NOT VAL(STR$(Y))) STEP (COS(B%))\n230 FOR Y=(((B%*M/((AB+B(X%)))))^N2) TO (P%(ATN(181))^X%) STEP (Y)\n240 B%=12972>.5:X=B% AND B%:RUN\n250 PRINT STR$(TAN(TAN(D(831))));\"X Y\";N2/((X%=1000))=700;:IF (727) THEN RUN:PRINT (3.14159);POS(256);C$,\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 190\nSYNTAX\n\n: REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

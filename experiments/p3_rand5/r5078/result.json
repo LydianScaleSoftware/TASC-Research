@@ -1,0 +1,66 @@
+{
+ "id": "r5078",
+ "key": "7f4a75b21345be12",
+ "source": "10 REM! INTEGER I,K\n20 PRINT A%;:PRINT:A%=COS(20)^W%\n30 PRINT 10976,LEN(MID$(\"X Y\",AB%,B(A%)))+24;:Y%=483:N2=Y% OR ((K+N2+((K<=B(256)))))^(N2<N2):N2=SIN((N2))+((FRE(\"X Y\")=((Y% AND XY)))):XY=N2 AND N2\n40 REM! CLEAR COMMON\n50 PLOT ((A%>X))^Z AND 30416,EXP(LOG(39)<A%/W%):IF ((Q1)+INT(2)-420) THEN FOR X=(XY) TO (K):DATA HI,\n60 X=XY:XY=X OR X\n70 XY=FRE(RIGHT$(X$+N2$+LEFT$(C$,I),I AND 904)):PRINT POS(X$):HLIN 36918,(-A%) AT ((XY*7<=B(Y%)))*319\n80 READ A%:PRINT A% OR A%:RUN 30:POP\n90 Z=Q1:N2=Z AND Z:RESTORE\n",
+ "options": {
+  "library": null,
+  "program": 20480,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 20480,
+ "obj_len": 882,
+ "obj_sha256": "ae3fd4076c089727a5641b8182deb58a6d2e6e3a7012f7eedb566d9aba66d89b",
+ "cycles": 100449106,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 20500
+  },
+  {
+   "line": 20,
+   "addr": 20500
+  },
+  {
+   "line": 30,
+   "addr": 20527
+  },
+  {
+   "line": 40,
+   "addr": 20696
+  },
+  {
+   "line": 50,
+   "addr": 20699
+  },
+  {
+   "line": 60,
+   "addr": 20805
+  },
+  {
+   "line": 70,
+   "addr": 20817
+  },
+  {
+   "line": 80,
+   "addr": 20919
+  },
+  {
+   "line": 90,
+   "addr": 20949
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "OBJECT FILE": "S018.OBJ",
+  "PROGRAM": "20480 - 21361",
+  "LOCAL VARIABLES": "21362 - 21471",
+  "HIGHEST MEMORY LOCATION": "21471"
+ }
+}

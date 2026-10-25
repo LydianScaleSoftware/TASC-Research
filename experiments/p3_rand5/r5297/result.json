@@ -1,0 +1,78 @@
+{
+ "id": "r5297",
+ "key": "8f4448f627296ac0",
+ "source": "10 REM! INTEGER J,I\n20 DEF FN F(T)=0\n30 PRINT POS(B$),:A$=M$+CHR$(NOT I)\n40 I=X:A=I OR I:Y=Z-((FN F(24)+((W% OR Y)))):PRINT A%;A$;\n50 Y=FRE(B$):PRINT POS(M$):RUN:PRINT:X=1\n60 X=Y%-((ABS(775) AND A)):IF (Y) THEN PRINT XY>((NOT I<=VAL(M$)));\"123\";W%<>X%;:X=A:IF (X AND X) THEN 100\n70 Z=Z/W%:A=Z:Y=A OR A:Y%=NOT Y%:Z=Y% OR X%\n80 IF (X) THEN Y=-I:W%=Y:IF (W% AND W%) THEN 80:Z=-ATN(-2):X=Z OR W%\n90 ON X GOTO 50,40\n100 HCOLOR=529:Y=ASC(CHR$(TAN(X%))):XY=Y AND Y\n110 IF (SGN(A%)-((Y<=A%<=1))) THEN 60\n120 VTAB 32767/((W% AND W%)):FOR J=(NOT ((X+39))/X) TO (0)\n",
+ "options": {
+  "library": null,
+  "program": 20480,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 20480,
+ "obj_len": 915,
+ "obj_sha256": "e21166bf5c0e7bb75da04128a5693a83cf5ff4fcdc5e7791989bff188ce2b6f3",
+ "cycles": 109391890,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 20500
+  },
+  {
+   "line": 20,
+   "addr": 20500
+  },
+  {
+   "line": 30,
+   "addr": 20510
+  },
+  {
+   "line": 40,
+   "addr": 20543
+  },
+  {
+   "line": 50,
+   "addr": 20618
+  },
+  {
+   "line": 60,
+   "addr": 20654
+  },
+  {
+   "line": 70,
+   "addr": 20769
+  },
+  {
+   "line": 80,
+   "addr": 20835
+  },
+  {
+   "line": 90,
+   "addr": 20917
+  },
+  {
+   "line": 100,
+   "addr": 20931
+  },
+  {
+   "line": 110,
+   "addr": 20976
+  },
+  {
+   "line": 120,
+   "addr": 21013
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "OBJECT FILE": "S017.OBJ",
+  "PROGRAM": "20480 - 21394",
+  "LOCAL VARIABLES": "21395 - 21447",
+  "HIGHEST MEMORY LOCATION": "21447"
+ }
+}

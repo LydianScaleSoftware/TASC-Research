@@ -1,0 +1,23 @@
+{
+ "id": "r5292",
+ "key": "8efdedf58d1f9672",
+ "source": "10 REM! INTEGER I\n20 DIM D(11,12),B(2)\n30 AB=36*A%:GOSUB 180\n40 GET AB:Q1%=AB AND (Z%):B=W:ON C GOTO 120,160,140\n50 COLOR=((W+C<>I+256))-(Z%<Y)\n60 AB=W\n70 RUN\n80 IF (B<>0>=C+FRE(Y)) THEN 80\n90 AB=C-RND(SQR(B(45291))):W=AB OR AB:W=SGN(C):IF (W OR W) THEN 160\n100 Z%=A%:AB=Z% OR AB\n110 RUN 110:PRINT:X=1:READ B:PRINT B OR B\n120 A%=-ASC(A$):A%=((32767<=C))/((256 OR I))>=-((Q1%+40)):IF (A% AND A%) THEN 160:B=FRE(Z$):PRINT POS(A$)\n130 A%=X%:IF (A% OR A%) THEN 120:PRINT -Y;0.1-3*((Q1%=815));\n140 DATA 1\n150 REM! CLEAR COMMON:W=FRE(\"123\"):PRINT POS(Z$):CALL FRE(A$)\n160 GOTO 20:D(3^((AB-842))*-0,Y<>-((3137>B(Z%))))=Y:IF (B) THEN DATA \"A,B\",300\n170 TEXT:HTAB 127:Y=C\n180 I=20:AB=FRE(A$):PRINT POS(M$):FOR B=(ASC(MID$(RIGHT$(Z$,B(Q1%)),Q1%>=W))) TO (B) STEP (NOT ((-Y OR -7)))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 150\nSYNTAX\n\n REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

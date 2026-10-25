@@ -1,0 +1,83 @@
+{
+ "id": "r6277",
+ "key": "d4e17b21c89aa92a",
+ "source": "10 REM! INTEGER K\n20 DIM A%(1),P%(2)\n30 DATA 1,X,300,HI:Z%=((Y%+Y% OR NOT 167))>NOT ((Z<P%(K))):Z=B\n40 Y%=NOT ((823>=Z%))>((LEN(\"X Y\")=AB)):B=Y% OR Y%:IF (-K) THEN LIST:B=B%:Z=B AND B\n50 P%(8934)=FRE(W$)\n60 W$=CHR$(Y):B=Z%/VAL(N2$)-Y\n70 PRINT A%((K/22109));\n80 GOSUB 30:FOR K=(B%/((Y-FRE(\"TASC\")))) TO (VAL(W$+\"X Y\"+\"HI\")) STEP (((Z%<Y% AND 7<>Y))*((SIN(Z%)-NOT Y%))):GOTO 70:REM! CLEAR CHAIN\n90 Y=2:B=Y OR Y:LOAD \"F\":NEXT K\n100 CALL B:GOTO 40\n110 READ W$,AB\n120 IF (C) THEN RUN\n130 PRINT:ON ((256=1.5-M%))/((20+ASC(W$))) GOTO 100,50,90,120\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 875,
+ "obj_sha256": "e681b875af287edde8f271be799ef862a544e01b931c852a642bc8356d2a8ce6",
+ "cycles": 101156412,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6167
+  },
+  {
+   "line": 50,
+   "addr": 6278
+  },
+  {
+   "line": 60,
+   "addr": 6296
+  },
+  {
+   "line": 70,
+   "addr": 6332
+  },
+  {
+   "line": 80,
+   "addr": 6350
+  },
+  {
+   "line": 90,
+   "addr": 6482
+  },
+  {
+   "line": 100,
+   "addr": 6514
+  },
+  {
+   "line": 110,
+   "addr": 6526
+  },
+  {
+   "line": 120,
+   "addr": 6541
+  },
+  {
+   "line": 130,
+   "addr": 6555
+  }
+ ],
+ "info": {
+  "RECOGNIZED": "REM ! CLEAR CHAIN",
+  "OBJECT FILE": "S002.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6938",
+  "LOCAL VARIABLES": "6939 - 6999",
+  "HIGHEST MEMORY LOCATION": "6999"
+ }
+}

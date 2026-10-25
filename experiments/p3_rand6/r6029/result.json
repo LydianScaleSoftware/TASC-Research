@@ -1,0 +1,23 @@
+{
+ "id": "r6029",
+ "key": "34875c18f8891762",
+ "source": "10 DIM B(8),A%(7)\n20 W=FRE(\"A\"):PRINT POS(N2$)\n30 GOTO 40:DEL 10,20:GOTO 90:W$=\"HI\"\n40 GOTO 10:REM! CLEAR COMMON:GOTO 110\n50 HTAB P(B(M%)*N2%):GOTO 150:RECALL A:GET N2$\n60 PLOT 2.25>=((M%>M%)),457^((2.25<TAN(16463))):W%=N2:IF (W% OR W%) THEN 60\n70 HTAB B*((P(AB%)+B(AB%)))-(((Q1)<=ABS(A%(255)))):IF (2.25) THEN RUN\n80 PRINT M%;\"X Y\",X$;:N2%=19280*928>=NOT N2=((B<=-W%)):M=FRE(N2%)+POS(P(VAL(X$))*((AB%*A%(N2%)))):M=B=((AB%+N2%>AB%)):RECALL A:B=M\n90 PRINT 0.1>=N2%;STR$(B);W$+\"\",:M%=-(A%(39)^P(AB%))\n100 FOR B=(NOT FRE(X$)) TO (3131^N2<>M)\n110 PRINT POS(\"TASC\"+W$);:GOSUB 40:IF (((N2%<7<AB%))-((Q1*AB%<((B(256)<24))))) THEN RUN 60\n120 IF (((M%<=N2+N2))+VAL(MID$(\"\",Q1,N2%))) THEN LIST:GOTO 80\n130 INVERSE\n140 READ N2%:PRINT N2% AND N2%:POP\n150 W%=AB%\n160 N2%=NOT M%:Q1=N2% OR Q1:PRINT 10,N2% OR PEEK(47135)--W%;M%;\n170 IF (2) THEN RUN 30:Q1=504:B=Q1 OR 2.25*((((N2%<=AB%))+((P(AB%)-AB%)))):LOAD \"F\"\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 40\nSYNTAX\n\n: REM ! CLEAR COMMON !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

@@ -1,0 +1,76 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S017
+
+
+OBJECT CODE FILE:
+(DEFAULT S017.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION?
+
+*****BEGINNING PASS 1
+
+
+
+10
+RECOGNIZED  REM ! INTEGER I
+20  DIM A%(6,12),D(11,8)
+30  DEF  FN F(X) = XY%
+40 Q1 =  FRE ( MID$ (Q1$,7)): PRINT  POS
+ (Q1$): PRINT
+50  RUN 250
+
+*****WARNING
+LINE NUMBER 50
+IGNORED
+
+: PRINT
+
+
+:X = 1
+60  FOR Q1 = ( ABS ( ASC ( MID$ (Y$,Z%))
+)) TO ( - ((M * Q1))):A =  FRE (Z$ + Y$)
+: PRINT  POS (Q1$)
+70 Q1 = (( NOT 13527 + 3 * 696)) * ((3.1
+4159 -  - B(M%))):M% = A%( - M%,7 / I +
+40000):A = M% AND M%
+80 Q1 =  FRE (Y$): PRINT  POS (Z$)
+90 Y$ =  STR$ ( FN F( FN F(A%(XY%,M%))))
+
+RECOGNIZED : REM ! CLEAR COMMON
+100  IF (((M% < Z%)) +  - M% >  =  POS (
+D(A%,255) < I)) THEN 100
+110 W =  - ((I + ((I > A%)))): READ A%:
+PRINT A% AND A%:A = I
+120 M =  FRE ( RIGHT$ ("TASC" + Q1$ + "A
+" + Y$,M <  > 769)): PRINT  POS (Y$):Z$
+= "TASC" + Y$
+130
+RECOGNIZED  REM ! CLEAR CHAIN
+140  HLIN X OR  NOT 20,(((A -  TAN (255)
+)) * ((24 <  = 0))) AT  FN F(XY%):M = B(
+I) * W:A = M OR Z%
+150  IF (XY%) THEN W = Q1
+160  TEXT :M = 117
+170  PRINT A% - A% +  SGN ( SIN (1)); ST
+R$ (M);:M = 1.5
+180
+
+*****FATAL ERROR
+LINE NUMBER 180
+SYNTAX
+
+ REM ! CLEAR CHAIN !ERR!
+
+TYPE CNTRL-C TO ABORT

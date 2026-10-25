@@ -1,0 +1,23 @@
+{
+ "id": "r5172",
+ "key": "0c5960b6341f415f",
+ "source": "10 REM! INTEGER *\n20 DIM B$(10)\n30 PRINT XY$;XY%*((X OR .001))<=NOT ((11686/N2));\n40 IF (AB) THEN RUN\n50 PRINT B$(((X%>X%))*10),XY$;:PRINT:B$(N2)=\"A\"+XY$+C$\n60 PRINT\n70 FOR X=(ASC(C$+C$)) TO (100-((((X<>Z))+FRE(AB)))):GR:XY%=X%<=((SQR(X%)=((32767=M)))):AB=XY% AND X/NOT 11209+Z\n80 VTAB TAN(((M AND X))+((N2<3.14159))):PRINT XY%;Z*N2;Z;\n90 READ X:PRINT X AND X\n100 REM! CLEAR CHAIN:XY%=((XY%-725))\n110 M$=MID$(B$(255>M),0)\n120 FOR X=(POS(RIGHT$(C$,X%/100))) TO (NOT AB):FOR X=(Z) TO (-X)\n130 PRINT M,POS(XY$),:B%=0:WAIT Z,(NOT XY%)\n140 READ X:CALL B%\n150 HOME:GOTO 160:A%=FRE(N2)\n160 RUN 140:GOSUB 220:X=FRE(M$+XY$+M$+B$(A%)+STR$(1)):PRINT POS(C$)\n170 Z=X%:X=FRE(Z)+POS(X):XY$=M$\n180 M$=B$(-((NOT B%))):RUN 50:M$=XY$\n190 READ X%:PRINT X% OR X%:FOR X=(Z*((7>AB))*((Z AND Z))) TO (SQR(X%=M-10)):A%=((0.1<Z+AB))*M\n200 XY%=POS(POS(0=XY%)):IF (XY% AND XY%) THEN 130:X%=POS((225))<>POS(AB)*423:XY%=Z:Z=XY% OR ((M<>AB))+40000\n210 X=M:AB=X AND X\n220 A%=B%:IF (A% OR A%) THEN 160:PRINT X%,\n230 X=FRE(C$):PRINT POS(XY$):IF (XY%) THEN RUN:AB=B%>=425\n240 NEXT:IF (M>-((XY%-N2))) THEN PRINT LOG(B%)*((((N2 AND 86))/XY%)),M;\"A\"+XY$+\"X Y\"+\"\",\n",
+ "options": {
+  "library": null,
+  "program": "HGR1",
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 100\nSYNTAX\n\n REM ! CLEAR CHAIN !ERR!\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

@@ -1,0 +1,79 @@
+{
+ "id": "r6020",
+ "key": "5cf8faf20cb3e38b",
+ "source": "10 REM! INTEGER J,I\n20 DIM B%(11),P%(10)\n30 W%=ATN((256^.001)):HLIN Q1%,(-((J>RND(B%)))) AT (C)\n40 GOTO 70:DEL 10,20:I=((Q1% OR D%(B%,B%)))>=NOT W%-B%(J):IF (I AND I) THEN 70:W%=-N2:LIST 10-20:C=W%\n50 J=-((606*Q1%)):RECALL A:Q1=A:IF (Q1 AND Q1) THEN 30\n60 READ J:PRINT J AND J:PRINT LEFT$(MID$(RIGHT$(C$,P%(24)),J>=W%),Q1),24*32767-J*NOT I,W%;\n70 FOR W=(992^127) TO (B% AND NOT ((221=J))) STEP (I/W):RUN\n80 C$=C$+A$+C$:PRINT J;B$,\n90 IF (C+24) THEN RECALL A:PRINT A$;:C=POS(STR$(B%))\n100 Q1%=I:C=Q1% OR Q1%:REM! CLEAR COMMON\n110 IF (LEN(C$)) THEN SHLOAD:LOMEM: 16384:IF (2.25) THEN RUN\n120 RUN 90:Q1%=-B%(W%)/((J>B%+Q1))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 827,
+ "obj_sha256": "e0ecca27be83b50dfdcc01ab5a2494afd4c8ccda271d5cddfb99cd10a7d55ed3",
+ "cycles": 102251084,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6129
+  },
+  {
+   "line": 50,
+   "addr": 6201
+  },
+  {
+   "line": 60,
+   "addr": 6227
+  },
+  {
+   "line": 70,
+   "addr": 6323
+  },
+  {
+   "line": 80,
+   "addr": 6373
+  },
+  {
+   "line": 90,
+   "addr": 6409
+  },
+  {
+   "line": 100,
+   "addr": 6443
+  },
+  {
+   "line": 110,
+   "addr": 6458
+  },
+  {
+   "line": 120,
+   "addr": 6484
+  }
+ ],
+ "info": {
+  "RECOGNIZED": "REM ! CLEAR COMMON",
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6890",
+  "LOCAL VARIABLES": "6891 - 7231",
+  "HIGHEST MEMORY LOCATION": "7231"
+ }
+}

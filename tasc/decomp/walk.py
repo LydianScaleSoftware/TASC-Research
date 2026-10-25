@@ -146,15 +146,21 @@ def walk(data: bytes, load: int) -> Walk:
     string literal; a literal is accepted only if some STRLIT word points at it, else the
     walk is redone with that JMP taken as a plain jump."""
     forced: set[int] = set()
+    accepted: set[int] = set()  # unreferenced literals that are real (a FRE/POS literal argument)
+    w = _walk(data, load, forced)
     while True:
-        w = _walk(data, load, forced)
         refs = {o.words[0] for o in w.ops if o.kind == "rt" and o.name in ("STRLIT", "STRLIT.PROMPT")}
-        bad = {o.addr for o in w.ops if o.kind == "lit" and o.addr + 3 not in refs}
+        bad = {o.addr for o in w.ops if o.kind == "lit" and o.addr + 3 not in refs and o.addr not in accepted}
         chain = _data_chain(data, load)
         bad |= {o.addr for o in w.ops if o.kind == "data" and o.addr + 3 not in chain}
         if not bad:
             return w
-        forced |= {min(bad)}
+        a = min(bad)
+        try:
+            w = _walk(data, load, forced | {a})
+            forced.add(a)
+        except WalkError:
+            accepted.add(a)  # as a jump the bytes do not decode: keep the literal
 
 
 def _walk(data: bytes, load: int, forced: set[int]) -> Walk:
@@ -238,7 +244,8 @@ def _walk(data: bytes, load: int, forced: set[int]) -> Walk:
                 a += 3
                 continue
             if load <= t < end:
-                if not jsr and t > a + 3 and a not in forced:
+                after_branch = bool(ops) and ops[-1].kind in ("bne3", "beq3")  # IF: always a jump
+                if not jsr and t > a + 3 and a not in forced and not after_branch:
                     n = data[off + 3]
                     if t == a + 4 + n:
                         ops.append(Op(a, t - a, "lit", text=data[off + 4 : t - load]))
@@ -283,6 +290,12 @@ def _walk(data: bytes, load: int, forced: set[int]) -> Walk:
                 s = storage(t, "real")  # refined later: an ORA on t+1 makes it an int
             ops.append(Op(a, 3, "lda" if b == 0xAD else "ora", sym=s, target=t))
             a += 3
+        elif ops and ops[-1].kind == "end":
+            # the appended final JMP END: the constant pool may start with real constants that
+            # nothing references (PASS2 keeps them), so no routine marks the pool's start
+            end = a
+            obj.code_end = a
+            break
         else:
             raise WalkError(f"${a:04X}: unexpected byte ${b:02X}")
     # ORA marks an integer operand
@@ -291,6 +304,19 @@ def _walk(data: bytes, load: int, forced: set[int]) -> Walk:
             o.sym.vtype = "int" if o.sym.vtype == "real" and o.sym.routine is None else o.sym.vtype
             if o.sym.region == "const" and not o.sym.routine:
                 o.sym.const = data[o.sym.addr - load : o.sym.addr - load + 2]
+    # pool gaps: unreferenced real constants (5 bytes each; unreferenced ints are dropped)
+    rstart = obj.routines[0].addr if obj.routines else load + len(data)
+    known = sorted(x.addr for x in syms.values() if x.region == "const")
+    pos = obj.code_end
+    for ka in known + [rstart]:
+        while pos < ka:
+            if pos + 5 > ka:
+                raise WalkError(f"constant pool gap ${pos:04X}-${ka - 1:04X}")
+            k = Sym(pos, "real", region="const", kind="const", const=data[pos - load : pos - load + 5])
+            syms[pos] = k
+            pos += 5
+        if ka in syms:
+            pos = ka + len(syms[ka].const)
     w = Walk(obj, load, delta, ops, syms, entries)
     _storage_syms(w, storage)
     return w

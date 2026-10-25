@@ -1,0 +1,88 @@
+{
+ "id": "r5079",
+ "key": "de91d248f392e7d3",
+ "source": "10 REM! INTEGER K\n20 REM! DEFCOMMON B,X,B$\n30 DEF FN F(T)=X\n40 FOR X=(40) TO (((X+AB%^X))/FN F(C-342)) STEP (SQR(256))\n50 A=A>=LEN(\"\")\n60 IF (40/K AND NOT AB%+A) THEN GOTO 120\n70 AB=-((K/595=K)):READ C,B$:K=X\n80 C=7:C$=MID$(\"A\"+\"HI\"+AB$,NOT ((AB% OR X)))\n90 READ C:PRINT C OR C:COLOR=682:ONERR GOTO 110\n100 PRINT AB%,PEEK(B<=((Q1%<644)));:CALL B%+A:B$=AB$\n110 PRINT Q1%-65535<=Q1% OR A;:AB=A-SGN(C) OR ((AB AND K))*B%:IF (AB OR AB) THEN 120\n120 IF (40) THEN B%=FRE(AB)--1.5<>-SIN(A):A=B% OR B%\n130 READ AB%:PRINT AB% OR AB%\n140 N2%=AB:GET C:N2%=C OR (AB%<>((2.25>B%>((Q1% AND 8582)))))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6076,
+ "obj_len": 869,
+ "obj_sha256": "00b6d3dd64272be790c239e35a7e5a791804e9e30cb44e88002fa9cbd30d5ff8",
+ "cycles": 103057513,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6096
+  },
+  {
+   "line": 40,
+   "addr": 6106
+  },
+  {
+   "line": 50,
+   "addr": 6153
+  },
+  {
+   "line": 60,
+   "addr": 6177
+  },
+  {
+   "line": 70,
+   "addr": 6206
+  },
+  {
+   "line": 80,
+   "addr": 6242
+  },
+  {
+   "line": 90,
+   "addr": 6302
+  },
+  {
+   "line": 100,
+   "addr": 6328
+  },
+  {
+   "line": 110,
+   "addr": 6373
+  },
+  {
+   "line": 120,
+   "addr": 6435
+  },
+  {
+   "line": 130,
+   "addr": 6494
+  },
+  {
+   "line": 140,
+   "addr": 6518
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S019.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6076 - 6944",
+  "NUMERIC COMMON": "6064 - 6073",
+  "STRING COMMON": "6074 - 6075",
+  "LOCAL VARIABLES": "6945 - 6983",
+  "HIGHEST MEMORY LOCATION": "6983"
+ }
+}
