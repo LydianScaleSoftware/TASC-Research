@@ -1,6 +1,6 @@
 # TASC reverse engineering: project notes
 
-Entry point for any new session. Read this first, then the handoff prompt
+Entry point for any new session. Phase 3 handoff: `../TASC_handoff_phase3.md`. Read this first, then the handoff prompt
 (`../TASC_handoff_prompt.md`) for the full mission and rules. RAG collection
 **`TASC project`** holds findings as chunks (status in brackets in each title).
 
@@ -98,7 +98,7 @@ boot takes about 10 s of wall time.
 | | Status | Evidence / note |
 |---|---|---|
 | H1 shared RUNTIME/config | observed (supporting) | PASS0/1/2 load $41F2; headers: library end $17AF, one COMMON block $17B0-$41F1 (PASS0 defines, PASS1/2 use) |
-| H2 options inferable | open | object start = default (right after COMMON), not HGR1 (session-1 reading corrected) |
+| H2 options inferable | observed | all defaults: int arithmetic on (int ops on int vars), int constants on, RESUME/Debug off (no JSR $1423), library $0803, program right after COMMON |
 | H3 hand-written parts identifiable | **confirmed** | none inside compiled code; tasc.classify: 0 foreign bytes in PASS0/1/2 |
 | H4 deterministic | **confirmed** | phase0 runs A/B/C identical (C in a dirty session over an existing BALL.OBJ) |
 | H5 names/line numbers lost | open | |
