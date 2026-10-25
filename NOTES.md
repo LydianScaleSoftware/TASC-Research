@@ -1,40 +1,30 @@
 # TASC reverse engineering: project notes
 
-Entry point for any new session. Phase 3 handoff: `docs/handoff_phase3.md`. Read this first, then the handoff prompt
+Entry point for any new session. Phase 3 handoff: `docs/handoff_phase3.md` (Phases 3 and 4 now closed). Read this first, then the handoff prompt
 (`../TASC_handoff_prompt.md`) for the full mission and rules. RAG collection
 **`TASC project`** holds findings as chunks (status in brackets in each title).
 
-## Status (2026-10-25, session 4)
+## Status (2026-10-25, end of session 5)
 
 - Phases 0, 1, 2, R: done (sessions 1-3; details in RAG phase0/1/2, runtime*).
-- **Phase 3 (session 4): decompiler front end built; PASS source recovered.**
-  `tasc/decomp/` decompiles an object to tokenized Applesoft, checked by
-  recompiling with the predictor. PASS0/1/2 (decompiled jointly, shared COMMON
-  names) recompile byte for byte, and **the real TASC compiles the regenerated
-  sources into files identical to PASS0, PASS1 and PASS2**
-  (`python -m tasc.selfcompile`; experiments/p3_selfcompile). So the goal-5
-  method is proven; what remains for Phase 5 is naming, numbering and
-  documentation under the same constraints. Corpus: all 1,530 recorded compiles round-trip (`--corpus`,
-  pytest test_corpus_round_trip).
-- Generated sources: `src/generated/PASSn.txt` (listing), `PASSn.bas` (tokenized).
-  Names are hash-solver names (meaningless); numbering 5s.
-- Predictor fix found in PASS1: FN params and per-function FN temps allocated
-  in creation order. RESUME/Debug list confirmed from PASS1's dispatcher.
-- **Lifting (session 5):** PASS1/PASS2 read; address-keyed notes in
-  `docs/lift/PASS1.md`, `PASS2.md`; RAG `phase3-lift.md`. Rules now from TASC's
-  code: temps (first-free per-type chains), comparison swaps (GUESS markers gone),
-  debug list, dead-code skip, hash, constants, operator table, routine/local order.
-  New rules found and confirmed on real TASC (`python -m tasc.lift_checks`, 25/25):
-  RUN, REM! CLEAR debug call, string routines always emitted, complex FRE/POS
-  arguments evaluated, peephole also drops an AND/OR test. 1,555/1,555 predicted
-  and decompiled.
-- **Session 5 random batches:** p3_rand5 (`gen_random ... --v3`) and p3_rand6
-  (`--v3 --unsup`, unsupported keywords): predictor matches real TASC on every
-  recorded compile (1,954) and rejects every program TASC rejects (235);
-  `predict_check` compares rejections too. Decompiler round-trips all 1,954.
-  Real-TASC case lists: `python -m tasc.lift_checks [--unsup | --then]`.
-- Next: finish reading the parser corners (functions 4270-4440, arrays 3285-3500,
-  DATA/INPUT details) and PASS0. mypy: tasc/decomp adds ~35 strict errors.
+- **Phase 3: closed (2026-10-25, agreed with Mark).** Exit criterion met: the
+  Python compiler (`tasc/compiler/`) matches real TASC byte for byte on every
+  recorded program, 1,954 compiles including BALL, and rejects all 237 programs
+  TASC rejects (`python -m tasc.predict_check`). Rules are lifted from PASS1/PASS2
+  where read (`docs/lift/PASS1.md`, `PASS2.md`; RAG `phase3-lift.md`); no GUESS
+  markers left. Real-TASC case lists: `python -m tasc.lift_checks [--unsup | --then]`.
+- **Phase 4: closed (2026-10-25, agreed with Mark).** Exit criterion met: the
+  decompiler (`tasc/decomp/`) round-trips all 1,954 recorded compiles and BALL.OBJ
+  (`python -m tasc.decomp.decompile --corpus`, pytest tests/test_decomp.py).
+- **Phase 5: next.** Already done: PASS0/1/2 decompiled jointly (shared COMMON
+  names); the real TASC compiles the regenerated sources (`src/generated/PASSn.bas`)
+  into files identical to the originals (`python -m tasc.selfcompile`). To do:
+  meaningful names within the hash constraints, line-mirrored DOC files and VARS
+  compendiums (section 6b) with their pytest checkers, re-run the self-compile
+  proof after renaming. Carried into Phase 5 as background reading: the PASS1
+  parser corners (functions 4270-4440, arrays 3285-3500, DATA/INPUT details) and
+  PASS0. Open decisions for Mark (see below).
+- Housekeeping: mypy strict (~35 errors in tasc/decomp, ~31 older in tasc/compiler).
 
 ### How the predictor is debugged
 `python -m tasc.predict_check [family]` (summary), `python -m tasc.linediff
@@ -43,11 +33,10 @@ scratch `tokdiff.py` (token-level diff of that line). Random programs:
 `python -m tasc.gen_random <family> <n> <seed> [--v2]` compiles them with the
 real TASC (12 parallel emulators, ~2 s/program wall).
 
-### Remaining unknowns (GUESS markers in tasc/compiler/codegen.py)
-- String comparison with a simple left and complex right (swap assumed);
-  RESUME/Debug list beyond the statements tested; temp naming (why main temps
-  are int-first while FN temps follow creation order: probably hashed temp
-  names; PASS1's code will tell).
+### Remaining unknowns
+- None known in the compiler; the GUESS markers were resolved from PASS1's code
+  (session 5). New behaviour can still surface in untested corners: compare with
+  real TASC (`tasc.lift_checks`, `tasc.gen_random`) before trusting it.
 
 ## Environment
 
@@ -132,7 +121,11 @@ boot takes about 10 s of wall time.
 
 ## Open questions for Mark
 
-- None blocking.
+- Phase 5 defaults to confirm: every integer declared by `REM! INTEGER` in a
+  solver-chosen order (all PASS numerics are integers, so the original almost
+  certainly did this); line numbers in steps of 5, fixed once published; how far
+  names may stray from mnemonic when the hash forces it; the page-3 ML block stays
+  in PASS0's DATA statements as in the original.
 
 ## Layout
 
