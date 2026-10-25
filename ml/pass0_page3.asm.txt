@@ -1,0 +1,44 @@
+; Annotated disassembly of ml/pass0_page3.hex (documentation only; the .hex is authoritative)
+; Work bytes: $0371-$0375 packed FAC (written by the USR entry), $0376 one character.
+0377: A0 03     LDY #$03       ; USR entry: (Y,X) = $0371
+0379: A2 71     LDX #$71
+037B: 4C 2B EB  JMP $EB2B      ; STORE.FAC.AT.YX.ROUNDED: FAC -> 5 packed bytes at $0371
+                               ;   (so PEEK(881..885) after USR(x) gives the constant bytes)
+037E: A2 00     LDX #$00       ; read a key without echo
+0380: 20 0C FD  JSR $FD0C      ; RDKEY
+0383: 8D 76 03  STA $0376
+0386: 60        RTS
+0387: AD 76 03  LDA $0376      ; output the character in $0376
+038A: 4C ED FD  JMP $FDED      ; COUT
+038D: A9 00     LDA #$00       ; list the tokenized line at $0280 (input buffer)
+038F: 85 9F     STA $9F        ; $9F = index into the line
+0391: A4 9F     LDY $9F
+0393: B9 80 02  LDA $0280,Y
+0396: D0 01     BNE $0399
+0398: 60        RTS            ; end of line
+0399: 30 07     BMI $03A2      ; token
+039B: 20 5C DB  JSR $DB5C      ; OUTDO: print character
+039E: E6 9F     INC $9F
+03A0: D0 EF     BNE $0391
+03A2: 38        SEC            ; token: X = token - $7F (1-based index into keyword table)
+03A3: E9 7F     SBC #$7F
+03A5: AA        TAX
+03A6: A0 D0     LDY #$D0       ; ($9D) = $CFD0 so the first (INY) read is $D0D0 = TOKEN.NAME.TABLE
+03A8: 84 9D     STY $9D
+03AA: A0 CF     LDY #$CF
+03AC: 84 9E     STY $9E
+03AE: A0 FF     LDY #$FF
+03B0: CA        DEX            ; skip keywords until the X-th
+03B1: F0 07     BEQ $03BA
+03B3: 20 2C D7  JSR $D72C      ; ROM: next byte of the table via ($9D),Y (from LIST)
+03B6: 10 FB     BPL $03B3      ; until the last character (bit 7 set)
+03B8: 30 F6     BMI $03B0
+03BA: A9 20     LDA #$20       ; space before the keyword
+03BC: 20 5C DB  JSR $DB5C
+03BF: 20 2C D7  JSR $D72C      ; print keyword characters
+03C2: 30 05     BMI $03C9
+03C4: 20 5C DB  JSR $DB5C
+03C7: D0 F6     BNE $03BF
+03C9: 20 5C DB  JSR $DB5C      ; last character
+03CC: A9 20     LDA #$20       ; space after the keyword
+03CE: D0 CB     BNE $039B      ; print it and continue

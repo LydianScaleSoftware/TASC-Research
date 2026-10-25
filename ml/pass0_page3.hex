@@ -1,0 +1,20 @@
+; name:       pass0_page3
+; load:       $0377 (887) - $03CF (975)
+; length:     89
+; sha256:     f75ed7b19eaff5e658302a1131cc6acb0398e2888a9fd936590ba0e2bb51eb34
+; source:     PASS0 (TASC 2.01) DATA statements at object $50CE-$51E6 (89 decimal items),
+;             loaded by compiled code  FOR I=887 TO 975: READ A: POKE I,A: NEXT  at $5233,
+;             then POKE 10,76: POKE 11,119: POKE 12,3  sets the USR vector to JMP $0377.
+; class:      hand-written machine language (not TASC template output); stored as DATA
+;             in the Applesoft source (H7: POKEd from DATA).
+; relocation: fixed address (absolute refs to $0371, $0376, $0280 inside the block).
+; entries:    $0377 USR: store FAC packed at $0371-$0375 (STORE.FAC.AT.YX.ROUNDED)
+;             $037E      RDKEY -> $0376
+;             $0387      COUT ($0376)
+;             $038D      list the tokenized line in $0280 (keywords via ROM table $D0D0)
+0377: A0 03 A2 71 4C 2B EB A2 00 20 0C FD 8D 76 03 60
+0387: AD 76 03 4C ED FD A9 00 85 9F A4 9F B9 80 02 D0
+0397: 01 60 30 07 20 5C DB E6 9F D0 EF 38 E9 7F AA A0
+03A7: D0 84 9D A0 CF 84 9E A0 FF CA F0 07 20 2C D7 10
+03B7: FB 30 F6 A9 20 20 5C DB 20 2C D7 30 05 20 5C DB
+03C7: D0 F6 20 5C DB A9 20 D0 CB
