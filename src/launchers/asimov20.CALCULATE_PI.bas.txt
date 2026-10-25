@@ -1,0 +1,2 @@
+ 10  HOME :S = 1:D = 1
+ 20 PI = PI + S * 4 / D:D = D + 2:S =  - S: VTAB 5: PRINT PI"        ": GOTO 20

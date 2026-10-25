@@ -1,0 +1,183 @@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+               A00,% //%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? BALL
+
+
+OBJECT CODE FILE:
+(DEFAULT BALL.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION?
+
+*****BEGINNING PASS 1
+
+
+
+10
+RECOGNIZED  REM !INTEGER I
+20  DIM X%(9),Y%(9),SX%(9),SY%(9)
+30  DIM AX%(9),AY%(9)
+40  DIM DX%(9),DY%(9)
+50  HOME
+60  INPUT "HOW MANY BALLS (UP TO 10)? ";
+N%: IF N% < 1 OR N% > 10 THEN 60
+70 N% = N% - 1
+80  GR : HOME : VTAB 24: PRINT "PRESS AN
+Y KEY TO EXIT-";: FOR I = 1 TO 4000: NEX
+T I
+90  FOR I = 0 TO N%
+100 AX%(I) = 4 * (20 + I * (210 / (N% +
+1))):AY%(I) = 4 * (230 - I * (210 / (N%
++ 1)))
+110 X%(I) = 0:Y%(I) = 0
+120 DX%(I) = 1:DY%(I) = 1
+130  NEXT I
+140 X% = 0:SX% = 1:DL% = 78
+150  COLOR= 14: PLOT X%,X%
+160  FOR I = 0 TO DL%: NEXT I
+170  COLOR= 0: PLOT X%,X%
+180 X% = X% + SX%: IF X% = 40 THEN X% =
+38:SX% =  - 1
+190 DL% = DL% - 1
+200  IF X% >  = 0 THEN 150
+210  FOR I = 1 TO 20:Y% =  PEEK (49200):
+ NEXT I
+220  FOR I = 0 TO N%
+230  GOSUB 270
+240  NEXT I
+250  IF  PEEK (49152) > 127 THEN  POKE 4
+9168,0: TEXT : HOME : END
+260  GOTO 220
+270 X% = X%(I):Y% = Y%(I):OX% = X%:OY% =
+ Y%
+280 SX% = AX%(I) + SX%(I):SY% = AY%(I) +
+ SY%(I)
+290  IF SX% > 256 THEN SX% = SX% - 256:X
+% = X% + DX%(I): GOTO 290
+300  IF SY% > 256 THEN SY% = SY% - 256:Y
+% = Y% + DY%(I): GOTO 300
+310 SX%(I) = SX%:SY%(I) = SY%
+320  IF X% > 39 THEN X% = 78 - X%:DX%(I)
+ =  - DX%(I): GOTO 340
+330  IF X% < 0 THEN X% =  - X%:DX%(I) =
+ - DX%(I)
+340  IF Y% > 39 THEN Y% = 78 - Y%:DY%(I)
+ =  - DY%(I): GOTO 360
+350  IF Y% < 0 THEN Y% =  - Y%:DY%(I) =
+ - DY%(I)
+360 X%(I) = X%:Y%(I) = Y%
+370  IF OX% = X% THEN  IF OY% = Y% THEN
+ RETURN
+380  COLOR= 0: PLOT OX%,OY%: COLOR= I +
+1
+390  PLOT X%,Y%
+400  RETURN
+
+
+
+*****BEGINNING PASS 2
+
+
+....
+
+
+*****CODE GENERATION COMPLETE
+
+
+COMPILATION INFORMATION AND LINE NUMBER
+REFERENCE TABLE? YES
+
+
+SOURCE FILE: BALL
+OBJECT FILE: BALL.OBJ
+LIBRARY OCCUPIES 2051 - 6063
+PROGRAM OCCUPIES 6064 - 7548
+
+NO COMMON BLOCK
+
+LOCAL VARIABLES OCCUPY 7549 - 7733
+
+HIGHEST MEMORY LOCATION: 7733
+
+
+LINE# ADDR   LINE# ADDR   LINE# ADDR
+
+10    6084   20    6084   30    6084
+40    6084   50    6084   60    6087
+70    6167   80    6176   90    6244
+100   6261   110   6327   120   6351
+130   6375   140   6380   150   6398
+160   6416   170   6438   180   6456
+190   6491   200   6500   210   6514
+220   6545   230   6562   240   6565
+250   6570   260   6608   270   6611
+280   6641   290   6683   300   6721
+310   6759   320   6783   330   6827
+340   6868   350   6912   360   6953
+370   6977   380   7003   390   7030
+400   7042
+
+*****COMPILATION COMPLETE
+
+
+]?

@@ -1,0 +1,12 @@
+[project]
+name = "tasc-re"
+version = "0.1.0"
+requires-python = ">=3.12"
+
+[tool.pytest.ini_options]
+markers = ["emu: drives the Pandowdy emulator (slow)"]
+addopts = "-m 'not emu'"
+
+[tool.mypy]
+strict = true
+files = ["tasc", "tests"]

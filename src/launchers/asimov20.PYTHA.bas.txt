@@ -1,0 +1,24 @@
+ 5  HOME : INPUT "SEARCH WITH MAX NUMBER HOW HIGH?";MAX
+ 6 L =  LEN ( STR$ (MAX))
+ 10  HOME : PRINT "FINDING UNIQUE PYTHAGOREAN TRIPLES"
+ 15  PRINT 
+ 20  FOR A = 1 TO MAX
+ 25 N = 0:B = 0
+ 30 N = N + 1
+ 31 B =  INT ( SQR (2 * N * A + N * N))
+ 32  IF B > A - 1 THEN 60
+ 40 C = (A * A + B * B) ^ .5
+ 41 C$ =  STR$ (C):C1$ =  STR$ ( INT (C))
+ 42 A$ =  STR$ (A):B$ =  STR$ (B)
+ 43  IF  LEN (A$) < L THEN A$ = " " + A$: GOTO 43
+ 44  IF  LEN (B$) < L THEN B$ = " " + B$: GOTO 44
+ 45  IF  LEN (C1$) < L THEN C1$ = " " + C1$:C$ = " " + C$: GOTO 45
+ 46  PRINT A$" "B$" "C$;: CALL  - 868: HTAB 1
+ 50  IF  STR$ (C) =  STR$ ( INT (C)) THEN  GOSUB 100: IF P THEN  PRINT 
+ 55  GOTO 30
+ 60  NEXT A
+ 70  END 
+ 100 P = 1
+ 110  FOR I = 2 TO B: IF A / I =  INT (A / I) AND B / I =  INT (B / I) THEN P = 0:I = B
+ 120  NEXT 
+ 130  RETURN 

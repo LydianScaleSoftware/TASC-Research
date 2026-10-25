@@ -1,0 +1,44 @@
+{
+ "runs": {
+  "A": {
+   "obj_sha256": "7a37f0610faa84698ab9786e9113bfc5f7c31d618a07d36de3a65ded1a911f5b",
+   "obj_addr": "$17B0",
+   "obj_len": 1485,
+   "clinenum_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+   "cycles": 150236950,
+   "lines_in_table": 40
+  },
+  "B": {
+   "obj_sha256": "7a37f0610faa84698ab9786e9113bfc5f7c31d618a07d36de3a65ded1a911f5b",
+   "obj_addr": "$17B0",
+   "obj_len": 1485,
+   "clinenum_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+   "cycles": 150236950,
+   "lines_in_table": 40
+  },
+  "C": {
+   "obj_sha256": "7a37f0610faa84698ab9786e9113bfc5f7c31d618a07d36de3a65ded1a911f5b",
+   "obj_addr": "$17B0",
+   "obj_len": 1485,
+   "clinenum_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+   "cycles": 144963575,
+   "lines_in_table": 40
+  }
+ },
+ "deterministic_obj": true,
+ "deterministic_line_table": true,
+ "deterministic_clinenum": true,
+ "ball_run": {
+  "lores_mode": true,
+  "exit_prompt": true,
+  "nonblack_cells": 3,
+  "returned_to_basic": true
+ },
+ "info": {
+  "OBJECT FILE": "BALL.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7548",
+  "LOCAL VARIABLES": "7549 - 7733",
+  "HIGHEST MEMORY LOCATION": "7733"
+ }
+}

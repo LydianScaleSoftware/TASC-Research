@@ -1,0 +1,444 @@
+{
+ "tasc201": [
+  {
+   "name": "HELLO",
+   "type": "BAS",
+   "addr": "$0801",
+   "length": 51,
+   "sha256": "b85f6236e8e668552ae434e6a228f77d9550c55d2d7ba73530e52c2cabd6de7d"
+  },
+  {
+   "name": "APCOM",
+   "type": "BAS",
+   "addr": "$0801",
+   "length": 51,
+   "sha256": "b85f6236e8e668552ae434e6a228f77d9550c55d2d7ba73530e52c2cabd6de7d"
+  },
+  {
+   "name": "PASS0",
+   "type": "BIN",
+   "addr": "$41F2",
+   "length": 7803,
+   "sha256": "e500a1ffb6e1bf79af73dd7114dacaabdc4f23db83dfb43c6ab6e6d8379f7241"
+  },
+  {
+   "name": "PASS1",
+   "type": "BIN",
+   "addr": "$41F2",
+   "length": 19703,
+   "sha256": "717688858123a4b3dcf43217cb1451c9e7c39908008335455d64dedc98fea02c"
+  },
+  {
+   "name": "PASS2",
+   "type": "BIN",
+   "addr": "$41F2",
+   "length": 9221,
+   "sha256": "218d8a5bb87ef3a18f08b763344489eefb8d72c29a8471cb8afba600eec6fa7c"
+  },
+  {
+   "name": "RUNTIME",
+   "type": "BIN",
+   "addr": "$0803",
+   "length": 4013,
+   "sha256": "3982a702f73a3b88d8d93318daaa9330b3775ba21cc74fd4cfd5dfcc57fd9a5b"
+  },
+  {
+   "name": "ADR",
+   "type": "TXT",
+   "addr": "$0000",
+   "length": 74,
+   "sha256": "3b903fa5d80d423478e3227808021d5220692f87a71f45a082d9cc671b9edba4"
+  },
+  {
+   "name": "CREATE ADR",
+   "type": "BAS",
+   "addr": "$0801",
+   "length": 302,
+   "sha256": "4f9950433d5fed748bfc640829255758bb41f6724bd11c858ea6e5a9881b3a6d"
+  },
+  {
+   "name": "BALL",
+   "type": "BAS",
+   "addr": "$0801",
+   "length": 975,
+   "sha256": "bc1374193666175e22cbcf9a31e9391ebbecdd3dc34f8412526cc25cdb7a513d"
+  }
+ ],
+ "tasc20": [
+  {
+   "name": "PASS0",
+   "type": "BIN",
+   "addr": "$41F2",
+   "length": 7592,
+   "sha256": "ff08186e73cfd42f81ba09ce1ef2d6ff25f3fd772f4d46e2601e2986fb67bf8e"
+  },
+  {
+   "name": "TASC",
+   "type": "BAS",
+   "addr": "$0801",
+   "length": 218,
+   "sha256": "881e73ee011be0742fe8e42a393a9fadc9b30f9e5c132c6cdc3044fa9510aeae"
+  },
+  {
+   "name": "RUN",
+   "type": "TXT",
+   "addr": "$0000",
+   "length": 73,
+   "sha256": "dd7a5ec618930ca8b802aea65420cc8345b57dd4e08ead77b9794be32b4e71fe"
+  },
+  {
+   "name": "ADR",
+   "type": "TXT",
+   "addr": "$0000",
+   "length": 76,
+   "sha256": "acd02efb89a5a8194a0c65bfb1d7dd10cb311ebd16cbc83d6f5bd37b01650a82"
+  },
+  {
+   "name": "CREATE ADR",
+   "type": "BAS",
+   "addr": "$0801",
+   "length": 304,
+   "sha256": "1f2043677e6751bb6d0c1e0e6fab25c5f9fe6903c0db2f026dc4ff6399d308d1"
+  },
+  {
+   "name": "PASS1",
+   "type": "BIN",
+   "addr": "$41F2",
+   "length": 19703,
+   "sha256": "717688858123a4b3dcf43217cb1451c9e7c39908008335455d64dedc98fea02c"
+  },
+  {
+   "name": "PASS2",
+   "type": "BIN",
+   "addr": "$41F2",
+   "length": 9221,
+   "sha256": "37e674f90bc8c6ae1b48d34c32dc3eb31d039f477fcf6176ddac3732fbeff284"
+  },
+  {
+   "name": "RUNTIME",
+   "type": "BIN",
+   "addr": "$0803",
+   "length": 4013,
+   "sha256": "e891e25f11486617a37d73b083040e345f52aebb0534f37acd96883de0ccb39e"
+  },
+  {
+   "name": "CLINENUM",
+   "type": "TXT",
+   "addr": "$0000",
+   "length": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "name": "MICROSOFT COMPILER",
+   "type": "BAS",
+   "addr": "$0801",
+   "length": 25,
+   "sha256": "75dd6e96cbe162b9a98bce18915aaa85bf790a4b9a5acd1b11b00c68297705a4"
+  },
+  {
+   "name": "RUNNER",
+   "type": "BAS",
+   "addr": "$0801",
+   "length": 77,
+   "sha256": "e2c96dc809d66524ea883fd86708cd20807552fca95609c65e3426340172c8bc"
+  },
+  {
+   "name": "HELLO",
+   "type": "BAS",
+   "addr": "$0801",
+   "length": 27,
+   "sha256": "07782272e255423792357a5e1d6aec0c552c89fed6f94dcc58cd375bd0876e93"
+  }
+ ],
+ "asimov20": [
+  {
+   "name": "MENU",
+   "type": "BAS",
+   "addr": "$0801",
+   "length": 3334,
+   "sha256": "820d107b55d244d1a5fbee26afdb9354b63f703dcc41079770eaf2b448f2dca5"
+  },
+  {
+   "name": "HELLO",
+   "type": "BAS",
+   "addr": "$0801",
+   "length": 51,
+   "sha256": "b85f6236e8e668552ae434e6a228f77d9550c55d2d7ba73530e52c2cabd6de7d"
+  },
+  {
+   "name": "PASS0",
+   "type": "BIN",
+   "addr": "$41F2",
+   "length": 7721,
+   "sha256": "cd9edf0df555065d4a50783b5c6ef22757c2388b18108844aeece541ca73da81"
+  },
+  {
+   "name": "PASS1",
+   "type": "BIN",
+   "addr": "$41F2",
+   "length": 19703,
+   "sha256": "717688858123a4b3dcf43217cb1451c9e7c39908008335455d64dedc98fea02c"
+  },
+  {
+   "name": "PASS2",
+   "type": "BIN",
+   "addr": "$41F2",
+   "length": 9221,
+   "sha256": "37e674f90bc8c6ae1b48d34c32dc3eb31d039f477fcf6176ddac3732fbeff284"
+  },
+  {
+   "name": "RUNTIME",
+   "type": "BIN",
+   "addr": "$0803",
+   "length": 4013,
+   "sha256": "e891e25f11486617a37d73b083040e345f52aebb0534f37acd96883de0ccb39e"
+  },
+  {
+   "name": "CLINENUM",
+   "type": "TXT",
+   "addr": "$0000",
+   "length": 1,
+   "sha256": "e52d9c508c502347344d8c07ad91cbd6068afc75ff6292f062a09ca381c89e71"
+  },
+  {
+   "name": "DRAG RACER",
+   "type": "BAS",
+   "addr": "$0801",
+   "length": 2873,
+   "sha256": "e8da7365cd21cea760bcc091d0aa23739a1ea74cd9e9b491b05295e555039d7a"
+  },
+  {
+   "name": "DRAG RACER.OBJ",
+   "type": "BIN",
+   "addr": "$4000",
+   "length": 4716,
+   "sha256": "c2d39f59ca0eaf7c71088cf4de3702040c0d3b3ec9e85dbaf3974b28d728d351"
+  },
+  {
+   "name": "LONG ONE LINER.OBJ",
+   "type": "BIN",
+   "addr": "$17B0",
+   "length": 560,
+   "sha256": "cabbc33d36d3bb92dc00b8381d495060b8433e019a3a670fee2b5b5aca639c7d"
+  },
+  {
+   "name": "HIRES PRINT",
+   "type": "BAS",
+   "addr": "$0801",
+   "length": 1112,
+   "sha256": "f8a61e78eb8ec901ff8cff5a152f64cf67b86bd675185a60a07dd031ed16d778"
+  },
+  {
+   "name": "HIRES PRINT.OBJ",
+   "type": "BIN",
+   "addr": "$6000",
+   "length": 1650,
+   "sha256": "1cf488fa0f1cf1036a0c4c7fdadfa9408a1a433ad1d3977476d91942da49970b"
+  },
+  {
+   "name": "CALCULATE PI",
+   "type": "BAS",
+   "addr": "$0801",
+   "length": 64,
+   "sha256": "3441b3431cf7ac4f02203d07d8181023a1303002065d9787bc12c1e57c3f6ddc"
+  },
+  {
+   "name": "UPSIDE HAT.OBJ",
+   "type": "BIN",
+   "addr": "$17B0",
+   "length": 589,
+   "sha256": "cf3b5af3a9ea7963b06eda23b4ed874a453c51168efef0e855b7fc577fbcc069"
+  },
+  {
+   "name": "PRIMER",
+   "type": "BAS",
+   "addr": "$0801",
+   "length": 398,
+   "sha256": "609e4c29923e8cc534980203374b47a3fa504d0e26dc8eb378be465c2d599b1b"
+  },
+  {
+   "name": "PYTHA.2",
+   "type": "BAS",
+   "addr": "$0801",
+   "length": 415,
+   "sha256": "58ba0538fc30a5659fc6bea227be972797737b08ebb1ef5d833d9c165a2e636a"
+  },
+  {
+   "name": "PYTHA",
+   "type": "BAS",
+   "addr": "$0801",
+   "length": 481,
+   "sha256": "92166675adc0b17ef3285fca996dd5db97a96abe86c58f5e6a5366f0fbfb5048"
+  }
+ ],
+ "rebuild": [
+  {
+   "name": "ADR",
+   "type": "TXT",
+   "addr": "$0000",
+   "length": 78,
+   "sha256": "0638fef88d57219d5bb0aa3b37970685c57dec94b4f61f5283631ad60e21fc5d"
+  },
+  {
+   "name": "BASIC.WORKFILE",
+   "type": "BIN",
+   "addr": "$1C01",
+   "length": 1539,
+   "sha256": "ee3e4bf19d99c7f0b7e3cebd405fde61240f2609832c7e3c02b2bee3c0e596f8"
+  },
+  {
+   "name": "BASIC.SAB/PRINTER",
+   "type": "BIN",
+   "addr": "$1C01",
+   "length": 2797,
+   "sha256": "2ee36db390d9e912c46517a6243d9a205dca90546d2ffe8843dfadd0ae1bcc95"
+  },
+  {
+   "name": "BASIC.TREK",
+   "type": "BIN",
+   "addr": "$1B01",
+   "length": 6514,
+   "sha256": "93563749a0eee74d85c085cb8049cc37b56f4b2aef9ec1116692127ccdbc365a"
+  },
+  {
+   "name": "CLINENUM",
+   "type": "TXT",
+   "addr": "$0000",
+   "length": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "name": "COMPILER",
+   "type": "BAS",
+   "addr": "$0801",
+   "length": 55,
+   "sha256": "7354e9bc56f1a37457e0c77def7b055899d551685c6d87eda4b6c659ee52a113"
+  },
+  {
+   "name": "COMPILER/HOW",
+   "type": "BAS",
+   "addr": "$0801",
+   "length": 1389,
+   "sha256": "3863235067e9f84c0d198485112c381a260ba9b2ee019ae9f2dc5a1e82b13cbb"
+  },
+  {
+   "name": "COMPILER/HOW.OBJ",
+   "type": "BIN",
+   "addr": "$1784",
+   "length": 1970,
+   "sha256": "ad69c2f5ddc42375d1a0312da8d6914d2f9f67ce800a492dcec9d224b67fb2ee"
+  },
+  {
+   "name": "EDITEXT 5/82",
+   "type": "BAS",
+   "addr": "$0801",
+   "length": 13371,
+   "sha256": "93c0406b2be394e692405c50c8fe75916d4ca307802b54a239c43a823240e2b3"
+  },
+  {
+   "name": "GRTX",
+   "type": "BIN",
+   "addr": "$8500",
+   "length": 2176,
+   "sha256": "07c6fc7a6ba67cd058d06924932a04d589bb4c6fa9a9f6b7003cc2ab1cf25f75"
+  },
+  {
+   "name": "HELLO",
+   "type": "BAS",
+   "addr": "$0801",
+   "length": 183,
+   "sha256": "f1136a91018b5aebdda78db58d6b951a4fa6c1ce8b39a0600c0301116a99c09a"
+  },
+  {
+   "name": "MACRO EDITOR II",
+   "type": "BIN",
+   "addr": "$0800",
+   "length": 2048,
+   "sha256": "377c814e67da65064a7984527fab897a0340b9bc55671162be4d8415d5d411b3"
+  },
+  {
+   "name": "MACRO RELOCATOR",
+   "type": "BIN",
+   "addr": "$0800",
+   "length": 2048,
+   "sha256": "0545fcaf575779ca6515682ddd28454a3b0136397f2414609129bd626b722df0"
+  },
+  {
+   "name": "PASS0.OBJ",
+   "type": "BIN",
+   "addr": "$3F0A",
+   "length": 6957,
+   "sha256": "337eaca2595386692c7b0ced0c0650f167d76998ecbd338b58f91d65d30ede74"
+  },
+  {
+   "name": "PASS1.OBJ",
+   "type": "BIN",
+   "addr": "$3F0A",
+   "length": 19168,
+   "sha256": "40987be6ecee482dea84809ba8770d85f5f9c04259cd84a05deaec25335ccf4f"
+  },
+  {
+   "name": "PASS2.OBJ",
+   "type": "BIN",
+   "addr": "$3F0A",
+   "length": 9132,
+   "sha256": "26e9d5a6f2deeec7a249d1540e0c6b871f798033a10bb5e7db1b984f43e42a38"
+  },
+  {
+   "name": "RENUMBER",
+   "type": "BAS",
+   "addr": "$0801",
+   "length": 3046,
+   "sha256": "9e5c24e3088e66eb1c6172272e2a303d44498a50c9d300589ab0410068a354c3"
+  },
+  {
+   "name": "RUNTIME",
+   "type": "BIN",
+   "addr": "$0803",
+   "length": 3969,
+   "sha256": "d118e82757a7ec286fd3bfafe30f681ddada259839cac7970b633aabf2ded5fd"
+  },
+  {
+   "name": "SAB/PRINTER",
+   "type": "BAS",
+   "addr": "$0801",
+   "length": 1134,
+   "sha256": "a0c29b76372b33ee318b09c28ff5e1b32766ff50d3fcc780956095a79998d477"
+  },
+  {
+   "name": "SORT",
+   "type": "BIN",
+   "addr": "$0800",
+   "length": 768,
+   "sha256": "99d4cff51f7cf79853a7983f51b4ca8ae9723148b34aa9d45c515ed6ddbaa08e"
+  },
+  {
+   "name": "SUPER APPLE BASIC",
+   "type": "BIN",
+   "addr": "$0803",
+   "length": 5116,
+   "sha256": "56096ea971fe1e77ebedd18bb8933f26761b78308269b0906a194ca9626f9352"
+  },
+  {
+   "name": "TRANSFER",
+   "type": "TXT",
+   "addr": "$0000",
+   "length": 601,
+   "sha256": "70a3dec1a1ea9719a4f71dfcfc93df2718495dcafc336746cdb9f9eaa111a026"
+  },
+  {
+   "name": "TREK",
+   "type": "INT",
+   "addr": "$0000",
+   "length": 1891,
+   "sha256": "595ecc6a6b1aaf9ebba644014e3b68657f8fde659868bae6b6274146cdb10d2d"
+  },
+  {
+   "name": "FLIGHT SIMULATOR",
+   "type": "BIN",
+   "addr": "$07FA",
+   "length": 23006,
+   "sha256": "bcc626b7cf7fc0c47177897fc2bfdd74d7f827ff771b66025a8ff0719e462486"
+  }
+ ]
+}

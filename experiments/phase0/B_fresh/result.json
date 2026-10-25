@@ -1,0 +1,177 @@
+{
+ "source": "BALL",
+ "obj_name": "BALL.OBJ",
+ "obj_addr": 6064,
+ "obj_len": 1485,
+ "obj_sha256": "7a37f0610faa84698ab9786e9113bfc5f7c31d618a07d36de3a65ded1a911f5b",
+ "cycles": 150236950,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6084
+  },
+  {
+   "line": 50,
+   "addr": 6084
+  },
+  {
+   "line": 60,
+   "addr": 6087
+  },
+  {
+   "line": 70,
+   "addr": 6167
+  },
+  {
+   "line": 80,
+   "addr": 6176
+  },
+  {
+   "line": 90,
+   "addr": 6244
+  },
+  {
+   "line": 100,
+   "addr": 6261
+  },
+  {
+   "line": 110,
+   "addr": 6327
+  },
+  {
+   "line": 120,
+   "addr": 6351
+  },
+  {
+   "line": 130,
+   "addr": 6375
+  },
+  {
+   "line": 140,
+   "addr": 6380
+  },
+  {
+   "line": 150,
+   "addr": 6398
+  },
+  {
+   "line": 160,
+   "addr": 6416
+  },
+  {
+   "line": 170,
+   "addr": 6438
+  },
+  {
+   "line": 180,
+   "addr": 6456
+  },
+  {
+   "line": 190,
+   "addr": 6491
+  },
+  {
+   "line": 200,
+   "addr": 6500
+  },
+  {
+   "line": 210,
+   "addr": 6514
+  },
+  {
+   "line": 220,
+   "addr": 6545
+  },
+  {
+   "line": 230,
+   "addr": 6562
+  },
+  {
+   "line": 240,
+   "addr": 6565
+  },
+  {
+   "line": 250,
+   "addr": 6570
+  },
+  {
+   "line": 260,
+   "addr": 6608
+  },
+  {
+   "line": 270,
+   "addr": 6611
+  },
+  {
+   "line": 280,
+   "addr": 6641
+  },
+  {
+   "line": 290,
+   "addr": 6683
+  },
+  {
+   "line": 300,
+   "addr": 6721
+  },
+  {
+   "line": 310,
+   "addr": 6759
+  },
+  {
+   "line": 320,
+   "addr": 6783
+  },
+  {
+   "line": 330,
+   "addr": 6827
+  },
+  {
+   "line": 340,
+   "addr": 6868
+  },
+  {
+   "line": 350,
+   "addr": 6912
+  },
+  {
+   "line": 360,
+   "addr": 6953
+  },
+  {
+   "line": 370,
+   "addr": 6977
+  },
+  {
+   "line": 380,
+   "addr": 7003
+  },
+  {
+   "line": 390,
+   "addr": 7030
+  },
+  {
+   "line": 400,
+   "addr": 7042
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "BALL.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7548",
+  "LOCAL VARIABLES": "7549 - 7733",
+  "HIGHEST MEMORY LOCATION": "7733"
+ }
+}

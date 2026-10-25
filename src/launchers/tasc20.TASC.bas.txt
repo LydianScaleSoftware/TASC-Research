@@ -1,0 +1,4 @@
+ 5  HOME 
+ 6  VTAB 10: PRINT "        MICROSOFT'S TASC                       APPLESOFT COMPILER"
+ 7  PRINT : PRINT "         NOTE: FP PROGRAM MUST BE                      SAVED ON THIS DISK!"
+ 10  PRINT  CHR$ (4) + "BLOADRUNTIME" +  CHR$ (13) +  CHR$ (4) + "BRUNPASS0"

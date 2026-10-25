@@ -1,0 +1,1 @@
+ 10  PRINT  CHR$ (4) + "BLOADRUNTIME" +  CHR$ (13) +  CHR$ (4) + "BRUNPASS0"
