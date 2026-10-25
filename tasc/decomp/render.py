@@ -12,7 +12,7 @@ from dataclasses import dataclass, field
 from tasc.compiler.fin import fin
 from tasc.compiler.parse import TOK
 from tasc.decomp.lift import (
-    BinN, CallN, Elem, FnN, Leaf, Lifted, Lit, Node, Stmt, UnN, Unknown,
+    SWAP, BinN, CallN, Elem, FnN, Leaf, Lifted, Lit, Node, Stmt, UnN, Unknown,
 )
 from tasc.decomp.walk import Sym
 from tasc.objfile import int_value, real_value
@@ -71,6 +71,7 @@ class Renderer:
     fn_names: dict[int, str]
     param_names: dict[Sym, str]
     lits: list[bytes] = field(default_factory=list)
+    filler: bytes = b"0"  # FRE/POS argument when no unreferenced local needs one
 
     def name(self, s: Sym) -> bytes:
         if s.kind == "const" or s.region == "const":
@@ -91,7 +92,7 @@ class Renderer:
         if isinstance(n, Elem):
             return self.name(n.sym) + b"(" + b",".join(self.expr(x) for x in n.subs) + b")"
         if isinstance(n, Unknown):
-            return b"0"
+            return self.name(n.sym) if n.sym is not None else self.filler
         if isinstance(n, UnN):
             inner = self.expr(n.e, 0x100)
             return (bytes([TOK["-"]]) if n.op == "-" else bytes([TOK["NOT"]])) + inner
@@ -102,9 +103,12 @@ class Renderer:
         if isinstance(n, FnN):
             return bytes([TOK["FN"]]) + self.fn_names[n.fn].encode() + b"(" + self.expr(n.arg) + b")"
         if isinstance(n, BinN):
-            p = PRIO[n.op]
-            opb = _rel(n.op) if p == 0x64 else bytes([TOK[n.op]])
-            s = self.expr(n.l, p, False) + opb + self.expr(n.r, p, True)
+            op, left, right_ = n.op, n.l, n.r
+            if n.flip:
+                op, left, right_ = SWAP.get(op, op), n.r, n.l
+            p = PRIO[op]
+            opb = _rel(op) if p == 0x64 else bytes([TOK[op]])
+            s = self.expr(left, p, False) + opb + self.expr(right_, p, True)
             if p < ctx or (p == ctx and right):
                 s = b"(" + s + b")"
             return s

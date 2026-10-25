@@ -48,6 +48,15 @@ class BinN(Node):
     op: str
     l: Node
     r: Node
+    # flippable: the operands can be written in either order with the same code (a simple
+    # operand with a complex one, + * AND OR and comparisons); the order only changes when
+    # symbols and constants are first scanned.  flip: render the other order.
+    flippable: bool = False
+    flip: bool = False
+
+
+def simple(n: Node) -> bool:
+    return isinstance(n, (Leaf, Lit))
 
 
 @dataclass(eq=False)
@@ -70,7 +79,9 @@ class FnN(Node):
 
 @dataclass(eq=False)
 class Unknown(Node):
-    """FRE/POS argument: allocated but never evaluated."""
+    """FRE/POS argument: allocated but never evaluated.  The decompiler puts an otherwise
+    unreferenced local here (sym), so that it is entered into the symbol table."""
+    sym: Sym | None = None
 
 
 SWAP = {"=": "=", "<>": "<>", "<": ">", ">": "<", "<=": ">=", ">=": "<="}
@@ -114,6 +125,7 @@ class Lifted:
     fns: dict[int, FnDef]
     temps: set[Sym]
     line_starts: set[int]
+    unknowns: list[Unknown] = field(default_factory=list)
 
 
 def _has_peep(n: object) -> bool:
@@ -144,6 +156,7 @@ class Machine:
         self.temps = temps
         self.fns = fns
         self.stmts: list[Stmt] = []
+        self.unknowns: list[Unknown] = []
         self.reset()
 
     def reset(self) -> None:
@@ -390,7 +403,7 @@ class Machine:
         elif k in (2, 4):
             a = self.take_num(o)
             sym = "+" if k == 2 else "*"
-            self.num = BinN(sym, mem, a) if is_temp else BinN(sym, a, mem)
+            self.num = BinN(sym, mem, a) if is_temp else BinN(sym, a, mem, flippable=not simple(a))
         elif k in (3, 7):
             a = self.take_num(o)
             self.num = BinN("-" if k == 3 else "/", mem, a)
@@ -428,7 +441,7 @@ class Machine:
                 a, m, t = self.cmp
                 self.cmp = None
                 r = CMP_RT[n]
-                self.num = BinN(SWAP[r], m, a) if t else BinN(r, a, m)
+                self.num = BinN(SWAP[r], m, a) if t else BinN(r, a, m, flippable=not simple(a))
             elif n == "EQ":
                 self.num = UnN("NOT", self.take_num(o))
             else:
@@ -436,7 +449,8 @@ class Machine:
         elif n in ("AND", "OR"):
             if self.test is None:
                 raise LiftError(f"{o!r}: AND/OR without memory operand")
-            self.num = BinN(n, self.test, self.take_num(o))
+            a = self.take_num(o)
+            self.num = BinN(n, self.test, a, flippable=not self.test_temp and not simple(a))
             self.test = None
         elif n == "PUSHSTR":
             self.push_str(self.take_str(o))
@@ -451,7 +465,7 @@ class Machine:
                 raise LiftError(f"{o!r}: string compare operands")
             ld, pu = self.sload, self.sstack.pop()
             r = STRCMP_RT[n]
-            self.num = BinN(SWAP[r], ld, pu) if self.sload_temp else BinN(r, pu, ld)
+            self.num = BinN(SWAP[r], ld, pu) if self.sload_temp else BinN(r, pu, ld, flippable=not simple(pu))
             self.sload = None
             self.slast = "stack" if self.sstack else ""
         elif n == "PUSH.SUB":
@@ -461,7 +475,9 @@ class Machine:
             self.bytes_.append(self.take_num(o))
             self.num = None
         elif n in ("FRE", "POS"):
-            self.num = CallN(n, [Unknown()])
+            u = Unknown()
+            self.unknowns.append(u)
+            self.num = CallN(n, [u])
         elif n in ("PEEK", "PDL"):
             self.num = CallN(n, [self.take_num(o)])
         elif n == "SCRN":
@@ -619,7 +635,12 @@ class Machine:
             self.num = BinN({"FSUBT": "-", "FDIVT": "/", "FPWRT": "^"}[n], self.arg, self.take_num(o))
             self.arg = None
         elif n == "CRDO":
-            if self.print_ is not None:
+            if self.print_ is not None and self.print_.args and (
+                    self.print_.args[-1] == "," or isinstance(self.print_.args[-1], tuple)):
+                # PRINT X, / PRINT TAB(..) emit no CR: this CR is a separate bare PRINT
+                self.print_ = None
+                self.emit("PRINT", o)
+            elif self.print_ is not None:
                 self.print_.end = o.addr + 3
                 self.print_ = None
                 self.stmt_start = None
@@ -812,4 +833,4 @@ def lift(w: Walk) -> Lifted:
             m.boundary = True
         i = m.step(ops, i, o)
     m.close_print()
-    return Lifted(w, m.stmts, fns, temps, starts)
+    return Lifted(w, m.stmts, fns, temps, starts, m.unknowns)

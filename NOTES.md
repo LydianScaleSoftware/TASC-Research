@@ -14,9 +14,8 @@ Entry point for any new session. Phase 3 handoff: `docs/handoff_phase3.md`. Read
   sources into files identical to PASS0, PASS1 and PASS2**
   (`python -m tasc.selfcompile`; experiments/p3_selfcompile). So the goal-5
   method is proven; what remains for Phase 5 is naming, numbering and
-  documentation under the same constraints. Corpus: 1,479/1,528 recorded
-  compiles round-trip (`--corpus`); the tail is FRE/POS arguments, RESUME-option
-  programs and random-program corners.
+  documentation under the same constraints. Corpus: all 1,530 recorded compiles round-trip (`--corpus`,
+  pytest test_corpus_round_trip).
 - Generated sources: `src/generated/PASSn.txt` (listing), `PASSn.bas` (tokenized).
   Names are hash-solver names (meaningless); numbering 5s.
 - Predictor fix found in PASS1: FN params and per-function FN temps allocated
@@ -24,7 +23,8 @@ Entry point for any new session. Phase 3 handoff: `docs/handoff_phase3.md`. Read
 - Next: Phase 3 lifting proper: annotate PASS1 (parser, expression scan/reduce,
   symbol table in BX(), emitter at 5390-5450) and PASS2 (backpatch, allocation),
   replace observed-only rules (string compare swap; main temps int-first;
-  unparsed skip) with TASC's code; add RUN to the predictor. Corpus tail.
+  unparsed skip) with TASC's code; add RUN to the predictor. mypy: tasc/decomp
+  adds ~35 strict errors (typing only).
 
 ### How the predictor is debugged
 `python -m tasc.predict_check [family]` (summary), `python -m tasc.linediff

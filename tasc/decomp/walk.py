@@ -150,6 +150,8 @@ def walk(data: bytes, load: int) -> Walk:
         w = _walk(data, load, forced)
         refs = {o.words[0] for o in w.ops if o.kind == "rt" and o.name in ("STRLIT", "STRLIT.PROMPT")}
         bad = {o.addr for o in w.ops if o.kind == "lit" and o.addr + 3 not in refs}
+        chain = _data_chain(data, load)
+        bad |= {o.addr for o in w.ops if o.kind == "data" and o.addr + 3 not in chain}
         if not bad:
             return w
         forced |= {min(bad)}
@@ -299,6 +301,21 @@ def _storage_syms(w: Walk, storage) -> None:  # type: ignore[no-untyped-def]
             if o.name == "NEXT" and s.routine is None and s.vtype == "real":
                 pass
             o.sym = s
+
+
+def _data_chain(d: bytes, load: int) -> set[int]:
+    """DATA block addresses: header DATAPTR, then each block's link word."""
+    out: set[int] = set()
+    p = d[3] | d[4] << 8
+    while p and p not in out and load <= p < load + len(d):
+        out.add(p)
+        q = p - load
+        while q < len(d) and d[q] != 0xFF:
+            q += 1 + d[q]
+        if q + 2 >= len(d):
+            break
+        p = d[q + 1] | d[q + 2] << 8
+    return out
 
 
 def _data_block(d: bytes, load: int, start: int, target: int) -> list[bytes] | None:

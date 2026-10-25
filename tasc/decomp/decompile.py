@@ -17,12 +17,14 @@ from __future__ import annotations
 import re
 import sys
 from collections import Counter
+from collections.abc import Iterator
 from dataclasses import dataclass, field
 
 from tasc.compiler.assemble import compile_program
 from tasc.compiler.parse import TOK
 from tasc.decomp import names as N
-from tasc.decomp.lift import Lifted, lift
+from tasc.decomp.lift import BinN, FnDef, Leaf, Lifted, lift
+from tasc.decomp.lift import Node as ExprNode
 from tasc.decomp.render import Line, Renderer, layout, listing, program_bytes
 from tasc.decomp.walk import Sym, walk
 from tasc.harness import Options
@@ -142,6 +144,9 @@ def _render(u: Unit, names: dict[Sym, str]) -> None:
         fn_names[f.addr] = pool.take(None, 0, "fn", False)
         params[f.param] = pool.take(None, 0, "", False)
     r = Renderer(names, line_of, fn_names, params)
+    pre = [s for s in u.ints if not s.array] or [s for s in _commons(u) if not s.array]
+    if pre:
+        r.filler = names[pre[0]].encode()
     u.decl_lines = [(5 * (i + 1), b) for i, b in enumerate(decl)]
     u.body_lines = []
     u.line_addr = {}
@@ -152,6 +157,11 @@ def _render(u: Unit, names: dict[Sym, str]) -> None:
             for prev, st in zip(sts, sts[1:]):
                 body += (b"" if prev.kind == "IF" else b":") + r.stmt(st)  # IF c THEN stmt
             u.body_lines.append((ln.number, body))
+            u.line_addr[ln.number] = ln.addr
+        elif ln.addr == final_end and final_end in lf.line_starts:
+            # a jump to the appended final END (e.g. to a RESUME line, no code with the
+            # option off): a line that generates no code
+            u.body_lines.append((ln.number, REM))
             u.line_addr[ln.number] = ln.addr
     u.program = program_bytes(u.decl_lines + u.body_lines)
     u.text = listing(u.decl_lines + u.body_lines)
@@ -301,14 +311,61 @@ def complete_common(units: list[Unit]) -> None:
         for a, s in layout_.items():
             if a not in w.syms:
                 w.syms[a] = Sym(a, s.vtype, s.array, s.dims, "common")
+        # COMMON slots no unit refers to: declared placeholders (an unreferenced numeric
+        # COMMON variable has no routine, so only its size matters; string COMMON
+        # variables always get a routine and so are never unreferenced)
         h = w.header
-        pos = h["COMBEG1"] + 1
-        for s in _commons(u):
-            if s.addr != pos and s.addr != h["NUMCOMEND"] + 1:
-                raise DecompileError(f"{u.name}: COMMON gap ${pos:04X}-${s.addr - 1:04X}")
-            pos = s.addr + s.size()
-        if _commons(u) and pos != h["STRCOMEND"] + 1:
-            raise DecompileError(f"{u.name}: COMMON ends at ${pos - 1:04X}, header ${h['STRCOMEND']:04X}")
+        for lo, hi, area in ((h["COMBEG1"] + 1, h["NUMCOMEND"] + 1, "num"),
+                             (h["NUMCOMEND"] + 1, h["STRCOMEND"] + 1, "str")):
+            pos = lo
+            for s in [x for x in _commons(u) if lo <= x.addr < hi] + [None]:
+                end = hi if s is None else s.addr
+                while pos < end:
+                    n = end - pos
+                    size, vt = (2, "str") if area == "str" else ((5, "real") if n % 2 or n == 5 else (2, "int"))
+                    if pos + size > end:
+                        raise DecompileError(f"{u.name}: COMMON gap ${pos:04X}-${end - 1:04X} not fillable")
+                    w.syms[pos] = Sym(pos, vt, region="common")
+                    pos += size
+                if s is not None:
+                    pos = max(pos, s.addr + s.size())
+
+
+def fill_gaps(u: Unit) -> None:
+    """Local slots no code refers to (a variable that appears only as a FRE/POS argument,
+    which TASC enters into the symbol table but never evaluates): create symbols for them
+    (2 bytes numeric = integer, 5 = real, string area = string) and hand them to the
+    FRE/POS arguments in order."""
+    w = u.lifted.walk
+    h = w.header
+    used = sorted((s for s in w.syms.values() if s.region == "local"), key=lambda s: s.addr)
+    phantoms: list[Sym] = []
+    for lo, hi, area in ((h["LOCBEG1"] + 1, h["LOCNUMEND"] + 1, "num"), (h["LOCNUMEND"] + 1, h["LOCSTREND"] + 1, "str")):
+        pos = lo
+        for s in [x for x in used if lo <= x.addr < hi] + [None]:
+            end = hi if s is None else s.addr
+            while pos < end:
+                if area == "str":
+                    size, vt = 2, "str"
+                elif (end - pos) % 5 == 0 or (end - pos) % 2:
+                    size, vt = 5, "real"
+                else:
+                    size, vt = 2, "int"
+                if pos + size > end:
+                    raise DecompileError(f"{u.name}: local gap ${pos:04X}-${end - 1:04X} not fillable")
+                ph = Sym(pos, vt, region="local")
+                w.syms[pos] = ph
+                phantoms.append(ph)
+                pos += size
+            if s is not None:
+                pos = max(pos, s.addr + s.size())
+    unk = list(u.lifted.unknowns)
+    for ph in phantoms:
+        if ph.vtype == "int":
+            continue  # REM! INTEGER enters it
+        if not unk:
+            raise DecompileError(f"{u.name}: unreferenced local ${ph.addr:04X} and no FRE/POS argument for it")
+        unk.pop(0).sym = ph
 
 
 def decompile_many(units: list[Unit]) -> list[Unit]:
@@ -316,7 +373,15 @@ def decompile_many(units: list[Unit]) -> list[Unit]:
         u.lf = lift(walk(u.data, u.load))
     complete_common(units)
     for u in units:
+        fill_gaps(u)
         u.named = _named(u.lifted)
+    decompile_names(units)
+    _repair_order(units)
+    return units
+
+
+def decompile_names(units: list[Unit]) -> list[Unit]:
+    """Choose names (from a provisional compile's insertion order) and render."""
     # provisional names: learn the insertion order of scanned symbols
     seqs: list[dict[Sym, int]] = []
     for u in units:
@@ -341,6 +406,75 @@ def decompile_many(units: list[Unit]) -> list[Unit]:
         u.names = nm
         _render(u, nm)
     return units
+
+
+def _nodes(x: object) -> Iterator[object]:
+    """Every expression node under a statement argument (FN bodies included)."""
+    if isinstance(x, (list, tuple)):
+        for y in x:
+            yield from _nodes(y)
+    elif isinstance(x, FnDef):
+        yield from _nodes(x.body)
+    elif isinstance(x, ExprNode):
+        yield x
+        for f in ("l", "r", "e", "arg"):
+            if hasattr(x, f):
+                yield from _nodes(getattr(x, f))
+        for f in ("subs", "args"):
+            if hasattr(x, f):
+                yield from _nodes(getattr(x, f))
+
+
+def _pool(data: bytes, load: int) -> list[tuple[str, bytes]]:
+    w = walk(data, load)
+    return [(s.vtype, s.const) for s in sorted(w.syms.values(), key=lambda s: s.addr) if s.region == "const"]
+
+
+def _consts_in(n: object) -> set[tuple[str, bytes]]:
+    return {(x.sym.vtype, x.sym.const) for x in _nodes(n) if isinstance(x, Leaf) and x.sym.region == "const"}
+
+
+def _repair_order(units: list[Unit], rounds: int = 12) -> None:
+    """Operands of + * AND OR and comparisons can be written in either order with the same
+    code, but the order decides when constants are first scanned, i.e. their order in the
+    pool.  Flip such nodes until each unit's pool order matches the original."""
+
+    def score(u: Unit) -> int:
+        try:
+            res = compile_program(u.program, u.opts)
+        except Exception:  # noqa: BLE001
+            return -1
+        a, b = _pool(u.data, u.load), _pool(res.data, res.load)
+        if a == b:
+            return 1 << 30
+        return next((i for i in range(min(len(a), len(b))) if a[i] != b[i]), min(len(a), len(b)))
+
+    for u in units:
+        flips = [n for st in u.lifted.stmts for n in _nodes(st.args) if isinstance(n, BinN) and n.flippable]
+        if not flips:
+            continue
+        best = score(u)
+        for _ in range(rounds):
+            if best == 1 << 30 or best < 0:
+                break
+            res = compile_program(u.program, u.opts)
+            a, b = _pool(u.data, u.load), _pool(res.data, res.load)
+            want, have = a[best], b[best] if best < len(b) else None
+            cands = [n for n in flips if (want in _consts_in(n.l) and have in _consts_in(n.r))
+                     or (want in _consts_in(n.r) and have in _consts_in(n.l))] or \
+                    [n for n in flips if want in _consts_in(n.l) | _consts_in(n.r)]
+            improved = False
+            for n in cands:
+                n.flip = not n.flip
+                decompile_names(units)
+                sc = score(u)
+                if sc > best:
+                    best, improved = sc, True
+                    break
+                n.flip = not n.flip
+            if not improved:
+                decompile_names(units)
+                break
 
 
 def decompile(data: bytes, load: int, opts: Options | None = None) -> Unit:
@@ -420,7 +554,7 @@ def _corpus(prefix: str) -> None:
             fails.append(f"{dd.parent.name}/{dd.name}: {res}")
     for k, n in stats.most_common():
         print(f"{n:5d}  {k}")
-    for f in fails[:60]:
+    for f in fails[:200]:
         print("  ", f)
 
 
