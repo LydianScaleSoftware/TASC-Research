@@ -13,7 +13,7 @@ the name is the generated name. Status: [code] = read from the decompiled code;
 | $42E9 | 115-170 | DEF FNs | FN A letter (65-90), FN AA digit, FN AB operator token (200-209, NOT 198, internal >=235), FN AC operator or ( ) or end, FN AD function token 210-227/229/230, FN AE string function 231-234/228, FN AF end of statement (`:` or 0), FN AG +32767 (word bias), FN AH operand is integer (CX(x,0) = -8 int temp, -9, -1 int), FN AI/AJ op classes, FN AK operand in the accumulator (CX(x,0) = -5 / -9) |
 | $458C | 175-285 | start | prints, reads the first line (GOSUB 3050 x3, 3035) |
 | $46B9 | 305-370 | statement loop | 310 `B3=0`; 315 end of statement -> 2435; 320 non-REM clears D2 (declarations must come first); **330 dead-code skip: `IF C8 AND GT<>131 AND GT<>178` (not DATA, not REM) -> 2485** [confirmed]; 335-370 dispatcher `ON token-127 GOTO` (three lists of 21/21/22); 375 letter -> implicit LET |
-| $4801 | 395-500 | FOR | A7 = integer loop variable; FOR.INIT entry 5 (int) via 5390 or 125; LIMIT 129+A7; STEP 3 / 126 |
+| $4801 | 395-500 | FOR | A7 = 1 for a **real** loop variable, 0 for an integer one (`A7 = -1 <> CK`; corrected session 6); init = variable op 20+A7+D4 (21-24, PASS2 turns it into JSR FOR.INIT entry + address word); limit entry 5 (real loop, 5390) or 125 (integer loop, 5400); no STEP: 129+A7 (IFOR.STEP1 / FOR.STEP1); STEP: 3 (real) / 126 (integer) |
 | $489D | 505-545 | NEXT | entry 25 per variable, 0 word for a bare NEXT |
 | $48CE | 550-645 | DATA | JMP over items, $FF, link word chained through C |
 | $499D | 650-755 | INPUT | prompt literal via 3660; entries 39-44, 48 |

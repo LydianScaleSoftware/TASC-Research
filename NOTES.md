@@ -4,7 +4,10 @@ Entry point for any new session. **Current handoff: `docs/handoff_phase5.md`** (
 (`../TASC_handoff_prompt.md`) for the full mission and rules. RAG collection
 **`TASC project`** holds findings as chunks (status in brackets in each title).
 
-## Status (2026-10-25, end of session 5)
+## Status (2026-10-25, session 6)
+
+- **Session 6: PASS1 statement-level commentary done** (PASS1.ann ~1,000 [lines]; 287 bare DOC lines left, all trivial). New tool `python -m tasc.annlist <PASS> [first [last]]`. Annotation fixes: IL = 1 for a REAL FOR variable; SG = value must be real; EC ($0947) resets the stack and DATA pointer. Program bytes unchanged (PASSn.bas/.txt identical), so the session-5 real-TASC proof stands; re-prove before the final deliverable. Next: PASS0 annotations, then PASS2.
+
 
 - Phases 0, 1, 2, R: done (sessions 1-3; details in RAG phase0/1/2, runtime*).
 - **Phase 3: closed (2026-10-25, agreed with Mark).** Exit criterion met: the
