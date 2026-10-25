@@ -36,6 +36,12 @@ CASES: list[tuple[str, str, Options]] = [
     ("pos_str", "10 X=POS(B$)+1:PRINT X\n", Options()),
     ("fre_num", "10 X=FRE(A)\n", Options()),
     ("fre_strarr", "10 X=FRE(A$(2))\n", Options()),
+    # PASS1 6555: the store-load peephole also skips an AND/OR memory test (CK=20)
+    ("peep_and", "10 X=5:Y=X AND X\n", Options()),
+    ("peep_or_int", "10 X%=A:Y=X% OR X%\n", Options()),
+    ("peep_if_and", "10 X=A:IF X AND X THEN 10\n", Options()),
+    ("peep_and_other", "10 X=A:Y=X AND B\n", Options()),
+    ("peep_read_and", "10 READ X:Y=X AND X\n20 DATA 1\n", Options()),
 ]
 
 

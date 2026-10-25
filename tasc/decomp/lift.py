@@ -463,6 +463,9 @@ class Machine:
             else:
                 raise LiftError(f"{o!r}: comparison without operands")
         elif n in ("AND", "OR"):
+            if self.test is None and isinstance(self.num, Leaf) and self.num.peep:
+                # PASS1 6555: the memory test of the variable just stored was dropped too
+                self.test, self.test_temp = Leaf(self.num.sym, peep=True), False
             if self.test is None:
                 raise LiftError(f"{o!r}: AND/OR without memory operand")
             a = self.take_num(o)

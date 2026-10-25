@@ -1,0 +1,1 @@
+10 X=A:IF X AND X THEN 10

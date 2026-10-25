@@ -1,0 +1,34 @@
+{
+ "id": "peep_if_and",
+ "key": "4e9ed29565aaeb70",
+ "source": "10 X=A:IF X AND X THEN 10\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 55,
+ "obj_sha256": "9395bf6fc30b85d36a929cda63b7b10ac5f425f322e7f3db859588f35047593c",
+ "cycles": 56230079,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6118",
+  "LOCAL VARIABLES": "6119 - 6128",
+  "HIGHEST MEMORY LOCATION": "6128"
+ }
+}

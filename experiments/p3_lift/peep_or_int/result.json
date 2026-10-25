@@ -1,0 +1,34 @@
+{
+ "id": "peep_or_int",
+ "key": "080745c54ba48b65",
+ "source": "10 X%=A:Y=X% OR X%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 74,
+ "obj_sha256": "ceb6d62882e02c6e24e0a7d68debef55866f79ada648f70ada4f8073d081c23a",
+ "cycles": 56495001,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6137",
+  "LOCAL VARIABLES": "6138 - 6149",
+  "HIGHEST MEMORY LOCATION": "6149"
+ }
+}

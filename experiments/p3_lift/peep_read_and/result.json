@@ -1,0 +1,38 @@
+{
+ "id": "peep_read_and",
+ "key": "500be02dbc75d8e7",
+ "source": "10 READ X:Y=X AND X\n20 DATA 1\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 61,
+ "obj_sha256": "1ae15f2fb76dbfae4a8742c23bc817e995215e17c84462a65bf7c2dfda9081e2",
+ "cycles": 56192982,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6096
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6124",
+  "LOCAL VARIABLES": "6125 - 6134",
+  "HIGHEST MEMORY LOCATION": "6134"
+ }
+}

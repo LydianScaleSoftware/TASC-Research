@@ -259,13 +259,19 @@ class Compiler:
     def jsr_rom(self, name: str) -> None:
         self.emit(JSR, Ref("abs", ROM[name]), name)
 
+    def just_stored(self, s: Sym) -> bool:
+        """PASS1 6555: the last thing emitted is a store (op1) of s in this line (TASC: BJ = s
+        and the store is the last 3 bytes; BJ is cleared at each line start)."""
+        if not self.items:
+            return False
+        last = self.items[-1]
+        return (last.op == JSR and last.ref is not None and last.ref.kind == "entry" and last.ref.a is s
+                and last.ref.b == 1)
+
     def entry(self, s: Sym, op: int) -> None:
         # store-load peephole: a load right after a store of the same symbol in the same line
-        if op == 0 and self.items:
-            last = self.items[-1]
-            if (last.op == JSR and last.ref is not None and last.ref.kind == "entry" and last.ref.a is s
-                    and last.ref.b == 1):
-                return
+        if op == 0 and self.just_stored(s):
+            return
         s.ops.add(op)
         self.emit(JSR, Ref("entry", s, op), f"{s!r}.op{op}")
 
@@ -555,6 +561,11 @@ class Compiler:
         return self.test_sym(s)
 
     def test_sym(self, s: Sym) -> str:
+        if self.just_stored(s):
+            # PASS1 6555 (confirmed p3_lift peep_and): the peephole also drops an AND/OR memory
+            # test of the variable just stored, LDA and ORA alike (TASC quirk: AND/OR then test
+            # whatever the store routine left in A)
+            return s.vtype
         self.emit(LDA, Ref("store", s, 0), f"LDA {s!r}")
         if s.vtype == "int":
             self.emit(ORA, Ref("store", s, 1), f"ORA {s!r}+1")

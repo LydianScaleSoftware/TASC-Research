@@ -1,0 +1,34 @@
+{
+ "id": "peep_and",
+ "key": "89c0ac295ebbcfb4",
+ "source": "10 X=5:Y=X AND X\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 67,
+ "obj_sha256": "d83bce7be5fcbc2ddb0f54595193d03ec567add4497043dfaff4aa51583a25a2",
+ "cycles": 56103834,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6130",
+  "LOCAL VARIABLES": "6131 - 6140",
+  "HIGHEST MEMORY LOCATION": "6140"
+ }
+}
