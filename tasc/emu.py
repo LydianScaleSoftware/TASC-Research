@@ -148,6 +148,7 @@ def run_capturing(
     transcript: Transcript,
     max_cycles: int,
     stop_on_key_wait: bool = True,
+    until_text: str | None = None,
 ) -> dict[str, Any]:
     """Run, logging every line that scrolls off (and every screen cleared by HOME).
 
@@ -157,7 +158,10 @@ def run_capturing(
     """
     budget = max_cycles
     while True:
-        r = emu.run(until_key_wait=stop_on_key_wait, max_cycles=budget)
+        if until_text is not None:
+            r = emu.run(until_key_wait=stop_on_key_wait, max_cycles=budget, until_text=until_text)
+        else:
+            r = emu.run(until_key_wait=stop_on_key_wait, max_cycles=budget)
         budget -= int(r["cycles_executed"])
         pc = int(r["cpu"]["pc"].lstrip("$"), 16)
         if r["stop_reason"] == "breakpoint" and pc == MON_SCROLL:

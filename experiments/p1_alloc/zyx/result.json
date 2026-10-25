@@ -1,0 +1,34 @@
+{
+ "id": "zyx",
+ "key": "e16d0a2d0bb06aa5",
+ "source": "10 Z=1:Y=1:X=1",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 82,
+ "obj_sha256": "69c2c59391eb7686827180c65b58ed7912f44c8e4a69ec89fd038b031d832315",
+ "cycles": 56886745,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6145",
+  "LOCAL VARIABLES": "6146 - 6160",
+  "HIGHEST MEMORY LOCATION": "6160"
+ }
+}

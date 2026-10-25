@@ -1,0 +1,33 @@
+{
+ "id": "end_nolist",
+ "key": "43b9eed35592b450",
+ "source": "10 END",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": false,
+  "pause": false,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 26,
+ "obj_sha256": "4d7579d493673a17f386650faf553da405de4570b12bdc8ee283cdbd9e998dad",
+ "cycles": 53290582,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6089",
+  "HIGHEST MEMORY LOCATION": "6089"
+ }
+}

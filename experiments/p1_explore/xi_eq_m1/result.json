@@ -1,0 +1,34 @@
+{
+ "id": "xi_eq_m1",
+ "key": "4e145d73706b0a09",
+ "source": "10 X%=-1",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 52,
+ "obj_sha256": "ad611fcf29942628afda7b45e4767b69d9358745ac690da7c520e4217bc80501",
+ "cycles": 52726012,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S002.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6115",
+  "LOCAL VARIABLES": "6116 - 6117",
+  "HIGHEST MEMORY LOCATION": "6117"
+ }
+}

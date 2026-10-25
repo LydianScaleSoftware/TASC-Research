@@ -1,0 +1,34 @@
+{
+ "id": "s_eq_t",
+ "key": "a49743be9802f736",
+ "source": "10 A$=B$",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 49,
+ "obj_sha256": "c746484bf2d22b26639ec58a281c6c3007979aa12a33e123d1009c6cf7e994f4",
+ "cycles": 52359031,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S002.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6112",
+  "LOCAL VARIABLES": "6113 - 6116",
+  "HIGHEST MEMORY LOCATION": "6116"
+ }
+}
