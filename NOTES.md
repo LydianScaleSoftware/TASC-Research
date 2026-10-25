@@ -20,11 +20,18 @@ Entry point for any new session. Phase 3 handoff: `docs/handoff_phase3.md`. Read
   Names are hash-solver names (meaningless); numbering 5s.
 - Predictor fix found in PASS1: FN params and per-function FN temps allocated
   in creation order. RESUME/Debug list confirmed from PASS1's dispatcher.
-- Next: Phase 3 lifting proper: annotate PASS1 (parser, expression scan/reduce,
-  symbol table in BX(), emitter at 5390-5450) and PASS2 (backpatch, allocation),
-  replace observed-only rules (string compare swap; main temps int-first;
-  unparsed skip) with TASC's code; add RUN to the predictor. mypy: tasc/decomp
-  adds ~35 strict errors (typing only).
+- **Lifting (session 5):** PASS1/PASS2 read; address-keyed notes in
+  `docs/lift/PASS1.md`, `PASS2.md`; RAG `phase3-lift.md`. Rules now from TASC's
+  code: temps (first-free per-type chains), comparison swaps (GUESS markers gone),
+  debug list, dead-code skip, hash, constants, operator table, routine/local order.
+  New rules found and confirmed on real TASC (`python -m tasc.lift_checks`, 25/25):
+  RUN, REM! CLEAR debug call, string routines always emitted, complex FRE/POS
+  arguments evaluated, peephole also drops an AND/OR test. 1,555/1,555 predicted
+  and decompiled.
+- Next: finish reading the parser corners (functions 4270-4440, arrays 3285-3500,
+  DATA/INPUT details) and PASS0; random batches with RUN/FRE/AND-after-store;
+  Phase 4 exit is effectively met (decompiler round trips everything).
+  mypy: tasc/decomp adds ~35 strict errors (typing only).
 
 ### How the predictor is debugged
 `python -m tasc.predict_check [family]` (summary), `python -m tasc.linediff

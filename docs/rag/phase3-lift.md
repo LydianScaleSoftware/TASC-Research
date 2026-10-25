@@ -1,0 +1,25 @@
+# TASC project: Phase 3 lift (predictor rules derived from PASS1/PASS2 code)
+
+Session 5 (2026-10-25). Sources: decompiled `src/generated/PASS1.txt` / `PASS2.txt`; address-keyed notes `docs/lift/PASS1.md`, `docs/lift/PASS2.md` (routine maps, variables). Real-TASC checks: `python -m tasc.lift_checks` (family p3_lift, 25 cases, all match the predictor). Recorded compiles: 1,555/1,555 predicted, 1,555/1,555 decompiled and recompiled.
+
+## [confirmed] New rules found in TASC's code (predictor changed)
+
+1. RUN (PASS1 1290-1310): `RUN` = JMP $03F5 (the & vector, which RUNTIME points at the object: re-runs the program); `RUN n` = JSR $08AA (CLEAR, call-table entry 61) + JMP line. Debug call first; dead code after. Evidence p3_lift run, run_n, run_dead, run_rd, run_n_rd.
+2. `REM! CLEAR COMMON` / `REM! CLEAR CHAIN` go through the debug emitter (PASS1 1585-1615): with RESUME/Debug on they get JSR $1423 first (not after THEN). Evidence clrcom_rd, clrchain_rd, clrcom_then_rd.
+3. Every string symbol gets a routine, used or not (PASS2 pass 3, line 1105, no op-mask check). Evidence fre_str, pos_str.
+4. FRE/POS (PASS1 generator 6250) emit the call without loading the operand: a simple argument is only entered in the symbol table, but a complex one (array element, expression) is still computed. Evidence fre_strarr (`FRE(A$(2))` computes the element).
+5. The store-load peephole (PASS1 6555: skip when the symbol is the last stored one, BJ, and the store is the last 3 bytes, D7=BL-3; BJ cleared at line start) also applies to an AND/OR memory test (CK=20): `X=5:Y=X AND X` has no LDA, so RT.AND tests whatever the store routine left in A (TASC quirk to preserve). Integer stores of a real value (op 7) never arm it. Evidence peep_and, peep_if_and, peep_read_and (mismatch before the fix), peep_or_int.
+
+## [confirmed] Rules that were observed only and are now read from the code
+
+- Temps (PASS1 5460-5525, 6285-6375): per-type chains in the symbol table (5 int, 6 string, 7 real; chain 8 for everything inside a DEF FN, including the parameter); a request takes the first free temp of the type, use frees it, the end of each DEF FN freezes its chain-8 temps. PASS2 allocates chain 5 before chain 7, so main temps are int first; params and FN temps share chain 8 in creation order. The predictor now uses first-free chains (identical bytes on 2,898 random programs compared with the old depth-stack model).
+- Comparisons (PASS1 5920-5980, 6085-6120): A0 = swapped relation; if the right operand is in the accumulator, the left is applied with the swapped relation, else the left is loaded and the right applied. Strings likewise (PUSHSTR when both are simple). Evidence cmp_lt, cmp_ge, scmp_eq, scmp_lt, scmp_ge, scmp_gt2. (Were GUESS markers.)
+- RESUME/Debug list: dispatcher map (see phase3.md).
+- Dead code (PASS1 330): after C8 is set (END, STOP, NEW, GOTO, IF..THEN n, RETURN, IF..THEN RETURN, ONERR, RUN, RESUME with debug) every keyword statement except DATA (token 131) and REM (178) goes to the "WARNING / LINE NUMBER n / IGNORED" handler (2485), which skips to the next `:` outside quotes; implicit LET never reaches the check. C8 is cleared when a new line is read.
+- Symbol hash (PASS1 3260-3275, 5030-5035): DC = 99*c1 + c2 (ASCII; characters after the second skipped), bucket = (DC + CK) mod 32, CK = -3 real, -2 string, -1 int, +22 arrays; INTEGER-declared names are looked up with the real code -3 and entered as int (5040). Same as the observed formula.
+- Constants (PASS1 4160-4220): int if the integer-constants option is on and INT(v)=v and v<=32767; else real, packed with USR (ROM FIN rounding) and hashed by the exponent byte; int constants hashed by value mod 32. An int constant used in real mode is replaced by its real form, entered then (6550).
+- Operator table (PASS0 DATA 885, copied to AJ(16,2)): token, stack priority, input priority: ( 1/14, ) 13/1, NOT 13/14, + - 9/8, * / 11/10, ^ 13/12, AND 5/4, OR 3/2, > = < and internal >= <= <> (235-237) 7/6, unary minus (internal 239) 13/14. Reduce while stack priority > input priority (4760). This is parse.py's precedence model (tight unary minus and NOT, left-associative ^).
+- Relational pairs (4585-4685): >= and =>, <= and =<, <> and ><; a `+` after a string operand is concatenation (internal 238); a string operand ends the expression unless the operator stack is empty, `(` or AND/OR (PRINT juxtaposition).
+- +-3 integer entries (PASS1 5390/5400): AP=1 sites store the integer entry (real operands get -3), AP=3 sites the real entry (integer operands get -3: CALL, HIMEM:, POKE/WAIT address, PEEK = the MINUS3 set).
+- COMMON line addresses (PASS1 1750-1760): each COMMON declaration moves the program start (AM) and resets the code address BL = AM+20, so lines up to the last declaration keep the old start + 20.
+- Constant pool, COMMON allocation, routine and local order, dispatchers, array routines (undimensioned = 10 per subscript), backpatching: PASS2 (see docs/lift/PASS2.md); all match the predictor's assemble.py.
