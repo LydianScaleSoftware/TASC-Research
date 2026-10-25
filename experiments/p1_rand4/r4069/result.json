@@ -1,0 +1,70 @@
+{
+ "id": "r4069",
+ "key": "e5fc2f0586f3c7d7",
+ "source": "10 REM! INTEGER K\n20 DIM D$(10),A(9)\n30 ON -((-((N2%-Q1%)))) GOTO 20,60,30,70\n40 C$=RIGHT$(LEFT$(D$(M%),ABS(127)),((.001-X))*((A% OR A(100))))\n50 HCOLOR=NOT B+32767\n60 N2%=B\n70 VTAB 1E3:PRINT N2$,:IF (XY) THEN A(K)=((PEEK(7) OR 368>=W))<=W\n80 N2$=\"X Y\"\n90 M$=M$:PRINT LEFT$(M$,Q1%+W)+LEFT$(D$(A%),B);D$(ASC(D$(A%))<Q1%);\n100 Q1%=X<=((((5 OR M%))<>W))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 571,
+ "obj_sha256": "c648fc86d7d0eae146826c037ce5aa95aef25504fba159ecfea21f868ea3cdb2",
+ "cycles": 83975352,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6108
+  },
+  {
+   "line": 50,
+   "addr": 6159
+  },
+  {
+   "line": 60,
+   "addr": 6171
+  },
+  {
+   "line": 70,
+   "addr": 6177
+  },
+  {
+   "line": 80,
+   "addr": 6242
+  },
+  {
+   "line": 90,
+   "addr": 6257
+  },
+  {
+   "line": 100,
+   "addr": 6323
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6634",
+  "LOCAL VARIABLES": "6635 - 6751",
+  "HIGHEST MEMORY LOCATION": "6751"
+ }
+}

@@ -1,0 +1,159 @@
+{
+ "id": "r4180",
+ "key": "f8375b10237036e6",
+ "source": "10 REM! INTEGER J\n20 REM! USECOMMON Z,Q1,N2%\n30 DIM D(2),B$(12),P%(11,2)\n40 ON B% GOTO 110:IF (D(0)+827-ABS(J)<=(SGN(AB))) THEN IF (Q1) THEN Q1=ATN(ABS(764)*((3.14159-Y%))):N2%=160\n50 N2$=B$(SGN(A% AND A%))\n60 HCOLOR=-(((B%)<Y%-745)):SPEED=Q1\n70 ON -P%(.001,B%)<NOT ((0.1 OR Z)) GOTO 30:C=-1000\n80 N2$=B$(((40000 OR B%))-((Y% OR Z))):P%(1=J,1)=C:X$=B$(NOT ((D(B%)>C)))\n90 READ X$,W\n100 FOR Z=(B%) TO (C-B%) STEP (NOT 2.25/W)\n110 READ AB:XY$=CHR$(TAN(-Q1))\n120 FOR Q1=(AB) TO (LOG(AB)<((NOT 3>((Y%>0))))) STEP (-AB):XY$=N2$:PRINT\n130 B$(N2%)=MID$(X$+B$(B%),(917)):B%=(D(A%)):PRINT B$(6308);Z,\n140 DATA ,\"A,B\",\"A,B\":D(-30585)=3:FOR J=(100/((Y%*Z>P%(Y%,A%)/A%))) TO (361 AND 40)\n150 FOR AB=(Q1) TO (-((AB*TAN(A%)))):FOR J=(C*((255=Z-Q1))) TO (127):GOTO 190\n160 P%(J,(P%(N2%,B%)>D(J))>=-0^((W-B%)))=C>=J+D(Y%):POKE C,3*(((Z)>AB)):GOTO 110\n170 Z=(-((B%+D(B%)))):VTAB (AB>=.5)>=((2-P%(A%,A%) OR Q1<45864))\n180 READ N2$:READ J,B%:READ C\n190 XY$=X$:PRINT CHR$(C);P%(-Q1,J)<>INT(-N2%);\n200 PRINT -((NOT Q1)),XY$;:HCOLOR=ATN(C/((Y%>26940)))\n210 PRINT RIGHT$(X$,INT(Y%)>=((N2%=P%(5,J)))),INT(TAN(Z));N2%<((5>=W))<((((Y% AND C))<LOG(Y%)));:PRINT LEN(STR$(D(40413)))-((((Y% OR 356))+((N2%-Y%))));:COLOR=Q1\n220 COLOR=(J AND C*Y%):X$=MID$(STR$(D(A%)),NOT 77,256)+\"HI\":GOSUB 180\n230 READ N2$,AB\n240 J=((Z-ASC(N2$)))*((((AB OR 914))*(Z))):J=INT(LEN(LEFT$(N2$,0)))\n250 IF (-RND(-A%)) THEN HTAB C AND 39:ON 255>=N2% OR N2% GOSUB 70,120:N2$=STR$(255/((Q1+AB)))\n260 B$(C-RND(Y%<>A%))=CHR$(930):C=Y%\n270 X$=X$:INPUT B%,Q1,N2$\n280 IF (943) THEN P%(INT((Z)),A%=0)=D(A%)\n290 ON LOG(C) GOTO 40,90,80,170\n300 Z=ABS(N2%-39/P%(B%,47238)):IF (SIN(100/(J))) THEN PRINT B$(NOT AB);:NEXT J\n310 SPEED=(SGN(B%)-P%(1,N2%)*AB):C=2\n320 X$=XY$:ON B%>-ABS(N2%) GOTO 80,320,270,200:XY$=LEFT$(X$+X$,P%(B%,J))+\"\"\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6076,
+ "obj_len": 2439,
+ "obj_sha256": "c0592013e6082b0de84e02ca35fea39fa229ac329fc3c4ac4ae653e9dc2b629d",
+ "cycles": 193302636,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6096
+  },
+  {
+   "line": 40,
+   "addr": 6096
+  },
+  {
+   "line": 50,
+   "addr": 6184
+  },
+  {
+   "line": 60,
+   "addr": 6208
+  },
+  {
+   "line": 70,
+   "addr": 6232
+  },
+  {
+   "line": 80,
+   "addr": 6289
+  },
+  {
+   "line": 90,
+   "addr": 6385
+  },
+  {
+   "line": 100,
+   "addr": 6397
+  },
+  {
+   "line": 110,
+   "addr": 6432
+  },
+  {
+   "line": 120,
+   "addr": 6453
+  },
+  {
+   "line": 130,
+   "addr": 6521
+  },
+  {
+   "line": 140,
+   "addr": 6575
+  },
+  {
+   "line": 150,
+   "addr": 6673
+  },
+  {
+   "line": 160,
+   "addr": 6731
+  },
+  {
+   "line": 170,
+   "addr": 6842
+  },
+  {
+   "line": 180,
+   "addr": 6914
+  },
+  {
+   "line": 190,
+   "addr": 6938
+  },
+  {
+   "line": 200,
+   "addr": 6998
+  },
+  {
+   "line": 210,
+   "addr": 7037
+  },
+  {
+   "line": 220,
+   "addr": 7202
+  },
+  {
+   "line": 230,
+   "addr": 7264
+  },
+  {
+   "line": 240,
+   "addr": 7276
+  },
+  {
+   "line": 250,
+   "addr": 7330
+  },
+  {
+   "line": 260,
+   "addr": 7402
+  },
+  {
+   "line": 270,
+   "addr": 7438
+  },
+  {
+   "line": 280,
+   "addr": 7468
+  },
+  {
+   "line": 290,
+   "addr": 7518
+  },
+  {
+   "line": 300,
+   "addr": 7536
+  },
+  {
+   "line": 310,
+   "addr": 7599
+  },
+  {
+   "line": 320,
+   "addr": 7638
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S010.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6076 - 8514",
+  "NUMERIC COMMON": "6064 - 6075",
+  "LOCAL VARIABLES": "8515 - 8668",
+  "HIGHEST MEMORY LOCATION": "8668"
+ }
+}

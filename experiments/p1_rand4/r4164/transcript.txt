@@ -1,0 +1,154 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S011
+
+
+OBJECT CODE FILE:
+(DEFAULT S011.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION? NO
+
+COMPILATION LISTING:
+(DEFAULT YES)? YES
+
+PAUSE ON ERRORS:
+(DEFAULT YES)? YES
+
+INTEGER ARITHMETIC:
+(DEFAULT YES)? YES
+
+INTEGER CONSTANTS:
+(DEFAULT YES)? NO
+
+RESUME/DEBUG CODE:
+(DEFAULT NO)? NO
+
+*****BEGINNING PASS 1
+
+
+
+10
+RECOGNIZED  REM ! INTEGER I,K
+20  DIM P$(5),A(7)
+30 I = X <  VAL ( RIGHT$ ("TASC",W))
+40  HLIN  ATN (19409 ^ Q1% / X),( -  ATN
+ (A(A%) >  = AB)) AT ((X >  =  COS (1000
+))) * 5:XY =  ASC ( CHR$ ( NOT A(I))):P$
+( ATN ( NOT ((W% > 256)))) = B$
+50 W% = ((1.5 * 255 <  >  TAN (.001))) *
+ ((((678 OR Q1%)) * ((788 <  = A)))): IF
+ ( ASC (XY$)) THEN  PLOT Q1%,((18267 ^ 9
+64 +  LEN ("X Y"))) / XY
+60 A = 2
+70  DATA -2.5,1:A(Q1%) =  PEEK (0)
+80 I =  - ((((AB > 100)) ^ ((W + W)))):K
+ =  INT (W% < K) <  > W
+90  FOR X = (K) TO (B(K) * B(172) >  = (
+(A = XY)) > K):B$ = "TASC"
+100 XY =  - 914
+110  NEXT :B$ = P$(Q1%):B$ = "HI" + XY$
+120  PRINT Q1%; RIGHT$ ("TASC",W ^ B(5))
+;:W% =  NOT 919
+130  PRINT XY$;"A";: ON (A(W%)) GOTO 210
+
+140  HTAB 0 + ((899 <  > W OR W <  = N2%
+))
+150  POKE A, ABS (I):AB =  NOT ((X - K >
+  =  - W%)): READ Q1%
+160  GOTO 200
+
+*****WARNING
+LINE NUMBER 160
+IGNORED
+
+: IF (A% * ((40 OR A = B(A%)))) THEN  PO
+KE 25234 > W%,AB
+
+
+170  READ X: GOSUB 60:K =  ASC ( CHR$ (A
+%))
+180  DATA HI,-2.5
+190  ON  PEEK ( - .5) GOTO 130,80,70: GO
+SUB 60: VTAB X
+200 W = I:XY =  - (( PEEK (40000) > B(.5
+) - 10)): FOR A = (((((7 >  = AB)) + ((A
+% >  = A%)))) * 39) TO (B(K) ^ A OR  ASC
+ (P$(N2%)) OR Q1%) STEP ( NOT AB)
+210  HTAB A: IF (A - AB > ((I = W * A%))
+) THEN XY$ = N2$ +  STR$ (I) +  MID$ ("X
+ Y",A%): POP
+220 XY = 1194 * 1.5 / W% - A%:XY =  - W%
+
+230 B$ = "HI":W = 140: FOR XY = ( NOT ((
+ SGN (Q1%) ^ ((A(N2%) <  = N2%))))) TO (
+ - ((2 < X)) -  INT (196))
+240  FOR X = (1.5 * .001 >  = ((B(1E3) =
+ N2%))) TO (B(W%)):XY = ((7 = ((N2% <  =
+ 65535)))) - AB: SPEED=  ATN (22837)
+250 XY$ = P$(49152): FOR XY = (A%) TO (
+- 10)
+260  PRINT  NOT XY; CHR$ (K), NOT (( - 1
+02)) / ((X OR  RND (I)));
+270  PRINT XY$, CHR$ (AB),B$;
+280  FOR A = ( - A(X + B(N2%))) TO ( SIN
+ ( NOT ((A / 283)))): GOSUB 90:B$ =  STR
+$ (I) +  RIGHT$ ("X Y",A(Q1%)) + "TASC"
++ P$(Q1%)
+290 P$(W%) =  RIGHT$ ( RIGHT$ (N2$, - 47
+418),A(I) >  - 255)
+
+
+
+*****BEGINNING PASS 2
+
+
+......
+
+
+*****CODE GENERATION COMPLETE
+
+
+COMPILATION INFORMATION AND LINE NUMBER
+REFERENCE TABLE? YES
+
+
+SOURCE FILE: S011
+OBJECT FILE: S011.OBJ
+LIBRARY OCCUPIES 2051 - 6063
+PROGRAM OCCUPIES 6064 - 8262
+
+NO COMMON BLOCK
+
+LOCAL VARIABLES OCCUPY 8263 - 8426
+
+HIGHEST MEMORY LOCATION: 8426
+
+
+LINE# ADDR   LINE# ADDR   LINE# ADDR
+
+10    6084   20    6084   30    6084
+40    6115   50    6226   60    6346
+70    6352   80    6383   90    6434
+100   6509   110   6518   120   6555
+130   6604   140   6635   150   6668
+160   6719   170   6722   180   6743
+190   6757   200   6785   210   6916
+220   6999   230   7038   240   7125
+250   7208   260   7240   270   7293
+280   7320   290   7436
+
+*****COMPILATION COMPLETE
+
+
+]?

@@ -1,0 +1,74 @@
+{
+ "id": "r4037",
+ "key": "02bc9192c1b38eff",
+ "source": "10 REM! INTEGER I,K\n20 AB=ASC(LEFT$(\"123\",32767)):PRINT LEFT$(LEFT$(N2$,A)+CHR$(B%(347)),PEEK(LOG(3.14159)));\n30 ONERR GOTO 50\n40 VTAB 3.14159\n50 PRINT 39;XY%;0+ATN(1E3+65535);:N2$=N2$:PRINT\n60 N2$=N2$:PRINT AB%-(((I) OR ((AB% OR XY%)))),A$+A$+CHR$(1000)+CHR$(256),I*((39489-((XY=N2)))),\n70 PRINT:B%=N2-XY%\n80 PLOT AB% AND -((B%*B%(K))),-((B%(XY%)/((AB%<>I)))):PRINT:PRINT NOT ASC(W$);N2$;\n90 IF (A AND ((B%<M%))+((AB+M%))) THEN 40:HCOLOR=49152-AB>=-A>COS(I)\n100 A=XY%\n110 K=N2-AB%<>-N2<401:A$=W$:FOR A=(A) TO (B%(VAL(\"X Y\")))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 784,
+ "obj_sha256": "6714686aa2fbab45f71bec785a930ac7b6ccd11954b1d11a110c5f65bb62751d",
+ "cycles": 95530905,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6153
+  },
+  {
+   "line": 40,
+   "addr": 6158
+  },
+  {
+   "line": 50,
+   "addr": 6164
+  },
+  {
+   "line": 60,
+   "addr": 6200
+  },
+  {
+   "line": 70,
+   "addr": 6305
+  },
+  {
+   "line": 80,
+   "addr": 6317
+  },
+  {
+   "line": 90,
+   "addr": 6393
+  },
+  {
+   "line": 100,
+   "addr": 6425
+  },
+  {
+   "line": 110,
+   "addr": 6431
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S003.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6847",
+  "LOCAL VARIABLES": "6848 - 6916",
+  "HIGHEST MEMORY LOCATION": "6916"
+ }
+}

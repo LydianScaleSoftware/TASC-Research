@@ -1,0 +1,10 @@
+10 REM! INTEGER K
+20 DIM D$(10),A(9)
+30 ON -((-((N2%-Q1%)))) GOTO 20,60,30,70
+40 C$=RIGHT$(LEFT$(D$(M%),ABS(127)),((.001-X))*((A% OR A(100))))
+50 HCOLOR=NOT B+32767
+60 N2%=B
+70 VTAB 1E3:PRINT N2$,:IF (XY) THEN A(K)=((PEEK(7) OR 368>=W))<=W
+80 N2$="X Y"
+90 M$=M$:PRINT LEFT$(M$,Q1%+W)+LEFT$(D$(A%),B);D$(ASC(D$(A%))<Q1%);
+100 Q1%=X<=((((5 OR M%))<>W))

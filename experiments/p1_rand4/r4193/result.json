@@ -1,0 +1,74 @@
+{
+ "id": "r4193",
+ "key": "9910f578a9e4bd7a",
+ "source": "10 REM! INTEGER I,J\n20 DEF FN F(X)=B(ASC(W$),Y%)<>ABS(ABS(Z))\n30 Y=XY<B(1.5,COS(M%)):X$=\"HI\"\n40 PRINT M%+B(N2%,7)*B(Y%,127);:IF (Y/I^748) THEN 10\n50 DATA 300,HI,300,\"A,B\":J=C\n60 READ J,Y,Z:A%=M%\n70 Y=580:Y%=Y%:M$=MID$(MID$(\"123\",Y-X,Z<1),INT(COS(I)))\n80 A%=Y-FN F(J/A%):XY=ABS(B(I,A%))\n90 HLIN ((56-((XY AND J))))/((((Y>=B(I,J)))+((A%=N2%)))),(TAN(Z)) AT J:HCOLOR=SQR(-5-XY):GOTO 60\n100 FOR Y=(2.25<>M%) TO (LEN(X$)>=-Y) STEP (-((((1+C))^((N2%/A%))))):B(J,Y%)=3*X*I^M%*49152:IF (-27232>-((-484))) THEN PRINT B(N2%,B(J,M%)*100)^((M%>=I<>NOT Z)),\n110 DATA X\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1115,
+ "obj_sha256": "a46ce13ca3c72f7edab5ef777ba1405e0e69d390da077c5d5bfbe2467f9dc973",
+ "cycles": 115821385,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6130
+  },
+  {
+   "line": 40,
+   "addr": 6171
+  },
+  {
+   "line": 50,
+   "addr": 6226
+  },
+  {
+   "line": 60,
+   "addr": 6253
+  },
+  {
+   "line": 70,
+   "addr": 6277
+  },
+  {
+   "line": 80,
+   "addr": 6349
+  },
+  {
+   "line": 90,
+   "addr": 6382
+  },
+  {
+   "line": 100,
+   "addr": 6475
+  },
+  {
+   "line": 110,
+   "addr": 6671
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S006.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7178",
+  "LOCAL VARIABLES": "7179 - 7850",
+  "HIGHEST MEMORY LOCATION": "7850"
+ }
+}

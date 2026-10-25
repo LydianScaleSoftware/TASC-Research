@@ -1,0 +1,94 @@
+{
+ "id": "r4077",
+ "key": "72a787380247c34c",
+ "source": "10 REM! INTEGER K,J\n20 DIM B%(8)\n30 DEF FN F(T)=NOT ((J<=5))+Z\n40 B%(M%)=((AB-127+K))/((((B%(C%)-Y))*B%(C%)))\n50 A%=K\n60 WAIT ((C<=A%))-K<COS(AB),(Q1*((40-K))^((D%(A%,7) AND Q1))),(10):IF (C%) THEN C%=Y\n70 Z$=\"\"\n80 ON Z<AB*AB GOTO 20,120\n90 FOR AB=(D%(K,ATN(.001))) TO (Z)\n100 D%(LOG(A%),A%)=C%:J=255:TEXT\n110 DATA HI,300,-2.5,\"A,B\":A%=-C:PRINT Z$,VAL(W$),SGN(Q1-A%-PEEK(256));\n120 IF (Y AND 45752) THEN 120\n130 NEXT AB\n140 D%(24/B%(599) AND 65535,.5)=AB:DATA 300,300,-2.5:IF (LOG(SIN(3.14159*24))) THEN ON COS(C%) GOTO 60,100\n150 PRINT:FOR K=(LOG(Q1-FN F(B%))) TO (24) STEP (B%)\n160 PRINT C;39*AB;-((446/AB<100));:A$=A$:IF (C) THEN PRINT W$;AB*B%-((K>=B%))+J,((Z-114))*((Q1-((1E3<>C%))));\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1154,
+ "obj_sha256": "332fbcec1f48cab9041aa449be4593d276ea28d8f05a056fa350169ba05aee32",
+ "cycles": 119216945,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6106
+  },
+  {
+   "line": 50,
+   "addr": 6166
+  },
+  {
+   "line": 60,
+   "addr": 6172
+  },
+  {
+   "line": 70,
+   "addr": 6267
+  },
+  {
+   "line": 80,
+   "addr": 6279
+  },
+  {
+   "line": 90,
+   "addr": 6299
+  },
+  {
+   "line": 100,
+   "addr": 6328
+  },
+  {
+   "line": 110,
+   "addr": 6367
+  },
+  {
+   "line": 120,
+   "addr": 6446
+  },
+  {
+   "line": 130,
+   "addr": 6460
+  },
+  {
+   "line": 140,
+   "addr": 6465
+  },
+  {
+   "line": 150,
+   "addr": 6562
+  },
+  {
+   "line": 160,
+   "addr": 6594
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S009.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7217",
+  "LOCAL VARIABLES": "7218 - 7535",
+  "HIGHEST MEMORY LOCATION": "7535"
+ }
+}

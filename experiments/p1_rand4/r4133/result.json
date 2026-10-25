@@ -1,0 +1,86 @@
+{
+ "id": "r4133",
+ "key": "ff2cdd7dccefbd58",
+ "source": "10 REM! INTEGER I,K\n20 DIM B$(10,10)\n30 AB$=\"\":READ B%,B%:AB$=RIGHT$(W$,3)\n40 IF (-((X*ABS(XY%)))) THEN IF (796) THEN X=((((XY AND A))<Y))/5:W$=Y$\n50 AB$=Y$:READ XY\n60 A=-((-Y))<((Y<VAL(\"A\")))\n70 B$(K,N2%)=Y$:HLIN AB%,(NOT A) AT X-((127 OR K<=100))\n80 B$(1,5)=STR$(32767=44835>I)\n90 XY=K:GOTO 50:IF (K AND COS(TAN(.5))) THEN PRINT\n100 CALL 3+N2%:A=39:B$(AB%,XY<>LOG(AB%))=AB$\n110 READ XY%,W$\n120 Y$=CHR$(40):Y$=\"HI\":IF ((B) OR VAL(Y$)) THEN 70\n130 GOSUB 50:HCOLOR=10<>INT(B-27718):IF (RND((EXP(B)))) THEN I=I^A^(K)*((610/RND(B%))):B$(AB%+((XY-256<=((AB% OR B)))),SIN(X))=LEFT$(RIGHT$(AB$,39)+Y$,-AB%)\n140 W$=MID$(W$+W$+W$,A,A):B%=(XY)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 949,
+ "obj_sha256": "8fdbba2b10583ae2a0a922c1e8d50b13b659a24b77134ad7840788e4c2aac7af",
+ "cycles": 104093172,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6120
+  },
+  {
+   "line": 50,
+   "addr": 6180
+  },
+  {
+   "line": 60,
+   "addr": 6192
+  },
+  {
+   "line": 70,
+   "addr": 6232
+  },
+  {
+   "line": 80,
+   "addr": 6286
+  },
+  {
+   "line": 90,
+   "addr": 6322
+  },
+  {
+   "line": 100,
+   "addr": 6331
+  },
+  {
+   "line": 110,
+   "addr": 6373
+  },
+  {
+   "line": 120,
+   "addr": 6385
+  },
+  {
+   "line": 130,
+   "addr": 6422
+  },
+  {
+   "line": 140,
+   "addr": 6573
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S014.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7012",
+  "LOCAL VARIABLES": "7013 - 7302",
+  "HIGHEST MEMORY LOCATION": "7302"
+ }
+}

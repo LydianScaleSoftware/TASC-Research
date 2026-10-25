@@ -1,0 +1,78 @@
+{
+ "id": "r4113",
+ "key": "9c0375bc2de03e8c",
+ "source": "10 REM! INTEGER K\n20 DIM P(7,3)\n30 DEF FN F(Z)=M\n40 HLIN INT(K)>NOT ((1E3*AB)),(RND(N2-29)^X%) AT ((P(Z%,W%)>=21576))^X%:N2$=STR$(3 AND M)\n50 K=24:READ N2%\n60 GOSUB 120:A%(W%)=LEN(\"HI\"+LEFT$(C$,N2))\n70 K=INT(W%):PLOT -((850^((W% AND N2)))),K:GOSUB 90\n80 FOR M=(1<>RND(P(3,Z%) OR 3.14159)) TO (-D(N2%)+VAL(\"TASC\")^X%) STEP (C<>FN F(20))\n90 W%=ATN(0<N2%<>Z%)\n100 C$=C$:IF (((N2 AND N2%))+((C>Z%))-COS(FN F(445))) THEN 80:AB$=\"X Y\"\n110 FOR A=(N2 AND COS(M)) TO (((39150<5))+SQR(N2) OR 256) STEP (-8955):AB=3\n120 VTAB -((-256/FN F(A%(1)))):FOR M=(31175) TO (FN F(12698)<=1.5)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 989,
+ "obj_sha256": "6f546af3887bca1f8603ef29b3f27777ac4a6d3f9ca5ff60b18a998926a5389d",
+ "cycles": 102441523,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6094
+  },
+  {
+   "line": 50,
+   "addr": 6192
+  },
+  {
+   "line": 60,
+   "addr": 6204
+  },
+  {
+   "line": 70,
+   "addr": 6242
+  },
+  {
+   "line": 80,
+   "addr": 6284
+  },
+  {
+   "line": 90,
+   "addr": 6374
+  },
+  {
+   "line": 100,
+   "addr": 6395
+  },
+  {
+   "line": 110,
+   "addr": 6462
+  },
+  {
+   "line": 120,
+   "addr": 6527
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S011.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7052",
+  "LOCAL VARIABLES": "7053 - 7340",
+  "HIGHEST MEMORY LOCATION": "7340"
+ }
+}

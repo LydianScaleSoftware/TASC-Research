@@ -1,0 +1,114 @@
+{
+ "id": "r4092",
+ "key": "29726d52479e4975",
+ "source": "10 REM! INTEGER J\n20 GOTO 80\n30 PRINT VAL(W$+N2$+Y$);:PRINT C,\"\";3>=N2%^24/W%,\n40 PRINT MID$(CHR$(C% OR C%),Q1%,0);1E3;:DATA HI:COLOR=((X/C%+((0>B))))*(B<>C)\n50 C%=TAN(C% OR 40):IF (((N2=J-224))^20) THEN 90\n60 B=SIN(C%^C%) AND (-J):POKE -((1=C%)),VAL(\"X Y\"+RIGHT$(\"X Y\",B)):N2$=\"HI\"+LEFT$(LEFT$(N2$,N2),SIN(W%))\n70 PRINT N2$,:INVERSE:PRINT NOT ((-((X=49155)))),\n80 IF (1E3) THEN 20:DATA HI,-2.5,HI\n90 X=SIN(M<>Q1%)*((M AND INT(7742)))\n100 Y$=Y$:VTAB 1000\n110 PRINT (NOT N2+C);:N2=PEEK(ABS(204)<=N2+B):N2$=CHR$(N2-Q1% AND 49152)\n120 HTAB ((J>J^10))-90\n130 IF (255+((N2+SQR(N2)))) THEN HTAB 7:SPEED=858-((M<37865))\n140 FOR J=(((SGN(Q1%) OR SIN(W%)))-((C%>=B<>Q1%))) TO (((B AND M))<=465):IF (Q1%-Q1%) THEN GR:C%=32767\n150 IF (668) THEN COLOR=Q1%:IF (256) THEN 200\n160 N2%=N2:PRINT W%;W$,:PRINT NOT Q1%,\n170 CALL N2%:READ M\n180 C%=X\n190 C=J>=J-((N2<=N2%)):READ N2%:M=-(J)\n200 IF ((W%)*TAN(B)>=X) THEN 30:ON LOG(W%-1.5+318) GOTO 40\n210 Y$=STR$(N2-1000 OR ABS(N2)):GOSUB 90:GOSUB 50\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1487,
+ "obj_sha256": "38173baff68de77e9557eae566196efb05f0ce3327063d654949c9220cfa3c55",
+ "cycles": 129778381,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6087
+  },
+  {
+   "line": 40,
+   "addr": 6168
+  },
+  {
+   "line": 50,
+   "addr": 6258
+  },
+  {
+   "line": 60,
+   "addr": 6313
+  },
+  {
+   "line": 70,
+   "addr": 6441
+  },
+  {
+   "line": 80,
+   "addr": 6482
+  },
+  {
+   "line": 90,
+   "addr": 6510
+  },
+  {
+   "line": 100,
+   "addr": 6546
+  },
+  {
+   "line": 110,
+   "addr": 6564
+  },
+  {
+   "line": 120,
+   "addr": 6633
+  },
+  {
+   "line": 130,
+   "addr": 6663
+  },
+  {
+   "line": 140,
+   "addr": 6709
+  },
+  {
+   "line": 150,
+   "addr": 6810
+  },
+  {
+   "line": 160,
+   "addr": 6838
+  },
+  {
+   "line": 170,
+   "addr": 6880
+  },
+  {
+   "line": 180,
+   "addr": 6898
+  },
+  {
+   "line": 190,
+   "addr": 6907
+  },
+  {
+   "line": 200,
+   "addr": 6955
+  },
+  {
+   "line": 210,
+   "addr": 6978
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S007.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7550",
+  "LOCAL VARIABLES": "7551 - 7596",
+  "HIGHEST MEMORY LOCATION": "7596"
+ }
+}

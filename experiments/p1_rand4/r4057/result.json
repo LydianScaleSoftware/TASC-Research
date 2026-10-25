@@ -1,0 +1,145 @@
+{
+ "id": "r4057",
+ "key": "53bf83fa7aef175d",
+ "source": "10 REM! USECOMMON A,N2,Y$\n20 IF (VAL(STR$(X))) THEN 220\n30 GOSUB 260:FOR A=(-((AB OR 2.25<>39))) TO (SQR(570))\n40 HOME\n50 POKE 5,M\n60 GOTO 180:C%=INT(NOT LEN(Y$)):SPEED=XY%\n70 M%=C%:GOSUB 40\n80 C%=M<-PEEK(C%)\n90 INVERSE:HLIN C%,(127) AT (SIN(M)=-M):ON TAN(65535)*X GOSUB 120,120\n100 PRINT\n110 X=((X+X AND A))^AB\n120 FOR M=(5) TO (N2) STEP (ABS(X/A)/((((XY%=Y%))*((X AND XY%)))))\n130 PRINT M$,N2=((N2 OR M OR TAN(A))),RIGHT$(RIGHT$(MID$(M$,Y%,1039),M%),M%);\n140 GOSUB 80\n150 M%=((((551>40))+((166+3))))*N2\n160 GOTO 210:XY%=(XY%>N2)+((AB<>24-1000)):PRINT M;-ASC(\"123\")<>M;\n170 GOSUB 270\n180 Y%=255\n190 PRINT AB;:IF (-((AB=SIN(3)))) THEN M=M%\n200 CALL M*((M*A))\n210 ONERR GOTO 190:XY%=AB\n220 X=X:NEXT\n230 HTAB M%*((X*M%))<=COS(A)-((Y%<=X))\n240 INVERSE:Q1$=MID$(MID$(\"123\",X,40000-2.25),NOT (C%))\n250 N2=XY%+1-964+AB:M%=Y%-N2 OR XY%:NEXT A\n260 AB=-A+N2\n270 Q1$=\"\"+Q1$:GOSUB 250\n280 ON M%=24 GOTO 200,260,230,180:PRINT:VTAB N2\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6076,
+ "obj_len": 1167,
+ "obj_sha256": "245592ad78aff5a6f84fbb12983439c6bc1fc2f0d3c6ecb924bb833d11aabd62",
+ "cycles": 128537898,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6096
+  },
+  {
+   "line": 30,
+   "addr": 6112
+  },
+  {
+   "line": 40,
+   "addr": 6150
+  },
+  {
+   "line": 50,
+   "addr": 6153
+  },
+  {
+   "line": 60,
+   "addr": 6165
+  },
+  {
+   "line": 70,
+   "addr": 6187
+  },
+  {
+   "line": 80,
+   "addr": 6196
+  },
+  {
+   "line": 90,
+   "addr": 6217
+  },
+  {
+   "line": 100,
+   "addr": 6273
+  },
+  {
+   "line": 110,
+   "addr": 6276
+  },
+  {
+   "line": 120,
+   "addr": 6300
+  },
+  {
+   "line": 130,
+   "addr": 6356
+  },
+  {
+   "line": 140,
+   "addr": 6431
+  },
+  {
+   "line": 150,
+   "addr": 6434
+  },
+  {
+   "line": 160,
+   "addr": 6461
+  },
+  {
+   "line": 170,
+   "addr": 6494
+  },
+  {
+   "line": 180,
+   "addr": 6497
+  },
+  {
+   "line": 190,
+   "addr": 6503
+  },
+  {
+   "line": 200,
+   "addr": 6537
+  },
+  {
+   "line": 210,
+   "addr": 6549
+  },
+  {
+   "line": 220,
+   "addr": 6560
+  },
+  {
+   "line": 230,
+   "addr": 6571
+  },
+  {
+   "line": 240,
+   "addr": 6613
+  },
+  {
+   "line": 250,
+   "addr": 6661
+  },
+  {
+   "line": 260,
+   "addr": 6702
+  },
+  {
+   "line": 270,
+   "addr": 6714
+  },
+  {
+   "line": 280,
+   "addr": 6738
+  }
+ ],
+ "info": {
+  "INT": "VTAB N2",
+  "OBJECT FILE": "S006.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6076 - 7242",
+  "NUMERIC COMMON": "6064 - 6073",
+  "STRING COMMON": "6074 - 6075",
+  "LOCAL VARIABLES": "7243 - 7279",
+  "HIGHEST MEMORY LOCATION": "7279"
+ }
+}

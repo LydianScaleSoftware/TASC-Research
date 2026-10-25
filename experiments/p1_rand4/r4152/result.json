@@ -1,0 +1,90 @@
+{
+ "id": "r4152",
+ "key": "4442a506a389e1a9",
+ "source": "10 REM! INTEGER *\n20 DEF FN F(Z)=W\n30 Z=NOT B%(8252,AB%)*Z*204:Z=1\n40 HCOLOR=LOG(-AB%*X):Y$=LEFT$(STR$(A=Z%),X%^20):Z=NOT 24\n50 Z%=Z%:AB$=RIGHT$(RIGHT$(\"A\",ATN(Q1)),Z+((Q1%+Z))):PRINT AB%;VAL(Y$);\n60 C$=AB$:FOR A=(Z%) TO (LEN(MID$(RIGHT$(\"HI\",A),911)))\n70 ON X>=X GOTO 150,40,30\n80 IF (((-Z AND -Q1%))+X%) THEN PRINT B%(32767,NOT PEEK(X));-ASC(AB$);:NEXT A:IF (1E3) THEN 50\n90 CALL 3>=49152:VTAB -((X<=16285))-((W>((B%(231,Q1)<>W)))):FOR Z=(-((A+B%(Q1%,Z%)))<>Z) TO (NOT ((A*Z>((AB%<=Z%)))))\n100 POKE FN F(((W<X%))*NOT Q1%),419\n110 XDRAW Q1%>4020=((A<>SQR(100)))\n120 Z=Q1 OR FN F(100)*B%(W,232):INVERSE\n130 A=Q1<=38319<=NOT Q1%:Y$=D$(Z%)\n140 D$(32192)=MID$(STR$(B%(X%,24)),EXP(AB%)):HLIN 5647,(7-Z) AT 0<>X%\n150 X=RND(-X%)=EXP(ASC(Y$)):PRINT:IF (COS(516)) THEN VTAB 100\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1219,
+ "obj_sha256": "9f1bd8c37fb4369c89b2cff7d0dc3b88531e7594c68ffe424190ae4bbb0681dc",
+ "cycles": 119361633,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6094
+  },
+  {
+   "line": 40,
+   "addr": 6124
+  },
+  {
+   "line": 50,
+   "addr": 6178
+  },
+  {
+   "line": 60,
+   "addr": 6233
+  },
+  {
+   "line": 70,
+   "addr": 6279
+  },
+  {
+   "line": 80,
+   "addr": 6298
+  },
+  {
+   "line": 90,
+   "addr": 6382
+  },
+  {
+   "line": 100,
+   "addr": 6501
+  },
+  {
+   "line": 110,
+   "addr": 6534
+  },
+  {
+   "line": 120,
+   "addr": 6567
+  },
+  {
+   "line": 130,
+   "addr": 6609
+  },
+  {
+   "line": 140,
+   "addr": 6645
+  },
+  {
+   "line": 150,
+   "addr": 6708
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S016.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7282",
+  "LOCAL VARIABLES": "7283 - 7582",
+  "HIGHEST MEMORY LOCATION": "7582"
+ }
+}

@@ -1,0 +1,110 @@
+{
+ "id": "r4081",
+ "key": "2d9045ef800ec30f",
+ "source": "10 REM! INTEGER I,K\n20 DIM D%(11),B%(3)\n30 SPEED=((A<B% OR Z%))/((B^347<=I/Y)):PLOT B%,AB%\n40 C%=K:W=12771<=341\n50 K=103:HCOLOR=D%(B%)*C%\n60 HLIN ASC(Y$+Y$),(40) AT 5893:IF (Z%) THEN 30\n70 READ Y\n80 POP:AB$=A$\n90 RETURN\n100 FOR W=(A) TO (40>SGN(NOT Y)):IF (B%<>125) THEN 90\n110 Z=B:PLOT C% AND B%(Z%)+W>419/A,Z+1000:W=-AB%\n120 B=ATN((A+40))\n130 ON 7 GOTO 130,20,200\n140 ON C% GOTO 60,200,120,110:D%(PEEK(100))=C%\n150 IF (300>=-K>((Z%<>214))) THEN 80\n160 A$=STR$(40=B%)\n170 ON C% GOTO 60,120\n180 READ B,A$\n190 NEXT W\n200 GOTO 70:READ B,Z:GOTO 150\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 873,
+ "obj_sha256": "bd607554c519bc5b3d60e2abc0a262d7ffda10f39260e03159f2d1f59046f718",
+ "cycles": 101944051,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6153
+  },
+  {
+   "line": 50,
+   "addr": 6177
+  },
+  {
+   "line": 60,
+   "addr": 6201
+  },
+  {
+   "line": 70,
+   "addr": 6245
+  },
+  {
+   "line": 80,
+   "addr": 6254
+  },
+  {
+   "line": 90,
+   "addr": 6269
+  },
+  {
+   "line": 100,
+   "addr": 6270
+  },
+  {
+   "line": 110,
+   "addr": 6319
+  },
+  {
+   "line": 120,
+   "addr": 6394
+  },
+  {
+   "line": 130,
+   "addr": 6409
+  },
+  {
+   "line": 140,
+   "addr": 6425
+  },
+  {
+   "line": 150,
+   "addr": 6461
+  },
+  {
+   "line": 160,
+   "addr": 6499
+  },
+  {
+   "line": 170,
+   "addr": 6517
+  },
+  {
+   "line": 180,
+   "addr": 6531
+  },
+  {
+   "line": 190,
+   "addr": 6546
+  },
+  {
+   "line": 200,
+   "addr": 6554
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S013.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6936",
+  "LOCAL VARIABLES": "6937 - 7021",
+  "HIGHEST MEMORY LOCATION": "7021"
+ }
+}

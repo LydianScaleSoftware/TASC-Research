@@ -1,0 +1,143 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S001
+
+
+OBJECT CODE FILE:
+(DEFAULT S001.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION? NO
+
+COMPILATION LISTING:
+(DEFAULT YES)? YES
+
+PAUSE ON ERRORS:
+(DEFAULT YES)? YES
+
+INTEGER ARITHMETIC:
+(DEFAULT YES)? NO
+
+INTEGER CONSTANTS:
+(DEFAULT YES)? YES
+
+RESUME/DEBUG CODE:
+(DEFAULT NO)? NO
+
+*****BEGINNING PASS 1
+
+
+
+10  DIM B(4,6),A(1)
+20  PRINT A$; TAN ( SQR (B(Y%,0))) OR  N
+OT A * ((B(Y%,Z%) >  = 3));: GOSUB 60: F
+OR A = ( TAN ( NOT X AND  ABS (3))) TO (
+XY > N2)
+30  HTAB  TAN ( RND (X)):B( ATN ( EXP (3
+31)),Y%) =  TAN (A): NEXT A
+40  PRINT : GOTO 110:Y% = B( NOT 3,A%) >
+  = ((XY <  = 20 > Y%))
+50 A$ = A$ + Y$ + "X Y" + Y$
+60 B( SQR (.5 - Z% + 16691),Z%) = 243: O
+N 379 GOTO 250,170,10: POKE M,C%
+70  GOSUB 70: INPUT B( SGN ( INT ((753))
+),92),A,A%
+80 Y% = 0.1 <  ASC ("123") AND C% ^ 3 +
+((Z% = 0.1)): FOR N2 = ( NOT Z% <  = C%
++ N2 - ((A + .5))) TO (M - X): READ X
+90  IF ( -  ATN (7) > X - ((A AND XY)))
+THEN C% = 10: PRINT  LEFT$ ( LEFT$ (Q1$,
+40),127 <  = M), MID$ (A$,20,A%);2359 <
+((X AND .5));
+100  FOR X = (A(((Z% OR XY)) ^ ((M * N2)
+))) TO ( PEEK (M)): READ Y$
+110 Q1$ =  CHR$ (0): PRINT  SGN ( - A) O
+R 2.25, SGN (A% * ((C% - Z%)));A$,:B(C%,
+ SQR ( INT (565) >  = XY)) = A /  TAN (C
+% AND XY)
+120  PRINT Q1$;256 * A%;: HCOLOR=  RND (
+XY)
+130  PRINT  SIN ( - 127);Q1$;A,: GOSUB 3
+0
+140 Q1$ =  LEFT$ ( LEFT$ (A$,A%) + Q1$ +
+ "X Y", PEEK (XY) - X): HLIN X <  > A%,(
+ - ((256 / M / ((XY < B(C%,A%)))))) AT
+LOG (XY) OR  ABS (70 = Y%)
+150  GOTO 90
+160 B( - ((2 AND 127)) + Z%,845) =  PEEK
+ (C%) >  = .001 - ((C% > 20))
+170  IF (((688 =  - XY)) + 24) THEN B(Z%
+ <  >  VAL (Q1$) <  LOG (A >  = 19475),
+VAL ( CHR$ (A < N2))) = Z%: FOR M = ( IN
+T (((127 - N2)) * ((793 > Z%)))) TO ( SG
+N (Y%) > 2 <  > C%)
+180  COLOR= M
+190  HLIN 20,(127 <  =  - ((X > M))) AT
+Z%:A$ = "X Y":M =  ABS ( NOT Y%)
+200  PLOT  VAL (Q1$) * A <  >  VAL (Y$),
+A:N2 =  NOT ((A% / 10 +  ASC (Q1$)))
+210 XY = X:A$ = "123"
+220 Z% = C%
+230  GOSUB 10: ON  - Z% GOTO 260
+240 M = N2:C% = ( PEEK (N2)): PRINT  LOG
+ (1000 + A <  = ((M > 472)));Z% * C%;X,
+250  NEXT M
+260 A$ =  RIGHT$ (A$,A% + 100) + Q1$:XY
+=  - ((A(2) <  = ((B(C%,Z%) > 100))))
+270 XY = Y% / ((A(3) < C%)) >  = C%:Y$ =
+ "123": IF ( SGN (.5) < 3.14159) THEN C%
+ = B(256,Y%)
+
+
+
+*****BEGINNING PASS 2
+
+
+.......
+
+
+*****CODE GENERATION COMPLETE
+
+
+COMPILATION INFORMATION AND LINE NUMBER
+REFERENCE TABLE? YES
+
+
+SOURCE FILE: S001
+OBJECT FILE: S001.OBJ
+LIBRARY OCCUPIES 2051 - 6063
+PROGRAM OCCUPIES 6064 - 8400
+
+NO COMMON BLOCK
+
+LOCAL VARIABLES OCCUPY 8401 - 8636
+
+HIGHEST MEMORY LOCATION: 8636
+
+
+LINE# ADDR   LINE# ADDR   LINE# ADDR
+
+10    6084   20    6084   30    6197
+40    6250   50    6307   60    6343
+70    6404   80    6458   90    6574
+100   6678   110   6734   120   6833
+130   6857   140   6887   150   7019
+160   7022   170   7088   180   7232
+190   7238   200   7298   210   7360
+220   7381   230   7387   240   7402
+250   7465   260   7470   270   7530
+
+*****COMPILATION COMPLETE
+
+
+]?

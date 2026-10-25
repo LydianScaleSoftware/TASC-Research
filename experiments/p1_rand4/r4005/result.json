@@ -1,0 +1,82 @@
+{
+ "id": "r4005",
+ "key": "db5e6e75dcb2c3b4",
+ "source": "10 REM! INTEGER I\n20 DIM B$(10)\n30 GOTO 10\n40 PLOT A%(W%,3>M+1),A%(W%,1000)<>B=0:FOR I=(SGN(-B)) TO (NOT W)\n50 FOR M=(32767 AND (I*B%)) TO (((X OR B))^M% AND ((W AND SQR(I)))):M=W\n60 FOR B=(100) TO (X):IF (40) THEN 20\n70 COLOR=((X<=LEN(Z$)))+(((584)--W))\n80 B$(10869)=Z$\n90 ON M GOTO 40:M%=NOT ((B OR I))*0.1:W$=C$\n100 READ C:X=ABS(20/((100-W%))):PRINT B%;\n110 W$=MID$(RIGHT$(W$,10),W*I-C,C%):X=-RND(127):READ B\n120 W$=LEFT$(B$(M%)+C$,SGN(3) AND B)\n130 W=M%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 810,
+ "obj_sha256": "4d8cc44181f0a8bf0ef15b3ce1cd8bb9968623143f24c59f7be9f136862644a2",
+ "cycles": 95753892,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6087
+  },
+  {
+   "line": 50,
+   "addr": 6173
+  },
+  {
+   "line": 60,
+   "addr": 6250
+  },
+  {
+   "line": 70,
+   "addr": 6281
+  },
+  {
+   "line": 80,
+   "addr": 6317
+  },
+  {
+   "line": 90,
+   "addr": 6332
+  },
+  {
+   "line": 100,
+   "addr": 6374
+  },
+  {
+   "line": 110,
+   "addr": 6413
+  },
+  {
+   "line": 120,
+   "addr": 6476
+  },
+  {
+   "line": 130,
+   "addr": 6509
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S005.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6873",
+  "LOCAL VARIABLES": "6874 - 7183",
+  "HIGHEST MEMORY LOCATION": "7183"
+ }
+}

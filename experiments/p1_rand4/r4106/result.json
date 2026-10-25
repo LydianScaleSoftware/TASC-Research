@@ -1,0 +1,147 @@
+{
+ "id": "r4106",
+ "key": "a72e1a8a0ed83806",
+ "source": "10 REM! INTEGER K\n20 REM! USECOMMON Z%,X%,B\n30 B%=B%\n40 SPEED=EXP(Z%):X%=.001 OR -B%\n50 PRINT AB$;\"123\";:HTAB 1 OR Z=N2:IF (ABS((1000))) THEN 140\n60 ON 1/VAL(Z$)*((499*B/XY)) GOTO 60,140,200,280:AB$=RIGHT$(Z$,LOG(N2))+MID$(AB$,EXP(Y)):IF (((((.001 AND K))<=XY))+K) THEN DATA 1,\"A,B\",HI,1\n70 PRINT RIGHT$(Z$+\"X Y\"+XY$,256-Z%<=Y+N2);:Z=((B OR -K))/N2:X%=Y\n80 IF (Y*LEN(\"TASC\") AND Y+RND(XY)) THEN PRINT XY;10;:IF (N2) THEN Z=Z<=((127<>Y))>=VAL(RIGHT$(\"A\",Z))\n90 B%=((Y<((N2<=Y%))))*LOG(7):IF (-N2^Z%*Z) THEN PRINT MID$(\"TASC\"+XY$+Z$,K),\n100 IF (3^926) THEN RETURN:IF (RND(X%)/NOT 5/ASC(MID$(AB$,42189,Y))) THEN IF (-VAL(AB$)) THEN GOTO 80\n110 PRINT Z%;Z$+AB$;:PRINT:PRINT 7-COS(Z OR B),RIGHT$(MID$(\"HI\",ASC(Z$)),B%);\n120 IF (Y) THEN COLOR=RND(RND(VAL(XY$))):Z=B:READ AB$\n130 IF (Z) THEN 260:HTAB XY^Z%:Y=((281>K<>((Z%>X%))))*Z%\n140 HTAB XY:Z=K<((198<>B))\n150 GOTO 250:FOR Y=(((K-Z%))/N2+-((40<1E3))) TO (XY) STEP (256):N2=RND(K AND Y%)*NOT (N2)\n160 XY=40:Z%=-((X%<=Z))+((((N2 AND Y))+INT(N2)))\n170 K=XY:Z$=MID$(Z$,39,B%=39094)\n180 Z%=100\n190 IF (NOT ((NOT ((Y-B))))) THEN 280:N2=B%:K=N2\n200 XY$=MID$(RIGHT$(AB$,NOT 32767),2):AB$=STR$(256=((Y<>Y%)))\n210 IF (Y) THEN K=.5:B=Z%*((((XY AND 7))<((X%<148)))):IF (NOT ((85/Z%<0.1-XY))) THEN FOR XY=(-Z% AND Z%/Y%-B%) TO (NOT K^ATN(-552))\n220 PRINT B,\"\";:VTAB K:GOSUB 240\n230 K=ASC(MID$(Z$,Y%)):PRINT LEFT$(\"TASC\",((Z>B))*K);\"X Y\"+LEFT$(\"A\",-5),\"A\"+\"A\";:PRINT Z%;MID$(MID$(\"\",B,940),814)+MID$(RIGHT$(XY$,39),LEN(AB$)),INT(K^Z%)+Y%,\n240 X%=(Z):X%=((B% AND XY))+(3)<=N2-3\n250 Z=EXP(B-Z)<-((33023+K)):PRINT -((X%<>Z))<=0.1;\n260 PRINT MID$(\"TASC\",Y%-B,Y<>B)+XY$;:Y=XY>=Y:HCOLOR=372\n270 Z$=CHR$(((255 OR Y%))=B-X%):X%=Z:HTAB K\n280 POKE B%,INT(Z):IF (B%) THEN IF (24) THEN Z=XY+ATN(Y%):XY$=RIGHT$(RIGHT$(\"TASC\"+\"\",X% OR Y%),((17145*255))^B%)\n290 IF (VAL(XY$+Z$+MID$(XY$,B%))) THEN XY=53*((N2^441+VAL(Z$)))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6073,
+ "obj_len": 2430,
+ "obj_sha256": "354d69774ec7f340ff293ce1592a3e4a450d2ddc10063d504c83470f8218acfe",
+ "cycles": 189534845,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6093
+  },
+  {
+   "line": 40,
+   "addr": 6099
+  },
+  {
+   "line": 50,
+   "addr": 6123
+  },
+  {
+   "line": 60,
+   "addr": 6175
+  },
+  {
+   "line": 70,
+   "addr": 6295
+  },
+  {
+   "line": 80,
+   "addr": 6379
+  },
+  {
+   "line": 90,
+   "addr": 6490
+  },
+  {
+   "line": 100,
+   "addr": 6585
+  },
+  {
+   "line": 110,
+   "addr": 6599
+  },
+  {
+   "line": 120,
+   "addr": 6673
+  },
+  {
+   "line": 130,
+   "addr": 6708
+  },
+  {
+   "line": 140,
+   "addr": 6749
+  },
+  {
+   "line": 150,
+   "addr": 6773
+  },
+  {
+   "line": 160,
+   "addr": 6806
+  },
+  {
+   "line": 170,
+   "addr": 6854
+  },
+  {
+   "line": 180,
+   "addr": 6890
+  },
+  {
+   "line": 190,
+   "addr": 6896
+  },
+  {
+   "line": 200,
+   "addr": 6924
+  },
+  {
+   "line": 210,
+   "addr": 6966
+  },
+  {
+   "line": 220,
+   "addr": 7110
+  },
+  {
+   "line": 230,
+   "addr": 7140
+  },
+  {
+   "line": 240,
+   "addr": 7348
+  },
+  {
+   "line": 250,
+   "addr": 7387
+  },
+  {
+   "line": 260,
+   "addr": 7438
+  },
+  {
+   "line": 270,
+   "addr": 7511
+  },
+  {
+   "line": 280,
+   "addr": 7553
+  },
+  {
+   "line": 290,
+   "addr": 7660
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S004.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6073 - 8502",
+  "NUMERIC COMMON": "6064 - 6072",
+  "LOCAL VARIABLES": "8503 - 8550",
+  "HIGHEST MEMORY LOCATION": "8550"
+ }
+}

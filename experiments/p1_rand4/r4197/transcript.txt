@@ -1,0 +1,120 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S010
+
+
+OBJECT CODE FILE:
+(DEFAULT S010.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION?
+
+*****BEGINNING PASS 1
+
+
+
+10 P$( - (( NOT 256)),N2%) = P$(Y%, NOT
+N2%): IF ((( - X <  = W - X)) - 256) THE
+N  HTAB  - ((W + 5 - ((10 + 10))))
+20  PRINT N2;Q1$ + C$ +  CHR$ (N2%) +  M
+ID$ ( MID$ (Q1$,36,10),9, - Z%);Q1$ +  L
+EFT$ (Q1$ + "HI",Y);: VTAB W
+30 P$(N2% +  ABS (N2 + X),Y% <  = N2% <
+ = (Y%)) = C$:P$(Q1%,N2%) = "A" + X$ +
+MID$ (C$,Y, NOT Y%): READ Y%,Y
+40  HTAB  - ((Q1% * Y%)) <  - ((1.5 / N2
+%))
+50  GOSUB 20
+60  PRINT Q1$;
+70 N2% = X:P$(.001 = 1000,3) =  RIGHT$ (
+"123",5 < 5 = Q1% + W): PRINT N2;
+80  FOR N2 = (255) TO (N2):P$(Q1%, - Q1%
+ * X) =  LEFT$ (X$,X = AB)
+90  IN# Z%: GOSUB 230: COLOR= (7) + 1784
+7:Q1$ =  MID$ ( MID$ (P$(963,39887),Z% <
+ 1.5),127 / ((Z% >  = AB)))
+100 N2 =  - (( ABS (X) = 96 + Y))
+110  COLOR=  EXP (65535) <  > W + 728 >
+ = AB
+120 N2% = 0.1: GOSUB 70
+130  STOP
+
+*****WARNING
+LINE NUMBER 130
+IGNORED
+
+: VTAB  PEEK ( LOG (Y - 782))
+
+
+140 Y% = 5 + ((Y% >  = 3)) -  ATN (N2% >
+ N2%)
+150  IF (N2%) THEN  PRINT  SIN (W) / X <
+  = ((240 < ((AB <  > Z%)))), - 1000 > W
+,"X Y" + "HI";: ON Z% GOTO 120,90,40:X$
+= Q1$
+160  ON  TAN ( NOT Q1%) GOTO 70,200:N2%
+= Q1%: READ Q1$
+170  FOR W = (X) TO (X): INPUT Y: NEXT W
+
+180  NEXT N2:X = N2%
+190 N2% = ((Y + Q1%)) / Y% <  = W
+200 N2 = Q1% *  - ((Q1% OR 470)): POKE W
+ + ((809 <  = 41521 < ((20 < 256)))),39
++  LEN ( CHR$ (W))
+210  HTAB 2 - ((692 >  = AB)): CALL Y
+220  COLOR= 39
+230  PRINT  LEFT$ ("123",10 <  > 835),Y
+> AB;256;:C$ = C$:Z% = Z%
+
+
+
+*****BEGINNING PASS 2
+
+
+.....
+
+
+*****CODE GENERATION COMPLETE
+
+
+COMPILATION INFORMATION AND LINE NUMBER
+REFERENCE TABLE? YES
+
+
+SOURCE FILE: S010
+OBJECT FILE: S010.OBJ
+LIBRARY OCCUPIES 2051 - 6063
+PROGRAM OCCUPIES 6064 - 7810
+
+NO COMMON BLOCK
+
+LOCAL VARIABLES OCCUPY 7811 - 8100
+
+HIGHEST MEMORY LOCATION: 8100
+
+
+LINE# ADDR   LINE# ADDR   LINE# ADDR
+
+10    6084   20    6193   30    6315
+40    6442   50    6472   60    6475
+70    6481   80    6562   90    6618
+100   6678   110   6705   120   6735
+130   6744   140   6747   150   6780
+160   6905   170   6934   180   6968
+190   6979   200   7003   210   7072
+220   7093   230   7099
+
+*****COMPILATION COMPLETE
+
+
+]?

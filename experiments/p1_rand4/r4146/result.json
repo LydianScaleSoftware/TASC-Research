@@ -1,0 +1,82 @@
+{
+ "id": "r4146",
+ "key": "bf5f61669b3772bc",
+ "source": "10 REM! INTEGER J\n20 POP\n30 X%=B%\n40 ON NOT ((-N2%)) GOTO 130,120,130,60:DATA -2.5,-2.5,X,-2.5:ON W GOTO 90,50,40,50\n50 FOR Z=(TAN(SGN(B%-723))) TO (10):WAIT ASC(AB$)-(-Z),(XY):CALL LOG(B%-3)\n60 XY$=M$:NEXT Z:GOSUB 100\n70 GOSUB 50:Z=W:Z=XY\n80 PRINT:ON J GOTO 40,70,70:W=LEN(XY$)\n90 PRINT LEFT$(\"HI\",J)+XY$+XY$+\"\"+XY$;M$;AB$,:COLOR=-Z=((J*Z OR -XY)):XY=C*ATN(XY*Z)\n100 INVERSE:FOR W=(255) TO (-((X%<40)))\n110 M$=AB$:N2%=-3>((272<=46424>((Z% OR XY))))\n120 TEXT\n130 END:N2%=EXP(W AND N2%)*XY:ON Z% GOTO 20,110,50,20\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 698,
+ "obj_sha256": "b95fefc5dcc065d4d041d614879d6638e6af329de5b0c1886194510d220edc15",
+ "cycles": 94057022,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6087
+  },
+  {
+   "line": 40,
+   "addr": 6093
+  },
+  {
+   "line": 50,
+   "addr": 6154
+  },
+  {
+   "line": 60,
+   "addr": 6219
+  },
+  {
+   "line": 70,
+   "addr": 6233
+  },
+  {
+   "line": 80,
+   "addr": 6248
+  },
+  {
+   "line": 90,
+   "addr": 6276
+  },
+  {
+   "line": 100,
+   "addr": 6395
+  },
+  {
+   "line": 110,
+   "addr": 6424
+  },
+  {
+   "line": 120,
+   "addr": 6478
+  },
+  {
+   "line": 130,
+   "addr": 6481
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S010.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6761",
+  "LOCAL VARIABLES": "6762 - 6809",
+  "HIGHEST MEMORY LOCATION": "6809"
+ }
+}

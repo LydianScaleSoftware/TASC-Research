@@ -1,0 +1,86 @@
+{
+ "id": "r4118",
+ "key": "a20f65359c1ff1ec",
+ "source": "10 REM! INTEGER J\n20 DIM P$(1,3)\n30 DEF FN F(Z)=EXP(AB%/Z%)\n40 AB%=INT(A%)\n50 PRINT P$(TAN(VAL(P$(J,B%))),NOT N2),:P$(PEEK(NOT J),((AB%-AB%/1000))*30910)=X$\n60 Y$=X$:SPEED=LOG(N2<>488>B%):SPEED=NOT AB%+((0+.001)) OR -J\n70 PLOT N2<>VAL(\"X Y\"+X$),AB%\n80 IF (Z%^39) THEN 130:FOR J=(NOT ((Z>52 AND Z%))) TO (J^((127>=Z+B%))):IF (FN F(A)<=A) THEN IF (X-((Z%-A%))>=FN F(W=N2)) THEN PRINT B%;RIGHT$(P$(AB%,A%),FN F(W))+LEFT$(X$,N2);\n90 IF (((Z%*A>10))-((J-AB%>=A))) THEN 110:GOSUB 100\n100 ON Z GOTO 110,50,60,100\n110 PRINT SIN(NOT ((2<>256))),A$;3-N2*((255+A));:FOR Z=(NOT 24) TO (Z)\n120 GOSUB 70:READ X,X\n130 PRINT:NORMAL\n140 HOME:Z=A\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 809,
+ "obj_sha256": "7f14ece6854571da414ff578d01762ab652e42c4081bbeb7d3b2b1af7c4706ce",
+ "cycles": 99290930,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6100
+  },
+  {
+   "line": 50,
+   "addr": 6112
+  },
+  {
+   "line": 60,
+   "addr": 6202
+  },
+  {
+   "line": 70,
+   "addr": 6274
+  },
+  {
+   "line": 80,
+   "addr": 6316
+  },
+  {
+   "line": 90,
+   "addr": 6335
+  },
+  {
+   "line": 100,
+   "addr": 6378
+  },
+  {
+   "line": 110,
+   "addr": 6396
+  },
+  {
+   "line": 120,
+   "addr": 6464
+  },
+  {
+   "line": 130,
+   "addr": 6482
+  },
+  {
+   "line": 140,
+   "addr": 6491
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S016.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6872",
+  "LOCAL VARIABLES": "6873 - 6936",
+  "HIGHEST MEMORY LOCATION": "6936"
+ }
+}

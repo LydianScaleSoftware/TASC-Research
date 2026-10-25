@@ -1,0 +1,83 @@
+{
+ "id": "r4033",
+ "key": "54be2b7c9a49cd0f",
+ "source": "10 REM! INTEGER J\n20 DIM A(2)\n30 C$=C$\n40 Q1%=Z%\n50 VTAB Z+A>=((3.14159<A>=Q1%+AB))\n60 ON B-AB OR J GOTO 40\n70 PRINT -((Z%+10))-ABS(-Z),LOG(J+A),:READ W$,C$:READ M,AB\n80 HTAB ((40-0))*((255+Z))-B(Z%):IF (Z%) THEN 110:B(NOT 20)=AB\n90 IF (NOT X%+((B<Q1%))<=Z%) THEN POP:X%=39 AND COS(VAL(\"HI\"))\n100 M$=\"\"+C$+W$+C$\n110 IF (((B(Q1%)-B/16622))^PEEK((AB))) THEN IF (M) THEN PRINT:AB=ABS(SGN(Z<>10)):M=3^SQR(LEN(\"\"))\n120 POKE NOT 79 AND 389<>Z^256,AB:AB=AB\n130 GOTO 90\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 845,
+ "obj_sha256": "3c46bf2f1a4c554c09b207a59dc9192263b3fdecbfabaecabc6043a166dd83a1",
+ "cycles": 99634277,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6090
+  },
+  {
+   "line": 50,
+   "addr": 6096
+  },
+  {
+   "line": 60,
+   "addr": 6138
+  },
+  {
+   "line": 70,
+   "addr": 6159
+  },
+  {
+   "line": 80,
+   "addr": 6228
+  },
+  {
+   "line": 90,
+   "addr": 6287
+  },
+  {
+   "line": 100,
+   "addr": 6351
+  },
+  {
+   "line": 110,
+   "addr": 6384
+  },
+  {
+   "line": 120,
+   "addr": 6483
+  },
+  {
+   "line": 130,
+   "addr": 6528
+  }
+ ],
+ "info": {
+  "HEN  POP": "X% = 39 AND  COS ( VAL (\"HI\"))",
+  "OBJECT FILE": "S016.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6908",
+  "LOCAL VARIABLES": "6909 - 7029",
+  "HIGHEST MEMORY LOCATION": "7029"
+ }
+}

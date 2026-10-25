@@ -1,0 +1,90 @@
+{
+ "id": "r4135",
+ "key": "6328a0eec50f9e68",
+ "source": "10 REM! INTEGER I,J\n20 DIM P$(2),B(2)\n30 N2=24\n40 M$=\"123\":READ N2%:C%=N2%\n50 ON XY GOTO 120,120,130,20\n60 P$(((A%(A%)<100>=.001-Y))*35943)=LEFT$(Q1$,Z):DATA X:ON ASC(CHR$(VAL(M$))) GOTO 150\n70 PRINT:IF ((C%)) THEN PRINT\n80 IF (N2) THEN 20:P$(32767)=Q1$:COLOR=504\n90 DATA -2.5,-2.5:FOR Y=(((N2% OR -J))*W%) TO (XY) STEP (B(EXP(C%))<=Z)\n100 PLOT -A,N2%:IF (I) THEN IF (-((-J))*640) THEN 10\n110 ON B((I))-ABS(XY-Z) GOTO 40,60,60,30:Z=N2%:AB$=AB$\n120 PRINT Q1$,M$;M$;\n130 N2=N2:ON B(-A-((2+0.1))) GOTO 30\n140 PRINT SIN(C%)+INT(I) OR A,STR$(N2%);RIGHT$(P$(N2%)+AB$,N2);:PRINT (C%-((Z<N2)));:GOSUB 140\n150 GOTO 30:A=((247^J=((5<Z))))+(Z*B(I)):IF ((NOT 4865)/((10>=(A%(J))))) THEN W%=I AND 255+A%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 870,
+ "obj_sha256": "fd4510b45024b2bb913520073ce5843ebd4bb36ea729d1618cf6ac64b165d981",
+ "cycles": 110482565,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6090
+  },
+  {
+   "line": 50,
+   "addr": 6117
+  },
+  {
+   "line": 60,
+   "addr": 6132
+  },
+  {
+   "line": 70,
+   "addr": 6206
+  },
+  {
+   "line": 80,
+   "addr": 6220
+  },
+  {
+   "line": 90,
+   "addr": 6240
+  },
+  {
+   "line": 100,
+   "addr": 6306
+  },
+  {
+   "line": 110,
+   "addr": 6350
+  },
+  {
+   "line": 120,
+   "addr": 6395
+  },
+  {
+   "line": 130,
+   "addr": 6416
+  },
+  {
+   "line": 140,
+   "addr": 6452
+  },
+  {
+   "line": 150,
+   "addr": 6530
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S016.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6933",
+  "LOCAL VARIABLES": "6934 - 7024",
+  "HIGHEST MEMORY LOCATION": "7024"
+ }
+}

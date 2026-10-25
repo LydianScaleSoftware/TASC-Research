@@ -1,0 +1,74 @@
+{
+ "id": "r4046",
+ "key": "b344ecd6541784e6",
+ "source": "10 REM! INTEGER *\n20 DIM B(8)\n30 DEF FN F(X)=ATN(((N2 AND 3.14159))+N2%*Q1)\n40 N2=M:C=ATN(A)\n50 PLOT LOG(N2%),M:A=56<=A:IF (LEN(M$+\"123\")) THEN HOME\n60 M=FN F(FN F(C>=N2)):DATA -2.5,1,X\n70 M$=CHR$(C)\n80 N2=C\n90 A=LOG(SIN(A-Q1))\n100 CALL VAL(\"HI\"):PRINT\n110 B(B(M)--884>=((2482>=B(B%))))=C:DATA HI,,,HI\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 480,
+ "obj_sha256": "2105b2c6eac564a966ee9653bf898521b8bda3d2a762e72a810205c0b9e367bf",
+ "cycles": 78615902,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6121
+  },
+  {
+   "line": 50,
+   "addr": 6136
+  },
+  {
+   "line": 60,
+   "addr": 6199
+  },
+  {
+   "line": 70,
+   "addr": 6232
+  },
+  {
+   "line": 80,
+   "addr": 6241
+  },
+  {
+   "line": 90,
+   "addr": 6247
+  },
+  {
+   "line": 100,
+   "addr": 6265
+  },
+  {
+   "line": 110,
+   "addr": 6285
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S012.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6543",
+  "LOCAL VARIABLES": "6544 - 6589",
+  "HIGHEST MEMORY LOCATION": "6589"
+ }
+}

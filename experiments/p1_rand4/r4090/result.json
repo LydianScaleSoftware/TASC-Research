@@ -1,0 +1,78 @@
+{
+ "id": "r4090",
+ "key": "932cdf9ec89ec030",
+ "source": "10 REM! INTEGER K,J\n20 FOR M=(((ATN(M%)<=Q1))-ABS(M%*0)) TO (D(-3)+A) STEP (Q1%)\n30 J=XY%\n40 PRINT Q1$;:D(TAN(AB>=AB%>Q1%))=Q1\n50 HPLOT M%+-((K-AB)),(((75<=Q1% AND Q1%<J))-Q1):PRINT B$,((256+AB))^1000,-D(M%*20);:NEXT M\n60 PRINT\n70 IF (((Q1=Q1%>-XY%))*((K+AB%-(A)))) THEN D(J)=K>1.5:FOR Z=(828) TO (AB) STEP (Z):D(K)=25653\n80 FOR M=(ATN(D(Z>K))) TO (-((A*((K*AB%))))) STEP (AB%=D(256)-255=((32767<Q1%>((10 AND Q1)))))\n90 Z=D(AB%)\n100 D(M<=J)=Z:D(Q1% OR M)=1\n110 READ Z,K:PRINT \"TASC\",.001;\"TASC\",:K=NOT AB=LOG(ASC(Q1$))\n120 PRINT:IF (7<=((677*39 AND 5))) THEN IF (SQR(AB% AND 875+Q1)) THEN POKE M,(A)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1095,
+ "obj_sha256": "7010ba13fec27ab152b5b81c30342d0a3cd68423cc1e410e76804feb97e9fa2b",
+ "cycles": 108323798,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6140
+  },
+  {
+   "line": 40,
+   "addr": 6146
+  },
+  {
+   "line": 50,
+   "addr": 6182
+  },
+  {
+   "line": 60,
+   "addr": 6286
+  },
+  {
+   "line": 70,
+   "addr": 6289
+  },
+  {
+   "line": 80,
+   "addr": 6397
+  },
+  {
+   "line": 90,
+   "addr": 6501
+  },
+  {
+   "line": 100,
+   "addr": 6510
+  },
+  {
+   "line": 110,
+   "addr": 6555
+  },
+  {
+   "line": 120,
+   "addr": 6641
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S005.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7158",
+  "LOCAL VARIABLES": "7159 - 7264",
+  "HIGHEST MEMORY LOCATION": "7264"
+ }
+}

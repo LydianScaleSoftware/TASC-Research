@@ -1,0 +1,78 @@
+{
+ "id": "r4110",
+ "key": "afbbd29daeff4630",
+ "source": "10 DIM D%(6,7)\n20 DEF FN F(X)=Q1%>=((SGN(X)<=W))\n30 PLOT ABS(20<=XY>=AB%),-((707 AND Q1%)):X=W\n40 W=AB:XY$=LEFT$(\"HI\",-((255^X))):AB%=3\n50 PRINT COS(49152<=-1);\n60 A$=STR$(NOT LEN(\"TASC\"))\n70 AB=7012>((M% AND TAN(AB%)))\n80 IF (SQR(RND(EXP(24)))) THEN HTAB ((W<>D%(Z%,Q1%)))+((C-D%(19572,Z%)))\n90 AB%=((COS(D%(AB%,32767))*-Q1%))^((((AB%>517))*((M%<>M%)))):HCOLOR=W\n100 HTAB D%(ABS(LOG(D%(250,AB%))),Z%):DATA X,300,-2.5,300\n110 ON ASC(A$(980)) GOTO 100:XY$=A$(460)\n120 XY=X-C\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 884,
+ "obj_sha256": "1a6e444c14bd970fa5d18e60de5dbbf991beb4d426e7a59f481662b083357b62",
+ "cycles": 99532521,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6106
+  },
+  {
+   "line": 40,
+   "addr": 6154
+  },
+  {
+   "line": 50,
+   "addr": 6204
+  },
+  {
+   "line": 60,
+   "addr": 6225
+  },
+  {
+   "line": 70,
+   "addr": 6257
+  },
+  {
+   "line": 80,
+   "addr": 6284
+  },
+  {
+   "line": 90,
+   "addr": 6357
+  },
+  {
+   "line": 100,
+   "addr": 6438
+  },
+  {
+   "line": 110,
+   "addr": 6507
+  },
+  {
+   "line": 120,
+   "addr": 6543
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S008.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6947",
+  "LOCAL VARIABLES": "6948 - 7133",
+  "HIGHEST MEMORY LOCATION": "7133"
+ }
+}

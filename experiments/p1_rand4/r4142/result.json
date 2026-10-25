@@ -1,0 +1,74 @@
+{
+ "id": "r4142",
+ "key": "63cbae51b38e9bc5",
+ "source": "10 DIM A$(7,10),D%(8)\n20 ONERR GOTO 60:PRINT ASC(Y$+RIGHT$(W$,255));PEEK(2);Y$;\n30 HOME:N2=670>=W%+D%(A%)\n40 HLIN D%(385)-EXP(B)<((Z<=B))-3,((369<>753<=(A%))) AT PEEK(D%(A%))-C%:FOR Z=(A%) TO (NOT ((N2 OR 255))=D%(C<D%(C%))):Y$=MID$(Y$,N2,B*D%(W%)^A%)\n50 POKE NOT ((D%(34035)+100>AB%)),1^12003<=Z:W%=.5:DATA 300,-2.5,1,X\n60 NEXT Z:W%=W%:B=47492\n70 HCOLOR=10<AB%\n80 SPEED=((W%<Z))*5\n90 C%=NOT N2 OR 2.25\n100 IF (A%) THEN C=ASC(\"TASC\"):PRINT VAL(\"TASC\")^-B+A%;W$;((W%<>((C OR 345))))*W;:Q1$=RIGHT$(RIGHT$(B$(A%),W%),C%)\n110 N2=C\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 899,
+ "obj_sha256": "b5fbae2dff05f140832239dcec1f875e182f537e8ba3b0110b45f5eb1cfffaca",
+ "cycles": 100788131,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6089
+  },
+  {
+   "line": 40,
+   "addr": 6110
+  },
+  {
+   "line": 50,
+   "addr": 6298
+  },
+  {
+   "line": 60,
+   "addr": 6365
+  },
+  {
+   "line": 70,
+   "addr": 6382
+  },
+  {
+   "line": 80,
+   "addr": 6394
+  },
+  {
+   "line": 90,
+   "addr": 6409
+  },
+  {
+   "line": 100,
+   "addr": 6424
+  },
+  {
+   "line": 110,
+   "addr": 6539
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S006.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6962",
+  "LOCAL VARIABLES": "6963 - 7224",
+  "HIGHEST MEMORY LOCATION": "7224"
+ }
+}

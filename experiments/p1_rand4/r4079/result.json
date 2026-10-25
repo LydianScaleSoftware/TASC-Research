@@ -1,0 +1,86 @@
+{
+ "id": "r4079",
+ "key": "11cf9b6524a4504a",
+ "source": "10 REM! INTEGER J\n20 DIM B(10,11),A(3)\n30 END:XY%=AB-3-((-.001<J^5))\n40 IF (EXP(SQR(A(256))<=ABS(A(20)))) THEN B$=MID$(STR$(XY%),3)+\"A\":AB=-W\n50 A(B((C%),(550))/(((X)*TAN(20))))=XY%:SPEED=EXP(40-AB)+M%^((B(J,C%)-40)):PRINT ATN(A(C%)),J;XY%,\n60 FOR N2=(C%) TO (-((7 OR X))<751) STEP (RND(-.5)*X):AB=C\n70 HCOLOR=X>((0/AB OR (W)))\n80 VTAB XY%:FOR W=(A(NOT ((J-B(B%,XY%))))) TO (W<10)\n90 DATA -2.5,HI,HI,-2.5\n100 FOR W=(SGN(N2)) TO ((-SIN(C))) STEP (J+J):NEXT W\n110 IF (J) THEN PRINT:POKE M%,AB/J\n120 B(J,SIN(NOT SQR(7)))=10 AND ((XY% AND -M%)):PRINT C$+\"HI\"+\"123\"+C$;((C%*M% OR X))-((-14155<127));A(N2>((29553=C%)));\n130 GOSUB 90:C%=29993+NOT B(B%,XY%):A(-((W+XY%-((B(M%,1)-C%)))))=A(M%)--0.1>=PEEK(B%)+((B%+M%))\n140 B(C%,PEEK(SIN(32767)))=((844-NOT X))*-XY%\n",
+ "options": {
+  "library": 4096,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 8109,
+ "obj_len": 1307,
+ "obj_sha256": "99ec4f4415f69218b99d4682459b039f049ee4511684979d940a40fbe9e0e297",
+ "cycles": 122769571,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 8129
+  },
+  {
+   "line": 20,
+   "addr": 8129
+  },
+  {
+   "line": 30,
+   "addr": 8129
+  },
+  {
+   "line": 40,
+   "addr": 8171
+  },
+  {
+   "line": 50,
+   "addr": 8245
+  },
+  {
+   "line": 60,
+   "addr": 8359
+  },
+  {
+   "line": 70,
+   "addr": 8412
+  },
+  {
+   "line": 80,
+   "addr": 8433
+  },
+  {
+   "line": 90,
+   "addr": 8485
+  },
+  {
+   "line": 100,
+   "addr": 8507
+  },
+  {
+   "line": 110,
+   "addr": 8544
+  },
+  {
+   "line": 120,
+   "addr": 8570
+  },
+  {
+   "line": 130,
+   "addr": 8721
+  },
+  {
+   "line": 140,
+   "addr": 8838
+  }
+ ],
+ "info": {
+  "LIBRARY": "4096 - 8108",
+  "OBJECT FILE": "S011.OBJ",
+  "PROGRAM": "8109 - 9415",
+  "LOCAL VARIABLES": "9416 - 10146",
+  "HIGHEST MEMORY LOCATION": "10146"
+ }
+}

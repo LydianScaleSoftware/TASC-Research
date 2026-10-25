@@ -1,0 +1,86 @@
+{
+ "id": "r4130",
+ "key": "c90ebebe785993a7",
+ "source": "10 IF (B%) THEN 60:SPEED=ASC(Q1$):W=B%\n20 HLIN -((.001-((Y-P%(N2%))))),(24) AT XY%*65535:XY%=N2%\n30 HCOLOR=TAN(Q1%)\n40 X=(P%(N2%))+W OR X+XY%:HTAB RND(442)<N2%:HTAB 9457\n50 FOR W=(B) TO (-SIN(2<=B%)) STEP ((X)/EXP(XY%)>=ATN(B))\n60 PRINT X;\n70 FOR Z=(40) TO (P%(ABS(XY%)=-7057)):ON PEEK(Z) GOTO 120:PRINT Q1$+RIGHT$(\"123\",SGN(256));1/((3>Z));\n80 IF (W>EXP(65535)>=LEN(Q1$)) THEN P%(N2%)=N2%\n90 FOR Z=(XY%-XY%>-XY%<988*39) TO (P%(PEEK(10)+P%(B%))) STEP (1.5<N2%):IF (Y) THEN 40\n100 P%(Q1%)=100:B=P%(-65535)^((Z/B%/B%))\n110 PRINT:COLOR=B%\n120 PLOT EXP(P%(0)),SGN(N2% OR 134)>=892:IF (Z) THEN IF ((B%+P%(B%)--P%(B%))) THEN IF (X) THEN HTAB PEEK(Z):HLIN 2,(P%(Q1%)) AT -((XY%*P%(100)))\n130 HCOLOR=((X/W<X*XY%))*Q1%:PRINT Y$;\n140 B=.001\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1143,
+ "obj_sha256": "81ef5065c554d95d5728185c81514565bd743c904bd278b427e962667ea7160c",
+ "cycles": 114798091,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6098
+  },
+  {
+   "line": 30,
+   "addr": 6140
+  },
+  {
+   "line": 40,
+   "addr": 6149
+  },
+  {
+   "line": 50,
+   "addr": 6200
+  },
+  {
+   "line": 60,
+   "addr": 6253
+  },
+  {
+   "line": 70,
+   "addr": 6259
+  },
+  {
+   "line": 80,
+   "addr": 6357
+  },
+  {
+   "line": 90,
+   "addr": 6404
+  },
+  {
+   "line": 100,
+   "addr": 6489
+  },
+  {
+   "line": 110,
+   "addr": 6543
+  },
+  {
+   "line": 120,
+   "addr": 6552
+  },
+  {
+   "line": 130,
+   "addr": 6685
+  },
+  {
+   "line": 140,
+   "addr": 6718
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S011.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7206",
+  "LOCAL VARIABLES": "7207 - 7272",
+  "HIGHEST MEMORY LOCATION": "7272"
+ }
+}

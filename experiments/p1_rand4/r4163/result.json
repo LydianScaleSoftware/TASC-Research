@@ -1,0 +1,66 @@
+{
+ "id": "r4163",
+ "key": "8d382218f3b2b88b",
+ "source": "10 REM! INTEGER J\n20 HPLOT 367<=Q1,(((J>Z%<>Z*A%))-NOT 1000*((AB*Y))) TO ASC(W$),(-C)\n30 ON SQR(100) GOTO 40,10:J=967\n40 C$=RIGHT$(MID$(STR$(J),SQR(A%)),-X%):READ B%,Q1:PRINT Y;27191,SIN(A%<>B%)<=((255 AND C<=X%));\n50 Z%=40<Z\n60 SPEED=A%:PRINT:B%=-((-65535))/X%\n70 Y=C:Z=(1+Z/Z)\n80 PRINT B%,W$,\n90 GOTO 20\n",
+ "options": {
+  "library": null,
+  "program": "HGR1",
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 16384,
+ "obj_len": 624,
+ "obj_sha256": "fe23276075e1f61882cca37db31565e326b3eb050d7ed40dd331172636b07ffb",
+ "cycles": 86008904,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 16404
+  },
+  {
+   "line": 20,
+   "addr": 16404
+  },
+  {
+   "line": 30,
+   "addr": 16488
+  },
+  {
+   "line": 40,
+   "addr": 16514
+  },
+  {
+   "line": 50,
+   "addr": 16619
+  },
+  {
+   "line": 60,
+   "addr": 16634
+  },
+  {
+   "line": 70,
+   "addr": 16673
+  },
+  {
+   "line": 80,
+   "addr": 16697
+  },
+  {
+   "line": 90,
+   "addr": 16718
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "OBJECT FILE": "S010.OBJ",
+  "PROGRAM": "16384 - 17007",
+  "LOCAL VARIABLES": "17008 - 17056",
+  "HIGHEST MEMORY LOCATION": "17056"
+ }
+}

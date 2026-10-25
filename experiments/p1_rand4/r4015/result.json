@@ -1,0 +1,114 @@
+{
+ "id": "r4015",
+ "key": "9e5a2db447e994f6",
+ "source": "10 REM! INTEGER J\n20 IF (M) THEN XY=24:C=((1 AND 100))^NOT 606/A:XY=((XY OR XY))+2+((A%-((127>=C%))))\n30 W$=W$:M$=M$:SPEED=C%\n40 PRINT\n50 IF (J) THEN 10\n60 COLOR=(-((Y*XY))):GR:HCOLOR=NOT ((A-((M AND Y))))\n70 Y=.001:PRINT NOT 3,:FOR A=(C%) TO (M) STEP (((Z% OR 663))^EXP(Z%)+RND(A%/M))\n80 N2%=XY\n90 PRINT ((C+256))/N2%/32767;\n100 COLOR=A%<=Z%:PRINT J;:NEXT A\n110 C%=-899\n120 GOSUB 210\n130 PRINT \"\",N2%>=M;\n140 PRINT ((VAL(M$)=Z%))*((40+N2%)),CHR$(NOT J=((A%<=A%))),:AB$=RIGHT$(\"X Y\",J)+B$(C*20)\n150 M$=STR$(0):C%=J\n160 PRINT W$+MID$(\"X Y\",NOT XY),LEFT$(MID$(MID$(B$(C%),Y),A<=A,(0)),((M*25791))^((M/1E3))),(C)-Y,\n170 HLIN 3/((((39-N2%))/((A%<=A)))),(Y) AT ABS(N2%)\n180 FOR C=(32767>1E3) TO (SIN(LEN(CHR$(255)))):FOR A=(4642-((J*M-((A>A%))))) TO (-C) STEP (ABS(NOT ATN(M))):M$=M$\n190 IF (Y) THEN HCOLOR=NOT ((-((A<>J)))):A%=ATN(NOT ((A%^C%)))\n200 J=N2%:A=Y\n210 SPEED=M*Z%:C=LOG(-XY>=C%)\n",
+ "options": {
+  "library": null,
+  "program": "HGR1",
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 16384,
+ "obj_len": 1356,
+ "obj_sha256": "f2655cadafa40eea141d5269b2825403be477737d56cb778f811806b56dde078",
+ "cycles": 132731066,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 16404
+  },
+  {
+   "line": 20,
+   "addr": 16404
+  },
+  {
+   "line": 30,
+   "addr": 16490
+  },
+  {
+   "line": 40,
+   "addr": 16508
+  },
+  {
+   "line": 50,
+   "addr": 16511
+  },
+  {
+   "line": 60,
+   "addr": 16519
+  },
+  {
+   "line": 70,
+   "addr": 16554
+  },
+  {
+   "line": 80,
+   "addr": 16631
+  },
+  {
+   "line": 90,
+   "addr": 16637
+  },
+  {
+   "line": 100,
+   "addr": 16664
+  },
+  {
+   "line": 110,
+   "addr": 16687
+  },
+  {
+   "line": 120,
+   "addr": 16696
+  },
+  {
+   "line": 130,
+   "addr": 16699
+  },
+  {
+   "line": 140,
+   "addr": 16726
+  },
+  {
+   "line": 150,
+   "addr": 16831
+  },
+  {
+   "line": 160,
+   "addr": 16846
+  },
+  {
+   "line": 170,
+   "addr": 16951
+  },
+  {
+   "line": 180,
+   "addr": 16993
+  },
+  {
+   "line": 190,
+   "addr": 17089
+  },
+  {
+   "line": 200,
+   "addr": 17137
+  },
+  {
+   "line": 210,
+   "addr": 17149
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "OBJECT FILE": "S015.OBJ",
+  "PROGRAM": "16384 - 17739",
+  "LOCAL VARIABLES": "17740 - 17809",
+  "HIGHEST MEMORY LOCATION": "17809"
+ }
+}

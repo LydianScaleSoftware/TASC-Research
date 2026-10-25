@@ -1,0 +1,86 @@
+{
+ "id": "r4112",
+ "key": "92b3785df24e28a5",
+ "source": "10 REM! INTEGER *\n20 DIM A%(9)\n30 READ Q1:ON B(B%)-VAL(D$(XY%,25784)) GOTO 80,100,70\n40 Q1=B(X%+B)<>Q1:A$=MID$(RIGHT$(N2$,.001*Q1),127)\n50 N2$=D$(-X%,M):N2$=C$\n60 PLOT W%-(((W%) OR 497+AB)),.001<SGN(VAL(A$))\n70 B=AB/((((Q1=M))--W%)):AB=Q1\n80 Q1=Q1:ONERR GOTO 120\n90 Q1=AB<>((255<=PEEK(.5))):B=((B AND B(Z)))=48045*ABS(3)\n100 Q1=Q1:ON 127 GOTO 140\n110 HCOLOR=B\n120 N2$=LEFT$(\"HI\",RND(32767)+305)\n130 POP\n140 XDRAW AB AT AB,(20883)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": 28672,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 706,
+ "obj_sha256": "0b233be22d828028899abb0934fdc0629256c91e4fc2574d4d6193453d169da6",
+ "cycles": 93074326,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6127
+  },
+  {
+   "line": 50,
+   "addr": 6169
+  },
+  {
+   "line": 60,
+   "addr": 6202
+  },
+  {
+   "line": 70,
+   "addr": 6241
+  },
+  {
+   "line": 80,
+   "addr": 6274
+  },
+  {
+   "line": 90,
+   "addr": 6285
+  },
+  {
+   "line": 100,
+   "addr": 6342
+  },
+  {
+   "line": 110,
+   "addr": 6357
+  },
+  {
+   "line": 120,
+   "addr": 6363
+  },
+  {
+   "line": 130,
+   "addr": 6389
+  },
+  {
+   "line": 140,
+   "addr": 6392
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "OBJECT FILE": "S010.OBJ",
+  "PROGRAM": "6064 - 6769",
+  "LOCAL VARIABLES": "28672 - 28986",
+  "HIGHEST MEMORY LOCATION": "28986"
+ }
+}

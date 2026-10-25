@@ -1,0 +1,74 @@
+{
+ "id": "r4119",
+ "key": "330eae127bf77761",
+ "source": "10 REM! INTEGER K\n20 DIM P(9)\n30 IF (NOT 241) THEN IF (XY%) THEN N2%=Y:COLOR=RND(RND(XY%+W%)):FOR XY=(K-(ASC(XY$))) TO (39)\n40 A(-581=(3=48900))=ATN(LOG(-XY)):ON SQR(335)-W% GOTO 110,30:P(NOT Y%)=(B)*((ABS(1000)-2))\n50 P(W%)=XY<>P(P(XY%) AND 2):IF (B(N2%,N2%)) THEN XY$=LEFT$(XY$,Y%)+\"123\"\n60 Y%=XY%:FOR XY=(N2-Z) TO (XY):VTAB XY%\n70 READ Y%,W%\n80 READ K,B:XY$=XY$\n90 N2=Z:IF (N2%) THEN 70:FOR K=((N2)) TO (-TAN(NOT 20))\n100 POP:NEXT K:DRAW B AT Z,(24-ASC(\"TASC\"+XY$))\n110 XY%=((P(7)+W%>XY))+3:WAIT N2%+XY,(Y-LEN(LEFT$(\"123\",5))),(Z*((870 OR P(N2%)))-((((XY%<=W%))-49152))):FOR Z=(-(Y)^N2) TO (32767) STEP (NOT ((476>INT(N2%))))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 944,
+ "obj_sha256": "46348d8d079ee5795a69c55ef15485defdcafefa3201e3731bac06817993ba16",
+ "cycles": 108319931,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6150
+  },
+  {
+   "line": 50,
+   "addr": 6251
+  },
+  {
+   "line": 60,
+   "addr": 6331
+  },
+  {
+   "line": 70,
+   "addr": 6363
+  },
+  {
+   "line": 80,
+   "addr": 6375
+  },
+  {
+   "line": 90,
+   "addr": 6393
+  },
+  {
+   "line": 100,
+   "addr": 6407
+  },
+  {
+   "line": 110,
+   "addr": 6461
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7007",
+  "LOCAL VARIABLES": "7008 - 7759",
+  "HIGHEST MEMORY LOCATION": "7759"
+ }
+}

@@ -1,0 +1,78 @@
+{
+ "id": "r4136",
+ "key": "8ca6d0e3debbd9d7",
+ "source": "10 REM! INTEGER K\n20 A=-M+1E3-((Y%<>7)):VTAB SIN(((Q1% AND A))^ASC(C$))\n30 FOR Q1=(N2-A%) TO (SIN(X)>((24<((M<>M)))))\n40 FOR K=(Y%) TO (K*(.5+Q1%)):AB$=STR$(N2=A)\n50 Q1%=AB%:DATA HI\n60 A%=Q1:READ A%:ON ((Q1%=A=3.14159))*49152 GOTO 20,20\n70 DATA 1,-2.5,1:IF (100/1) THEN 70\n80 Y%=A%\n90 SPEED=AB%^3>K+1E3>((16968>((A OR Q1%)))):A=K\n100 GOSUB 60:M=ABS(N2)\n110 GOTO 120:PRINT:AB$=RIGHT$(\"X Y\"+\"123\",Q1%/Q1%)+\"HI\"\n120 N2=NOT ((Y%/Q1/Q1%^Q1))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 728,
+ "obj_sha256": "b91d152d04baf2b7230e672d096e54565362d05070bd2507ffe972c70e5fe37b",
+ "cycles": 96207915,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6144
+  },
+  {
+   "line": 40,
+   "addr": 6191
+  },
+  {
+   "line": 50,
+   "addr": 6229
+  },
+  {
+   "line": 60,
+   "addr": 6244
+  },
+  {
+   "line": 70,
+   "addr": 6282
+  },
+  {
+   "line": 80,
+   "addr": 6310
+  },
+  {
+   "line": 90,
+   "addr": 6316
+  },
+  {
+   "line": 100,
+   "addr": 6373
+  },
+  {
+   "line": 110,
+   "addr": 6385
+  },
+  {
+   "line": 120,
+   "addr": 6444
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6791",
+  "LOCAL VARIABLES": "6792 - 6835",
+  "HIGHEST MEMORY LOCATION": "6835"
+ }
+}

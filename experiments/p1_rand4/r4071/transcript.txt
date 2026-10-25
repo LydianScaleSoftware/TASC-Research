@@ -1,0 +1,184 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S003
+
+
+OBJECT CODE FILE:
+(DEFAULT S003.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION? NO
+
+COMPILATION LISTING:
+(DEFAULT YES)? YES
+
+PAUSE ON ERRORS:
+(DEFAULT YES)? YES
+
+INTEGER ARITHMETIC:
+(DEFAULT YES)? NO
+
+INTEGER CONSTANTS:
+(DEFAULT YES)? YES
+
+RESUME/DEBUG CODE:
+(DEFAULT NO)? YES
+
+*****BEGINNING PASS 1
+
+
+
+10
+RECOGNIZED  REM ! INTEGER J,K
+20  DIM B$(12,3),P$(12,10)
+30  POKE N2,1000 <  VAL (P$(X%,95)) >  -
+ 3: CALL  -  LOG (J): HLIN K * ((N2 OR 7
+402)) -  -  SGN (65535),(N2 /  ATN (K))
+AT ((991 > B)) ^ W * 256
+40  HLIN Z%,( -  PEEK (K / 2)) AT C
+50  FOR N2 = (507) TO (Z OR Z * B): FOR
+B = (C / 1 <  > X% > J) TO (437 AND C +
+C OR X%)
+60  IF (416) THEN 200
+
+*****WARNING
+LINE NUMBER 60
+IGNORED
+
+: FOR K = (((40 + K)) * ((Q1% > X%)) + 6
+5535) TO (632) STEP (47)
+
+
+
+
+*****WARNING
+LINE NUMBER 60
+IGNORED
+
+: GOTO 190
+
+
+70 B$( INT ( SGN (26033 ^ Y%)), SQR (N2)
+) =  LEFT$ (W$ + W$,512 <  = 762) +  MID
+$ ("HI",203 - 21279,Z):B$(127, TAN (3276
+7 < Q1% <  > ((J OR K)))) = W$
+80  IF (((Y% ^ 2 >  = ((J > Y%)))) ^ ((1
+0 * Z%))) THEN M$ = "A" + W$
+90 Y% = Y%:W$ = N2$: IF (2 * (( ATN (B)
+= N2))) THEN  IF ((((Z) OR B)) <  = Y%)
+THEN M$ = P$(3,X%)
+100  IF ( ASC ("X Y") >  = Z%) THEN  RET
+URN
+
+*****WARNING
+LINE NUMBER 100
+IGNORED
+
+: PRINT W$; LEFT$ ( STR$ ( NOT Y%),X% AN
+D  NOT Z); CHR$ ( - ((X% * 32767)));
+
+
+110 B$(((Z% + 5)) * (( LEN (N2$) + ((256
+ = N2)))), NOT N2) = N2$:N2$ = "" +  MID
+$ ( MID$ (W$,20),B > Q1%): IF (( SQR (Y%
+) >  NOT 32767)) THEN 10
+120  CALL Y% + ((Q1% < N2)) - Z: GOTO 16
+0
+130  CALL C:B$(J + ((Z% - C <  =  COS (Y
+%))),((W < 32767 AND W)) > Z) =  CHR$ (Z
+ ^ 255 >  = W / Z)
+140 W$ = N2$:Z = J: GOTO 270
+150 W = 7 OR  LOG ((Y%)):N2 = Z * (( - Q
+1% - Y%)):M$ =  MID$ (W$ + B$(Z%,K) +  M
+ID$ (N2$,Y%,256),127 + C)
+160  IF ( - B * 749 <  > J) THEN 10:C =
+K
+170  GR :X% =  ABS (K + Z%) <  =  ATN (C
+) - ((127 >  = W)): PRINT  LOG (X%); NOT
+ ((K / Z)) + J;X%;
+180 W =  NOT (( - Z)) ^  EXP (Q1%): POKE
+ 2,0.1: HTAB 5 * ((Y% OR B))
+190  FOR C = ( SGN ( ABS (W AND B))) TO
+( SGN (100))
+200  ON 39 >  = ((B = 2)) GOTO 270,280:
+PRINT :B = Z% ^ ((((Z >  = 65535)) + 636
+))
+210 W =  ATN (Z) +  NOT C:N2$ =  RIGHT$
+(P$(325,X% ^ 256),X% OR N2 - 16625): ON
+C GOTO 110
+220 Z% = (Y%): GOTO 80
+230 W$ =  STR$ (B = Q1%) + N2$
+240  ON Z% GOTO 260,180,170,240: PRINT :
+W$ = "123"
+250  HTAB K:N2$ = W$: PRINT ((Y% = Z)) *
+ ((C > W)) = N2,
+260  PRINT W;N2 ^ ((((1 = K)) + B)), - Y
+%;: HLIN 127 + Y% + ((X% + 5)),( TAN (N2
+)) AT  INT (X%)
+270  END
+
+*****WARNING
+LINE NUMBER 270
+IGNORED
+
+: GOTO 170
+
+
+:B = J
+280 P$(680 > ((K < 40)) > ((5 + C AND 2)
+),J) = "HI"
+
+
+
+*****BEGINNING PASS 2
+
+
+.......
+
+
+*****CODE GENERATION COMPLETE
+
+
+COMPILATION INFORMATION AND LINE NUMBER
+REFERENCE TABLE? YES
+
+
+SOURCE FILE: S003
+OBJECT FILE: S003.OBJ
+LIBRARY OCCUPIES 2051 - 6063
+PROGRAM OCCUPIES 6064 - 8567
+
+NO COMMON BLOCK
+
+LOCAL VARIABLES OCCUPY 8568 - 9014
+
+HIGHEST MEMORY LOCATION: 9014
+
+
+LINE# ADDR   LINE# ADDR   LINE# ADDR
+
+10    6084   20    6084   30    6084
+40    6216   50    6249   60    6334
+70    6345   80    6497   90    6571
+100   6649   110   6676   120   6807
+130   6837   140   6939   150   6960
+160   7062   170   7094   180   7177
+190   7245   200   7280   210   7336
+220   7414   230   7426   240   7450
+250   7492   260   7549   270   7633
+280   7645
+
+*****COMPILATION COMPLETE
+
+
+]?

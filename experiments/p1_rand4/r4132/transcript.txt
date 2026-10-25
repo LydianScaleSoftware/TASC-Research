@@ -1,0 +1,148 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S013
+
+
+OBJECT CODE FILE:
+(DEFAULT S013.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION? NO
+
+COMPILATION LISTING:
+(DEFAULT YES)? YES
+
+PAUSE ON ERRORS:
+(DEFAULT YES)? YES
+
+INTEGER ARITHMETIC:
+(DEFAULT YES)? YES
+
+INTEGER CONSTANTS:
+(DEFAULT YES)? YES
+
+RESUME/DEBUG CODE:
+(DEFAULT NO)? YES
+
+*****BEGINNING PASS 1
+
+
+
+10  HLIN  - 255,(C) AT N2 - 39203 + X <
+ = Z%:Z$ = N2$
+20  DATA 1,"A,B",:Y = 7
+30 N2$ = X$ +  LEFT$ ("",Z% * X): IF (23
+596 - 255) THEN  IF ( NOT C) THEN  FOR X
+ = (X) TO ((( ATN (C) = (Q1))) - (( LOG
+(3) <  = XY% / Y))) STEP (33947): READ X
+
+40  IF (35942) THEN  ON Z% GOTO 260,200,
+50: GR
+50  CALL  TAN (A% * ((X > Q1)))
+60  FOR N2 = (C%) TO ( COS (255)): PRINT
+ Z% <  = XY% OR C >  = N2 = ((Q1 AND A%)
+),Y;
+70  NEXT N2: SPEED=  - A%: ON XY% <  = X
+ >  = Q1 >  =  RND (A% <  > 151) GOTO 22
+0,150,220
+80  PRINT  - C >  = ((Y <  > X - X)),: G
+OTO 90
+
+*****WARNING
+LINE NUMBER 80
+IGNORED
+
+: VTAB A%
+
+
+90 N2$ =  MID$ ( MID$ ("", NOT 23391,X =
+ 3.14159), VAL (X$))
+100 C% = .001: SPEED=  - 256
+110 Z% = X:X = 40000 <  =  SGN (1000) <
+((((Q1 AND 20)) < 906 * C%))
+120  READ Z%,Y:X = 0.1 = C%:Z$ = X$ +  S
+TR$ ( LEN (N2$))
+130  ON 457 GOSUB 160:X$ = X$
+140  PRINT  NOT  INT (Z%);N2$;: HPLOT  T
+O A% > C OR A%,(N2 - XY%): HCOLOR= 2.25
+> X
+150 Q1 = ((A% <  = 0)) /  - Z% = ((1E3 =
+ ((24 < 255)))): FOR X = (Y) TO ( - (( N
+OT ((.5 * C))))) STEP ( -  ABS (Y))
+160 XY% = X:X$ =  CHR$ (Y): IF (10) THEN
+  POKE C,10
+170 C =  - (( LEN (Z$) * ((Y OR Y)))): P
+LOT A%,Y: FOR Q1 = (C / (( - XY% -  - 40
+))) TO ( LOG ( - 40)) STEP (Y *  COS ( A
+BS (X)))
+180  PRINT A%;Z%;:Z% = A%: GOSUB 120
+190  PRINT  - Q1 + A% - ((Y <  - 39341))
+;
+200 C =  - ((C% + Z% * A%))
+210  POKE (( - Z% + A%)) *  VAL ("123" +
+ X$),Y <  = ((C > A%)) OR  NOT 20
+220 X = Z% ^ ((Z% ^ ((44996 >  = Y)))):A
+% = XY%
+230  IF (5) THEN 100
+240  PRINT : PRINT N2 / A% > Z% = ((C% <
+  > N2 AND  EXP (N2)));X$;
+250 Z$ = "123"
+260 C% = (Y) <  = XY%
+270 X$ = "HI"
+280  IF (N2) THEN N2$ =  LEFT$ ( LEFT$ (
+N2$,Q1),C%)
+
+
+
+*****BEGINNING PASS 2
+
+
+......
+
+
+*****CODE GENERATION COMPLETE
+
+
+COMPILATION INFORMATION AND LINE NUMBER
+REFERENCE TABLE? YES
+
+
+SOURCE FILE: S013
+OBJECT FILE: S013.OBJ
+LIBRARY OCCUPIES 2051 - 6063
+PROGRAM OCCUPIES 6064 - 8050
+
+NO COMMON BLOCK
+
+LOCAL VARIABLES OCCUPY 8051 - 8103
+
+HIGHEST MEMORY LOCATION: 8103
+
+
+LINE# ADDR   LINE# ADDR   LINE# ADDR
+
+10    6084   20    6129   30    6151
+40    6275   50    6302   60    6323
+70    6406   80    6475   90    6514
+100   6577   110   6598   120   6661
+130   6715   140   6736   150   6807
+160   6901   170   6945   180   7052
+190   7079   200   7112   210   7133
+220   7211   230   7247   240   7258
+250   7321   260   7339   270   7354
+280   7371
+
+*****COMPILATION COMPLETE
+
+
+]?

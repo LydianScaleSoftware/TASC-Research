@@ -1,0 +1,94 @@
+{
+ "id": "r4107",
+ "key": "3d2dd19ae172b80c",
+ "source": "10 REM! INTEGER J\n20 DIM P$(7,1),D$(2,5)\n30 DEF FN F(T)=C%\n40 IF (49152) THEN POKE 2.25,-J<>C%+Q1%-((20<=592))\n50 IF (N2) THEN 150\n60 Q1%=1607\n70 RETURN:N2=-TAN(C%)\n80 Z=A*A%:PRINT M$,\n90 A%=C:DATA HI,HI:SPEED=127<B>100<-C\n100 Z=A\n110 POKE Z,LOG(B+10)<>C/((Q1% AND B)):PRINT C;-N2;\n120 B=.001:FOR J=(Q1%) TO (N2) STEP (127>=366):IF (SIN(ASC(\"X Y\"+A$))) THEN TEXT\n130 A$=\"TASC\"\n140 GOSUB 10\n150 PRINT\n160 INPUT \"\";A%,B%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 764,
+ "obj_sha256": "24495cf9dd7e06530a2f70b7649679a0d67ce5f5f6928e88e4d53148e7a11dc9",
+ "cycles": 90645536,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6094
+  },
+  {
+   "line": 50,
+   "addr": 6150
+  },
+  {
+   "line": 60,
+   "addr": 6161
+  },
+  {
+   "line": 70,
+   "addr": 6170
+  },
+  {
+   "line": 80,
+   "addr": 6186
+  },
+  {
+   "line": 90,
+   "addr": 6210
+  },
+  {
+   "line": 100,
+   "addr": 6267
+  },
+  {
+   "line": 110,
+   "addr": 6276
+  },
+  {
+   "line": 120,
+   "addr": 6339
+  },
+  {
+   "line": 130,
+   "addr": 6420
+  },
+  {
+   "line": 140,
+   "addr": 6439
+  },
+  {
+   "line": 150,
+   "addr": 6442
+  },
+  {
+   "line": 160,
+   "addr": 6448
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S005.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6827",
+  "LOCAL VARIABLES": "6828 - 6948",
+  "HIGHEST MEMORY LOCATION": "6948"
+ }
+}

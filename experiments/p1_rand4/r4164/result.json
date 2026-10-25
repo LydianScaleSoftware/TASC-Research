@@ -1,0 +1,146 @@
+{
+ "id": "r4164",
+ "key": "0a3fb7c2d94e2cf9",
+ "source": "10 REM! INTEGER I,K\n20 DIM P$(5),A(7)\n30 I=X<VAL(RIGHT$(\"TASC\",W))\n40 HLIN ATN(19409^Q1%/X),(-ATN(A(A%)>=AB)) AT ((X>=COS(1000)))*5:XY=ASC(CHR$(NOT A(I))):P$(ATN(NOT ((W%>256))))=B$\n50 W%=((1.5*255<>TAN(.001)))*((((678 OR Q1%))*((788<=A)))):IF (ASC(XY$)) THEN PLOT Q1%,((18267^964+LEN(\"X Y\")))/XY\n60 A=2\n70 DATA -2.5,1:A(Q1%)=PEEK(0)\n80 I=-((((AB>100))^((W+W)))):K=INT(W%<K)<>W\n90 FOR X=(K) TO (B(K)*B(172)>=((A=XY))>K):B$=\"TASC\"\n100 XY=-914\n110 NEXT:B$=P$(Q1%):B$=\"HI\"+XY$\n120 PRINT Q1%;RIGHT$(\"TASC\",W^B(5));:W%=NOT 919\n130 PRINT XY$;\"A\";:ON (A(W%)) GOTO 210\n140 HTAB 0+((899<>W OR W<=N2%))\n150 POKE A,ABS(I):AB=NOT ((X-K>=-W%)):READ Q1%\n160 GOTO 200:IF (A%*((40 OR A=B(A%)))) THEN POKE 25234>W%,AB\n170 READ X:GOSUB 60:K=ASC(CHR$(A%))\n180 DATA HI,-2.5\n190 ON PEEK(-.5) GOTO 130,80,70:GOSUB 60:VTAB X\n200 W=I:XY=-((PEEK(40000)>B(.5)-10)):FOR A=(((((7>=AB))+((A%>=A%))))*39) TO (B(K)^A OR ASC(P$(N2%)) OR Q1%) STEP (NOT AB)\n210 HTAB A:IF (A-AB>((I=W*A%))) THEN XY$=N2$+STR$(I)+MID$(\"X Y\",A%):POP\n220 XY=1194*1.5/W%-A%:XY=-W%\n230 B$=\"HI\":W=140:FOR XY=(NOT ((SGN(Q1%)^((A(N2%)<=N2%))))) TO (-((2<X))-INT(196))\n240 FOR X=(1.5*.001>=((B(1E3)=N2%))) TO (B(W%)):XY=((7=((N2%<=65535))))-AB:SPEED=ATN(22837)\n250 XY$=P$(49152):FOR XY=(A%) TO (-10)\n260 PRINT NOT XY;CHR$(K),NOT ((-102))/((X OR RND(I)));\n270 PRINT XY$,CHR$(AB),B$;\n280 FOR A=(-A(X+B(N2%))) TO (SIN(NOT ((A/283)))):GOSUB 90:B$=STR$(I)+RIGHT$(\"X Y\",A(Q1%))+\"TASC\"+P$(Q1%)\n290 P$(W%)=RIGHT$(RIGHT$(N2$,-47418),A(I)>-255)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 2199,
+ "obj_sha256": "75980c6d4be936e676b3057d4226996f99de308d5f234f9fd837a7a7c7b421d7",
+ "cycles": 173725017,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6115
+  },
+  {
+   "line": 50,
+   "addr": 6226
+  },
+  {
+   "line": 60,
+   "addr": 6346
+  },
+  {
+   "line": 70,
+   "addr": 6352
+  },
+  {
+   "line": 80,
+   "addr": 6383
+  },
+  {
+   "line": 90,
+   "addr": 6434
+  },
+  {
+   "line": 100,
+   "addr": 6509
+  },
+  {
+   "line": 110,
+   "addr": 6518
+  },
+  {
+   "line": 120,
+   "addr": 6555
+  },
+  {
+   "line": 130,
+   "addr": 6604
+  },
+  {
+   "line": 140,
+   "addr": 6635
+  },
+  {
+   "line": 150,
+   "addr": 6668
+  },
+  {
+   "line": 160,
+   "addr": 6719
+  },
+  {
+   "line": 170,
+   "addr": 6722
+  },
+  {
+   "line": 180,
+   "addr": 6743
+  },
+  {
+   "line": 190,
+   "addr": 6757
+  },
+  {
+   "line": 200,
+   "addr": 6785
+  },
+  {
+   "line": 210,
+   "addr": 6916
+  },
+  {
+   "line": 220,
+   "addr": 6999
+  },
+  {
+   "line": 230,
+   "addr": 7038
+  },
+  {
+   "line": 240,
+   "addr": 7125
+  },
+  {
+   "line": 250,
+   "addr": 7208
+  },
+  {
+   "line": 260,
+   "addr": 7240
+  },
+  {
+   "line": 270,
+   "addr": 7293
+  },
+  {
+   "line": 280,
+   "addr": 7320
+  },
+  {
+   "line": 290,
+   "addr": 7436
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S011.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 8262",
+  "LOCAL VARIABLES": "8263 - 8426",
+  "HIGHEST MEMORY LOCATION": "8426"
+ }
+}

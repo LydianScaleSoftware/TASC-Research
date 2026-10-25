@@ -1,0 +1,74 @@
+{
+ "id": "r4025",
+ "key": "f8aaf8623fa179b4",
+ "source": "10 DIM P$(12),A(5),B$(4,7)\n20 DEF FN F(X)=127+A(VAL(A$))\n30 HTAB -((W%<=X%+.5)):FOR Y=(M AND 20041=Y%-M) TO (B%):B%=A(FN F(Q1)+TAN(Y%))\n40 FOR C=(X%>X%>=M<=B%) TO (FN F(-((Y+XY))))\n50 X%=W%:FOR Q1=(((Q1<=Y%))*((XY*X%))) TO (INT(896 AND Q1*A(Y%))):GET C\n60 POP\n70 CALL 32767\n80 HCOLOR=256\n90 NEXT Q1:Y%=C OR 266\n100 PRINT -((255+B%));:M=B%\n110 A$=LEFT$(XY$,A(FN F(1))):IF (Q1) THEN 110:HLIN B%/((2/W%))<>-((M*888)),(M) AT W%\n",
+ "options": {
+  "library": 4096,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 8109,
+ "obj_len": 674,
+ "obj_sha256": "053db34c6579002181fdf109c311647308b9ba619edc011b340bda33413abf8c",
+ "cycles": 89968517,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 8129
+  },
+  {
+   "line": 20,
+   "addr": 8129
+  },
+  {
+   "line": 30,
+   "addr": 8151
+  },
+  {
+   "line": 40,
+   "addr": 8237
+  },
+  {
+   "line": 50,
+   "addr": 8284
+  },
+  {
+   "line": 60,
+   "addr": 8358
+  },
+  {
+   "line": 70,
+   "addr": 8364
+  },
+  {
+   "line": 80,
+   "addr": 8373
+  },
+  {
+   "line": 90,
+   "addr": 8382
+  },
+  {
+   "line": 100,
+   "addr": 8405
+  },
+  {
+   "line": 110,
+   "addr": 8429
+  }
+ ],
+ "info": {
+  "LIBRARY": "4096 - 8108",
+  "OBJECT FILE": "S008.OBJ",
+  "PROGRAM": "8109 - 8782",
+  "LOCAL VARIABLES": "8783 - 8965",
+  "HIGHEST MEMORY LOCATION": "8965"
+ }
+}

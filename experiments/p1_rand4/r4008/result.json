@@ -1,0 +1,82 @@
+{
+ "id": "r4008",
+ "key": "9da51ccb398e916e",
+ "source": "10 DIM P$(2)\n20 Q1=24\n30 CALL 26581^Y<>((N2% AND W%)):PRINT LEN(RIGHT$(\"\",N2%))*A%(-W%),\n40 X$=AB$+\"X Y\"+\"HI\":AB%=B\n50 AB%=(N2%)\n60 B=-B:Y=-((A%(XY%)-6760)):PRINT\n70 COLOR=5<>5611:VTAB NOT Y\n80 FOR Q1=(Z<=A%(2)) TO (-VAL(B$))\n90 IF (XY%*Y+((0=39))>=7) THEN 70\n100 FOR Q1=(0) TO (VAL(X$)):A%((RND(-W%)))=N2%-((Z*AB%>((127=12060)))):IF (AB%) THEN 120\n110 TEXT\n120 PRINT:Z=NOT ((Z<>Q1))^(584):FOR Y=(A%(N2%)) TO (AB%) STEP (VAL(RIGHT$(\"HI\",861)+\"A\"))\n130 Z=ABS(W%>1^1000)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 828,
+ "obj_sha256": "ee7e558c4b6b9d241a07158969c32fe5c60e3e3a244b37801516eac83b10a817",
+ "cycles": 93648876,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6090
+  },
+  {
+   "line": 40,
+   "addr": 6162
+  },
+  {
+   "line": 50,
+   "addr": 6206
+  },
+  {
+   "line": 60,
+   "addr": 6212
+  },
+  {
+   "line": 70,
+   "addr": 6248
+  },
+  {
+   "line": 80,
+   "addr": 6269
+  },
+  {
+   "line": 90,
+   "addr": 6304
+  },
+  {
+   "line": 100,
+   "addr": 6336
+  },
+  {
+   "line": 110,
+   "addr": 6415
+  },
+  {
+   "line": 120,
+   "addr": 6418
+  },
+  {
+   "line": 130,
+   "addr": 6498
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S008.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6891",
+  "LOCAL VARIABLES": "6892 - 6960",
+  "HIGHEST MEMORY LOCATION": "6960"
+ }
+}

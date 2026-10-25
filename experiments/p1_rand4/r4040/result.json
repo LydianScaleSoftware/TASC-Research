@@ -1,0 +1,94 @@
+{
+ "id": "r4040",
+ "key": "5e00b72b373fe8c7",
+ "source": "10 REM! INTEGER J\n20 PRINT LEFT$(MID$(LEFT$(Z$,N2),SQR(7)),39);Z$+Z$+C$+CHR$(N2-255);\n30 PRINT 255,-((((0 OR 127))+W%/N2)),\n40 HPLOT SGN(SGN(C%))<TAN(A%+A%),(ASC(CHR$(B)+N2$))\n50 PLOT A%<W%,NOT 256:HCOLOR=((W% AND Q1))*C%:GET C$\n60 CALL J\n70 POKE N2,32969\n80 GOTO 140:A%=-((Z%^((Z-J))))\n90 READ Z,J\n100 B=PEEK(Q1+B):C$=\"X Y\":B=NOT Z AND LEN(C$)\n110 C%=(W%):C$=C$:COLOR=ABS(3-(Z))\n120 GOSUB 160:B=B OR ((NOT .001 OR 32767 AND 1))\n130 CALL ATN(529)-SQR(Z%+W%):Z=255<=0.1\n140 PLOT LOG(-(32767)),((A%<>Q1))*C%+INT(Q1>0)\n150 GOTO 50:N2$=\"\"\n160 A%=C%:Q1=(NOT ((445 AND 3))):READ B\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 915,
+ "obj_sha256": "573cb51c974be40096842bc2d7adf93a78b45a9030e3fe36c771d67b59d69b1f",
+ "cycles": 106474665,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6150
+  },
+  {
+   "line": 40,
+   "addr": 6192
+  },
+  {
+   "line": 50,
+   "addr": 6240
+  },
+  {
+   "line": 60,
+   "addr": 6285
+  },
+  {
+   "line": 70,
+   "addr": 6291
+  },
+  {
+   "line": 80,
+   "addr": 6303
+  },
+  {
+   "line": 90,
+   "addr": 6324
+  },
+  {
+   "line": 100,
+   "addr": 6336
+  },
+  {
+   "line": 110,
+   "addr": 6390
+  },
+  {
+   "line": 120,
+   "addr": 6414
+  },
+  {
+   "line": 130,
+   "addr": 6453
+  },
+  {
+   "line": 140,
+   "addr": 6489
+  },
+  {
+   "line": 150,
+   "addr": 6534
+  },
+  {
+   "line": 160,
+   "addr": 6549
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S006.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6978",
+  "LOCAL VARIABLES": "6979 - 7021",
+  "HIGHEST MEMORY LOCATION": "7021"
+ }
+}

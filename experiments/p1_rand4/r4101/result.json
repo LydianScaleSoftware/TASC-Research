@@ -1,0 +1,74 @@
+{
+ "id": "r4101",
+ "key": "3fd80e8d589224f2",
+ "source": "10 DIM B$(7)\n20 DEF FN F(X)=X%>2>=24\n30 X=SQR(M):C=C%:READ C%,M\n40 W%=129:X%=FN F(W%)\n50 IF (SQR(M)<NOT C%) THEN READ Q1,Q1:PLOT Z,Z%=((FN F(Z%)>=FN F(X%))):Q1=X>=Q1\n60 PRINT\n70 HCOLOR=C%:X=-((NOT C OR A(772)+0))\n80 POKE NOT ((W%-D(W%)-LEN(\"HI\"))),ATN(127):CALL D(PEEK(X%))\n90 READ AB$,AB$:HCOLOR=ABS(X)\n100 SPEED=Z:PRINT B$(C%)+A$;A$;AB$;:Z%=Z\n110 X%=VAL(STR$(FN F(A(Z%)))):IF (Q1) THEN B$=A$:A$=AB$\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 659,
+ "obj_sha256": "29aa138d2b0dc8a6e7d865abaedf47b5f3693b295953e9c57cdd9d99031081c7",
+ "cycles": 90405567,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6106
+  },
+  {
+   "line": 40,
+   "addr": 6133
+  },
+  {
+   "line": 50,
+   "addr": 6148
+  },
+  {
+   "line": 60,
+   "addr": 6234
+  },
+  {
+   "line": 70,
+   "addr": 6237
+  },
+  {
+   "line": 80,
+   "addr": 6273
+  },
+  {
+   "line": 90,
+   "addr": 6334
+  },
+  {
+   "line": 100,
+   "addr": 6355
+  },
+  {
+   "line": 110,
+   "addr": 6394
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S016.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6722",
+  "LOCAL VARIABLES": "6723 - 6897",
+  "HIGHEST MEMORY LOCATION": "6897"
+ }
+}

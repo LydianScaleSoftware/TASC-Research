@@ -1,0 +1,90 @@
+{
+ "id": "r4076",
+ "key": "32f3c62abcd06b34",
+ "source": "10 REM! INTEGER K\n20 CALL SQR(N2%+Q1%):Q1%=3\n30 PRINT 3.14159,SIN(256)>RND(3)<>-((X%<N2%));X%;:N2%=LOG(M%):FOR B=(SQR(C)) TO (Q1%) STEP (46640)\n40 X%=AB\n50 CALL 20:FOR X=(N2%) TO (M) STEP (-M%>475):GOTO 90\n60 PRINT MID$(XY$+N2$+\"A\",3,AB),:N2%=((M OR INT(Q1%)))/-K:PRINT SGN(NOT 100),MID$(RIGHT$(M$,B)+XY$,C+COS(X%));\n70 M=C:B=AB\n80 X%=COS(NOT Q1%):GOTO 20:VTAB VAL(MID$(CHR$(255),256,7>N2%))\n90 IF (M%) THEN READ X,N2$:AB=X%:N2$=\"123\"\n100 PRINT X>VAL(M$);((K OR Q1%))*((M<>49152))>ABS(648);AB,:M=((B/X%=B))*((((Q1%=24))-LOG(C)))\n110 PRINT:GOTO 100\n120 PRINT\n130 PRINT RIGHT$(STR$(Q1%),((K<100))/B),:IF (161) THEN 120:READ N2%,X\n140 M=M:X=((-X+N2%/137))*M\n150 GOTO 90\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 944,
+ "obj_sha256": "a2cbffa23b5e7a709f6750a005e2afecf371679ca995541a0e392c1102976784",
+ "cycles": 108396068,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6105
+  },
+  {
+   "line": 40,
+   "addr": 6197
+  },
+  {
+   "line": 50,
+   "addr": 6203
+  },
+  {
+   "line": 60,
+   "addr": 6244
+  },
+  {
+   "line": 70,
+   "addr": 6362
+  },
+  {
+   "line": 80,
+   "addr": 6374
+  },
+  {
+   "line": 90,
+   "addr": 6389
+  },
+  {
+   "line": 100,
+   "addr": 6430
+  },
+  {
+   "line": 110,
+   "addr": 6541
+  },
+  {
+   "line": 120,
+   "addr": 6547
+  },
+  {
+   "line": 130,
+   "addr": 6550
+  },
+  {
+   "line": 140,
+   "addr": 6591
+  },
+  {
+   "line": 150,
+   "addr": 6621
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S008.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7007",
+  "LOCAL VARIABLES": "7008 - 7058",
+  "HIGHEST MEMORY LOCATION": "7058"
+ }
+}

@@ -1,0 +1,88 @@
+{
+ "id": "r4032",
+ "key": "cb914b9396c465bf",
+ "source": "10 DIM B%(6),A%(11),D$(7,7)\n20 IF (RND(-M+Q1)) THEN HLIN ((Y%*Y%<>Q1))+TAN(1000),(B%(49152 OR Q1)) AT M=Z%:AB=NOT COS(SIN(X%))\n30 CALL TAN(7)*((B%(X%)<>1000))<M:IF (X<=Y% OR -461 OR Z%) THEN GR:VTAB 313\n40 FOR C=(AB>=ABS(M AND M)) TO (1000):FOR X=(X%) TO (39):HTAB VAL(M$)\n50 IF (763*B%(Y%)) THEN 10:IF (7<NOT ((Z%-24))) THEN PRINT\n60 IF (TAN(Q1)/((M-C))<>A%) THEN RESTORE:C$=M$+D$(746,-Z%)\n70 X%=C\n80 NEXT X:A%(Z%^((A%<>Y%))=Y%)=SIN(AB):COLOR=Y%\n90 IF (Q1+C) THEN PR#A%+X%\n100 PRINT X%>Q1;EXP(A%(Z%)--Q1);\n110 VTAB Z%\n120 PRINT:IF (AB OR A%(EXP(AB))) THEN B%(RND(INT(ASC(C$))))=X\n130 PRINT LEFT$(B$,(X));\"A\",B$+LEFT$(M$,B%(A%)-X%),\n140 A%(A%)=((2>20325*X%))-((65535^Q1<((536>Y%))))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1082,
+ "obj_sha256": "6ac01aad501413ad1d544ce615790707ae42899a2db6a8c770ffb3bcedc090ed",
+ "cycles": 110088672,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6186
+  },
+  {
+   "line": 40,
+   "addr": 6275
+  },
+  {
+   "line": 50,
+   "addr": 6342
+  },
+  {
+   "line": 60,
+   "addr": 6363
+  },
+  {
+   "line": 70,
+   "addr": 6425
+  },
+  {
+   "line": 80,
+   "addr": 6434
+  },
+  {
+   "line": 90,
+   "addr": 6493
+  },
+  {
+   "line": 100,
+   "addr": 6518
+  },
+  {
+   "line": 110,
+   "addr": 6557
+  },
+  {
+   "line": 120,
+   "addr": 6566
+  },
+  {
+   "line": 130,
+   "addr": 6628
+  },
+  {
+   "line": 140,
+   "addr": 6692
+  }
+ ],
+ "info": {
+  "N  GR": "VTAB 313",
+  "HEN  RESTORE": "C$ = M$ + D$(746, - Z%)",
+  "OBJECT FILE": "S015.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7145",
+  "LOCAL VARIABLES": "7146 - 7362",
+  "HIGHEST MEMORY LOCATION": "7362"
+ }
+}

@@ -1,0 +1,78 @@
+{
+ "id": "r4053",
+ "key": "c373a30cd21318a3",
+ "source": "10 REM! INTEGER K\n20 DEF FN F(Z)=SQR(EXP(SIN(K)))\n30 IF (((X OR K))<>621<>((A=COS(831)))) THEN 70:SPEED=A>ATN(K):SPEED=XY-((5-255))<FN F(FN F(Z%))\n40 DATA -2.5:DATA \"A,B\"\n50 NORMAL\n60 B$=M$\n70 K=AB*3:READ B$,Z%\n80 STOP:GOTO 60\n90 HCOLOR=-24+FN F(.001)\n100 PRINT:A=20=((SGN(A)<=M%)):HOME\n110 X=Z%\n120 AB=ATN(M%)+((Y/XY<>Y/100))\n",
+ "options": {
+  "library": null,
+  "program": "HGR1",
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 16384,
+ "obj_len": 483,
+ "obj_sha256": "33d1fb89625dca1ccb063e30ccea37698a03c74ab0da9f76459aecfeba94595c",
+ "cycles": 81507214,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 16404
+  },
+  {
+   "line": 20,
+   "addr": 16404
+  },
+  {
+   "line": 30,
+   "addr": 16423
+  },
+  {
+   "line": 40,
+   "addr": 16464
+  },
+  {
+   "line": 50,
+   "addr": 16485
+  },
+  {
+   "line": 60,
+   "addr": 16488
+  },
+  {
+   "line": 70,
+   "addr": 16494
+  },
+  {
+   "line": 80,
+   "addr": 16515
+  },
+  {
+   "line": 90,
+   "addr": 16518
+  },
+  {
+   "line": 100,
+   "addr": 16539
+  },
+  {
+   "line": 110,
+   "addr": 16566
+  },
+  {
+   "line": 120,
+   "addr": 16572
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "OBJECT FILE": "S002.OBJ",
+  "PROGRAM": "16384 - 16866",
+  "LOCAL VARIABLES": "16867 - 16918",
+  "HIGHEST MEMORY LOCATION": "16918"
+ }
+}

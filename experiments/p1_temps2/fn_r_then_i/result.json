@@ -1,0 +1,38 @@
+{
+ "id": "fn_r_then_i",
+ "key": "05a280885e1934ae",
+ "source": "10 DEF FN F(Z)=(A(1)+A(2))+(B%(1)+B%(2))\n20 X=FN F(1)",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 184,
+ "obj_sha256": "768ae5737082373bdc511ae88249ec2c84efc16e6e0c0e03d8f235012534ec76",
+ "cycles": 60775440,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6136
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6247",
+  "LOCAL VARIABLES": "6248 - 6341",
+  "HIGHEST MEMORY LOCATION": "6341"
+ }
+}

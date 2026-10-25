@@ -1,0 +1,94 @@
+{
+ "id": "r4172",
+ "key": "753decfca15d0dce",
+ "source": "10 REM! INTEGER J\n20 DIM D$(1),A%(6)\n30 DEF FN F(T)=A%(-A%(20))-C%\n40 J=Z%:Q1=AB/A%(C%)\n50 C=AB+((Z%<M*40)):SPEED=Q1-C%\n60 HLIN 22747,(J*Q1) AT -AB=A%(A%)+((Z% OR J))\n70 FOR M=(LEN(\"TASC\")^C) TO (10817):NEXT M:SPEED=J\n80 PRINT 756,\n90 READ J,A%:FOR AB=(3) TO (21436)\n100 IF (C) THEN 80:C%=INT(-AB)\n110 C%=ATN(-((10+B%))):HLIN M*((ASC(\"\")-J)),(PEEK(AB)/ASC(C$)/193) AT AB\n120 HOME:GOSUB 50:GOSUB 90\n130 HCOLOR=0\n140 IF (B%) THEN 140:DATA ,1\n150 X$=LEFT$(Y$,516/FN F(AB))\n160 READ C\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 760,
+ "obj_sha256": "5299f09cbbda03ddf650d0cd0f90ac76679a2eaa6f37bc10dc15c1bb8b8d3b10",
+ "cycles": 94355726,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6121
+  },
+  {
+   "line": 50,
+   "addr": 6142
+  },
+  {
+   "line": 60,
+   "addr": 6169
+  },
+  {
+   "line": 70,
+   "addr": 6226
+  },
+  {
+   "line": 80,
+   "addr": 6279
+  },
+  {
+   "line": 90,
+   "addr": 6288
+  },
+  {
+   "line": 100,
+   "addr": 6317
+  },
+  {
+   "line": 110,
+   "addr": 6337
+  },
+  {
+   "line": 120,
+   "addr": 6421
+  },
+  {
+   "line": 130,
+   "addr": 6430
+  },
+  {
+   "line": 140,
+   "addr": 6436
+  },
+  {
+   "line": 150,
+   "addr": 6453
+  },
+  {
+   "line": 160,
+   "addr": 6471
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S002.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6823",
+  "LOCAL VARIABLES": "6824 - 6889",
+  "HIGHEST MEMORY LOCATION": "6889"
+ }
+}

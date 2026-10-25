@@ -81,7 +81,7 @@ def assemble(c: Compiler, opts: Options) -> Result:
 
     # symbols: temps, FN params, named variables
     temps = [t for vt in ("int", "real") for t in c.temps[vt]]  # observed in BALL: int temp before real temp
-    fn_temps = [t for vt in ("int", "real") for t in c.fn_temps[vt]]
+    fn_temps = sorted((t for vt in ("real", "int") for t in c.fn_temps[vt]), key=lambda t: t.seq)  # observed: creation order (main temps: int first)
     stemps = c.temps["str"]
     named = list(c.syms.values())
     num_scalars = _symbol_order([s for s in named if not s.array and s.vtype != "str"])

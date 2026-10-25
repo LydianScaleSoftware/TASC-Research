@@ -1,0 +1,106 @@
+{
+ "id": "r4115",
+ "key": "47328acb0f4aee08",
+ "source": "10 REM! INTEGER J\n20 DIM D(9),B%(10)\n30 DEF FN F(T)=N2%\n40 D(NOT D(65535))=C%-D(B%):PRINT:INVERSE\n50 J=((J OR B))>=J>=((B<=XY%))/((Y*624)):PLOT -C%,1E3:TEXT\n60 VTAB J AND J<>D(J) OR Q1:POKE ABS(RND(B)^VAL(M$)),B%\n70 M=J-((ASC(Z$)<=1000))\n80 SPEED=PEEK(J):DATA \"A,B\",-2.5,HI\n90 PRINT SIN(963);869,INT(B%(C%));:B%=B\n100 SPEED=NOT M\n110 Q1$=\"TASC\":IF (18237) THEN RESTORE\n120 Q1=C%:PRINT\n130 J=935\n140 GOSUB 70\n150 Y=LEN(\"\"):Z$=CHR$(32767)\n160 TEXT\n170 PRINT FN F(D(3)-B%);-LEN(Q1$),:IF (B%(C%>39)) THEN 110:POKE C,-C%\n180 IF (N2%) THEN 120\n190 END:PRINT MID$(MID$(CHR$(B),404),SIN(B%)<>ASC(\"123\"));\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 823,
+ "obj_sha256": "48627474b1207d7e396aacd20ed7f657ddeede968db3951f30405dde04b2c302",
+ "cycles": 98507612,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6094
+  },
+  {
+   "line": 50,
+   "addr": 6136
+  },
+  {
+   "line": 60,
+   "addr": 6211
+  },
+  {
+   "line": 70,
+   "addr": 6280
+  },
+  {
+   "line": 80,
+   "addr": 6301
+  },
+  {
+   "line": 90,
+   "addr": 6331
+  },
+  {
+   "line": 100,
+   "addr": 6376
+  },
+  {
+   "line": 110,
+   "addr": 6388
+  },
+  {
+   "line": 120,
+   "addr": 6421
+  },
+  {
+   "line": 130,
+   "addr": 6436
+  },
+  {
+   "line": 140,
+   "addr": 6445
+  },
+  {
+   "line": 150,
+   "addr": 6448
+  },
+  {
+   "line": 160,
+   "addr": 6481
+  },
+  {
+   "line": 170,
+   "addr": 6484
+  },
+  {
+   "line": 180,
+   "addr": 6546
+  },
+  {
+   "line": 190,
+   "addr": 6557
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S013.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6886",
+  "LOCAL VARIABLES": "6887 - 7009",
+  "HIGHEST MEMORY LOCATION": "7009"
+ }
+}

@@ -1,0 +1,87 @@
+{
+ "id": "r4062",
+ "key": "a6645509804851ae",
+ "source": "10 REM! INTEGER J\n20 DATA ,,:DATA 1\n30 X%=B\n40 FOR Q1=(ABS(40<Q1%)) TO (A):INPUT J:DRAW M/J AT 24502+(10)>=X%,(100)\n50 A=B*Z%+20^A<3:IF (M) THEN RETURN:GOTO 110:X%=Q1\n60 HLIN X%,(X%) AT NOT ((27655 OR -24))\n70 W=SIN(TAN(10)):POKE A,N2%--((X%<M))\n80 NEXT Q1\n90 IF (M) THEN 10:N2%=(N2%>W-7)\n100 W=B:J=NOT Z%:IF (Q1*SQR(X%)) THEN Q1=ASC(MID$(CHR$(Z%),N2%<1,SGN(X%)))\n110 B=LOG(256 OR Q1)/((B<=A)):HLIN -Q1% AND J,(Q1) AT (1)^((B^M=M))\n120 X%=ASC(LEFT$(N2$,Z%))^((W>ABS(B)))\n130 N2%=-((X%<Q1%-256)):IF (((515-((B+Z%))))*10) THEN GET Q1\n140 AB$=STR$(X%)\n",
+ "options": {
+  "library": 16384,
+  "program": 24576,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 24576,
+ "obj_len": 878,
+ "obj_sha256": "abba936af286beb215b7ab8b80f8ab29e1aafa00c82c417472777e133b5c04dd",
+ "cycles": 103779754,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 24596
+  },
+  {
+   "line": 20,
+   "addr": 24596
+  },
+  {
+   "line": 30,
+   "addr": 24613
+  },
+  {
+   "line": 40,
+   "addr": 24619
+  },
+  {
+   "line": 50,
+   "addr": 24687
+  },
+  {
+   "line": 60,
+   "addr": 24729
+  },
+  {
+   "line": 70,
+   "addr": 24759
+  },
+  {
+   "line": 80,
+   "addr": 24795
+  },
+  {
+   "line": 90,
+   "addr": 24800
+  },
+  {
+   "line": 100,
+   "addr": 24823
+  },
+  {
+   "line": 110,
+   "addr": 24902
+  },
+  {
+   "line": 120,
+   "addr": 24980
+  },
+  {
+   "line": 130,
+   "addr": 25016
+  },
+  {
+   "line": 140,
+   "addr": 25059
+  }
+ ],
+ "info": {
+  "LIBRARY": "16384 - 20396",
+  "NPUT J": "DRAW M / J AT 24502 + (10) >  =",
+  "OBJECT FILE": "S011.OBJ",
+  "PROGRAM": "24576 - 25453",
+  "LOCAL VARIABLES": "25454 - 25504",
+  "HIGHEST MEMORY LOCATION": "25504"
+ }
+}

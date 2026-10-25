@@ -1,0 +1,100 @@
+{
+ "id": "r4117",
+ "key": "47bb38782c76bb88",
+ "source": "10 REM! INTEGER *\n20 REM! DEFCOMMON X$,A,M%\n30 DIM D(6)\n40 DEF FN F(X)=.5\n50 AB$=MID$(RIGHT$(STR$(1000),Q1/M%),A OR ABS(D(B%)),NOT M%=((XY%<>D(1000))))\n60 PRINT MID$(MID$(MID$(AB$,A),A*A),D(M%)<=3);\n70 PLOT SGN(N2),VAL(RIGHT$(\"X Y\",D(40))) OR VAL(Q1$):FOR A=(B<=((A<SIN(N2)))) TO (Q1/A*1000)\n80 Q1=B:GOSUB 100:CALL Q1%=-1=D(-XY%)\n90 B%=VAL(\"X Y\")\n100 GOTO 120:XY%=B%\n110 Q1=VAL(STR$(Q1^101))\n120 SPEED=((PEEK(A)*((256<=Q1%))))^N2:B%=M%\n130 PRINT 489;LEFT$(AB$+Q1$+Q1$,778);INT(COS(-154));:GOTO 80:B=3\n140 X$=AB$+\"X Y\"+Q1$+X$+\"123\"+CHR$(Q1%):FOR Q1=(((N2 AND 0>M%))<=TAN(B)) TO (.001):A=558<((100>-2.25))\n150 Q1%=FN F(-B-LOG(B%)):PRINT -B%>=NOT ((D(XY%)-D(297)));RIGHT$(AB$,B)+\"X Y\",INT(A);\n160 GOSUB 120:GOTO 160\n170 D(FN F(FN F(Q1%))^((((Q1+10))^X)))=Q1^SGN(32767)<=B%:A=A AND ((XY% AND A))<=((XY%<=XY%))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6070,
+ "obj_len": 1295,
+ "obj_sha256": "09cb732a9b68b448e665f804b2e24757f612d9343f7aa04b4be4e5ac29e881e8",
+ "cycles": 123260640,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6090
+  },
+  {
+   "line": 40,
+   "addr": 6090
+  },
+  {
+   "line": 50,
+   "addr": 6100
+  },
+  {
+   "line": 60,
+   "addr": 6184
+  },
+  {
+   "line": 70,
+   "addr": 6220
+  },
+  {
+   "line": 80,
+   "addr": 6309
+  },
+  {
+   "line": 90,
+   "addr": 6357
+  },
+  {
+   "line": 100,
+   "addr": 6375
+  },
+  {
+   "line": 110,
+   "addr": 6384
+  },
+  {
+   "line": 120,
+   "addr": 6402
+  },
+  {
+   "line": 130,
+   "addr": 6441
+  },
+  {
+   "line": 140,
+   "addr": 6498
+  },
+  {
+   "line": 150,
+   "addr": 6632
+  },
+  {
+   "line": 160,
+   "addr": 6739
+  },
+  {
+   "line": 170,
+   "addr": 6745
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S015.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6070 - 7364",
+  "NUMERIC COMMON": "6064 - 6067",
+  "STRING COMMON": "6068 - 6069",
+  "LOCAL VARIABLES": "7365 - 7415",
+  "HIGHEST MEMORY LOCATION": "7415"
+ }
+}

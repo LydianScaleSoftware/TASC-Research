@@ -1,0 +1,82 @@
+{
+ "id": "r4016",
+ "key": "02cd18363cf97d80",
+ "source": "10 REM! INTEGER I,K\n20 DIM P$(1)\n30 P$(W%)=B$:W=K:W%=B%+PEEK(AB%)<>((B%<=B%))\n40 COLOR=AB\n50 W=2:IF (X) THEN W%=AB\n60 PRINT 255;\n70 PRINT M$;:PRINT:IF (-((16868>1E3))+3.14159) THEN 100\n80 ON B%+-((K^W)) GOTO 10,50,80:IF (Z) THEN POKE W<>.001<=2-10,EXP(255-AB%):GOSUB 30\n90 PRINT -W%,STR$(ABS(NOT AB)),:FOR I=(((574+B%))^((C-K))*((W>=((X% AND 49152))))) TO (AB) STEP (X%):READ W,K\n100 B$=N2$:FOR K=(B%) TO (-B%)\n110 FOR W=(AB%) TO (W)\n120 DATA HI,300,:P$(((2.25 OR 20))/((X OR W%))*AB)=N2$\n130 N2$=P$(49985)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 833,
+ "obj_sha256": "37b7d24dbbc26c51f47df203b4770170275745524d95b27e707095c5b6613e31",
+ "cycles": 102578840,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6141
+  },
+  {
+   "line": 50,
+   "addr": 6150
+  },
+  {
+   "line": 60,
+   "addr": 6176
+  },
+  {
+   "line": 70,
+   "addr": 6185
+  },
+  {
+   "line": 80,
+   "addr": 6225
+  },
+  {
+   "line": 90,
+   "addr": 6312
+  },
+  {
+   "line": 100,
+   "addr": 6425
+  },
+  {
+   "line": 110,
+   "addr": 6457
+  },
+  {
+   "line": 120,
+   "addr": 6477
+  },
+  {
+   "line": 130,
+   "addr": 6533
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S016.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6896",
+  "LOCAL VARIABLES": "6897 - 6950",
+  "HIGHEST MEMORY LOCATION": "6950"
+ }
+}

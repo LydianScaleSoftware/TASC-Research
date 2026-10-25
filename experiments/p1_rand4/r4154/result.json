@@ -1,0 +1,99 @@
+{
+ "id": "r4154",
+ "key": "6ce75663bb9a23c5",
+ "source": "10 REM! INTEGER I\n20 REM! USECOMMON C,Y,Q1%\n30 I=954 AND Q1% AND 7*VAL(\"X Y\"):Q1%=(12262-N2)\n40 N2=32767\n50 ON SGN(Q1%>=78) GOTO 100,130,50:GOSUB 160:ON LEN(\"X Y\") GOTO 140,50,110,170\n60 GOTO 140:M%=ASC(B$):PLOT Y,(X-XY<>C)\n70 X$=B$\n80 PRINT W$;256>40000,:PRINT\n90 PRINT:VTAB -N2:FOR C=(NOT ASC(W$)) TO (740^I) STEP (-39)\n100 PRINT\n110 ON X GOTO 130\n120 INVERSE:READ B$,W$:ON Y GOTO 120,20,80,150\n130 FOR N2=(LOG(Q1%)) TO (INT(((Q1%<>W%))-(I))):POP:X=SGN(((N2=XY))+((20>=38292)))\n140 PRINT Q1%;CHR$(X);(11301)<>NOT LEN(W$);\n150 XY=-((X-W%))\n160 READ X:AB%=AB%\n170 XY=1000:I=Q1%:PRINT\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6076,
+ "obj_len": 737,
+ "obj_sha256": "48f649403f334fd485aba730ddd416dc5cbf717c9cbb0ddf52f2fc4df3415442",
+ "cycles": 94644473,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6096
+  },
+  {
+   "line": 40,
+   "addr": 6144
+  },
+  {
+   "line": 50,
+   "addr": 6150
+  },
+  {
+   "line": 60,
+   "addr": 6202
+  },
+  {
+   "line": 70,
+   "addr": 6214
+  },
+  {
+   "line": 80,
+   "addr": 6220
+  },
+  {
+   "line": 90,
+   "addr": 6244
+  },
+  {
+   "line": 100,
+   "addr": 6295
+  },
+  {
+   "line": 110,
+   "addr": 6298
+  },
+  {
+   "line": 120,
+   "addr": 6307
+  },
+  {
+   "line": 130,
+   "addr": 6337
+  },
+  {
+   "line": 140,
+   "addr": 6408
+  },
+  {
+   "line": 150,
+   "addr": 6445
+  },
+  {
+   "line": 160,
+   "addr": 6457
+  },
+  {
+   "line": 170,
+   "addr": 6469
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6076 - 6812",
+  "NUMERIC COMMON": "6064 - 6075",
+  "LOCAL VARIABLES": "6813 - 6846",
+  "HIGHEST MEMORY LOCATION": "6846"
+ }
+}

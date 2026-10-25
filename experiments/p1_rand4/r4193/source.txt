@@ -1,0 +1,11 @@
+10 REM! INTEGER I,J
+20 DEF FN F(X)=B(ASC(W$),Y%)<>ABS(ABS(Z))
+30 Y=XY<B(1.5,COS(M%)):X$="HI"
+40 PRINT M%+B(N2%,7)*B(Y%,127);:IF (Y/I^748) THEN 10
+50 DATA 300,HI,300,"A,B":J=C
+60 READ J,Y,Z:A%=M%
+70 Y=580:Y%=Y%:M$=MID$(MID$("123",Y-X,Z<1),INT(COS(I)))
+80 A%=Y-FN F(J/A%):XY=ABS(B(I,A%))
+90 HLIN ((56-((XY AND J))))/((((Y>=B(I,J)))+((A%=N2%)))),(TAN(Z)) AT J:HCOLOR=SQR(-5-XY):GOTO 60
+100 FOR Y=(2.25<>M%) TO (LEN(X$)>=-Y) STEP (-((((1+C))^((N2%/A%))))):B(J,Y%)=3*X*I^M%*49152:IF (-27232>-((-484))) THEN PRINT B(N2%,B(J,M%)*100)^((M%>=I<>NOT Z)),
+110 DATA X

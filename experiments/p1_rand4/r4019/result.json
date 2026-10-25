@@ -1,0 +1,70 @@
+{
+ "id": "r4019",
+ "key": "8e213d9f124d3db8",
+ "source": "10 DIM A(5)\n20 DEF FN F(T)=1000\n30 B=TAN(977)\n40 Z=337:Y=Q1%:SPEED=XY>=((10 AND XY%))-COS(1)\n50 ON 21<((0/B<>Z)) GOTO 20\n60 M%=Q1%\n70 W$=LEFT$(W$,N2-M%<((M%=AB%))):IF (2) THEN 50\n80 Q1%=AB%:A$=MID$(LEFT$(Q1$,B=127),-((-B)),EXP(A(XY%))>=VAL(\"X Y\")):READ Q1%,XY\n90 PRINT:SPEED=ASC(Q1$)^D(NOT 1E3)\n100 DATA HI,X\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 650,
+ "obj_sha256": "226e44342b62855d247b183ffc5e8137c1766231d0506b368592a1b5c0f234e8",
+ "cycles": 87297390,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6094
+  },
+  {
+   "line": 40,
+   "addr": 6103
+  },
+  {
+   "line": 50,
+   "addr": 6148
+  },
+  {
+   "line": 60,
+   "addr": 6172
+  },
+  {
+   "line": 70,
+   "addr": 6178
+  },
+  {
+   "line": 80,
+   "addr": 6219
+  },
+  {
+   "line": 90,
+   "addr": 6321
+  },
+  {
+   "line": 100,
+   "addr": 6354
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S002.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6713",
+  "LOCAL VARIABLES": "6714 - 6856",
+  "HIGHEST MEMORY LOCATION": "6856"
+ }
+}

@@ -1,0 +1,84 @@
+{
+ "id": "r4041",
+ "key": "5b3fd6b8211b5391",
+ "source": "10 REM! INTEGER K\n20 REM! DEFCOMMON Y%,Q1$,AB%\n30 DIM B%(3),D$(10,8)\n40 FOR K=(C=Y%) TO (Y%):IF (798) THEN 120:PRINT ((X%<=K))*Y%-LEN(MID$(\"\",N2));\"X Y\",\"X Y\";\n50 GOTO 90\n60 N2=3.14159+164\n70 Q1$=LEFT$(M$,Q1):IF (117=N2>-C) THEN Y%=C:READ Q1%,Q1\n80 HTAB NOT 2/-K:GOTO 70\n90 IF (N2) THEN Z=782:C=1000:Y$=D$(-((C/X%)),((X% AND 312))>=1000)\n100 IF (255=-N2*X%) THEN C=((P(40984) OR ASC(M$)))<>SIN(X%):PLOT ((W+K))*Z<=B%(VAL(M$)),NOT ((W*C))\n110 ON LEN(MID$(M$,K,Y%)+Y$) GOTO 90,90,40,90\n120 K=-N2\n130 Y%=32767=W<24492<COS(SIN(N2)):ON -((-W)) GOTO 40\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6070,
+ "obj_len": 790,
+ "obj_sha256": "8c70f861918babe82b5e0d1984a198c368989b2b5ea7bd651fba8f334e506e53",
+ "cycles": 98008771,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6090
+  },
+  {
+   "line": 40,
+   "addr": 6090
+  },
+  {
+   "line": 50,
+   "addr": 6121
+  },
+  {
+   "line": 60,
+   "addr": 6124
+  },
+  {
+   "line": 70,
+   "addr": 6133
+  },
+  {
+   "line": 80,
+   "addr": 6192
+  },
+  {
+   "line": 90,
+   "addr": 6219
+  },
+  {
+   "line": 100,
+   "addr": 6284
+  },
+  {
+   "line": 110,
+   "addr": 6396
+  },
+  {
+   "line": 120,
+   "addr": 6432
+  },
+  {
+   "line": 130,
+   "addr": 6441
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S007.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6070 - 6859",
+  "NUMERIC COMMON": "6064 - 6067",
+  "STRING COMMON": "6068 - 6069",
+  "LOCAL VARIABLES": "6860 - 7160",
+  "HIGHEST MEMORY LOCATION": "7160"
+ }
+}

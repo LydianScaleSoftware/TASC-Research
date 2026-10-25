@@ -1,0 +1,98 @@
+{
+ "id": "r4082",
+ "key": "e7bc5a703f3fd739",
+ "source": "10 DIM A%(9)\n20 DEF FN F(X)=SQR(A%(X%)-X%)>((A%(AB%) OR 40))*((AB%=C))\n30 GOTO 40:PLOT EXP(ASC(\"\")),Q1%<=A%(X%)<TAN(X%)\n40 SPEED=SGN(B):A%(X%)=100:READ XY$\n50 Q1$=Q1$:N2=355:HCOLOR=AB%=ASC(\"A\"+\"A\")\n60 VTAB X%\n70 PRINT MID$(\"A\",INT(C)),XY$,XY$;:Q1%=382\n80 FOR A=(A/AB%/N2%+EXP(A%(302))) TO (RND(ASC(XY$))-INT(Z)^((AB% AND 24))):PRINT Y$+STR$(510)+RIGHT$(Y$,AB%-N2),Q1%*FN F(C),Y$+Y$+\"X Y\"+MID$(\"HI\",N2%);:GOSUB 90\n90 HLIN SIN(A%(AB%))/1.5+N2%,(3) AT -N2%:XY$=XY$:A%(X%<=Q1%+X%<>INT(N2)*VAL(XY$))=X%-((PEEK(N2)<PEEK(Q1%)))\n100 SPEED=B:A%(Q1%)=Q1%\n110 C=5*C*1E3>A:FOR B=(256-((X%/N2<>A))) TO (46785) STEP (NOT ((N2-((N2%+100)))))\n120 A%(X%)=Z\n130 Z=INT(40000):A%(10040)=255*((Q1%+Q1%))=ABS(Q1%/7)\n140 A%(AB%)=ABS(C)\n150 IF (Q1%) THEN Q1$=\"A\"\n160 AB%=116:PRINT NOT A%(AB%)/-Q1%>=N2,:NEXT\n170 A%(-((N2+3-((C+A)))))=N2%:Q1$=Q1$\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1419,
+ "obj_sha256": "3f40895da39342a38d7366c6b3dafe2c63725166060d0b845ac0ddd095a8a563",
+ "cycles": 122130998,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6151
+  },
+  {
+   "line": 40,
+   "addr": 6154
+  },
+  {
+   "line": 50,
+   "addr": 6190
+  },
+  {
+   "line": 60,
+   "addr": 6249
+  },
+  {
+   "line": 70,
+   "addr": 6258
+  },
+  {
+   "line": 80,
+   "addr": 6310
+  },
+  {
+   "line": 90,
+   "addr": 6518
+  },
+  {
+   "line": 100,
+   "addr": 6650
+  },
+  {
+   "line": 110,
+   "addr": 6674
+  },
+  {
+   "line": 120,
+   "addr": 6744
+  },
+  {
+   "line": 130,
+   "addr": 6762
+  },
+  {
+   "line": 140,
+   "addr": 6816
+  },
+  {
+   "line": 150,
+   "addr": 6837
+  },
+  {
+   "line": 160,
+   "addr": 6861
+  },
+  {
+   "line": 170,
+   "addr": 6917
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S014.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7482",
+  "LOCAL VARIABLES": "7483 - 7570",
+  "HIGHEST MEMORY LOCATION": "7570"
+ }
+}

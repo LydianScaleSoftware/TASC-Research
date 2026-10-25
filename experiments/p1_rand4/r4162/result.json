@@ -1,0 +1,86 @@
+{
+ "id": "r4162",
+ "key": "02e54dee3cd219c8",
+ "source": "10 REM! INTEGER J\n20 DIM A(2)\n30 GOSUB 110:HLIN 39,((((Z<B%))-C%)) AT B%:Q1=M\n40 ON 65535*RND(10>883) GOTO 90,100,80\n50 B$=M$+\"HI\"\n60 A=W%:FOR C=(((A+720>=24609+Q1))-SGN(20)) TO (Z) STEP (INT(C%)>ASC(\"HI\"))\n70 IF (B%) THEN B$=RIGHT$(M$,PEEK(W%<J)):HCOLOR=-((C%*((Q1<>Q1))))\n80 PRINT RIGHT$(MID$(B$,32767,Z),755)+B$,B%;:Q1=LOG((0.1=A(J)))\n90 B%=NOT ((W%<=A))/39\n100 PRINT STR$(Q1),\n110 B%=743=Q1\n120 PRINT\n130 IF ((INT(W%-W%))) THEN 80:B$=B$\n140 IF (C) THEN A(SIN(W%))=INT(SGN(Q1)):A%=W%*((NOT 24-((A%>=40000))))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 784,
+ "obj_sha256": "2a0a85b0bbfe7116d9ba586cb41b0a002de061de27da9af561357c0806abb10a",
+ "cycles": 97514304,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6126
+  },
+  {
+   "line": 50,
+   "addr": 6151
+  },
+  {
+   "line": 60,
+   "addr": 6174
+  },
+  {
+   "line": 70,
+   "addr": 6256
+  },
+  {
+   "line": 80,
+   "addr": 6303
+  },
+  {
+   "line": 90,
+   "addr": 6360
+  },
+  {
+   "line": 100,
+   "addr": 6384
+  },
+  {
+   "line": 110,
+   "addr": 6396
+  },
+  {
+   "line": 120,
+   "addr": 6408
+  },
+  {
+   "line": 130,
+   "addr": 6411
+  },
+  {
+   "line": 140,
+   "addr": 6436
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S009.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6847",
+  "LOCAL VARIABLES": "6848 - 6906",
+  "HIGHEST MEMORY LOCATION": "6906"
+ }
+}

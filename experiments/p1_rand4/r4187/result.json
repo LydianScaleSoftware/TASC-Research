@@ -1,0 +1,74 @@
+{
+ "id": "r4187",
+ "key": "a239a61b1c16738e",
+ "source": "10 REM! INTEGER I\n20 DIM D%(5),A$(2),B$(5)\n30 GOTO 60:GOTO 90\n40 PLOT AB+M%,((3>=M%))-COS(826) AND -M%:DATA X,\"A,B\":M=NOT M%\n50 READ W%\n60 HCOLOR=AB:C$=LEFT$(\"\",D%((W%)))\n70 FOR AB=(Q1) TO (M% OR (M)) STEP (X):IF (LEN(M$+M$)) THEN RETURN:SPEED=TAN(256)-.5\n80 GOSUB 30:HCOLOR=I:PRINT:IF (VAL(Y$)) THEN PLOT ((I=D%(M%)))*((24<>2))+((I AND Q1<>32767)),(D%(Q1%)) OR LOG(I OR 100)\n90 DATA 1:FOR M=(1>=B) TO (A%^-2):COLOR=127\n100 PRINT INT(32767-2.25>((Q1% OR M%))),:GOSUB 110\n110 GOTO 50:A%=B\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 712,
+ "obj_sha256": "9f1f8818cd34fadaa642c8d3ecf3a321a257687cf87ea5f158ff65ef91a1d3c8",
+ "cycles": 93276948,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6087
+  },
+  {
+   "line": 50,
+   "addr": 6156
+  },
+  {
+   "line": 60,
+   "addr": 6162
+  },
+  {
+   "line": 70,
+   "addr": 6189
+  },
+  {
+   "line": 80,
+   "addr": 6240
+  },
+  {
+   "line": 90,
+   "addr": 6355
+  },
+  {
+   "line": 100,
+   "addr": 6404
+  },
+  {
+   "line": 110,
+   "addr": 6443
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6775",
+  "LOCAL VARIABLES": "6776 - 6853",
+  "HIGHEST MEMORY LOCATION": "6853"
+ }
+}

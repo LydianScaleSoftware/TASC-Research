@@ -1,0 +1,82 @@
+{
+ "id": "r4143",
+ "key": "c25786f949d4f187",
+ "source": "10 REM! INTEGER *\n20 DIM D$(3)\n30 GOSUB 110\n40 M%=W%<824-49152^126\n50 HTAB Z\n60 XY=10<>901<>2>Z:IF (-SIN(W)) THEN W=B>=Q1%:Q1=Q1%\n70 READ B$:XY=(LOG(W)*B)\n80 Q1$=A$+B$+\"123\"+Q1$+A$:W=XY<.001:IF (1E3>=M%) THEN GOTO 100\n90 XY=XY:WAIT ATN(ABS(687*255)),(127):W=EXP(-Q1*-0)\n100 W=W:DATA \"A,B\",300,\"A,B\",1\n110 READ D$(M%),B\n120 XY=INT(W%)+XY<B%:DATA ,300,X:POKE -7,ASC(B$)\n130 W=Q1^B%:B$=B$\n",
+ "options": {
+  "library": 4096,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 8109,
+ "obj_len": 726,
+ "obj_sha256": "199fb74faed800aa4e4262d9082c13258d707b07dfbda2d656cf9b82957f8e6c",
+ "cycles": 90565398,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 8129
+  },
+  {
+   "line": 20,
+   "addr": 8129
+  },
+  {
+   "line": 30,
+   "addr": 8129
+  },
+  {
+   "line": 40,
+   "addr": 8132
+  },
+  {
+   "line": 50,
+   "addr": 8153
+  },
+  {
+   "line": 60,
+   "addr": 8159
+  },
+  {
+   "line": 70,
+   "addr": 8217
+  },
+  {
+   "line": 80,
+   "addr": 8235
+  },
+  {
+   "line": 90,
+   "addr": 8303
+  },
+  {
+   "line": 100,
+   "addr": 8354
+  },
+  {
+   "line": 110,
+   "addr": 8380
+  },
+  {
+   "line": 120,
+   "addr": 8398
+  },
+  {
+   "line": 130,
+   "addr": 8447
+  }
+ ],
+ "info": {
+  "LIBRARY": "4096 - 8108",
+  "OBJECT FILE": "S007.OBJ",
+  "PROGRAM": "8109 - 8834",
+  "LOCAL VARIABLES": "8835 - 8868",
+  "HIGHEST MEMORY LOCATION": "8868"
+ }
+}

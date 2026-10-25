@@ -1,0 +1,94 @@
+{
+ "id": "r4165",
+ "key": "8a1f2310127a8d36",
+ "source": "10 REM! INTEGER K,J\n20 DIM B%(11,3)\n30 DEF FN F(X)=B%(39-M+AB,((K>J))^TAN(10))\n40 A%=M%\n50 PRINT M,STR$(PEEK(C%)),:B=((B=883-A%))-C%\n60 READ C,C$:B%(M%,C%)=Q1%\n70 IF (-255^SIN(Z)<>((45718 OR Z OR J<=817))) THEN K=Q1%:PRINT:M=SIN(J)\n80 C$=Q1$:Q1%=NOT ((A%*M%))--COS(2)\n90 DATA -2.5,:READ A$,M\n100 Q1$=A$:C=((Q1%<((C%>=K))))*.001:J=J+5\n110 B%(NOT B%(C%,C%)>=B%(K,24-B%(Q1%,10225)),EXP(C<B))=M:GOTO 160:GOTO 30\n120 PRINT MID$(LEFT$(A$,LOG(15226)),((24 OR C))/C);\"A\",:M=J\n130 PRINT SQR(882<>ATN(B));A$+\"\"+C$+Q1$+Q1$;RIGHT$(Q1$,33959)+Q1$+CHR$(M)+C$;:GOSUB 120:IF (-FN F(ABS(1.5))) THEN Z=((5 OR B%(2.25,171)))^((NOT 784 OR 20))\n140 SPEED=AB:C%=C%:M=K\n150 FOR B=(127) TO (B)\n160 M%=ATN(M)\n",
+ "options": {
+  "library": null,
+  "program": 20480,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 20480,
+ "obj_len": 1300,
+ "obj_sha256": "c3d4fa2826b7a93b32cf81a0bbff39744dbcb33f1817b1b310201bf68febec24",
+ "cycles": 124714566,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 20500
+  },
+  {
+   "line": 20,
+   "addr": 20500
+  },
+  {
+   "line": 30,
+   "addr": 20500
+  },
+  {
+   "line": 40,
+   "addr": 20558
+  },
+  {
+   "line": 50,
+   "addr": 20567
+  },
+  {
+   "line": 60,
+   "addr": 20627
+  },
+  {
+   "line": 70,
+   "addr": 20663
+  },
+  {
+   "line": 80,
+   "addr": 20752
+  },
+  {
+   "line": 90,
+   "addr": 20795
+  },
+  {
+   "line": 100,
+   "addr": 20822
+  },
+  {
+   "line": 110,
+   "addr": 20867
+  },
+  {
+   "line": 120,
+   "addr": 20960
+  },
+  {
+   "line": 130,
+   "addr": 21027
+  },
+  {
+   "line": 140,
+   "addr": 21202
+  },
+  {
+   "line": 150,
+   "addr": 21229
+  },
+  {
+   "line": 160,
+   "addr": 21249
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "OBJECT FILE": "S012.OBJ",
+  "PROGRAM": "20480 - 21779",
+  "LOCAL VARIABLES": "21780 - 21947",
+  "HIGHEST MEMORY LOCATION": "21947"
+ }
+}

@@ -1,0 +1,74 @@
+{
+ "id": "r4084",
+ "key": "f43a9aef6bc6d4e6",
+ "source": "10 REM! INTEGER J\n20 DEF FN F(X)=-X\n30 Y$=LEFT$(Z$,Z%):READ Z%,Y$\n40 PRINT\n50 ONERR GOTO 80:HCOLOR=M%:CALL LEN(MID$(LEFT$(C$,AB%),127))\n60 J=C:HCOLOR=875\n70 IF (W) THEN SPEED=J:PRINT\n80 IF (FN F(127<=X)<=((N2-X<32767))) THEN IF (-((SGN(N2) OR Q1%>=Q1%))) THEN GOTO 100:FOR J=(2) TO (NOT 79 AND ((5-N2))*Q1):Q1%=-39*1000<>C\n90 C=NOT J\n100 HLIN ((781<>255-550))*ASC(C$+C$),(Z%) AT N2:IF (5) THEN 110\n110 DATA HI,\"A,B\"\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 514,
+ "obj_sha256": "36dd8fe52fb91395de10f5f92a9d95c5cc298c410c48707ffd2e8fc2005651d8",
+ "cycles": 86681863,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6094
+  },
+  {
+   "line": 40,
+   "addr": 6118
+  },
+  {
+   "line": 50,
+   "addr": 6121
+  },
+  {
+   "line": 60,
+   "addr": 6126
+  },
+  {
+   "line": 70,
+   "addr": 6138
+  },
+  {
+   "line": 80,
+   "addr": 6155
+  },
+  {
+   "line": 90,
+   "addr": 6248
+  },
+  {
+   "line": 100,
+   "addr": 6257
+  },
+  {
+   "line": 110,
+   "addr": 6316
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S016.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6577",
+  "LOCAL VARIABLES": "6578 - 6619",
+  "HIGHEST MEMORY LOCATION": "6619"
+ }
+}

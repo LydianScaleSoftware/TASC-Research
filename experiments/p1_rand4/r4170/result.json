@@ -1,0 +1,106 @@
+{
+ "id": "r4170",
+ "key": "2051f71bd4467fe4",
+ "source": "10 PRINT ((C% OR W%))>N2%>=XY;:GOSUB 30\n20 Y$=MID$(B$,(256))\n30 B%=W%:PRINT\n40 PRINT Y$;A$,255,:DATA X,,\"A,B\"\n50 PRINT 40000-((N2+B%(N2%)+NOT Q1)),\n60 M=((B%<C%))^LOG(7)<Z:PRINT TAN(B%(N2%)+W%*N2);:CALL COS(1)\n70 RESUME:W%=371\n80 B%(W%)=7:B%(N2*EXP(ASC(A$)))=M>((B%-5=-810)):GR\n90 PRINT:HCOLOR=ASC(\"TASC\")>W%-B%(2.25)<>40:ON ATN(W%) GOTO 100,70,180\n100 IF (10*W%) THEN PRINT B$;\"\";B%(B%(1000)>=Z)<>N2%^((M<=B%(B%)));:COLOR=2.25\n110 Q1=((B%(W%)>PEEK(N2)))^((255--N2%)):GOSUB 50\n120 Y$=Y$\n130 C%=COS(-((-M)))\n140 HCOLOR=XY:HTAB N2%\n150 W%=W%:DATA \"A,B\",X,1:HTAB SQR(-((40*N2%)))\n160 HTAB 40-N2%\n170 GOSUB 140:HCOLOR=XY\n180 GOSUB 120\n190 PRINT N2+N2*255=LEN(RIGHT$(B$,M));\"HI\";SQR(ATN(N2) AND C%<>N2);:SPEED=(TAN(C%>B%(W%)))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1080,
+ "obj_sha256": "eb2f1feb450229ac89cf3af32b3bc5618294fcc2f31dbcb1da146869b1ba53b1",
+ "cycles": 113507920,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6114
+  },
+  {
+   "line": 30,
+   "addr": 6126
+  },
+  {
+   "line": 40,
+   "addr": 6135
+  },
+  {
+   "line": 50,
+   "addr": 6172
+  },
+  {
+   "line": 60,
+   "addr": 6205
+  },
+  {
+   "line": 70,
+   "addr": 6271
+  },
+  {
+   "line": 80,
+   "addr": 6277
+  },
+  {
+   "line": 90,
+   "addr": 6349
+  },
+  {
+   "line": 100,
+   "addr": 6414
+  },
+  {
+   "line": 110,
+   "addr": 6508
+  },
+  {
+   "line": 120,
+   "addr": 6556
+  },
+  {
+   "line": 130,
+   "addr": 6562
+  },
+  {
+   "line": 140,
+   "addr": 6577
+  },
+  {
+   "line": 150,
+   "addr": 6589
+  },
+  {
+   "line": 160,
+   "addr": 6624
+  },
+  {
+   "line": 170,
+   "addr": 6633
+  },
+  {
+   "line": 180,
+   "addr": 6642
+  },
+  {
+   "line": 190,
+   "addr": 6645
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7143",
+  "LOCAL VARIABLES": "7144 - 7211",
+  "HIGHEST MEMORY LOCATION": "7211"
+ }
+}

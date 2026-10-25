@@ -1,0 +1,141 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S007
+
+
+OBJECT CODE FILE:
+(DEFAULT S007.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION?
+
+*****BEGINNING PASS 1
+
+
+
+10  DEF  FN F(X) =  TAN (AB * ((M% <  =
+M)))
+20 M$ = "A": READ XY$
+30  IF (168 + ((D%(C%) - 100))) THEN  PR
+INT AB$,
+40 M% = D%(M <  > D%(255) ^ AB%)
+50  INPUT "Q";D%( -  VAL ("")): PRINT XY
+$; PEEK (AB% -  - AB%);
+60  GOSUB 60: PRINT  FN F(X%);: FOR AB =
+ (C% < 1000) TO ( NOT (( - X%)))
+70  IF (C OR ((Y OR W)) - ((D%(0) - X%))
+) THEN 200
+
+*****WARNING
+LINE NUMBER 70
+IGNORED
+
+: FOR AB = ( FN F( SGN (AB))) TO ( -  IN
+T (1E3 <  > AB))
+
+
+80  VTAB 0: GOSUB 120
+90  IF (Y >  FN F(M% ^ C%)) THEN 250
+
+*****WARNING
+LINE NUMBER 90
+IGNORED
+
+: FOR C = (X%) TO ( VAL (M$))
+
+
+100  FOR W = ( FN F(127 = W < W)) TO ( -
+  FN F(C))
+110  PLOT  - D%(M%) AND M,C% <  = ((X% >
+  = M% >  =  FN F(M%))): PLOT 20, FN F(
+- C%)
+120  NEXT W:Y = C: NEXT C
+130 W = D%( - C) <  = ((5 > Y)): PRINT
+140  DATA 1,"A,B"
+150 W = ((40000 -  - 1000)) * ((W * 127
++  - M%))
+160  GOSUB 120: FOR Y = (D%(.001) ^  - M
+ + .5) TO ( - W): FOR C = ( SIN ( FN F(Y
+) >  = AB%)) TO (Y)
+170  ON ((C OR W - .5)) = ((AB% <  = AB)
+) ^ Y GOTO 130,120,250: PRINT C%;M%;M$ +
+ M$ + AB$;
+180  PLOT M%,AB%: PRINT  FN F(18091);AB$
+,X% * D%(X%) =  ATN (M%);
+190 M$ = AB$ + "":M% = C% * C <  > Y:AB$
+ = M$
+200 AB = M% = 5: PRINT D%(AB%), - (( - W
+)); - 39;
+210  NORMAL
+220  IF (41212) THEN 250
+
+*****WARNING
+LINE NUMBER 220
+IGNORED
+
+: IF (((((958 OR C%)) - ((7 + W)))) *  F
+N F(256 * M)) THEN 70
+
+
+:D%( - ((AB% >  = 661)) OR 20) =  FN F(M
+%)
+230 W =  - (( - ((W * 32767)))): ON C% +
+  FN F(1) * .5 GOTO 250
+240 X% =  INT (W):AB = X%
+250  PRINT  LEFT$ (XY$,C% * AB >  = W);
+CHR$ (X%) + "A" +  CHR$ (X% < 196);
+260 M$ = "A": GOTO 30
+
+
+
+*****BEGINNING PASS 2
+
+
+....
+
+
+*****CODE GENERATION COMPLETE
+
+
+COMPILATION INFORMATION AND LINE NUMBER
+REFERENCE TABLE? YES
+
+
+SOURCE FILE: S007
+OBJECT FILE: S007.OBJ
+LIBRARY OCCUPIES 2051 - 6063
+PROGRAM OCCUPIES 6064 - 7583
+
+NO COMMON BLOCK
+
+LOCAL VARIABLES OCCUPY 7584 - 7663
+
+HIGHEST MEMORY LOCATION: 7663
+
+
+LINE# ADDR   LINE# ADDR   LINE# ADDR
+
+10    6084   20    6106   30    6125
+40    6161   50    6194   60    6261
+70    6306   80    6350   90    6359
+100   6382   110   6420   120   6492
+130   6508   140   6544   150   6556
+160   6598   170   6674   180   6756
+190   6813   200   6855   210   6900
+220   6903   230   6950   240   6983
+250   6998   260   7062
+
+*****COMPILATION COMPLETE
+
+
+]?

@@ -1,0 +1,75 @@
+{
+ "id": "r4175",
+ "key": "31557b3faedc9caa",
+ "source": "10 REM! INTEGER K,J\n20 REM! DEFCOMMON Z,Q1,B\n30 DIM A$(7)\n40 Z=-(520>=Q1):COLOR=24\n50 PRINT RIGHT$(Z$+Z$,7-X)+MID$(\"A\"+W$,AB);ASC(A$(N2%))*B;Q1/((M% AND X));:COLOR=7=(((39) OR Q1+B)):PRINT \"TASC\",\"123\";CHR$(102 OR X)+LEFT$(\"X Y\",X)+D$(M%,N2%);\n60 Z=SGN(EXP(729)-K):W$=\"TASC\"\n70 X=Y%:B=VAL(Z$)^((((127<>256))-AB))\n80 X=10\n90 K=B*.001/((B<AB))-(((Q1) AND Q1^X)):GOTO 30:Z$=Q1$\n100 FOR K=(C%) TO (INT(1000-127)<=SIN((2))):IF (2) THEN FOR J=(J) TO (N2%) STEP (COS(Q1>K)-INT(Y%-M%))\n110 PRINT\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6079,
+ "obj_len": 861,
+ "obj_sha256": "ddd8586c0187560c378ba95fa65dd42e65737a5974d3915cf634a3ba28dd9655",
+ "cycles": 96620419,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6099
+  },
+  {
+   "line": 40,
+   "addr": 6099
+  },
+  {
+   "line": 50,
+   "addr": 6120
+  },
+  {
+   "line": 60,
+   "addr": 6332
+  },
+  {
+   "line": 70,
+   "addr": 6369
+  },
+  {
+   "line": 80,
+   "addr": 6411
+  },
+  {
+   "line": 90,
+   "addr": 6417
+  },
+  {
+   "line": 100,
+   "addr": 6471
+  },
+  {
+   "line": 110,
+   "addr": 6564
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S005.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6079 - 6939",
+  "NUMERIC COMMON": "6064 - 6078",
+  "LOCAL VARIABLES": "6940 - 7232",
+  "HIGHEST MEMORY LOCATION": "7232"
+ }
+}

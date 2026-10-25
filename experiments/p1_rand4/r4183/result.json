@@ -1,0 +1,100 @@
+{
+ "id": "r4183",
+ "key": "ef37c79359964470",
+ "source": "10 REM! INTEGER I,J\n20 REM! USECOMMON Q1$,C,XY%\n30 DIM P%(2)\n40 DEF FN F(Z)=15\n50 CALL ((-D(Z%)+VAL(Q1$)))*((W^Z%*J))\n60 Y$=Y$:C=LEN(M$)^W\n70 POKE W,VAL(\"A\"):PRINT Y;\n80 IF (255) THEN GOTO 30:DATA HI,HI,:C=B\n90 DATA HI:Q1$=MID$(\"X Y\"+Q1$+STR$(20),FN F(1000))\n100 POKE LEN(Y$),Y OR ((B<P%(40000)))+COS(B(J))\n110 SPEED=255:HCOLOR=ASC(STR$(W*B)):PRINT 40000=COS(1-.5),Z%;\n120 C=-((NOT Y% OR 49152))\n130 READ M$,C:VTAB I*X%:CALL TAN(FN F(NOT B(I)))\n140 IF (J/((Y%<NOT 1))) THEN 160:J=RND(ASC(Y$+M$))\n150 IF (M*((I OR Y))) THEN VTAB B(NOT ((X%>=I))):PRINT FN F(XY%)<>1000,RIGHT$(M$,PEEK(XY%)),:PRINT 100+20;B,((XY%>((43250<19182))))^((FN F(100)>=J^39)),\n160 DATA X,-2.5\n170 IF (EXP(5<>-B)) THEN RETURN:COLOR=-((-((127-P%(0))))):PRINT\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6073,
+ "obj_len": 1109,
+ "obj_sha256": "dea09e088bf956469c4ddab0f11e07e0278139352ac1e2b66e87d9cece7d9303",
+ "cycles": 113509452,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6093
+  },
+  {
+   "line": 40,
+   "addr": 6093
+  },
+  {
+   "line": 50,
+   "addr": 6103
+  },
+  {
+   "line": 60,
+   "addr": 6148
+  },
+  {
+   "line": 70,
+   "addr": 6181
+  },
+  {
+   "line": 80,
+   "addr": 6215
+  },
+  {
+   "line": 90,
+   "addr": 6248
+  },
+  {
+   "line": 100,
+   "addr": 6308
+  },
+  {
+   "line": 110,
+   "addr": 6362
+  },
+  {
+   "line": 120,
+   "addr": 6419
+  },
+  {
+   "line": 130,
+   "addr": 6440
+  },
+  {
+   "line": 140,
+   "addr": 6488
+  },
+  {
+   "line": 150,
+   "addr": 6540
+  },
+  {
+   "line": 160,
+   "addr": 6700
+  },
+  {
+   "line": 170,
+   "addr": 6713
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S013.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6073 - 7181",
+  "NUMERIC COMMON": "6064 - 6070",
+  "STRING COMMON": "6071 - 6072",
+  "LOCAL VARIABLES": "7182 - 7348",
+  "HIGHEST MEMORY LOCATION": "7348"
+ }
+}

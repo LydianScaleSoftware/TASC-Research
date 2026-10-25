@@ -1,0 +1,11 @@
+10 DIM P$(12),A(5),B$(4,7)
+20 DEF FN F(X)=127+A(VAL(A$))
+30 HTAB -((W%<=X%+.5)):FOR Y=(M AND 20041=Y%-M) TO (B%):B%=A(FN F(Q1)+TAN(Y%))
+40 FOR C=(X%>X%>=M<=B%) TO (FN F(-((Y+XY))))
+50 X%=W%:FOR Q1=(((Q1<=Y%))*((XY*X%))) TO (INT(896 AND Q1*A(Y%))):GET C
+60 POP
+70 CALL 32767
+80 HCOLOR=256
+90 NEXT Q1:Y%=C OR 266
+100 PRINT -((255+B%));:M=B%
+110 A$=LEFT$(XY$,A(FN F(1))):IF (Q1) THEN 110:HLIN B%/((2/W%))<>-((M*888)),(M) AT W%

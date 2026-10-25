@@ -1,0 +1,74 @@
+{
+ "id": "r4108",
+ "key": "e7412327b413ba21",
+ "source": "10 DEF FN F(X)=AB%\n20 AB%=-3.14159\n30 PRINT FN F(65535-((AB%-X))),:IF (AB) THEN PRINT FN F(ATN(40)),W$;PEEK(FN F(NOT 2));\n40 IF (((SIN(N2)>N2))+40*AB) THEN 110\n50 GOSUB 40:HLIN TAN(X),(PEEK(ASC(Y$) AND FN F(.001))) AT 10\n60 DATA \"A,B\",X,1:IF (A%) THEN 30:Z=PEEK(RND(2))\n70 AB=A:W$=Q1$:PRINT Y$+MID$(\"\",AB,X)+Y$;-((D%(AB%,C%)-((Z>=B%(1000))))),\n80 VTAB AB:PRINT\n90 VTAB .001-((Z%-AB<>C%+0)):ON 20 GOTO 60,50,20,60:B%(FN F(594))=344\n100 COLOR=100:B%(1E3)=40\n110 W$=MID$(\"HI\",C%=Z)+MID$(Q1$,A,ABS(127)):RETURN\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 916,
+ "obj_sha256": "b0047035a817d1bdb3f403a212afe70477f8dbd0913435a7f4acd6a4c8eabf92",
+ "cycles": 102609071,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6094
+  },
+  {
+   "line": 30,
+   "addr": 6106
+  },
+  {
+   "line": 40,
+   "addr": 6174
+  },
+  {
+   "line": 50,
+   "addr": 6208
+  },
+  {
+   "line": 60,
+   "addr": 6259
+  },
+  {
+   "line": 70,
+   "addr": 6302
+  },
+  {
+   "line": 80,
+   "addr": 6404
+  },
+  {
+   "line": 90,
+   "addr": 6419
+  },
+  {
+   "line": 100,
+   "addr": 6491
+  },
+  {
+   "line": 110,
+   "addr": 6521
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S006.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6979",
+  "LOCAL VARIABLES": "6980 - 7296",
+  "HIGHEST MEMORY LOCATION": "7296"
+ }
+}

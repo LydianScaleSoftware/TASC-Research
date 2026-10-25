@@ -1,0 +1,86 @@
+{
+ "id": "r4020",
+ "key": "85d25fc8a49d3023",
+ "source": "10 REM! INTEGER K,I\n20 COLOR=I<=W%/XY+((X% AND W))\n30 FOR X=(((SQR(23249)=7))/((W>NOT 100))) TO ((((2)+((508<0))))/((Y%-LEN(AB$)))) STEP (W<((256<A(0))))\n40 PRINT Q1%;Y;C$+C$,:M$=\"TASC\"\n50 AB$=M$+C$:PRINT Y%,\n60 M$=M$:W=AB:NEXT X\n70 HTAB Y%:HLIN AB,(Y) AT ATN(LEN(M$))\n80 IF (-A(Q1%) OR XY OR X) THEN AB=I/Y%:READ X,Y%:X=NOT 23380\n90 PRINT Y%,:GOTO 70:I=EXP(A(X%))*((A(K)>XY))/AB\n100 COLOR=(11237)\n110 X=K:HTAB ABS(ATN(W%) AND K):A(Q1% OR A(ASC(AB$)))=XY\n120 A(SQR(Y)*X%)=PEEK(257)/((K+A(K))) AND SQR(879<Y):READ W,X\n130 HLIN A(W%-X)<=Y%,(LEN(\"X Y\")) AT ((X%^X>=K))*((LEN(AB$)*NOT 7)):GOSUB 10:C$=STR$(-633)+\"HI\"\n140 GOSUB 20:PRINT A(((Q1% AND XY))^((Y OR W)));AB$;A(ATN(SGN(I))),:A(PEEK(LOG(-256)))=-XY<XY*255\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1234,
+ "obj_sha256": "73cb3e97ea9d16cc3ad0cabe3464b906fa1a5add10c97052be0851c8427a1027",
+ "cycles": 119817456,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6120
+  },
+  {
+   "line": 40,
+   "addr": 6212
+  },
+  {
+   "line": 50,
+   "addr": 6264
+  },
+  {
+   "line": 60,
+   "addr": 6294
+  },
+  {
+   "line": 70,
+   "addr": 6320
+  },
+  {
+   "line": 80,
+   "addr": 6359
+  },
+  {
+   "line": 90,
+   "addr": 6424
+  },
+  {
+   "line": 100,
+   "addr": 6481
+  },
+  {
+   "line": 110,
+   "addr": 6490
+  },
+  {
+   "line": 120,
+   "addr": 6556
+  },
+  {
+   "line": 130,
+   "addr": 6634
+  },
+  {
+   "line": 140,
+   "addr": 6753
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S003.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7297",
+  "LOCAL VARIABLES": "7298 - 7402",
+  "HIGHEST MEMORY LOCATION": "7402"
+ }
+}

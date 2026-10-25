@@ -1,0 +1,74 @@
+{
+ "id": "r4178",
+ "key": "c5a0a72363bd1256",
+ "source": "10 REM! INTEGER K,I\n20 DIM D$(9)\n30 DEF FN F(X)=N2=((A<N2>1^0.1))\n40 A$(7,I)=MID$(A$(M%,450<=40),7):IF (299) THEN B$=X$:PRINT N2,A%^Y;CHR$(K<A%)+B$;\n50 AB=M%\n60 B$=X$:K=AB+N2>LOG(Z)<>((((N2 AND 256))<>I-I)):FOR I=(FN F(265 AND A)>=M%) TO (-Q1%) STEP (((FN F(A)>=Z))*0)\n70 ON PEEK(32767)/M%+COS(.001<>Q1%) GOSUB 70,60:SPEED=24*((FN F(Y)*AB)):READ C$\n80 A=A%\n90 IF (10) THEN 70\n100 DATA -2.5,300,X:Y=379:Y=A\n110 X$=C$\n",
+ "options": {
+  "library": null,
+  "program": 20480,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 20480,
+ "obj_len": 839,
+ "obj_sha256": "de3688e2b24e6fb31c5fe8783bb01e5b61520603c64f9b1d97c7003fe9db71a0",
+ "cycles": 98106834,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 20500
+  },
+  {
+   "line": 20,
+   "addr": 20500
+  },
+  {
+   "line": 30,
+   "addr": 20500
+  },
+  {
+   "line": 40,
+   "addr": 20540
+  },
+  {
+   "line": 50,
+   "addr": 20644
+  },
+  {
+   "line": 60,
+   "addr": 20653
+  },
+  {
+   "line": 70,
+   "addr": 20781
+  },
+  {
+   "line": 80,
+   "addr": 20855
+  },
+  {
+   "line": 90,
+   "addr": 20864
+  },
+  {
+   "line": 100,
+   "addr": 20875
+  },
+  {
+   "line": 110,
+   "addr": 20910
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "OBJECT FILE": "S008.OBJ",
+  "PROGRAM": "20480 - 21318",
+  "LOCAL VARIABLES": "21319 - 21641",
+  "HIGHEST MEMORY LOCATION": "21641"
+ }
+}

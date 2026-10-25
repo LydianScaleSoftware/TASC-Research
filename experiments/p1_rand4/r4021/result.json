@@ -1,0 +1,78 @@
+{
+ "id": "r4021",
+ "key": "ae5edc913eabc750",
+ "source": "10 FOR W=(Z) TO (Q1)\n20 READ A:PRINT \"HI\";\"123\";7,:B%=Y\n30 DATA 300,X:PRINT X%;LEFT$(\"A\"+Z$+B$,-((A%*Q1))),A%-A;:SPEED=A%+(((189)-((Q1-X%))))\n40 A=Y:READ Z,Z$:FOR W=(A%/TAN(Q1%)*(A+B%)) TO (-((551-Q1%))-A%)\n50 READ Q1,X%:IF (NOT ((517-W))*A^((Q1*B%))) THEN GOTO 50:IF (SGN(LEN(Z$)>=((Z>=A)))) THEN Q1%=NOT (273)\n60 B%=Q1:PRINT\n70 DATA \"A,B\",X,HI:FOR A=(NOT 100) TO (W^A%+-X%<((255-0>=((5<0)))))\n80 READ Y$,X%:PRINT 0,-B%,\n90 Z$=Z$\n100 PRINT X%;-B%;-A%^(Y)/RND(A);:IF (EXP(A%^Z)-Q1*20) THEN A=((X%<>Z AND B%>=2))=5:NEXT A\n110 PRINT ((X%<=A%>=A*255))*Z^X%,:ON 908 GOTO 120,110,30:PRINT -((((Z+Z))/A));Z$;\n120 SPEED=SQR(SIN(Z-X%)):GOTO 80\n",
+ "options": {
+  "library": null,
+  "program": "HGR1",
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 16384,
+ "obj_len": 1028,
+ "obj_sha256": "f655bd9248204f23ec707ded8ae7e776813f1a4def45f46cbd48197eb2d67153",
+ "cycles": 110227429,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 16404
+  },
+  {
+   "line": 20,
+   "addr": 16421
+  },
+  {
+   "line": 30,
+   "addr": 16471
+  },
+  {
+   "line": 40,
+   "addr": 16556
+  },
+  {
+   "line": 50,
+   "addr": 16624
+  },
+  {
+   "line": 60,
+   "addr": 16672
+  },
+  {
+   "line": 70,
+   "addr": 16681
+  },
+  {
+   "line": 80,
+   "addr": 16770
+  },
+  {
+   "line": 90,
+   "addr": 16803
+  },
+  {
+   "line": 100,
+   "addr": 16809
+  },
+  {
+   "line": 110,
+   "addr": 16929
+  },
+  {
+   "line": 120,
+   "addr": 17014
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "OBJECT FILE": "S004.OBJ",
+  "PROGRAM": "16384 - 17411",
+  "LOCAL VARIABLES": "17412 - 17457",
+  "HIGHEST MEMORY LOCATION": "17457"
+ }
+}

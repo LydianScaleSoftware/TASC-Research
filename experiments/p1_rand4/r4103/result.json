@@ -1,0 +1,161 @@
+{
+ "id": "r4103",
+ "key": "1f78a4240c9d63da",
+ "source": "10 REM! INTEGER J\n20 REM! USECOMMON N2,B$,W\n30 DEF FN F(X)=D%(NOT M%,AB%)+((XY=J))\n40 GOSUB 180:DATA -2.5,-2.5,300\n50 IF (M%) THEN 70:PRINT -((5476/D%(AB%,M%)));LEFT$(\"X Y\",XY),:HCOLOR=SIN(40 OR C*N2)\n60 PRINT MID$(MID$(MID$(Z$,2,N2),-Q1%,N2),AB%);AB% OR 1000;\"123\",:READ M%,A\n70 Z%=D%(Z%,SQR(XY))^-24\n80 XY=-((Z%<>XY))>5*J-((27746<>AB%)):AB$=B$\n90 PRINT:D%(D%(M%,J)-NOT D%(256,5)>SIN(3),1.5)=-COS(TAN(433))\n100 PRINT Q1% OR ((ATN(N2) OR W-24));N2;Z$;\n110 RESTORE:COLOR=C:IF (D%(((XY+C))^((889+24)),441)) THEN 50\n120 IF (Q1%) THEN ON D%(NOT M%=1,5) GOTO 100,230:IF (ABS(AB%)) THEN HCOLOR=D%(49267,N2 AND D%(AB%,Q1%)-Z%)\n130 POKE -40,N2\n140 FOR XY=(0.1) TO (32767):DRAW 255\n150 N2=N2\n160 FOR A=(40000) TO (31569>=A):GR:NEXT A\n170 FOR J=(706) TO (M%) STEP (W):READ AB%:READ Z%\n180 POKE -D%(256-J,Q1%*43727),958=XY OR 1000 OR N2:N2=M%:GOSUB 80\n190 B$=\"HI\":W=((0.1=((W<=Q1%))))*((((AB%<=AB%))-Z%)):GOSUB 210\n200 C=D%(SGN(N2)+((A AND C)),LEN(B$+Z$)):GR\n210 NEXT J:FOR W=(FN F(J AND 494 OR W)) TO (5<=AB%)\n220 Z$=RIGHT$(LEFT$(\"X Y\",39=3.14159),A):Z$=AB$:D%(D%(A*3,A AND N2)=((Q1%/C>=FN F(Q1%))),M%)=Q1%\n230 C=XY:HLIN FN F(M%+556)<255,(VAL(B$)^((((J OR Q1%))<>((Q1%>=C))))) AT SGN(256)>C AND M%<>((J>884))\n240 IF (FN F(N2>AB%) OR NOT ((24*12288))) THEN 260:XY=-255<-((D%(Z%,J)+188)):PRINT ((255<=Z%<>((M%<=AB%))))/NOT ((J*2.25)),SQR(LOG(W)>573-1000);STR$(AB%)+LEFT$(Z$,A AND D%(Q1%,AB%));\n250 IF (NOT LEN(AB$)) THEN 10:CALL Q1%:PRINT -C,Z%<>((515<>D%(Z%,J)<>24)),\n260 B$=RIGHT$(RIGHT$(\"A\",TAN(M%)),491)\n270 FOR XY=(D%(FN F(AB%+W),849)) TO (NOT VAL(MID$(\"A\",J,C))):D%(J,((NOT 100 AND NOT D%(493,571)))<>C)=5>NOT ((-A))\n280 ON -((XY OR N2))<LEN(\"TASC\")/23379 GOTO 70,300:CALL 46669\n290 GOTO 320:Z%=J:IF (D%(Z%<N2,A=Z%)+((AB%>7))*COS(2)) THEN 110\n300 CALL ((-J OR SIN(33504)))+255:Z%=RND(Q1%)\n310 HTAB AB%+COS(AB%)<=FN F(D%(J,AB%)):GOTO 280:GOSUB 160\n320 AB%=ATN(C):PRINT J;:POKE ((J+((M%+256))))*((J*FN F(20))),Z%-N2\n",
+ "options": {
+  "library": null,
+  "program": "HGR1",
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 16396,
+ "obj_len": 2455,
+ "obj_sha256": "f513dcdb51b7f840e5c5dba6103b20061b00f6ac9f6d930bf46fa951eacefdae",
+ "cycles": 196855388,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 16404
+  },
+  {
+   "line": 20,
+   "addr": 16404
+  },
+  {
+   "line": 30,
+   "addr": 16416
+  },
+  {
+   "line": 40,
+   "addr": 16462
+  },
+  {
+   "line": 50,
+   "addr": 16485
+  },
+  {
+   "line": 60,
+   "addr": 16493
+  },
+  {
+   "line": 70,
+   "addr": 16577
+  },
+  {
+   "line": 80,
+   "addr": 16613
+  },
+  {
+   "line": 90,
+   "addr": 16664
+  },
+  {
+   "line": 100,
+   "addr": 16751
+  },
+  {
+   "line": 110,
+   "addr": 16796
+  },
+  {
+   "line": 120,
+   "addr": 16852
+  },
+  {
+   "line": 130,
+   "addr": 16953
+  },
+  {
+   "line": 140,
+   "addr": 16968
+  },
+  {
+   "line": 150,
+   "addr": 16991
+  },
+  {
+   "line": 160,
+   "addr": 16997
+  },
+  {
+   "line": 170,
+   "addr": 17028
+  },
+  {
+   "line": 180,
+   "addr": 17060
+  },
+  {
+   "line": 190,
+   "addr": 17126
+  },
+  {
+   "line": 200,
+   "addr": 17185
+  },
+  {
+   "line": 210,
+   "addr": 17245
+  },
+  {
+   "line": 220,
+   "addr": 17291
+  },
+  {
+   "line": 230,
+   "addr": 17414
+  },
+  {
+   "line": 240,
+   "addr": 17528
+  },
+  {
+   "line": 250,
+   "addr": 17603
+  },
+  {
+   "line": 260,
+   "addr": 17621
+  },
+  {
+   "line": 270,
+   "addr": 17649
+  },
+  {
+   "line": 280,
+   "addr": 17785
+  },
+  {
+   "line": 290,
+   "addr": 17848
+  },
+  {
+   "line": 300,
+   "addr": 17857
+  },
+  {
+   "line": 310,
+   "addr": 17896
+  },
+  {
+   "line": 320,
+   "addr": 17938
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "GR": "NEXT A",
+  "OBJECT FILE": "S001.OBJ",
+  "PROGRAM": "16396 - 18850",
+  "NUMERIC COMMON": "16384 - 16393",
+  "STRING COMMON": "16394 - 16395",
+  "LOCAL VARIABLES": "18851 - 19145",
+  "HIGHEST MEMORY LOCATION": "19145"
+ }
+}

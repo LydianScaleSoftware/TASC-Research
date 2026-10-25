@@ -1,0 +1,70 @@
+{
+ "id": "r4159",
+ "key": "5b4b23162adc6833",
+ "source": "10 REM! INTEGER I,K\n20 DEF FN F(X)=W\n30 C$=RIGHT$(MID$(RIGHT$(A$,10),P(K)>Y,FN F(2)),P(1*65535))\n40 READ Y%\n50 READ N2%,XY%\n60 HCOLOR=NOT P(AB-255)\n70 Y=-((NOT K))\n80 C$=RIGHT$(LEFT$(\"\"+N2$,W),Z):ON ASC(LEFT$(A$+C$,1000)) GOTO 30,70\n90 ON Y% AND 2 GOSUB 100:READ Y\n100 CALL INT(I*7)+AB%:A$=C$\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 521,
+ "obj_sha256": "7ffe6c5143e3aaa0a341444992890901d5bcf470187c2c88f58e78111ba622e0",
+ "cycles": 82546227,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6094
+  },
+  {
+   "line": 40,
+   "addr": 6157
+  },
+  {
+   "line": 50,
+   "addr": 6163
+  },
+  {
+   "line": 60,
+   "addr": 6175
+  },
+  {
+   "line": 70,
+   "addr": 6193
+  },
+  {
+   "line": 80,
+   "addr": 6205
+  },
+  {
+   "line": 90,
+   "addr": 6267
+  },
+  {
+   "line": 100,
+   "addr": 6291
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S006.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6584",
+  "LOCAL VARIABLES": "6585 - 6692",
+  "HIGHEST MEMORY LOCATION": "6692"
+ }
+}

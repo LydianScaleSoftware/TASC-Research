@@ -1,0 +1,121 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S003
+
+
+OBJECT CODE FILE:
+(DEFAULT S003.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION?
+
+*****BEGINNING PASS 1
+
+
+
+10  DIM A$(5),D%(12)
+20  DEF  FN F(Z) =  -  ASC ("X Y")
+30 B$ =  RIGHT$ (B$,M% * Y% / ((M% * Q1%
+))): HLIN 381,(N2% <  > A) AT  TAN (D%(1
+0) ^ 3.14159) >  VAL (B$): HTAB ((2.25 >
+ D%(M%))) -  ASC (AB$)
+40  PRINT  -  TAN ( - X);M%, ASC ("A");:
+ PRINT  FN F( NOT C) =  EXP (Y%);N2% * 4
+79,2 ^ X;: HCOLOR=  SGN ( LOG (Y% ^ 481)
+)
+50 M% =  FN F(D%(M%)) + (( TAN (M%) > ((
+Q1% = X)))): HLIN ((N2 - N2% +  NOT 39))
+ * (( VAL (A$(Q1%)) >  = N2%)),(((C OR 4
+55 >  = 36786)) - 3) AT N2%
+60  FOR A = ( RND (N2% > .5 <  = 46154))
+ TO ( FN F(X))
+70 N2% =  ASC ( RIGHT$ ( MID$ (C$,100),3
+99 <  = 39)):C =  LOG (M%) AND  SGN (473
+41) <  = 2 * X:X = A > A
+80  ON A GOSUB 130:AB$ = AB$
+90  DATA HI,X,"A,B",HI:Q1% = 100: FOR W
+= (N2) TO (Q1%)
+100 N2 =  TAN (40 <  > C <  =  - 127)
+110  PRINT :M% = ((921 = Y%)) + ((.5 + 2
+)) * ((D%(M%) < Y%)):N2% = ((D%(M%) > 24
+954)) ^ D%(0) -  FN F(127)
+120  NEXT W:N2% =  NOT (( ATN (W) <  > X
+)):A$(32767 - ((34416 - C >  =  ASC (A$(
+M%))))) =  RIGHT$ (AB$,10 * ((N2 <  > 97
+0)))
+130  PRINT 49152;
+140  VTAB 24: HTAB N2 *  FN F(1) ^ ((D%(
+Y%) + D%(Q1%))): IF (256) THEN  IF (Q1%)
+ THEN 100
+150 A$(12918) = "123": ON 10 / D%(M%) >
+ = N2 - N2 GOTO 240,60,60: PRINT  ATN (W
+ * ((D%(M%) * A)));N2%;
+160  PRINT  PEEK ( FN F(N2%)),C,:M% = 3
+170  PRINT ((A ^ W - Y%)) ^  - N2,
+180  VTAB  NOT Y%: PRINT D%(N2 * N2 =  A
+SC (AB$));:N2 = 0 + A - C + 823
+190 C =  -  COS (24) +  -  ATN (N2%)
+200  VTAB  FN F(N2%):C =  FN F(D%(M%) /
+Q1% * Y%): PRINT  LEN (B$),Q1%;
+210  FOR A = (Y% = (( NOT 0 <  = W))) TO
+ (255 -  NOT N2%)
+220 AB$ =  LEFT$ (C$,N2% - N2 AND 37205)
+: ON N2 <  > N2% - ((N2% >  = X)) GOTO 1
+80,200,160: PRINT  VAL (C$);"A" + "X Y",
+(( SGN (Q1%) <  NOT N2%)) / W,
+230  NEXT A
+240 D%(2.25) = 0: FOR W = (Q1% ^ ((Q1% *
+  - 127))) TO (M%)
+
+
+
+*****BEGINNING PASS 2
+
+
+......
+
+
+*****CODE GENERATION COMPLETE
+
+
+COMPILATION INFORMATION AND LINE NUMBER
+REFERENCE TABLE? YES
+
+
+SOURCE FILE: S003
+OBJECT FILE: S003.OBJ
+LIBRARY OCCUPIES 2051 - 6063
+PROGRAM OCCUPIES 6064 - 8201
+
+NO COMMON BLOCK
+
+LOCAL VARIABLES OCCUPY 8202 - 8295
+
+HIGHEST MEMORY LOCATION: 8295
+
+
+LINE# ADDR   LINE# ADDR   LINE# ADDR
+
+10    6084   20    6084   30    6112
+40    6232   50    6341   60    6461
+70    6496   80    6574   90    6589
+100   6630   110   6663   120   6753
+130   6833   140   6839   150   6903
+160   6988   170   7018   180   7057
+190   7120   200   7147   210   7201
+220   7239   230   7367   240   7372
+
+*****COMPILATION COMPLETE
+
+
+]?

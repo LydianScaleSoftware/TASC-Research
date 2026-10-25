@@ -1,0 +1,91 @@
+{
+ "id": "r4094",
+ "key": "11809a9a3caf672b",
+ "source": "10 DEF FN F(X)=NOT (123*AB)\n20 FOR W=(C) TO (C<>ATN(Y)):GOTO 140\n30 Y=AB-W%*-AB:FOR M=(-C%) TO (255=LEN(Q1$+C$)):C$=C$+Q1$\n40 Q1$=MID$(\"HI\"+\"\",((40>=24))+-P%(C%),P%(FN F(C%)))\n50 NEXT:GOTO 40:IF (C*SIN(M)) THEN Q1$=STR$(SGN(X%))\n60 P%(SGN(Y/((40+W%))))=AB%:PRINT:VTAB NOT C\n70 IF (W%^602) THEN 70\n80 GOSUB 20:PRINT C$,-43340;\n90 NEXT W:HPLOT P%(Y+34972=5),(24)\n100 IF (SQR(M)+AB%) THEN ON W% GOTO 40,60:W=AB%^X%<>W<RND(-W)\n110 PRINT 4068*10,X%;:W%=122:P%(((-256>W%))+((M*1000<=((W=AB)))))=SQR(ASC(RIGHT$(Q1$,C%)))\n120 PRINT \"123\";C$+M$;:Y=SGN(789-7-W/X%):IF (M*((20>=1000))) THEN M=49152\n130 POKE SGN(((20 AND W%))>=C%),39:HCOLOR=5\n140 M=W\n150 Q1$=\"X Y\":FOR Y=(P%(C%)) TO (C%+385+((255 AND W%))<622)\n",
+ "options": {
+  "library": null,
+  "program": "HGR1",
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 16384,
+ "obj_len": 1219,
+ "obj_sha256": "0dfe22ea5ce520fac6ec150a4a7c20c845267e0d82b5a5beb310480145f8ce45",
+ "cycles": 117843294,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 16404
+  },
+  {
+   "line": 20,
+   "addr": 16422
+  },
+  {
+   "line": 30,
+   "addr": 16451
+  },
+  {
+   "line": 40,
+   "addr": 16519
+  },
+  {
+   "line": 50,
+   "addr": 16605
+  },
+  {
+   "line": 60,
+   "addr": 16613
+  },
+  {
+   "line": 70,
+   "addr": 16649
+  },
+  {
+   "line": 80,
+   "addr": 16665
+  },
+  {
+   "line": 90,
+   "addr": 16686
+  },
+  {
+   "line": 100,
+   "addr": 16718
+  },
+  {
+   "line": 110,
+   "addr": 16781
+  },
+  {
+   "line": 120,
+   "addr": 16877
+  },
+  {
+   "line": 130,
+   "addr": 16956
+  },
+  {
+   "line": 140,
+   "addr": 16992
+  },
+  {
+   "line": 150,
+   "addr": 16998
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "NT": "VTAB  NOT C",
+  "OBJECT FILE": "S009.OBJ",
+  "PROGRAM": "16384 - 17602",
+  "LOCAL VARIABLES": "17603 - 17680",
+  "HIGHEST MEMORY LOCATION": "17680"
+ }
+}

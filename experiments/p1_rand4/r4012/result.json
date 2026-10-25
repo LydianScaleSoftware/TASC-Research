@@ -1,0 +1,91 @@
+{
+ "id": "r4012",
+ "key": "ab97031fe6140bef",
+ "source": "10 DIM P$(3)\n20 N2$=LEFT$(N2$+N2$,A%*C)+\"TASC\":M=Y\n30 Q1%=X\n40 IF (SGN((127+A%))) THEN 100\n50 IF (X) THEN 90:GOSUB 80\n60 IF (-((C>0.1))=(M>Y)) THEN PRINT N2$,:X=NOT ((X+B%))<LOG(A)\n70 N2%=Y:FOR M=((Q1%)*C) TO (SGN(EXP(A))) STEP (Q1%):POKE (B%)=98<>5,((C>=A%))*Y>=((942 OR Q1%))\n80 END\n90 READ C,B%:N2$=LEFT$(LEFT$(RIGHT$(\"HI\",0),.5>=2),Y<>0.1):IF (ABS(-A<=((A%<>Q1%)))) THEN 130\n100 ON -((-N2%<=((808<506)))) GOTO 90,70,110:Y=32767:P$(A%^7)=N2$\n110 P$(10511<=22740)=STR$(A):NEXT M:X=-((B% AND B%>=Y))\n120 P$(A%)=C$:N2$=M$:FOR A=(SQR(Y)=((TAN(127)<=-7))) TO (Y)\n130 M$=\"A\":DATA 300,,HI,HI\n140 READ A%:FOR X=(100>=A OR N2%*B% OR M+((24-544))) TO (A%) STEP (C)\n150 Q1%=NOT ((7+N2%))=NOT 100\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1136,
+ "obj_sha256": "c49eac306b2ba5e992d41cefc4ea5120ea766093c6e1fbeced3381ea940cf525",
+ "cycles": 117929015,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6130
+  },
+  {
+   "line": 40,
+   "addr": 6136
+  },
+  {
+   "line": 50,
+   "addr": 6155
+  },
+  {
+   "line": 60,
+   "addr": 6163
+  },
+  {
+   "line": 70,
+   "addr": 6236
+  },
+  {
+   "line": 80,
+   "addr": 6325
+  },
+  {
+   "line": 90,
+   "addr": 6328
+  },
+  {
+   "line": 100,
+   "addr": 6418
+  },
+  {
+   "line": 110,
+   "addr": 6482
+  },
+  {
+   "line": 120,
+   "addr": 6535
+  },
+  {
+   "line": 130,
+   "addr": 6606
+  },
+  {
+   "line": 140,
+   "addr": 6636
+  },
+  {
+   "line": 150,
+   "addr": 6704
+  }
+ ],
+ "info": {
+  "XT M": "X =  - ((B% AND B% >  = Y))",
+  "OBJECT FILE": "S012.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7199",
+  "LOCAL VARIABLES": "7200 - 7258",
+  "HIGHEST MEMORY LOCATION": "7258"
+ }
+}

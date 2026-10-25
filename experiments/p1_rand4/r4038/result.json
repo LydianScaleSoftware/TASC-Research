@@ -1,0 +1,71 @@
+{
+ "id": "r4038",
+ "key": "5da1aabeb192c75f",
+ "source": "10 DEF FN F(T)=3.14159\n20 COLOR=-2.25-M%*Y*((3<>39)):POKE 293,PEEK(C<=C% OR LEN(AB$)):XY%=SIN(C%)\n30 PRINT:M=X+M:M%=NOT ((X-((M%>=Z))))\n40 C=12:IF (C%>NOT X OR ((C OR X OR -449))) THEN 60:GOTO 10\n50 HPLOT 65535,(39/((((272 AND 1850))-32024))):PRINT 383,\n60 IF (ATN(SQR(C-806))) THEN RETURN:X$=N2$:PRINT XY%;-((1.5*Z))<=C;A%-((FN F(M%)<392));:IF (Y) THEN 100\n70 STOP\n80 X=INT(Y):C=M:M=M%>FN F(M%)\n90 DATA 1,1:IF (A%) THEN M%=M%\n100 PRINT -C,AB$;M%;\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 745,
+ "obj_sha256": "9b55fe0aefaa94121a6455f464f3ec01878f1f4f61074a132f2860e65483e0ed",
+ "cycles": 91146658,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6094
+  },
+  {
+   "line": 30,
+   "addr": 6184
+  },
+  {
+   "line": 40,
+   "addr": 6225
+  },
+  {
+   "line": 50,
+   "addr": 6287
+  },
+  {
+   "line": 60,
+   "addr": 6335
+  },
+  {
+   "line": 70,
+   "addr": 6364
+  },
+  {
+   "line": 80,
+   "addr": 6367
+  },
+  {
+   "line": 90,
+   "addr": 6406
+  },
+  {
+   "line": 100,
+   "addr": 6433
+  }
+ ],
+ "info": {
+  "URN": "X$ = N2$",
+  "OBJECT FILE": "S004.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6808",
+  "LOCAL VARIABLES": "6809 - 6862",
+  "HIGHEST MEMORY LOCATION": "6862"
+ }
+}

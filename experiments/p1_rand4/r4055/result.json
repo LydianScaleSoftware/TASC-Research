@@ -1,0 +1,98 @@
+{
+ "id": "r4055",
+ "key": "a248235852f54278",
+ "source": "10 Y$=LEFT$(X$,W)+X$:N2%=M:HCOLOR=Y%\n20 PRINT ATN(Y%)>=546;MID$(RIGHT$(MID$(X$,A),Q1=A),SGN(127-Q1),-((NOT N2%)));RIGHT$(M$,A),:PRINT AB%>X%-Q1=C,\"TASC\",\n30 PRINT X$;:A=Y%\n40 W=W AND 1:PRINT:SPEED=((C<=162))*EXP(N2%)\n50 PRINT SIN(2.25<=((Q1 AND A)));LEFT$(Y$,LOG(1000));Y$+X$;:M=40\n60 GET M\n70 GOSUB 40\n80 PRINT\n90 IF (M) THEN PRINT \"A\"+MID$(CHR$(M),3=N2%);((Q1-10<>((100 AND 13878))))+872;:FOR M=(((M<N2% OR C))-((A^C OR Q1<=X%))) TO (32767) STEP (N2%<N2%)\n100 PRINT \"TASC\",W,:PRINT:C=(24)\n110 W=1\n120 N2%=20*VAL(M$)*32767:ON VAL(\"TASC\"+LEFT$(X$,812)) GOTO 60,10,50\n130 INVERSE:IF (39>=((AB%<>NOT Y%))) THEN 110:INVERSE\n140 PRINT RND(SGN(NOT X%));AB%;\n150 HCOLOR=TAN(-Y%)-143\n160 ON -((PEEK(Y%)<>((A>=741)))) GOTO 120:INVERSE\n170 Y%=C:N2%=-33769\n",
+ "options": {
+  "library": null,
+  "program": "HGR1",
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 16384,
+ "obj_len": 1155,
+ "obj_sha256": "70f7c61207b05e25a13f1b304da993eb9277ed30450a4d0f30b3186714765754",
+ "cycles": 111853378,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 16404
+  },
+  {
+   "line": 20,
+   "addr": 16434
+  },
+  {
+   "line": 30,
+   "addr": 16567
+  },
+  {
+   "line": 40,
+   "addr": 16579
+  },
+  {
+   "line": 50,
+   "addr": 16618
+  },
+  {
+   "line": 60,
+   "addr": 16675
+  },
+  {
+   "line": 70,
+   "addr": 16681
+  },
+  {
+   "line": 80,
+   "addr": 16684
+  },
+  {
+   "line": 90,
+   "addr": 16687
+  },
+  {
+   "line": 100,
+   "addr": 16833
+  },
+  {
+   "line": 110,
+   "addr": 16870
+  },
+  {
+   "line": 120,
+   "addr": 16876
+  },
+  {
+   "line": 130,
+   "addr": 16929
+  },
+  {
+   "line": 140,
+   "addr": 16955
+  },
+  {
+   "line": 150,
+   "addr": 16976
+  },
+  {
+   "line": 160,
+   "addr": 16997
+  },
+  {
+   "line": 170,
+   "addr": 17033
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "OBJECT FILE": "S004.OBJ",
+  "PROGRAM": "16384 - 17538",
+  "LOCAL VARIABLES": "17539 - 17589",
+  "HIGHEST MEMORY LOCATION": "17589"
+ }
+}

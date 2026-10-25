@@ -1,0 +1,98 @@
+{
+ "id": "r4054",
+ "key": "de91b216202f36d8",
+ "source": "10 DIM A(2),B$(2,9)\n20 IF ((Z%)) THEN GOSUB 140:XY$=B$(17991*B>=NOT .5,Z%):GOSUB 50\n30 GOTO 170:XY%=SQR(ABS(B%))<N2*((B/B%))\n40 A(3)=256:FOR N2=(((B*X AND AB%))<C) TO (35526) STEP (3)\n50 A(ASC(RIGHT$(RIGHT$(\"A\",X),B%)))=-((SIN(N2)-Z%)):B=-SQR(1)>(C)*2.25\n60 PRINT XY$;:X=((N2<AB%))*24/(XY%)\n70 C=INT(Z):A(5<=X)=SQR(-B)>=ABS(Z^C)\n80 N2=Z AND 601>=2:PRINT:B%=ASC(RIGHT$(RIGHT$(N2$,XY%),Z%+C))\n90 CALL 30403^((184^RND(B))):X=B%\n100 FOR N2=(B) TO (C):N2$=LEFT$(N2$,N2+XY%)+\"123\":C=X^256\n110 GOSUB 40:GOTO 40\n120 XY$=\"123\"\n130 CALL -((RND(P(B%))-((Z%-X)))):N2$=XY$+XY$\n140 B=A(TAN(P(XY%) AND C)):B%=100:IF (NOT ((39<>((AB% OR XY%))))) THEN 70\n150 COLOR=(100^24)+((((Z%>B%))+B%)):PRINT:AB$=\"X Y\"\n160 Z=N2 AND N2-A(AB%) OR C:PLOT EXP(AB%),3\n170 ON NOT ((Z-40<>((669>C)))) GOTO 90:PRINT XY$;B$(C*((C+Z)),ATN(Z% OR AB%)),STR$(NOT 0.1)+AB$+B$(XY%,20),\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1330,
+ "obj_sha256": "861d5294224acb5fb84b35a62a285ce68ed385331907aa6dcf99dfa0ea8209b7",
+ "cycles": 125116705,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6140
+  },
+  {
+   "line": 40,
+   "addr": 6173
+  },
+  {
+   "line": 50,
+   "addr": 6226
+  },
+  {
+   "line": 60,
+   "addr": 6302
+  },
+  {
+   "line": 70,
+   "addr": 6332
+  },
+  {
+   "line": 80,
+   "addr": 6389
+  },
+  {
+   "line": 90,
+   "addr": 6434
+  },
+  {
+   "line": 100,
+   "addr": 6461
+  },
+  {
+   "line": 110,
+   "addr": 6520
+  },
+  {
+   "line": 120,
+   "addr": 6526
+  },
+  {
+   "line": 130,
+   "addr": 6541
+  },
+  {
+   "line": 140,
+   "addr": 6583
+  },
+  {
+   "line": 150,
+   "addr": 6639
+  },
+  {
+   "line": 160,
+   "addr": 6687
+  },
+  {
+   "line": 170,
+   "addr": 6726
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S003.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7393",
+  "LOCAL VARIABLES": "7394 - 7569",
+  "HIGHEST MEMORY LOCATION": "7569"
+ }
+}

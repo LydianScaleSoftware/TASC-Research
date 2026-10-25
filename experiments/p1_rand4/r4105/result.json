@@ -1,0 +1,94 @@
+{
+ "id": "r4105",
+ "key": "b3114a38231d8271",
+ "source": "10 REM! INTEGER I\n20 DEF FN F(X)=TAN(Q1)\n30 M%=-1\n40 IF (C<=PEEK(SGN(B%))) THEN HCOLOR=C\n50 INVERSE\n60 N2$=N2$:FOR I=(-SQR(M%)=((LEN(Y$)<-M))) TO (((B%<I))/VAL(N2$)<=0.1) STEP (PEEK(((AB%>3))-I))\n70 C=32>Z:PRINT B*M;Z;:PRINT\n80 N2$=Y$:VTAB C:NEXT I\n90 ON FN F(FN F(Q1))=LOG(Z) GOTO 20,160,10,120\n100 M$=\"X Y\":M$=LEFT$(Y$,FN F(24))\n110 B%=VAL(Y$+MID$(\"X Y\",B,AB%))\n120 IF (ASC(\"\")^32767) THEN COLOR=((B<=B))-Q1-44062:READ M%:PRINT\n130 GOSUB 120:CALL Z:GOSUB 120\n140 SCALE=C/AB%\n150 N2$=STR$(1E3):HCOLOR=-((((Z% OR Z))>=-M))\n160 READ I,Y$:NORMAL:IF (C) THEN N2$=CHR$(AB%<=VAL(D$(AB%,AB%)))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 821,
+ "obj_sha256": "0106378590da8013370dfbea478e36adf6b10e3ba84496fac0231ca96ff6145c",
+ "cycles": 99249610,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6097
+  },
+  {
+   "line": 40,
+   "addr": 6106
+  },
+  {
+   "line": 50,
+   "addr": 6135
+  },
+  {
+   "line": 60,
+   "addr": 6138
+  },
+  {
+   "line": 70,
+   "addr": 6242
+  },
+  {
+   "line": 80,
+   "addr": 6272
+  },
+  {
+   "line": 90,
+   "addr": 6289
+  },
+  {
+   "line": 100,
+   "addr": 6325
+  },
+  {
+   "line": 110,
+   "addr": 6355
+  },
+  {
+   "line": 120,
+   "addr": 6391
+  },
+  {
+   "line": 130,
+   "addr": 6461
+  },
+  {
+   "line": 140,
+   "addr": 6473
+  },
+  {
+   "line": 150,
+   "addr": 6482
+  },
+  {
+   "line": 160,
+   "addr": 6524
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S003.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6884",
+  "LOCAL VARIABLES": "6885 - 7179",
+  "HIGHEST MEMORY LOCATION": "7179"
+ }
+}

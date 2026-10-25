@@ -1,0 +1,87 @@
+{
+ "id": "r4014",
+ "key": "d2f179687f21cde3",
+ "source": "10 REM! INTEGER I\n20 REM! USECOMMON Y%,Q1,M\n30 READ X%,W\n40 X%=24:Q1%=((NOT AB-8366))*((Q1<824))\n50 PLOT ((W%+ATN(W%)))*X%,-M\n60 FOR M=(897) TO (.5<W%)\n70 PRINT:READ X%,AB\n80 NEXT M\n90 PRINT Q1$,Q1$;:Q1%=C^SIN(C)\n100 IF (-ATN(-Q1)) THEN 100\n110 FOR I=(((C AND 2))^W%) TO (I):C=X% AND Y%:Q1=SIN(W>Y%)\n120 ON I GOSUB 130:M$=LEFT$(M$,X%)\n130 NEXT I\n140 PRINT \"123\",STR$(M),934-((Y%+I))-(I^Y%);\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6076,
+ "obj_len": 597,
+ "obj_sha256": "06a6a1380bd6c8a954669810ab76559a84c1c4adae3496b26a73ffb1086ac97d",
+ "cycles": 84924074,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6096
+  },
+  {
+   "line": 40,
+   "addr": 6108
+  },
+  {
+   "line": 50,
+   "addr": 6147
+  },
+  {
+   "line": 60,
+   "addr": 6171
+  },
+  {
+   "line": 70,
+   "addr": 6194
+  },
+  {
+   "line": 80,
+   "addr": 6209
+  },
+  {
+   "line": 90,
+   "addr": 6214
+  },
+  {
+   "line": 100,
+   "addr": 6244
+  },
+  {
+   "line": 110,
+   "addr": 6263
+  },
+  {
+   "line": 120,
+   "addr": 6325
+  },
+  {
+   "line": 130,
+   "addr": 6346
+  },
+  {
+   "line": 140,
+   "addr": 6351
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S014.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6076 - 6672",
+  "NUMERIC COMMON": "6064 - 6075",
+  "LOCAL VARIABLES": "6673 - 6704",
+  "HIGHEST MEMORY LOCATION": "6704"
+ }
+}

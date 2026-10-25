@@ -1,0 +1,131 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S003
+
+
+OBJECT CODE FILE:
+(DEFAULT S003.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION?
+
+*****BEGINNING PASS 1
+
+
+
+10  DIM B(3)
+20  PRINT Q1$,961 ^ X%;: POP
+30  FOR Y = (((2 *  LEN (Z$))) ^ 3.14159
+) TO (0.1 <  = XY%) STEP ( INT (XY)): NE
+XT Y:B(XY%) = 2
+40 A = B(((A = Q1%)) -  - XY%)
+50  PRINT Y;
+
+*****WARNING
+LINE NUMBER 50
+IGNORED
+
+: RESUME
+
+
+60  END
+
+*****WARNING
+LINE NUMBER 60
+IGNORED
+
+: SPEED= B( - A)
+
+
+:XY% = Q1%
+70  POP : SPEED=  INT (W >  = 39 <  =  I
+NT (Y))
+80  IF (B(X%) <  SQR (40 * A)) THEN 90
+90  IF ( NOT XY) THEN  PRINT C;"HI",Z$,:
+B( TAN (B( - Q1%))) = B(XY + 1E3) + (( -
+ W +  PEEK (B(XY%)))): PRINT  ASC ("HI")
+;1E3 + B(X%) <  > Q1%,
+100  IF (XY%) THEN C =  VAL (Q1$) / ((AB
+% > B(X%))) < XY%: COLOR= C - W ^ 20 <
+= (((B(X%)) <  = AB%)):C = 12473 AND XY
+110  FOR W = (1.5) TO ( LOG (246 - B(X%)
+) <  = ((3.14159 <  = W <  = ((24 < AB%)
+))))
+120  FOR C = (27493) TO (((AB% <  > B(AB
+%) AND 7)) >  = ((42084 - AB% AND ((380
+OR 0))))):A = X%
+130 Q1$ = P$(1E3 - C) +  LEFT$ ( RIGHT$
+(Z$,W),X% < 18072)
+140  IF (C) THEN Q1$ = Z$:AB% = ((X% + 8
+62)) * AB%
+150  IF ( - XY% <  = 1 + ((Q1% < XY%)))
+THEN  PRINT  MID$ (Z$, - 39) + Q1$;
+160  READ B$:XY% = ((B(Q1%) OR AB%)) *
+SGN (32767) - 100
+170  POKE XY%,X%:X% = 5 ^ ((W >  = ((428
+17 <  > AB%))))
+180  PRINT
+190 Z$ = "TASC": HTAB ((XY OR 3)) >  = .
+5 + C > B(XY%)
+200  GOTO 190:Q1$ =  RIGHT$ ( CHR$ (C *
+XY),(214 > 3))
+210 B$ = "TASC": XDRAW  LEN ( CHR$ (A) +
+  MID$ (Q1$,40000,10))
+220  FOR W = (Y AND B(1 * XY)) TO ( SIN
+(AB% OR 32767 OR A + 32767)):Z$ = P$( VA
+L ("A")): PRINT 39 = ((AB% >  = .001 + A
+)),XY%,
+230 C =  ABS ( EXP ( LOG (259)))
+
+
+
+*****BEGINNING PASS 2
+
+
+.....
+
+
+*****CODE GENERATION COMPLETE
+
+
+COMPILATION INFORMATION AND LINE NUMBER
+REFERENCE TABLE? YES
+
+
+SOURCE FILE: S003
+OBJECT FILE: S003.OBJ
+LIBRARY OCCUPIES 2051 - 6063
+PROGRAM OCCUPIES 6064 - 7809
+
+NO COMMON BLOCK
+
+LOCAL VARIABLES OCCUPY 7810 - 7904
+
+HIGHEST MEMORY LOCATION: 7904
+
+
+LINE# ADDR   LINE# ADDR   LINE# ADDR
+
+10    6084   20    6084   30    6108
+40    6172   50    6205   60    6211
+70    6220   80    6253   90    6282
+100   6426   110   6518   120   6580
+130   6657   140   6702   150   6728
+160   6781   170   6826   180   6862
+190   6865   200   6923   210   6950
+220   7002   230   7116
+
+*****COMPILATION COMPLETE
+
+
+]?

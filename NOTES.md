@@ -7,17 +7,16 @@ Entry point for any new session. Read this first, then the handoff prompt
 ## Status (2026-10-25, session 2)
 
 - **Phase 0: done** (session 1). `python -m tasc.phase0`.
-- **Phase 1: nearly done.** ~1,100 real-TASC compiles. The Python predictor
-  `tasc/compiler/` (parser, codegen, assembler, bit-exact ROM FIN) reproduces
-  **BALL.OBJ byte for byte** (and its line table) and all 961 controlled +
-  first-batch random compiles (`python -m tasc.predict_check`, also a pytest).
-  Second random batch `p1_rand2` (150 programs, wider constructs incl.
-  COMMON, memory layouts, ON GOSUB, ONERR, HPLOT, INPUT lists): 129/150 on
-  first pass; remaining mismatches are mostly COMMON programs.
-- Next: close `p1_rand2` (COMMON symbol/routine order; INPUT/READ into int
-  array elements), run another random batch, then declare the Phase 1 exit,
-  write the RAG chunks for the predictor rules, and clean up mypy (31 errors,
-  Ref payload typing).
+- **Phase 1: exit criterion met (2026-10-25).** The Python predictor
+  `tasc/compiler/` reproduces BALL.OBJ byte for byte and all 1,528 recorded
+  real-TASC compiles, including 603 random programs in four batches
+  (`python -m tasc.predict_check`, pytest `tests/test_compiler.py`). The last
+  two fresh batches matched 197/200 and 199/200 on first contact before fixes.
+  The predictor code (with its comments) is now the authoritative template
+  set; `tasc/templates/core.json` is an earlier summary.
+- Next (Mark's call): Phase 2 (annotated disassembly of RUNTIME and the PASS
+  files using the predictor/objfile parser) and Phase R. Cleanup: mypy (31
+  errors, Ref payload typing).
 
 ### How the predictor is debugged
 `python -m tasc.predict_check [family]` (summary), `python -m tasc.linediff
@@ -27,9 +26,10 @@ scratch `tokdiff.py` (token-level diff of that line). Random programs:
 real TASC (12 parallel emulators, ~2 s/program wall).
 
 ### Remaining unknowns (GUESS markers in tasc/compiler/codegen.py)
-- INPUT/READ into an int array element; string comparison with a simple left
-  and complex right (swap assumed); full RESUME/Debug statement list beyond
-  the families tested.
+- String comparison with a simple left and complex right (swap assumed);
+  RESUME/Debug list beyond the statements tested; temp naming (why main temps
+  are int-first while FN temps follow creation order: probably hashed temp
+  names; PASS1's code will tell).
 
 ## Environment
 

@@ -1,0 +1,163 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S001
+
+
+OBJECT CODE FILE:
+(DEFAULT S001.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION?
+
+*****BEGINNING PASS 1
+
+
+
+10
+RECOGNIZED  REM ! INTEGER K,I
+20 Y$ = Y$ + "A":I = X% + (( COS (M) + (
+(Y OR 49152))))
+30 A% = 24
+40 C = A%: HTAB X%
+50 A = ((A >  = C%)) *  - (( NOT 777)):M
+ =  NOT ((((C AND AB)) <  =  EXP (M))):
+IF (((N2% > (C))) - ((M AND  INT (407)))
+) THEN 170
+60  PRINT  MID$ ("A",1),
+70 A =  LOG (AB <  > 40000 <  =  NOT A):
+ IF (C +  - C <  > (X%)) THEN  ON M GOSU
+B 140: PRINT
+80  SPEED=  NOT (( - Y)) + ((C% - 39))
+90 K = K <  =  VAL (Y$ + "HI"): PRINT C$
+;32767;C,:C = 3 - K
+100 Y = A + A% <  =  - (( - K))
+110  GOTO 120
+
+*****WARNING
+LINE NUMBER 110
+IGNORED
+
+: PRINT
+
+
+
+
+*****WARNING
+LINE NUMBER 110
+IGNORED
+
+: FOR AB = ( NOT C - A%) TO ( SIN (X% <
+ > AB) OR A)
+
+
+120  FOR I = (((256 < 3841)) ^ ((7 * K))
+ OR  NOT (( - N2%))) TO ((1) OR A%) STEP
+ ( TAN ((20) < 127 + N2%)):Y$ =  CHR$ (
+VAL (Y$))
+130  FOR Y = (((0.1 AND AB)) + 3) TO (AB
+ * M * 5 * ((C / A%(A%))))
+140 A =  ASC ( MID$ ("",K / C)): GOSUB 2
+0
+150 X% =  INT (A%(AB >  = A%(X%)))
+160 M =  RND ( VAL ("123") <  >  TAN (A)
+):M =  COS (X%)
+170  SPEED= 978 + N2%:A = AB
+180  ON A%(N2%) GOTO 120,270,220,90: DAT
+A X,-2.5,,
+190 A = A%: IF (M) THEN  GOSUB 110: PRIN
+T (N2% + B(N2%)) =  -  VAL (Y$); LEN ( M
+ID$ (D$(I,X%),10)) <  = C;N2$;
+200  READ I:C$ =  MID$ (Y$ +  MID$ (C$,C
+),3, TAN (AB = 0)): IF (31938) THEN  PRI
+NT  MID$ ("A" +  MID$ (Y$,Y,N2%),Y);Y$;"
+HI" +  CHR$ ( COS (A));
+210 A%(((C% < ((M AND N2%)))) - ((817 -
+A + ((Y AND A%(I)))))) = ( VAL (D$(K,256
+))) OR  LOG (A%):Y$ = Y$
+220 A = A:A% =  SIN (B( VAL ("123")))
+230  IF (C * (( TAN (I) OR B(I) / K))) T
+HEN 220
+240  GOSUB 300:K = (2 > A%(39) <  = ((40
+ > 20652))):C% = A%
+250  RESTORE
+260  TEXT
+270  DATA HI,"A,B",X
+280 Y$ = N2$
+290 D$(AB ^ A% + 5,N2% - (( NOT 20 >  =
+((A% <  = 32767))))) =  CHR$ ( INT (959
+- 256)):Y$ = C$
+300  READ A%: READ C,K
+310  GOTO 160
+
+*****WARNING
+LINE NUMBER 310
+IGNORED
+
+: GOSUB 270
+
+
+
+
+*****WARNING
+LINE NUMBER 310
+IGNORED
+
+: PRINT
+
+
+
+
+
+*****BEGINNING PASS 2
+
+
+.....
+
+
+*****CODE GENERATION COMPLETE
+
+
+COMPILATION INFORMATION AND LINE NUMBER
+REFERENCE TABLE? YES
+
+
+SOURCE FILE: S001
+OBJECT FILE: S001.OBJ
+LIBRARY OCCUPIES 2051 - 6063
+PROGRAM OCCUPIES 6064 - 7920
+
+NO COMMON BLOCK
+
+LOCAL VARIABLES OCCUPY 7921 - 8292
+
+HIGHEST MEMORY LOCATION: 8292
+
+
+LINE# ADDR   LINE# ADDR   LINE# ADDR
+
+10    6084   20    6084   30    6133
+40    6139   50    6151   60    6242
+70    6264   80    6326   90    6355
+100   6420   110   6450   120   6453
+130   6552   140   6602   150   6632
+160   6662   170   6707   180   6722
+190   6755   200   6841   210   6969
+220   7062   230   7095   240   7135
+250   7177   260   7180   270   7183
+280   7198   290   7204   300   7282
+310   7300
+
+*****COMPILATION COMPLETE
+
+
+]?

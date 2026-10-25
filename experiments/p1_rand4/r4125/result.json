@@ -1,0 +1,90 @@
+{
+ "id": "r4125",
+ "key": "0ba832d4b1a49398",
+ "source": "10 REM! INTEGER *\n20 DIM D$(12),B$(10)\n30 GOTO 40:GOSUB 20:READ X%,X$\n40 PRINT XY$;Y% OR C*((A<A)),X%;:Z=582:COLOR=-49152\n50 Z=(24250 AND Z)=SGN(X)\n60 IF (NOT ((-A<255))) THEN HCOLOR=Y%\n70 M=NOT 5:IF (((EXP(1000)-100^M%))^((M<C/X))) THEN 110\n80 Z=Y%*(X%)\n90 GOTO 80:X=Z\n100 GOTO 10\n110 GOTO 70\n120 PRINT -Y%<>X/0.1;:FOR A=(1000) TO (X%):B$(M)=LEFT$(B$(40-79),C>Z)\n130 M=X%:VTAB X%\n140 Z=C\n150 C=18272*W%:PRINT MID$(D$(C+40),20=1.5=-X%,155),A;\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 747,
+ "obj_sha256": "09cd26f560aa6d1c5eb685161de9e56e8693ee3b2b4a7ed2e3c2123cb81360d5",
+ "cycles": 97783701,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6087
+  },
+  {
+   "line": 50,
+   "addr": 6141
+  },
+  {
+   "line": 60,
+   "addr": 6171
+  },
+  {
+   "line": 70,
+   "addr": 6197
+  },
+  {
+   "line": 80,
+   "addr": 6255
+  },
+  {
+   "line": 90,
+   "addr": 6264
+  },
+  {
+   "line": 100,
+   "addr": 6273
+  },
+  {
+   "line": 110,
+   "addr": 6276
+  },
+  {
+   "line": 120,
+   "addr": 6279
+  },
+  {
+   "line": 130,
+   "addr": 6353
+  },
+  {
+   "line": 140,
+   "addr": 6365
+  },
+  {
+   "line": 150,
+   "addr": 6371
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S006.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6810",
+  "LOCAL VARIABLES": "6811 - 6883",
+  "HIGHEST MEMORY LOCATION": "6883"
+ }
+}

@@ -1,0 +1,102 @@
+{
+ "id": "r4102",
+ "key": "ad84b92e08678031",
+ "source": "10 REM! INTEGER K\n20 DIM B(11)\n30 DEF FN F(T)=C\n40 B%=-W%:HLIN B(K),(COS(-K>=0.1+127)) AT C\n50 VTAB LEN(Q1$):IF (100) THEN 50\n60 Q1=LOG(W%>=M%)-NOT K\n70 IF (0) THEN 80:READ Z$,M%:GOTO 80\n80 FOR C=(-((((127 OR Y%))-2^C))) TO (((M+1))*((N2*K))>=32767) STEP (Y%):B(Y%>N2<((Y%<C))-((Q1+C)))=VAL(Q1$)\n90 IF (N2) THEN 10\n100 Z$=B$\n110 IF (5) THEN Q1=B(W%):GOTO 110\n120 GOSUB 150:FOR C=(LOG(W%)) TO (FN F(FN F(TAN(W)))):PRINT 40,LEFT$(\"123\",-((K<>B(39382))));\"\",\n130 C=LOG(C-M)\n140 IF (FN F(-K) AND COS(100)) THEN IF (W%) THEN 110:GOSUB 140\n150 DATA -2.5,\"A,B\",HI:READ N2:HLIN K^5>=210*716,(SIN(M)) AT FN F(5/N2)+W%\n160 Q1=NOT B(K):PRINT \"X Y\";-((K<>RND(C)));C,\n170 IF (SQR(SIN(K)-((2 AND W%)))) THEN READ B%,W%:B$=Q1$\n180 PRINT STR$(((M%>W%))+((N2<C)));\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1074,
+ "obj_sha256": "05afbd834a5c4189c65cad8499470d597f272ab47c477ff4ac75cc547a0d30f2",
+ "cycles": 114369611,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6094
+  },
+  {
+   "line": 50,
+   "addr": 6145
+  },
+  {
+   "line": 60,
+   "addr": 6162
+  },
+  {
+   "line": 70,
+   "addr": 6189
+  },
+  {
+   "line": 80,
+   "addr": 6197
+  },
+  {
+   "line": 90,
+   "addr": 6319
+  },
+  {
+   "line": 100,
+   "addr": 6327
+  },
+  {
+   "line": 110,
+   "addr": 6333
+  },
+  {
+   "line": 120,
+   "addr": 6353
+  },
+  {
+   "line": 130,
+   "addr": 6445
+  },
+  {
+   "line": 140,
+   "addr": 6457
+  },
+  {
+   "line": 150,
+   "addr": 6497
+  },
+  {
+   "line": 160,
+   "addr": 6575
+  },
+  {
+   "line": 170,
+   "addr": 6629
+  },
+  {
+   "line": 180,
+   "addr": 6681
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7137",
+  "LOCAL VARIABLES": "7138 - 7255",
+  "HIGHEST MEMORY LOCATION": "7255"
+ }
+}

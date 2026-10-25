@@ -1,0 +1,38 @@
+{
+ "id": "main_i_then_r",
+ "key": "a548d54e9574278a",
+ "source": "10 Y%=B%(1)+B%(2)\n20 X=A(1)+A(2)",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 151,
+ "obj_sha256": "5118b63bae239d351a53588f52eff60a903603600693e159ee29f14ca536769a",
+ "cycles": 59338453,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6105
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6214",
+  "LOCAL VARIABLES": "6215 - 6305",
+  "HIGHEST MEMORY LOCATION": "6305"
+ }
+}

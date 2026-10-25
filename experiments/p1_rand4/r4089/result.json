@@ -1,0 +1,96 @@
+{
+ "id": "r4089",
+ "key": "6798ee8dfa8f743b",
+ "source": "10 REM! USECOMMON XY%,Z,Z$\n20 A$=Z$:PRINT \"123\",X-W--127 OR XY%;STR$(-Y);:XY%=W\n30 PRINT NOT X-W^XY%;\n40 FOR Y=(NOT Z%) TO (1-(3.14159)<=B(XY%,AB/Z))\n50 SPEED=W:GOTO 100:HOME\n60 Y=Y%>=X%*5-B(XY%,210):X%=Z\n70 FOR Y=(-SGN(Y%<>256)) TO (Z%)\n80 Z%=(Y)\n90 HCOLOR=XY%>=491:X%=ABS((XY%>=255))\n100 PRINT XY$;Z%;:B(LEN(MID$(Z$,W)+RIGHT$(A$,100)),6180-((B(X%,Y%)=W))<>B(Y%,Z%)*X%)=Y%=((W>Z%+40)):X%=Y<B(XY%,256)<173-Y<=Z^X/118\n110 FOR Z=(Z%) TO (SGN(100=X<>((34946<=X)))):FOR AB=(SGN(-17)) TO ((AB)):Y%=PEEK(Y AND Z/XY%)\n120 Y=((Z*X))^-127:NEXT AB:Z$=LEFT$(CHR$(127-20),Z)\n130 PRINT -((W/B(255,2)))*-((186*B(Y%,444)));601;\n140 SPEED=ASC(XY$+Z$+STR$(B(X%,Z%))):ON X% AND XY%>Y%<=ABS(Z%) GOTO 50,80\n150 AB=((Z%=XY%))/((43892^2+EXP(X)))\n160 NEXT Z:PLOT B(3,TAN(0.1+5)),PEEK(0)+LOG(316) AND X\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": 28672,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6073,
+ "obj_len": 1439,
+ "obj_sha256": "3d2a872fe540a7b2e7fedf2682fd63f00e831e95be79f9eaea4284a22e45cb50",
+ "cycles": 129613450,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6093
+  },
+  {
+   "line": 30,
+   "addr": 6168
+  },
+  {
+   "line": 40,
+   "addr": 6192
+  },
+  {
+   "line": 50,
+   "addr": 6239
+  },
+  {
+   "line": 60,
+   "addr": 6248
+  },
+  {
+   "line": 70,
+   "addr": 6287
+  },
+  {
+   "line": 80,
+   "addr": 6316
+  },
+  {
+   "line": 90,
+   "addr": 6322
+  },
+  {
+   "line": 100,
+   "addr": 6349
+  },
+  {
+   "line": 110,
+   "addr": 6535
+  },
+  {
+   "line": 120,
+   "addr": 6623
+  },
+  {
+   "line": 130,
+   "addr": 6673
+  },
+  {
+   "line": 140,
+   "addr": 6724
+  },
+  {
+   "line": 150,
+   "addr": 6807
+  },
+  {
+   "line": 160,
+   "addr": 6846
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "OBJECT FILE": "S004.OBJ",
+  "PROGRAM": "6073 - 7511",
+  "NUMERIC COMMON": "6064 - 6070",
+  "STRING COMMON": "6071 - 6072",
+  "LOCAL VARIABLES": "28672 - 29320",
+  "HIGHEST MEMORY LOCATION": "29320"
+ }
+}

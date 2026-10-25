@@ -1,0 +1,38 @@
+{
+ "id": "str_and_num",
+ "key": "d5fc86af773db74f",
+ "source": "10 X$=B$(1)+B$(2)\n20 X=A(1)+A(2)",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 153,
+ "obj_sha256": "ae48888f9c225b8a486f6d6585199cedc78630992cc5d9ff9ee17436e62306bd",
+ "cycles": 58940090,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6108
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6216",
+  "LOCAL VARIABLES": "6217 - 6307",
+  "HIGHEST MEMORY LOCATION": "6307"
+ }
+}

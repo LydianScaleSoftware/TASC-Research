@@ -1,0 +1,98 @@
+{
+ "id": "r4017",
+ "key": "f68cd5bdfa8e8bb1",
+ "source": "10 REM! INTEGER I\n20 DIM P(10),D%(12,4)\n30 Z$=MID$(Y$,AB,AB)+B$+\"A\":IF (TAN(TAN(65535))) THEN Q1%=NOT ((Z%+-Y%)):SPEED=X\n40 Y$=B$+LEFT$(LEFT$(\"TASC\",753),SQR(Y%))\n50 READ AB:READ X\n60 D%(577,Y%)=3:I=P(AB<>I*X):PRINT\n70 B$=Y$:N2%=I:W=(P((P(127))))\n80 IF (-((313>P(I)<=PEEK(Z)))) THEN 130\n90 GOTO 80\n100 READ Z$,Y$:GR:PRINT \"X Y\",B$;\n110 HCOLOR=(Q1%<>B)<((ATN(D%(Y%,10))=-Z%)):N2%=39116\n120 Y$=LEFT$(CHR$(X),NOT ((37656*B)))\n130 D%(COS(Y%),Y%)=N2%\n140 FOR W=(X) TO (AB) STEP (Y%/Z%)\n150 HLIN Q1%,(100+P(5)*ABS(X)) AT -Y%\n160 POKE ((((Z%<>3474))+Z%))*I,Y%:AB=967-256<10\n170 PRINT STR$(-I<=LOG(24));:X=Z%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 974,
+ "obj_sha256": "66fd9b76b7edce940edc0446b101152207a6b704737188d6b10eaf459602106d",
+ "cycles": 106819578,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6162
+  },
+  {
+   "line": 50,
+   "addr": 6199
+  },
+  {
+   "line": 60,
+   "addr": 6211
+  },
+  {
+   "line": 70,
+   "addr": 6253
+  },
+  {
+   "line": 80,
+   "addr": 6280
+  },
+  {
+   "line": 90,
+   "addr": 6320
+  },
+  {
+   "line": 100,
+   "addr": 6323
+  },
+  {
+   "line": 110,
+   "addr": 6362
+  },
+  {
+   "line": 120,
+   "addr": 6425
+  },
+  {
+   "line": 130,
+   "addr": 6448
+  },
+  {
+   "line": 140,
+   "addr": 6478
+  },
+  {
+   "line": 150,
+   "addr": 6501
+  },
+  {
+   "line": 160,
+   "addr": 6540
+  },
+  {
+   "line": 170,
+   "addr": 6579
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7037",
+  "LOCAL VARIABLES": "7038 - 7275",
+  "HIGHEST MEMORY LOCATION": "7275"
+ }
+}

@@ -1,0 +1,70 @@
+{
+ "id": "r4060",
+ "key": "3f410d5b0f11e571",
+ "source": "10 REM! INTEGER I\n20 DIM A$(4),D%(3,6)\n30 HCOLOR=ASC(MID$(C$+C$,274,AB)):PRINT LEFT$(M$,NOT D%(335,10))+C$;-((((I OR AB%))^M)),:PRINT 20;\n40 ON 5 GOTO 90,60,10,80:XY=(M+M) AND AB%\n50 INPUT \"\";A$(AB%+((AB-1.5))),N2,A$(0.1):N2=NOT ((NOT C%))/M\n60 XY=INT(NOT TAN(4980)):VTAB ASC(C$)<>660:PRINT\n70 N2=NOT ((VAL(C$)^((D%(W%,I) OR D%(1E3,C%)))))\n80 ON W% GOTO 50,60,40\n90 CALL ((LEN(C$)+C*XY))^NOT W%:GOSUB 10\n100 AB=NOT N2:C$=\"HI\":PRINT STR$(AB%);\"123\",\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 793,
+ "obj_sha256": "6b0c83ea233c17f67187fbf2457eb2c473a7403001f59d5f7c42d633258768df",
+ "cycles": 92672026,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6192
+  },
+  {
+   "line": 50,
+   "addr": 6231
+  },
+  {
+   "line": 60,
+   "addr": 6315
+  },
+  {
+   "line": 70,
+   "addr": 6362
+  },
+  {
+   "line": 80,
+   "addr": 6427
+  },
+  {
+   "line": 90,
+   "addr": 6443
+  },
+  {
+   "line": 100,
+   "addr": 6485
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S009.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6856",
+  "LOCAL VARIABLES": "6857 - 6966",
+  "HIGHEST MEMORY LOCATION": "6966"
+ }
+}

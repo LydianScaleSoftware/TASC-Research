@@ -1,0 +1,90 @@
+{
+ "id": "r4097",
+ "key": "bc793fba7d57424e",
+ "source": "10 REM! INTEGER I\n20 DIM A$(7),D$(6,5)\n30 DEF FN F(X)=X%\n40 PRINT RIGHT$(MID$(A$(W%),XY,XY%>=C%),-((C% OR N2))),FN F(X);:IF (XY%+W) THEN RETURN:SPEED=((X%<=X%))+((X<=40000))+C%\n50 IF (X%) THEN FOR X=(597) TO (LOG(PEEK(7)=967*I))\n60 GOSUB 150:TEXT\n70 GOTO 70\n80 IF (7) THEN READ A$,M$:ON ASC(M$) GOTO 70,10\n90 READ XY%,XY%:PRINT C$;X/N2;486;:N2=X%<XY%\n100 PRINT STR$(XY%*X%)+M$+RIGHT$(C$,C%);M$+D$(1000,24259)+A$+A$;:Q1=1E3/858^255\n110 HOME\n120 COLOR=C%:W=40=W\n130 A$=\"HI\":XY=COS(XY%):END\n140 Q1=0:I=X/SQR(127>=1.5):W=1>((304<=W% AND -X))\n150 COLOR=X%:A$=\"A\":GOTO 110\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 866,
+ "obj_sha256": "669222719cdd0e32cb25c2d02920cdbcee96009e346f6eb8f6bdbddd697bba56",
+ "cycles": 98788988,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6094
+  },
+  {
+   "line": 50,
+   "addr": 6168
+  },
+  {
+   "line": 60,
+   "addr": 6214
+  },
+  {
+   "line": 70,
+   "addr": 6220
+  },
+  {
+   "line": 80,
+   "addr": 6223
+  },
+  {
+   "line": 90,
+   "addr": 6254
+  },
+  {
+   "line": 100,
+   "addr": 6299
+  },
+  {
+   "line": 110,
+   "addr": 6386
+  },
+  {
+   "line": 120,
+   "addr": 6389
+  },
+  {
+   "line": 130,
+   "addr": 6407
+  },
+  {
+   "line": 140,
+   "addr": 6433
+  },
+  {
+   "line": 150,
+   "addr": 6490
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S012.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6929",
+  "LOCAL VARIABLES": "6930 - 7084",
+  "HIGHEST MEMORY LOCATION": "7084"
+ }
+}

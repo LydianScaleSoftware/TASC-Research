@@ -1,0 +1,78 @@
+{
+ "id": "r4039",
+ "key": "c1552b8e762c9be3",
+ "source": "10 DIM B%(11),P%(1)\n20 FOR C=(COS(C*38945>Y)) TO (B%(999=Z<>X)):GOSUB 90:CALL B%\n30 HPLOT TO 8933,(32767):PRINT\n40 IF (Z-LOG(EXP(Z))) THEN FOR C=(SQR((SQR(X%)))) TO (N2%) STEP (B%(((N2%=40000))+LOG(AB%))):ON SGN(Y^0.1+((B%(AB%) OR AB%))) GOTO 50\n50 IF (SGN(Z)) THEN Z=846:GOTO 80:GOSUB 100\n60 N2%=B%(Y=C)\n70 READ B%\n80 POKE 256,AB/(B%(X%))\n90 GOSUB 60:ON N2%<=(X) GOTO 100,90,100:VTAB 20\n100 IF (RND(Z)) THEN Z=7:FOR C=(ASC(Z$)) TO (N2%) STEP (3.14159>=7):GOSUB 120\n110 NEXT C:Z$=STR$(B%):X=.5\n120 CALL 160:RESTORE:END\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 729,
+ "obj_sha256": "94e11f98945abf113300b23863a6235c49b8ca632c1821f19bbd359daf22daa3",
+ "cycles": 94883454,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6140
+  },
+  {
+   "line": 40,
+   "addr": 6155
+  },
+  {
+   "line": 50,
+   "addr": 6263
+  },
+  {
+   "line": 60,
+   "addr": 6285
+  },
+  {
+   "line": 70,
+   "addr": 6303
+  },
+  {
+   "line": 80,
+   "addr": 6309
+  },
+  {
+   "line": 90,
+   "addr": 6330
+  },
+  {
+   "line": 100,
+   "addr": 6358
+  },
+  {
+   "line": 110,
+   "addr": 6409
+  },
+  {
+   "line": 120,
+   "addr": 6429
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S005.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6792",
+  "LOCAL VARIABLES": "6793 - 6860",
+  "HIGHEST MEMORY LOCATION": "6860"
+ }
+}

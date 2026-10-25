@@ -1,0 +1,70 @@
+{
+ "id": "r4096",
+ "key": "3e5783e9eaed231e",
+ "source": "10 DIM P(2),A%(7)\n20 DEF FN F(T)=-((Z<AB>=(Z)))\n30 M%=PEEK(B)*330:FOR N2=(127) TO (147) STEP (24643-416*P(24)-B%):PRINT LEFT$(LEFT$(\"HI\",B),24)+STR$(B%^Z%);\n40 DATA -2.5,-2.5,-2.5,HI:X$=MID$(\"123\",.5):PRINT SIN(Z);M,B;\n50 M=P(M%):GOTO 20\n60 SPEED=TAN(32767 OR 49152)\n70 PRINT NOT ((-B>=((AB=B))));LOG(2)-ASC(X$)+ASC(Y$);1E3,:P(FN F(C%))=N2\n80 PRINT N2;Y$;:M%=ATN(FN F(M)) OR N2:COLOR=SQR(AB)\n90 IF (M) THEN 20\n100 M=1000:A$=X$:Y$=\"\"\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 743,
+ "obj_sha256": "9aded13c0a3dcfa7f59a9f12035592a84a2d7aa22900e34375df72f520eb5795",
+ "cycles": 91526611,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6109
+  },
+  {
+   "line": 40,
+   "addr": 6206
+  },
+  {
+   "line": 50,
+   "addr": 6275
+  },
+  {
+   "line": 60,
+   "addr": 6287
+  },
+  {
+   "line": 70,
+   "addr": 6305
+  },
+  {
+   "line": 80,
+   "addr": 6401
+  },
+  {
+   "line": 90,
+   "addr": 6440
+  },
+  {
+   "line": 100,
+   "addr": 6448
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S011.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6806",
+  "LOCAL VARIABLES": "6807 - 6888",
+  "HIGHEST MEMORY LOCATION": "6888"
+ }
+}
