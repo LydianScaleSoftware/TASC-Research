@@ -1,0 +1,164 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S003
+
+
+OBJECT CODE FILE:
+(DEFAULT S003.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION? NO
+
+COMPILATION LISTING:
+(DEFAULT YES)? YES
+
+PAUSE ON ERRORS:
+(DEFAULT YES)? YES
+
+INTEGER ARITHMETIC:
+(DEFAULT YES)? NO
+
+INTEGER CONSTANTS:
+(DEFAULT YES)? NO
+
+RESUME/DEBUG CODE:
+(DEFAULT NO)? NO
+
+*****BEGINNING PASS 1
+
+
+
+10  FOR W = (Y) TO (Y):B%( NOT (( -  RND
+ (X%))), - B%(N2%,Z%) = XY) = M% >  =  L
+EN (Z$): FOR W = (A) TO (A < X%)
+20  IF ((P%(Z%) + ((797 - 9095)))) THEN
+100:C = 964 * (( - X% -  - 614))
+30 Z$ = M$: PRINT Z$,44365,127;
+40 XY = XY
+50  GOSUB 240
+60 Z$ =  MID$ (M$,((1))):XY$ = XY$
+70  IF (((Z% AND B%(N2%,N2%))) * XY <  >
+ 2.25) THEN A = 988: GOTO 170
+80 Y =  - X% AND X% = W:M% = XY: PRINT M
+%,
+90 C =  ASC ("A"): READ C,Y
+100  GOTO 160
+
+*****WARNING
+LINE NUMBER 100
+IGNORED
+
+: IF (W) THEN 30
+
+
+110  IF (N2% / ((32767 <  = C)) + Z%) TH
+EN 10:X% = A
+
+*****WARNING
+LINE NUMBER 110
+IGNORED
+
+: PRINT
+
+
+120  DATA -2.5,HI,-2.5:Z% =  - (( -  ATN
+ (X%)))
+130  PRINT "HI",
+140  IF (N2% - ( NOT M%)) THEN 180
+
+*****WARNING
+LINE NUMBER 140
+IGNORED
+
+: SPEED=  COS (C)
+
+
+:X% =  COS (B%( ATN (1.5),X% + XY))
+150 W =  ASC ( CHR$ (A) +  MID$ (Z$,XY))
+: PRINT W,"A";((((Z% - X%)) / ((Z% OR XY
+)))) ^ ((X% + XY > A));
+160 XY$ = XY$ + M$: DATA 300,-2.5: READ
+XY$,A
+170  DATA 300,1,:Y = X%
+180  NEXT W: PRINT 40, LEFT$ (M$,XY AND
+B%(0,M%)) +  LEFT$ (XY$,X%) +  RIGHT$ (X
+Y$,C),(((M%) AND 65535 ^ B%(M%,5))) - ((
+C = 633));: CALL  - ((5 >  = Z%))
+190 XY$ = Z$
+200  IF (M% AND X% OR M% OR B%(X% * Z%,
+- B%(311,Z%))) THEN 60:M$ =  LEFT$ ( RIG
+HT$ (M$,1),C)
+210  FOR A = ((20)) TO ( VAL ( MID$ ("TA
+SC",W)) >  NOT (W)): ON B%(1000,X% * A)
+= Z% GOTO 70,200,50,220: ON ((Z% / X% +
+Z%)) /  INT (M%) GOTO 60,230,120,40
+220  PLOT Z% / ((M% <  >  ASC (M$))), NO
+T B%(930,N2%) <  = ((P%(N2%) = 105))
+230  SPEED= Y: GOSUB 100: IF ( NOT 679 /
+ ((M% = M%)) / P%( - 1)) THEN  IF ((((10
+0) >  = N2% * P%(X%))) /  LEN ( LEFT$ (Z
+$,C))) THEN XY = (X% - Z% + (10))
+240  IF (10) THEN 220: DATA 1
+250  VTAB ((255 >  = Z%)) * W AND C:C =
+M%
+260 P%( NOT  RND ((Z%))) = 3 *  RND (C):
+ IF ( INT ( - W * ((N2% <  > 7)))) THEN
+200:P%( VAL ( LEFT$ (M$,B%(X%,X%))) OR
+- W) = 10 * 1000 <  - 85
+270  PRINT  - ((W < 1.5)) ^  LEN ("X Y")
+,38131; - 255 <  = XY + N2% OR XY;:N2% =
+ 1
+
+
+
+*****BEGINNING PASS 2
+
+
+......
+
+
+*****CODE GENERATION COMPLETE
+
+
+COMPILATION INFORMATION AND LINE NUMBER
+REFERENCE TABLE? YES
+
+
+SOURCE FILE: S003
+OBJECT FILE: S003.OBJ
+LIBRARY OCCUPIES 2051 - 6063
+PROGRAM OCCUPIES 6064 - 8233
+
+NO COMMON BLOCK
+
+LOCAL VARIABLES OCCUPY 8234 - 8550
+
+HIGHEST MEMORY LOCATION: 8550
+
+
+LINE# ADDR   LINE# ADDR   LINE# ADDR
+
+10    6084   20    6195   30    6244
+40    6271   50    6277   60    6280
+70    6298   80    6342   90    6384
+100   6415   110   6418   120   6446
+130   6480   140   6497   150   6549
+160   6649   170   6691   180   6710
+190   6856   200   6862   210   6957
+220   7077   230   7140   240   7256
+250   7272   260   7299   270   7431
+
+*****COMPILATION COMPLETE
+
+
+]?

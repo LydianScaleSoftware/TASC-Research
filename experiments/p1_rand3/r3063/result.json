@@ -1,0 +1,99 @@
+{
+ "id": "r3063",
+ "key": "dc4f4c0fcced5e48",
+ "source": "10 REM! USECOMMON Y%,Y,Z%\n20 DIM D$(11),B%(8)\n30 GOSUB 160:DATA 1,-2.5,X,X:FOR C=((A-817) AND 4) TO (ABS(24)-((Y%/A))^((A<328)))\n40 Z=SIN(ASC(A$))+-255^(X)\n50 A$=W$+A$+\"X Y\"\n60 B%=Y:M%=C\n70 READ B%,X:HTAB -ABS(Y%) AND NOT ((X<A)):HLIN C,(EXP((Y%))) AT 528\n80 Y%=378:B%=Y%<=((Y%<=NOT X)):PRINT A;M%^LOG(C)<>931;D$(M%);\n90 D$(-((NOT 0.1)))=LEFT$(D$(.001),(Z)):IF (X) THEN PLOT EXP(Z),Z\n100 TEXT:M%=B%(16715)+M%:Y=1<=((Z%<=Z*65535))\n110 PRINT 1000;\n120 A$=\"TASC\":GOTO 150\n130 HLIN B%(761>Z%^Y%),(-((Y%+255))>=Y) AT ASC(A$):IF (Z%-B%-LEN(A$)--((X-953))) THEN 20\n140 Y=((X>((Y%<>B%))))*((8179^C-989*Z%)):B%(Y%)=Y\n150 HLIN X,(LOG(Y>ABS(Z))) AT -((1<>C))+B%:READ Z%:IF (3.14159<=C<>-M% OR -40) THEN 170\n160 ONERR GOTO 80:PRINT Q1$,\n170 GOTO 50:DATA 1:A=B%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6073,
+ "obj_len": 1211,
+ "obj_sha256": "9d5908613a8532d0ff09448723dca9507b9117ce7adc9783b8c5ead2b6e3f350",
+ "cycles": 121028393,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6093
+  },
+  {
+   "line": 30,
+   "addr": 6093
+  },
+  {
+   "line": 40,
+   "addr": 6175
+  },
+  {
+   "line": 50,
+   "addr": 6214
+  },
+  {
+   "line": 60,
+   "addr": 6244
+  },
+  {
+   "line": 70,
+   "addr": 6256
+  },
+  {
+   "line": 80,
+   "addr": 6322
+  },
+  {
+   "line": 90,
+   "addr": 6385
+  },
+  {
+   "line": 100,
+   "addr": 6441
+  },
+  {
+   "line": 110,
+   "addr": 6477
+  },
+  {
+   "line": 120,
+   "addr": 6483
+  },
+  {
+   "line": 130,
+   "addr": 6502
+  },
+  {
+   "line": 140,
+   "addr": 6596
+  },
+  {
+   "line": 150,
+   "addr": 6659
+  },
+  {
+   "line": 160,
+   "addr": 6754
+  },
+  {
+   "line": 170,
+   "addr": 6759
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S012.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6073 - 7283",
+  "NUMERIC COMMON": "6064 - 6072",
+  "LOCAL VARIABLES": "7284 - 7365",
+  "HIGHEST MEMORY LOCATION": "7365"
+ }
+}

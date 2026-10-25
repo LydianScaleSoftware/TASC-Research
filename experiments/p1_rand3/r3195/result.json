@@ -1,0 +1,114 @@
+{
+ "id": "r3195",
+ "key": "2e7e1d9706872aea",
+ "source": "10 DIM B%(11),A$(11,3),D(10)\n20 C=(Y%)\n30 IF (INT(C%)) THEN 10:D(LEN(M$+A$(X%,7)+MID$(A$,Z)))=ASC(CHR$(A)+C$+\"HI\")\n40 FOR A=(NOT ((24*-531))) TO (Y% AND RND(1.5)=-C) STEP (NOT Y%):AB=Z%\n50 PRINT:PRINT:GOSUB 140\n60 PRINT -((B=((Z%>X%))));C$,LEN(CHR$(1))<=ATN(B>=0);:COLOR=-127\n70 NEXT:PRINT:C$=CHR$(B)+C$\n80 IF (-Z) THEN DATA 300,\"A,B\":X%=PEEK(NOT ((C% OR C%))):PLOT 0,B\n90 READ M$\n100 A=LEN(MID$(\"X Y\"+\"X Y\",A,32767-B))\n110 FOR Z=(A) TO (ABS(RND(Y%))+-C)\n120 PRINT A$(-((NOT C)),Y%);A$+MID$(LEFT$(\"TASC\",C),D(C%));MID$(A$(Z%,C% OR 255),D(Z%));:GOTO 70\n130 PRINT:GOTO 60\n140 DATA HI,300,-2.5,:Y%=C%<=((886 AND COS(561)))\n150 X%=7:FOR AB=(56) TO (SQR(NOT Z)*((-Z=1228))) STEP (C%):HCOLOR=C%>=SIN(ABS(A))\n160 NEXT AB\n170 IF (SQR(Y%+32767)) THEN 40\n180 C%=255:FOR C=(0) TO (X%)\n190 PRINT\n200 DATA HI,\"A,B\":GOTO 20:C$=LEFT$(A$,A)\n210 PRINT CHR$(LEN(M$));:M$=CHR$(D(Y%))\n",
+ "options": {
+  "library": 16384,
+  "program": 24576,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 24576,
+ "obj_len": 1171,
+ "obj_sha256": "cde39f231338d2d2d4480d5a13efc53f46edba1385bc4dc7f4d940ad77f28ddc",
+ "cycles": 114980801,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 24596
+  },
+  {
+   "line": 20,
+   "addr": 24596
+  },
+  {
+   "line": 30,
+   "addr": 24602
+  },
+  {
+   "line": 40,
+   "addr": 24692
+  },
+  {
+   "line": 50,
+   "addr": 24759
+  },
+  {
+   "line": 60,
+   "addr": 24768
+  },
+  {
+   "line": 70,
+   "addr": 24840
+  },
+  {
+   "line": 80,
+   "addr": 24863
+  },
+  {
+   "line": 90,
+   "addr": 24923
+  },
+  {
+   "line": 100,
+   "addr": 24929
+  },
+  {
+   "line": 110,
+   "addr": 24989
+  },
+  {
+   "line": 120,
+   "addr": 25024
+  },
+  {
+   "line": 130,
+   "addr": 25127
+  },
+  {
+   "line": 140,
+   "addr": 25133
+  },
+  {
+   "line": 150,
+   "addr": 25173
+  },
+  {
+   "line": 160,
+   "addr": 25241
+  },
+  {
+   "line": 170,
+   "addr": 25246
+  },
+  {
+   "line": 180,
+   "addr": 25262
+  },
+  {
+   "line": 190,
+   "addr": 25285
+  },
+  {
+   "line": 200,
+   "addr": 25288
+  },
+  {
+   "line": 210,
+   "addr": 25316
+  }
+ ],
+ "info": {
+  "LIBRARY": "16384 - 20396",
+  "OBJECT FILE": "S008.OBJ",
+  "PROGRAM": "24576 - 25746",
+  "LOCAL VARIABLES": "25747 - 25969",
+  "HIGHEST MEMORY LOCATION": "25969"
+ }
+}

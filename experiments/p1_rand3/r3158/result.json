@@ -1,0 +1,82 @@
+{
+ "id": "r3158",
+ "key": "0daf4f41bb69770f",
+ "source": "10 REM! INTEGER I,K\n20 DIM B(12)\n30 DEF FN F(X)=A\n40 FOR A=(I) TO (FN F(40)) STEP (A)\n50 SCALE=AB<>B%\n60 A=Y:Q1=VAL(LEFT$(\"HI\",B%))^1.5\n70 B$=W$:Q1=TAN(XY-3>XY%):A=Y<((40>=ATN(B(W%))))\n80 NEXT A:ON Q1*((B(Q1%)-2)) GOTO 130:W%=-127\n90 ON 613 GOTO 60,30:B$=W$\n100 PRINT B$+\"\",\"123\";\n110 READ W%:POKE PEEK(AB),SQR(350)>((877>=2))=ATN(Q1%):POKE -LOG(Q1<=Q1%),EXP(B%)\n120 GOSUB 70:PRINT\n130 B(((32767=XY%))*-Q1>=B(B(XY%)+W%))=.001\n",
+ "options": {
+  "library": null,
+  "program": "HGR1",
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 16384,
+ "obj_len": 719,
+ "obj_sha256": "3dd33b1da281cd92ea3387c95b87a4874dea3a1ef675d4c01d0a60eb421f7a75",
+ "cycles": 93611755,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 16404
+  },
+  {
+   "line": 20,
+   "addr": 16404
+  },
+  {
+   "line": 30,
+   "addr": 16404
+  },
+  {
+   "line": 40,
+   "addr": 16414
+  },
+  {
+   "line": 50,
+   "addr": 16437
+  },
+  {
+   "line": 60,
+   "addr": 16449
+  },
+  {
+   "line": 70,
+   "addr": 16487
+  },
+  {
+   "line": 80,
+   "addr": 16535
+  },
+  {
+   "line": 90,
+   "addr": 16573
+  },
+  {
+   "line": 100,
+   "addr": 16590
+  },
+  {
+   "line": 110,
+   "addr": 16629
+  },
+  {
+   "line": 120,
+   "addr": 16713
+  },
+  {
+   "line": 130,
+   "addr": 16719
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "OBJECT FILE": "S005.OBJ",
+  "PROGRAM": "16384 - 17102",
+  "LOCAL VARIABLES": "17103 - 17218",
+  "HIGHEST MEMORY LOCATION": "17218"
+ }
+}

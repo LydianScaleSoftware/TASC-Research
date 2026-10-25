@@ -1,0 +1,70 @@
+{
+ "id": "r3181",
+ "key": "f6e8222ab52056a9",
+ "source": "10 REM! INTEGER I,J\n20 DIM P%(10)\n30 M=36688\n40 PRINT B%;ASC(AB$)+W/((127-W)),:HTAB ((AB%+N2%>=730))-((C<>7+AB%)):IF (-((C OR 3.14159)) AND M) THEN 10\n50 IF (659) THEN 80\n60 AB$=\"123\"\n70 P%(((B%+AB%<-B%))*XY%)=1000+SGN(100>W):SPEED=P%(3+((XY%<>M)))\n80 AB$=W$:HTAB Z<=314\n90 IF (XY%) THEN 30:AB$=X$:HLIN I^610,(B%) AT 782\n100 J=591\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 602,
+ "obj_sha256": "73ad01ec802d6289ca03f13752285be1fe493e06f7ddca1a4494a38272b20b55",
+ "cycles": 85631989,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6093
+  },
+  {
+   "line": 50,
+   "addr": 6194
+  },
+  {
+   "line": 60,
+   "addr": 6205
+  },
+  {
+   "line": 70,
+   "addr": 6223
+  },
+  {
+   "line": 80,
+   "addr": 6301
+  },
+  {
+   "line": 90,
+   "addr": 6325
+  },
+  {
+   "line": 100,
+   "addr": 6345
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S011.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6665",
+  "LOCAL VARIABLES": "6666 - 6732",
+  "HIGHEST MEMORY LOCATION": "6732"
+ }
+}

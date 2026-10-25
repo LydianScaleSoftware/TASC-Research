@@ -1,0 +1,96 @@
+{
+ "id": "r3050",
+ "key": "e7cf00fb2b8cc13b",
+ "source": "10 REM! DEFCOMMON AB$,Y,C$\n20 DIM D%(12),P$(5)\n30 HTAB 100\n40 IF (LOG(VAL(\"\"+M$))) THEN HTAB 16372:Q1=C%\n50 PRINT D%(127)>=LEN(MID$(AB$,C%,Z%));-M;\"TASC\",:CALL 6029:HCOLOR=982\n60 HTAB COS(ABS(.001+24553)):IF (697) THEN 120\n70 M%=LEN(\"A\")-40000>=((Y*M<Q1)):HCOLOR=256\n80 C%=D%(N2%):ON 255 OR Y GOTO 60\n90 COLOR=M<((Q1>=AB))<M:PRINT ASC(M$)*((Z% AND Y))+N2%;\"TASC\";P$(N2%),\n100 IF (COS(Y AND D%(20))=((M>=19972 AND M))) THEN VTAB ABS(PEEK(X)<C%-5):GOSUB 160\n110 ON 2.25 GOTO 100,90,60,20:Q1=C%:IF (LOG(Y)+((599>C%))*.001) THEN 20\n120 Y=Y:C$=M$+AB$+LEFT$(STR$(N2%),-AB)\n130 C$=\"\":SPEED=INT(AB)-NOT 354<>((32767<>M%)):HCOLOR=TAN(Z%)\n140 PRINT 127,EXP(ASC(AB$) AND AB),:PRINT:TEXT\n150 X=D%(20):GOTO 50\n160 DATA 300:IF (PEEK(M)+N2%^0 OR Z% AND Q1) THEN M=VAL(RIGHT$(AB$,C%))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6073,
+ "obj_len": 1227,
+ "obj_sha256": "98bd4aedb23d1a44f6337473f58fd338e3f7e42a60fbeef5c39ad915e36dfe98",
+ "cycles": 116529536,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6093
+  },
+  {
+   "line": 30,
+   "addr": 6093
+  },
+  {
+   "line": 40,
+   "addr": 6102
+  },
+  {
+   "line": 50,
+   "addr": 6151
+  },
+  {
+   "line": 60,
+   "addr": 6236
+  },
+  {
+   "line": 70,
+   "addr": 6265
+  },
+  {
+   "line": 80,
+   "addr": 6326
+  },
+  {
+   "line": 90,
+   "addr": 6359
+  },
+  {
+   "line": 100,
+   "addr": 6447
+  },
+  {
+   "line": 110,
+   "addr": 6524
+  },
+  {
+   "line": 120,
+   "addr": 6585
+  },
+  {
+   "line": 130,
+   "addr": 6636
+  },
+  {
+   "line": 140,
+   "addr": 6705
+  },
+  {
+   "line": 150,
+   "addr": 6747
+  },
+  {
+   "line": 160,
+   "addr": 6765
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S016.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6073 - 7299",
+  "NUMERIC COMMON": "6064 - 6068",
+  "STRING COMMON": "6069 - 6072",
+  "LOCAL VARIABLES": "7300 - 7376",
+  "HIGHEST MEMORY LOCATION": "7376"
+ }
+}

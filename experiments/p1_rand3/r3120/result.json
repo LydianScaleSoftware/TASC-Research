@@ -1,0 +1,130 @@
+{
+ "id": "r3120",
+ "key": "868a1af664567668",
+ "source": "10 REM! INTEGER K,J\n20 DEF FN F(T)=10\n30 Z$=Z$\n40 DATA ,300:ON .001 GOTO 40,210,210,10\n50 READ N2,Z$:PRINT Z;:DATA X,,X\n60 READ K,Q1:IF (K^ABS(Z)-Z%) THEN Z$=Z$+\"\"\n70 READ K,Z$:COLOR=A%:A%=Z\n80 J=N2 OR 2:AB=TAN(((K<>Y%))-M)\n90 DATA ,,HI,\"A,B\":B$=MID$(W$,-AB<20)\n100 W$=W$:STOP\n110 IF (100-FN F(INT(Z))) THEN 80\n120 GET Z%\n130 Z$=B$\n140 GR\n150 B%=365:HTAB A%:Z=-FN F(N2 OR B%)\n160 B%=VAL(\"TASC\"):J=PEEK(Z%)\n170 FOR Z=(Y%^SQR(0)) TO (Y%)\n180 PLOT B%^ATN(Z),Y%:Q1=((AB OR 5)) AND ((N2*Z AND M))\n190 POKE 24,FN F(Q1)^464\n200 READ Z\n210 N2=3>J\n220 ON AB GOTO 10,20,220,90\n230 Z%=B%=-M:M=FN F(((B%>M))-K):J=AB\n240 IF (K) THEN PRINT FN F(-39<Z);:PRINT:PLOT 0>=((2=B%>85)),M\n250 W$=B$:FOR M=(-((NOT Z))) TO (AB>Q1*100)\n",
+ "options": {
+  "library": null,
+  "program": "HGR1",
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 16384,
+ "obj_len": 1026,
+ "obj_sha256": "dbb3187c0c883188fcea776ff5fd4497a3291c4ca0a4254193b3db61dca1ae90",
+ "cycles": 111803223,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 16404
+  },
+  {
+   "line": 20,
+   "addr": 16404
+  },
+  {
+   "line": 30,
+   "addr": 16414
+  },
+  {
+   "line": 40,
+   "addr": 16420
+  },
+  {
+   "line": 50,
+   "addr": 16446
+  },
+  {
+   "line": 60,
+   "addr": 16475
+  },
+  {
+   "line": 70,
+   "addr": 16536
+  },
+  {
+   "line": 80,
+   "addr": 16560
+  },
+  {
+   "line": 90,
+   "addr": 16596
+  },
+  {
+   "line": 100,
+   "addr": 16632
+  },
+  {
+   "line": 110,
+   "addr": 16641
+  },
+  {
+   "line": 120,
+   "addr": 16660
+  },
+  {
+   "line": 130,
+   "addr": 16666
+  },
+  {
+   "line": 140,
+   "addr": 16672
+  },
+  {
+   "line": 150,
+   "addr": 16675
+  },
+  {
+   "line": 160,
+   "addr": 16705
+  },
+  {
+   "line": 170,
+   "addr": 16733
+  },
+  {
+   "line": 180,
+   "addr": 16759
+  },
+  {
+   "line": 190,
+   "addr": 16813
+  },
+  {
+   "line": 200,
+   "addr": 16837
+  },
+  {
+   "line": 210,
+   "addr": 16843
+  },
+  {
+   "line": 220,
+   "addr": 16855
+  },
+  {
+   "line": 230,
+   "addr": 16870
+  },
+  {
+   "line": 240,
+   "addr": 16915
+  },
+  {
+   "line": 250,
+   "addr": 16977
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "OBJECT FILE": "S001.OBJ",
+  "PROGRAM": "16384 - 17409",
+  "LOCAL VARIABLES": "17410 - 17462",
+  "HIGHEST MEMORY LOCATION": "17462"
+ }
+}

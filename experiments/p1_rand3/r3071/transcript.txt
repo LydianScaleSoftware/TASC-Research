@@ -1,0 +1,126 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S003
+
+
+OBJECT CODE FILE:
+(DEFAULT S003.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION?
+
+*****BEGINNING PASS 1
+
+
+
+10
+RECOGNIZED  REM ! INTEGER K
+20  DIM A%(9,8)
+30 W$ =  MID$ (X$,7) +  MID$ ("123",M) +
+  LEFT$ (X$ + "TASC",Q1 <  = X):A%(A%,N2
+%) = 3
+40  READ XY: PRINT XY < M,Y$;(256 * B%);
+
+50  IF ( SQR (13330 / 43323) = N2% * 331
+43 * ((1.5 - 7191))) THEN 50
+60  READ X$,X$:N2% =  LEN (Y$) OR  LOG (
+20) ^ Q1
+70  VTAB  VAL (X$) < 728 AND A%(N2%,705)
+ * 32767 - A%: PRINT "HI" + Y$;M;:A =  T
+AN ( - 1)
+80 A =  - A%: READ X: HLIN X,(3) AT 24 A
+ND (( NOT M AND X))
+90 A%( - 1 - XY,(( ATN (878) - ((X% OR Q
+1)))) / ((((10 < X)) - Q1))) = 800
+100  PRINT
+110  GOSUB 280
+120  VTAB 40000 - B% + M / X%: IF (674)
+THEN M = Q1 + A
+130  IF (A >  =  - 3 -  COS (N2%)) THEN
+230:K =  SGN (Q1) ^ ((A * 5)) >  = A%
+140  CALL N2%: READ A%,M:X$ = "A"
+150  COLOR=  ABS (XY)
+160  COLOR= X% * B%(N2%,B%) <  = ((32767
+ = 2)) >  = 127:W$ = W$: COLOR=  ASC (Y$
+)
+170  PRINT
+180  DATA 1,HI,: ON 174 -  - 18124 GOTO
+180
+190  IF (A%( ASC ( STR$ (A)),A%)) THEN 1
+20
+200  CALL  NOT ((641 ^ A% >  = 271)): SP
+EED= B%:A%( COS (B%((X%),2)), NOT ( SGN
+(.5))) =  LOG (40 >  =  - B%)
+210 B% = X% ^ ((X% + (A))):K = B%(A%,N2%
+)
+220 M =  - 701
+230 B% = (( TAN (A) AND B%)) < 256
+240  GOTO 220
+250 N2% = 881: HLIN B%(A%, VAL ("TASC")
+- ((1 > B%))),(M -  LEN (W$) /  - 255) A
+T Q1
+260 B%(A%,X%) = K < ((Q1 / A% AND 3 * A)
+): HTAB  - ((N2% * A)) - A%( VAL (Y$), A
+SC ("A")): HCOLOR= ((135 < 256)) * ((Q1
+* 256)) >  = Q1
+270 Q1 = A%(((N2% + B%(.001,X%))) * ((X%
+ * Q1)), COS (K AND 597)): ON M / ((Q1 >
+  = B%)) GOTO 160,80,160,200
+280  CALL  - (X) ^ A: PRINT ((N2% >  = X
+Y)) / ((A% - A)) <  = A%( VAL (X$),0.1 -
+ X);
+
+
+
+*****BEGINNING PASS 2
+
+
+.....
+
+
+*****CODE GENERATION COMPLETE
+
+
+COMPILATION INFORMATION AND LINE NUMBER
+REFERENCE TABLE? YES
+
+
+SOURCE FILE: S003
+OBJECT FILE: S003.OBJ
+LIBRARY OCCUPIES 2051 - 6063
+PROGRAM OCCUPIES 6064 - 8138
+
+NO COMMON BLOCK
+
+LOCAL VARIABLES OCCUPY 8139 - 8615
+
+HIGHEST MEMORY LOCATION: 8615
+
+
+LINE# ADDR   LINE# ADDR   LINE# ADDR
+
+10    6084   20    6084   30    6084
+40    6184   50    6217   60    6258
+70    6306   80    6398   90    6449
+100   6536   110   6539   120   6542
+130   6580   140   6639   150   6670
+160   6679   170   6736   180   6739
+190   6766   200   6795   210   6887
+220   6917   230   6929   240   6953
+250   6956   260   7038   270   7168
+280   7255
+
+*****COMPILATION COMPLETE
+
+
+]?

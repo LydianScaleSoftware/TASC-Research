@@ -1,0 +1,66 @@
+{
+ "id": "r3089",
+ "key": "4ef7b3ff89623d10",
+ "source": "10 DIM D(4,5),A%(7,5)\n20 PRINT LEFT$(\"HI\",M%/((W%-W%))),RND(SQR(XY)+XY);:AB$=MID$(\"A\",-COS(A))\n30 GOSUB 90\n40 PRINT A%(19121,3.14159)-NOT A%(Q1%,26736)=A;RND(XY%)+ATN(Q1%);:GOSUB 90:PRINT \"123\",\n50 XY$=\"X Y\":AB$=AB$+Y$+XY$\n60 ON SQR(20 AND -B) GOTO 30,50,40:B=1000\n70 HLIN ((2.25))-XY,(Q1%) AT M%\n80 PRINT Y$+Y$;\n90 SCALE=INT(TAN(1.5))*LEN(RIGHT$(XY$,3)):W=508/LEN(AB$) OR C:GOTO 10\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 659,
+ "obj_sha256": "afc7e336e9da51c5f79b98f31adb19a75c471407121631b46eac61b1921781c6",
+ "cycles": 83714116,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6162
+  },
+  {
+   "line": 40,
+   "addr": 6165
+  },
+  {
+   "line": 50,
+   "addr": 6255
+  },
+  {
+   "line": 60,
+   "addr": 6297
+  },
+  {
+   "line": 70,
+   "addr": 6337
+  },
+  {
+   "line": 80,
+   "addr": 6361
+  },
+  {
+   "line": 90,
+   "addr": 6379
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S004.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6722",
+  "LOCAL VARIABLES": "6723 - 7014",
+  "HIGHEST MEMORY LOCATION": "7014"
+ }
+}

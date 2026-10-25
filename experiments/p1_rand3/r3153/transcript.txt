@@ -1,0 +1,149 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S000
+
+
+OBJECT CODE FILE:
+(DEFAULT S000.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION?
+
+*****BEGINNING PASS 1
+
+
+
+10
+RECOGNIZED  REM ! INTEGER *
+20  DIM P%(5),D%(12)
+30  RESTORE : COLOR=  LEN (AB$): FOR M =
+ ( TAN (D%(Z%) - Q1% OR  - XY%)) TO ( AB
+S (Z))
+40  PRINT  LEFT$ ( MID$ ("HI",M) +  STR$
+ (M),P%(C%));:C$ =  LEFT$ ( LEFT$ ( LEFT
+$ ("123",M),Z),1)
+50 AB$ = "X Y"
+60  PRINT  NOT M + (M) ^ ((C% <  = Z%));
+ MID$ ( MID$ (AB$,XY% < A,P%(40166)),Q1%
+ <  LOG (C)),
+70 C$ =  STR$ ((Q1)): ON A < D%( - P%(0.
+1)) GOSUB 220,200,270: DATA 300,X,1
+80  PRINT AB$,M,.5 <  > 1939;
+90 B%(Q1% * 256,18915) = C >  = Z:B$ = B
+$
+100  ON  ATN (C% + ((Z% OR B%(A,XY%))))
+GOTO 100,10,110
+110  GOTO 60
+
+*****WARNING
+LINE NUMBER 110
+IGNORED
+
+: GOTO 260
+
+
+:XY% = XY% + Z
+120  ON Q1% GOTO 300,40:Z =  ASC ( CHR$
+(Z))
+130  VTAB XY% > ((M >  = Q1% <  = P%(Z%)
+))
+140 B$ = "":P%( RND (Q1 AND 256) OR 40)
+= A - P%(C + 404): FOR A = ( COS (B%(1.5
+,A))) TO (0 <  = C) STEP (5)
+150  NEXT A:Z% = 1
+160  READ Q1:D%(1000) = (32767) - M <  =
+ 255: PRINT Q1%;
+170  PRINT 5;: IF ( ATN (5 < XY%) <  = X
+Y%) THEN  IF (Z) THEN  IF (Q1) THEN C$ =
+  RIGHT$ (AB$,1000) +  LEFT$ ( RIGHT$ (B
+$,Q1),Q1% - 11969)
+180  IF (A) THEN Q1% = C% <  > 943:Z% =
+ LEN (B$)
+190  IF ( TAN (32767 - 100 AND Z%)) THEN
+  PRINT C;Z;B%(Z <  = A, SQR (Z%)) <  =
+Q1 ^  - D%(5),
+200 C$ =  MID$ (C$,40000 AND 100 = 32767
+,40): READ M:Z = A
+210 Q1 = 100: PRINT P%( SGN (D%(C%)) AND
+ 127 * Z);255,B$;
+220 Q1 =  NOT (( - 13591)) < 20: DATA -2
+.5,"A,B",-2.5,300
+230 Q1 = (Z +  - Z)
+240  HCOLOR= C: IF (P%(1000 + 127) OR B%
+(Q1%,1) / D%(Q1%) - XY% / Z) THEN  PRINT
+
+250  FOR C = (Q1% / ((P%(Z%) - C > C - Z
+))) TO (Q1 - ((Z + Z))) STEP (A):Z = C <
+ 127 - D%(Q1%) + ((49152 >  = C%))
+260 D%(Z%) =  - (( - Z%)) OR P%(C%) < Q1
+% < Z:XY% =  SGN (1.5) <  >  INT (C% <
+= 7767): IF (Z) THEN  HLIN  LEN (C$ + B$
+),(P%( ABS (Z + XY%))) AT 0
+270 AB$ =  CHR$ (Z * C%) + B$
+280  IF (1000) THEN  PRINT
+290  IF ( VAL (B$) + ((A < M)) >  = Z) T
+HEN 220
+
+*****WARNING
+LINE NUMBER 290
+IGNORED
+
+: GOSUB 210
+
+
+300 C$ = AB$
+
+
+
+*****BEGINNING PASS 2
+
+
+......
+
+
+*****CODE GENERATION COMPLETE
+
+
+COMPILATION INFORMATION AND LINE NUMBER
+REFERENCE TABLE? YES
+
+
+SOURCE FILE: S000
+OBJECT FILE: S000.OBJ
+LIBRARY OCCUPIES 2051 - 6063
+PROGRAM OCCUPIES 6064 - 8070
+
+NO COMMON BLOCK
+
+LOCAL VARIABLES OCCUPY 8071 - 8385
+
+HIGHEST MEMORY LOCATION: 8385
+
+
+LINE# ADDR   LINE# ADDR   LINE# ADDR
+
+10    6084   20    6084   30    6084
+40    6149   50    6226   60    6241
+70    6331   80    6385   90    6415
+100   6457   110   6494   120   6506
+130   6529   140   6565   150   6666
+160   6677   170   6713   180   6797
+190   6826   200   6926   210   6968
+220   7025   230   7071   240   7083
+250   7157   260   7246   270   7380
+280   7398   290   7409   300   7441
+
+*****COMPILATION COMPLETE
+
+
+]?

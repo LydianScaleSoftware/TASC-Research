@@ -1,0 +1,138 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S005
+
+
+OBJECT CODE FILE:
+(DEFAULT S005.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION? NO
+
+COMPILATION LISTING:
+(DEFAULT YES)? YES
+
+PAUSE ON ERRORS:
+(DEFAULT YES)? YES
+
+INTEGER ARITHMETIC:
+(DEFAULT YES)? NO
+
+INTEGER CONSTANTS:
+(DEFAULT YES)? YES
+
+RESUME/DEBUG CODE:
+(DEFAULT NO)? NO
+
+*****BEGINNING PASS 1
+
+
+
+10
+RECOGNIZED  REM ! INTEGER *
+20  DIM D(6)
+30 XY = Y / D(C) AND 1 <  > 228:Y = (C)
+* 18101 > ((Y > AB%))
+40 D(W <  = ((24 >  = W)) ^  LOG (XY)) =
+  SQR (X%) ^  ASC (A$) =  - B%:X% = 4264
+1:X% =  - ((D(C) <  =  - 875))
+50 D(0.1) =  LEN (A$)
+60  CALL ((459 >  = M >  LOG (XY))) *  -
+ (( - D(C%)))
+70  PRINT 46948 * 0, LEFT$ ( CHR$ (M),0)
+; - C%;: ON 2 GOTO 80,160,180,140
+80  ON  - XY GOTO 110,100: HTAB (24) ^
+VAL ( LEFT$ (A$,XY)):A$ = Y$
+90  RETURN
+100  DRAW 40:XY = 33363 <  > (XY <  = W)
+: POKE AB% >  - 255 ^  - 1000, - 40 = ((
+C% >  = M)) >  = ((B% < ((C AND AB%))))
+110  WAIT XY,(Y): PLOT W * (((C%) AND  A
+TN (D(X%)))), - ((XY * Y >  - C)): PRINT
+
+120 B% = D(XY >  = W) <  = C:W$ =  MID$
+("HI",1E3)
+130  GOSUB 220: SPEED=  NOT C - 208 + D(
+X% ^ C%):D(C) =  PEEK (Y) < (( NOT X% =
+((177 = Y))))
+140  IF (B% + XY) THEN  PRINT "TASC";: I
+F (((363)) < ((AB% - B% = C%))) THEN 80
+150 XY = AB%:X% =  - D(X% - C): ON  VAL
+( MID$ ("",1000)) GOTO 130,50,30
+160  PRINT 407; MID$ (Y$,Y,46961); SQR (
+C),:B% = .5:Y$ = "123"
+170  ON X% ^ B% GOTO 150: IF ( ABS ( SIN
+ (AB%)) / 24) THEN  PRINT  LEFT$ (A$,XY)
+;"TASC";
+180  PRINT (C);2,W$;: FOR Y = ( ASC ("HI
+" + Y$)) TO (127)
+190 A$ =  MID$ ( CHR$ (X%),C% * X% <  =
+W * Y, - 439 / ((B% AND C%))): FOR W = (
+ - C) TO ( ATN (127) +  COS ( NOT B%)) S
+TEP (689): GOTO 90
+200  PRINT  MID$ (A$, - ((XY AND W)), -
+((127 - M)));Y$, EXP (B%);: PRINT ((20 O
+R (D(X%)))) +  PEEK (C% ^ W),: READ A$
+210 B% =  - ((Y >  = D(C))): PLOT B%,C:
+PRINT XY <  > XY, PEEK (0) = ((Y > ((XY
+< Y))));
+220  READ Y$,C:D(X%) = (( SGN (900) OR B
+%)) = X%:Y =  COS (X%)
+230  PRINT 56 * ((W <  =  VAL (W$)));:W
+= 32767 * 118
+240 XY = D(225 - 2) AND  - 1000 >  = XY
++ X%: READ C%,XY: PRINT 2,AB% <  > ((W >
+ C < C%));
+
+
+
+*****BEGINNING PASS 2
+
+
+......
+
+
+*****CODE GENERATION COMPLETE
+
+
+COMPILATION INFORMATION AND LINE NUMBER
+REFERENCE TABLE? YES
+
+
+SOURCE FILE: S005
+OBJECT FILE: S005.OBJ
+LIBRARY OCCUPIES 2051 - 6063
+PROGRAM OCCUPIES 6064 - 8257
+
+NO COMMON BLOCK
+
+LOCAL VARIABLES OCCUPY 8258 - 8307
+
+HIGHEST MEMORY LOCATION: 8307
+
+
+LINE# ADDR   LINE# ADDR   LINE# ADDR
+
+10    6084   20    6084   30    6084
+40    6144   50    6258   60    6276
+70    6324   80    6375   90    6416
+100   6417   110   6525   120   6594
+130   6638   140   6734   150   6786
+160   6841   170   6898   180   6966
+190   7024   200   7140   210   7254
+220   7332   230   7386   240   7413
+
+*****COMPILATION COMPLETE
+
+
+]?

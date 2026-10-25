@@ -1,0 +1,84 @@
+{
+ "id": "r3194",
+ "key": "12b935ff4bbadd22",
+ "source": "10 REM! INTEGER I\n20 REM! DEFCOMMON C$,C%,M\n30 W=PEEK(B)\n40 HLIN C%+W,(Z) AT (Z/1)>=10:AB%=W%/((W%=130))<I/40:W=0.1\n50 RETURN:IF (-((B>=16148))) THEN Z=AB%<NOT 1E3*7:I=-((ASC(\"TASC\")^AB))\n60 IF (2.25) THEN SPEED=1.5 AND LEN(C$) AND SQR(W%<=32767):IF (300) THEN 20\n70 IF (I>=W%=(Z)>=((2<>7))*((B*W%))) THEN C%=SQR(AB%):C$=C$+C$\n80 IF (LEN(\"X Y\"+\"TASC\")-XY%) THEN DATA HI,\"A,B\",HI,HI\n90 DATA \"A,B\",1,\"A,B\":IF (ABS(LOG(5))) THEN 50:GOSUB 120\n100 AB%=NOT AB\n110 PRINT\n120 HCOLOR=3.14159\n130 W=Z:NORMAL:C%=B\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6073,
+ "obj_len": 701,
+ "obj_sha256": "45d72bbcab9a12380ebe2767b75894f7c0ad6f6d0568d1ec851523d2a17e3163",
+ "cycles": 95035295,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6093
+  },
+  {
+   "line": 40,
+   "addr": 6105
+  },
+  {
+   "line": 50,
+   "addr": 6171
+  },
+  {
+   "line": 60,
+   "addr": 6206
+  },
+  {
+   "line": 70,
+   "addr": 6258
+  },
+  {
+   "line": 80,
+   "addr": 6332
+  },
+  {
+   "line": 90,
+   "addr": 6403
+  },
+  {
+   "line": 100,
+   "addr": 6435
+  },
+  {
+   "line": 110,
+   "addr": 6444
+  },
+  {
+   "line": 120,
+   "addr": 6447
+  },
+  {
+   "line": 130,
+   "addr": 6453
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S007.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6073 - 6773",
+  "NUMERIC COMMON": "6064 - 6070",
+  "STRING COMMON": "6071 - 6072",
+  "LOCAL VARIABLES": "6774 - 6811",
+  "HIGHEST MEMORY LOCATION": "6811"
+ }
+}

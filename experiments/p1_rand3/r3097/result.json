@@ -1,0 +1,83 @@
+{
+ "id": "r3097",
+ "key": "e53bcee88f62d5f0",
+ "source": "10 REM! INTEGER J,K\n20 REM! DEFCOMMON Q1,AB,Z%\n30 DEF FN F(T)=INT(7)\n40 M%=Z%:AB=Q1\n50 Z%=FN F(-((N2>40)))\n60 IF (C%) THEN 90:AB=M%>=-((-K))\n70 FOR K=(Z%>C) TO (LOG(FN F(N2))):COLOR=J:HLIN FN F(642+C),(NOT ((Q1 AND AB))>J) AT ((0 OR 1E3<>J))-N2\n80 SPEED=((C<=C<M%))-Q1:READ K:AB=664>=255\n90 J=J\n100 FOR J=(C/((C+((N2<=0))))) TO (M%)\n110 NORMAL:CALL ATN(K):READ W\n120 IF (7) THEN 40\n130 N2$=C$:ON K GOTO 70,60,50,10\n",
+ "options": {
+  "library": null,
+  "program": "HGR1",
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 16396,
+ "obj_len": 577,
+ "obj_sha256": "e708cf30969e74fcb689fea7224bff0a65c04d2ff4fc5c16da8c15a5f1dda242",
+ "cycles": 91116335,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 16404
+  },
+  {
+   "line": 20,
+   "addr": 16404
+  },
+  {
+   "line": 30,
+   "addr": 16416
+  },
+  {
+   "line": 40,
+   "addr": 16429
+  },
+  {
+   "line": 50,
+   "addr": 16441
+  },
+  {
+   "line": 60,
+   "addr": 16459
+  },
+  {
+   "line": 70,
+   "addr": 16485
+  },
+  {
+   "line": 80,
+   "addr": 16583
+  },
+  {
+   "line": 90,
+   "addr": 16628
+  },
+  {
+   "line": 100,
+   "addr": 16634
+  },
+  {
+   "line": 110,
+   "addr": 16663
+  },
+  {
+   "line": 120,
+   "addr": 16681
+  },
+  {
+   "line": 130,
+   "addr": 16689
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "OBJECT FILE": "S012.OBJ",
+  "PROGRAM": "16396 - 16972",
+  "NUMERIC COMMON": "16384 - 16395",
+  "LOCAL VARIABLES": "16973 - 17004",
+  "HIGHEST MEMORY LOCATION": "17004"
+ }
+}

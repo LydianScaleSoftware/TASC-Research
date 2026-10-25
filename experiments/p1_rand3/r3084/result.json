@@ -1,0 +1,78 @@
+{
+ "id": "r3084",
+ "key": "8b9f190a5308bb94",
+ "source": "10 Q1%=328:Z%=M\n20 C=TAN(B=18982=-AB%)\n30 W=Z%\n40 C=TAN(N2%)\n50 B$=STR$(-C)+\"\"\n60 P(721)=(Z%)*RND(.5)>P(Q1%):Q1$=XY$+Q1$:AB%=TAN(VAL(XY$))\n70 FOR B=(N2%^((M OR C))) TO (2>C) STEP (SQR(COS(40000)))\n80 GOTO 110\n90 M=-Z%<Z%>=P(-Q1):DATA X,HI,1\n100 Q1%=(SQR(NOT N2%))\n110 XY$=RIGHT$(\"A\"+\"\"+RIGHT$(\"TASC\",C),B)\n120 NEXT B\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": 28672,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 600,
+ "obj_sha256": "9b155a152c30cbdf4575486189a224b83c15c0fd3398317a32ada9d6938a1db5",
+ "cycles": 86511319,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6096
+  },
+  {
+   "line": 30,
+   "addr": 6129
+  },
+  {
+   "line": 40,
+   "addr": 6135
+  },
+  {
+   "line": 50,
+   "addr": 6144
+  },
+  {
+   "line": 60,
+   "addr": 6168
+  },
+  {
+   "line": 70,
+   "addr": 6228
+  },
+  {
+   "line": 80,
+   "addr": 6272
+  },
+  {
+   "line": 90,
+   "addr": 6275
+  },
+  {
+   "line": 100,
+   "addr": 6324
+  },
+  {
+   "line": 110,
+   "addr": 6336
+  },
+  {
+   "line": 120,
+   "addr": 6398
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "OBJECT FILE": "S016.OBJ",
+  "PROGRAM": "6064 - 6663",
+  "LOCAL VARIABLES": "28672 - 28772",
+  "HIGHEST MEMORY LOCATION": "28772"
+ }
+}

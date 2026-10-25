@@ -1,0 +1,66 @@
+{
+ "id": "r3149",
+ "key": "5192a47899ba0c2f",
+ "source": "10 DIM B(3,9)\n20 GOTO 50:PRINT Q1;W;:XDRAW 62 AT C%,(SQR(EXP(Y)))\n30 GOTO 20\n40 FOR Z=(PEEK(ATN(B(0.1,X%))=24)) TO (Q1)\n50 IF (LEN(P$(32767))) THEN Q1=3\n60 GOSUB 70:ON 405 GOSUB 50\n70 N2=W+((((W>=C%))+((39>Y)))):IF (-((W<=N2%))>=((Y<=Q1-1))) THEN PLOT N2,C%:PRINT CHR$(-Y);X$;40;\n80 RESTORE\n90 READ B%:IF (0.1/((N2%>Q1>Q1))) THEN POKE LOG(B(20,N2%)),100:HCOLOR=C%-B%<-Z-N2%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 625,
+ "obj_sha256": "75caf7bb0b3f1566f4c0d00e1e3e684b642bca27b7df58fc5bf69b494074a9d0",
+ "cycles": 90379137,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6087
+  },
+  {
+   "line": 40,
+   "addr": 6090
+  },
+  {
+   "line": 50,
+   "addr": 6131
+  },
+  {
+   "line": 60,
+   "addr": 6158
+  },
+  {
+   "line": 70,
+   "addr": 6170
+  },
+  {
+   "line": 80,
+   "addr": 6274
+  },
+  {
+   "line": 90,
+   "addr": 6277
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S013.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6688",
+  "LOCAL VARIABLES": "6689 - 6952",
+  "HIGHEST MEMORY LOCATION": "6952"
+ }
+}

@@ -1,0 +1,90 @@
+{
+ "id": "r3173",
+ "key": "b32b43e60a5ed805",
+ "source": "10 REM! INTEGER I,K\n20 Z$=N2$+MID$(CHR$(N2%),127^M)\n30 PRINT 493,LEFT$(C$+C$+MID$(\"X Y\",.001,K),NOT VAL(N2$)),C$,\n40 Z$=LEFT$(\"HI\",M%)\n50 Z$=\"HI\":IF (I<=10+A+((65535=N2%))) THEN RETURN:GOTO 30\n60 A%=A^C*ASC(\"HI\")>NOT LEN(\"A\"):COLOR=M\n70 SPEED=NOT ((((I AND A%))<>I)):RETURN\n80 HOME:PRINT N2$,Z$,M%,\n90 DATA -2.5,-2.5:DATA X,X,HI,HI\n100 M=-(C=21676):PRINT\n110 CALL M^((((M%+N2%))*((C<>A)))):PRINT\n120 IF (100) THEN 20\n130 FOR Y=(A) TO (((((255 AND 49152))+Y/M))/((C%>=A% OR B)))\n140 FOR C=(I) TO (NOT ((((A OR C%))>=K))):PRINT B,N2%;A;\n150 N2%=A%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 853,
+ "obj_sha256": "54727ae78477380f3507a01facc3392834df4812f689e66c490ce95cf37a2ddb",
+ "cycles": 100275775,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6111
+  },
+  {
+   "line": 40,
+   "addr": 6200
+  },
+  {
+   "line": 50,
+   "addr": 6220
+  },
+  {
+   "line": 60,
+   "addr": 6264
+  },
+  {
+   "line": 70,
+   "addr": 6334
+  },
+  {
+   "line": 80,
+   "addr": 6359
+  },
+  {
+   "line": 90,
+   "addr": 6389
+  },
+  {
+   "line": 100,
+   "addr": 6421
+  },
+  {
+   "line": 110,
+   "addr": 6439
+  },
+  {
+   "line": 120,
+   "addr": 6472
+  },
+  {
+   "line": 130,
+   "addr": 6480
+  },
+  {
+   "line": 140,
+   "addr": 6539
+  },
+  {
+   "line": 150,
+   "addr": 6592
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S003.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6916",
+  "LOCAL VARIABLES": "6917 - 6968",
+  "HIGHEST MEMORY LOCATION": "6968"
+ }
+}

@@ -1,0 +1,183 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S013
+
+
+OBJECT CODE FILE:
+(DEFAULT S013.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION? NO
+
+COMPILATION LISTING:
+(DEFAULT YES)? YES
+
+PAUSE ON ERRORS:
+(DEFAULT YES)? YES
+
+INTEGER ARITHMETIC:
+(DEFAULT YES)? NO
+
+INTEGER CONSTANTS:
+(DEFAULT YES)? YES
+
+RESUME/DEBUG CODE:
+(DEFAULT NO)? NO
+
+*****BEGINNING PASS 1
+
+
+
+10  DIM A(2,5)
+20  IF ( NOT ((C >  = N2)) -  - B%(W%,W%
+) ^ ((N2 = C))) THEN 40
+
+*****WARNING
+LINE NUMBER 20
+IGNORED
+
+: READ Q1%,AB$
+
+
+
+
+*****WARNING
+LINE NUMBER 20
+IGNORED
+
+: IF (Y%) THEN 70
+
+
+30  GET Q1$: IF ( - X) THEN 190:D(M < 0.
+1) = Y% / M
+40  IF (C - (( NOT N2 >  = M - W%))) THE
+N X = 33507: POKE W%,914 >  = C
+50  PRINT B%(B% <  = 947, INT (A(B%,8238
+))) <  EXP (40) * W% ^ C;W;:AB$ =  CHR$
+( - 10)
+60 N2 =  - Q1% -  - (B%(39,7)): IF (W%)
+THEN 290
+70 Q1% = 236: READ Q1%
+80  PRINT W%,: PRINT "TASC"; STR$ (N2 <
+ >  - N2);
+90  END :AB$ =  RIGHT$ ( STR$ (Q1% = B%(
+255,Q1%)),Q1%)
+
+*****WARNING
+LINE NUMBER 90
+IGNORED
+
+: PRINT X;C =  ABS (409);((2 ^ Q1%)),
+
+
+100 A(Q1%, NOT (((127) * ((C / 2))))) =
+M: POKE 1,B%(B%,282) * ((127 * A(.001,7)
+)) * ((Y% -  - N2)): GOSUB 230
+110 B$ = B$ + Q1$ + "TASC" +  CHR$ (D(B%
+)):B% = N2 <  > 748 ^  EXP (Y%): GOSUB 1
+60
+120  READ Q1$,Q1%: POKE Q1%,32767
+130  GOSUB 80: GOSUB 250:W = 40000
+140 W = W%:B%( SQR (Q1% OR W <  > N2),25
+5) =  LEN (AB$ + Q1$ + AB$):C = 32767 =
+858
+150 B$ = AB$: IF (B%(Q1%,Y% + X) >  = Y%
+) THEN  DATA X,,X: READ B%,Q1%
+160 Q1$ = Q1$: IF (((Q1% >  = 0)) *  - 3
+9 >  VAL (B$)) THEN  HLIN  PEEK (N2 ^ .0
+01 / ((Y% - Y%))),( - (( ATN (2) < Y%)))
+ AT  -  LEN (Q1$) =  SQR (5): IF (Y%) TH
+EN  FOR M = ( LEN ("123")) TO ( - (( COS
+ (A(W%,B%)) + W)))
+170 B% = B% OR ((0 >  = 5)) + Y%
+180  PRINT N2,: SPEED= 256 +  SGN (Y% OR
+ 3)
+190 Y% = ( VAL ("TASC")) OR ((X OR 1000)
+) +  - 20
+200  POKE  LOG (N2) =  LOG (Y%) ^ X,D( E
+XP (Y% * N2)):A(W% <  = W%,W - ((27447 +
+ M)) OR ((N2 + B% OR (Y%)))) =  INT ( -
+M / ((989 * 127)))
+210  IF (M) THEN 140
+220  HTAB 24 <  >  ABS (255) =  INT (X):
+B$ = ""
+230  DATA "A,B",X,:Q1$ = Q1$:B$ =  LEFT$
+ ("123",B%) + B$ +  LEFT$ (B$ + "X Y", A
+BS (D(W%)))
+240  CALL B%(288 ^ 24 ^ ((B% <  = A(B%,B
+%))), - B%)
+250 D(W%) =  SQR (Y%) / ((((Q1% AND D(48
+02))) +  INT (W))): HLIN 255,( - 0) AT (
+(B% OR X)) /  - W - ((39 >  = 708 >  = W
+%)): FOR X = (Y%) TO ( COS ( -  SGN (311
+)))
+260  IF ( NOT  TAN (Q1% ^ X)) THEN  RETU
+RN :D( - ((N2 ^ B%(W%,Y%))) = 39) = .001
+:N2 =  LOG (610) > 20
+270  PRINT AB$,"HI" +  LEFT$ ( RIGHT$ (A
+B$,255), VAL (Q1$));:W% =  PEEK (10): HL
+IN ((B%(B%,B%) AND W)) + B% / 127 < ((68
+0 / N2 <  = C)),(W%) AT  VAL (B$) >  =
+COS (N2 OR M)
+280  DATA -2.5: PRINT  MID$ ("X Y" + B$
++  STR$ (B%),D(Q1%) - ((Y% + 320)),B%),2
+56 >  =  - ((1.5 * B%)),Y% + N2,
+290  POKE 473 + A(256,Q1%),(7 / Y% =  AS
+C (B$)): PLOT A( NOT W >  = 127 - 40,(Y%
+) ^ ((W% <  = B%))),M:W% = 10 > .5 / W *
+  - 1E3
+
+
+
+*****BEGINNING PASS 2
+
+
+........
+
+
+*****CODE GENERATION COMPLETE
+
+
+COMPILATION INFORMATION AND LINE NUMBER
+REFERENCE TABLE? YES
+
+
+SOURCE FILE: S013
+OBJECT FILE: S013.OBJ
+LIBRARY OCCUPIES 2051 - 6063
+PROGRAM OCCUPIES 6064 - 8988
+
+NO COMMON BLOCK
+
+LOCAL VARIABLES OCCUPY 8989 - 9428
+
+HIGHEST MEMORY LOCATION: 9428
+
+
+LINE# ADDR   LINE# ADDR   LINE# ADDR
+
+10    6084   20    6084   30    6145
+40    6188   50    6243   60    6333
+70    6374   80    6386   90    6429
+100   6462   110   6554   120   6627
+130   6651   140   6663   150   6741
+160   6796   170   6973   180   6997
+190   7027   200   7076   210   7208
+220   7216   230   7258   240   7346
+250   7406   260   7543   270   7620
+280   7769   290   7882
+
+*****COMPILATION COMPLETE
+
+
+]?

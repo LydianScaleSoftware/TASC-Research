@@ -1,0 +1,86 @@
+{
+ "id": "r3008",
+ "key": "7f325e44c58da32c",
+ "source": "10 DIM P(9,1)\n20 A=AB:A=A:FOR C=(5) TO (SQR((40531)/((XY AND 24))))\n30 B%(W%,RND(XY))=C/B%(49152,24) AND -Z%\n40 DATA 300:NEXT C:FOR XY=(AB) TO (M%)\n50 C=Y:P(256+((((Z%>7))+B%)),M%)=M%:B$=C$\n60 IF (M%) THEN PRINT\n70 IF (SQR(B%(C AND 5,40))) THEN 10\n80 READ B%:CALL Z%*(20)*SQR(Z%<=XY)\n90 A=((M% AND 34889))<>ASC(C$+\"TASC\"):P(C/((2.25<=AB)),NOT B%(SGN(Y),127>=256))=100:READ XY,Z$\n100 A$(W%)=Z$:C$=RIGHT$(B$,RND(3)):M%=20\n110 M%=((((W%+127))*-Z%))^((127=((XY>=B%))))\n120 C$=A$(0)+MID$(\"123\",B%(7,Z%))+A$(M%):B$=CHR$(AB)\n130 NEXT XY\n140 END:HCOLOR=W%=Y<=24:C=AB\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1096,
+ "obj_sha256": "c4597b684e3a3df5aebbf54e02bb1e6b2a2d8c099cd80ea5454aa08b06f3311b",
+ "cycles": 107039850,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6134
+  },
+  {
+   "line": 40,
+   "addr": 6194
+  },
+  {
+   "line": 50,
+   "addr": 6232
+  },
+  {
+   "line": 60,
+   "addr": 6292
+  },
+  {
+   "line": 70,
+   "addr": 6306
+  },
+  {
+   "line": 80,
+   "addr": 6349
+  },
+  {
+   "line": 90,
+   "addr": 6388
+  },
+  {
+   "line": 100,
+   "addr": 6527
+  },
+  {
+   "line": 110,
+   "addr": 6569
+  },
+  {
+   "line": 120,
+   "addr": 6617
+  },
+  {
+   "line": 130,
+   "addr": 6692
+  },
+  {
+   "line": 140,
+   "addr": 6700
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S008.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7159",
+  "LOCAL VARIABLES": "7160 - 7576",
+  "HIGHEST MEMORY LOCATION": "7576"
+ }
+}

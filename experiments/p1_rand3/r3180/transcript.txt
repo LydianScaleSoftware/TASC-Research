@@ -1,0 +1,160 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S010
+
+
+OBJECT CODE FILE:
+(DEFAULT S010.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION? NO
+
+COMPILATION LISTING:
+(DEFAULT YES)? YES
+
+PAUSE ON ERRORS:
+(DEFAULT YES)? YES
+
+INTEGER ARITHMETIC:
+(DEFAULT YES)? NO
+
+INTEGER CONSTANTS:
+(DEFAULT YES)? YES
+
+RESUME/DEBUG CODE:
+(DEFAULT NO)? YES
+
+*****BEGINNING PASS 1
+
+
+
+10
+RECOGNIZED  REM ! INTEGER K
+20  DIM A(11),B$(2,2)
+30 AB = K:A% =  - 1E3: VTAB (B%)
+40 W = 3
+50  PRINT  RIGHT$ ( LEFT$ (Q1$,2),K); VA
+L ( MID$ (Q1$,.001)) - (B%); LEFT$ ("X Y
+", COS (A% * M%)),
+60  POKE .001 ^ ((127 < A(K) <  > A / A%
+)),(( INT (39) <  > ((7 < 9392)))) - K
+70  DATA X:Z% = A( LEN (X$ + B$(Z%,K))):
+A(1.5) = A
+80 W =  INT (Z%)
+90  GOSUB 290: GOSUB 240: IF ((31518)) T
+HEN  PRINT 1E3,
+100 AB = N2:Y$ = "TASC"
+110  PRINT  LEN (Y$) * Z% =  LOG (Z% = B
+%);((42186)); VAL ( RIGHT$ (Q1$,(501)));
+: IF ( VAL ("") * W ^ ((A% <  = 613))) T
+HEN  PRINT Z%, - A( SIN (Z%)); MID$ ("X
+Y" +  CHR$ (764),594,49152 * AB < 337);:
+ DATA 1,"A,B",X,-2.5
+120  HCOLOR= N2: PRINT (20 < AB + B%),:
+IF (((B% - Z% <  >  - M%)) * 1.5) THEN 9
+0
+130  RESUME
+
+*****WARNING
+LINE NUMBER 130
+IGNORED
+
+: PRINT  VAL ("TASC"),((A(Z%) >  = A(Z%)
+)) + 49929 >  = ((W + Z% >  = ((K <  = M
+%)))),
+
+
+140  ON A(Q1 - ((W >  = A%))) GOTO 280,1
+70: PRINT A%;: READ AB
+150  PLOT  -  EXP (M%), ASC (Y$)
+160  VTAB A(B% + Q1) + A(8131 * 783): FO
+R Q1 = (((.001))) TO (A(M%)) STEP (((146
+76 + 6777 <  >  SGN (A%))) * K)
+170 B$( INT ( - ((A <  > A))),(( LOG (54
+8) OR  - A%)) - A) = X$ +  RIGHT$ (Q1$,A
+B) +  CHR$ (B%) + Y$:AB = ((Z% OR  NOT A
+)) / ((A% * A% <  = W * Z%)): IF (0 - (K
+) <  > ((2 = 2.25))) THEN 190
+180  PRINT  ASC ("A"), CHR$ ( NOT ((2014
+0 + M%))),A% + (( SGN (65535) AND W));:
+READ N2: READ B%,M%
+190 N2 = Q1: READ Q1,B%: NEXT Q1
+200 N2 = B% >  LOG (N2) >  = ((A% - N2 >
+ 10)): PRINT  CHR$ (B% * A%),X$;: IF (((
+Z% = ((A(K) <  = 32767)))) ^ (N2)) THEN
+200
+210  DATA HI
+220 B% = N2 / ((Q1 - M%)) AND ((B% OR B%
+)) >  = Q1:A% = A% = M%: SPEED= W
+230  POKE  NOT W, NOT (256 + 49152): HCO
+LOR= M%:W = K
+240  FOR Q1 = (A(A%)) TO (M% <  > N2 AND
+  - ((0 ^ 806)))
+250  PRINT : FOR AB = (A(.5 * ((B% * W))
+)) TO (Z% OR Q1)
+260 A = 20:X$ =  LEFT$ ( RIGHT$ ( LEFT$
+(Q1$,N2), ABS (Q1)),A%)
+270  FOR W = (AB <  >  EXP (Q1)) TO (166
+ + ((K < 941))) STEP (Q1)
+280  DATA ,-2.5: VTAB  NOT ((A% + N2 > Z
+%))
+290 B$(100 OR A(Z% + A(Z%)),354) = X$
+300  PRINT B%;922;Y$,: INPUT "Q";Q1
+310  READ M%:Y$ = "TASC": PRINT X$;
+320  GOTO 300:A% =  - W
+
+
+
+*****BEGINNING PASS 2
+
+
+.......
+
+
+*****CODE GENERATION COMPLETE
+
+
+COMPILATION INFORMATION AND LINE NUMBER
+REFERENCE TABLE? YES
+
+
+SOURCE FILE: S010
+OBJECT FILE: S010.OBJ
+LIBRARY OCCUPIES 2051 - 6063
+PROGRAM OCCUPIES 6064 - 8523
+
+NO COMMON BLOCK
+
+LOCAL VARIABLES OCCUPY 8524 - 8654
+
+HIGHEST MEMORY LOCATION: 8654
+
+
+LINE# ADDR   LINE# ADDR   LINE# ADDR
+
+10    6084   20    6084   30    6084
+40    6114   50    6123   60    6198
+70    6273   80    6329   90    6341
+100   6367   110   6395   120   6595
+130   6659   140   6662   150   6709
+160   6733   170   6816   180   6998
+190   7082   200   7114   210   7214
+220   7223   230   7289   240   7333
+250   7383   260   7430   270   7469
+280   7510   290   7543   300   7594
+310   7643   320   7680
+
+*****COMPILATION COMPLETE
+
+
+]?

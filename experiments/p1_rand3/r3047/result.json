@@ -1,0 +1,79 @@
+{
+ "id": "r3047",
+ "key": "6afc5f1de970ac70",
+ "source": "10 REM! INTEGER K,I\n20 REM! DEFCOMMON I,K,Y%\n30 DIM P$(8),B%(5)\n40 DEF FN F(Z)=-LEN(\"\")\n50 IF (Y OR 3.14159) THEN I=EXP(SQR(Y AND A(I))):PRINT -((Y%*M));:FOR AB=(((M<X%))*((I+B%))-((AB-Y*100))) TO (B%(M%)) STEP (1E3)\n60 SPEED=B%(I)-((20<=M%))=ATN(704-M):AB=((-M%<=VAL(\"\")))-20\n70 SPEED=1.5\n80 AB=X%:NEXT\n90 HTAB 20:A(((B%(10)+Y-24))*A(NOT 40))=B%\n100 XY$=\"TASC\":Z$=X$:READ M%\n110 PRINT MID$(X$,1),:PLOT B%(PEEK(B%))/((K AND M)),LOG(PEEK(B%(I)))^20:N2=M%\n120 PLOT Y%,24 AND NOT M:IF (0.1 OR -((100=N2))) THEN FOR AB=(8883<=X%) TO (N2+-32767-B%(X%))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6070,
+ "obj_len": 911,
+ "obj_sha256": "2484fed9a8b21ba1c589c1cabc0eca7368506ccd53b4a50d0e295d7129728045",
+ "cycles": 102061966,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6090
+  },
+  {
+   "line": 40,
+   "addr": 6090
+  },
+  {
+   "line": 50,
+   "addr": 6115
+  },
+  {
+   "line": 60,
+   "addr": 6218
+  },
+  {
+   "line": 70,
+   "addr": 6299
+  },
+  {
+   "line": 80,
+   "addr": 6305
+  },
+  {
+   "line": 90,
+   "addr": 6316
+  },
+  {
+   "line": 100,
+   "addr": 6373
+  },
+  {
+   "line": 110,
+   "addr": 6401
+  },
+  {
+   "line": 120,
+   "addr": 6479
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S013.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6070 - 6980",
+  "NUMERIC COMMON": "6064 - 6069",
+  "LOCAL VARIABLES": "6981 - 7109",
+  "HIGHEST MEMORY LOCATION": "7109"
+ }
+}

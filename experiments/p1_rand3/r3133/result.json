@@ -1,0 +1,86 @@
+{
+ "id": "r3133",
+ "key": "56a5f913bc8f5fe2",
+ "source": "10 REM! INTEGER J,I\n20 DIM B$(9),D$(9)\n30 DEF FN F(Z)=NOT ((XY% AND M%))>INT(AB<>A)\n40 N2$=P$(40)+\"123\"\n50 IF (AB=M%*X% AND ((A>=232))+((I-0))) THEN P$(ABS(255)>=521)=N2$:FOR N2=(FN F(LEN(X$)^FN F(A))) TO (77) STEP (C<=A)\n60 Y$=\"\"+\"TASC\"\n70 A=7:FOR Z=(SQR(XY%)) TO (-AB)\n80 FOR J=(255) TO (I)\n90 GOTO 60:PRINT\n100 GOSUB 130:AB=-N2:M%=624\n110 A=-((XY% OR 407))-1:I=10=((SGN(1.5)<>AB)):ON 39 GOTO 50,90,10\n120 GOTO 110:PRINT\n130 PLOT Z,Z:POKE NOT VAL(RIGHT$(X$,N2)),Z>=787<=Z>=A\n140 X$=\"123\"\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 865,
+ "obj_sha256": "86260de99c16a197f4d91b7bfe13768876f1011bfbe868c7dcf560cc93388c38",
+ "cycles": 93993493,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6127
+  },
+  {
+   "line": 50,
+   "addr": 6154
+  },
+  {
+   "line": 60,
+   "addr": 6275
+  },
+  {
+   "line": 70,
+   "addr": 6306
+  },
+  {
+   "line": 80,
+   "addr": 6335
+  },
+  {
+   "line": 90,
+   "addr": 6352
+  },
+  {
+   "line": 100,
+   "addr": 6355
+  },
+  {
+   "line": 110,
+   "addr": 6373
+  },
+  {
+   "line": 120,
+   "addr": 6434
+  },
+  {
+   "line": 130,
+   "addr": 6437
+  },
+  {
+   "line": 140,
+   "addr": 6493
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S014.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6928",
+  "LOCAL VARIABLES": "6929 - 7053",
+  "HIGHEST MEMORY LOCATION": "7053"
+ }
+}

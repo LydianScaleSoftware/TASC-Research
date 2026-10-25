@@ -1,0 +1,66 @@
+{
+ "id": "r3076",
+ "key": "377d81f0afe6e9a3",
+ "source": "10 REM! INTEGER I,K\n20 HTAB -M%^B\n30 POKE N2-((LEN(\"HI\") OR C% AND B)),PEEK(-M%):COLOR=(((244<=M%))+K)\n40 ONERR GOTO 20:W$=XY$:I=-((RND(N2%)-((W>W))))\n50 PRINT W$;N2;-39,\n60 M%=INT(M)<=Z<>((M OR B>=40000)):PRINT \"X Y\";-5;\n70 ON -Z GOTO 90:PRINT:PRINT SGN(-((N2%*B))),\n80 M%=K:N2=-((I-I OR B+7))\n90 K=-N2% AND C%>=N2% OR 127>N2%:Z=N2%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 629,
+ "obj_sha256": "e34d56e973b07898e9b97d335589022359e99b5ba65ff8c15e8a26ebcabb1cc7",
+ "cycles": 86696760,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6105
+  },
+  {
+   "line": 40,
+   "addr": 6176
+  },
+  {
+   "line": 50,
+   "addr": 6214
+  },
+  {
+   "line": 60,
+   "addr": 6238
+  },
+  {
+   "line": 70,
+   "addr": 6301
+  },
+  {
+   "line": 80,
+   "addr": 6334
+  },
+  {
+   "line": 90,
+   "addr": 6370
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S008.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6692",
+  "LOCAL VARIABLES": "6693 - 6738",
+  "HIGHEST MEMORY LOCATION": "6738"
+ }
+}

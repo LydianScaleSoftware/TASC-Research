@@ -1,0 +1,14 @@
+10 DIM P(9,1)
+20 A=AB:A=A:FOR C=(5) TO (SQR((40531)/((XY AND 24))))
+30 B%(W%,RND(XY))=C/B%(49152,24) AND -Z%
+40 DATA 300:NEXT C:FOR XY=(AB) TO (M%)
+50 C=Y:P(256+((((Z%>7))+B%)),M%)=M%:B$=C$
+60 IF (M%) THEN PRINT
+70 IF (SQR(B%(C AND 5,40))) THEN 10
+80 READ B%:CALL Z%*(20)*SQR(Z%<=XY)
+90 A=((M% AND 34889))<>ASC(C$+"TASC"):P(C/((2.25<=AB)),NOT B%(SGN(Y),127>=256))=100:READ XY,Z$
+100 A$(W%)=Z$:C$=RIGHT$(B$,RND(3)):M%=20
+110 M%=((((W%+127))*-Z%))^((127=((XY>=B%))))
+120 C$=A$(0)+MID$("123",B%(7,Z%))+A$(M%):B$=CHR$(AB)
+130 NEXT XY
+140 END:HCOLOR=W%=Y<=24:C=AB

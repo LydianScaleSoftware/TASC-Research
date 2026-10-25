@@ -1,0 +1,82 @@
+{
+ "id": "r3013",
+ "key": "54ea62ee5b774d67",
+ "source": "10 HLIN ABS(M),(((-C AND N2))/COS(32767<=11)) AT ABS(SQR(XY>Q1%)):N2%=LEN(AB$+\"TASC\"+Q1$)\n20 SPEED=M\n30 N2=W%\n40 Q1%=-W%<>100\n50 PRINT C%;-((C%+7)),C%=W%;:PRINT XY+-((M-A));ATN(EXP(W%)>=N2/C),\"HI\",:C=LEN(AB$)^((W% OR A))\n60 C=((M<=24*W%))^((XY*Q1%*ASC(Q1$)))\n70 PRINT AB$;:GOTO 40\n80 VTAB -39:Q1$=LEFT$(\"A\",N2<>N2%<>M)\n90 IF ((W%*A) AND -((.001-N2%))) THEN 60:HLIN -((N2%*LOG(XY))),(INT(((5 AND C))*((A<>N2)))) AT 680\n100 GOTO 20:Q1%=LEN(\"X Y\"):PRINT 32767;\n110 VTAB PEEK(N2%<=5^A)\n120 GOSUB 40\n130 Q1%=N2:VTAB N2%:C%=NOT C\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 770,
+ "obj_sha256": "9dd3cf440a96063cb2bf2f9a13234b5a188209b8a56aaa6b6c66ce3538609b4a",
+ "cycles": 101502099,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6178
+  },
+  {
+   "line": 30,
+   "addr": 6184
+  },
+  {
+   "line": 40,
+   "addr": 6190
+  },
+  {
+   "line": 50,
+   "addr": 6208
+  },
+  {
+   "line": 60,
+   "addr": 6333
+  },
+  {
+   "line": 70,
+   "addr": 6378
+  },
+  {
+   "line": 80,
+   "addr": 6387
+  },
+  {
+   "line": 90,
+   "addr": 6427
+  },
+  {
+   "line": 100,
+   "addr": 6456
+  },
+  {
+   "line": 110,
+   "addr": 6477
+  },
+  {
+   "line": 120,
+   "addr": 6498
+  },
+  {
+   "line": 130,
+   "addr": 6501
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S013.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6833",
+  "LOCAL VARIABLES": "6834 - 6882",
+  "HIGHEST MEMORY LOCATION": "6882"
+ }
+}

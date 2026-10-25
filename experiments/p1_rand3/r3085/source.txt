@@ -1,0 +1,10 @@
+10 REM! INTEGER I,K
+20 DIM D(11)
+30 READ W,C:FOR K=(-.5) TO (B*((C%>((N2%=B)))))
+40 PRINT Z$;"X Y",ATN((I))=A;:A%=K
+50 C=20+D(448)<=A%^K
+60 W=127:C=-((NOT ((-242))))
+70 WAIT EXP(TAN(A) AND ((111 OR W))),((LEN("")+SQR(658))),(B%):PRINT LEN("HI");W*I-(NOT N2%);D(N2%);:RETURN
+80 INVERSE:W=(.001+I)-((N2>=C))
+90 XY$=LEFT$(XY$,40*B-((N2<=I))):PRINT:PLOT N2%,-A<=N2%
+100 XY$=AB$

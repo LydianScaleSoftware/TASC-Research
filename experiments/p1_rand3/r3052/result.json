@@ -1,0 +1,83 @@
+{
+ "id": "r3052",
+ "key": "d1020f1c276dcb1a",
+ "source": "10 REM! USECOMMON M%,B,Q1%\n20 DIM P(1,11),A%(10,2)\n30 DEF FN F(Z)=X\n40 FOR B=(Q1%) TO (TAN(VAL(Z$))<((B<=N2))) STEP (P(NOT AB,M%)):W$=Z$:PRINT \"A\";FN F(AB)<>NOT P(Z%,M%)^((100<>P(W%,W%)));40,\n50 W%=7:IF (NOT ((A%(M%,20015)*20))) THEN 10\n60 A%(NOT ((RND(256)^((931+Q1%)))),100>LEN(\"123\"+M$))=B:DATA -2.5,,\"A,B\"\n70 IF (W%) THEN 70:HLIN A,(W%) AT ((-M%<-8242))+((686*N2))^((A AND 1E3)):DATA X\n80 N2=LEN(\"X Y\")\n90 PRINT:END:FOR B=(INT(NOT A<P(10,Q1%))) TO (40)\n100 W%=TAN(P(Z%<>A%(11121,W%),Q1%)):M%=W%\n110 P(LOG(B),20)=FN F(INT(FN F(X))):COLOR=P(P(Q1%,1)<=((N2>=N2)),1000<>Z%<((N2<B)))\n120 PRINT FN F(127)*B;1.5=LOG(127) OR AB,:W%=.5:READ M%\n130 Q1%=EXP(B)<=PEEK(A<A)\n",
+ "options": {
+  "library": null,
+  "program": 20480,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 20489,
+ "obj_len": 991,
+ "obj_sha256": "65a2929ed4b9b88a3885d43a02b04677cb72f6e97e4f5559ee9f0986ec8cbb36",
+ "cycles": 105363123,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 20500
+  },
+  {
+   "line": 20,
+   "addr": 20509
+  },
+  {
+   "line": 30,
+   "addr": 20509
+  },
+  {
+   "line": 40,
+   "addr": 20519
+  },
+  {
+   "line": 50,
+   "addr": 20672
+  },
+  {
+   "line": 60,
+   "addr": 20705
+  },
+  {
+   "line": 70,
+   "addr": 20804
+  },
+  {
+   "line": 80,
+   "addr": 20820
+  },
+  {
+   "line": 90,
+   "addr": 20841
+  },
+  {
+   "line": 100,
+   "addr": 20847
+  },
+  {
+   "line": 110,
+   "addr": 20895
+  },
+  {
+   "line": 120,
+   "addr": 21009
+  },
+  {
+   "line": 130,
+   "addr": 21057
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "OBJECT FILE": "S001.OBJ",
+  "PROGRAM": "20489 - 21479",
+  "NUMERIC COMMON": "20480 - 20488",
+  "LOCAL VARIABLES": "21480 - 21710",
+  "HIGHEST MEMORY LOCATION": "21710"
+ }
+}

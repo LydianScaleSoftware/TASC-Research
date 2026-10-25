@@ -1,0 +1,153 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S011
+
+
+OBJECT CODE FILE:
+(DEFAULT S011.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION?
+
+*****BEGINNING PASS 1
+
+
+
+10
+RECOGNIZED  REM ! INTEGER J
+20  DIM A(5,5)
+30 Q1% = 40
+40  PRINT ((M OR  VAL (Q1$))) = W;: COLO
+R= 1E3
+50  IF (W ^ J) THEN  DATA X,HI
+60  INVERSE
+70  IF ( NOT A( NOT Y%, ASC (Q1$))) THEN
+ AB = J: SPEED=  INT (N2 <  = W) ^ Y%: V
+TAB  SGN (W) <  = 1 ^ 897 <  = N2
+80  IF ( NOT Y% <  > A(Q1%,3703) - A(J,Y
+%) >  PEEK (W + 22486)) THEN  HCOLOR= ((
+ SIN (M%) AND M% = AB)) = ((Z% * A(Z%,Y%
+) AND M% <  > 1500)): HTAB .5:AB = J
+90  PRINT : GOSUB 220: HOME
+100  PRINT AB;J *  PEEK (665 ^ Q1%),(Y%)
+ *  - 20 AND W * M,
+110  PRINT  STR$ (32767);: IF (Q1%) THEN
+ 20
+
+*****WARNING
+LINE NUMBER 110
+IGNORED
+
+: IF (X) THEN  PRINT  - ((32767 - W)) <
+ > W * 895;
+
+
+120  PRINT 40000;( ATN ( - 255));: IF (
+PEEK (Y%) = ((AB * A(J,Z%) >  = Y% + Q1%
+))) THEN Y$ = "A": FOR AB = (3 >  = (( E
+XP (A(Y%,Y%)) > Z% ^ M))) TO (N2 + ((((A
+(40,Y%) AND AB)) = W)))
+130 Y$ = "A":A( - ((X <  > A(49152,J)))
+> 38134 * ((N2 <  = M)),Q1%) =  - Y% / (
+Z%)
+140  PRINT
+150  IF ( - J) THEN  FOR N2 = ( -  LEN (
+Q1$ + Y$)) TO ( VAL ( STR$ (A(J,40) <  =
+ J))): CALL A(40,X + W): GOTO 170
+160  CALL 664
+170  POP : GOSUB 10:AB = N2
+180  NEXT AB: PRINT N2,49931;Z$;:Q1% = Y
+% OR 5 - W
+190  READ AB,J
+200  CALL  - Q1%: GOSUB 90
+210  COLOR= Y% ^  INT (Q1%): HCOLOR=  -
+(( - ((W ^ 7)))): IF (J >  = W = (M) <
+= ((X = AB)) + ((M% > N2))) THEN  DATA ,
+HI
+220  GOSUB 150: IF (M%) THEN 150
+230 Q1% =  NOT Z%: FOR J = ( NOT W - 2 -
+ 100) TO (Q1%): GOSUB 100
+240  PLOT Y% * ((((Q1% <  > 39)) * ((N2
+<  > M%)))),( VAL ("X Y")): PRINT : GOSU
+B 280
+250  FOR AB = (AB) TO (Q1%): FOR X = (Y%
+) TO ( SQR ( SGN (10))): GOSUB 180
+260 Q1% = ((((X OR X)) / ((16517 + 491))
+)) ^ ((W + J >  = J + Y%))
+270  PRINT  LEFT$ ( STR$ (Z%) + "TASC",1
+0 >  = AB); ATN (Y%);49152,
+280  GOTO 70
+
+*****WARNING
+LINE NUMBER 280
+IGNORED
+
+: READ W
+
+
+:M =  - ((2 >  = Q1%)) > ((40 >  NOT 327
+67))
+290 AB = (39) < ((N2 * 256 OR  - A(J,5))
+)
+300  READ AB: IF (M%) THEN  HPLOT M%,(X)
+ TO  -  ATN (N2) * ((7 * Y%)),(100)
+310  FOR N2 = ( ABS (1000) < ((Z% <  > (
+(0 <  = W))))) TO (39): IF (M) THEN  PRI
+NT :Z% = (A(Z%,921) + 39) OR A( PEEK (Q1
+%),M%)
+
+
+
+*****BEGINNING PASS 2
+
+
+......
+
+
+*****CODE GENERATION COMPLETE
+
+
+COMPILATION INFORMATION AND LINE NUMBER
+REFERENCE TABLE? YES
+
+
+SOURCE FILE: S011
+OBJECT FILE: S011.OBJ
+LIBRARY OCCUPIES 2051 - 6063
+PROGRAM OCCUPIES 6064 - 8301
+
+NO COMMON BLOCK
+
+LOCAL VARIABLES OCCUPY 8302 - 8534
+
+HIGHEST MEMORY LOCATION: 8534
+
+
+LINE# ADDR   LINE# ADDR   LINE# ADDR
+
+10    6084   20    6084   30    6084
+40    6090   50    6117   60    6144
+70    6147   80    6245   90    6397
+100   6406   110   6466   120   6483
+130   6647   140   6744   150   6747
+160   6836   170   6842   180   6854
+190   6898   200   6910   210   6922
+220   7018   230   7029   240   7079
+250   7133   260   7176   270   7236
+280   7291   290   7330   300   7369
+310   7428
+
+*****COMPILATION COMPLETE
+
+
+]?

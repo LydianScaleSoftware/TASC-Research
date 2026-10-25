@@ -1,0 +1,70 @@
+{
+ "id": "r3058",
+ "key": "202974d848db866f",
+ "source": "10 PRINT \"HI\";AB;\"TASC\"+MID$(B$,X%,1000)+LEFT$(B$+Q1$,XY),\n20 Y%=B% AND NOT B%:PLOT 0>((Q1%*B%))^Y,-W\n30 FOR XY=(SQR(857)) TO (0-B%+Q1%>=Y%-B%-100) STEP (Q1):Q1%=-B%:READ Y%\n40 VTAB (256)/10<Y\n50 READ Q1%:READ AB\n60 Y%=255^NOT X% OR XY\n70 Q1%=NOT XY:Z$=Q1$:Q1$=Z$\n80 IF (AB) THEN 50\n90 DATA -2.5,-2.5,X,HI:Z$=MID$(Z$,X%*((Y*2)))\n100 FOR Y=(X%) TO (X%):Y%=Y\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 643,
+ "obj_sha256": "11c30869684c93299089a879f7a0f84dd8d8265b8a81b267b258138d86508bac",
+ "cycles": 86759466,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6168
+  },
+  {
+   "line": 30,
+   "addr": 6222
+  },
+  {
+   "line": 40,
+   "addr": 6293
+  },
+  {
+   "line": 50,
+   "addr": 6308
+  },
+  {
+   "line": 60,
+   "addr": 6320
+  },
+  {
+   "line": 70,
+   "addr": 6341
+  },
+  {
+   "line": 80,
+   "addr": 6359
+  },
+  {
+   "line": 90,
+   "addr": 6367
+  },
+  {
+   "line": 100,
+   "addr": 6406
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S007.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6706",
+  "LOCAL VARIABLES": "6707 - 6752",
+  "HIGHEST MEMORY LOCATION": "6752"
+ }
+}

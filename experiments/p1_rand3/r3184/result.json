@@ -1,0 +1,78 @@
+{
+ "id": "r3184",
+ "key": "f810d08977db09b8",
+ "source": "10 REM! INTEGER I,K\n20 ON 3 GOSUB 10,60,10:CALL X%\n30 Q1=TAN(39)\n40 Q1=-Y<=ATN(0^A%(Q1%)):FOR Y=(398) TO (A%(XY=Y%>B)):RESUME\n50 B=NOT ((.5 OR A))=842\n60 NEXT\n70 CALL XY:Q1%=2.25:FOR K=(COS(9921*20)-X%) TO (1)\n80 C$=LEFT$(STR$(Q1^2),-I)\n90 PRINT Q1 OR (20+XY);-I;:HTAB K\n100 READ XY:IF (I) THEN 70:RESUME\n110 FOR Q1=(A) TO (N2%+Y%<>((32767<Q1%))>VAL(\"\"+\"HI\")):NEXT Q1\n120 IF (A) THEN 50\n",
+ "options": {
+  "library": 4096,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 8109,
+ "obj_len": 675,
+ "obj_sha256": "e19bf11f5a1b7223c83db01912646e04013ed7c643abad3669aa678c299bd716",
+ "cycles": 89434572,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 8129
+  },
+  {
+   "line": 20,
+   "addr": 8129
+  },
+  {
+   "line": 30,
+   "addr": 8148
+  },
+  {
+   "line": 40,
+   "addr": 8157
+  },
+  {
+   "line": 50,
+   "addr": 8228
+  },
+  {
+   "line": 60,
+   "addr": 8249
+  },
+  {
+   "line": 70,
+   "addr": 8254
+  },
+  {
+   "line": 80,
+   "addr": 8301
+  },
+  {
+   "line": 90,
+   "addr": 8325
+  },
+  {
+   "line": 100,
+   "addr": 8355
+  },
+  {
+   "line": 110,
+   "addr": 8369
+  },
+  {
+   "line": 120,
+   "addr": 8450
+  }
+ ],
+ "info": {
+  "LIBRARY": "4096 - 8108",
+  "OBJECT FILE": "S014.OBJ",
+  "PROGRAM": "8109 - 8783",
+  "LOCAL VARIABLES": "8784 - 8851",
+  "HIGHEST MEMORY LOCATION": "8851"
+ }
+}

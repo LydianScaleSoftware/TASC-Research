@@ -1,0 +1,110 @@
+{
+ "id": "r3101",
+ "key": "af47020aed36ba58",
+ "source": "10 REM! INTEGER J\n20 COLOR=SQR(759)<>W%>=Z%:HTAB C\n30 GOTO 70:HTAB C:Q1=AB-5\n40 PRINT AB,C,:GOTO 50\n50 A$=Q1$:COLOR=3:SPEED=-((100>AB))*((Z>Z*Q1))\n60 AB=C:POKE AB,LEN(Q1$) OR Z%>((Z%>2)):ONERR GOTO 120\n70 FOR C=(24) TO (Z%<=C):HLIN 346>-J OR AB,(NOT 44361>=((AB>=1)) AND ((256-1000))*((M% OR W%))) AT EXP(RND(A))\n80 NORMAL\n90 NEXT C:GOTO 40:COLOR=((Q1=Q1))/((20 OR X%))/((C/C>=A))\n100 COLOR=A\n110 Z%=AB+Z%:J=(A^Z<=M%)\n120 RESTORE:X%=LEN(\"X Y\")\n130 FOR Z=((X%)) TO (C):VTAB W%*C>M%>=Z%:INVERSE\n140 POKE X%,2:X%=M%:PRINT\n150 DATA 1,,HI:PRINT J,\n160 J=7+J:PRINT:NEXT\n170 IF (SQR(AB)) THEN A=((Z%>159))/1<>W%*Z%\n180 A$=MID$(Q1$,2*((Z%<Q1))):DRAW -((C<>X%))\n190 Z%=((W%+W%))^Z*ABS(40+Z)\n200 PRINT\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1005,
+ "obj_sha256": "dd77c9887ae80565bf7ab498fc2eb60aa3413db968e2a1ce36475990438ab7a4",
+ "cycles": 111577231,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6111
+  },
+  {
+   "line": 40,
+   "addr": 6123
+  },
+  {
+   "line": 50,
+   "addr": 6144
+  },
+  {
+   "line": 60,
+   "addr": 6189
+  },
+  {
+   "line": 70,
+   "addr": 6239
+  },
+  {
+   "line": 80,
+   "addr": 6355
+  },
+  {
+   "line": 90,
+   "addr": 6358
+  },
+  {
+   "line": 100,
+   "addr": 6366
+  },
+  {
+   "line": 110,
+   "addr": 6372
+  },
+  {
+   "line": 120,
+   "addr": 6399
+  },
+  {
+   "line": 130,
+   "addr": 6420
+  },
+  {
+   "line": 140,
+   "addr": 6461
+  },
+  {
+   "line": 150,
+   "addr": 6482
+  },
+  {
+   "line": 160,
+   "addr": 6503
+  },
+  {
+   "line": 170,
+   "addr": 6520
+  },
+  {
+   "line": 180,
+   "addr": 6569
+  },
+  {
+   "line": 190,
+   "addr": 6605
+  },
+  {
+   "line": 200,
+   "addr": 6638
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S016.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7068",
+  "LOCAL VARIABLES": "7069 - 7119",
+  "HIGHEST MEMORY LOCATION": "7119"
+ }
+}

@@ -1,0 +1,131 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S003
+
+
+OBJECT CODE FILE:
+(DEFAULT S003.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION?
+
+*****BEGINNING PASS 1
+
+
+
+10
+RECOGNIZED  REM ! INTEGER I
+20  DIM P$(6,7),B%(4)
+30 C$ =  CHR$ (3): FOR AB = (((10 <  > A
+%)) - 673 <  > A%) TO (0.1)
+40  PRINT P$( ASC (Y$),A%) +  MID$ (Y$,B
+%(Z%)),
+50  CALL 256 + ((B < 5)) >  = 1:N2 = 0 -
+ 3: DATA X,-2.5
+60  PRINT  EXP (AB);5;: GOSUB 60: GOSUB
+250
+70  COLOR= B%(Z% OR A%) < ((X >  = B%(Z%
+) >  =  TAN (X))): HTAB B%(X AND 65535)
+<  >  ATN (255)
+80  READ Y$,X%
+90  FOR AB = (100) TO (X) STEP ( NOT ((N
+2% = B%(A%))) >  = ((X% OR 20)))
+100  PRINT (B%(I));
+110  PRINT 32546;255;Y$,: COLOR= AB: DAT
+A 1,X,-2.5
+120  HTAB N2: SPEED=  PEEK (40 * M =  NO
+T X)
+130  IF ((( VAL ("123") OR B%(A%))) > ((
+X OR N2 + AB))) THEN  END
+140 AB = 13306 ^  ATN ( ATN (B)): HTAB I
+ < Z% * Z% <  > X% - A% * M: NEXT AB
+150  SPEED=  SQR ( INT (N2)) > 548 -  IN
+T (B)
+160  FOR AB = ( NOT ((X ^ 1000))) TO (I)
+
+170  NEXT AB:Z$ = Z$
+180  PRINT (X);C$;:X = 24 + ((X% AND M))
+
+190  PLOT ((40 = A%)) + ((A% <  = .5)) <
+  = I,A%
+200  GOTO 10
+
+*****WARNING
+LINE NUMBER 200
+IGNORED
+
+: PRINT  ASC (C$);M;Z$ +  MID$ (A$(I) +
+C$,B);
+
+
+210 P$(N2%,3) =  LEFT$ (Y$,((100 AND I))
+ >  = ((40 AND Z%))): FOR I = (( LEN (C$
+)) <  > ((X% > 40000))) TO (20): FOR X =
+ ( RND ( COS (X)) OR 951 * A%) TO ( -  V
+AL (Y$ + "HI")) STEP (AB)
+220  PRINT (((AB >  = 255)) ^ AB);: RETU
+RN
+230  PRINT  ATN (( NOT X)); LEFT$ ( RIGH
+T$ ("",0.1),40) + A$(24 + 0);Z$;: GOSUB
+240
+240  ON ((B%(Z%) = ((AB >  = 5)))) + ((5
+08 OR 43215 < X)) GOTO 140: FOR M = ( NO
+T X%) TO ( - ((((10 - 40000)) ^ ((65535
+AND 3))))) STEP ( SQR (3) < 42 + ((100 <
+  > N2)))
+250 B%(39 + (( SQR (AB) <  =  VAL (C$)))
+) = (N2%): IF (B%( - B)) THEN 140
+
+
+
+*****BEGINNING PASS 2
+
+
+.....
+
+
+*****CODE GENERATION COMPLETE
+
+
+COMPILATION INFORMATION AND LINE NUMBER
+REFERENCE TABLE? YES
+
+
+SOURCE FILE: S003
+OBJECT FILE: S003.OBJ
+LIBRARY OCCUPIES 2051 - 6063
+PROGRAM OCCUPIES 6064 - 7832
+
+NO COMMON BLOCK
+
+LOCAL VARIABLES OCCUPY 7833 - 8026
+
+HIGHEST MEMORY LOCATION: 8026
+
+
+LINE# ADDR   LINE# ADDR   LINE# ADDR
+
+10    6084   20    6084   30    6084
+40    6131   50    6179   60    6225
+70    6246   80    6339   90    6351
+100   6404   110   6413   120   6455
+130   6488   140   6547   150   6603
+160   6633   170   6661   180   6672
+190   6702   200   6741   210   6744
+220   6900   230   6922   240   6985
+250   7110
+
+*****COMPILATION COMPLETE
+
+
+]?

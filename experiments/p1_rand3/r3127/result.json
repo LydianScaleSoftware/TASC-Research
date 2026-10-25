@@ -1,0 +1,83 @@
+{
+ "id": "r3127",
+ "key": "103f709d1b844b43",
+ "source": "10 REM! DEFCOMMON Z,Q1%,W\n20 DIM D%(9,9)\n30 DEF FN F(T)=(X%)*((X%<((C%=C%))))\n40 HTAB NOT ((((W<=1.5))*C%)):Y=Y:READ A\n50 DATA \"A,B\",1,HI:Z=W%:W=Y\n60 Y=((SIN(N2) AND EXP(860)))*RND(W):IF (N2>NOT 0) THEN Y=-2:PRINT\n70 D%(LOG(7),40000)=-((1.5=Q1%<>((127<40)))):Y=W:READ Y\n80 POKE Q1%,40000\n90 IF (X%) THEN 10\n100 N2$=Y$\n110 PRINT Z$;D%(EXP(256),-Z);:VTAB Y>ASC(N2$)\n120 Y$=LEFT$(Z$,-0<=0)\n130 PRINT D%(C%,X%);LEFT$(N2$,10),W;\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6076,
+ "obj_len": 696,
+ "obj_sha256": "865d8179e1dc39f0ef430787ebaf6662797f7ad0321348e2adced8b08411081b",
+ "cycles": 92900103,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6096
+  },
+  {
+   "line": 30,
+   "addr": 6096
+  },
+  {
+   "line": 40,
+   "addr": 6121
+  },
+  {
+   "line": 50,
+   "addr": 6153
+  },
+  {
+   "line": 60,
+   "addr": 6180
+  },
+  {
+   "line": 70,
+   "addr": 6248
+  },
+  {
+   "line": 80,
+   "addr": 6320
+  },
+  {
+   "line": 90,
+   "addr": 6332
+  },
+  {
+   "line": 100,
+   "addr": 6340
+  },
+  {
+   "line": 110,
+   "addr": 6346
+  },
+  {
+   "line": 120,
+   "addr": 6400
+  },
+  {
+   "line": 130,
+   "addr": 6421
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S008.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6076 - 6771",
+  "NUMERIC COMMON": "6064 - 6075",
+  "LOCAL VARIABLES": "6772 - 7008",
+  "HIGHEST MEMORY LOCATION": "7008"
+ }
+}

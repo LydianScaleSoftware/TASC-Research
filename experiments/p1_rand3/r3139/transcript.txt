@@ -1,0 +1,150 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S003
+
+
+OBJECT CODE FILE:
+(DEFAULT S003.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION? NO
+
+COMPILATION LISTING:
+(DEFAULT YES)? YES
+
+PAUSE ON ERRORS:
+(DEFAULT YES)? YES
+
+INTEGER ARITHMETIC:
+(DEFAULT YES)? NO
+
+INTEGER CONSTANTS:
+(DEFAULT YES)? NO
+
+RESUME/DEBUG CODE:
+(DEFAULT NO)? NO
+
+*****BEGINNING PASS 1
+
+
+
+10  DIM B$(10,2)
+20  PRINT  ATN (A) * ((B * N2%)) / 10, N
+OT  ASC ("TASC" + X$); NOT X% * ((39 *
+ASC (N2$)));:A =  COS (A%) ^ ((Q1 >  = N
+2%)) * XY%: TEXT
+30  VTAB XY% -  TAN (W) OR ((1000 AND XY
+%)) <  = 1000: PRINT : PRINT
+40  VTAB N2%:A% =  COS (AB) <  =  SQR (3
+2767 + 207)
+50 AB = ((N2% AND AB)) <  > ((A > W AND
+3 * 3)): READ W,N2$:W = 1.5
+60 A% = A: IF (X%) THEN 70:B$(24,100) =
+ MID$ ("" + N2$,A * ((618 <  = W)))
+70  PRINT N2% >  = 40;N2%;:XY% = A:W = N
+2% OR  RND (A)
+80 AB =  VAL (N2$)
+90  IF ((( - XY% OR X% <  > X%)) + (XY%
+<  = A%)) THEN 240:X$ =  RIGHT$ (A$, LOG
+ (W) > (7))
+
+*****WARNING
+LINE NUMBER 90
+IGNORED
+
+: INVERSE
+
+
+100  IF ( NOT X% *  - B) THEN AB = N2% <
+  =  - XY% > 1 - B + ((W <  > AB)):N2$ =
+ N2$
+110  PRINT  LEFT$ ( RIGHT$ (A$,(XY%)), I
+NT (A OR N2%)); RIGHT$ (X$ + X$,X% > N2%
+ > ((X% = W)));: FOR W = (((20 OR X%)) >
+  = ((A = W)) -  ATN (XY%)) TO (X% AND 1
+00 OR (N2%) OR  SQR (Q1))
+120  HTAB (((X%) OR 40 > X%)) * ((A% < 3
+9 = 3.14159))
+130  NEXT W
+140  GOTO 60
+150  HPLOT B > ((A% >  = 65535)) >  = ((
+N2% >  = A =  - 20)),(1000): READ B: END
+
+160  PRINT : PRINT N2$ + "TASC" + X$ +
+RIGHT$ (X$,A%) + N2$ + "";: FOR W = ( SG
+N (AB + 39)) TO (W)
+170  VTAB (( NOT XY% - 39)) ^ B
+180  PRINT A%;:A$ =  STR$ ( SQR (11418 -
+ .001))
+190  HLIN (( VAL (X$) > 40 * A)) /  - 25
+247,(337 + A%) AT (A <  NOT A): IF ( LOG
+ ( PEEK (N2%)) * ((((W <  = W)) / N2%)))
+ THEN  PRINT W;:AB =  - 0
+200 X$ =  STR$ (A% * 255):AB =  PEEK ( N
+OT ((3 ^ W))): IF (N2% + XY%) THEN 60
+210  FOR Q1 = (Q1) TO (2):XY% =  ATN (2
+= Q1) -  LEN (B$(N2%,A%)):X$ =  MID$ ( L
+EFT$ ( MID$ ("TASC",X%),A% * XY%), ATN (
+49152 ^ XY%), PEEK (24))
+220  IF (XY%) THEN  GOTO 100
+230  PRINT :X$ = X$ + "123": PRINT B$(N2
+% >  = ((XY% >  = Q1)),AB - X%); ATN ( L
+EN ( MID$ (X$,B)));N2$;
+240  IF ( -  LEN ( MID$ (N2$,356))) THEN
+  READ XY%,AB
+250  PRINT A%;X$;:X% =  - N2% <  > X% AN
+D  SIN (XY% >  = 256)
+
+
+
+*****BEGINNING PASS 2
+
+
+......
+
+
+*****CODE GENERATION COMPLETE
+
+
+COMPILATION INFORMATION AND LINE NUMBER
+REFERENCE TABLE? YES
+
+
+SOURCE FILE: S003
+OBJECT FILE: S003.OBJ
+LIBRARY OCCUPIES 2051 - 6063
+PROGRAM OCCUPIES 6064 - 8167
+
+NO COMMON BLOCK
+
+LOCAL VARIABLES OCCUPY 8168 - 8286
+
+HIGHEST MEMORY LOCATION: 8286
+
+
+LINE# ADDR   LINE# ADDR   LINE# ADDR
+
+10    6084   20    6084   30    6212
+40    6254   50    6287   60    6353
+70    6418   80    6460   90    6469
+100   6536   110   6612   120   6770
+130   6812   140   6817   150   6820
+160   6886   170   6979   180   7006
+190   7027   200   7145   210   7193
+220   7316   230   7324   240   7417
+250   7454
+
+*****COMPILATION COMPLETE
+
+
+]?

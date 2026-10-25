@@ -1,0 +1,94 @@
+{
+ "id": "r3169",
+ "key": "b217c3e913ac0911",
+ "source": "10 REM! INTEGER J\n20 DIM D%(11,1)\n30 Z%=W%:DATA 1:PRINT \"A\";\n40 SPEED=A*LEN(RIGHT$(M$,W%)):DATA 300,1,\n50 A=ABS(147<255>ASC(X$))\n60 GOTO 100\n70 FOR B=(NOT ASC(\"X Y\"+M$)) TO (-W%>AB+D%(255,Z%)=310)\n80 GOSUB 120:IF (NOT ABS(W%+255)) THEN DATA \"A,B\"\n90 D%(X%,Z%)=D%(23112,X%):D%(-EXP(N2%),J)=RND(EXP(W%))>((32767-1553))*((101<>7)):W%=NOT ((D%(X%,Z%)>NOT AB))\n100 W=W%:X%=-W:PRINT 256;M$;\n110 GOSUB 60\n120 IF (RND(-40<>1)) THEN 40:READ W%,A\n130 PRINT \"A\"+\"A\";:D%(Z%*((0 AND 513))<=((280-W%<=D%(W%,J))),0^((RND(A)/((W<=127)))))=806\n140 PRINT:X$=CHR$(J>=B):X$=MID$(X$+Z$,AB^((AB=J)),AB*3.14159<=W%)\n150 J=NOT 1000:FOR AB=(Z%) TO (RND(SQR(W%))) STEP (VAL(\"TASC\")+D%(N2%,3)+NOT 33359^W%)\n160 ON TAN(-D%(N2%,X%)) GOTO 60,160,90:B=W<>D%(N2%,LEN(M$))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1237,
+ "obj_sha256": "190140dc12ff001c615ab825e22a1558f9cdb77f2cddebcb738a5763cadcf910",
+ "cycles": 124893734,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6111
+  },
+  {
+   "line": 50,
+   "addr": 6145
+  },
+  {
+   "line": 60,
+   "addr": 6178
+  },
+  {
+   "line": 70,
+   "addr": 6181
+  },
+  {
+   "line": 80,
+   "addr": 6262
+  },
+  {
+   "line": 90,
+   "addr": 6297
+  },
+  {
+   "line": 100,
+   "addr": 6429
+  },
+  {
+   "line": 110,
+   "addr": 6453
+  },
+  {
+   "line": 120,
+   "addr": 6456
+  },
+  {
+   "line": 130,
+   "addr": 6478
+  },
+  {
+   "line": 140,
+   "addr": 6606
+  },
+  {
+   "line": 150,
+   "addr": 6681
+  },
+  {
+   "line": 160,
+   "addr": 6771
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S016.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7300",
+  "LOCAL VARIABLES": "7301 - 7396",
+  "HIGHEST MEMORY LOCATION": "7396"
+ }
+}

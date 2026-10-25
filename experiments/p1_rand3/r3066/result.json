@@ -1,0 +1,132 @@
+{
+ "id": "r3066",
+ "key": "3297f007a46fb3a3",
+ "source": "10 REM! INTEGER J\n20 REM! DEFCOMMON XY,J,X\n30 DIM P%(5)\n40 CALL SGN(Z):A=(X/-AB):W$=W$\n50 HOME:Z=1\n60 N2$=AB$+MID$(W$,32767+AB):FOR X=(SGN(-B(.001,10)) OR M%) TO (ABS(XY))\n70 J=100\n80 GOSUB 200:X=367\n90 IF (AB%+((A>=M%)) OR X%) THEN X%=-((Z>AB)):RETURN:XY%=A\n100 X%=XY%\n110 HLIN M%,(AB%) AT XY*((Z+AB%))>10:RESTORE\n120 NEXT X\n130 PRINT AB;:A=20\n140 IF (746<>SQR(B(J,24))) THEN HOME:PRINT:A=AB\n150 ON AB GOTO 70,210,140\n160 ON B(VAL(W$),43320<J)/LOG(255<>AB%) GOTO 210,90,80,80:XY%=X-AB%\n170 IF (-127<=B(398,255)+X>VAL(\"HI\")/X) THEN 220:AB%=J:W$=W$\n180 B((10)>=(XY%)-((AB%+AB%)),1)=1E3:PRINT ((Z+J))*-A;N2$+N2$+MID$(W$,AB%,XY);RIGHT$(AB$,32767);\n190 GOTO 100:GOTO 90:FOR A=(-((((24<>X%))/((AB<>AB))))) TO (-((P%(XY%)<J)))\n200 AB$=\"TASC\":XY=AB\n210 IF (TAN(INT(J))) THEN Z=5:W$=\"\"+MID$(W$+AB$,XY*Z,B(XY%,M%)^24)\n220 PRINT NOT COS(SQR(A));-COS(5394),:AB%=X^((XY^XY))\n230 PRINT\n240 PRINT\n250 AB=SQR(3.14159)/((3.14159-M%))=NOT 646*-X%:X=M%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6076,
+ "obj_len": 1349,
+ "obj_sha256": "6fbec036dadb1adc2ec3457a3908fe6e335478577ee49fd1ff91fc93a3955ec1",
+ "cycles": 127962495,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6096
+  },
+  {
+   "line": 40,
+   "addr": 6096
+  },
+  {
+   "line": 50,
+   "addr": 6123
+  },
+  {
+   "line": 60,
+   "addr": 6132
+  },
+  {
+   "line": 70,
+   "addr": 6200
+  },
+  {
+   "line": 80,
+   "addr": 6206
+  },
+  {
+   "line": 90,
+   "addr": 6215
+  },
+  {
+   "line": 100,
+   "addr": 6263
+  },
+  {
+   "line": 110,
+   "addr": 6269
+  },
+  {
+   "line": 120,
+   "addr": 6302
+  },
+  {
+   "line": 130,
+   "addr": 6307
+  },
+  {
+   "line": 140,
+   "addr": 6319
+  },
+  {
+   "line": 150,
+   "addr": 6357
+  },
+  {
+   "line": 160,
+   "addr": 6370
+  },
+  {
+   "line": 170,
+   "addr": 6439
+  },
+  {
+   "line": 180,
+   "addr": 6518
+  },
+  {
+   "line": 190,
+   "addr": 6629
+  },
+  {
+   "line": 200,
+   "addr": 6632
+  },
+  {
+   "line": 210,
+   "addr": 6654
+  },
+  {
+   "line": 220,
+   "addr": 6748
+  },
+  {
+   "line": 230,
+   "addr": 6798
+  },
+  {
+   "line": 240,
+   "addr": 6801
+  },
+  {
+   "line": 250,
+   "addr": 6804
+  }
+ ],
+ "info": {
+  "HOME": "PRINT :A = AB",
+  "OBJECT FILE": "S015.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6076 - 7424",
+  "NUMERIC COMMON": "6064 - 6075",
+  "LOCAL VARIABLES": "7425 - 8082",
+  "HIGHEST MEMORY LOCATION": "8082"
+ }
+}

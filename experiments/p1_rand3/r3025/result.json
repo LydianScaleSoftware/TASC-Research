@@ -1,0 +1,78 @@
+{
+ "id": "r3025",
+ "key": "2b0dfdd78d38a842",
+ "source": "10 REM! INTEGER J,K\n20 DIM D(7)\n30 DEF FN F(Z)=N2%\n40 XY=D(RND(255)):READ A%:PRINT A%^((X/J))+A%,\"X Y\";-X;\n50 Y=COS(578 OR D(J))>LEN(MID$(XY$,D(1000),Q1%)):PRINT Y,:W$=STR$(Q1%)\n60 IF (1864) THEN CALL 2:X=20:K=K\n70 GOTO 90:D(-618*100)=SQR(Q1%):CALL 1\n80 IF (A%+42612) THEN IF (NOT ((K<>D(K)))/SIN(NOT 49152)) THEN K=-D(ASC(XY$)):K=NOT ((ABS(J)<.5)):PRINT A;\n90 X=-Q1:GOTO 60:D(798+Y)=FN F(Y)\n100 POKE LEN(\"\")*INT(127)<=ATN(32767 OR D(20)),A%:CALL RND(Z%/ASC(W$)):K=X+-A\n110 D(VAL(\"\"))=ATN(3692+Z%)>=X^((9164*J))\n120 CALL SIN(29911)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 989,
+ "obj_sha256": "e9fd475a02d867311811b7cd2711401f61a82cf373b10540f86ff67587238f4f",
+ "cycles": 101530635,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6094
+  },
+  {
+   "line": 50,
+   "addr": 6169
+  },
+  {
+   "line": 60,
+   "addr": 6250
+  },
+  {
+   "line": 70,
+   "addr": 6285
+  },
+  {
+   "line": 80,
+   "addr": 6315
+  },
+  {
+   "line": 90,
+   "addr": 6413
+  },
+  {
+   "line": 100,
+   "addr": 6452
+  },
+  {
+   "line": 110,
+   "addr": 6551
+  },
+  {
+   "line": 120,
+   "addr": 6605
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S008.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7052",
+  "LOCAL VARIABLES": "7053 - 7145",
+  "HIGHEST MEMORY LOCATION": "7145"
+ }
+}

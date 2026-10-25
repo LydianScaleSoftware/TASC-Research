@@ -1,0 +1,78 @@
+{
+ "id": "r3118",
+ "key": "3113a63a791d5584",
+ "source": "10 REM! INTEGER J\n20 DIM P(9),B%(10)\n30 J=A%:READ A$,A$,M%:PRINT ATN(Y<>127 OR C),SGN(N2%=Y),\n40 IF (SIN(AB%)) THEN AB%=Y:DATA X:M%=C\n50 X=SIN(M%)\n60 FOR X=(-C*32767) TO (A%*N2%+X):INVERSE\n70 M=N2%\n80 RETURN:PRINT Z$;M%;N2%;:IF (A%) THEN FOR M=(((X*.001>=Y))+1) TO (C>=127)\n90 ON AB% GOTO 120:IF (X AND X) THEN IF ((((AB%<J))*40)) THEN B%(N2%)=NOT M%:ON P(AB%) GOTO 20\n100 NEXT X:PLOT Y,N2%=ASC(A$):IF ((148*P(A%))) THEN 50\n110 DATA ,\n120 AB$=AB$+Z$:IF (J) THEN GOTO 50\n",
+ "options": {
+  "library": 4096,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 8109,
+ "obj_len": 543,
+ "obj_sha256": "b2bef803509b252d5cf7b57741e5106a3b0f05b4200c5758fcb0015edbfdd633",
+ "cycles": 90413081,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 8129
+  },
+  {
+   "line": 20,
+   "addr": 8129
+  },
+  {
+   "line": 30,
+   "addr": 8129
+  },
+  {
+   "line": 40,
+   "addr": 8195
+  },
+  {
+   "line": 50,
+   "addr": 8228
+  },
+  {
+   "line": 60,
+   "addr": 8237
+  },
+  {
+   "line": 70,
+   "addr": 8272
+  },
+  {
+   "line": 80,
+   "addr": 8278
+  },
+  {
+   "line": 90,
+   "addr": 8279
+  },
+  {
+   "line": 100,
+   "addr": 8351
+  },
+  {
+   "line": 110,
+   "addr": 8393
+  },
+  {
+   "line": 120,
+   "addr": 8401
+  }
+ ],
+ "info": {
+  "LIBRARY": "4096 - 8108",
+  "OBJECT FILE": "S016.OBJ",
+  "PROGRAM": "8109 - 8651",
+  "LOCAL VARIABLES": "8652 - 8759",
+  "HIGHEST MEMORY LOCATION": "8759"
+ }
+}

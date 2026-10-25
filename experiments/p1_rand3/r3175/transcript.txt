@@ -1,0 +1,135 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S005
+
+
+OBJECT CODE FILE:
+(DEFAULT S005.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION?
+
+*****BEGINNING PASS 1
+
+
+
+10  DIM D$(3),B(8)
+20  IF (((256 AND 38331)) + ((Y% = 596))
+ OR Y%) THEN  HCOLOR= 10 = M%: WAIT A +
+ - M%,( - ((((Y% = Z%)) + M)))
+30  FOR W = (((W + W >  = B% - X)) -  RN
+D (X)) TO (X + B%): DATA ,"A,B",300: GOT
+O 200
+40 A = ((615 * M%)) ^  - B(Z%) <  = (( -
+ Y% <  = ((B% = 1000))))
+50  GOSUB 150
+60 Z% = XY: VTAB 256 AND M%:M% = B%
+70 AB$ =  RIGHT$ (D$(Y%),A < 1000) + "X
+Y": GOSUB 150: READ W
+80  PLOT M% ^ B(M%) > 0 ^ X <  > 3 ^ B(M
+%) - ((B(24) AND M%)),XY
+90  SPEED=  EXP (40)
+100  HTAB B( - Z% <  =  - X): GOTO 170:B
+(((((Z% < B(Y%))) - ((B% - Y%)))) * X) =
+ Y% <  ATN (0 - 127)
+110  IF (309) THEN 90
+
+*****WARNING
+LINE NUMBER 110
+IGNORED
+
+: NEXT W
+
+
+
+
+*****WARNING
+LINE NUMBER 110
+IGNORED
+
+: RESTORE
+
+
+120 AB$ =  RIGHT$ (AB$,((Y% AND 3)) >  =
+ (2))
+130  VTAB  - M
+140  IF ( NOT  COS (X > 2)) THEN  FOR M
+= ((( NOT 24 <  - Z%)) * 24) TO ( NOT ((
+10 <  > B(Y%) - 1))): FOR W = ( LEN (B$)
+) TO (X): NEXT W
+150  IF ( -  SGN (M) <  = (( PEEK (B(180
+4)) = M))) THEN A = M%: FOR A = (M%) TO
+( SGN ( COS (XY))): PRINT M, LOG (100),
+160  FOR X = ( SIN (M)) TO ( RND ( SQR (
+ COS (A)))) STEP (XY * ((W <  = 255)) <
+ = X):D$(((B(Y%) OR W)) <  = 2) = "123"
+170  HCOLOR=  SQR (((37087 AND 2)) =  -
+B(65535)): PRINT
+180 A = (10 * Z% - ((B(Z%) - Z%))): IF (
+Y%) THEN  VTAB  ASC (AB$ + B$ + "TASC")
+190 M = XY:B% = ((Z% * M OR Z% - Y%)) >
+((20 * X <  > Z%)): COLOR= 40000
+200 A = 10: HLIN  LEN (AB$) > ((XY <  =
+A < 1000 + M%)),( NOT M - ((71 +  - 851)
+)) AT B%:B$ = B$
+210  IF ( COS (B(B%) + B(M%)) <  =  NOT
+1) THEN X = 2:D$(10 - ((M ^ M >  =  LEN
+("TASC")))) = D$( - 1): NEXT X
+220  SPEED=  - Z%: GOTO 200
+230 W = (((M% >  = B(3.14159))) * B%): R
+EAD B$,AB$: DATA 1,300,300
+240  GOTO 200:B(( NOT ((Z% < A)))) =  -
+Y%
+
+
+
+*****BEGINNING PASS 2
+
+
+......
+
+
+*****CODE GENERATION COMPLETE
+
+
+COMPILATION INFORMATION AND LINE NUMBER
+REFERENCE TABLE? YES
+
+
+SOURCE FILE: S005
+OBJECT FILE: S005.OBJ
+LIBRARY OCCUPIES 2051 - 6063
+PROGRAM OCCUPIES 6064 - 8000
+
+NO COMMON BLOCK
+
+LOCAL VARIABLES OCCUPY 8001 - 8102
+
+HIGHEST MEMORY LOCATION: 8102
+
+
+LINE# ADDR   LINE# ADDR   LINE# ADDR
+
+10    6084   20    6084   30    6170
+40    6238   50    6298   60    6301
+70    6328   80    6373   90    6454
+100   6463   110   6553   120   6561
+130   6588   140   6597   150   6706
+160   6797   170   6883   180   6922
+190   6994   200   7051   210   7141
+220   7251   230   7263   240   7312
+
+*****COMPILATION COMPLETE
+
+
+]?

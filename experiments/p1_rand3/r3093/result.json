@@ -1,0 +1,66 @@
+{
+ "id": "r3093",
+ "key": "9469048ae41e2db9",
+ "source": "10 DIM D$(10)\n20 POKE M,AB%<((482>661))<((AB%<(XY))):C%=X%:POKE RND(AB%) OR Y%,46091\n30 Z$=\"123\":SPEED=450:READ XY,A\n40 X%=EXP(A<XY):M=C\n50 GOTO 90:HCOLOR=C>((AB% OR X% AND X%)):A=Y%\n60 PRINT ((A>=AB%>=((C<>2))))/AB%^A^LEN(\"123\"),Y%-((C*M-100*C));Y$;\n70 TEXT:PRINT:FOR AB=(AB%-VAL(AB$)) TO (X%)\n80 HTAB 296:GR\n90 READ AB\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 575,
+ "obj_sha256": "3696bd3e06d3b497ef06188df6882bec20aaf6e2422219c5a84d48d821a27e01",
+ "cycles": 82657139,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6156
+  },
+  {
+   "line": 40,
+   "addr": 6189
+  },
+  {
+   "line": 50,
+   "addr": 6210
+  },
+  {
+   "line": 60,
+   "addr": 6219
+  },
+  {
+   "line": 70,
+   "addr": 6324
+  },
+  {
+   "line": 80,
+   "addr": 6353
+  },
+  {
+   "line": 90,
+   "addr": 6362
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S008.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6638",
+  "LOCAL VARIABLES": "6639 - 6709",
+  "HIGHEST MEMORY LOCATION": "6709"
+ }
+}

@@ -1,0 +1,145 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S001
+
+
+OBJECT CODE FILE:
+(DEFAULT S001.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION?
+
+*****BEGINNING PASS 1
+
+
+
+10
+RECOGNIZED  REM ! INTEGER K,J
+20  DIM D(3)
+30  ON B%(W%, NOT Z) * 0.1 GOSUB 220:A =
+ 256:A$ =  MID$ (A$,(K * A))
+40 P%(Z > ((41974 = 32767)) - 32767) = 0
+: GR :Q1$ =  MID$ (M$ + "TASC",J) + M$ +
+ "123"
+50 K = 3:AB = 100
+60 Y =  - Q1% + ((3 OR ((Y OR 305))))
+70  SPEED= A <  > AB
+80 J =  SGN (Z) =  LOG ( ASC (A$)):A$ =
+"TASC": IF (861) THEN C% = Y
+90  ON 2 GOTO 230,170
+100 A =  NOT B%(Z%,146) >  = C%: READ Z:
+B%(((((5808 > Z)) - Y)) * 1,((W - 255))
+/ ((((3.14159 <  > Y)) - W))) = AB < 2
+110 D(C%) =  NOT Q1% <  VAL ( STR$ (255)
+):AB = Z% >  = (Z <  = A)
+120  HCOLOR= AB: HTAB  VAL ( RIGHT$ ( MI
+D$ ("X Y",J,32767), PEEK (3))):B%(K,K >
+B%(5,24)) = (( LEN (M$) - ((1E3 <  = B%(
+J,W%))))) /  PEEK (K)
+130 Y = 32767
+140  PRINT Q1$,100; LEFT$ ( RIGHT$ (A$,C
+%), - Z%) + M$;
+150 J =  TAN ( SGN (414)):Z% = W: PRINT
+M$;
+160  VTAB K ^ K: FOR Z = (.5) TO (24 +
+NOT ((Q1% > Q1%))) STEP ( TAN (32767) AN
+D 127 - 20 >  =  VAL ("HI"))
+170 AB =  SQR (Z% - Q1% >  - A): GOTO 21
+0
+
+*****WARNING
+LINE NUMBER 170
+IGNORED
+
+: SPEED= Y
+
+
+180  IF (Y /  SQR (0.1)) THEN 150
+
+*****WARNING
+LINE NUMBER 180
+IGNORED
+
+: FOR J = (K) TO ( - 20)
+
+
+
+
+*****WARNING
+LINE NUMBER 180
+IGNORED
+
+: IF ( ATN (D(C%) AND K) +  TAN (Z > 875
+)) THEN  GR
+
+
+190  PRINT  COS ( INT (Z)) - ((((W% < D(
+Z%))) -  NOT J));Z%;: IF ( INT (10)) THE
+N 120:B%( PEEK (Z) <  > J,A -  INT (3))
+= ((W <  = Y)) / W > ((100 = 7)) ^ B%(C%
+,W%)
+200 AB = Q1% -  NOT ((Q1% AND W)):M$ = M
+$: WAIT C%,(Z)
+210  IF (J) THEN  PRINT  - Z;: DATA HI,-
+2.5,:Q1$ = M$
+220 Y = 100: IF (Z%) THEN  FOR W = ( VAL
+ ( STR$ (AB) + "" + A$)) TO (( - ((Z > D
+(.5)))))
+230 A = 39 +  SGN (224 <  = C%): CALL  S
+GN (47568 OR W% OR AB > W): READ A$
+240  PRINT 482;"TASC";M$,:D(Q1% <  = ((Y
+ - P%(K) >  =  - Y))) = (C% AND AB) -  N
+OT ((A + W)): ON 32767 GOTO 90
+
+
+
+*****BEGINNING PASS 2
+
+
+.....
+
+
+*****CODE GENERATION COMPLETE
+
+
+COMPILATION INFORMATION AND LINE NUMBER
+REFERENCE TABLE? YES
+
+
+SOURCE FILE: S001
+OBJECT FILE: S001.OBJ
+LIBRARY OCCUPIES 2051 - 6063
+PROGRAM OCCUPIES 6064 - 8044
+
+NO COMMON BLOCK
+
+LOCAL VARIABLES OCCUPY 8045 - 8383
+
+HIGHEST MEMORY LOCATION: 8383
+
+
+LINE# ADDR   LINE# ADDR   LINE# ADDR
+
+10    6084   20    6084   30    6084
+40    6132   50    6223   60    6235
+70    6268   80    6280   90    6340
+100   6351   110   6462   120   6513
+130   6636   140   6642   150   6684
+160   6708   170   6793   180   6823
+190   6839   200   7002   210   7041
+220   7079   230   7149   240   7206
+
+*****COMPILATION COMPLETE
+
+
+]?

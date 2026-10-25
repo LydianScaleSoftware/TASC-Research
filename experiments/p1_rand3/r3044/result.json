@@ -1,0 +1,78 @@
+{
+ "id": "r3044",
+ "key": "7814a67536d2d630",
+ "source": "10 REM! INTEGER I\n20 DIM A(6),P(3,2)\n30 AB=Q1%:Q1%=M OR 1000-((A%>=A%))\n40 X$=CHR$(Q1%):VTAB M:IF (RND(NOT ((0+Q1%)))) THEN RETURN:PRINT LEFT$(MID$(Z$,M),Q1<>65535)+Z$;\"HI\";((1.5+AB))^415;\n50 I=7:ON X%+((PEEK(A%) OR Q1)) GOTO 120,100,60:PRINT RIGHT$(XY$,5)+\"X Y\"+XY$+MID$(X$,A%);NOT 523<=279+A%>((1262 OR 39))*TAN(Q1);RIGHT$(\"123\",W);\n60 VTAB ASC(STR$(-28804)):PRINT X$,LEFT$(\"HI\",(NOT 40000));XY$+CHR$(A%)+\"X Y\";\n70 HLIN P(I,3),(Y%) AT SIN(A%^RND(42553)):COLOR=I-34421-AB^A(Y%)<ASC(XY$)*((Y%+M))\n80 ON W GOTO 20\n90 XY$=MID$(RIGHT$(\"HI\",AB)+Z$,X<=((7 AND Y%))):RESTORE\n100 XY$=STR$(A%/Y%*-I):W=X*((Y%>P(I,Q1%)-255))\n110 GET AB\n120 GOTO 20\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 954,
+ "obj_sha256": "cfe5dd7d0632aad0c6430c9c8d555aba2f1415a462253c0a3058db44f7010444",
+ "cycles": 101650498,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6111
+  },
+  {
+   "line": 50,
+   "addr": 6147
+  },
+  {
+   "line": 60,
+   "addr": 6310
+  },
+  {
+   "line": 70,
+   "addr": 6390
+  },
+  {
+   "line": 80,
+   "addr": 6483
+  },
+  {
+   "line": 90,
+   "addr": 6492
+  },
+  {
+   "line": 100,
+   "addr": 6542
+  },
+  {
+   "line": 110,
+   "addr": 6602
+  },
+  {
+   "line": 120,
+   "addr": 6608
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S010.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7017",
+  "LOCAL VARIABLES": "7018 - 7167",
+  "HIGHEST MEMORY LOCATION": "7167"
+ }
+}

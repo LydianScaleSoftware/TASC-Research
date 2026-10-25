@@ -1,0 +1,142 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S000
+
+
+OBJECT CODE FILE:
+(DEFAULT S000.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION?
+
+*****BEGINNING PASS 1
+
+
+
+10
+RECOGNIZED  REM ! INTEGER J,I
+20  DIM B$(9,4)
+30 C =  VAL (B$(I,A%)) * 436 <  = 100 *
+((M > 0)):C% = B%
+40  PRINT : GR
+50 B$((B),783) =  RIGHT$ ( STR$ (C%), -
+(0)): VTAB (( - Y% * 5)) ^ ((37269 + Q1
+= Y%))
+60 B$(((M *  NOT M)) ^ (7 - I),B <  =  I
+NT ( ASC ("X Y"))) = "HI": IF (A%) THEN
+190:A = J < 39 + I = C
+70 B$(B%,M AND  COS (A% OR 0)) =  LEFT$
+(B$( ABS (2), - B),A%)
+80  HLIN 100 ^ 39 < 40,(C%) AT M = (( LE
+N ("TASC") <  > Q1 * A)):Y% =  ABS (255)
+ = ((A% - Q1 >  - 10))
+90  IF ( VAL ( MID$ (C$,Y%,10) + "")) TH
+EN  RETURN
+100 Y$ =  CHR$ (C AND 1) +  MID$ ( MID$
+(Z$,255,10), EXP (684)): ON 10 * ((B% -
+A%)) >  LOG (B) ^ A GOTO 260: VTAB Q1 /
+ NOT  ABS (255)
+110 J = 39: FOR C = (C%) TO (Y%): PRINT
+ LEFT$ ( CHR$ ( - I),100);
+120 Y% = A:C% =  NOT B%: FOR B = (.001 +
+ 10) TO ((B)) STEP (M)
+130  NEXT B
+140 B$( SQR (B% >  = 42244),Y%) = "HI"
+150  ON C GOTO 130,90,290,130: SPEED= A%
+ >  = A%
+160  SPEED= A% <  = 65535
+170  HLIN 79,(J) AT  EXP (C%):Q1 = 1.5:C
+$ =  STR$ (I)
+180  FOR C = (20) TO ( LOG ( -  ASC ("HI
+")))
+190 C$ =  CHR$ ( RND (10 <  = B)): GOTO
+220
+
+*****WARNING
+LINE NUMBER 190
+IGNORED
+
+: CALL  INT (1.5 < 3) > (( ASC ("TASC")
+< I))
+
+
+200  PRINT (( LEN ("TASC") <  > ((I OR 1
+)))) + B,: PRINT
+210 Y% = C
+220 C% =  - 728 AND A: FOR J = ( ATN (23
+653) + (( ATN (5) OR C * B))) TO ( RND (
+Y%)) STEP ( SQR (692)):B = (B + C) / ((B
+ <  = A < ((Q1 > B))))
+230 B$( - B% = ((748 * A >  = ((M = Q1))
+)), LOG (((C% < J)) + 707 ^ 100)) = B$(1
+.5 < Q1,I - C%) + Y$ + "HI" +  CHR$ (327
+67):B = 3:Z$ = C$
+240  HCOLOR= Y% * (C) < (( VAL ("A") AND
+  NOT A%))
+250 C$ = Y$: HCOLOR= (20 <  = C%) OR 100
+0
+260  IF ( LOG ((A%) - 10)) THEN  PLOT M,
+M ^ M / 0 >  = M:A =  SGN ( LEN ( LEFT$
+(Y$,3)))
+270 B% = 127: HCOLOR= Q1 - B%: NEXT J
+280  PRINT (27041) >  RND (C),C%,: IF (1
+00) THEN Y% =  - B * ((A + Q1)) - ((1000
+ * Y% + ((C + J))))
+290 Y% = 100 - B <  = B%: GR : PRINT "12
+3" +  LEFT$ (B$(A%,52),J) +  MID$ ("A",J
+ <  = C%);Z$;
+
+
+
+*****BEGINNING PASS 2
+
+
+......
+
+
+*****CODE GENERATION COMPLETE
+
+
+COMPILATION INFORMATION AND LINE NUMBER
+REFERENCE TABLE? YES
+
+
+SOURCE FILE: S000
+OBJECT FILE: S000.OBJ
+LIBRARY OCCUPIES 2051 - 6063
+PROGRAM OCCUPIES 6064 - 8393
+
+NO COMMON BLOCK
+
+LOCAL VARIABLES OCCUPY 8394 - 8550
+
+HIGHEST MEMORY LOCATION: 8550
+
+
+LINE# ADDR   LINE# ADDR   LINE# ADDR
+
+10    6084   20    6084   30    6084
+40    6132   50    6138   60    6204
+70    6316   80    6382   90    6488
+100   6523   110   6627   120   6668
+130   6706   140   6711   150   6755
+160   6782   170   6794   180   6830
+190   6867   200   6888   210   6937
+220   6943   230   7056   240   7217
+250   7263   260   7290   270   7363
+280   7383   290   7463
+
+*****COMPILATION COMPLETE
+
+
+]?

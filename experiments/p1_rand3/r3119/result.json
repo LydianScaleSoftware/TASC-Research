@@ -1,0 +1,92 @@
+{
+ "id": "r3119",
+ "key": "e819cd81559b45db",
+ "source": "10 REM! INTEGER I\n20 REM! DEFCOMMON W,X,W$\n30 Z$=\"TASC\":GOSUB 70\n40 PRINT\n50 M%=B:B=M%*((X=PEEK(Z%)))\n60 IF (Z) THEN B$(0.1)=LEFT$(\"123\",-1>1000*M%)\n70 PRINT SQR(B);((B OR I))-Z%-((43672+W=-B)),:INPUT \"Q\";B\n80 Z%=W\n90 IF (-LEN(LEFT$(B$(C%),I))) THEN 130:GOTO 40:GR\n100 PRINT C%,X;B,\n110 B=TAN(-C%^B):PRINT Z$;\n120 Z$=RIGHT$(CHR$(1+X),(X%)<=((Z%<=1.5))):IF (20+((C%-Z%<COS(C%)))) THEN DATA :HCOLOR=I\n130 IF (7) THEN PRINT:B$(B+INT(40>=5))=\"HI\":ON -I GOTO 30\n140 HCOLOR=10:Z$=B$(NOT ((-M%))):I=-2+Z^20*((N2-N2))\n150 X=SGN(M%)<Z^(39):HTAB ((.001*I+((100 AND 3))))^((-326 AND -W)):W=Z\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6076,
+ "obj_len": 990,
+ "obj_sha256": "e6ef43c7b93da5d48610ca8b375adc1af203cfbb5e530052af772fe3a9ce84b1",
+ "cycles": 110498056,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6096
+  },
+  {
+   "line": 40,
+   "addr": 6115
+  },
+  {
+   "line": 50,
+   "addr": 6118
+  },
+  {
+   "line": 60,
+   "addr": 6145
+  },
+  {
+   "line": 70,
+   "addr": 6201
+  },
+  {
+   "line": 80,
+   "addr": 6283
+  },
+  {
+   "line": 90,
+   "addr": 6289
+  },
+  {
+   "line": 100,
+   "addr": 6317
+  },
+  {
+   "line": 110,
+   "addr": 6341
+  },
+  {
+   "line": 120,
+   "addr": 6368
+  },
+  {
+   "line": 130,
+   "addr": 6442
+  },
+  {
+   "line": 140,
+   "addr": 6500
+  },
+  {
+   "line": 150,
+   "addr": 6562
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6076 - 7065",
+  "NUMERIC COMMON": "6064 - 6073",
+  "STRING COMMON": "6074 - 6075",
+  "LOCAL VARIABLES": "7066 - 7124",
+  "HIGHEST MEMORY LOCATION": "7124"
+ }
+}

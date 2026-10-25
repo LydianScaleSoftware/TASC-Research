@@ -1,0 +1,86 @@
+{
+ "id": "r3026",
+ "key": "8009ef558e779292",
+ "source": "10 REM! INTEGER I\n20 IF (36374) THEN IF (Z%) THEN POKE A%,839/((C OR 338))*Q1:IF (36081) THEN 110\n30 PRINT ((I*Q1>=X%))-601,\"X Y\",:READ X%:IF (ATN(-Q1)) THEN 80\n40 X%=((148<=LEN(A$)))/-((AB-Z%)):GOTO 60:A$=\"X Y\"\n50 COLOR=I:PRINT RND(Z%^((AB+X)));-PEEK(-X%);SIN(INT(A%))=AB^3*Z%,:AB=AB-C\n60 N2$=CHR$(32767)\n70 A%=C:PRINT\n80 INVERSE:ON C GOTO 90,40,130,100:SPEED=42685+LEN(RIGHT$(\"\",I))\n90 PRINT MID$(N2$,0);C,\n100 X=NOT ((C/AB-C%))\n110 PRINT X%*((Z% AND 25577));MID$(LEFT$(STR$(I),Q1>65535),SIN(Q1),N2-SQR(A%));-C%+C-((A%>=Q1));:Q1=0+255:IF (PEEK(Q1)<N2) THEN I=N2\n120 IF (X>=10-0) THEN 20:FOR AB=(100*X) TO (X+(X+34088))\n130 READ N2:GOSUB 50:I=LEN(N2$+A$+LEFT$(N2$,128))\n140 GOSUB 50\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1007,
+ "obj_sha256": "6f7bbabaa7cb7acf0de30b5c2c102b1a0f8071e59d439a6e706d7b1e4ae8046e",
+ "cycles": 109979906,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6132
+  },
+  {
+   "line": 40,
+   "addr": 6199
+  },
+  {
+   "line": 50,
+   "addr": 6247
+  },
+  {
+   "line": 60,
+   "addr": 6334
+  },
+  {
+   "line": 70,
+   "addr": 6343
+  },
+  {
+   "line": 80,
+   "addr": 6352
+  },
+  {
+   "line": 90,
+   "addr": 6397
+  },
+  {
+   "line": 100,
+   "addr": 6418
+  },
+  {
+   "line": 110,
+   "addr": 6441
+  },
+  {
+   "line": 120,
+   "addr": 6572
+  },
+  {
+   "line": 130,
+   "addr": 6589
+  },
+  {
+   "line": 140,
+   "addr": 6634
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S009.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7070",
+  "LOCAL VARIABLES": "7071 - 7121",
+  "HIGHEST MEMORY LOCATION": "7121"
+ }
+}

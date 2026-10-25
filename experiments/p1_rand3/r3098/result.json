@@ -1,0 +1,86 @@
+{
+ "id": "r3098",
+ "key": "a18d9cb9fefa618a",
+ "source": "10 DIM P%(2),A%(10)\n20 DEF FN F(Z)=RND(234)<=ASC(XY$+\"123\")\n30 GOTO 50:ON FN F(N2%) GOTO 40,50:GOSUB 20\n40 A$=XY$+XY$+A$\n50 A=NOT ((Q1%=B)):A$=\"HI\":GET A$\n60 PRINT XY%;\"HI\"+MID$(XY$,A%(Y%))+\"\",:B=XY%/XY%\n70 PRINT LEFT$(AB$+AB$+\"123\",((C AND Q1%))^((20<>C)));\n80 ON ABS(-20)*A GOTO 70,60\n90 PRINT ((XY%<>XY%<>32767))-((N2%>=C));MID$(AB$+\"\",Q1% OR 127,FN F(B))+A$;\n100 HLIN Q1%/B,(Q1) AT .001+C:A=AB:READ A\n110 PRINT NOT Q1%;TAN(N2%)*((39+N2%))<A,TAN(-40)+XY%;\n120 SPEED=N2% AND 40:HPLOT 955,(N2%*Q1) TO A,(B)\n130 PRINT AB$+XY$,0.1;\"TASC\";\n140 Q1%=17\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 921,
+ "obj_sha256": "42d8359c741c3df94e0564b4cc0eabfbba5005de9dbdf5cdd745523b5b8d8624",
+ "cycles": 100555940,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6133
+  },
+  {
+   "line": 40,
+   "addr": 6136
+  },
+  {
+   "line": 50,
+   "addr": 6157
+  },
+  {
+   "line": 60,
+   "addr": 6192
+  },
+  {
+   "line": 70,
+   "addr": 6251
+  },
+  {
+   "line": 80,
+   "addr": 6311
+  },
+  {
+   "line": 90,
+   "addr": 6334
+  },
+  {
+   "line": 100,
+   "addr": 6430
+  },
+  {
+   "line": 110,
+   "addr": 6466
+  },
+  {
+   "line": 120,
+   "addr": 6526
+  },
+  {
+   "line": 130,
+   "addr": 6568
+  },
+  {
+   "line": 140,
+   "addr": 6608
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S013.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6984",
+  "LOCAL VARIABLES": "6985 - 7071",
+  "HIGHEST MEMORY LOCATION": "7071"
+ }
+}

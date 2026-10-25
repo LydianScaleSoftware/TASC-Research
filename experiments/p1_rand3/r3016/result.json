@@ -1,0 +1,74 @@
+{
+ "id": "r3016",
+ "key": "abbebbc5661169b6",
+ "source": "10 DIM P(5)\n20 IF (273) THEN P(Y%)=B OR W*B\n30 IF (RND(ASC(\"TASC\"))-NOT ((10*Y))) THEN CALL 255>=5\n40 READ M$\n50 GOSUB 60:COLOR=7:Y=XY%\n60 P(((1-23711))*255<>AB%+0)=SIN(255):M%=COS((32767))*P(M%):ON M% GOSUB 110\n70 CALL VAL(B$):FOR B=(Y%) TO (AB%) STEP (-((AB%<(P(M%)))))\n80 PRINT NOT ((B-((AB<>P(M%))))),AB% OR B AND B-AB%,\n90 P(ASC(\"X Y\"))=P(((AB% OR XY%))^((Y+P(Y%)))):B$=Z$\n100 B=COS(M%):W=-ASC(RIGHT$(\"X Y\",Y%)):HCOLOR=XY%\n110 FOR A=((AB%)) TO (AB%) STEP (NOT M%):A=256>Y\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 756,
+ "obj_sha256": "b4b702268fa6362dbe4c7f437ff3f2ca69e8520b6a4e08182b32407fda802b37",
+ "cycles": 99528365,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6113
+  },
+  {
+   "line": 40,
+   "addr": 6171
+  },
+  {
+   "line": 50,
+   "addr": 6177
+  },
+  {
+   "line": 60,
+   "addr": 6192
+  },
+  {
+   "line": 70,
+   "addr": 6261
+  },
+  {
+   "line": 80,
+   "addr": 6302
+  },
+  {
+   "line": 90,
+   "addr": 6355
+  },
+  {
+   "line": 100,
+   "addr": 6418
+  },
+  {
+   "line": 110,
+   "addr": 6463
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S016.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6819",
+  "LOCAL VARIABLES": "6820 - 6893",
+  "HIGHEST MEMORY LOCATION": "6893"
+ }
+}

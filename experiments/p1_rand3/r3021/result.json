@@ -1,0 +1,90 @@
+{
+ "id": "r3021",
+ "key": "1619714fd3f8a962",
+ "source": "10 REM! INTEGER J,I\n20 DIM B$(6,4)\n30 DEF FN F(T)=LEN(A$)\n40 IF (((J>=3235<>ATN(256)))/((SQR(M)<>XY%))) THEN 110:GOSUB 140\n50 FOR W=(LOG(M>=M) OR SGN(A)=ATN(1)) TO (45574):PRINT:N2$=LEFT$(\"X Y\",EXP(-I))\n60 A%(J)=W<23161:IF (NOT 6045) THEN 150:PRINT TAN(((1000 OR M))+1E3),A%(TAN(J));((NOT A%(XY%) OR Y))+Y;\n70 POKE 0.1 OR -2.25<=I,-((Z%+((2.25+B))))\n80 PRINT ABS(W*Z%*M);W,:PRINT INT(B>=J) OR X%;:FOR M=(Z%>=A) TO (.001<Y+M) STEP (Y%)\n90 PLOT FN F(M),J=B:NEXT M\n100 N2$=A$:X%=Y\n110 NEXT W:Y=A%(W/65535<>I):IF (SQR(-J-7)) THEN IF (((2+A%(I) OR A%(24)^X%))*A%(100)) THEN 130\n120 J=J^W-0\n130 READ I,XY%:B=COS(NOT J):N2$=C$\n140 B$(X%,ASC(N2$+P$(XY%)))=LEFT$(\"123\",X%-155)+\"\"\n150 GOSUB 100:ON 738+ASC(\"TASC\")=24932 GOTO 100,80:GOTO 60\n",
+ "options": {
+  "library": null,
+  "program": 20480,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 20480,
+ "obj_len": 1128,
+ "obj_sha256": "2b95405e68ea56700adfd80502b194b4b27e345be393e7578800abec84482df7",
+ "cycles": 110277681,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 20500
+  },
+  {
+   "line": 20,
+   "addr": 20500
+  },
+  {
+   "line": 30,
+   "addr": 20500
+  },
+  {
+   "line": 40,
+   "addr": 20516
+  },
+  {
+   "line": 50,
+   "addr": 20565
+  },
+  {
+   "line": 60,
+   "addr": 20654
+  },
+  {
+   "line": 70,
+   "addr": 20686
+  },
+  {
+   "line": 80,
+   "addr": 20722
+  },
+  {
+   "line": 90,
+   "addr": 20805
+  },
+  {
+   "line": 100,
+   "addr": 20831
+  },
+  {
+   "line": 110,
+   "addr": 20843
+  },
+  {
+   "line": 120,
+   "addr": 20961
+  },
+  {
+   "line": 130,
+   "addr": 20982
+  },
+  {
+   "line": 140,
+   "addr": 21012
+  },
+  {
+   "line": 150,
+   "addr": 21072
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "OBJECT FILE": "S004.OBJ",
+  "PROGRAM": "20480 - 21607",
+  "LOCAL VARIABLES": "21608 - 21781",
+  "HIGHEST MEMORY LOCATION": "21781"
+ }
+}

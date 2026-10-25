@@ -1,0 +1,86 @@
+{
+ "id": "r3070",
+ "key": "7769bcb8e0ffeedd",
+ "source": "10 REM! INTEGER J,I\n20 DIM D(4)\n30 Z=LEN(X$):IF (40) THEN 140:D(20)=-((Z<3>LOG(65535)))\n40 X$=AB$\n50 PRINT STR$(I*((A>=M)));0.1,100;\n60 Z=B/INT(0):IF (Z%/LEN(AB$) OR LOG(N2%)) THEN 20\n70 B=LEN(Y$):IF (D(J)=AB<D(946)>=ATN((Q1%))) THEN ON ((Q1%))/((((.001 AND A))<((J<=D(I))))) GOTO 90:D(((N2%<M*Q1%))-((J+((J<89)))))=AB\n80 AB=A<>((N2% OR Q1%))\n90 M=2.25\n100 N2%=A:I=A/B\n110 READ A,Q1%:PRINT AB$+\"HI\"+X$+AB$+\"HI\";Y$;\n120 FOR A=(-((XY%+Z%))) TO (2.25-Q1%^EXP(813)):GOSUB 120\n130 Z=20-Q1%:ROT=48897\n140 READ AB$\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 879,
+ "obj_sha256": "547ce1ae3ca763e2555a6bb5ee714d9f6a4c8a43f31b3bd0936e820a3b8b95e7",
+ "cycles": 102546111,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6143
+  },
+  {
+   "line": 50,
+   "addr": 6149
+  },
+  {
+   "line": 60,
+   "addr": 6182
+  },
+  {
+   "line": 70,
+   "addr": 6226
+  },
+  {
+   "line": 80,
+   "addr": 6369
+  },
+  {
+   "line": 90,
+   "addr": 6390
+  },
+  {
+   "line": 100,
+   "addr": 6396
+  },
+  {
+   "line": 110,
+   "addr": 6411
+  },
+  {
+   "line": 120,
+   "addr": 6478
+  },
+  {
+   "line": 130,
+   "addr": 6516
+  },
+  {
+   "line": 140,
+   "addr": 6531
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S002.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6942",
+  "LOCAL VARIABLES": "6943 - 7015",
+  "HIGHEST MEMORY LOCATION": "7015"
+ }
+}

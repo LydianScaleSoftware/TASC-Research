@@ -1,0 +1,70 @@
+{
+ "id": "r3085",
+ "key": "0f3a23e41af1648b",
+ "source": "10 REM! INTEGER I,K\n20 DIM D(11)\n30 READ W,C:FOR K=(-.5) TO (B*((C%>((N2%=B)))))\n40 PRINT Z$;\"X Y\",ATN((I))=A;:A%=K\n50 C=20+D(448)<=A%^K\n60 W=127:C=-((NOT ((-242))))\n70 WAIT EXP(TAN(A) AND ((111 OR W))),((LEN(\"\")+SQR(658))),(B%):PRINT LEN(\"HI\");W*I-(NOT N2%);D(N2%);:RETURN\n80 INVERSE:W=(.001+I)-((N2>=C))\n90 XY$=LEFT$(XY$,40*B-((N2<=I))):PRINT:PLOT N2%,-A<=N2%\n100 XY$=AB$\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 686,
+ "obj_sha256": "4e13d8cfe4bc7040a521bc98756b18b40da4ba5f2a7c82d6385d6d9c07cfad58",
+ "cycles": 92532959,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6131
+  },
+  {
+   "line": 50,
+   "addr": 6176
+  },
+  {
+   "line": 60,
+   "addr": 6209
+  },
+  {
+   "line": 70,
+   "addr": 6232
+  },
+  {
+   "line": 80,
+   "addr": 6343
+  },
+  {
+   "line": 90,
+   "addr": 6370
+  },
+  {
+   "line": 100,
+   "addr": 6424
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6749",
+  "LOCAL VARIABLES": "6750 - 6859",
+  "HIGHEST MEMORY LOCATION": "6859"
+ }
+}

@@ -1,0 +1,122 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S015
+
+
+OBJECT CODE FILE:
+(DEFAULT S015.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION?
+
+*****BEGINNING PASS 1
+
+
+
+10
+RECOGNIZED  REM ! INTEGER I,K
+20  DEF  FN F(Z) =  LOG (Y OR W) * 10
+30 W =  INT (Y <  > K) + 39:X% =  EXP (
+COS (Y)):N2$ = "TASC" +  CHR$ (836)
+40  HCOLOR= M% < C + K <  >  NOT 100 - Y
+: HCOLOR= ((B /  ABS (7))) ^ Y:K = 7 <
+> Z
+50 W% = ((K <  > 7390 OR  - B)) ^ ((K *
+32767 * ((B < X%))))
+60  VTAB  - ((Z = W)) + 2: HOME : READ M
+$
+70  IF (M%) THEN Y% = B:M$ =  STR$ (2335
+):I = 9330 * Y% >  = M%
+80 N2$ = Z$:Z$ = M$ + M$ +  LEFT$ ("X Y"
+,W% + M%)
+90  FOR C = (B) TO ( - ((I + C)) OR ((B
+OR I))) STEP ( TAN (K > ((21645 > Y%))))
+
+100 B = C:C =  - ((I >  = ((7 >  = B))))
+
+110 W = C <  > M%: DATA "A,B",X,HI: IF (
+ PEEK (39) - I ^ ((M% > W))) THEN M% = (
+(I / 100 >  = ((Z < 255)))) - ((X% OR 25
+6))
+120  INPUT "Q";Y:Z$ = Z$
+130  NEXT C: GOSUB 220: HLIN Z /  ASC (N
+2$),( COS ( FN F(65535 + 0))) AT  SIN (3
+2767 OR 10)
+140 Z$ =  MID$ (M$, FN F( ASC (N2$)))
+150  PRINT :Z$ =  LEFT$ (N2$,Z + 2):K =
+W ^ Y / K
+160  HCOLOR= Z * ((((B AND 26768)) / ((W
+ >  = Y)))):W% =  NOT (( NOT  LOG (B)))
+170  HOME
+180 W =  - C ^ Y - 20635
+190  IF (10) THEN  FOR I = (.5) TO (K)
+200 X% =  FN F( INT (24 AND Z))
+210  HTAB  SIN (B) = W
+220  HCOLOR= W: PRINT Y% * ((1 = M%)) >
+ = C;"HI",
+230 C = X%
+240  COLOR= 127: READ W%
+250  IF (((Y% <  ASC ("TASC"))) - ((Y OR
+ 962))) THEN  PRINT Z$ + "123",: HTAB  R
+ND ( SQR (K)) <  >  - B - ((Y > Y%)): IF
+ (Y%) THEN 250
+260  HCOLOR=  VAL ("TASC") +  LEN ("X Y"
+ + N2$):X% = K < Z +  ASC (Z$)
+270  FOR C = (X%) TO (Y + ((C OR 557))):
+Y% = W: READ Y%
+280 Z$ =  STR$ ( - W ^  - I): END
+
+
+
+*****BEGINNING PASS 2
+
+
+.....
+
+
+*****CODE GENERATION COMPLETE
+
+
+COMPILATION INFORMATION AND LINE NUMBER
+REFERENCE TABLE? YES
+
+
+SOURCE FILE: S015
+OBJECT FILE: S015.OBJ
+LIBRARY OCCUPIES 2051 - 6063
+PROGRAM OCCUPIES 6064 - 7835
+
+NO COMMON BLOCK
+
+LOCAL VARIABLES OCCUPY 7836 - 7897
+
+HIGHEST MEMORY LOCATION: 7897
+
+
+LINE# ADDR   LINE# ADDR   LINE# ADDR
+
+10    6084   20    6084   30    6106
+40    6161   50    6233   60    6290
+70    6317   80    6355   90    6406
+100   6465   110   6492   120   6598
+130   6626   140   6682   150   6703
+160   6742   170   6789   180   6792
+190   6819   200   6844   210   6865
+220   6880   230   6924   240   6930
+250   6942   260   7063   270   7136
+280   7174
+
+*****COMPILATION COMPLETE
+
+
+]?

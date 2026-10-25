@@ -1,0 +1,86 @@
+{
+ "id": "r3132",
+ "key": "c3e3c820f4fe270b",
+ "source": "10 XY=AB\n20 Z$=XY$:GOTO 80:END\n30 N2=A%<=((VAL(\"123\")<>Z))\n40 X%=AB%<>NOT ((897 AND 40000)):AB=LOG(AB%)+((255-X%=X))\n50 ON Z%>AB%<=AB+N2<>(INT(A%)) GOTO 80\n60 Z%=XY\n70 IF (N2) THEN X%=Z*AB%\n80 HTAB N2:N2=255\n90 PRINT XY$;SIN(A%),:CALL A%\n100 RESTORE:PRINT:PRINT VAL(STR$(XY)+CHR$(Z)),AB%;AB%>((X AND 255<=X)),\n110 ON 49152 GOTO 120,80:AB%=36491:IF (ABS(AB%)) THEN 20\n120 AB=AB:XY$=XY$:IF (49152) THEN 110\n130 HTAB .001\n140 VTAB -791:ON NOT ATN(AB%) GOTO 40:VTAB -((-((413 OR AB%))))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 662,
+ "obj_sha256": "ba84817f41a7b18a12312ef63f66c72b18ed2bf6b223d3d0472f0f7d18ca6dc0",
+ "cycles": 93418151,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6090
+  },
+  {
+   "line": 30,
+   "addr": 6099
+  },
+  {
+   "line": 40,
+   "addr": 6129
+  },
+  {
+   "line": 50,
+   "addr": 6183
+  },
+  {
+   "line": 60,
+   "addr": 6228
+  },
+  {
+   "line": 70,
+   "addr": 6234
+  },
+  {
+   "line": 80,
+   "addr": 6251
+  },
+  {
+   "line": 90,
+   "addr": 6263
+  },
+  {
+   "line": 100,
+   "addr": 6287
+  },
+  {
+   "line": 110,
+   "addr": 6356
+  },
+  {
+   "line": 120,
+   "addr": 6386
+  },
+  {
+   "line": 130,
+   "addr": 6406
+  },
+  {
+   "line": 140,
+   "addr": 6412
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S013.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6725",
+  "LOCAL VARIABLES": "6726 - 6769",
+  "HIGHEST MEMORY LOCATION": "6769"
+ }
+}

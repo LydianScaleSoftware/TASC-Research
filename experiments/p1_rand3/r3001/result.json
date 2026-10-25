@@ -1,0 +1,92 @@
+{
+ "id": "r3001",
+ "key": "c822c3cd5eaac8ec",
+ "source": "10 REM! INTEGER J\n20 REM! DEFCOMMON Z$,AB$,Y%\n30 PRINT Z,Z%,100;:CALL -((((661<=0))+XY))\n40 Y%=.001<=573 OR XY\n50 PRINT RIGHT$(AB$,(40));:AB$=AB$+Z$\n60 Y=XY%:STOP:J=2\n70 AB$=AB$+M$:GOTO 30\n80 X=LEN(AB$+Z$)\n90 IF (-((((N2%>=Y))+X))) THEN PRINT AB$;\"X Y\";:IF (((.001 OR J))^1000+EXP(127*Y%)) THEN J=Y-SQR(X)>=((2.25=Y%+XY))\n100 XY%=Z:XY=-((24<Y%<24))\n110 IF (3) THEN XY%=Y-X>=X<NOT ((J OR 20)):PRINT:ROT=Y%\n120 GOTO 40:GOSUB 40\n130 C=((Y OR Z%^XY))*8945:READ J,XY\n140 XY%=((C AND N2%))+((C=Y%)) AND LEN(M$)+Y%^XY\n150 ON XY GOTO 120,150,20:Z%=NOT ((3.14159=0<=X)):X=758\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6070,
+ "obj_len": 924,
+ "obj_sha256": "9daebe5c06c8c0ca0d1a8ad9a1ac567b38c0d471f160e603c5de9d71964c0d1e",
+ "cycles": 107266322,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6090
+  },
+  {
+   "line": 40,
+   "addr": 6132
+  },
+  {
+   "line": 50,
+   "addr": 6150
+  },
+  {
+   "line": 60,
+   "addr": 6177
+  },
+  {
+   "line": 70,
+   "addr": 6192
+  },
+  {
+   "line": 80,
+   "addr": 6210
+  },
+  {
+   "line": 90,
+   "addr": 6231
+  },
+  {
+   "line": 100,
+   "addr": 6347
+  },
+  {
+   "line": 110,
+   "addr": 6374
+  },
+  {
+   "line": 120,
+   "addr": 6430
+  },
+  {
+   "line": 130,
+   "addr": 6433
+  },
+  {
+   "line": 140,
+   "addr": 6466
+  },
+  {
+   "line": 150,
+   "addr": 6523
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6070 - 6993",
+  "NUMERIC COMMON": "6064 - 6065",
+  "STRING COMMON": "6066 - 6069",
+  "LOCAL VARIABLES": "6994 - 7035",
+  "HIGHEST MEMORY LOCATION": "7035"
+ }
+}

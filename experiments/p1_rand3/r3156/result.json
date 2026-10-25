@@ -1,0 +1,82 @@
+{
+ "id": "r3156",
+ "key": "a4bd2ab530acc4ad",
+ "source": "10 REM! INTEGER J,I\n20 DIM P%(9)\n30 DEF FN F(T)=ABS(A%(B%)+I)^X%\n40 PRINT X$+RIGHT$(MID$(\"123\",Y),3);NOT N2%,W-((7<((39 OR I))));:P%(COS(5*N2%)>=COS(NOT W))=I\n50 COLOR=24:X%=COS(X)-((20 AND J OR C>=X))\n60 VTAB COS(M<>M=((J>=X%)))\n70 IF (J) THEN IF (1000) THEN PRINT:A$=\"123\":DATA 300,-2.5\n80 PRINT Y>=6478;X;J,:FOR J=(B%-N2%^NOT X%) TO (127)\n90 PRINT ASC(X$),44889;\n100 P%(A%(C%+P%(127))-X)=LEN(RIGHT$(N2$+\"TASC\",1))\n110 SPEED=SGN(SQR(C%>C)):X$=\"\"\n120 FOR J=(B%+C) TO (I/P%(J)):HCOLOR=((N2%>=M))-((M=3))*((W<>5))\n130 I=M:POKE 255+((N2%=40))=.001,B%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 987,
+ "obj_sha256": "5b7ef9b0c04145b249ca33e25846101000785e35c340d711e95c1af9a62a101e",
+ "cycles": 102261977,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6115
+  },
+  {
+   "line": 50,
+   "addr": 6226
+  },
+  {
+   "line": 60,
+   "addr": 6277
+  },
+  {
+   "line": 70,
+   "addr": 6310
+  },
+  {
+   "line": 80,
+   "addr": 6359
+  },
+  {
+   "line": 90,
+   "addr": 6415
+  },
+  {
+   "line": 100,
+   "addr": 6433
+  },
+  {
+   "line": 110,
+   "addr": 6497
+  },
+  {
+   "line": 120,
+   "addr": 6527
+  },
+  {
+   "line": 130,
+   "addr": 6598
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S003.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7050",
+  "LOCAL VARIABLES": "7051 - 7150",
+  "HIGHEST MEMORY LOCATION": "7150"
+ }
+}

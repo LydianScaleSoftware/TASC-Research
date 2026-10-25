@@ -1,0 +1,87 @@
+{
+ "id": "r3121",
+ "key": "0289cd34c98cdc44",
+ "source": "10 REM! INTEGER K\n20 REM! DEFCOMMON AB%,C,Y%\n30 DIM A%(7,11)\n40 GOTO 80\n50 DATA X,HI,:Y%=ATN(-Z%):Z=C\n60 CALL NOT W\n70 HLIN AB%,(N2) AT ((K-Q1))^P%(W%)>=W%:K=((((Z%>=41067))-709))*((W% OR W%))^((Z%-Y%))\n80 AB%=-((NOT ((-W%))))\n90 C=879\n100 PRINT RIGHT$(XY$,INT(1000)-((1E3+Z%))),LOG(2);\n110 FOR Z=(5) TO (W):AB%=-AB%^K^((24=936)):C=20\n120 IF (10) THEN 90:Y$=\"\":Y%=K\n130 FOR N2=(N2) TO (-((-((3<Q1))))):GOSUB 90:VTAB P%(K)\n140 VTAB ((255 AND C))-((AB%+W%))>=K*N2+((26979-32767))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6073,
+ "obj_len": 815,
+ "obj_sha256": "43f11596212b01adcbbe2d27e0e52f6e98c4f1255e143f527a8adc7e27ec988f",
+ "cycles": 100060233,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6093
+  },
+  {
+   "line": 40,
+   "addr": 6093
+  },
+  {
+   "line": 50,
+   "addr": 6096
+  },
+  {
+   "line": 60,
+   "addr": 6129
+  },
+  {
+   "line": 70,
+   "addr": 6138
+  },
+  {
+   "line": 80,
+   "addr": 6240
+  },
+  {
+   "line": 90,
+   "addr": 6259
+  },
+  {
+   "line": 100,
+   "addr": 6265
+  },
+  {
+   "line": 110,
+   "addr": 6307
+  },
+  {
+   "line": 120,
+   "addr": 6369
+  },
+  {
+   "line": 130,
+   "addr": 6395
+  },
+  {
+   "line": 140,
+   "addr": 6436
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S002.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6073 - 6887",
+  "NUMERIC COMMON": "6064 - 6072",
+  "LOCAL VARIABLES": "6888 - 7141",
+  "HIGHEST MEMORY LOCATION": "7141"
+ }
+}

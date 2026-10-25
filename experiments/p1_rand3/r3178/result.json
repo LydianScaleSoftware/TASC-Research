@@ -1,0 +1,78 @@
+{
+ "id": "r3178",
+ "key": "4ef217a28a2ff4f8",
+ "source": "10 REM! INTEGER K,J\n20 HTAB AB%\n30 READ W%:PRINT K^((X+360));MID$(\"123\",((J>=20))+W%^K);\n40 PRINT:A$(325*K)=Z$+STR$(24):IF (-((TAN(C)/C))) THEN 110\n50 IF (W) THEN GOSUB 80:READ Z%\n60 GOSUB 30\n70 VTAB LEN(\"TASC\"):W=Q1\n80 Z%=ASC(\"TASC\")\n90 GOSUB 30:FOR J=(W) TO (INT(.001+45017/J)):VTAB AB%<=AB\n100 AB%=-5*((65535=AB%<>C*732))\n110 VTAB 1.5<>1000<((X>=Q1))=872:GOTO 50:INPUT B$,B$,B$\n120 GOSUB 50:PRINT CHR$(W);W;K;:A$=MID$(B$,W)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 725,
+ "obj_sha256": "a9cd6db9d843a6c85e4d8e11827557198298d190c4f4554e20c98a8239fd8585",
+ "cycles": 91277114,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6090
+  },
+  {
+   "line": 40,
+   "addr": 6153
+  },
+  {
+   "line": 50,
+   "addr": 6208
+  },
+  {
+   "line": 60,
+   "addr": 6225
+  },
+  {
+   "line": 70,
+   "addr": 6228
+  },
+  {
+   "line": 80,
+   "addr": 6253
+  },
+  {
+   "line": 90,
+   "addr": 6272
+  },
+  {
+   "line": 100,
+   "addr": 6313
+  },
+  {
+   "line": 110,
+   "addr": 6352
+  },
+  {
+   "line": 120,
+   "addr": 6391
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S008.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6788",
+  "LOCAL VARIABLES": "6789 - 6861",
+  "HIGHEST MEMORY LOCATION": "6861"
+ }
+}

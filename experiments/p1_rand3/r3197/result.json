@@ -1,0 +1,93 @@
+{
+ "id": "r3197",
+ "key": "4d9a73fafa8f8363",
+ "source": "10 REM! INTEGER J,I\n20 REM! USECOMMON J,XY,M$\n30 DIM D%(12)\n40 DEF FN F(X)=SQR(Z^I+((20+32767)))\n50 DATA \"A,B\",1\n60 FOR C=(454-W%) TO (9115) STEP (888):M$=B$:NEXT C\n70 RESUME\n80 I=NOT Q1%-FN F(C) OR NOT J:VTAB NOT ((SGN(J)<I))\n90 Q1$=Q1$+M$:PRINT 1000<>INT(127+40);STR$(0<=C>M);:IF (Z) THEN IF (C=M) THEN 110\n100 B$=CHR$(B%(W%)*I)+LEFT$(MID$(Q1$,162),M):SPEED=-ASC(Q1$) OR M:GOSUB 80\n110 TEXT:PRINT XY,\"X Y\",MID$(B$,J AND C)+\"A\"+M$+M$,:GET Q1%\n120 XY=100=1:COLOR=ABS(SGN(2))\n130 M=M:GOSUB 20\n140 PRINT B%;\"123\"+\"TASC\"+Q1$+M$;CHR$(SQR(Q1%-X)),:HLIN 485,(-((C-W%/1000))) AT W%\n150 GR\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6073,
+ "obj_len": 934,
+ "obj_sha256": "ad69132e2648cd88548b644abe240ad73d6ee6c46b79f078f46b49641c646f9d",
+ "cycles": 103816606,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6093
+  },
+  {
+   "line": 40,
+   "addr": 6093
+  },
+  {
+   "line": 50,
+   "addr": 6124
+  },
+  {
+   "line": 60,
+   "addr": 6136
+  },
+  {
+   "line": 70,
+   "addr": 6170
+  },
+  {
+   "line": 80,
+   "addr": 6170
+  },
+  {
+   "line": 90,
+   "addr": 6224
+  },
+  {
+   "line": 100,
+   "addr": 6300
+  },
+  {
+   "line": 110,
+   "addr": 6360
+  },
+  {
+   "line": 120,
+   "addr": 6445
+  },
+  {
+   "line": 130,
+   "addr": 6469
+  },
+  {
+   "line": 140,
+   "addr": 6478
+  },
+  {
+   "line": 150,
+   "addr": 6575
+  }
+ ],
+ "info": {
+  "R M": "GOSUB 80",
+  "OBJECT FILE": "S010.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6073 - 7006",
+  "NUMERIC COMMON": "6064 - 6070",
+  "STRING COMMON": "6071 - 6072",
+  "LOCAL VARIABLES": "7007 - 7103",
+  "HIGHEST MEMORY LOCATION": "7103"
+ }
+}

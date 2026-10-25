@@ -1,0 +1,115 @@
+{
+ "id": "r3015",
+ "key": "d49ea23e164b667e",
+ "source": "10 REM! INTEGER K\n20 DIM P$(8),A$(4),B$(6)\n30 Q1%=A:PRINT W$+\"\"+W$+\"\"+XY$;\n40 PRINT ((A>=21237))+NOT N2%=((3<.5))/PEEK(40000);A<=Q1 AND NOT 255;2;:N2%=Y\n50 W$=\"A\"+MID$(\"X Y\",A-256):VTAB NOT ((-((0.1+765))))\n60 M=K:COLOR=PEEK(ABS(255^879))\n70 HCOLOR=((VAL(W$)=NOT N2%))+((INT(N2%) OR 1-A)):IF (K) THEN IF (A) THEN B$(RND(W AND K OR EXP(1)))=RIGHT$(LEFT$(MID$(A$(XY%),325),Y),Q1%^((1*N2%)))\n80 M$=LEFT$(\"X Y\",XY%/M<=SGN(1)):ON NOT Q1% GOTO 110\n90 IF (ATN(LOG(K))>(((2)<20))) THEN DATA X\n100 M=-((32767 OR Q1))<Q1%\n110 PRINT VAL(\"123\");22833,:IF (W) THEN VTAB K:FOR Y=(Q1) TO (Q1%*XY%<((Q1%<32518))<>298)\n120 PRINT SQR(AB%),M$;W$+MID$(\"\",EXP(K),Q1<>127),:Q1=ATN(N2%):PRINT Q1^59;M+((Y-452));Q1,\n130 PRINT XY$;Y;\n140 HOME\n150 AB%=W:M$=RIGHT$(\"123\"+XY$,M)\n160 A$(N2%)=\"\"\n170 PRINT Q1;(((750)<N2%+W))-100;NOT (880);\n180 PRINT \"A\";W,((NOT W OR -175))<=0,:P$(AB%)=LEFT$(XY$,EXP(5>A)):HLIN LEN(XY$+W$+\"X Y\"),(Q1%) AT ((M*A-Y))^XY%\n190 GOSUB 70\n200 B$(XY%)=XY$:READ XY%,XY%:XY%=M\n210 PRINT SGN(K),:DATA \"A,B\",\"A,B\",X\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1641,
+ "obj_sha256": "f621cbdec1d5d52993e4b40fbdd8e0effcaa872fa3ec119707409bc6a9743227",
+ "cycles": 136482517,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6135
+  },
+  {
+   "line": 50,
+   "addr": 6231
+  },
+  {
+   "line": 60,
+   "addr": 6285
+  },
+  {
+   "line": 70,
+   "addr": 6309
+  },
+  {
+   "line": 80,
+   "addr": 6448
+  },
+  {
+   "line": 90,
+   "addr": 6499
+  },
+  {
+   "line": 100,
+   "addr": 6539
+  },
+  {
+   "line": 110,
+   "addr": 6563
+  },
+  {
+   "line": 120,
+   "addr": 6648
+  },
+  {
+   "line": 130,
+   "addr": 6762
+  },
+  {
+   "line": 140,
+   "addr": 6774
+  },
+  {
+   "line": 150,
+   "addr": 6777
+  },
+  {
+   "line": 160,
+   "addr": 6813
+  },
+  {
+   "line": 170,
+   "addr": 6831
+  },
+  {
+   "line": 180,
+   "addr": 6870
+  },
+  {
+   "line": 190,
+   "addr": 7018
+  },
+  {
+   "line": 200,
+   "addr": 7021
+  },
+  {
+   "line": 210,
+   "addr": 7051
+  }
+ ],
+ "info": {
+  "HEN  VTAB K": "FOR Y = (Q1) TO (Q1% * XY%",
+  "OBJECT FILE": "S015.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7704",
+  "LOCAL VARIABLES": "7705 - 7799",
+  "HIGHEST MEMORY LOCATION": "7799"
+ }
+}

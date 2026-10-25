@@ -1,0 +1,90 @@
+{
+ "id": "r3117",
+ "key": "a1cc252e8d7d0181",
+ "source": "10 REM! INTEGER I,J\n20 PLOT AB,INT(NOT J)\n30 W=W:VTAB XY\n40 DATA HI,HI,HI:HOME\n50 W%=-X%:PRINT\n60 IF (20) THEN 140:VTAB (256)\n70 PRINT LEFT$(N2$+\"HI\"+A$,20);J,\n80 COLOR=B/((1E3+W))+X%:FOR Z=(Z-((65535 OR -Y%))) TO (((W%+362))*W%*J)\n90 FOR I=(LOG(ASC(A$))-40) TO (LOG(XY*Z)<>AB) STEP (Y%):FOR W=(Y%) TO (LEN(\"TASC\"+A$) AND COS(Z%)) STEP (65535)\n100 PRINT J;LEFT$(RIGHT$(X$+N2$,J OR 216),AB*B-W/20),\n110 Z=Z\n120 COLOR=J<=2\n130 GOTO 100:IF (I) THEN HCOLOR=127\n140 PRINT X%;:IF (5) THEN TEXT:B=W\n150 B=ASC(\"TASC\"+N2$):N2$=MID$(N2$+X$,Z%>2)+\"A\":X$=CHR$(XY)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 836,
+ "obj_sha256": "c63abd48cba304110d9ea15e1c55c8f435b7b42f49ccfa52f131f6bf8340fdb7",
+ "cycles": 101140574,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6105
+  },
+  {
+   "line": 40,
+   "addr": 6123
+  },
+  {
+   "line": 50,
+   "addr": 6141
+  },
+  {
+   "line": 60,
+   "addr": 6159
+  },
+  {
+   "line": 70,
+   "addr": 6170
+  },
+  {
+   "line": 80,
+   "addr": 6217
+  },
+  {
+   "line": 90,
+   "addr": 6276
+  },
+  {
+   "line": 100,
+   "addr": 6392
+  },
+  {
+   "line": 110,
+   "addr": 6455
+  },
+  {
+   "line": 120,
+   "addr": 6464
+  },
+  {
+   "line": 130,
+   "addr": 6479
+  },
+  {
+   "line": 140,
+   "addr": 6482
+  },
+  {
+   "line": 150,
+   "addr": 6514
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S015.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6899",
+  "LOCAL VARIABLES": "6900 - 6949",
+  "HIGHEST MEMORY LOCATION": "6949"
+ }
+}

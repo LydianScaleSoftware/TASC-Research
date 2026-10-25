@@ -1,0 +1,98 @@
+{
+ "id": "r3107",
+ "key": "ac94238422761c9d",
+ "source": "10 REM! INTEGER *\n20 GOTO 150\n30 ONERR GOTO 20:IF (Y%+(688)) THEN 130:IN#B%-255*((N2<>30632))\n40 Y=SGN(Y*B%^B%):HLIN C,((VAL(W$)*RND(C))) AT B%\n50 DATA HI:C=X:SPEED=ABS(40000)+((C<=7386))^((21817-Z%))\n60 GOTO 160\n70 POKE ((-XY AND Y%))=((19945-XY))*C,SIN(NOT ((M%<>N2)))\n80 IF (XY) THEN 130\n90 PLOT PEEK(N2-((B%-B%))),N2\n100 INPUT \"\";Z$,N2,B%:GOSUB 170:C=575\n110 PRINT CHR$(VAL(\"HI\")),Z$,NOT Z%<=-M%<SQR(256);:PRINT Z$,Y%,Y;:IF ((C)^((256<XY))-((((XY<=822))+X))) THEN 40\n120 IF (TAN(Y)<>EXP(-Y)) THEN C=ASC(\"HI\")*Y%\n130 HLIN Z%,(M%<=((XY+Y))/3.14159) AT ASC(LEFT$(\"HI\"+N2$,B%)):PRINT C>((N2=0>C)),RIGHT$(W$,M%);\n140 B%=LEN(\"HI\")-24\n150 PRINT:IF (TAN(2.25) OR C/((XY*X))) THEN Y=229:SPEED=C\n160 GOSUB 70:SPEED=29553:N2=Y%\n170 FOR Y=(LOG(Z%)^Y%^XY) TO (Y) STEP (SQR(XY))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1090,
+ "obj_sha256": "e5b27a579d9b9d44d59909f74c320f7a026b40132f10f893ca2a24ee87356ea5",
+ "cycles": 113501467,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6087
+  },
+  {
+   "line": 40,
+   "addr": 6092
+  },
+  {
+   "line": 50,
+   "addr": 6143
+  },
+  {
+   "line": 60,
+   "addr": 6197
+  },
+  {
+   "line": 70,
+   "addr": 6200
+  },
+  {
+   "line": 80,
+   "addr": 6254
+  },
+  {
+   "line": 90,
+   "addr": 6262
+  },
+  {
+   "line": 100,
+   "addr": 6283
+  },
+  {
+   "line": 110,
+   "addr": 6325
+  },
+  {
+   "line": 120,
+   "addr": 6460
+  },
+  {
+   "line": 130,
+   "addr": 6512
+  },
+  {
+   "line": 140,
+   "addr": 6613
+  },
+  {
+   "line": 150,
+   "addr": 6642
+  },
+  {
+   "line": 160,
+   "addr": 6686
+  },
+  {
+   "line": 170,
+   "addr": 6701
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S005.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7153",
+  "LOCAL VARIABLES": "7154 - 7187",
+  "HIGHEST MEMORY LOCATION": "7187"
+ }
+}

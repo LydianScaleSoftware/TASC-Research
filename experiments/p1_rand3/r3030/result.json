@@ -1,0 +1,94 @@
+{
+ "id": "r3030",
+ "key": "b8e3ad22a005e0da",
+ "source": "10 REM! INTEGER J\n20 DIM P%(4),D%(12)\n30 CALL Y%:IF (1) THEN GOSUB 140:ON ((COS(127)>X^M))*EXP(J) GOTO 60,120,110,120\n40 DATA X,HI,300,-2.5:Y$=MID$(\"HI\",((32767+XY%))*A)\n50 HCOLOR=((1000 OR X))*-384>=B%(M%)\n60 ROT=M%:PRINT (LOG(1000))>=D%(LOG(J));:HTAB RND(ASC(Y$))\n70 COLOR=-1*((P%(2)*32767))<=-((-218)):READ X,W$\n80 IF (Y% OR LEN(MID$(Y$,7))) THEN M%=Y%:VTAB ((0 AND 16148))/M%-((Y%-Y)):D%(J)=((P%(Y%)<=32767))--3 OR P%(.5)-B<NOT 930\n90 COLOR=123=(X)-A:CALL XY%*((XY%>=Z%<=X)):FOR M=(SGN(M)-P%(.001)) TO (365)\n100 GOSUB 120:HCOLOR=NOT 255\n110 PRINT Z$;:PRINT:GOSUB 90\n120 POP\n130 A=744:PRINT \"HI\";\n140 IF (4716) THEN 140:D%(B%(39)/692*NOT 40/((A=Y%*D%(M%))))=B%(J):GOTO 30\n150 CALL 3:FOR J=(Y%) TO (Z%) STEP (M%+((32767+0+((A AND P%(5)))))):ON SQR(EXP(255))-((563 AND -39)) GOTO 70\n160 Y$=STR$(39)+MID$(Z$,24)+Y$+\"HI\":Z%=Z%:DRAW B\n",
+ "options": {
+  "library": 4096,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 8109,
+ "obj_len": 1376,
+ "obj_sha256": "6332babeeb34b1c573af6021e6891058bd9ec0112779be19a29188435f9e18e7",
+ "cycles": 129434242,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 8129
+  },
+  {
+   "line": 20,
+   "addr": 8129
+  },
+  {
+   "line": 30,
+   "addr": 8129
+  },
+  {
+   "line": 40,
+   "addr": 8194
+  },
+  {
+   "line": 50,
+   "addr": 8243
+  },
+  {
+   "line": 60,
+   "addr": 8291
+  },
+  {
+   "line": 70,
+   "addr": 8345
+  },
+  {
+   "line": 80,
+   "addr": 8399
+  },
+  {
+   "line": 90,
+   "addr": 8551
+  },
+  {
+   "line": 100,
+   "addr": 8625
+  },
+  {
+   "line": 110,
+   "addr": 8637
+  },
+  {
+   "line": 120,
+   "addr": 8649
+  },
+  {
+   "line": 130,
+   "addr": 8652
+  },
+  {
+   "line": 140,
+   "addr": 8672
+  },
+  {
+   "line": 150,
+   "addr": 8749
+  },
+  {
+   "line": 160,
+   "addr": 8835
+  }
+ ],
+ "info": {
+  "LIBRARY": "4096 - 8108",
+  "OBJECT FILE": "S013.OBJ",
+  "PROGRAM": "8109 - 9484",
+  "LOCAL VARIABLES": "9485 - 9597",
+  "HIGHEST MEMORY LOCATION": "9597"
+ }
+}

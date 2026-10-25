@@ -1,0 +1,66 @@
+{
+ "id": "r3083",
+ "key": "af0fffb00da9906b",
+ "source": "10 REM! INTEGER K\n20 Z%=LOG(TAN(TAN(Q1%))):PLOT Z%,A%\n30 GOSUB 50:K=XY\n40 VTAB LOG((W%))>((COS(B%(W%,Z%))<>Q1%)):AB=EXP(NOT ((NOT 239)))\n50 PRINT:GOSUB 70:B$=N2$\n60 GOSUB 70:Y=3+A(Q1%)<39<Y-B*Q1\n70 READ Y,Q1\n80 A$=MID$(\"A\",((W%>=2))+((Q1<>A(24))),A%):PRINT\n90 N2$=\"123\":N2$=A$\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 505,
+ "obj_sha256": "f73fe31e6360760f66c92f5257dbd5d95fa72b1e2a6701e54243bd714cb70feb",
+ "cycles": 78744835,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6111
+  },
+  {
+   "line": 40,
+   "addr": 6120
+  },
+  {
+   "line": 50,
+   "addr": 6177
+  },
+  {
+   "line": 60,
+   "addr": 6189
+  },
+  {
+   "line": 70,
+   "addr": 6228
+  },
+  {
+   "line": 80,
+   "addr": 6240
+  },
+  {
+   "line": 90,
+   "addr": 6295
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S015.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6568",
+  "LOCAL VARIABLES": "6569 - 6911",
+  "HIGHEST MEMORY LOCATION": "6911"
+ }
+}

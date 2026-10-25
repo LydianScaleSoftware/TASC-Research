@@ -1,0 +1,100 @@
+{
+ "id": "r3147",
+ "key": "2e820c3f256c12a4",
+ "source": "10 REM! USECOMMON C$,Y%,X\n20 A$=A$\n30 PRINT PEEK(Y%);MID$(LEFT$(MID$(A$(M%,Y%),Z%),N2% AND N2%),-((NOT C)),LEN(A$(M%,100)));:A$=MID$(M$,.001*M<>((Z% AND 219)),5)\n40 XY=Z%:M$=MID$(RIGHT$(C$,1.5>=1),X):M=-Z%\n50 PRINT Z%>=LEN(MID$(M$,39,C));:INVERSE\n60 FOR XY=(N2) TO (X):GOSUB 150\n70 HPLOT ((M=Y%))-((Z%-Y%))<=((183>M>=((N2<X)))),(((100+XY))) TO -LOG(N2%)>=((C<>32767)),(SIN(N2%))\n80 POKE ((Y%)),((N2%<M%))/N2%\n90 A$(Y%,N2%>=VAL(\"\"))=A$(32767,Y%)+CHR$(N2%)+CHR$(M OR C)\n100 PRINT 40,VAL(\"HI\");((25432-ASC(A$(Y%,1))))*((((M<>N2%))-1)),:HCOLOR=XY:IF (-((M>M<X))) THEN 140\n110 READ Y%,M$:X=Z% AND N2%:PRINT\n120 M$=A$(34884>=N2^49152,ATN(M%)>(10)):CALL Y%:PRINT 127,\n130 C=NOT ((X<=1000))<>3:A$(1E3,Y%)=LEFT$(STR$(Z%-Y%),M*((M%*N2%))):A$=LEFT$(A$,X+-593)\n140 NEXT XY:IF (M) THEN M=SGN(3439):C=NOT ((N2%<>(Y%)))\n150 ON -((-((-39)))) GOTO 30,160:IF (XY) THEN Z%=894-RND(TAN(Z%))\n160 GET N2\n170 GOTO 160:A$(Z%,-3537)=C$\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6073,
+ "obj_len": 1409,
+ "obj_sha256": "c68d94c48b14c9eafc788cc3dbfea8503f801d625a1de74f16aa956bb5695ca9",
+ "cycles": 131184634,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6093
+  },
+  {
+   "line": 30,
+   "addr": 6099
+  },
+  {
+   "line": 40,
+   "addr": 6234
+  },
+  {
+   "line": 50,
+   "addr": 6273
+  },
+  {
+   "line": 60,
+   "addr": 6303
+  },
+  {
+   "line": 70,
+   "addr": 6323
+  },
+  {
+   "line": 80,
+   "addr": 6431
+  },
+  {
+   "line": 90,
+   "addr": 6458
+  },
+  {
+   "line": 100,
+   "addr": 6539
+  },
+  {
+   "line": 110,
+   "addr": 6647
+  },
+  {
+   "line": 120,
+   "addr": 6677
+  },
+  {
+   "line": 130,
+   "addr": 6737
+  },
+  {
+   "line": 140,
+   "addr": 6815
+  },
+  {
+   "line": 150,
+   "addr": 6852
+  },
+  {
+   "line": 160,
+   "addr": 6895
+  },
+  {
+   "line": 170,
+   "addr": 6901
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S011.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6073 - 7481",
+  "NUMERIC COMMON": "6064 - 6070",
+  "STRING COMMON": "6071 - 6072",
+  "LOCAL VARIABLES": "7482 - 7767",
+  "HIGHEST MEMORY LOCATION": "7767"
+ }
+}

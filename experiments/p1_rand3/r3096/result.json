@@ -1,0 +1,90 @@
+{
+ "id": "r3096",
+ "key": "65c652e1b48090b3",
+ "source": "10 REM! INTEGER K,J\n20 DIM B%(6),D$(11)\n30 GOSUB 10:ON K<B GOTO 100,10:C$=M$\n40 GOTO 70:ON X GOTO 80,150:GOSUB 50\n50 HPLOT TO -VAL(\"123\"),(A)\n60 Q1$=\"\":RETURN\n70 PRINT ASC(\"X Y\")-TAN(Z%<>AB%),:M$=Q1$:IF (SGN(7)/A) THEN A=((B%(AB%) AND TAN(704)))>((AB% AND B+A))\n80 HLIN Q1%*NOT J,((B%(J))<>-((X-B%))) AT 1000:PRINT CHR$(AB);\n90 PRINT\n100 GOTO 20:TEXT:X=INT(K)\n110 K=((B%(AB%)<=46186))-B:IF (TAN(X-XY-PEEK(B%(B%)))) THEN AB%=-B%(RND(J))\n120 HTAB ABS(A>=Z%>B%(Q1%)/J)\n130 C$=CHR$(B)\n140 XY=ABS(A):IF (10) THEN M$=D$(Z%)\n150 POKE Z% AND 255-B%(J),32767:IF ((SIN(B%(J)))>20) THEN B%(J)=J\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 886,
+ "obj_sha256": "392e73401dc6f9d6170406f87179ee66be02985b99e6e17eded35b622ff8af2a",
+ "cycles": 101275579,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6116
+  },
+  {
+   "line": 50,
+   "addr": 6119
+  },
+  {
+   "line": 60,
+   "addr": 6149
+  },
+  {
+   "line": 70,
+   "addr": 6165
+  },
+  {
+   "line": 80,
+   "addr": 6292
+  },
+  {
+   "line": 90,
+   "addr": 6352
+  },
+  {
+   "line": 100,
+   "addr": 6358
+  },
+  {
+   "line": 110,
+   "addr": 6373
+  },
+  {
+   "line": 120,
+   "addr": 6458
+  },
+  {
+   "line": 130,
+   "addr": 6503
+  },
+  {
+   "line": 140,
+   "addr": 6515
+  },
+  {
+   "line": 150,
+   "addr": 6547
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S011.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6949",
+  "LOCAL VARIABLES": "6950 - 7037",
+  "HIGHEST MEMORY LOCATION": "7037"
+ }
+}

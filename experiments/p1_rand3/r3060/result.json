@@ -1,0 +1,78 @@
+{
+ "id": "r3060",
+ "key": "37b026fe89d3990a",
+ "source": "10 PRINT X$,XY$,:N2$=RIGHT$(CHR$(7 OR A%),AB)\n20 DATA \"A,B\"\n30 AB=Q1%*((((Q1%>=C))+24^718)):FOR A=((2.25)) TO (ABS(Q1%-0)^NOT A)\n40 IF ((COS(A%>Q1))) THEN FOR A=(EXP(Q1%)) TO (AB%<>AB^((AB%>A%))) STEP (883):X$=X$:DATA 300\n50 VTAB Q1--AB%\n60 COLOR=NOT ((A%+W%))^((A>Q1 OR -A)):PRINT SIN(NOT Q1%)+381;\n70 READ Q1:Q1=Q1%/((Q1%-X)):XY$=\"X Y\"\n80 XY$=RIGHT$(\"HI\",A):IF (ASC(RIGHT$(STR$(W%),489))) THEN 40\n90 C=823\n100 IF (1.5 OR X) THEN A=ASC(XY$):XY$=\"A\":DATA \"A,B\",-2.5,\"A,B\"\n110 AB%=Q1/32767\n120 DATA 300:FOR C=(VAL(N2$) OR COS(Q1%)) TO (((LEN(XY$)>=32767))+C)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 832,
+ "obj_sha256": "a00272e88fe7dd1235962b8fc7d933d6a11a6e8aa4c69da4f4b97d5230c72453",
+ "cycles": 100469893,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6126
+  },
+  {
+   "line": 30,
+   "addr": 6136
+  },
+  {
+   "line": 40,
+   "addr": 6207
+  },
+  {
+   "line": 50,
+   "addr": 6283
+  },
+  {
+   "line": 60,
+   "addr": 6298
+  },
+  {
+   "line": 70,
+   "addr": 6362
+  },
+  {
+   "line": 80,
+   "addr": 6395
+  },
+  {
+   "line": 90,
+   "addr": 6439
+  },
+  {
+   "line": 100,
+   "addr": 6445
+  },
+  {
+   "line": 110,
+   "addr": 6503
+  },
+  {
+   "line": 120,
+   "addr": 6512
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S009.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6895",
+  "LOCAL VARIABLES": "6896 - 6944",
+  "HIGHEST MEMORY LOCATION": "6944"
+ }
+}

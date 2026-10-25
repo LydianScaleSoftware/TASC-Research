@@ -1,0 +1,66 @@
+{
+ "id": "r3069",
+ "key": "b572a808a1d08099",
+ "source": "10 REM! INTEGER I\n20 W%=-((W>=I))*N2%:SPEED=17065:IF (-((A+A))+A) THEN 10\n30 XY$=\"X Y\":AB%=W% AND 7182:A=A\n40 PRINT\n50 W%=W:VTAB Z%>((Z% OR A))<=W%:HCOLOR=A\n60 X$=MID$(\"X Y\",5<=((C<=I)),W):FOR W=(A) TO (W)\n70 AB=(-((W-10)))\n80 RETURN:CALL -49152\n90 C=C:PRINT I>=49152;VAL(MID$(\"\"+\"X Y\",Z%));:PRINT RIGHT$(M$+\"\"+XY$,-W-29416),AB>TAN(C)<ATN(I),X;\n",
+ "options": {
+  "library": null,
+  "program": 20480,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 20480,
+ "obj_len": 591,
+ "obj_sha256": "75a865c8831be3ff6410f55691c19f456be8332e6a4545b9102a45185059a6aa",
+ "cycles": 84653476,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 20500
+  },
+  {
+   "line": 20,
+   "addr": 20500
+  },
+  {
+   "line": 30,
+   "addr": 20543
+  },
+  {
+   "line": 40,
+   "addr": 20579
+  },
+  {
+   "line": 50,
+   "addr": 20582
+  },
+  {
+   "line": 60,
+   "addr": 20621
+  },
+  {
+   "line": 70,
+   "addr": 20677
+  },
+  {
+   "line": 80,
+   "addr": 20689
+  },
+  {
+   "line": 90,
+   "addr": 20690
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "OBJECT FILE": "S001.OBJ",
+  "PROGRAM": "20480 - 21070",
+  "LOCAL VARIABLES": "21071 - 21116",
+  "HIGHEST MEMORY LOCATION": "21116"
+ }
+}

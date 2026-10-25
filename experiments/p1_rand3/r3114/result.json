@@ -1,0 +1,90 @@
+{
+ "id": "r3114",
+ "key": "78a15c501705a2a6",
+ "source": "10 REM! INTEGER J,K\n20 DIM D%(4),P$(4)\n30 PRINT MID$(CHR$(D%(Q1%)),((10<=Q1))+Z%,AB>255),LOG(XY%<=J) OR ((J-J))*((A(40298,3.14159) AND AB));Y;\n40 PLOT D%(((XY% OR AB))<Y),X*100:C$=CHR$(((XY<>D%(K)))*((Y-7)))\n50 XY%=-K\n60 AB=(((AB<>Q1%))/-Z%):DATA HI,HI,HI,X:PRINT TAN(260) OR D%(Q1%);1,CHR$(879);\n70 Q1$=C$\n80 ONERR GOTO 150:J=24<=415*((490<X))\n90 K=-(Y>249):Z%=NOT XY\n100 COLOR=((K*AB-483))^541:PRINT C%,LEFT$(STR$(K)+C$,XY%-K),A(Z%,RND(Q1%+C%));:X=Z%>780-((425>Q1))\n110 PRINT ABS(255)<D%(-D%(256)),NOT ((C%+ASC(P$(Z%))));:A(VAL(CHR$(40)),((1-((X<=Q1%))))*Q1%)=X\n120 PRINT\n130 FOR Y=(NOT ((EXP(A(40000,Z%))=Z%))) TO (SIN(Q1 OR 39) OR Z%/((907*A(Q1%,3989))))\n140 PRINT X$+\"123\";.001,234;:ON VAL(P$(7)+X$) GOTO 140:C%=XY%*ABS(NOT X)\n150 Q1=483\n",
+ "options": {
+  "library": null,
+  "program": 20480,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 20480,
+ "obj_len": 1436,
+ "obj_sha256": "892f67b8099193b6f2a51adcf21940f9c30628677589148dfc48c465b2856591",
+ "cycles": 128397882,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 20500
+  },
+  {
+   "line": 20,
+   "addr": 20500
+  },
+  {
+   "line": 30,
+   "addr": 20500
+  },
+  {
+   "line": 40,
+   "addr": 20620
+  },
+  {
+   "line": 50,
+   "addr": 20695
+  },
+  {
+   "line": 60,
+   "addr": 20707
+  },
+  {
+   "line": 70,
+   "addr": 20796
+  },
+  {
+   "line": 80,
+   "addr": 20805
+  },
+  {
+   "line": 90,
+   "addr": 20834
+  },
+  {
+   "line": 100,
+   "addr": 20864
+  },
+  {
+   "line": 110,
+   "addr": 20978
+  },
+  {
+   "line": 120,
+   "addr": 21097
+  },
+  {
+   "line": 130,
+   "addr": 21103
+  },
+  {
+   "line": 140,
+   "addr": 21183
+  },
+  {
+   "line": 150,
+   "addr": 21270
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "OBJECT FILE": "S012.OBJ",
+  "PROGRAM": "20480 - 21915",
+  "LOCAL VARIABLES": "21916 - 22593",
+  "HIGHEST MEMORY LOCATION": "22593"
+ }
+}

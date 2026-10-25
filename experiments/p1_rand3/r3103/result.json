@@ -1,0 +1,99 @@
+{
+ "id": "r3103",
+ "key": "10583b78ef696d77",
+ "source": "10 REM! INTEGER K\n20 REM! USECOMMON XY%,B,Z%\n30 DIM P$(12)\n40 Z%=NOT SGN(A%(Z%)<>A%(Z%)):READ Z%,N2%:GOTO 140\n50 FOR K=(W%>=((W%<=Q1))*1.5) TO (127>Z):GOTO 10\n60 READ K,W%:IF ((Z%-W%)<=A*N2%) THEN 140:A%(N2%)=Q1<>((255<>XY%))-((0+Q1))\n70 B$=B$:XY%=AB*INT(TAN(A%(XY%)))\n80 HOME:PRINT C$;:PLOT 3.14159<480,516*((ASC(B$)<=740))\n90 FOR Z=(ASC(B$)>=-Z) TO (Q1<((127+Q1=((Z% AND AB))))) STEP (COS(1)):FOR A=(-((-((48009 AND W%))))) TO (XY%):Z=W%\n100 COLOR=K:READ Q1,Z\n110 DATA \"A,B\",X,,-2.5:NEXT A\n120 HLIN (5)+39,(B) AT -AB*XY%+LOG(-N2%):C$=MID$(\"TASC\",Z+Z+Q1,TAN(Q1<>Q1)):K=A%(XY%<XY%)*544\n130 PRINT N2%;A%(LEN(P$(N2%)));:Y$=Y$\n140 W%=B+1:PLOT 10,685:VTAB XY%\n150 GOTO 120:FOR K=(A%(N2%)) TO (10>=W%+256-XY%)\n160 PRINT COS(W% AND ((1 OR XY%)));:B$=LEFT$(B$+STR$(Z),82):ON Z% GOTO 90\n170 XY%=AB:P$(593)=LEFT$(P$(-32767),NOT ((1<2))):VTAB A\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6073,
+ "obj_len": 1166,
+ "obj_sha256": "a0057f8b2be3cea95b4af37a186a2b956605aa5a31ad14f1f150a6d06f806870",
+ "cycles": 119424847,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6093
+  },
+  {
+   "line": 40,
+   "addr": 6093
+  },
+  {
+   "line": 50,
+   "addr": 6140
+  },
+  {
+   "line": 60,
+   "addr": 6181
+  },
+  {
+   "line": 70,
+   "addr": 6258
+  },
+  {
+   "line": 80,
+   "addr": 6285
+  },
+  {
+   "line": 90,
+   "addr": 6324
+  },
+  {
+   "line": 100,
+   "addr": 6430
+  },
+  {
+   "line": 110,
+   "addr": 6448
+  },
+  {
+   "line": 120,
+   "addr": 6471
+  },
+  {
+   "line": 130,
+   "addr": 6592
+  },
+  {
+   "line": 140,
+   "addr": 6619
+  },
+  {
+   "line": 150,
+   "addr": 6646
+  },
+  {
+   "line": 160,
+   "addr": 6649
+  },
+  {
+   "line": 170,
+   "addr": 6706
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6073 - 7238",
+  "NUMERIC COMMON": "6064 - 6072",
+  "LOCAL VARIABLES": "7239 - 7330",
+  "HIGHEST MEMORY LOCATION": "7330"
+ }
+}

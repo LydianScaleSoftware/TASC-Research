@@ -1,0 +1,135 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S016
+
+
+OBJECT CODE FILE:
+(DEFAULT S016.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION?
+
+*****BEGINNING PASS 1
+
+
+
+10
+RECOGNIZED  REM ! INTEGER I,K
+20  DIM B%(10)
+30  IF ( - ((B%(B%) ^ 218)) / ((XY * 0 -
+ 21614))) THEN  GOSUB 260
+40  HTAB ((B AND 36191)) > ((B% >  ASC (
+Z$)))
+50  PRINT XY%;B%;: HOME :M$ =  STR$ ( IN
+T (AB%))
+60  HLIN .5,(((C AND 169)) -  NOT XY OR
+XY%) AT B%(((14544 <  = 3)) * ((C + B%(K
+))))
+70 B = B AND K
+80  GOTO 290
+90 B%(B%) = XY%
+100  IF ( TAN ((B))) THEN 90
+110  IF (C) THEN  HTAB 32767
+120 AB% = 2 -  LEN (M$) * 20: PRINT 943;
+B%;B%(K) >  =  - B%(I);
+130  PLOT  SIN (B >  = 196) > B%,B%: SPE
+ED= 20805:B =  NOT (( NOT ((B%(I) * XY%)
+)))
+140  HLIN 641 -  - ((B%(K) < 1)),(32767)
+ AT 14038 <  = C:B = I
+150 Z$ = M$
+160 XY = Z + 1000
+170 C = B%( LEN (Z$ + C$)):B%(N2%) =  NO
+T K >  = 1
+180  FOR I = (I) TO (255): PRINT  LOG (1
+0);33 - (( - B% AND I)),B%;
+190  PRINT 589 -  EXP (AB% OR XY),M$,Z$,
+:Z = ((B * XY >  = ((7 < 257)))) ^  - ((
+K AND 100)):Z$ =  LEFT$ ( LEFT$ ( LEFT$
+(C$,XY%), NOT 256),B * 515 < ((C >  = XY
+)))
+200  PRINT :C$ = "HI"
+210 A = B
+220 M$ = "HI" + C$: FOR B = (XY% * ((B%(
+256) = N2%)) ^  ABS (20)) TO (255)
+230  VTAB (32767): IF (1.5) THEN 90: DAT
+A
+240 Z = 1 <  > ((1E3 - AB% = B%)): GOSUB
+ 160: ON I GOTO 210,300
+250 C =  NOT 2 *  SQR (49152) = Z + Z +
+B%
+260  PRINT
+270  HPLOT  TO B%(K) - (( ATN (40000) >
+ = I)),( - ((XY OR XY% + A))) TO B%(I /
+B%(39) *  - XY%),(C):B%(256) =  - B%(255
+)
+280  HCOLOR= 0 / 256 / ((24 = 821)) +  N
+OT  PEEK (15458): ON 35060 -  - N2% GOTO
+ 300,30,250,10
+290  GOSUB 270: IF ( - (( NOT B%(XY%))))
+ THEN  CALL B%( - .5) - 256: IF (((A - B
+%(XY%))) * ((C < AB%)) - 991) THEN  GOTO
+ 300
+300 B%( RND ( ABS (A))) =  - C < ((4 AND
+ Z <  > 256)):XY% = B%(N2%): IF (B%) THE
+N B%( LOG (C)) =  ASC ( CHR$ ( NOT I))
+310  NEXT B
+320 B%( LOG ( EXP (AB%) - Z)) = ( - XY%
+> 3):A =  NOT (( COS (20) -  NOT B%(XY%)
+)):B = 5 - B% ^ C OR N2%
+
+
+
+*****BEGINNING PASS 2
+
+
+......
+
+
+*****CODE GENERATION COMPLETE
+
+
+COMPILATION INFORMATION AND LINE NUMBER
+REFERENCE TABLE? YES
+
+
+SOURCE FILE: S016
+OBJECT FILE: S016.OBJ
+LIBRARY OCCUPIES 2051 - 6063
+PROGRAM OCCUPIES 6064 - 8179
+
+NO COMMON BLOCK
+
+LOCAL VARIABLES OCCUPY 8180 - 8251
+
+HIGHEST MEMORY LOCATION: 8251
+
+
+LINE# ADDR   LINE# ADDR   LINE# ADDR
+
+10    6084   20    6084   30    6084
+40    6136   50    6169   60    6196
+70    6271   80    6283   90    6286
+100   6298   110   6311   120   6325
+130   6379   140   6434   150   6479
+160   6485   170   6494   180   6542
+190   6598   200   6739   210   6756
+220   6762   230   6829   240   6850
+250   6885   260   6924   270   6927
+280   7032   290   7099   300   7188
+310   7286   320   7291
+
+*****COMPILATION COMPLETE
+
+
+]?

@@ -1,0 +1,126 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S004
+
+
+OBJECT CODE FILE:
+(DEFAULT S004.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION?
+
+*****BEGINNING PASS 1
+
+
+
+10
+RECOGNIZED  REM ! INTEGER K
+20 C = Y%: PRINT ((X% OR M% ^ X)) / ((X
+/ XY% -  - B(K))); SQR (.001),Y$;
+30  VTAB C: PLOT B(Y%) / X% + ((127 < .0
+01 AND X% + B(M%))),1000
+40 Y$ =  MID$ ( CHR$ (W),448 + ((K - M%)
+))
+50 K = Y% OR ((24 = X%)) - ((XY% > B(39)
+)): DATA 300:N2$ = "A"
+60  IF ( - XY%) THEN  GR : RESTORE : END
+
+70  ON M GOTO 10,250,220:Y = M%
+80  GOTO 90
+90 K = ((256 >  = ((M > B(XY%))))) *  PE
+EK (B(XY%)):W = B( NOT ((256 <  > 65535)
+))
+100 Y% =  SIN ( COS (Y%)): READ N2$,M%
+110  SPEED= M - W + XY% < ((B(5) * K >
+= B(K))): HLIN 2 >  = .5 - XY%,(((K OR Y
+)) ^ XY% <  = ((B(Y%) OR 0)) + ((M% OR 4
+4784))) AT 338 * ((W AND C))
+120  FOR Y = (K) TO (X%) STEP ( ASC (A$(
+K)) <  > B(24525)):W = M:M = Y% * ((C <
+ > B(613))) + X%
+130 M = 100: HTAB C: PRINT XY$;
+140  HTAB  - ((XY% <  > Y)) = B(X% - X%)
+:Y$ = A$(Y%):C = W
+150  PRINT A$( - Y%) +  MID$ (A$(255) +
+XY$,Y%, PEEK (18711)),:Y$ =  LEFT$ (A$(Y
+%),Y%): IF (XY%) THEN  FOR C = ( ATN (Y%
+ >  = M)) TO (((0 <  > Y OR (B(X%)))) /
+.5)
+160 N2$ = XY$: READ X%:C = Y
+170  FOR Y = (M) TO (K):W = Y%
+180  HCOLOR= 0
+190  NEXT Y:C = Y: PRINT N2$;820,
+200  FOR Y = (10) TO ((C)) STEP ( SIN (3
+2767 + ((32767 - B(K))))):M% =  -  ATN (
+256) + C
+210 M% =  ABS (K <  = Y%) * Y:XY% =  - (
+(B(Y%) * ((B(5) >  = B(K))))):C =  - W
+220  GOSUB 150
+230 C = 3:X = M: PRINT X%;
+240 B( TAN ( - (B(Y%)))) = X: IF ( EXP (
+M + 5) *  -  COS (W)) THEN 150
+
+*****WARNING
+LINE NUMBER 240
+IGNORED
+
+: FOR Y = (K) TO (271 >  = 40)
+
+
+250  READ M,M: READ XY$
+260  ON C - ((Y% + ((M% < 39)))) GOTO 20
+: READ N2$,X%
+
+
+
+*****BEGINNING PASS 2
+
+
+.....
+
+
+*****CODE GENERATION COMPLETE
+
+
+COMPILATION INFORMATION AND LINE NUMBER
+REFERENCE TABLE? YES
+
+
+SOURCE FILE: S004
+OBJECT FILE: S004.OBJ
+LIBRARY OCCUPIES 2051 - 6063
+PROGRAM OCCUPIES 6064 - 7795
+
+NO COMMON BLOCK
+
+LOCAL VARIABLES OCCUPY 7796 - 7927
+
+HIGHEST MEMORY LOCATION: 7927
+
+
+LINE# ADDR   LINE# ADDR   LINE# ADDR
+
+10    6084   20    6084   30    6156
+40    6219   50    6240   60    6302
+70    6326   80    6345   90    6348
+100   6408   110   6432   120   6573
+130   6641   140   6659   150   6707
+160   6843   170   6861   180   6884
+190   6890   200   6916   210   6963
+220   7029   230   7032   240   7050
+250   7105   260   7123
+
+*****COMPILATION COMPLETE
+
+
+]?

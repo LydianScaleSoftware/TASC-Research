@@ -1,0 +1,96 @@
+{
+ "id": "r3196",
+ "key": "466021a3f72ef31e",
+ "source": "10 REM! INTEGER J,I\n20 REM! USECOMMON W,X,C$\n30 DIM D%(5),A(7,6)\n40 DEF FN F(T)=-((A(40,182) OR XY%)) OR Z\n50 W=FN F(Y/COS(I)):HLIN NOT ((-D%(780)))-J,(X) AT Y*FN F(Z>=B%):IF (D%(B%)=X<=49152) THEN 10\n60 VTAB 255:COLOR=N2%\n70 AB$=STR$(XY%)+RIGHT$(C$+XY$,ASC(\"HI\"))\n80 PRINT 0,AB$;MID$(AB$,LEN(\"\")),\n90 PRINT:GOTO 40:N2%=J<>569\n100 POKE C,Y:Z=XY%:COLOR=B%\n110 HCOLOR=W:GOSUB 130:X=ATN(VAL(AB$))\n120 ON Z^RND(FN F(D%(B%))) GOSUB 50,90,90:W=LOG(ABS(Y+B%))\n130 END:D%(COS(-B%))=A(821,B%)-FN F(Z)+A(XY%,1):READ X\n140 XY%=W\n150 GOTO 50:X=Y+C:FOR Z=(XY%) TO (X)\n160 X=-N2%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6076,
+ "obj_len": 797,
+ "obj_sha256": "04d79f3778ae1370f3ab847e169a5f0b97348dad33b8d0547026418c5979de87",
+ "cycles": 97111819,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6096
+  },
+  {
+   "line": 40,
+   "addr": 6096
+  },
+  {
+   "line": 50,
+   "addr": 6133
+  },
+  {
+   "line": 60,
+   "addr": 6226
+  },
+  {
+   "line": 70,
+   "addr": 6238
+  },
+  {
+   "line": 80,
+   "addr": 6291
+  },
+  {
+   "line": 90,
+   "addr": 6330
+  },
+  {
+   "line": 100,
+   "addr": 6348
+  },
+  {
+   "line": 110,
+   "addr": 6372
+  },
+  {
+   "line": 120,
+   "addr": 6393
+  },
+  {
+   "line": 130,
+   "addr": 6439
+  },
+  {
+   "line": 140,
+   "addr": 6508
+  },
+  {
+   "line": 150,
+   "addr": 6514
+  },
+  {
+   "line": 160,
+   "addr": 6526
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S009.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6076 - 6872",
+  "NUMERIC COMMON": "6064 - 6073",
+  "STRING COMMON": "6074 - 6075",
+  "LOCAL VARIABLES": "6873 - 7207",
+  "HIGHEST MEMORY LOCATION": "7207"
+ }
+}

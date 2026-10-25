@@ -1180,7 +1180,8 @@ class Compiler:
                         pending_ret = st  # decide once the next statement is known
                         continue
                     self.stmt(st, n)
-                    if st.kind in ("GOTO", "IFGOTO", "RETURN", "END", "STOP", "NEW", "ONERR"):
+                    if st.kind in ("GOTO", "IFGOTO", "RETURN", "END", "STOP", "NEW", "ONERR") or (
+                            st.kind == "RESUME" and self.o.resume):  # observed: RESUME = JMP $1656 only with the option
                         dead = True
                 if pending_ret is not None:
                     self.stmt(pending_ret, n)

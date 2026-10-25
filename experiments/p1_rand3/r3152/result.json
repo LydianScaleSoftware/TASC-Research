@@ -1,0 +1,102 @@
+{
+ "id": "r3152",
+ "key": "cf423e1a34a56f54",
+ "source": "10 REM! INTEGER J\n20 DIM B(7)\n30 DEF FN F(T)=B(Y%)\n40 PRINT Q1,5,1;\n50 DATA HI,1,,1:Q1%=Q1%+((24*Q1-Q1))\n60 CALL Y%:J=-ASC(\"TASC\")*((Q1=Z))\n70 FOR Q1=(Y%) TO (LOG(C) AND J OR M):PRINT RIGHT$(LEFT$(\"\"+B$,B(100)),FN F(M%));1000;\n80 SPEED=-Q1\n90 PLOT 1+NOT ((588/B(7))),AB%<=((SQR(B(J))>=1))\n100 READ Q1%\n110 DATA HI,1,X\n120 B$=\"HI\"\n130 NEXT Q1:B(SQR(Y%))=PEEK(-M%*LOG(Q1%)):DATA -2.5,\"A,B\",1\n140 GOSUB 100\n150 READ Y%\n160 PRINT RND(Z>=Y) OR 32767;B(J),NOT 2+20+((-AB%-C)),:IF (-M%) THEN GOTO 100\n170 PRINT Y%,\n180 HCOLOR=Q1%<=-Y%=-215\n",
+ "options": {
+  "library": null,
+  "program": 20480,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 20480,
+ "obj_len": 876,
+ "obj_sha256": "b495f5fc4ff40491b47a2ba29c332dd428f13c207adbd47f6930decba9afacb5",
+ "cycles": 104572278,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 20500
+  },
+  {
+   "line": 20,
+   "addr": 20500
+  },
+  {
+   "line": 30,
+   "addr": 20500
+  },
+  {
+   "line": 40,
+   "addr": 20513
+  },
+  {
+   "line": 50,
+   "addr": 20540
+  },
+  {
+   "line": 60,
+   "addr": 20578
+  },
+  {
+   "line": 70,
+   "addr": 20627
+  },
+  {
+   "line": 80,
+   "addr": 20716
+  },
+  {
+   "line": 90,
+   "addr": 20728
+  },
+  {
+   "line": 100,
+   "addr": 20778
+  },
+  {
+   "line": 110,
+   "addr": 20787
+  },
+  {
+   "line": 120,
+   "addr": 20800
+  },
+  {
+   "line": 130,
+   "addr": 20817
+  },
+  {
+   "line": 140,
+   "addr": 20884
+  },
+  {
+   "line": 150,
+   "addr": 20887
+  },
+  {
+   "line": 160,
+   "addr": 20896
+  },
+  {
+   "line": 170,
+   "addr": 20989
+  },
+  {
+   "line": 180,
+   "addr": 21001
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "OBJECT FILE": "S016.OBJ",
+  "PROGRAM": "20480 - 21355",
+  "LOCAL VARIABLES": "21356 - 21444",
+  "HIGHEST MEMORY LOCATION": "21444"
+ }
+}

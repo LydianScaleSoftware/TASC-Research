@@ -1,0 +1,80 @@
+{
+ "id": "r3090",
+ "key": "9e6d19aa8c08731e",
+ "source": "10 REM! INTEGER K\n20 REM! DEFCOMMON C$,C,X%\n30 DIM P%(11)\n40 READ B%,W:READ AB$,A%\n50 B$((P%(VAL(\"A\"))))=\"X Y\":READ N2,Z$\n60 IF (INT(Q1)) THEN Z%=-((K<>383)) OR 40000:Q1=W:PRINT N2;N2;\n70 Q1=VAL(RIGHT$(AB$+\"123\",COS(B%))):RETURN\n80 VTAB W\n90 HCOLOR=Q1\n100 AB$=\"123\":HCOLOR=W:GOSUB 50\n110 IF (K) THEN 80:A%=ASC(B$(X%))+K-((P%(K)<40))*((Q1*1E3))\n120 HTAB NOT C\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6073,
+ "obj_len": 496,
+ "obj_sha256": "46be026132526919dc6c09dcaf9ca0c30e15c11affc6192a5f79410b2b556b5d",
+ "cycles": 78312367,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6093
+  },
+  {
+   "line": 40,
+   "addr": 6093
+  },
+  {
+   "line": 50,
+   "addr": 6117
+  },
+  {
+   "line": 60,
+   "addr": 6166
+  },
+  {
+   "line": 70,
+   "addr": 6218
+  },
+  {
+   "line": 80,
+   "addr": 6255
+  },
+  {
+   "line": 90,
+   "addr": 6261
+  },
+  {
+   "line": 100,
+   "addr": 6267
+  },
+  {
+   "line": 110,
+   "addr": 6291
+  },
+  {
+   "line": 120,
+   "addr": 6344
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S005.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6073 - 6568",
+  "NUMERIC COMMON": "6064 - 6070",
+  "STRING COMMON": "6071 - 6072",
+  "LOCAL VARIABLES": "6569 - 6648",
+  "HIGHEST MEMORY LOCATION": "6648"
+ }
+}

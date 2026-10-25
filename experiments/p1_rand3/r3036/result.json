@@ -1,0 +1,115 @@
+{
+ "id": "r3036",
+ "key": "05da69962ff15670",
+ "source": "10 DIM A$(3,5)\n20 DEF FN F(Z)=((557 AND 731))\n30 PRINT 7,\"\"+Z$;RIGHT$(STR$(Q1%)+CHR$(X%),D%(X%,D%(0,Q1%)+7));:PRINT:GOSUB 90\n40 Q1$=CHR$(Q1%):PRINT -B OR 39;:PRINT \"123\";3;\n50 PRINT\n60 PRINT\n70 M=M\n80 COLOR=132:IF (LEN(\"TASC\"+CHR$(Y))) THEN 130\n90 IF (EXP(457)=45816+32767<-SQR(Y)) THEN 130\n100 M=LEN(Q1$)\n110 IF (Y-C=M>255^((2+M))) THEN 110:Z$=A$(INT(FN F(D%(A%,A%))),.5):COLOR=-3\n120 A%=COS(-((2 OR 24190))):PRINT FN F(M);A$(-M<=-Y,B+A%<>Q1%),\n130 Q1$=\"123\":GOSUB 160\n140 PRINT:PRINT Y,\n150 M=M:PRINT -((20^39<>D%(Q1%,A%)*Y));:N2=A%\n160 CALL D%(NOT M AND X%-C%,INT(M*B)):Q1$=MID$(Z$,-.5/-N2,FN F(D%(12146,X%))*((44011 AND C%)))\n170 PRINT FN F(783);MID$(LEFT$(\"X Y\",LEN(A$(X%,Q1%))),SQR(A%)*NOT 751);:PRINT A%;\n180 ON LOG(N2)+((C%<=20 AND -D%(32767,440))) GOTO 200,160,40,200:PRINT N2,3;M;\n190 X%=M*((C%<=C%))*-PEEK(B):SPEED=D%(Q1%,LEN(LEFT$(M$,N2))):D%(118*2,SIN(15960--2))=M\n200 CALL M:ON 881 GOTO 80\n210 C=M:POKE FN F(D%(24*C%,EXP(A%))),SGN(-676)/FN F(SGN(1))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1694,
+ "obj_sha256": "09587f0049903b366f606f5f9b67db51317aebd15f7b819e02c2c6d493bb2cb0",
+ "cycles": 139482377,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6103
+  },
+  {
+   "line": 40,
+   "addr": 6196
+  },
+  {
+   "line": 50,
+   "addr": 6253
+  },
+  {
+   "line": 60,
+   "addr": 6259
+  },
+  {
+   "line": 70,
+   "addr": 6265
+  },
+  {
+   "line": 80,
+   "addr": 6274
+  },
+  {
+   "line": 90,
+   "addr": 6320
+  },
+  {
+   "line": 100,
+   "addr": 6367
+  },
+  {
+   "line": 110,
+   "addr": 6382
+  },
+  {
+   "line": 120,
+   "addr": 6468
+  },
+  {
+   "line": 130,
+   "addr": 6558
+  },
+  {
+   "line": 140,
+   "addr": 6579
+  },
+  {
+   "line": 150,
+   "addr": 6597
+  },
+  {
+   "line": 160,
+   "addr": 6660
+  },
+  {
+   "line": 170,
+   "addr": 6789
+  },
+  {
+   "line": 180,
+   "addr": 6864
+  },
+  {
+   "line": 190,
+   "addr": 6948
+  },
+  {
+   "line": 200,
+   "addr": 7056
+  },
+  {
+   "line": 210,
+   "addr": 7077
+  }
+ ],
+ "info": {
+  "INT": "GOSUB 90",
+  "OBJECT FILE": "S002.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7757",
+  "LOCAL VARIABLES": "7758 - 8105",
+  "HIGHEST MEMORY LOCATION": "8105"
+ }
+}

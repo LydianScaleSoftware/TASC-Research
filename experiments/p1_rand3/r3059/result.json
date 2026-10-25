@@ -1,0 +1,80 @@
+{
+ "id": "r3059",
+ "key": "38c8c3300ac58a82",
+ "source": "10 REM! INTEGER K,I\n20 REM! DEFCOMMON X%,Y$,K\n30 DIM P(1),D$(6),B$(11,11)\n40 DEF FN F(X)=P(2^.5>X%-921)\n50 X%=((Y OR Y-M))/Y\n60 POKE W%,ATN(P(2+K))\n70 HLIN X%,(K) AT NOT ((-A OR W%<=I)):P(N2%)=((I AND P(957)))<255<>INT(N2):PRINT\n80 PRINT -M=0<>FN F(Y)-806;((P(K)<>100^P(W%)))+M;:PRINT\n90 PRINT SIN(NOT FN F(P(I)));Y$;\"\",\n100 B$(0.1,7)=B$(100,X%):I=255>=N2%:M=Y\n110 FOR Z=(P(K)) TO (FN F(Y+W%)>((2 OR A-2))):IF (FN F(X%<>5)>2^-1) THEN RETURN:GOTO 50\n120 FOR K=(SIN(K>=100)=M%) TO (FN F(-3))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6070,
+ "obj_len": 896,
+ "obj_sha256": "ab2259135601eb510b823792afc88a992bb4452ebbec8bbd8eaba6a3013c155c",
+ "cycles": 98640680,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6090
+  },
+  {
+   "line": 40,
+   "addr": 6090
+  },
+  {
+   "line": 50,
+   "addr": 6130
+  },
+  {
+   "line": 60,
+   "addr": 6154
+  },
+  {
+   "line": 70,
+   "addr": 6175
+  },
+  {
+   "line": 80,
+   "addr": 6265
+  },
+  {
+   "line": 90,
+   "addr": 6340
+  },
+  {
+   "line": 100,
+   "addr": 6381
+  },
+  {
+   "line": 110,
+   "addr": 6429
+  },
+  {
+   "line": 120,
+   "addr": 6518
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S008.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6070 - 6965",
+  "NUMERIC COMMON": "6064 - 6067",
+  "STRING COMMON": "6068 - 6069",
+  "LOCAL VARIABLES": "6966 - 7325",
+  "HIGHEST MEMORY LOCATION": "7325"
+ }
+}

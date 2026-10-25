@@ -1,0 +1,90 @@
+{
+ "id": "r3054",
+ "key": "fe2a312406e6cca0",
+ "source": "10 DIM B(11),A%(8)\n20 AB%=NOT SGN(N2)+((Y>((6 AND C))))\n30 GOSUB 120\n40 AB$=CHR$(AB%-((D(5)<>AB%))):FOR C=(C) TO (C) STEP (AB%):SPEED=LOG(RND(3315>=32767))\n50 HLIN D(COS(N2)),(10) AT XY%:PRINT Y%;:Z=-AB%\n60 READ B,Z\n70 PRINT 458;Y%;:IF (N2*49152^((B<Y))) THEN 110\n80 DATA \"A,B\",,1,HI:N2=PEEK(100 OR 911)-AB%\n90 FOR N2=(C) TO (B(Y%)^((SGN(N2)*((AB%>=2))))):IF ((RND(AB%))+((((C<>N2))-LEN(Y$)))) THEN 70:IF (A%(XY%)) THEN 40\n100 XY$=MID$(\"HI\",PEEK(40000)):DATA \"A,B\",X\n110 PRINT EXP(((A%(AB%)>AB%))^-C);AB%;LEFT$(XY$,Y=Y*AB%);:AB%=ASC(XY$)*((((1 AND Y))-Y))\n120 DATA 300,\"A,B\",X,-2.5\n130 HCOLOR=5\n140 AB%=A% AND Y%:PRINT C;\n150 PRINT Y;\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 859,
+ "obj_sha256": "378837eb745b6e4e3418f7bfc0e32468bff895f8ec7a92e5dcb28ba19802d481",
+ "cycles": 100437827,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6122
+  },
+  {
+   "line": 40,
+   "addr": 6125
+  },
+  {
+   "line": 50,
+   "addr": 6184
+  },
+  {
+   "line": 60,
+   "addr": 6226
+  },
+  {
+   "line": 70,
+   "addr": 6238
+  },
+  {
+   "line": 80,
+   "addr": 6275
+  },
+  {
+   "line": 90,
+   "addr": 6321
+  },
+  {
+   "line": 100,
+   "addr": 6414
+  },
+  {
+   "line": 110,
+   "addr": 6449
+  },
+  {
+   "line": 120,
+   "addr": 6545
+  },
+  {
+   "line": 130,
+   "addr": 6566
+  },
+  {
+   "line": 140,
+   "addr": 6572
+  },
+  {
+   "line": 150,
+   "addr": 6593
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S003.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6922",
+  "LOCAL VARIABLES": "6923 - 7106",
+  "HIGHEST MEMORY LOCATION": "7106"
+ }
+}

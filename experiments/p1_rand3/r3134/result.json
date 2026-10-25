@@ -1,0 +1,74 @@
+{
+ "id": "r3134",
+ "key": "a973aa7ad2658158",
+ "source": "10 REM! INTEGER K\n20 DIM A%(3,5),D%(2,9)\n30 DEF FN F(T)=A%*-M\n40 A%(3,SQR(K>=Z)<=((B%*A%(25370,A%)>D%(40857,Y%))))=A%:PRINT P%(3.14159);C$;\n50 PLOT NOT ((M/Y%)),B%+P%(Y%)*A%(B%,A%)\n60 VTAB -((100 OR A%)):PRINT 0^K*1000=SGN(LEN(C$));CHR$(-P%(B%));992,\n70 PRINT M;\"\";:X=PEEK(Y%>NOT Z)\n80 A=B OR -AB% AND ((K AND M)):GOSUB 100\n90 N2$=\"TASC\":PRINT RIGHT$(\"TASC\",1E3);C$,\n100 FOR A=(K) TO (100-ATN(Y%<=A%)):X=AB%\n110 FOR K=(B%*256) TO (40)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 805,
+ "obj_sha256": "9c2f69fd44c69ca9f47fec12ba04f005abd46df8ca7836020f74986b42a6e885",
+ "cycles": 93432397,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6100
+  },
+  {
+   "line": 50,
+   "addr": 6205
+  },
+  {
+   "line": 60,
+   "addr": 6252
+  },
+  {
+   "line": 70,
+   "addr": 6330
+  },
+  {
+   "line": 80,
+   "addr": 6369
+  },
+  {
+   "line": 90,
+   "addr": 6408
+  },
+  {
+   "line": 100,
+   "addr": 6455
+  },
+  {
+   "line": 110,
+   "addr": 6490
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S015.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6868",
+  "LOCAL VARIABLES": "6869 - 7054",
+  "HIGHEST MEMORY LOCATION": "7054"
+ }
+}

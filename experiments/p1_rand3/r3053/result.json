@@ -1,0 +1,82 @@
+{
+ "id": "r3053",
+ "key": "13f602a82aa862b2",
+ "source": "10 DEF FN F(Z)=INT(-127<=((M%<=AB%)))\n20 C%=-((W OR AB%^7)):FOR A=(C*((AB%-15542))*((-W-((C>=C%))))) TO (SIN(M%)):FOR Q1=(D%(ABS(Q1)<>C)) TO (FN F(((Q1+40000))/((XY<=608))))\n30 NEXT\n40 ON ((C%>=M% AND C))+49152 GOTO 10,90:READ C,W:POP\n50 FOR A=(205) TO (C):W%=W=1.5:GOTO 10\n60 PRINT ((W=127<>1^M%))-AB%;\n70 IF (-M%) THEN IF (NOT W) THEN PRINT NOT ((-XY))+SIN(FN F(Q1));FN F(C%);:AB%=W:READ XY\n80 PRINT:PRINT\n90 PRINT:HCOLOR=D%(0):A=D%(806-M%)<>NOT ((AB%+D%(W%)))\n100 IF (D%(PEEK(XY))) THEN W$=\"X Y\"+W$:HLIN 10,(ATN(M%)) AT M%\n110 B$=CHR$(SQR(D%(C%)/100)):DATA \"A,B\",X\n120 IF (5) THEN 10:IF (-W%) THEN FOR XY=(AB%) TO (AB%) STEP (M%):NEXT\n130 W=Q1<>39^Q1>((5>24<D%(255)+255)):W$=\"HI\":W=C\n",
+ "options": {
+  "library": 16384,
+  "program": 24576,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 24576,
+ "obj_len": 1100,
+ "obj_sha256": "7bfc6276c0a6b690d4c5573517073cab7606e989a502f6c4d6437e9f24895550",
+ "cycles": 115131492,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 24596
+  },
+  {
+   "line": 20,
+   "addr": 24630
+  },
+  {
+   "line": 30,
+   "addr": 24757
+  },
+  {
+   "line": 40,
+   "addr": 24762
+  },
+  {
+   "line": 50,
+   "addr": 24803
+  },
+  {
+   "line": 60,
+   "addr": 24835
+  },
+  {
+   "line": 70,
+   "addr": 24874
+  },
+  {
+   "line": 80,
+   "addr": 24950
+  },
+  {
+   "line": 90,
+   "addr": 24956
+  },
+  {
+   "line": 100,
+   "addr": 25011
+  },
+  {
+   "line": 110,
+   "addr": 25070
+  },
+  {
+   "line": 120,
+   "addr": 25109
+  },
+  {
+   "line": 130,
+   "addr": 25117
+  }
+ ],
+ "info": {
+  "LIBRARY": "16384 - 20396",
+  "OBJECT FILE": "S002.OBJ",
+  "PROGRAM": "24576 - 25675",
+  "LOCAL VARIABLES": "25676 - 25756",
+  "HIGHEST MEMORY LOCATION": "25756"
+ }
+}

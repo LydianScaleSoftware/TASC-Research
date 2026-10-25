@@ -1,0 +1,86 @@
+{
+ "id": "r3188",
+ "key": "4915af1f35adb35e",
+ "source": "10 REM! INTEGER I,J\n20 DEF FN F(X)=SQR(N2%*((AB AND W)))\n30 HCOLOR=I:IF (J) THEN IF (Q1<>((748>=N2%-Q1))) THEN 30\n40 W$=W$\n50 W$=W$\n60 FOR Z=(W%) TO (NOT W%) STEP (J):DATA X\n70 PRINT A%*C;:GOSUB 40\n80 FOR AB=(SQR(NOT W%*((Z/I)))) TO (1<=A%*NOT 807):IF (((Q1<N2%))*C-2) THEN 50:W$=CHR$(-A%>J)\n90 PRINT:NEXT AB:ON RND(FN F(Z)<>((B% OR B%))) GOTO 50\n100 J=NOT ((N2%+N2% AND Z<B%)):VTAB RND(40)+687:PRINT\n110 INVERSE\n120 AB=Q1>AB\n130 N2%=NOT ((40927<>2<>B%)):IF (NOT C) THEN IF (C) THEN ON 511=3>=-I>W*Q1-Z/.001 GOTO 90,100,140,110:M$=\"HI\"\n140 Q1=TAN(RND(SGN(96))):W$=W$\n",
+ "options": {
+  "library": null,
+  "program": "HGR1",
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 16384,
+ "obj_len": 841,
+ "obj_sha256": "4882807f6a48472195263b47b622c1f253c8a0605d069812cbf7c570e1ec7170",
+ "cycles": 100813573,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 16404
+  },
+  {
+   "line": 20,
+   "addr": 16404
+  },
+  {
+   "line": 30,
+   "addr": 16426
+  },
+  {
+   "line": 40,
+   "addr": 16463
+  },
+  {
+   "line": 50,
+   "addr": 16469
+  },
+  {
+   "line": 60,
+   "addr": 16475
+  },
+  {
+   "line": 70,
+   "addr": 16506
+  },
+  {
+   "line": 80,
+   "addr": 16518
+  },
+  {
+   "line": 90,
+   "addr": 16611
+  },
+  {
+   "line": 100,
+   "addr": 16655
+  },
+  {
+   "line": 110,
+   "addr": 16703
+  },
+  {
+   "line": 120,
+   "addr": 16706
+  },
+  {
+   "line": 130,
+   "addr": 16718
+  },
+  {
+   "line": 140,
+   "addr": 16838
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "OBJECT FILE": "S001.OBJ",
+  "PROGRAM": "16384 - 17224",
+  "LOCAL VARIABLES": "17225 - 17282",
+  "HIGHEST MEMORY LOCATION": "17282"
+ }
+}

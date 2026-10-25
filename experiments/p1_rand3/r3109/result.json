@@ -1,0 +1,82 @@
+{
+ "id": "r3109",
+ "key": "f7d57758d881ba33",
+ "source": "10 REM! INTEGER K,J\n20 INPUT Q1,Z%,Z%\n30 C=ABS(K)\n40 PRINT N2$,A$;\n50 IF (Q1) THEN PRINT\n60 Z%=3.14159+J-PEEK(K)\n70 A$=Q1$\n80 PRINT \"X Y\";\"\";:DATA \"A,B\",HI,\"A,B\",-2.5:M=-AB\n90 GOSUB 20:HOME\n100 IF (AB=Q1%) THEN 110:PRINT MID$(LEFT$(Q1$+N2$,M*Q1%),RND(C));Q1,\n110 SPEED=127:X=1\n120 IF (Q1) THEN J=666:IF (C^(20)) THEN IF (X%) THEN 40:FOR M=(X%) TO ((NOT ((Q1%*X%))))\n130 IF (SGN(Q1%)<=((Q1>M))>1E3) THEN ON COS(C<NOT Z%) GOTO 130,120,110,120:K=NOT ((K*-251)):HCOLOR=M\n",
+ "options": {
+  "library": null,
+  "program": 20480,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 20480,
+ "obj_len": 585,
+ "obj_sha256": "a0182ad64b9941004d82e8b16753117532ae14d48517290242b722cd74c541a2",
+ "cycles": 87022278,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 20500
+  },
+  {
+   "line": 20,
+   "addr": 20500
+  },
+  {
+   "line": 30,
+   "addr": 20524
+  },
+  {
+   "line": 40,
+   "addr": 20533
+  },
+  {
+   "line": 50,
+   "addr": 20548
+  },
+  {
+   "line": 60,
+   "addr": 20559
+  },
+  {
+   "line": 70,
+   "addr": 20583
+  },
+  {
+   "line": 80,
+   "addr": 20589
+  },
+  {
+   "line": 90,
+   "addr": 20647
+  },
+  {
+   "line": 100,
+   "addr": 20653
+  },
+  {
+   "line": 110,
+   "addr": 20667
+  },
+  {
+   "line": 120,
+   "addr": 20679
+  },
+  {
+   "line": 130,
+   "addr": 20717
+  }
+ ],
+ "info": {
+  "LIBRARY": "2051 - 6063",
+  "OBJECT FILE": "S007.OBJ",
+  "PROGRAM": "20480 - 21064",
+  "LOCAL VARIABLES": "21065 - 21110",
+  "HIGHEST MEMORY LOCATION": "21110"
+ }
+}

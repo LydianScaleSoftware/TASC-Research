@@ -1,0 +1,147 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S006
+
+
+OBJECT CODE FILE:
+(DEFAULT S006.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION?
+
+*****BEGINNING PASS 1
+
+
+
+10  DEF  FN F(T) = N2
+20  FOR N2 = ( - ((1 / 5 >  =  LOG (XY%)
+))) TO (XY% <  = (( ABS (C) <  > C - XY%
+))) STEP (N2)
+30 XY% = XY%: IF ( TAN (32417 = 170 = W)
+) THEN 80
+40 C = Y%: VTAB  FN F(W <  >  - W): PRIN
+T 1; PEEK (B%);
+50 XY% = W: VTAB N2: PRINT  ABS (C + ((W
+ OR Y%))); STR$ (W);
+60  HLIN  -  EXP (W% = 33185),(B%) AT 0.
+1: SPEED= C
+70  GOTO 200
+80 M$ = M$
+90  PRINT : FOR Q1 = (N2 ^ ((N2 AND  - Z
+))) TO (B% = XY% >  = ((1E3 OR N2)) >  =
+  NOT ((255 / 2.25)))
+100 M$ = XY$: SCALE= 24
+110  PRINT : FOR N2 = (Z) TO (Q1 / (( CO
+S (B%) - W)))
+120  FOR W = ( FN F(N2) - B%) TO ( TAN (
+XY% <  > B%) >  = B% + 2 * Q1) STEP ( IN
+T (B%)):Q1 = W% OR B% - N2 OR Y%
+130  HCOLOR= ((N2 + Q1 OR  NOT Q1)) * 47
+461:XY$ = XY$
+140  IF ( LOG (XY%)) THEN Z = XY% * Z >
+ = ((Z <  > 40)) AND  NOT 5 = 4143 - W:
+HLIN XY% * XY%,(W%) AT  ATN ( RND (Q1 /
+XY%)):W% = Q1 /  LOG (N2) <  > C - N2 +
+((40 <  > XY%))
+150  PRINT Y%;32767;:C = W AND  NOT Q1 /
+ Q1: PRINT Y%,
+160 C = B% - ((((Y% > 1)) + 506)):Y% =
+RND (C >  = B%) - ((W% -  TAN (XY%)))
+170
+
+*****WARNING
+LINE NUMBER 170
+IGNORED
+
+ RESUME
+
+
+:B% = B%
+180  FOR C = ( EXP (W) <  = ((W% > XY% O
+R W = 257))) TO ( SIN (B% * ((925 - Y%))
+)): READ XY%,XY%
+190  HLIN N2 /  SIN (C),( EXP (Y% + 3))
+AT C:N2 = C
+200  POKE  - 45747 =  FN F(Y%),1.5 ^ 0 +
+ ((255 > Y%)) <  = Q1: GOSUB 290:M$ = XY
+$
+210 M$ = XY$: PRINT  LEFT$ (XY$,C + Y% -
+ ((1000 AND C)));:C = 2
+220 XY% = 26
+230  PLOT  LOG (Q1 - XY%) = N2,39
+240  HTAB W% <  > C > Q1 = 39: DATA HI,1
+,300: PRINT  LEN (B$);
+250  CALL XY%: PLOT  ATN ( - 195), -  VA
+L (B$): VTAB  LEN ( MID$ (M$,40))
+260 B$ = M$
+270  IF ( -  RND ( ASC (XY$))) THEN 10
+
+*****WARNING
+LINE NUMBER 270
+IGNORED
+
+: GOTO 270
+
+
+280 XY$ = ""
+290  GOSUB 20
+300  IF ( NOT  SGN (Q1 <  = Z)) THEN  PR
+INT  RIGHT$ ("X Y",255 - XY% > B%), FN F
+(C >  = 127) =  - (( - Y%));Q1 * ((Y% *
+B%)) <  >  NOT N2 * ((B% >  = 29469));:
+IF (C *  RND (W) / N2) THEN  PRINT
+
+
+
+*****BEGINNING PASS 2
+
+
+......
+
+
+*****CODE GENERATION COMPLETE
+
+
+COMPILATION INFORMATION AND LINE NUMBER
+REFERENCE TABLE? YES
+
+
+SOURCE FILE: S006
+OBJECT FILE: S006.OBJ
+LIBRARY OCCUPIES 2051 - 6063
+PROGRAM OCCUPIES 6064 - 8040
+
+NO COMMON BLOCK
+
+LOCAL VARIABLES OCCUPY 8041 - 8094
+
+HIGHEST MEMORY LOCATION: 8094
+
+
+LINE# ADDR   LINE# ADDR   LINE# ADDR
+
+10    6084   20    6094   30    6159
+40    6190   50    6229   60    6268
+70    6304   80    6307   90    6313
+100   6395   110   6407   120   6442
+130   6531   140   6564   150   6706
+160   6751   170   6796   180   6802
+190   6882   200   6921   210   6987
+220   7032   230   7038   240   7062
+250   7110   260   7158   270   7164
+280   7186   290   7198   300   7201
+
+*****COMPILATION COMPLETE
+
+
+]?

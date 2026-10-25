@@ -1,0 +1,94 @@
+{
+ "id": "r3131",
+ "key": "d4388fcdf8d3313f",
+ "source": "10 DEF FN F(X)=Q1\n20 FOR M=(M%*((26692>((XY<>105))))) TO (40)\n30 C%=M:IF (2) THEN 100:C%=32767\n40 B%=M%:PLOT 49828+((NOT XY AND Q1>N2%)),COS(XY) OR SIN(VAL(X$)):READ C%\n50 READ M$:XDRAW -M% AT FN F(65535),(NOT B%):NEXT M\n60 A=FN F(N2%):M%=C%:VTAB 32831\n70 HCOLOR=A:ONERR GOTO 140:C=ABS(1E3+368/Q1)\n80 IF (Q1<>39<=LOG(VAL(\"TASC\"))) THEN HCOLOR=((C%*307+((C%-B%))))^((-N2%*N2%)):M%=M%\n90 ON 185-((C*5>LEN(W$))) GOTO 30,20:GOSUB 140\n100 HTAB 3*-10:N2%=1000:GOSUB 90\n110 Q1=ASC(RIGHT$(X$,A)+X$+X$)\n120 M$=RIGHT$(M$+M$,B%):IF (.5) THEN 60:IF (A AND XY) THEN 50\n130 B%=EXP(XY):B%=XY:C%=FN F(M%)\n140 SPEED=M%:READ Q1,M\n150 COLOR=7\n160 W$=W$+\"TASC\":M$=MID$(W$,C+LEN(X$))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1081,
+ "obj_sha256": "9316b624752ac567b1cfd3db098929a1c5d8dc6cbbcd3f1a4e09ea5fa3d8536f",
+ "cycles": 109279692,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6094
+  },
+  {
+   "line": 30,
+   "addr": 6129
+  },
+  {
+   "line": 40,
+   "addr": 6158
+  },
+  {
+   "line": 50,
+   "addr": 6236
+  },
+  {
+   "line": 60,
+   "addr": 6283
+  },
+  {
+   "line": 70,
+   "addr": 6313
+  },
+  {
+   "line": 80,
+   "addr": 6345
+  },
+  {
+   "line": 90,
+   "addr": 6444
+  },
+  {
+   "line": 100,
+   "addr": 6485
+  },
+  {
+   "line": 110,
+   "addr": 6512
+  },
+  {
+   "line": 120,
+   "addr": 6545
+  },
+  {
+   "line": 130,
+   "addr": 6580
+  },
+  {
+   "line": 140,
+   "addr": 6613
+  },
+  {
+   "line": 150,
+   "addr": 6637
+  },
+  {
+   "line": 160,
+   "addr": 6646
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S012.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7144",
+  "LOCAL VARIABLES": "7145 - 7193",
+  "HIGHEST MEMORY LOCATION": "7193"
+ }
+}

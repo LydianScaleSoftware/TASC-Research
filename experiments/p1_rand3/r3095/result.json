@@ -1,0 +1,84 @@
+{
+ "id": "r3095",
+ "key": "7fe1539cfa5c4782",
+ "source": "10 REM! DEFCOMMON B%,XY%,X$\n20 DIM B$(10)\n30 WAIT XY%+((M>=((Y=Y)))),(-((B<=PEEK(Q1%))))\n40 POKE B<>X%,1000:READ Y:B$=RIGHT$(\"A\"+MID$(B$,Q1%),39)\n50 Y=A%(ABS(A%(0.1))*((W-A%(B%)))):HTAB A%(SIN(0.1)) AND 43368\n60 GOSUB 20\n70 HOME\n80 HCOLOR=TAN(A%((XY%)))\n90 X%=B:READ W:GOSUB 130\n100 IF (SQR(-((2*B%)))) THEN 50:ON ATN(-LEN(\"X Y\")) GOTO 50,80:COLOR=(256)>B%\n110 POKE AB,SGN(589<(A%(Q1%)))\n120 ON M+A%(330) GOTO 50:HCOLOR=M\n130 AB$=\"X Y\":PRINT A%(((65535<=A%(Q1%)))+Q1%);MID$(X$,TAN(A%(B%)))+B$+MID$(\"123\",A%(X%),39),RND(A%(X%)),:POKE ((AB OR X%+150))/B%,B+(7>=XY%)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6070,
+ "obj_len": 791,
+ "obj_sha256": "4f29375018edbff5f33bd2528c18e02abb25a3c400c71200766c212a46be5fc3",
+ "cycles": 97438904,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6090
+  },
+  {
+   "line": 30,
+   "addr": 6090
+  },
+  {
+   "line": 40,
+   "addr": 6132
+  },
+  {
+   "line": 50,
+   "addr": 6187
+  },
+  {
+   "line": 60,
+   "addr": 6253
+  },
+  {
+   "line": 70,
+   "addr": 6256
+  },
+  {
+   "line": 80,
+   "addr": 6259
+  },
+  {
+   "line": 90,
+   "addr": 6274
+  },
+  {
+   "line": 100,
+   "addr": 6289
+  },
+  {
+   "line": 110,
+   "addr": 6308
+  },
+  {
+   "line": 120,
+   "addr": 6335
+  },
+  {
+   "line": 130,
+   "addr": 6362
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S010.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6070 - 6860",
+  "NUMERIC COMMON": "6064 - 6067",
+  "STRING COMMON": "6068 - 6069",
+  "LOCAL VARIABLES": "6861 - 6944",
+  "HIGHEST MEMORY LOCATION": "6944"
+ }
+}

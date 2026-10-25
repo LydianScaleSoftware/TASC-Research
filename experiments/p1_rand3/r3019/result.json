@@ -1,0 +1,82 @@
+{
+ "id": "r3019",
+ "key": "adac833972da3a3a",
+ "source": "10 REM! INTEGER I\n20 DIM B$(2)\n30 DEF FN F(X)=ABS(B)\n40 READ Q1\n50 FOR I=(-((-Z%))) TO (W%):DATA 1\n60 B$(((I<>Q1<>Q1))/((Z%=C=Z%-1.5)))=N2$\n70 C=TAN(Z%):PRINT\n80 IF (B/2.25) THEN CALL W%:IF (B%) THEN PRINT:FOR Q1=(NOT 40000) TO (COS(B%))\n90 CALL ASC(M$):NEXT Q1:IF (LEN(\"\"+N2$+N2$)) THEN Z=B%/I\n100 IF (B%) THEN ON NOT ((B%>=W%)) GOTO 120:M$=LEFT$(LEFT$(N2$,Z%),PEEK(Z%)<=((Q1<=C))):HPLOT A% AND B,(Z%)\n110 AB=VAL(LEFT$(XY$,Z%)):GOSUB 120\n120 ON B GOTO 90:SPEED=-Q1:HOME\n130 XY$=M$\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 621,
+ "obj_sha256": "b6f882a595dd80955f6285185c1ef800eb07b98abfbf700d5a025d4634ca46cf",
+ "cycles": 93385929,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6097
+  },
+  {
+   "line": 50,
+   "addr": 6103
+  },
+  {
+   "line": 60,
+   "addr": 6134
+  },
+  {
+   "line": 70,
+   "addr": 6191
+  },
+  {
+   "line": 80,
+   "addr": 6203
+  },
+  {
+   "line": 90,
+   "addr": 6256
+  },
+  {
+   "line": 100,
+   "addr": 6315
+  },
+  {
+   "line": 110,
+   "addr": 6401
+  },
+  {
+   "line": 120,
+   "addr": 6419
+  },
+  {
+   "line": 130,
+   "addr": 6440
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S002.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6684",
+  "LOCAL VARIABLES": "6685 - 6748",
+  "HIGHEST MEMORY LOCATION": "6748"
+ }
+}

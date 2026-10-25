@@ -1,0 +1,90 @@
+{
+ "id": "r3080",
+ "key": "ad124dae2daf5a4b",
+ "source": "10 REM! INTEGER J\n20 DIM D(7,2)\n30 IF (XY) THEN DATA 300,1,X,:IF (XY) THEN 60:FOR Y=(2) TO (ATN(Y))\n40 Z%=NOT M/((XY*B))>=M\n50 Z=(((B+AB%))*1)\n60 Z=((XY>=1))-D(Q1%,20)>D(SIN(D(Q1%,X%)),M+7):Z%=D(INT(-D(511,Z%)),SQR(M=J))\n70 ON 7 GOSUB 100,140,140:PRINT \"X Y\",Q1%;4278 AND 256;\n80 Z=XY<=D(Q1%-D(0,Q1%),X%<>Y):PLOT Y,LOG(Z%)\n90 GOSUB 40:M=-(Y AND D(0,256))\n100 FOR J=(NOT 7*D(255,AB%)) TO (ASC(Y$)-ABS(M)):Z=Z%\n110 B=TAN(5)\n120 PRINT B,SQR(Z%);D(-B,-((127-256))),:SPEED=-PEEK(B<>D(Z%,AB%))\n130 AB%=-XY:PRINT LEFT$(MID$(Y$,AB%/255),NOT ((XY^Y))),A$,Q1$;:DATA ,,\n140 IF ((40000)) THEN 100:Y$=Q1$:IF (NOT EXP(J)-M) THEN 30\n150 RESTORE:X%=AB%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1050,
+ "obj_sha256": "e7cd2fa752454def7536957b67bfd54cd53245d901da6a96ddb383b949183ab5",
+ "cycles": 110343219,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6121
+  },
+  {
+   "line": 50,
+   "addr": 6151
+  },
+  {
+   "line": 60,
+   "addr": 6166
+  },
+  {
+   "line": 70,
+   "addr": 6298
+  },
+  {
+   "line": 80,
+   "addr": 6353
+  },
+  {
+   "line": 90,
+   "addr": 6425
+  },
+  {
+   "line": 100,
+   "addr": 6458
+  },
+  {
+   "line": 110,
+   "addr": 6526
+  },
+  {
+   "line": 120,
+   "addr": 6538
+  },
+  {
+   "line": 130,
+   "addr": 6625
+  },
+  {
+   "line": 140,
+   "addr": 6699
+  },
+  {
+   "line": 150,
+   "addr": 6719
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S012.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7113",
+  "LOCAL VARIABLES": "7114 - 7286",
+  "HIGHEST MEMORY LOCATION": "7286"
+ }
+}

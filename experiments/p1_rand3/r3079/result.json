@@ -1,0 +1,78 @@
+{
+ "id": "r3079",
+ "key": "6e71982d76738baa",
+ "source": "10 REM! INTEGER I,J\n20 DIM B%(7),D%(9)\n30 DEF FN F(T)=-((P(AB%)*AB-LEN(A$)))\n40 IF (P(Y%)) THEN FOR AB=(Y/I/NOT 989/((Q1>J OR Q1*P(AB%)))) TO (127):PRINT TAN(AB%)-((AB<=7))<>FN F(.001>=AB);MID$(Y$,VAL(A$),Y%),:P(Y%)=Z=NOT ((.5>=J))\n50 DATA \"A,B\",300,\"A,B\",\"A,B\":GOTO 120\n60 DATA 1,X,-2.5,-2.5\n70 COLOR=639:GOTO 30:IF (20=((C%/C%<Q1))) THEN C%=-((-102))\n80 A$=Y$:HLIN 10981,(W%+2.25) AT I<10:READ AB,AB\n90 HLIN 20-NOT ((-Q1)),(ATN(39/((Y%-624)))) AT Q1\n100 PRINT ((Z>=J))*P(W%)*((J<>136+A));\"A\";AB%^Z^Y% AND NOT ((B%(163) OR 127));:Y%=I=D%(W%):SPEED=SGN(I+AB%)\n110 PRINT LEFT$(Y$,W%=7<>Y);MID$(Q1$,Z,Y);:PRINT FN F(Y);\n120 HTAB Y:Y$=Y$\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1048,
+ "obj_sha256": "dd82aed67695104689bc54937c020f87e4a08701ec3f25cac23d95020abfb312",
+ "cycles": 105247859,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6118
+  },
+  {
+   "line": 50,
+   "addr": 6299
+  },
+  {
+   "line": 60,
+   "addr": 6324
+  },
+  {
+   "line": 70,
+   "addr": 6344
+  },
+  {
+   "line": 80,
+   "addr": 6356
+  },
+  {
+   "line": 90,
+   "addr": 6410
+  },
+  {
+   "line": 100,
+   "addr": 6454
+  },
+  {
+   "line": 110,
+   "addr": 6596
+  },
+  {
+   "line": 120,
+   "addr": 6653
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S011.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7111",
+  "LOCAL VARIABLES": "7112 - 7263",
+  "HIGHEST MEMORY LOCATION": "7263"
+ }
+}

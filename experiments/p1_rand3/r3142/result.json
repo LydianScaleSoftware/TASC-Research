@@ -1,0 +1,90 @@
+{
+ "id": "r3142",
+ "key": "07f80d0d737e4d2e",
+ "source": "10 REM! INTEGER I,K\n20 DIM A$(2,1),D%(1,12)\n30 DEF FN F(X)=Z%\n40 IF (SQR(Z<=3)) THEN B=D%(I,D%(I,I)*((K*552))):PRINT K;\n50 A$=CHR$(-Z%)+W$+A$+\"123\"\n60 PRINT A$(XY%,X%);MID$(Z$,ASC(RIGHT$(W$,Z%)));:Z=W%:A$(LEN(\"\"),((K<>1E3*D%(30856,X%)))*((FN F(XY)*1)))=\"123\"\n70 PRINT\n80 VTAB RND(24 AND I)*((Z-Z))\n90 STOP:XY=43681+K AND -B\n100 PRINT A$(Z-100,32767<Z%)+W$+\"HI\"+\"123\";\n110 IF (NOT ((XY%-RND(5)))) THEN XY%=FN F(XY)\n120 PRINT\n130 XY%=-100-K+X%:K=5:IF (SGN(-((XY AND K)))) THEN D%(-B,317*FN F(AB))=32767\n140 IF (W%/Z%=-AB) THEN IF (-XY%) THEN 90\n150 SPEED=FN F(SIN(W%*40))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 949,
+ "obj_sha256": "482591c6325569cfe9b03ca9f19a03b7b8a4ac83df9e971b1912392a291dcd46",
+ "cycles": 106376147,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6094
+  },
+  {
+   "line": 50,
+   "addr": 6158
+  },
+  {
+   "line": 60,
+   "addr": 6197
+  },
+  {
+   "line": 70,
+   "addr": 6314
+  },
+  {
+   "line": 80,
+   "addr": 6317
+  },
+  {
+   "line": 90,
+   "addr": 6347
+  },
+  {
+   "line": 100,
+   "addr": 6374
+  },
+  {
+   "line": 110,
+   "addr": 6442
+  },
+  {
+   "line": 120,
+   "addr": 6470
+  },
+  {
+   "line": 130,
+   "addr": 6473
+  },
+  {
+   "line": 140,
+   "addr": 6555
+  },
+  {
+   "line": 150,
+   "addr": 6596
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S006.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7012",
+  "LOCAL VARIABLES": "7013 - 7126",
+  "HIGHEST MEMORY LOCATION": "7126"
+ }
+}

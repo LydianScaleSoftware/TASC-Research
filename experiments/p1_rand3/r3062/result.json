@@ -1,0 +1,82 @@
+{
+ "id": "r3062",
+ "key": "c0f3ebf33fbbf942",
+ "source": "10 DIM B(9,4),D(8),A%(11)\n20 DEF FN F(Z)=M%\n30 B%=FN F(RND(36221))\n40 PRINT:IF (AB%>NOT B%) THEN READ Y,M%:IF (X^D(M%) OR B% OR ((B%-AB%))*((7-W))) THEN AB%=PEEK(W)\n50 AB=AB%\n60 NORMAL:D(1E3)=M%:M$=STR$(2.25)\n70 A=D(N2%):READ M%,M%\n80 M%=((-.001 OR NOT B(N2%,N2%)))-B(X<AB%,ASC(\"HI\")):DATA HI,-2.5\n90 PRINT 5,NOT 5^((Y AND ((533 OR A)))),\n100 HCOLOR=INT(W<>35319-M%):GOSUB 80:B(-((AB-8557)),748)=X+((B(N2%,M%)-A*127))\n110 INPUT M$,N2%,W:GET N2%:POKE 973,LEN(\"\")>SIN(M%)>1+AB%\n120 ON Y GOTO 110,80,10:W=N2%:READ AB\n130 DATA 300,1:W=-W:M%=((683<>653))*((.5-A))-((X AND Y))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1067,
+ "obj_sha256": "527df9272a6aa4b0476f8be1c24456c81921ba9f2fda2df559fefc878aa43992",
+ "cycles": 106523896,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6094
+  },
+  {
+   "line": 40,
+   "addr": 6109
+  },
+  {
+   "line": 50,
+   "addr": 6212
+  },
+  {
+   "line": 60,
+   "addr": 6221
+  },
+  {
+   "line": 70,
+   "addr": 6251
+  },
+  {
+   "line": 80,
+   "addr": 6278
+  },
+  {
+   "line": 90,
+   "addr": 6372
+  },
+  {
+   "line": 100,
+   "addr": 6423
+  },
+  {
+   "line": 110,
+   "addr": 6507
+  },
+  {
+   "line": 120,
+   "addr": 6600
+  },
+  {
+   "line": 130,
+   "addr": 6634
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S011.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7130",
+  "LOCAL VARIABLES": "7131 - 7501",
+  "HIGHEST MEMORY LOCATION": "7501"
+ }
+}
