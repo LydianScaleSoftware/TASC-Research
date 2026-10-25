@@ -19,15 +19,18 @@ Entry point for any new session. Read this first, then the handoff prompt
   The only hand-written code in the PASS files is an 89-byte page-3 block
   POKEd from PASS0 DATA ($0377-$03CF, `ml/pass0_page3.hex`; H7). PASS0 also
   patches DOS 3.3 at $A633/$A649/$A7C4/$A96C (originals saved and verified).
-- **Phase R: started.** `python -m tasc.rtdis` flow-disassembles RUNTIME from
-  TASC's own entry table: 3,925/4,013 bytes are code; the rest is the CHRGET
-  patch, an error stub, 42 bytes of leftover assembler text and the copyright
-  (H6 confirmed). Listing `docs/runtime/runtime_listing.txt`, index
-  `docs/runtime/routine_index.tsv`. Documented so far: RT.INIT, entry table,
-  real/string/integer dispatchers (RAG runtime.md, runtime-index.md).
-- Next: document the remaining RUNTIME routines (integer multiply, FOR/NEXT,
-  strings, INPUT/READ, ONERR, arrays, garbage collection); trace what the DOS
-  patches do; then Phase 3 lifting of PASS1/PASS2 using the predictor.
+- **Phase R: main areas documented (session 3).** `python -m tasc.rtdis`
+  flow-disassembles RUNTIME (3,925/4,013 bytes code; rest classified; H6
+  confirmed). Documented in RAG runtime.md / runtime-routines.md: RT.INIT,
+  entry table, all three dispatchers, integer multiply, arrays, FOR/NEXT
+  frames (measured in Pandowdy) and the RETURN-unwinds-FOR trick, POP,
+  strings (literals in place, two string slots, compacting GC), INPUT/READ/
+  GET, STOP/END, RESUME/Debug, ONERR/RESUME. DOS patches explained: they let
+  TASC READ the tokenized source as a text file and use byte offsets > 32767.
+- Open in Phase R: exact ONERR trigger path through the CHRGET patch (trace an
+  error), per-routine notes for the graphics/statement entries, the PASS0
+  operator table ($5005). Optional (Mark): reassemblable RUNTIME source.
+- Next: Phase 3, lifting PASS1/PASS2 with the object parser and predictor.
   Cleanup: mypy.
 
 ### How the predictor is debugged
