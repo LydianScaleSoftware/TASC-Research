@@ -1,0 +1,34 @@
+{
+ "id": "cat_arith",
+ "key": "a4cf75fb35ed2311",
+ "source": "10 X$=LEFT$(A$+B$,X+1)",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 100,
+ "obj_sha256": "95541b335c395ac475891a2f3625b406188c51a1936d59a76bf6a3d70ac30143",
+ "cycles": 56623306,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6163",
+  "LOCAL VARIABLES": "6164 - 6174",
+  "HIGHEST MEMORY LOCATION": "6174"
+ }
+}

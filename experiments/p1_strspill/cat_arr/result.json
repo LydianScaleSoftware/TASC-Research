@@ -1,0 +1,34 @@
+{
+ "id": "cat_arr",
+ "key": "78b83eff80fef6dc",
+ "source": "10 X$=LEFT$(A$+B$,C(1))",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 99,
+ "obj_sha256": "3913c3ea7a0a70ec57a52033189cdd5efb16d460ef9f920f6adc9665f3baa98f",
+ "cycles": 56386230,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6162",
+  "LOCAL VARIABLES": "6163 - 6223",
+  "HIGHEST MEMORY LOCATION": "6223"
+ }
+}

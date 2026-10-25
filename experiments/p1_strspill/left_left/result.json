@@ -1,0 +1,34 @@
+{
+ "id": "left_left",
+ "key": "d7015f87b2959eb3",
+ "source": "10 X$=LEFT$(LEFT$(A$,2),X+1)",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 98,
+ "obj_sha256": "e7a245a3c1f6462b973e694a8373166debe32e87f0a450bd2a995912cdf1df24",
+ "cycles": 56792790,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6161",
+  "LOCAL VARIABLES": "6162 - 6170",
+  "HIGHEST MEMORY LOCATION": "6170"
+ }
+}

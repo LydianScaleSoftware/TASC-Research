@@ -1,0 +1,34 @@
+{
+ "id": "cat_fn",
+ "key": "0845291751646012",
+ "source": "10 X$=LEFT$(A$+B$,SQR(X))",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 86,
+ "obj_sha256": "f80da687cc984e57819af432b25e98021cc1a54c29d714850489465c7cf523be",
+ "cycles": 56172571,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6149",
+  "LOCAL VARIABLES": "6150 - 6160",
+  "HIGHEST MEMORY LOCATION": "6160"
+ }
+}

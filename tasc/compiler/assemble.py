@@ -67,6 +67,12 @@ def assemble(c: Compiler, opts: Options) -> Result:
     for ln in pending_lines:
         line_addr[ln] = pc
     code_end = pc
+    if c.common_last_line is not None:
+        # observed (manual 8.2.4): lines up to the last COMMON declaration keep the address
+        # the code had before COMMON moved it up, i.e. a jump there lands in the COMMON block
+        for ln in list(line_addr):
+            if 0 <= ln <= c.common_last_line:
+                line_addr[ln] = prog_start + 20
 
     # constant pool
     consts = _symbol_order([k for k in c.consts.values() if k.ops or k.used])  # unused forms only fix the order
@@ -87,7 +93,7 @@ def assemble(c: Compiler, opts: Options) -> Result:
     # observed: numeric scalars, constants, numeric arrays, string scalars, string arrays
     # (arrays always get a routine)
     rtn_order = ([s for s in temps + c.params + fn_temps + num_scalars if s.ops] + [k for k in consts if k.ops] + num_arrays
-                 + [s for s in stemps + c.fn_temps["str"] + strings if s.ops or s.array])
+                 + [s for s in stemps + c.fn_temps["str"] + strings if s.ops or s.array or s.common is not None])
     entry: dict[tuple[int, int], int] = {}
     for s in rtn_order:
         s.rtn = pc

@@ -164,6 +164,7 @@ class Compiler:
         self.int_arrays: dict[str, tuple[int, ...]] = {}
         self.common: list[Sym] = []
         self.common_flag = 0x00
+        self.common_last_line: int | None = None
         self.dims: dict[tuple[str, str], tuple[int, ...]] = {}
         self.labels = 0
         self.data_blocks: list[str] = []
@@ -278,10 +279,18 @@ class Compiler:
             return "lit" if self.o.int_const and self.is_intlit(e) else "real"
         if isinstance(e, Str):
             return "str"
-        if isinstance(e, VarRef):
+        if isinstance(e, VarRef):  # pure lookup: symbols are entered at scan time only
             if e.suffix == "$":
                 return "str"
-            return self.var(e.name, e.suffix, e.subs is not None, len(e.subs or [])).vtype
+            if e.suffix == "%":
+                return "int"
+            if e.subs is None and e.name in self.scope_param:
+                return "real"
+            known = self.syms.get((e.name, e.suffix, e.subs is not None))
+            if known is not None:
+                return known.vtype
+            declared = self.int_all or (e.name in self.int_names if e.subs is None else e.name in self.int_arrays)
+            return "int" if declared else "real"
         if isinstance(e, FnCall):
             return "real"
         if isinstance(e, Builtin):
@@ -605,11 +614,16 @@ class Compiler:
                     self.entry(t, 1)
                     desc[j] = ("temp", t, ty)
 
-        for x in args:
+        for i, x in enumerate(args):
             if self.simple_or_str(x):
                 desc.append(("leaf", x, ""))
             else:
-                for c2 in self.uses(x):  # observed: spill whatever accumulator x's computation uses
+                # observed: spill whatever accumulator this or any later complex argument uses
+                need: set[str] = set()
+                for y in args[i:]:
+                    if not self.simple_or_str(y):
+                        need |= self.uses(y)
+                for c2 in need:
                     spill(c2)
                 desc.append(("acc", None, self.gen(x, "str" if cls(x) == "str" else self.want_any(x))))
         # observed: at the reduction, a pending result that is not the first value of its
@@ -775,6 +789,8 @@ class Compiler:
             v = fp.literal_value(e.text)
             self.const(v, "int" if self.etype(e) == "lit" else "real", e.text)
         elif isinstance(e, VarRef):
+            # observed: variables are entered into the symbol table as they are scanned
+            self.var(e.name, e.suffix, e.subs is not None, len(e.subs or []))
             for x in e.subs or []:
                 self.prescan(x)
         elif isinstance(e, Unary):
@@ -1035,8 +1051,8 @@ class Compiler:
             s.ops.add(1)
             self.emit(JSR, Ref("entry", s, 1), f"{s!r}.op1")
             self.jsr_rt(entry)
-            if s.vtype == "int":
-                raise CompileError("GUESS: INPUT/READ into int array element")
+            if s.vtype == "int":  # observed (r2027, r2030)
+                self.jsr_rom("AYINT")
             self.jsr_rt("ARR.STORE")
             return
         s = self.var(v.name, v.suffix)
@@ -1109,6 +1125,7 @@ class Compiler:
                     self.int_names.add(nm)
                 self.var(nm, suf, bool(dims), len(dims) or 1)  # observed: entered at the declaration
         elif up.startswith("DEFCOMMON") or up.startswith("USECOMMON"):
+            self.common_last_line = self.cur_line
             if up.startswith("USECOMMON"):
                 self.common_flag = 0xFF
             for nm, suf, dims in _decl_list(up[9:]):
@@ -1163,7 +1180,7 @@ class Compiler:
                         pending_ret = st  # decide once the next statement is known
                         continue
                     self.stmt(st, n)
-                    if st.kind in ("GOTO", "IFGOTO", "RETURN", "END", "STOP", "NEW"):
+                    if st.kind in ("GOTO", "IFGOTO", "RETURN", "END", "STOP", "NEW", "ONERR"):
                         dead = True
                 if pending_ret is not None:
                     self.stmt(pending_ret, n)
