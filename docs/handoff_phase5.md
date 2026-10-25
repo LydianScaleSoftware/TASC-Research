@@ -64,6 +64,8 @@ The loop, after each batch of annotations:
 
 ## Things to watch
 
+- **Source disk** (session 6): images/source/TASC 2.01 SOURCE.dsk, rebuilt by `python -m tasc.sourcedisk` whenever the sources change; `--compile` re-proves it with TASC in drive 1 and the disk in drive 2.
+
 - **Documentation views** (session 6): src/html/ (listing + overview per program) and src/PASSn.OVERVIEW.TXT are generated with the sources; edit docs/lift/annot/<PASS>.overview.txt, never the generated files.
 
 - **Names are solved jointly across the passes** (COMMON names are shared), so adding or changing preferred names in one pass can rename variables in all three; re-prove all three passes after any [names] change. Listings must re-tokenize to the .bas (pytest test_listing_retokenizes); names may not end in A or T.
