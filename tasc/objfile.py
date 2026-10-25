@@ -90,13 +90,14 @@ def real_value(raw: bytes) -> float:
     exp = raw[0]
     if exp == 0:
         return 0.0
-    m = struct.unpack(">I", bytes([raw[1] | 0x80]) + raw[2:5])[0]
+    m: int = struct.unpack(">I", bytes([raw[1] | 0x80]) + raw[2:5])[0]
     v = m / 2.0**32 * 2.0 ** (exp - 128)
     return -v if raw[1] & 0x80 else v
 
 
 def int_value(raw: bytes) -> int:
-    return struct.unpack(">h", raw)[0]
+    v: int = struct.unpack(">h", raw)[0]
+    return v
 
 
 def _parse_routine(d: bytes, load: int, off: int) -> Routine | None:
@@ -180,7 +181,7 @@ def parse(data: bytes, load: int, source: str | None = None) -> ObjectFile:
     # constants: routine targets inside the object file
     const_addrs = sorted({r.target for r in routines if load <= r.target < load + rstart})
     cstart = (const_addrs[0] - load) if const_addrs else rstart
-    for i, ca in enumerate(const_addrs):
+    for ca in const_addrs:
         r = next(x for x in routines if x.target == ca)
         size = 5 if r.vtype == "real" else 2
         raw = data[ca - load : ca - load + size]
