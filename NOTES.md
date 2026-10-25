@@ -18,7 +18,14 @@ Entry point for any new session. Phase 3 handoff: `docs/handoff_phase3.md` (Phas
   (`python -m tasc.decomp.decompile --corpus`, pytest tests/test_decomp.py).
 - **Phase 5: started.** MAKE RUNTIME done: `src/MAKE_RUNTIME.txt` (+ DOC/VARS)
   rebuilds RUNTIME byte for byte in Pandowdy (`python -m tasc.makeruntime`; RAG
-  phase5.md). Already done: PASS0/1/2 decompiled jointly (shared COMMON
+  phase5.md). Sources: `python -m tasc.sourcegen` writes `src/PASSn.bas`
+  (tokenized), `.txt` (listing), `.DOC.TXT`, `.VARS.TXT` from address-keyed
+  annotations in `docs/lift/annot/` (COMMON.ann shared, PASS1.ann done for
+  names, FNs, routine headers and key lines; PASS0/PASS2 locals not yet). Names:
+  dynamic programming over the hash order maximises name quality; fallbacks are
+  listed in `docs/lift/annot/PASSn.names.txt` (development side only). Checkers:
+  pytest tests/test_source.py (DOC mirror, variables documented, safe names;
+  DOCUMENTED = PASS1). `src/generated/` is the older raw decompiler output. Already done: PASS0/1/2 decompiled jointly (shared COMMON
   names); the real TASC compiles the regenerated sources (`src/generated/PASSn.bas`)
   into files identical to the originals (`python -m tasc.selfcompile`). To do:
   meaningful names within the hash constraints, line-mirrored DOC files and VARS
@@ -83,8 +90,15 @@ boot takes about 10 s of wall time.
 - **Phase 5 variable names (Mark, 2026-10-25):** the ideal name conveys the
   variable's usage or meaning, from analysis of what the program does; keep that
   goal, and where the hash order forbids it fall back to a similar first letter
-  with a second letter or digit chosen to fit the logic; never a keyword. The
-  compendium records the preferred name beside any fallback.
+  with a second letter or digit chosen to fit the logic; never a keyword.
+  Finding (2026-10-25): the storage order is determined by the names, so along
+  each pass's allocation order the names' hash buckets must not decrease; with
+  about 100 integers in PASS1 over 32 buckets most variables have a narrow bucket
+  window. Result for PASS1: 13 names as preferred, about 89 keep the first
+  letter, about 27 need a neighbouring first letter. Fallbacks are recorded on the
+  development side (`docs/lift/annot/PASSn.names.txt`), not in the VARS file
+  (standalone rule). Declarations: names sharing a bucket must keep their storage
+  order, so groups interleave; short runs join the previous INTEGER line.
 - **Page-3 ML block (Mark, 2026-10-25):** stays in PASS0's DATA statements, loaded by
   the original FOR/READ/POKE loop and USR-vector POKEs (the DATA text and its split
   into four statements are fixed by the object; the original method is the only one

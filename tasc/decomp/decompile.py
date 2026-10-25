@@ -56,6 +56,11 @@ class Unit:
     program: bytes = b""
     text: str = ""
     fre_choice: dict[int, bool] = field(default_factory=dict)
+    prefs: dict[int, tuple[str, int]] = field(default_factory=dict)  # storage address -> (name, group rank)
+    fn_prefs: dict[int, str] = field(default_factory=dict)  # DEF FN body address -> name
+    param_prefs: dict[int, str] = field(default_factory=dict)  # DEF FN body address -> parameter name
+    int_groups: list[int] = field(default_factory=list)  # group rank of each u.ints entry
+    numbering: str = "fives"  # "fives" (decompiler default) or "routines" (Phase 5 sources)
 
     @property
     def lifted(self) -> Lifted:
@@ -96,7 +101,23 @@ def _decl_text(u: Unit, names: dict[Sym, str]) -> list[bytes]:
         return b"(" + b",".join(str(x).encode() for x in s.dims) + b")"
 
     if u.ints:
-        _chunked(out, REM + b"! INTEGER ", [names[s].encode() + (dimtxt(s) if s.array else b"") for s in u.ints])
+        # one run of lines per declaration group (Phase 5: related names together)
+        # runs of one group; a run shorter than 3 names joins the line before it (names in
+        # one hash bucket must keep their storage order, so groups interleave)
+        grs = u.int_groups if len(u.int_groups) == len(u.ints) else [0] * len(u.ints)
+        runs: list[list[Sym]] = []
+        i = 0
+        while i < len(u.ints):
+            j = i
+            while j < len(u.ints) and grs[j] == grs[i]:
+                j += 1
+            if runs and j - i < 3:
+                runs[-1] += u.ints[i:j]
+            else:
+                runs.append(u.ints[i:j])
+            i = j
+        for run in runs:
+            _chunked(out, REM + b"! INTEGER ", [names[s].encode() + (dimtxt(s) if s.array else b"") for s in run])
     common = _commons(u)
     if common:
         kw = b"USECOMMON " if u.lifted.walk.obj.header.flag == 0xFF else b"DEFCOMMON "
@@ -124,17 +145,61 @@ def _final_end(lf: Lifted) -> int | None:
     return None
 
 
+UNCONDITIONAL = {"GOTO", "RETURN", "END", "STOP", "NEW", "ONERR", "RESUME", "RUN"}
+
+
+def routine_starts(lf: Lifted) -> set[int]:
+    """Addresses that start a routine: GOSUB targets and ON GOTO / ON GOSUB targets (statement
+    and operation handlers)."""
+    out: set[int] = set()
+    for o in lf.walk.ops:
+        if o.kind == "jsr" and o.target not in lf.fns:
+            out.add(o.target)
+        elif o.kind == "rt" and o.name in ("ONGOTO", "ONGOSUB"):
+            out.update(o.words)
+    return out
+
+
+def _number_routines(u: Unit, last_decl: int) -> None:
+    """Phase 5 numbering (Mark, 2026-10-25): steps of 10; a routine starts at the smallest
+    multiple of 100 that is not the very next number (after 90: 200; after 150: 200); a
+    routine start that the previous line falls into skips one number instead (after 50: 70).
+    The program body starts like a routine."""
+    starts = routine_starts(u.lifted)
+    num = last_decl
+    prev = None
+    for ln in u.lines:
+        falls = prev is not None and not (prev.stmts[-1].kind in UNCONDITIONAL
+                                          and not any(st.kind in ("IF", "IFGOTO", "IFRETURN") for st in prev.stmts))
+        if prev is None or (ln.addr in starts and not falls):
+            m = (num // 100 + 1) * 100
+            if m == num + 10:
+                m += 100
+            num = m
+        elif ln.addr in starts:
+            num += 20
+        else:
+            num += 10
+        ln.number = num
+        prev = ln
+    if num > 63999:
+        raise DecompileError(f"{u.name}: line numbers run past 63999")
+
+
 def _render(u: Unit, names: dict[Sym, str]) -> None:
     lf = u.lifted
     h = lf.walk.header
     decl = _decl_text(u, names)
+    step = 10 if u.numbering == "routines" else 5
     first = ((5 * (len(decl) + 1) + 9) // 10) * 10 if decl else 10
     u.lines = layout(lf, 5, first)
+    if u.numbering == "routines":
+        _number_routines(u, 10 * len(decl))
     line_of = {ln.addr: ln.number for ln in u.lines}
     if decl and _commons(u):
         # manual 8.2.4: lines up to the last COMMON declaration keep program start + 20
         last_common = max(i for i, b in enumerate(decl) if b"COMMON" in b[:12]) + 1
-        line_of.setdefault(h["COMBEG1"] + 1 + 20, 5 * last_common)
+        line_of.setdefault(h["COMBEG1"] + 1 + 20, step * last_common)
     final_end = _final_end(lf)
     if final_end is not None:
         line_of.setdefault(final_end, -1)
@@ -142,13 +207,13 @@ def _render(u: Unit, names: dict[Sym, str]) -> None:
     fn_names: dict[int, str] = {}
     params: dict[Sym, str] = {}
     for f in sorted(lf.fns.values(), key=lambda f: f.addr):
-        fn_names[f.addr] = pool.take(None, 0, "fn", False)
-        params[f.param] = pool.take(None, 0, "", False)
+        fn_names[f.addr] = u.fn_prefs.get(f.addr) or pool.take(None, 0, "fn", False)
+        params[f.param] = u.param_prefs.get(f.addr) or pool.take(None, 0, "", False)
     r = Renderer(names, line_of, fn_names, params)
     pre = [s for s in u.ints if not s.array] or [s for s in _commons(u) if not s.array]
     if pre:
         r.filler = names[pre[0]].encode()
-    u.decl_lines = [(5 * (i + 1), b) for i, b in enumerate(decl)]
+    u.decl_lines = [(step * (i + 1), b) for i, b in enumerate(decl)]
     u.body_lines = []
     u.line_addr = {}
     for ln in u.lines:
@@ -187,6 +252,7 @@ class Node:
     suf: str = ""
     array: bool = False
     bucket: int = 0
+    name: str = ""
 
 
 def _weight(x: Node, y: Node, unit: int) -> int:
@@ -200,16 +266,38 @@ def _weight(x: Node, y: Node, unit: int) -> int:
     return 1 if y.seqs[unit] < x.seqs[unit] else 0
 
 
-def _solve_group(nodes: list[Node], edges: dict[tuple[Node, Node], int]) -> list[Node]:
-    """Topological order and buckets: nondecreasing along edges, +1 on weighted edges,
-    spread over the 32 buckets to leave room for names."""
+def _candidates(pref: str) -> list[list[str]]:
+    """Fallback tiers for a preferred name (Mark, 2026-10-25): the name itself; the same
+    first letter with another letter (nearest to the preferred second letter first); the
+    same first letter alone or with a digit; then other first letters."""
+    p1, p2 = pref[0], pref[1:2]
+    near = sorted(N.LETTERS, key=lambda c: (abs(ord(c) - ord(p2)) if p2 else 0, c))
+    tiers = [[pref], [p1 + c for c in near if c != p2], [p1] + [p1 + d for d in "0123456789"]]
+    # last resort: the nearest other first letters, keeping the preferred second letter first
+    firsts = sorted((c for c in N.LETTERS if c != p1), key=lambda c: (abs(ord(c) - ord(p1)), c))
+    others = [c1 + c2 for c1 in firsts for c2 in sorted(N.SECOND, key=lambda c: (c != p2, c))]
+    tiers.append(others)
+    return tiers
+
+
+def _solve_group(nodes: list[Node], edges: dict[tuple[Node, Node], int], pools: list[N.NamePool],
+                 prefs: dict[object, tuple[str, int]]) -> list[Node]:
+    """Walk the nodes in a topological order of the edges; each takes a bucket that is not
+    below its predecessors' (+1 on weighted edges) and leaves room for the strict chain
+    after it, and a name in that bucket: its preferred name when the bucket fits, else the
+    first fitting fallback (see _candidates).  Nodes without a preference spread over the
+    buckets."""
     succ: dict[Node, list[Node]] = {n: [] for n in nodes}
     pred: dict[Node, list[Node]] = {n: [] for n in nodes}
     for (a, b) in edges:
         succ[a].append(b)
         pred[b].append(a)
     indeg = {n: len(pred[n]) for n in nodes}
-    ready = sorted((n for n in nodes if indeg[n] == 0), key=lambda n: (n.cls, n.rank))
+
+    def prio(n: Node) -> tuple[int, int, int]:
+        return (n.cls, prefs.get(n.key, ("", 1 << 20))[1], n.rank)
+
+    ready = sorted((n for n in nodes if indeg[n] == 0), key=prio)
     order: list[Node] = []
     while ready:
         n = ready.pop(0)
@@ -218,24 +306,140 @@ def _solve_group(nodes: list[Node], edges: dict[tuple[Node, Node], int]) -> list
             indeg[m] -= 1
             if indeg[m] == 0:
                 ready.append(m)
-                ready.sort(key=lambda n: (n.cls, n.rank))
+                ready.sort(key=prio)
     if len(order) != len(nodes):
         raise DecompileError("cyclic symbol-order constraints")
-    tail = {n: 0 for n in nodes}
-    for n in reversed(order):
-        for m in succ[n]:
-            tail[n] = max(tail[n], tail[m] + edges[(n, m)])
+    # Buckets by dynamic programming along the order: nondecreasing, +1 before a node with a
+    # strict incoming edge, maximising the quality of the names that fit (Mark, 2026-10-25:
+    # names that say what the variable is for; else a similar first letter with a second
+    # letter or digit).
+    pos = {n: i for i, n in enumerate(order)}
+    step = [0] * len(order)
+    for (x, y), wt in edges.items():
+        if wt:
+            step[pos[y]] = 1
+
+    def free_for(n: Node, c: str) -> bool:
+        return N._ok(c) and all((c, n.suf, n.array) not in pools[ui].used for ui, _ in n.syms)
+
+    wanted: dict[str, set[Node]] = {}
+    for x in nodes:
+        if x.key in prefs:
+            wanted.setdefault(prefs[x.key][0], set()).add(x)
+
+    def options(n: Node) -> list[tuple[int, str]]:
+        """(score, name) for every usable name, best first.  A name another variable
+        prefers is a poor fallback (it would suggest that variable's meaning)."""
+        pref = prefs.get(n.key)
+        out: list[tuple[int, str]] = []
+        if pref is not None:
+            for t, tier in enumerate(_candidates(pref[0])):
+                base = (100, 60, 40, 20)[t]
+                out += [(base - (k // 3 if t in (1, 2) else k // 37) - (30 if wanted.get(c, {n}) - {n} else 0), c)
+                        for k, c in enumerate(tier) if free_for(n, c)]
+        else:
+            out = [(0, c1 + c2) for c1 in N.LETTERS for c2 in N.SECOND if free_for(n, c1 + c2)]
+        return out
+
+    best: list[dict[int, tuple[int, str]]] = []
+    for n in order:
+        per: dict[int, tuple[int, str]] = {}
+        for sc, c in options(n):
+            b = N.bucket(c, n.t)
+            if b not in per or sc > per[b][0]:
+                per[b] = (sc, c)
+        best.append(per)
+    NEG = -(1 << 30)
+    dp = [[NEG] * 32 for _ in order]
+    back = [[0] * 32 for _ in order]
+    for i in range(len(order)):
+        for bk, (sc, _) in best[i].items():
+            if i == 0:
+                dp[0][bk] = sc
+                continue
+            lim = bk - step[i]
+            if lim < 0:
+                continue
+            j = max(range(lim + 1), key=lambda x: dp[i - 1][x])
+            if dp[i - 1][j] > NEG:
+                dp[i][bk] = dp[i - 1][j] + sc
+                back[i][bk] = j
+    if not order:
+        return order
+    bk = max(range(32), key=lambda x: dp[-1][x])
+    if dp[-1][bk] == NEG:
+        raise DecompileError("symbol order needs more than 32 buckets")
+    chosen_b = [0] * len(order)
+    for i in range(len(order) - 1, -1, -1):
+        chosen_b[i] = bk
+        bk = back[i][bk]
     for i, n in enumerate(order):
-        lo = max((p.bucket + edges[(p, n)] for p in pred[n]), default=0)
-        hi = 31 - tail[n]
-        if lo > hi:
-            raise DecompileError(f"symbol order needs more than 32 buckets ({lo} > {hi})")
-        n.bucket = min(max(lo, i * 32 // len(order)), hi)
+        cands = [c for sc, c in sorted(options(n), key=lambda t: -t[0]) if N.bucket(c, n.t) == chosen_b[i]]
+        if not cands:
+            raise DecompileError(f"no free name in bucket {chosen_b[i]} for {n.key}")
+        n.name = cands[0]
+        n.bucket = chosen_b[i]
+        for ui, _ in n.syms:
+            pools[ui].used.add((n.name, n.suf, n.array))
     return order
+
+
+def _decl_order(order: list[Node], edges: dict[tuple[Node, Node], int],
+                prefs: dict[object, tuple[str, int]]) -> list[Node]:
+    """Declaration order for names we declare (REM! INTEGER, DIM): only names in the same
+    bucket must keep the order the edges give, so otherwise group related names together
+    (by the annotation group, then the solver's order)."""
+    pos = {n: i for i, n in enumerate(order)}
+    must: dict[Node, list[Node]] = {n: [] for n in order}
+    indeg = {n: 0 for n in order}
+    for (a, b) in edges:
+        if a in pos and b in pos and a.bucket == b.bucket:
+            must[a].append(b)
+            indeg[b] += 1
+
+    def grp0(n: Node) -> int:
+        return prefs.get(n.key, ("", 1 << 20))[1]
+
+    # order the groups so that same-bucket constraints point forward as often as possible:
+    # count group -> group constraints, then repeatedly take the group with the fewest
+    # constraints from groups not yet placed
+    gs = sorted({grp0(n) for n in order})
+    cnt: dict[tuple[int, int], int] = {}
+    for a, outs in must.items():
+        for b in outs:
+            if grp0(a) != grp0(b):
+                cnt[(grp0(a), grp0(b))] = cnt.get((grp0(a), grp0(b)), 0) + 1
+    rank: dict[int, int] = {}
+    left = list(gs)
+    while left:
+        g = min(left, key=lambda g: (sum(cnt.get((h, g), 0) for h in left if h != g), g))
+        rank[g] = len(rank)
+        left.remove(g)
+
+    def grp(n: Node) -> int:
+        return rank[grp0(n)]
+
+    ready = [n for n in order if indeg[n] == 0]
+    out: list[Node] = []
+    cur = -1
+    while ready:
+        # stay in the current group while one of its names is free to go, else the
+        # lowest group (names in the same bucket must keep their storage order)
+        same = [n for n in ready if grp(n) == cur]
+        n = min(same or ready, key=lambda n: (grp(n), pos[n]))
+        ready.remove(n)
+        out.append(n)
+        cur = grp(n)
+        for m in must[n]:
+            indeg[m] -= 1
+            if indeg[m] == 0:
+                ready.append(m)
+    return out
 
 
 def _assign_names(units: list[Unit], seqs: list[dict[Sym, int]]) -> list[dict[Sym, str]]:
     nodes: dict[object, Node] = {}
+    prefs: dict[object, tuple[str, int]] = {}
     for ui, u in enumerate(units):
         for s in u.named:
             key: object = ("C", s.addr) if s.region == "common" else (ui, id(s))
@@ -248,6 +452,8 @@ def _assign_names(units: list[Unit], seqs: list[dict[Sym, int]]) -> list[dict[Sy
             n.syms.append((ui, s))
             if s in seqs[ui]:
                 n.seqs[ui] = seqs[ui][s]
+            if s.addr in u.prefs and key not in prefs:
+                prefs[key] = u.prefs[s.addr]
     of: dict[tuple[int, int], Node] = {(ui, id(s)): n for n in nodes.values() for ui, s in n.syms}
     groups: dict[str, list[Node]] = {"num": [], "arr": [], "str": []}
 
@@ -270,36 +476,29 @@ def _assign_names(units: list[Unit], seqs: list[dict[Sym, int]]) -> list[dict[Sy
                     edges[(na, nb)] = max(edges.get((na, nb), 0), _weight(na, nb, ui))
     out: list[dict[Sym, str]] = [{} for _ in units]
     pools = [N.NamePool(set()) for _ in units]
+    for u, pool in zip(units, pools):
+        pool.used |= {(nm, "fn", False) for nm in u.fn_prefs.values()}
     for g, gn in groups.items():
         if not gn:
             continue
-        order = _solve_group(gn, {k: v for k, v in edges.items() if k[0] in gn})
-        # COMMON names first (shared), then each unit's locals
-        for n in sorted(order, key=lambda n: 0 if isinstance(n.key, tuple) and n.key[0] == "C" else 1):
-            uis = [ui for ui, _ in n.syms]
-            name = _take_shared(pools, uis, n)
+        ge = {k: v for k, v in edges.items() if k[0] in gn}
+        order = _solve_group(gn, ge, pools, prefs)
+        decl = _decl_order(order, ge, prefs)
+        for n in order:
             for ui, s in n.syms:
-                out[ui][s] = name + n.suf
+                out[ui][s] = n.name + n.suf
         for ui, u in enumerate(units):
+            mine = [(s, prefs.get(n.key, ("", 1 << 20))[1]) for n in decl for vi, s in n.syms if vi == ui]
             if g == "num":
-                u.ints = [s for n in order for vi, s in n.syms if vi == ui and s.vtype == "int"]
+                u.ints = [s for s, _ in mine if s.vtype == "int"]
+                u.int_groups = [gr for s, gr in mine if s.vtype == "int"]
             if g == "arr":
-                u.ints += [s for n in order for vi, s in n.syms if vi == ui and s.vtype == "int"]
-                u.dims = [s for n in order for vi, s in n.syms if vi == ui and s.vtype != "int" and s.region == "local"]
+                u.ints += [s for s, _ in mine if s.vtype == "int"]
+                u.int_groups += [gr for s, gr in mine if s.vtype == "int"]
+                u.dims = [s for s, _ in mine if s.vtype != "int" and s.region == "local"]
             if g == "str":
-                u.dims += [s for n in order for vi, s in n.syms if vi == ui and s.array and s.region == "local"]
+                u.dims += [s for s, _ in mine if s.array and s.region == "local"]
     return out
-
-
-def _take_shared(pools: list[N.NamePool], uis: list[int], n: Node) -> str:
-    for cand in [c1 + c2 for c1 in N.LETTERS for c2 in N.SECOND]:
-        if not N._ok(cand) or N.bucket(cand, n.t) != n.bucket:
-            continue
-        if all((cand, n.suf, n.array) not in pools[ui].used for ui in uis):
-            for ui in uis:
-                pools[ui].used.add((cand, n.suf, n.array))
-            return cand
-    raise DecompileError(f"no free name in bucket {n.bucket}")
 
 
 # ---------------------------------------------------------------- driver

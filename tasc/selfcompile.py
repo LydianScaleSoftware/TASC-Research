@@ -2,8 +2,8 @@
 
     python -m tasc.selfcompile [PASS0 PASS1 PASS2]
 
-For each pass: decompile (jointly, shared COMMON), write the tokenized source and a
-listing to src/generated/, add the source to a copy of the TASC disk, compile it
+For each pass: generate the Phase 5 source (tasc.sourcegen: names, numbering,
+documentation; src/PASSn.bas), add the source to a copy of the TASC disk, compile it
 with default options in a fresh Pandowdy, and compare the object with the
 original PASS file.  Results go to experiments/p3_selfcompile/<pass>/.
 """
@@ -16,7 +16,7 @@ import sys
 from pathlib import Path
 
 from tasc import disk
-from tasc.decomp.decompile import decompile_many, pass_units
+from tasc.sourcegen import generate
 from tasc.harness import compile_file, sha256
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -28,11 +28,7 @@ SRC_NAME = {"PASS0": "SRC0", "PASS1": "SRC1", "PASS2": "SRC2"}
 
 def main() -> None:
     want = sys.argv[1:] or ["PASS0", "PASS1", "PASS2"]
-    GEN.mkdir(parents=True, exist_ok=True)
-    units = decompile_many(pass_units())
-    for u in units:
-        (GEN / f"{u.name}.bas").write_bytes(u.program)
-        (GEN / f"{u.name}.txt").write_text(u.text)
+    units = generate()  # the Phase 5 sources: src/PASSn.bas (+ listing, DOC, VARS)
     for u in units:
         if u.name not in want:
             continue
