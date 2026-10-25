@@ -1,0 +1,119 @@
+MICROSOFT APPLESOFT
+COMPILER,  VER 2.01
+COPYRIGHT  (C) 1981
+MICROSOFT
+
+
+
+SOURCE FILE? S003
+
+
+OBJECT CODE FILE:
+(DEFAULT S003.OBJ)?
+
+
+MEMORY USAGE:
+DEFAULT CONFIGURATION?
+
+
+OPTIONS:
+DEFAULT CONFIGURATION?
+
+*****BEGINNING PASS 1
+
+
+
+10
+RECOGNIZED  REM ! INTEGER J
+20  DIM D$(11)
+30  IF XY% THEN 210:W$ = W$ + A$(N2%, NO
+T 256):A$ = A$
+40  PRINT C;Y;: END
+
+*****WARNING
+LINE NUMBER 40
+IGNORED
+
+: FOR B =  SQR (B AND 24905 OR XY%) TO
+NOT ((((N2% < C%)) + 1))
+
+
+50 D$(J) = M$:C% =  - ((N2% AND 1E3)): N
+EXT B
+60  FOR N2 =  RND (C%) TO C% + 32767
+70  IF N2% THEN C = N2% = 37724:A$( COS
+( - 39 <  = B),(J ^ C < 150)) = A$: NEXT
+
+80  FOR C =  - A% OR N2% * C% <  NOT N2
+TO J + ((C OR N2)) ^  SQR (C%) STEP 256
+90 W =  - ((C% OR 5)) > 186:C% =  - 869:
+ CALL C%
+100  PRINT 32767 /  - N2;C% * 24;
+110  HTAB ((100 < 100 AND C)) +  SQR (N2
+ + Y)
+120 A$((((W) + ((W = C%)))) * (( INT (20
+) + ((5 + 1)))),XY% + 32767 < XY% >  = (
+(5))) =  LEFT$ (M$, LOG ( - 1000))
+130  HCOLOR= ((W AND 0)) = C% * J: PRINT
+
+140  CALL ((750 > Y)) - W + ((N2% AND XY
+%)):N2% =  COS (( - 7)): IF N2% THEN 30
+150  POKE  COS ( VAL (A$)) =  NOT ((N2%
+< C)), - (( - C%)) < C%: VTAB ((((C% AND
+ Y)) - (W))) / ((((N2 - 736)) * B)): FOR
+ C =  EXP (C) > ((N2% AND C%)) <  =  - 3
+2767 TO N2
+160 W$ = A$: READ Y: NEXT
+170  READ N2%: FOR W = A% TO 32767:B = C
+% ^ 1E3 - 100 > Y
+180 XY% = W
+190 D$(N2 = A%) = "123": READ C%,A$
+200  INPUT N2%:A$ = "TASC": PRINT ((((C%
+ AND N2)) <  > Y)) + (( - C = ((Y <  = X
+Y%))));
+210 M$ = "HI" + A$
+220  COLOR= 33020 / ((C = ((A% > N2)))):
+M$ = W$
+
+
+
+*****BEGINNING PASS 2
+
+
+....
+
+
+*****CODE GENERATION COMPLETE
+
+
+COMPILATION INFORMATION AND LINE NUMBER
+REFERENCE TABLE? YES
+
+
+SOURCE FILE: S003
+OBJECT FILE: S003.OBJ
+LIBRARY OCCUPIES 2051 - 6063
+PROGRAM OCCUPIES 6064 - 7599
+
+NO COMMON BLOCK
+
+LOCAL VARIABLES OCCUPY 7600 - 7920
+
+HIGHEST MEMORY LOCATION: 7920
+
+
+LINE# ADDR   LINE# ADDR   LINE# ADDR
+
+10    6084   20    6084   30    6084
+40    6122   50    6137   60    6172
+70    6195   80    6274   90    6354
+100   6390   110   6411   120   6444
+130   6537   140   6570   150   6632
+160   6781   170   6798   180   6848
+190   6854   200   6896   210   6975
+220   6998
+
+*****COMPILATION COMPLETE
+
+
+]?

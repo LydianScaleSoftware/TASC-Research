@@ -1,0 +1,34 @@
+{
+ "id": "g.spc_i",
+ "key": "855182d471936e4a",
+ "source": "10 PRINT SPC(X%)",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 38,
+ "obj_sha256": "5cf73733f7f86eb18be10b7b55f10697cbb542113c42ab2f8d13ccf8edfa67d4",
+ "cycles": 52646394,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S014.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6101",
+  "LOCAL VARIABLES": "6102 - 6103",
+  "HIGHEST MEMORY LOCATION": "6103"
+ }
+}

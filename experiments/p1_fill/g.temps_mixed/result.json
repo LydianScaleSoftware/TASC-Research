@@ -1,0 +1,34 @@
+{
+ "id": "g.temps_mixed",
+ "key": "43620d67da5de0bb",
+ "source": "10 X=A(1)+A(2):Y%=B%(1)+B%(2)",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 151,
+ "obj_sha256": "31961e0386baa7bc6f106352467330a2e49a9ed13eb0482a3f372b386f47bf94",
+ "cycles": 56480782,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S008.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6214",
+  "LOCAL VARIABLES": "6215 - 6305",
+  "HIGHEST MEMORY LOCATION": "6305"
+ }
+}

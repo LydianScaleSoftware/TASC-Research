@@ -1,0 +1,42 @@
+{
+ "id": "rd.on_goto",
+ "key": "0b33cfd32e6f310c",
+ "source": "10 ON X GOTO 20,30\n20 END\n30 END",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 52,
+ "obj_sha256": "ceb6f6cf105915c24e3755e30610b4edd76e835c828e5e420b2b34d98029d380",
+ "cycles": 58463338,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6098
+  },
+  {
+   "line": 30,
+   "addr": 6101
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S005.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6115",
+  "LOCAL VARIABLES": "6116 - 6120",
+  "HIGHEST MEMORY LOCATION": "6120"
+ }
+}

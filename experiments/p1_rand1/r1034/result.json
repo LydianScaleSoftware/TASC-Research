@@ -1,0 +1,23 @@
+{
+ "id": "r1034",
+ "key": "33760506bcbbf0e1",
+ "source": "10 REM! INTEGER I\n20 DIM A%(4,8)\n30 X%=ASC(Z$):B=SGN(A)-COS(M)+((A%(5,392)<>804))*((W%*A%(39,X%))):N2=LEN(\"HI\"+\"HI\")\n40 FOR M=I+((W%-X%)) OR AB% TO 8631 STEP I:DATA -2.5,HI:HCOLOR=-SGN(A%(AB%,W%))\n50 INPUT N2\n60 IF INT(Q1) THEN 70:PRINT A$-A;:A%(-((A+A+2)),X%)=0=A\n70 N2=2\n80 PRINT C%;PEEK(N2)=I;X%,\n90 GOSUB 20:IF 1E3 THEN A%(TAN(B),I)=A\n100 M=-((N2<=A%(X%,AB%)))<>A%(I=I,M-AB%):FOR B=((B>=671))*W% TO 3\n110 HOME:NEXT\n120 IF I^465*A%(39,AB%)*256 THEN HTAB 256*((((N2+422))/AB%))\n130 IF ATN(B)=INT(AB%) THEN 30:FOR A=A TO (COS(-0))\n140 A%(W%,1)=A%(AB%*0,A%(I,I)<=7>=A-N2):PRINT \"X Y\"A$+\"X Y\";:PRINT LEFT$(Z$,A%(X%,1000)<>X%)+A$Z$+\"123\"((69=SGN(B)))+X%;\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\nLINE NUMBER 140\nINCOMPLETE\n\n: PRINT  LEFT$ (Z$,A%(X%,1000) <  > X%)\n+ A$Z$ + \"123\" !ERR! ((69 =  SGN (B))) +\n X%;\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

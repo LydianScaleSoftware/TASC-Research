@@ -1,0 +1,90 @@
+{
+ "id": "r1011",
+ "key": "74f29c26fef055db",
+ "source": "10 REM! INTEGER J,K\n20 DIM P(7),D$(1)\n30 J=Z:A=(Z):Q1%=K\n40 PRINT \"A\";:A=AB-XY%\n50 IF Q1% THEN READ B$\n60 XY$=\"\"+RIGHT$(C$+\"HI\",VAL(\"TASC\")):IF ABS(P(N2%)) THEN 60\n70 DATA HI,1,1:GOSUB 70:IF ((C OR NOT 49152))-380 THEN A=P(100)^960+-P(XY%)+((Y+Y%/C))\n80 INPUT Y:A=INT(INT(K)<>5*Q1%)\n90 PRINT:PRINT ((127<>NOT 12871))*AB;\n100 SPEED=P(Y%):GOSUB 150\n110 FOR Z=((XY%<>K*Y))^((-N2%^RND(785))) TO 1:A=((2=NOT AB))/((2*2.25+N2%*Y%)):Q1%=AB*2\n120 B$=MID$(\"A\",((100<Y))+((2.25<>P(127))))\n130 DATA X,-2.5:RETURN:PLOT XY%+Y%,PEEK(Y)\n140 GOTO 60\n150 GOTO 110\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 911,
+ "obj_sha256": "07ac36f6a66c9b8818665a59325f64d102ffe5a81de9234cf5f1bcc397580cc7",
+ "cycles": 96989586,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6102
+  },
+  {
+   "line": 50,
+   "addr": 6124
+  },
+  {
+   "line": 60,
+   "addr": 6138
+  },
+  {
+   "line": 70,
+   "addr": 6214
+  },
+  {
+   "line": 80,
+   "addr": 6306
+  },
+  {
+   "line": 90,
+   "addr": 6348
+  },
+  {
+   "line": 100,
+   "addr": 6369
+  },
+  {
+   "line": 110,
+   "addr": 6381
+  },
+  {
+   "line": 120,
+   "addr": 6488
+  },
+  {
+   "line": 130,
+   "addr": 6531
+  },
+  {
+   "line": 140,
+   "addr": 6545
+  },
+  {
+   "line": 150,
+   "addr": 6548
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6974",
+  "LOCAL VARIABLES": "6975 - 7075",
+  "HIGHEST MEMORY LOCATION": "7075"
+ }
+}

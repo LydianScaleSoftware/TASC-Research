@@ -1,0 +1,37 @@
+{
+ "id": "on_const_1",
+ "key": "13b22e527094544f",
+ "source": "10 ON 1 GOSUB 20\n20 RETURN",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 44,
+ "obj_sha256": "422a2afa6d7dc4911ee04564f536804595f9fe45dd31569437493104bcf4b41c",
+ "cycles": 53986313,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6093
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6107",
+  "HIGHEST MEMORY LOCATION": "6107"
+ }
+}

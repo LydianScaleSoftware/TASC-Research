@@ -1,0 +1,1 @@
+10 STOP:PRINT:X=1

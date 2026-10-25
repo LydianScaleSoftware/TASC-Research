@@ -1,0 +1,34 @@
+{
+ "id": "g.chr_k",
+ "key": "d0abfbed708f1d37",
+ "source": "10 X$=CHR$(65)",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 53,
+ "obj_sha256": "61faa23a7e2ec01410eb56a448c7f392774de700be734de5811a9d441b820696",
+ "cycles": 55917203,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S010.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6116",
+  "LOCAL VARIABLES": "6117 - 6118",
+  "HIGHEST MEMORY LOCATION": "6118"
+ }
+}

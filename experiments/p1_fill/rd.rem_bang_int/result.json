@@ -1,0 +1,38 @@
+{
+ "id": "rd.rem_bang_int",
+ "key": "e75ec1bc408a3c09",
+ "source": "10 REM !INTEGER I\n20 I=1",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 52,
+ "obj_sha256": "21505f40fece8dc9f95f1a081660df8ec3a10492b9a5258737f6cab0c4095779",
+ "cycles": 54503637,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S007.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6115",
+  "LOCAL VARIABLES": "6116 - 6117",
+  "HIGHEST MEMORY LOCATION": "6117"
+ }
+}

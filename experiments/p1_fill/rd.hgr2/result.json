@@ -1,0 +1,33 @@
+{
+ "id": "rd.hgr2",
+ "key": "4e2a43ac05e086c7",
+ "source": "10 HGR2",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 26,
+ "obj_sha256": "71e68798e37b8026ddbaa6151cc9c2ed53f3d8b4642bb7c74c6cb05b29189286",
+ "cycles": 53063844,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S015.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6089",
+  "HIGHEST MEMORY LOCATION": "6089"
+ }
+}

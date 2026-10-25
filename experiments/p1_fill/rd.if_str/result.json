@@ -1,0 +1,34 @@
+{
+ "id": "rd.if_str",
+ "key": "6eb1f823704fb8c3",
+ "source": "10 IF A$=\"\" THEN Z=1",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 88,
+ "obj_sha256": "4d8bfacd10fe71ca5951e425212cab101d9f9634d80789a2becedea73790e66f",
+ "cycles": 55977721,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6151",
+  "LOCAL VARIABLES": "6152 - 6158",
+  "HIGHEST MEMORY LOCATION": "6158"
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "id": "g.scale_i",
+ "key": "3907c6129e6b2acb",
+ "source": "10 SCALE=X%",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 38,
+ "obj_sha256": "c765ea67d6919e794a67b17b96ac2b2fecaa6fc624e4f6d0848986e7b9af6960",
+ "cycles": 56628120,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S005.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6101",
+  "LOCAL VARIABLES": "6102 - 6103",
+  "HIGHEST MEMORY LOCATION": "6103"
+ }
+}

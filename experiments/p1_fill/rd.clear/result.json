@@ -1,0 +1,33 @@
+{
+ "id": "rd.clear",
+ "key": "08011c0ce002bedc",
+ "source": "10 CLEAR",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 29,
+ "obj_sha256": "44700a957f90ff642ed2af1a49e591f39d8f5d27ea0cb770ed8dfbc1a24f8bb8",
+ "cycles": 52270391,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S008.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6092",
+  "HIGHEST MEMORY LOCATION": "6092"
+ }
+}

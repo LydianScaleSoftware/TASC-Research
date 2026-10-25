@@ -1,0 +1,37 @@
+{
+ "id": "rd.rem",
+ "key": "91df5017c800531f",
+ "source": "10 REM HELLO\n20 END",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 26,
+ "obj_sha256": "4d7579d493673a17f386650faf553da405de4570b12bdc8ee283cdbd9e998dad",
+ "cycles": 53132070,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S006.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6089",
+  "HIGHEST MEMORY LOCATION": "6089"
+ }
+}

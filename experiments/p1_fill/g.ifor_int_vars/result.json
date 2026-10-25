@@ -1,0 +1,38 @@
+{
+ "id": "g.ifor_int_vars",
+ "key": "b8fbb744e3cca058",
+ "source": "10 REM! INTEGER I\n20 FOR I=A% TO B%:NEXT I",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 63,
+ "obj_sha256": "5df7f38658f821462f3cdd7571901558d1288fecf2cdf57977eb5762d6c5fd0a",
+ "cycles": 56814216,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S010.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6126",
+  "LOCAL VARIABLES": "6127 - 6132",
+  "HIGHEST MEMORY LOCATION": "6132"
+ }
+}

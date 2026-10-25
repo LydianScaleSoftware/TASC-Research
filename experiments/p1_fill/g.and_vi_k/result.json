@@ -1,0 +1,34 @@
+{
+ "id": "g.and_vi_k",
+ "key": "061eff3a62645a46",
+ "source": "10 X=A% AND 5",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 58,
+ "obj_sha256": "4f916dcfe9c0acde9d4cbee66375fb96ca16318697c39a9bba76c2d676a037d4",
+ "cycles": 55208977,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S003.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6121",
+  "LOCAL VARIABLES": "6122 - 6128",
+  "HIGHEST MEMORY LOCATION": "6128"
+ }
+}

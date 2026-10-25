@@ -1,0 +1,34 @@
+{
+ "id": "g.if_cmp_ret",
+ "key": "4f0d80cf65d1937a",
+ "source": "10 IF X>Y THEN RETURN",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 53,
+ "obj_sha256": "c979d9a150e5552c18bb681899df5d578c6d90d536d9ed33ed3f56514c9500c9",
+ "cycles": 53396316,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S002.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6116",
+  "LOCAL VARIABLES": "6117 - 6126",
+  "HIGHEST MEMORY LOCATION": "6126"
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "id": "g.pow_ii",
+ "key": "b68e43e02f290a71",
+ "source": "10 X=A%^B%",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 62,
+ "obj_sha256": "52e84838bf4675b9ccaaac7889e13389e01ab77bc62c506b2f2cd54fa0e30a8a",
+ "cycles": 55471801,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6125",
+  "LOCAL VARIABLES": "6126 - 6134",
+  "HIGHEST MEMORY LOCATION": "6134"
+ }
+}

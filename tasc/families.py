@@ -142,3 +142,54 @@ MEMORY = {
     "lib_prog": ("$4000", "$6000", None), "vars_below": (None, "$6000", "$2000"),
 }
 MEMORY_SRC = '10 X=1:A$="HI":PRINT X;A$\n20 GOTO 10\n30 DATA 5'
+
+
+GUESS_FILL = {
+    # AND/OR with constants and complex operands
+    "and_v_k": "10 X=A AND 1", "and_k_v": "10 X=1 AND A", "or_k_k": "10 X=1 OR 0", "and_vi_k": "10 X=A% AND 5",
+    "and_c_k": "10 X=(A+B) AND 1", "and_k_c": "10 X=1 AND (A+B)", "and_c_c": "10 X=(A+B) AND (C+D)", "or_c_v": "10 X=(A+B) OR C",
+    # subscripts
+    "sub_ii": "10 X=A(I%,J%)", "sub_ir": "10 X=A(I%,J)", "sub_ri": "10 X=A(I,J%)", "sub_kk": "10 X=A(1,2)",
+    "sub_3d": "10 X=A(I%,J%,K%)", "sub_expr2": "10 X=A(I+1,J%*2)",
+    # power
+    "pow_c_v": "10 X=(A+B)^C", "pow_c_c": "10 X=(A+B)^(C+D)", "pow_arr_k": "10 X=A(1)^2", "pow_ii": "10 X=A%^B%", "pow_kk": "10 X=2^3",
+    "pow_v_c": "10 X=A^(B+C)",
+    # string function int args
+    "left_i": "10 X$=LEFT$(A$,B%)", "right_i": "10 X$=RIGHT$(A$,B%)", "mid2_i": "10 X$=MID$(A$,B%)", "mid3_ii": "10 X$=MID$(A$,B%,C%)",
+    "mid3_ri": "10 X$=MID$(A$,B,C%)", "left_k": "10 X$=LEFT$(A$,5)", "chr_k": "10 X$=CHR$(65)", "pdl_i": "10 X=PDL(A%)",
+    "scrn_ii": "10 X=SCRN(A%,B%)", "tab_i": "10 PRINT TAB(X%)", "spc_i": "10 PRINT SPC(X%)", "peek_k": "10 X=PEEK(768)",
+    # statements with int args
+    "speed_i": "10 SPEED=X%", "hcolor_i": "10 HCOLOR=X%", "call_i": "10 CALL X%", "htab_i": "10 HTAB X%", "rot_i": "10 ROT=X%",
+    "scale_i": "10 SCALE=X%", "in_i": "10 IN#X%", "pr_i": "10 PR#X%", "himem_i": "10 HIMEM:X%", "draw_i": "10 DRAW X%",
+    "xdraw_i": "10 XDRAW X%", "draw_at_i": "10 DRAW X% AT Y%,Z%", "hlin_i": "10 HLIN X%,Y% AT Z%", "vlin_i": "10 VLIN X%,Y% AT Z%",
+    "wait2_i": "10 WAIT X%,Y%", "wait3_i": "10 WAIT X%,Y%,Z%", "hplot_i": "10 HPLOT X%,Y%", "hplot_to_i": "10 HPLOT TO X%,Y%",
+    "plot_ri": "10 PLOT X,Y%", "ongoto_i": "10 ON X% GOTO 10", "ongosub_i": "10 ON X% GOSUB 10", "call_k": "10 CALL 768",
+    "hlin_mix": "10 HLIN X%,Y AT Z%", "vtab_k": "10 VTAB 5",
+    # integer FOR with real expressions
+    "ifor_real": "10 REM! INTEGER I\n20 FOR I=A TO B STEP C:NEXT I", "ifor_lit_real": "10 REM! INTEGER I\n20 FOR I=1.5 TO 10:NEXT I",
+    "ifor_int_vars": "10 REM! INTEGER I\n20 FOR I=A% TO B%:NEXT I",
+    # comparisons with complex operands
+    "cmp_c_v": "10 X=(A+B)>C", "cmp_v_c": "10 X=A>(B+C)", "cmp_c_c": "10 X=(A+B)>(C+D)", "cmp_ii_c_v": "10 X=(A%+B%)>C%",
+    "cmp_ii_v_c": "10 X=A%>(B%+C%)", "cmp_arr_v": "10 IF A(1)>B THEN 10", "cmp_v_arr": "10 IF B<A(1) THEN 10",
+    "cmp_k_v": "10 X=5>A", "cmp_k_vi": "10 X=5>A%",
+    # int-mode minus with complex left, division complex left
+    "isub_c_v": "10 X%=(A%+B%)-C%", "isub_arr_v": "10 X%=A%(1)-B%", "isub_c_c": "10 X%=(A%+B%)-(C%+D%)", "div_c_v": "10 X=(A+B)/C",
+    "div_arr_k": "10 X=A(1)/2", "sub_c_k": "10 X=(A+B)-1",
+    # strings
+    "cat_v_arr": "10 X$=A$+B$(1)", "cat_arr_v": "10 X$=B$(1)+A$", "len_cat": "10 X=LEN(A$+B$)", "left_cat": "10 X$=LEFT$(A$+B$,2)",
+    "streq_arr": '10 IF A$(1)=B$ THEN 10', "strgt": "10 X=A$>B$", "strle": "10 X=A$<=B$", "strge": "10 X=A$>=B$",
+    "cat_lit_v": '10 X$="A"+B$', "cat_v_lit_v": '10 X$=A$+"B"+C$', "cat_fn": "10 X$=A$+CHR$(65)", "cat_fn_v": "10 X$=CHR$(65)+A$",
+    # input/get/read forms
+    "input_ss": "10 INPUT A$,B$", "input_ps": '10 INPUT "Q";A$', "input_sx": "10 INPUT A$,X", "input_xs": "10 INPUT X,A$",
+    "get_i": "10 GET X%", "read_i": "10 READ X%\n20 DATA 1", "input_arr": "10 INPUT A(1)", "read_arr": "10 READ A(1)\n20 DATA 1",
+    # IF special forms
+    "if_end": "10 IF X THEN END", "if_ret_then_stmt": "10 IF X THEN RETURN:Y=1", "if_stmt_ret": "10 IF X THEN Y=1:RETURN",
+    "if_pop": "10 IF X THEN POP", "if_cmp_ret": "10 IF X>Y THEN RETURN", "if_goto_line": "10 IF X GOTO 10",
+    # arrays: hash term for real and string arrays
+    "arr_real_order": "10 DIM A(1),L(1),W(1),B(1),Z(1)", "arr_str_order": "10 DIM A$(1),L$(1),W$(1),B$(1),Z$(1)",
+    "arr_mixed_order": "10 DIM A(1),A%(1),A$(1),B(1),B%(1),B$(1),X(1),X%(1),X$(1)",
+    "arr_and_scalars": "10 DIM A(2),B$(2):X=1:Y$=\"A\":Z%=2",
+    # temps of several types
+    "temps_mixed": "10 X=A(1)+A(2):Y%=B%(1)+B%(2)", "temps_mixed2": "10 Y%=B%(1)+B%(2):X=A(1)+A(2)",
+    "fn_and_temp": "10 DEF FN F(Z)=Z\n20 X=A(1)+A(2)",
+}

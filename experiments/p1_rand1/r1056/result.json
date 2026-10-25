@@ -1,0 +1,94 @@
+{
+ "id": "r1056",
+ "key": "ffd4f15ded0473f5",
+ "source": "10 REM! INTEGER K\n20 FOR K=38712 TO 7:B=AB%\n30 B$=\"A\"\n40 B$=N2$+XY$:N2$=MID$(LEFT$(\"A\",K),K>Q1%)+\"TASC\":AB%=X%>((X))\n50 INPUT M:N2$=N2$:HCOLOR=RND(10800)\n60 IF C=Q1% THEN PRINT CHR$(VAL(MID$(XY$,24,Q1%)));M%<=C;MID$(LEFT$(B$,B),EXP(AB%)=((28<>Q1%)),K);:M%=ASC(CHR$(C)):M%=Z\n70 HCOLOR=47776-((1.5<=K+100))\n80 NEXT:X=.001:HCOLOR=((M%>-K))^697\n90 POKE ASC(B$),-((16545>=AB%<>B-B)):IF B THEN 20:READ N2$,Q1%\n100 FOR Z=-M% TO AB%:IF K THEN 80:X%=K\n110 IF 49152 THEN 140\n120 B$=LEFT$(\"TASC\",255):C=K\n130 IF (AB%*256>=SQR(Z)) THEN 100:PRINT 100;146,X%*-((X*X)),:X%=40000\n140 HTAB (B):IF B THEN M%=256\n150 X=5\n160 Z=K^((Z*M%))*M:Z=127:IF Q1%+((-K>M%)) THEN Z=((X%-45340))*((M%=Q1%))*AB%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1030,
+ "obj_sha256": "761eff748662b94b2408e59067c750674409ffce32ecaa525f5dc52e9842ac02",
+ "cycles": 109033303,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6107
+  },
+  {
+   "line": 40,
+   "addr": 6120
+  },
+  {
+   "line": 50,
+   "addr": 6194
+  },
+  {
+   "line": 60,
+   "addr": 6221
+  },
+  {
+   "line": 70,
+   "addr": 6334
+  },
+  {
+   "line": 80,
+   "addr": 6355
+  },
+  {
+   "line": 90,
+   "addr": 6390
+  },
+  {
+   "line": 100,
+   "addr": 6437
+  },
+  {
+   "line": 110,
+   "addr": 6471
+  },
+  {
+   "line": 120,
+   "addr": 6479
+  },
+  {
+   "line": 130,
+   "addr": 6507
+  },
+  {
+   "line": 140,
+   "addr": 6539
+  },
+  {
+   "line": 150,
+   "addr": 6559
+  },
+  {
+   "line": 160,
+   "addr": 6565
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7093",
+  "LOCAL VARIABLES": "7094 - 7141",
+  "HIGHEST MEMORY LOCATION": "7141"
+ }
+}

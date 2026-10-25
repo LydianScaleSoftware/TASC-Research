@@ -1,0 +1,114 @@
+{
+ "id": "r1021",
+ "key": "132c369ca92805d0",
+ "source": "10 REM! INTEGER J,K\n20 DEF FN F(X)=Z%\n30 B%=3+.001:HTAB NOT ((Q1>10<>Z%))\n40 Y$=Y$\n50 PRINT K;\n60 Y=923:Y$=MID$(\"HI\",NOT C)\n70 IF Q1 THEN 70\n80 PRINT 41985,:W=J<N2%<=Y-AB%+((Q1 AND Z%))\n90 HOME:DATA 1,1,1,\n100 PRINT -((W+Q1>Q1));\"X Y\";\n110 P$(B%,K)=CHR$(FN F(1.5>=W)):C=24\n120 IF Y-K/((K+39658)) THEN 90:C=Q1-J*C\n130 X=C^15150:IF 150 THEN PRINT Q1X>((J>256))-((W-Z%));\n140 IF Z% THEN 40:HLIN ((40179-N2% OR Q1))<=-10,K AT Z%\n150 GOSUB 30:B%=Y+K\n160 PRINT:PRINT 183-YK;\n170 XY$=\"\":FOR K=255*LEN(\"HI\")*N2% TO LOG(SGN(462)*TAN(C)) STEP 100\n180 AB%=C+B%:FOR W=((W<>W<=255))*J TO 10 STEP -K:C=FN F(EXP(3)>=851)\n190 XY$=B$:IF SGN(Q1) THEN XY$=\"A\":HCOLOR=N2%*((Q1>((4212>=Y))))\n200 IF -X THEN XY$=B$:DATA HI,,-2.5:GOSUB 200\n210 DATA 300\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1109,
+ "obj_sha256": "8b281d1585c3ee67151d8af5bc682899e0b07de2461bcd23b0d89c430190204d",
+ "cycles": 112988368,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6094
+  },
+  {
+   "line": 40,
+   "addr": 6124
+  },
+  {
+   "line": 50,
+   "addr": 6130
+  },
+  {
+   "line": 60,
+   "addr": 6136
+  },
+  {
+   "line": 70,
+   "addr": 6165
+  },
+  {
+   "line": 80,
+   "addr": 6173
+  },
+  {
+   "line": 90,
+   "addr": 6224
+  },
+  {
+   "line": 100,
+   "addr": 6240
+  },
+  {
+   "line": 110,
+   "addr": 6273
+  },
+  {
+   "line": 120,
+   "addr": 6309
+  },
+  {
+   "line": 130,
+   "addr": 6340
+  },
+  {
+   "line": 140,
+   "addr": 6390
+  },
+  {
+   "line": 150,
+   "addr": 6398
+  },
+  {
+   "line": 160,
+   "addr": 6410
+  },
+  {
+   "line": 170,
+   "addr": 6422
+  },
+  {
+   "line": 180,
+   "addr": 6489
+  },
+  {
+   "line": 190,
+   "addr": 6554
+  },
+  {
+   "line": 200,
+   "addr": 6607
+  },
+  {
+   "line": 210,
+   "addr": 6644
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7172",
+  "LOCAL VARIABLES": "7173 - 7477",
+  "HIGHEST MEMORY LOCATION": "7477"
+ }
+}

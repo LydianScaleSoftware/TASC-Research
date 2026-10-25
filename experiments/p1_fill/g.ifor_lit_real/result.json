@@ -1,0 +1,38 @@
+{
+ "id": "g.ifor_lit_real",
+ "key": "5efb0111a343974d",
+ "source": "10 REM! INTEGER I\n20 FOR I=1.5 TO 10:NEXT I",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 70,
+ "obj_sha256": "78bdf2e2c75d496660316b33403a2a343c7a030f0d793e680fa4e7499fbb8c99",
+ "cycles": 55372520,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S009.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6133",
+  "LOCAL VARIABLES": "6134 - 6135",
+  "HIGHEST MEMORY LOCATION": "6135"
+ }
+}

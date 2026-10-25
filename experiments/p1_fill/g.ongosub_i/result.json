@@ -1,0 +1,34 @@
+{
+ "id": "g.ongosub_i",
+ "key": "38dab633606f681f",
+ "source": "10 ON X% GOSUB 10",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 41,
+ "obj_sha256": "0de39539265d0a65b5409bb4b778ac1c8758ca16f0e361d8e63338cf7fa69544",
+ "cycles": 56046500,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S004.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6104",
+  "LOCAL VARIABLES": "6105 - 6106",
+  "HIGHEST MEMORY LOCATION": "6106"
+ }
+}

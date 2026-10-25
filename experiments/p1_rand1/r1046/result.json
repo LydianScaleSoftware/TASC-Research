@@ -1,0 +1,106 @@
+{
+ "id": "r1046",
+ "key": "e3b7063a846b6bbc",
+ "source": "10 REM! INTEGER I\n20 DIM D%(3),P$(2,7),A(3)\n30 DATA X:W=XY:B%=32767\n40 GOTO 140:FOR M=A%<=-((10>=I)) TO 0*ATN(3-I)\n50 XY=C%\n60 PRINT\n70 PRINT \"TASC\";X$:FOR XY=A%/Z TO D%(XY+32767)/ASC(W$) STEP 39:P$((M),(3))=W$+W$\n80 POP:IF -C% THEN Y$=Y$\n90 A%=W%\n100 A(((A(A%) OR 157))<NOT A(A%))=NOT W*((5<>B%=M)):W=((A% OR 40000))+A(-W)\n110 Z=(B-W<>((A%>=B%)))\n120 P$(0.1,5)=P$(ASC(\"A\"),255):READ C%\n130 IF -((I<=B%))-XY*((D%(2)+D%(A%))) THEN 110:M=-((-((W>=B%)))):FOR M=SQR(D%(1000)-XY-A(255)*XY) TO I*XY STEP W%\n140 P$(974>=C%,32767>=((XY=Z)))=Y$+\"123\"\n150 POKE NOT A(C%),(5^23>SIN(M)):IF ((W% OR D%(C%) OR B))*B THEN 150:W%=W\n160 I=M:GOTO 120\n170 B=A%:GOSUB 40\n180 CALL C%:X$=\"123\"\n190 D%(0 OR TAN(Z>B%))=1.5\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1149,
+ "obj_sha256": "cb7ccefaede4cbc76b13fcbc6d6ba3afed12c951f1d2ad8220d9aadb30a02c01",
+ "cycles": 111893610,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6110
+  },
+  {
+   "line": 50,
+   "addr": 6113
+  },
+  {
+   "line": 60,
+   "addr": 6122
+  },
+  {
+   "line": 70,
+   "addr": 6128
+  },
+  {
+   "line": 80,
+   "addr": 6239
+  },
+  {
+   "line": 90,
+   "addr": 6269
+  },
+  {
+   "line": 100,
+   "addr": 6278
+  },
+  {
+   "line": 110,
+   "addr": 6386
+  },
+  {
+   "line": 120,
+   "addr": 6416
+  },
+  {
+   "line": 130,
+   "addr": 6474
+  },
+  {
+   "line": 140,
+   "addr": 6547
+  },
+  {
+   "line": 150,
+   "addr": 6613
+  },
+  {
+   "line": 160,
+   "addr": 6698
+  },
+  {
+   "line": 170,
+   "addr": 6710
+  },
+  {
+   "line": 180,
+   "addr": 6722
+  },
+  {
+   "line": 190,
+   "addr": 6749
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7212",
+  "LOCAL VARIABLES": "7213 - 7336",
+  "HIGHEST MEMORY LOCATION": "7336"
+ }
+}

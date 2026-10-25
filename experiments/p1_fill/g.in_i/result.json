@@ -1,0 +1,34 @@
+{
+ "id": "g.in_i",
+ "key": "7183a5a85f58e72b",
+ "source": "10 IN#X%",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 38,
+ "obj_sha256": "9686eff827df19a29d8ee055c294d0f6dfa469f2f54f23c71c6a17c9b9fc7d61",
+ "cycles": 52887003,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S006.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6101",
+  "LOCAL VARIABLES": "6102 - 6103",
+  "HIGHEST MEMORY LOCATION": "6103"
+ }
+}

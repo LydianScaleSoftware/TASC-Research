@@ -107,3 +107,82 @@ def variables(listing: str) -> list[Var]:
             v = Var(v.name, v.vtype, True, dims)
         out.append(v)
     return out
+
+
+def tokenize_line(text: str) -> bytes:
+    """Tokenize the body of one program line like the Applesoft PARSE routine.
+
+    Spaces are dropped except inside strings, REM and DATA; keywords match left to
+    right, first match in token order, with the AT/ATN/A TO special case.
+    """
+    out = bytearray()
+    s = text.upper()
+    i = 0
+    in_data = False
+    while i < len(s):
+        ch = s[i]
+        if ch == '"':
+            j = s.find('"', i + 1)
+            j = len(s) - 1 if j < 0 else j
+            out += s[i : j + 1].encode()
+            i = j + 1
+            continue
+        if in_data:
+            if ch == ":":
+                in_data = False
+            out.append(ord(ch))
+            i += 1
+            continue
+        if ch == " ":
+            i += 1
+            continue
+        # keyword match ignoring spaces inside the source
+        squeezed = s[i:].replace(" ", "")
+        hit = None
+        if squeezed.startswith("AT") and len(squeezed) > 2 and squeezed[2] in "NO":
+            hit = "ATN" if squeezed[2] == "N" else None
+        else:
+            for t in TOKENS:
+                if squeezed.startswith(t):
+                    hit = t
+                    break
+        if hit is not None:
+            # consume len(hit) non-space characters
+            n = 0
+            while n < len(hit):
+                if s[i] != " ":
+                    n += 1
+                i += 1
+            code = 0x80 + TOKENS.index(hit)
+            out.append(code)
+            if hit in ("REM", "DATA"):  # spaces right after REM/DATA are dropped
+                while i < len(s) and s[i] == " ":
+                    i += 1
+            if hit == "REM":
+                out += s[i:].encode()
+                break
+            if hit == "DATA":
+                in_data = True
+            continue
+        out.append(ord(ch))
+        i += 1
+    return bytes(out)
+
+
+def tokenize_program(listing: str) -> bytes:
+    """Tokenized program file data (link fields computed for load at $0801)."""
+    data = bytearray()
+    addr = 0x0801
+    for line in listing.splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        m = re.match(r"(\d+)\s*(.*)$", line)
+        if not m:
+            raise ValueError(f"bad line {line!r}")
+        body = tokenize_line(m.group(2))
+        nxt = addr + 4 + len(body) + 1
+        data += bytes([nxt & 0xFF, nxt >> 8]) + int(m.group(1)).to_bytes(2, "little") + body + b"\x00"
+        addr = nxt
+    data += b"\x00\x00"
+    return bytes(data)

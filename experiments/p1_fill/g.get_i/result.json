@@ -1,0 +1,34 @@
+{
+ "id": "g.get_i",
+ "key": "b5061845c285ee2a",
+ "source": "10 GET X%",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 38,
+ "obj_sha256": "427cf2728654390be5926950e4be7d6449dbac1775d70ec104c84ff3b89d63ea",
+ "cycles": 55623270,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S010.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6101",
+  "LOCAL VARIABLES": "6102 - 6103",
+  "HIGHEST MEMORY LOCATION": "6103"
+ }
+}

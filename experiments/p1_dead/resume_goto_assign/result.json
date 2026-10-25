@@ -1,0 +1,38 @@
+{
+ "id": "resume_goto_assign",
+ "key": "facd0ffb6db043f3",
+ "source": "10 ONERR GOTO 20:X=1\n20 END",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 60,
+ "obj_sha256": "c618d181a26df4fe1d1cebd74d5fbec8d5f385265f2f3e74025db2f4936b4c18",
+ "cycles": 54656516,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6095
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6123",
+  "LOCAL VARIABLES": "6124 - 6128",
+  "HIGHEST MEMORY LOCATION": "6128"
+ }
+}

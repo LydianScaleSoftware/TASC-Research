@@ -1,0 +1,34 @@
+{
+ "id": "g.strge",
+ "key": "dd049e4091fa1477",
+ "source": "10 X=A$>=B$",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 67,
+ "obj_sha256": "9bb31e771a6899eef2ab548c4ad953d0c96d950a89c6f5f9c76bd2e2e9ba4dfe",
+ "cycles": 55064414,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6130",
+  "LOCAL VARIABLES": "6131 - 6139",
+  "HIGHEST MEMORY LOCATION": "6139"
+ }
+}

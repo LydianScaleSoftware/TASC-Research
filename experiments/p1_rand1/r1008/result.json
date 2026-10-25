@@ -1,0 +1,82 @@
+{
+ "id": "r1008",
+ "key": "ff1a9414061c7e98",
+ "source": "10 DIM D%(4),A(4,7)\n20 DEF FN F(Z)=20\n30 COLOR=M%:PRINT VAL(M$),256\n40 PRINT:TEXT\n50 IF 1000 THEN PRINT LEFT$(M$+\"123\"+RIGHT$(\"TASC\",XY),NOT Z<>Z);D%(B%>=C%);\n60 FOR Z=34176 TO 5\n70 Q1=EXP(Q1/24 AND ((1.5 AND 3))):GOSUB 90:D%(C%>=((D%(C%)=ASC(M$))))=Q1\n80 IF 39/((1*B)) THEN 80\n90 POKE B,3.14159:PRINT:IF ASC(RIGHT$(CHR$(C%),W)) THEN 90\n100 PRINT:NEXT:INPUT C%\n110 PLOT B%,LOG(1E3+((Z+Q1))):IF 100>((410>B))*M% THEN PRINT:PRINT MID$(\"A\",Q1)+CHR$(100)+Z$;\n120 ON 20 GOTO 40,130,90,60:M%=M%\n130 READ M$,XY:POKE VAL(MID$(A$,3)+Z$),M%:XY=3\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 892,
+ "obj_sha256": "8a1badbd644812f4555254183df2fa6b20ba810042eed9ce2439daf9256f50fc",
+ "cycles": 99351767,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6094
+  },
+  {
+   "line": 40,
+   "addr": 6121
+  },
+  {
+   "line": 50,
+   "addr": 6127
+  },
+  {
+   "line": 60,
+   "addr": 6220
+  },
+  {
+   "line": 70,
+   "addr": 6237
+  },
+  {
+   "line": 80,
+   "addr": 6312
+  },
+  {
+   "line": 90,
+   "addr": 6328
+  },
+  {
+   "line": 100,
+   "addr": 6367
+  },
+  {
+   "line": 110,
+   "addr": 6387
+  },
+  {
+   "line": 120,
+   "addr": 6474
+  },
+  {
+   "line": 130,
+   "addr": 6495
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S003.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6955",
+  "LOCAL VARIABLES": "6956 - 7216",
+  "HIGHEST MEMORY LOCATION": "7216"
+ }
+}

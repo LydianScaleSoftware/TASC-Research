@@ -1,0 +1,34 @@
+{
+ "id": "rd.hcolor_x",
+ "key": "143bed9e97765e30",
+ "source": "10 HCOLOR=X",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 41,
+ "obj_sha256": "f5731b893c3067033e84368537d6aea6a369ade5b25cc68b2cb33d2a2e70281e",
+ "cycles": 53308689,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S014.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6104",
+  "LOCAL VARIABLES": "6105 - 6109",
+  "HIGHEST MEMORY LOCATION": "6109"
+ }
+}

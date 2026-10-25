@@ -69,22 +69,25 @@ def assemble(c: Compiler, opts: Options) -> Result:
     code_end = pc
 
     # constant pool
-    consts = _symbol_order([k for k in c.consts.values() if k.ops])  # unused forms only fix the order
+    consts = _symbol_order([k for k in c.consts.values() if k.ops or k.used])  # unused forms only fix the order
     for k in consts:
         k.addr, pc = pc, pc + len(k.raw)
 
     # symbols: temps, FN params, named variables
     temps = [t for vt in ("int", "real") for t in c.temps[vt]]  # observed in BALL: int temp before real temp
+    fn_temps = [t for vt in ("int", "real") for t in c.fn_temps[vt]]
     stemps = c.temps["str"]
     named = list(c.syms.values())
     num_scalars = _symbol_order([s for s in named if not s.array and s.vtype != "str"])
     num_arrays = _symbol_order([s for s in named if s.array and s.vtype != "str"])
-    str_scalars = _symbol_order([s for s in named if not s.array and s.vtype == "str"])
-    str_arrays = _symbol_order([s for s in named if s.array and s.vtype == "str"])
+    # observed: string scalars and string arrays share one hash order (numerics are grouped)
+    strings = _symbol_order([s for s in named if s.vtype == "str"])
 
     # routines: numeric (temps, params, scalars), constants, strings, arrays   (order partly GUESS)
-    rtn_order = ([s for s in temps + c.params + num_scalars if s.ops] + [k for k in consts if k.ops]
-                 + [s for s in stemps + str_scalars if s.ops] + num_arrays + str_arrays)  # arrays always get a routine
+    # observed: numeric scalars, constants, numeric arrays, string scalars, string arrays
+    # (arrays always get a routine)
+    rtn_order = ([s for s in temps + c.params + fn_temps + num_scalars if s.ops] + [k for k in consts if k.ops] + num_arrays
+                 + [s for s in stemps + c.fn_temps["str"] + strings if s.ops or s.array])
     entry: dict[tuple[int, int], int] = {}
     for s in rtn_order:
         s.rtn = pc
@@ -103,10 +106,10 @@ def assemble(c: Compiler, opts: Options) -> Result:
     # local variables
     var_start = opts.variables if isinstance(opts.variables, int) else obj_end
     a = var_start
-    for s in temps + c.params + [s for s in num_scalars + num_arrays if s.common is None]:
+    for s in temps + c.params + fn_temps + [s for s in num_scalars + num_arrays if s.common is None]:
         s.addr, a = a, a + s.size()
     locnumend = a - 1
-    for s in stemps + [s for s in str_scalars + str_arrays if s.common is None]:
+    for s in stemps + c.fn_temps["str"] + [s for s in strings if s.common is None]:
         s.addr, a = a, a + s.size()
     locstrend = a - 1
 

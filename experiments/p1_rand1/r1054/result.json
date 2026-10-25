@@ -1,0 +1,94 @@
+{
+ "id": "r1054",
+ "key": "652e988f83865422",
+ "source": "10 DEF FN F(T)=X\n20 IF NOT ((Q1<>Q1))>LEN(STR$(M%)) THEN 130:DATA 1,,-2.5:FOR X=FN F(((M% AND Q1))*((40+XY%))) TO Q1\n30 NEXT X\n40 PRINT M%;M%,\n50 B=792/((Y%=12919 AND 20))\n60 FOR X=N2*A TO 1000\n70 XY%=X-((N2-N2))^((7*B))\n80 PRINT FN F(M%^48824);:PRINT A$;-((B-A)):B=-127>((1E3 OR A))\n90 SPEED=EXP(7):X$=\"TASC\"+A$+\"\"+\"A\"+\"HI\"\n100 ON 7 GOTO 100,60:PRINT 627/1-((Q1>((B=Q1))))XY%<>RND(10),:X=-((((N2+100))/((Q1*A))))\n110 DATA HI,-2.5,-2.5:TEXT:DATA 1\n120 Q1=VAL(RIGHT$(X$,M%)+LEFT$(B$(Y%),27879)):FOR B=37412 TO 1 STEP ((Z%>TAN(B)))*0.1\n130 NEXT B:PRINT Y%*((ABS(X)/ATN(Q1)))A\n140 B$(SGN(Q1))=MID$(CHR$(ABS(A)),N2,FN F(0.1)*10):READ XY%,A:PRINT\n150 IF XY%*((A+VAL(B$(0)))) THEN POKE 40,Z%^ABS(XY%<0):NORMAL\n160 GR\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1164,
+ "obj_sha256": "0d2d4c448075c89121f2f909b4f8fbdad8eda372a81f356e8d5558b5942a79a1",
+ "cycles": 111957384,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6094
+  },
+  {
+   "line": 30,
+   "addr": 6149
+  },
+  {
+   "line": 40,
+   "addr": 6157
+  },
+  {
+   "line": 50,
+   "addr": 6175
+  },
+  {
+   "line": 60,
+   "addr": 6202
+  },
+  {
+   "line": 70,
+   "addr": 6225
+  },
+  {
+   "line": 80,
+   "addr": 6255
+  },
+  {
+   "line": 90,
+   "addr": 6330
+  },
+  {
+   "line": 100,
+   "addr": 6409
+  },
+  {
+   "line": 110,
+   "addr": 6501
+  },
+  {
+   "line": 120,
+   "addr": 6531
+  },
+  {
+   "line": 130,
+   "addr": 6605
+  },
+  {
+   "line": 140,
+   "addr": 6649
+  },
+  {
+   "line": 150,
+   "addr": 6721
+  },
+  {
+   "line": 160,
+   "addr": 6776
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S004.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7227",
+  "LOCAL VARIABLES": "7228 - 7300",
+  "HIGHEST MEMORY LOCATION": "7300"
+ }
+}

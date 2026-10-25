@@ -1,0 +1,34 @@
+{
+ "id": "g.pow_kk",
+ "key": "b663e096894d5213",
+ "source": "10 X=2^3",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 72,
+ "obj_sha256": "788d8623eb59c098b4f682b07a3dfb8504a7cadf5b81f3d05ad64c142fba4a61",
+ "cycles": 53861238,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S002.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6135",
+  "LOCAL VARIABLES": "6136 - 6140",
+  "HIGHEST MEMORY LOCATION": "6140"
+ }
+}

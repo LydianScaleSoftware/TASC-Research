@@ -1,0 +1,34 @@
+{
+ "id": "g.isub_c_c",
+ "key": "8c479a1a5f77da9b",
+ "source": "10 X%=(A%+B%)-(C%+D%)",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 101,
+ "obj_sha256": "760ddeb5ac022407f85309ce415b107c22adba2623cf74c8baaf082c4ac6b4c8",
+ "cycles": 56723803,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S006.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6164",
+  "LOCAL VARIABLES": "6165 - 6176",
+  "HIGHEST MEMORY LOCATION": "6176"
+ }
+}

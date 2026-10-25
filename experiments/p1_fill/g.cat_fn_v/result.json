@@ -1,0 +1,34 @@
+{
+ "id": "g.cat_fn_v",
+ "key": "8463d8110bedf80d",
+ "source": "10 X$=CHR$(65)+A$",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 69,
+ "obj_sha256": "5c9cd53bc623a1a77b314a12f1491a01caa158aeae4780733700448272ee62e4",
+ "cycles": 57386836,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S005.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6132",
+  "LOCAL VARIABLES": "6133 - 6136",
+  "HIGHEST MEMORY LOCATION": "6136"
+ }
+}

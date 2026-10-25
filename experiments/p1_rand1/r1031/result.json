@@ -1,0 +1,86 @@
+{
+ "id": "r1031",
+ "key": "4921afda6186efd1",
+ "source": "10 REM! INTEGER J\n20 DATA -2.5,\n30 GOTO 100:FOR M=-EXP(Y%)-((ABS(A%)<=20)) TO W:READ XY%\n40 NEXT M:IF Y%-((M>=Z%*39)) THEN XY$=STR$(Z%)\n50 J=LEN(\"123\")\n60 M=LOG(LEN(XY$)):PRINT INT(A>=Q1>Z%);Y%,\"123\"+\"TASC\"+\"123\"\n70 J=INT(N2*A%-((Q1<=W))):AB$=\"X Y\":Y%=SIN(Z%<=N2)+SIN(INT(M))\n80 M=J*N2+N2:READ A%\n90 Z%=W:FOR Q1=J TO PEEK(XY%):XY$=LEFT$(LEFT$(AB$+XY$,-591),XY%<502)\n100 SPEED=J^((N2+W))+-(Q1):HLIN Q1,ABS(Z%=Y% AND 1) AT 0:PRINT Q1,\n110 AB$=AB$:CALL Y%*A:Y%=XY%-((A%>=M AND Q1))\n120 Z%=W:CALL A%+127\n130 PRINT XY%^((XY%<=SGN(M)));2/((123>=SIN(940)))XY$;\n140 NEXT Q1:PRINT:Z$=\"TASC\"\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 860,
+ "obj_sha256": "ac12d82d9b969817d861f513136fef456a5de3c8bbc5e8999892ecd86cb17d7e",
+ "cycles": 96901809,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6096
+  },
+  {
+   "line": 40,
+   "addr": 6099
+  },
+  {
+   "line": 50,
+   "addr": 6135
+  },
+  {
+   "line": 60,
+   "addr": 6153
+  },
+  {
+   "line": 70,
+   "addr": 6250
+  },
+  {
+   "line": 80,
+   "addr": 6322
+  },
+  {
+   "line": 90,
+   "addr": 6340
+  },
+  {
+   "line": 100,
+   "addr": 6402
+  },
+  {
+   "line": 110,
+   "addr": 6471
+  },
+  {
+   "line": 120,
+   "addr": 6507
+  },
+  {
+   "line": 130,
+   "addr": 6522
+  },
+  {
+   "line": 140,
+   "addr": 6567
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6923",
+  "LOCAL VARIABLES": "6924 - 6969",
+  "HIGHEST MEMORY LOCATION": "6969"
+ }
+}

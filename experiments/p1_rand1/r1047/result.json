@@ -1,0 +1,74 @@
+{
+ "id": "r1047",
+ "key": "0972e15cfec00ecd",
+ "source": "10 REM! INTEGER J\n20 GOSUB 80:GOSUB 50:Y=-10\n30 IF ((XY<>AB))+256^XY-((LEN(N2$) AND -C%)) THEN N2=J\n40 N2$=C$\n50 DATA X,X,,1:AB=0\n60 AB=XY:SPEED=Q1%-Z%:FOR J=12745 TO J\n70 PLOT 65535,2.25:N2=X%-Y:END\n80 N2$=N2$\n90 POKE -B>C%>((32767>=N2)),256\n100 INPUT XY:VTAB (39>Y)-XY\n110 FOR J=B TO 31620<1000>1 OR Y:POP:Q1%=(Q1%)-N2\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 634,
+ "obj_sha256": "27f72aab44ca0f3f0b95de4dba773d3b6ab8f75dfe5e0020c118891174a2c7f3",
+ "cycles": 85708413,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6102
+  },
+  {
+   "line": 40,
+   "addr": 6169
+  },
+  {
+   "line": 50,
+   "addr": 6175
+  },
+  {
+   "line": 60,
+   "addr": 6194
+  },
+  {
+   "line": 70,
+   "addr": 6226
+  },
+  {
+   "line": 80,
+   "addr": 6250
+  },
+  {
+   "line": 90,
+   "addr": 6256
+  },
+  {
+   "line": 100,
+   "addr": 6295
+  },
+  {
+   "line": 110,
+   "addr": 6328
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S002.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6697",
+  "LOCAL VARIABLES": "6698 - 6743",
+  "HIGHEST MEMORY LOCATION": "6743"
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "id": "rd.if_cmp_r",
+ "key": "cbe2274427c8ec90",
+ "source": "10 IF X>Y THEN Z=1",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 87,
+ "obj_sha256": "b3b2d9f3e6292bdd1c276528cc2cb538e3593e8831b39f5e116bd349454965ed",
+ "cycles": 55676060,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S015.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6150",
+  "LOCAL VARIABLES": "6151 - 6165",
+  "HIGHEST MEMORY LOCATION": "6165"
+ }
+}

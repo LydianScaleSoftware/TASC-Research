@@ -1,0 +1,23 @@
+{
+ "id": "then_assign_print",
+ "key": "89a24f60dce7dc88",
+ "source": "10 IF A THEN 20:X=1:PRINT\n20 END",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 10\nOPERAND\n\n IF  !ERR!  AT HEN20\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

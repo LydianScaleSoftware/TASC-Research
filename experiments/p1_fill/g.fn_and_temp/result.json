@@ -1,0 +1,38 @@
+{
+ "id": "g.fn_and_temp",
+ "key": "27dff3fc2b47cace",
+ "source": "10 DEF FN F(Z)=Z\n20 X=A(1)+A(2)",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 114,
+ "obj_sha256": "a72d32a2cadc6b3762ec4778557195d4a7c62a61e4730fea88184f0571082fb7",
+ "cycles": 58191816,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6091
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S010.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6177",
+  "LOCAL VARIABLES": "6178 - 6247",
+  "HIGHEST MEMORY LOCATION": "6247"
+ }
+}

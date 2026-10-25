@@ -1,0 +1,78 @@
+{
+ "id": "r1048",
+ "key": "4c8056b7f234483d",
+ "source": "10 REM! INTEGER I,J\n20 RESTORE:C=(C)\n30 X%=0+((I<=65535))\n40 PLOT (I),B%\n50 AB$=A$(TAN(P(0.1)))\n60 X$=STR$(P(32767))+X$:PRINT B$;:FOR A=-40 TO -((((822 AND C))<=Y))\n70 X%=B%:TEXT\n80 X$=B$:AB$=B$:X=A\n90 A$(I+TAN(NOT W))=LEFT$(MID$(AB$,VAL(\"123\")),COS(20)):IF SQR(B%)+I<>31514 THEN 120\n100 AB$=LEFT$(AB$+AB$+A$(B%),SQR(AB%))\n110 Y=XY%<=-529:NEXT A:XY%=745^((((Y*XY%))^40481))\n120 HCOLOR=RND((P(I)*Y)):A=3.14159:B(-AB%)=AB%\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 717,
+ "obj_sha256": "9bf422aab93ab9a3579caf224598de152925b81153cabe42da1029e8dbcb266d",
+ "cycles": 92005427,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6093
+  },
+  {
+   "line": 40,
+   "addr": 6108
+  },
+  {
+   "line": 50,
+   "addr": 6120
+  },
+  {
+   "line": 60,
+   "addr": 6141
+  },
+  {
+   "line": 70,
+   "addr": 6203
+  },
+  {
+   "line": 80,
+   "addr": 6212
+  },
+  {
+   "line": 90,
+   "addr": 6230
+  },
+  {
+   "line": 100,
+   "addr": 6301
+  },
+  {
+   "line": 110,
+   "addr": 6340
+  },
+  {
+   "line": 120,
+   "addr": 6384
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S003.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6780",
+  "LOCAL VARIABLES": "6781 - 6957",
+  "HIGHEST MEMORY LOCATION": "6957"
+ }
+}

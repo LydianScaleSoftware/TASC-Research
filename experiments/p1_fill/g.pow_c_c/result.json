@@ -1,0 +1,34 @@
+{
+ "id": "g.pow_c_c",
+ "key": "4beeafdc39ea9e33",
+ "source": "10 X=(A+B)^(C+D)",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 104,
+ "obj_sha256": "0a9b8b2ab31ee00e300832fae6bb49707ef4bb15ffe9bed80e47c4372beb2218",
+ "cycles": 56093357,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S015.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6167",
+  "LOCAL VARIABLES": "6168 - 6197",
+  "HIGHEST MEMORY LOCATION": "6197"
+ }
+}

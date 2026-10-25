@@ -1,0 +1,1 @@
+10 NEW:PRINT:X=1

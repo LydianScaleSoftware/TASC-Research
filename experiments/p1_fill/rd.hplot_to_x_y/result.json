@@ -1,0 +1,34 @@
+{
+ "id": "rd.hplot_to_x_y",
+ "key": "4b8e68bc2b890fb3",
+ "source": "10 HPLOT TO X,Y",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 56,
+ "obj_sha256": "c6ffef44bc86aac232922bf029e267d712fc3d9ba8d43a0bd2de3b0614c99337",
+ "cycles": 54456205,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S013.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6119",
+  "LOCAL VARIABLES": "6120 - 6129",
+  "HIGHEST MEMORY LOCATION": "6129"
+ }
+}

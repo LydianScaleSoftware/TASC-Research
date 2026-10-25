@@ -1,0 +1,37 @@
+{
+ "id": "goto_let",
+ "key": "da3fc7b05ff84ec7",
+ "source": "10 GOTO 20:LET X=1:HOME\n20 END",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 29,
+ "obj_sha256": "10a4b39ef629d0915912685176fbb702431656b7471fcad6cb9b44b3787b588f",
+ "cycles": 56324220,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6087
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6092",
+  "HIGHEST MEMORY LOCATION": "6092"
+ }
+}

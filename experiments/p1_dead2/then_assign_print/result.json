@@ -1,0 +1,38 @@
+{
+ "id": "then_assign_print",
+ "key": "76e848cb3b450ae8",
+ "source": "10 IF (A) THEN 20:X=1:PRINT:Y=2\n20 END",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 101,
+ "obj_sha256": "6148bb36659c75a00210e1d241d3e39b2c8dc6fbdf88440b2d1380e115359c85",
+ "cycles": 58205832,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6104
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6164",
+  "LOCAL VARIABLES": "6165 - 6179",
+  "HIGHEST MEMORY LOCATION": "6179"
+ }
+}

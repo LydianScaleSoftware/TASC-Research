@@ -1,0 +1,34 @@
+{
+ "id": "rd.let",
+ "key": "140f35e612bb618b",
+ "source": "10 LET X=1",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 55,
+ "obj_sha256": "508bce3d7733a85b09118765f8037a28b3cf022b903913eef470a588961d90d2",
+ "cycles": 53164835,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S008.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6118",
+  "LOCAL VARIABLES": "6119 - 6123",
+  "HIGHEST MEMORY LOCATION": "6123"
+ }
+}

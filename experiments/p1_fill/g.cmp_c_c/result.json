@@ -1,0 +1,34 @@
+{
+ "id": "g.cmp_c_c",
+ "key": "a04e173e1b05fd9b",
+ "source": "10 X=(A+B)>(C+D)",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 104,
+ "obj_sha256": "c6a8f955bf17c127aaa1d2248dd57b2943561cda578a2b81c42c39380eb859b4",
+ "cycles": 56293082,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S013.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6167",
+  "LOCAL VARIABLES": "6168 - 6197",
+  "HIGHEST MEMORY LOCATION": "6197"
+ }
+}

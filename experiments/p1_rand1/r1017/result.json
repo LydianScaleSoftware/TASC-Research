@@ -1,0 +1,82 @@
+{
+ "id": "r1017",
+ "key": "98e5c8c836319980",
+ "source": "10 REM! INTEGER J\n20 DIM D%(2),B$(3)\n30 PRINT Y$;LEFT$(RIGHT$(RIGHT$(B$(J),1),1000),J);\n40 FOR J=NOT ((-J)) TO ((D%(N2%) AND ATN(0.1)))+-INT(B%)\n50 READ N2$\n60 N2$=\"\":J=X:XY$=Y$+\"123\"\n70 GOTO 40:IF N2 THEN 100\n80 HLIN -LEN(B$(B%)),B AT SIN(TAN((P%(Y%,J)))):HLIN (X),39101 AT Y%:FOR N2=AB TO B%\n90 IF (D%(-255)) THEN HLIN NOT ((((221 AND 22))<=N2%)),J+-((B+J)) AT INT(ASC(Y$) AND XY)\n100 XY=359:POP:X=B\n110 A%=Y%:X=B\n120 SPEED=J\n130 POKE ASC(RIGHT$(XY$,B)+N2$+Y$),SGN(B%)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 726,
+ "obj_sha256": "885a058dc514f53356c4f0a6b2ab8457189b50774b93f11bd0ea45b18d7b93f3",
+ "cycles": 89219811,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6120
+  },
+  {
+   "line": 50,
+   "addr": 6186
+  },
+  {
+   "line": 60,
+   "addr": 6195
+  },
+  {
+   "line": 70,
+   "addr": 6246
+  },
+  {
+   "line": 80,
+   "addr": 6249
+  },
+  {
+   "line": 90,
+   "addr": 6338
+  },
+  {
+   "line": 100,
+   "addr": 6412
+  },
+  {
+   "line": 110,
+   "addr": 6436
+  },
+  {
+   "line": 120,
+   "addr": 6454
+  },
+  {
+   "line": 130,
+   "addr": 6463
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S002.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6789",
+  "LOCAL VARIABLES": "6790 - 7093",
+  "HIGHEST MEMORY LOCATION": "7093"
+ }
+}

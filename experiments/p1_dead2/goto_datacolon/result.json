@@ -1,0 +1,38 @@
+{
+ "id": "goto_datacolon",
+ "key": "0e97040977499c43",
+ "source": "10 GOTO 20:DATA \"A:B\",C:Y=2\n20 END",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 70,
+ "obj_sha256": "2f77ee1ec5c1390d7e847b51e141083859681d2032dd9cd8e486de57b7a2c66e",
+ "cycles": 54845097,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6105
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6133",
+  "LOCAL VARIABLES": "6134 - 6138",
+  "HIGHEST MEMORY LOCATION": "6138"
+ }
+}

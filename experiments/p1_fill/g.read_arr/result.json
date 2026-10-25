@@ -1,0 +1,38 @@
+{
+ "id": "g.read_arr",
+ "key": "25ae90aa23d55c53",
+ "source": "10 READ A(1)\n20 DATA 1",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 65,
+ "obj_sha256": "050675e5007157d0660b119b9a4fb0a95e7e0acb0b908b1d109d802a7fb40842",
+ "cycles": 54406343,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6096
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S013.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6128",
+  "LOCAL VARIABLES": "6129 - 6183",
+  "HIGHEST MEMORY LOCATION": "6183"
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "id": "rd.poke_x_y",
+ "key": "adc24fd3b1bc8b4d",
+ "source": "10 POKE X,Y",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 56,
+ "obj_sha256": "7bf1697da413846f8d91bbf88f0e9f2bdd9a9b0da972eb164313cd58606c7559",
+ "cycles": 54911857,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S009.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6119",
+  "LOCAL VARIABLES": "6120 - 6129",
+  "HIGHEST MEMORY LOCATION": "6129"
+ }
+}

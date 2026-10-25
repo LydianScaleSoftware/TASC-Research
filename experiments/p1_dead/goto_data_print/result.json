@@ -1,0 +1,37 @@
+{
+ "id": "goto_data_print",
+ "key": "ed6a05fb75540743",
+ "source": "10 GOTO 20:DATA 1:PRINT\n20 END",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 37,
+ "obj_sha256": "cb4302e3c29ffacccfd28e39a603ea8e607210e768ee9b48adb15d451c0d7578",
+ "cycles": 56131804,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6095
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6100",
+  "HIGHEST MEMORY LOCATION": "6100"
+ }
+}

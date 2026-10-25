@@ -1,0 +1,127 @@
+{
+ "id": "r1023",
+ "key": "2f8616443caa5bb5",
+ "source": "10 REM! INTEGER I\n20 DEF FN F(X)=Z%\n30 CALL ((M%<=826<ABS(XY)))/C:I=((Z%<>N2%))-((N2% AND M%))=N2%\n40 D$(I,-127)=Z$+AB$:PRINT\n50 READ XY,AB:I=M%:C=FN F(LEN(AB$))\n60 AB$=AB$:XY=PEEK(I)-10293\n70 VTAB RND(N2)>=Z%^XY:IF XY THEN FOR AB=N2/A%(M% OR W) TO N2%\n80 PRINT XY/3*INT(7)>=A%(NOT 255)MID$(STR$(N2%),M%*N2<=N2,-256);\n90 IF 1 THEN VTAB AB-((C OR N2%)):IF 758*A%(65535<=N2) THEN FOR AB=-((C>=A%(0)))*INT(2.25<N2%) TO -((AB/1<>-AB%)):IF 0.1 THEN N2=N2%\n100 Z%=A%(M%):READ Z$,AB$\n110 IF I THEN C=2\n120 IF LEN(\"A\") THEN ON -LOG(.001)>AB% GOTO 40,130\n130 IF ASC(\"TASC\")/((A%(I)>A%(N2%))) THEN 160:C=AB>=I+AB%+((100-XY))\n140 PRINT\n150 AB$=STR$(NOT 20):FOR XY=C TO 22\n160 FOR N2=20 TO SGN(ABS(N2%)):PRINT:CALL LOG(XY>=NOT AB%)\n170 PRINT\n180 AB$=D$(NOT ABS(A%(N2%)),ABS(LEN(\"123\"))):N2=127:FOR XY=AB% TO 32767 STEP ((A%(3)-26034))^((N2%*A%(I)))-AB%\n190 AB$=N2$\n200 PRINT C-LOG(M%=W);NOT 0<>RND(Z%)+XY:XY=AB\n210 GOTO 210:PRINT 771+PEEK(39);D$(NOT I/N2,NOT C*((C>=65535)));\n220 INPUT AB\n230 VTAB N2:N2=XY\n240 AB$=LEFT$(\"X Y\",256/FN F(.5)):READ W\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1587,
+ "obj_sha256": "1c45f9076e1eeb7249675f84c1a83764e734ad87b9fc22a43b993b2c32d638a6",
+ "cycles": 140590501,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6094
+  },
+  {
+   "line": 40,
+   "addr": 6166
+  },
+  {
+   "line": 50,
+   "addr": 6199
+  },
+  {
+   "line": 60,
+   "addr": 6232
+  },
+  {
+   "line": 70,
+   "addr": 6259
+  },
+  {
+   "line": 80,
+   "addr": 6332
+  },
+  {
+   "line": 90,
+   "addr": 6422
+  },
+  {
+   "line": 100,
+   "addr": 6560
+  },
+  {
+   "line": 110,
+   "addr": 6581
+  },
+  {
+   "line": 120,
+   "addr": 6595
+  },
+  {
+   "line": 130,
+   "addr": 6640
+  },
+  {
+   "line": 140,
+   "addr": 6717
+  },
+  {
+   "line": 150,
+   "addr": 6720
+  },
+  {
+   "line": 160,
+   "addr": 6749
+  },
+  {
+   "line": 170,
+   "addr": 6793
+  },
+  {
+   "line": 180,
+   "addr": 6796
+  },
+  {
+   "line": 190,
+   "addr": 6920
+  },
+  {
+   "line": 200,
+   "addr": 6926
+  },
+  {
+   "line": 210,
+   "addr": 6980
+  },
+  {
+   "line": 220,
+   "addr": 6983
+  },
+  {
+   "line": 230,
+   "addr": 6995
+  },
+  {
+   "line": 240,
+   "addr": 7007
+  }
+ ],
+ "info": {
+  "RINT": "CALL  LOG (XY >  =  NOT AB%)",
+  "OBJECT FILE": "S003.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7650",
+  "LOCAL VARIABLES": "7651 - 7969",
+  "HIGHEST MEMORY LOCATION": "7969"
+ }
+}

@@ -1,0 +1,33 @@
+{
+ "id": "g.call_k",
+ "key": "158de649e3ed1ebf",
+ "source": "10 CALL 768",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 40,
+ "obj_sha256": "b248e54f9db79230ff8a15b9e0da781762e260477070a6997501f1b23489c07f",
+ "cycles": 56624091,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S005.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6103",
+  "HIGHEST MEMORY LOCATION": "6103"
+ }
+}

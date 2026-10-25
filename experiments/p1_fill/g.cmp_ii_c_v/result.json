@@ -1,0 +1,34 @@
+{
+ "id": "g.cmp_ii_c_v",
+ "key": "bcf09afc9f7515f3",
+ "source": "10 X=(A%+B%)>C%",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 74,
+ "obj_sha256": "3cc9a6bfe994c7a4e818be7adf272c757b92f5201bcdd4a942dea290789498c2",
+ "cycles": 54485828,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S014.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6137",
+  "LOCAL VARIABLES": "6138 - 6148",
+  "HIGHEST MEMORY LOCATION": "6148"
+ }
+}

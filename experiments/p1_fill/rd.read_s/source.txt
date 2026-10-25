@@ -1,0 +1,2 @@
+10 READ A$
+20 DATA HI

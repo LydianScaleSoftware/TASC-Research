@@ -1,0 +1,34 @@
+{
+ "id": "g.xdraw_i",
+ "key": "83c0f558f53176b7",
+ "source": "10 XDRAW X%",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 38,
+ "obj_sha256": "5b47da9384a97213c17252804844d63a17653ef889d9c83adbcee41e27b559f6",
+ "cycles": 55529052,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S010.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6101",
+  "LOCAL VARIABLES": "6102 - 6103",
+  "HIGHEST MEMORY LOCATION": "6103"
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "id": "g.input_sx",
+ "key": "fbb51fd6c602f312",
+ "source": "10 INPUT A$,X",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 60,
+ "obj_sha256": "569c1b91cb3761705259baaf7edd7cfc07a31be54c456bf21f4de6d10e83c73e",
+ "cycles": 52684150,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S008.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6123",
+  "LOCAL VARIABLES": "6124 - 6130",
+  "HIGHEST MEMORY LOCATION": "6130"
+ }
+}

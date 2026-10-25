@@ -1,0 +1,34 @@
+{
+ "id": "g.and_c_c",
+ "key": "0d4520048dc39748",
+ "source": "10 X=(A+B) AND (C+D)",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 101,
+ "obj_sha256": "7538b73bd4ce7a1d6ed8ee0051813a3f88069a3f55fe2458afb28e69675f27df",
+ "cycles": 55538171,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S006.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6164",
+  "LOCAL VARIABLES": "6165 - 6194",
+  "HIGHEST MEMORY LOCATION": "6194"
+ }
+}

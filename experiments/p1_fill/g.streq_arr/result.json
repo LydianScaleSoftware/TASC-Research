@@ -1,0 +1,34 @@
+{
+ "id": "g.streq_arr",
+ "key": "03fcfc027e611b25",
+ "source": "10 IF A$(1)=B$ THEN 10",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 72,
+ "obj_sha256": "0cf066aafa6aa6ea95b84717849cb382391ee154821ec1d04b74e180a5e67c8a",
+ "cycles": 54754053,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S014.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6135",
+  "LOCAL VARIABLES": "6136 - 6159",
+  "HIGHEST MEMORY LOCATION": "6159"
+ }
+}

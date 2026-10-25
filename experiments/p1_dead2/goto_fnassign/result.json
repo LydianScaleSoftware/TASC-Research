@@ -1,0 +1,38 @@
+{
+ "id": "goto_fnassign",
+ "key": "6d3e68f4f0d356cd",
+ "source": "10 GOTO 20:A(1)=2:B$=\"X\"\n20 END",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 100,
+ "obj_sha256": "c4c79e35f7bf317be4b9939766cc1da9decbd9fc711d27339b29eb73a2e9e11e",
+ "cycles": 57092335,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6112
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6163",
+  "LOCAL VARIABLES": "6164 - 6220",
+  "HIGHEST MEMORY LOCATION": "6220"
+ }
+}

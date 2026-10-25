@@ -1,0 +1,42 @@
+{
+ "id": "rd.for_lines",
+ "key": "e5b87e57cdfc793a",
+ "source": "10 FOR I=1 TO 10\n20 X=I\n30 NEXT I",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 100,
+ "obj_sha256": "3a4bb0c4f986dbb99605718d5ddbfc3a1a5b86ddcd09906e3efa03702980643b",
+ "cycles": 58810586,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6104
+  },
+  {
+   "line": 30,
+   "addr": 6113
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S012.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6163",
+  "LOCAL VARIABLES": "6164 - 6173",
+  "HIGHEST MEMORY LOCATION": "6173"
+ }
+}

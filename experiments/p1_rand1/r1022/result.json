@@ -1,0 +1,74 @@
+{
+ "id": "r1022",
+ "key": "1e5dd0952775cc79",
+ "source": "10 REM! INTEGER K\n20 DIM P%(2,3)\n30 POKE N2%-C,2\n40 B=LEN(MID$(X$+X$,P%(N2%,7),AB)):GOTO 50:TEXT\n50 P%(-AB,N2%)=((Z% AND W%))-Z\n60 GOTO 80:IF 32767 THEN COLOR=D%(AB>=((D%(3,K) OR N2%)),RND(M*100)):D%(603+((127<=W%<RND(B))),W%+K)=W%\n70 ON D%(5,W%) GOTO 60,40:Z=D%(3+0.1-541^B%,Z%)\n80 FOR M=N2% AND ((962-B%))^((AB-AB)) TO Z>=3 OR Z%=-.5:K=M\n90 FOR K=-((NOT C))^SGN(ASC(\"A\")) TO (1000):B%=3:NEXT K\n100 NEXT M\n110 IF RND(-901>PEEK(B)) THEN IF C AND TAN(B%-Z) THEN 10\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 804,
+ "obj_sha256": "c602df6ad91b07aed9e46985da8ebe7afc89d7839f10bcc6fb84658f065f8408",
+ "cycles": 97797693,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6099
+  },
+  {
+   "line": 50,
+   "addr": 6144
+  },
+  {
+   "line": 60,
+   "addr": 6195
+  },
+  {
+   "line": 70,
+   "addr": 6252
+  },
+  {
+   "line": 80,
+   "addr": 6317
+  },
+  {
+   "line": 90,
+   "addr": 6394
+  },
+  {
+   "line": 100,
+   "addr": 6456
+  },
+  {
+   "line": 110,
+   "addr": 6461
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S002.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6867",
+  "LOCAL VARIABLES": "6868 - 7177",
+  "HIGHEST MEMORY LOCATION": "7177"
+ }
+}

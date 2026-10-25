@@ -1,0 +1,70 @@
+{
+ "id": "r1007",
+ "key": "30b30fcde16146ca",
+ "source": "10 DIM A%(12)\n20 DATA HI,HI,-2.5,300:A=454\n30 PRINT 255,X%,\n40 X%=24:FOR Y=PEEK(255)/ATN(W%) TO A%(A%)\n50 POKE Y OR 7 OR 0.1,A>C\n60 POP:A$=XY$+A$+\"123\"+CHR$(W%)+STR$(40000)\n70 A=((Q1%^W%<>((C OR P(X%)))))-A%(X% OR A%)\n80 CALL 7 AND NOT TAN(X%)\n90 NEXT Y:ON A% GOTO 40,100,80\n100 READ A%:ON C<=255<=N2>=NOT ((A%(A%)+.5)) GOTO 40,40,10,10\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 611,
+ "obj_sha256": "76f42aee735a772a30831404a67df6f9d6e86771b0142abc96d992475b86d3b3",
+ "cycles": 85101980,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6111
+  },
+  {
+   "line": 40,
+   "addr": 6129
+  },
+  {
+   "line": 50,
+   "addr": 6170
+  },
+  {
+   "line": 60,
+   "addr": 6200
+  },
+  {
+   "line": 70,
+   "addr": 6263
+  },
+  {
+   "line": 80,
+   "addr": 6323
+  },
+  {
+   "line": 90,
+   "addr": 6343
+  },
+  {
+   "line": 100,
+   "addr": 6361
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S002.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6674",
+  "LOCAL VARIABLES": "6675 - 6796",
+  "HIGHEST MEMORY LOCATION": "6796"
+ }
+}

@@ -95,6 +95,7 @@ class Bin(Expr):
 class Stmt:
     kind: str
     args: list[object] = field(default_factory=list)
+    kw: bool = True  # began with a keyword token (an implicit LET does not)
 
 
 # ---------------------------------------------------------------- tokenizer view
@@ -195,12 +196,26 @@ def _relop(c: Cursor) -> str:
             frozenset(">="): ">=", frozenset("<>"): "<>"}[frozenset("".join(sorted(bits)))]
 
 
+def is_str(e: Expr) -> bool:
+    if isinstance(e, Str):
+        return True
+    if isinstance(e, VarRef):
+        return e.suffix == "$"
+    if isinstance(e, Builtin):
+        return e.name in ("STR$", "CHR$", "LEFT$", "RIGHT$", "MID$")
+    if isinstance(e, Bin):
+        return e.op == "+" and is_str(e.l)
+    return False
+
+
 def expr(c: Cursor, minprio: int = 0) -> Expr:
     left = unary(c)
     while True:
         op = _binop_at(c)
         if op is None or op[1] <= minprio:
             return left
+        if is_str(left) and op[0] not in ("+", "REL"):
+            return left  # observed: an operator invalid for strings ends the expression (PRINT juxtaposition)
         name, prio = op
         if name == "REL":
             name = _relop(c)
@@ -457,13 +472,59 @@ def statement(c: Cursor) -> Stmt:
     return Stmt("LET", [v, expr(c)])
 
 
+def skip_statement(c: Cursor) -> None:
+    """Skip one statement without parsing it (TASC's dead-code skip): to the next ':'
+    outside quotes; REM skips the rest of the line."""
+    if c.at("REM"):
+        c.rest()
+        return
+    quoted = False
+    while c.peek() is not None:
+        ch = c.peek()
+        if ch == ord('"'):
+            quoted = not quoted
+        elif ch == ord(":") and not quoted:
+            return
+        c.p += 1
+
+
+def iter_statements(body: bytes):  # type: ignore[no-untyped-def]
+    """Yields (kw, parse) per statement: kw = begins with a keyword token; parse(skip)
+    parses the statement (or skips it when skip=True and returns None)."""
+    c = Cursor(body)
+    while c.peek() is not None:
+        if c.take(":"):
+            continue
+        kw = (c.peek() or 0) >= 0x80
+        is_data = c.at("DATA")
+        done = False
+
+        def parse(skip: bool, c: Cursor = c, kw: bool = kw) -> Stmt | None:
+            nonlocal done
+            done = True
+            if skip:
+                skip_statement(c)
+                return None
+            st = statement(c)
+            st.kw = kw
+            if c.peek() is not None and not c.at(":") and st.kind != "IF":
+                raise ParseError(f"junk after statement at {c.p} in {c.b!r}")
+            return st
+
+        yield kw, is_data, parse
+        if not done:
+            raise ParseError("statement neither parsed nor skipped")
+
+
 def parse_line(body: bytes) -> list[Stmt]:
     c = Cursor(body)
     out: list[Stmt] = []
     while c.peek() is not None:
         if c.take(":"):
             continue
+        kw = (c.peek() or 0) >= 0x80
         out.append(statement(c))
+        out[-1].kw = kw
         if c.peek() is not None and not c.at(":") and out[-1].kind not in ("IF",):
             raise ParseError(f"junk after statement at {c.p} in {body!r}")
     return out

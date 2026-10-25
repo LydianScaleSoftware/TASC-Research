@@ -1,0 +1,33 @@
+{
+ "id": "rd.flash",
+ "key": "5ad4bb1ae033ed27",
+ "source": "10 FLASH",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 26,
+ "obj_sha256": "bdefabf8e5f9d3f10005afcbba18d64ef9d7d00c5a79861d1c1aa379138b1334",
+ "cycles": 52772879,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S002.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6089",
+  "HIGHEST MEMORY LOCATION": "6089"
+ }
+}

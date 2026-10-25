@@ -1,0 +1,41 @@
+{
+ "id": "on_const",
+ "key": "5ca464a4bb0d5b77",
+ "source": "10 ON 2 GOTO 20,30\n20 END\n30 END",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 51,
+ "obj_sha256": "afa474db7f55b0a47f79b74ffb1c01d47fa8c4c4efc8e7ef5708d7648c316fd0",
+ "cycles": 54751087,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6095
+  },
+  {
+   "line": 30,
+   "addr": 6098
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6114",
+  "HIGHEST MEMORY LOCATION": "6114"
+ }
+}

@@ -1,0 +1,41 @@
+{
+ "id": "rd.onerr",
+ "key": "50dbd765d391aec8",
+ "source": "10 ONERR GOTO 30\n20 END\n30 END",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 34,
+ "obj_sha256": "b4466287a0053ae93e575fabeece7ce226cba99b60d0bc0246c8507f307af3b9",
+ "cycles": 54935202,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6089
+  },
+  {
+   "line": 30,
+   "addr": 6092
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S013.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6097",
+  "HIGHEST MEMORY LOCATION": "6097"
+ }
+}

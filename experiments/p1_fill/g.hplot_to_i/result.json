@@ -1,0 +1,34 @@
+{
+ "id": "g.hplot_to_i",
+ "key": "4c28bac3ccdd24e7",
+ "source": "10 HPLOT TO X%,Y%",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 53,
+ "obj_sha256": "5ea6c218c7a0fc52e44c5259ebd93f5c7a70f00fbb71b3abf4c2817bdce464c1",
+ "cycles": 54796657,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6116",
+  "LOCAL VARIABLES": "6117 - 6120",
+  "HIGHEST MEMORY LOCATION": "6120"
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "id": "g.sub_ii",
+ "key": "da01e44ab98e4542",
+ "source": "10 X=A(I%,J%)",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 78,
+ "obj_sha256": "c2f63370f24a6dce0188ff5cdecb5e1394886e31e0ddc8b089be52db1527df4d",
+ "cycles": 53450958,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S008.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6141",
+  "LOCAL VARIABLES": "6142 - 6755",
+  "HIGHEST MEMORY LOCATION": "6755"
+ }
+}

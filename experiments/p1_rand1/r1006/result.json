@@ -1,0 +1,62 @@
+{
+ "id": "r1006",
+ "key": "c2a2807b0f694819",
+ "source": "10 A%=TAN(2):M%=49152<=NOT VAL(Y$)\n20 HCOLOR=Z%\n30 M%=ABS(40)\n40 PRINT 256;:A%=A+-((Z%<=1000)):M%=PEEK(Z%>=100)>=1.5\n50 HTAB Z%>898:DATA -2.5,1,\"A,B\":PRINT \"\"\n60 Z%=M%\n70 GOTO 60:Z%=Z%>M%:ON 32346 GOTO 80\n80 X%=A%:GR:XY=SIN(X%-24<5)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 450,
+ "obj_sha256": "1c37ca2af0b9f16f5f15ee69deb13fec3e1a7ba07e1b76d69a63c0fb6a15e83d",
+ "cycles": 72555120,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6119
+  },
+  {
+   "line": 30,
+   "addr": 6128
+  },
+  {
+   "line": 40,
+   "addr": 6140
+  },
+  {
+   "line": 50,
+   "addr": 6197
+  },
+  {
+   "line": 60,
+   "addr": 6247
+  },
+  {
+   "line": 70,
+   "addr": 6256
+  },
+  {
+   "line": 80,
+   "addr": 6274
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6513",
+  "LOCAL VARIABLES": "6514 - 6533",
+  "HIGHEST MEMORY LOCATION": "6533"
+ }
+}

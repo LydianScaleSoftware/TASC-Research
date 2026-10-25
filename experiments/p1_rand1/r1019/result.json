@@ -1,0 +1,23 @@
+{
+ "id": "r1019",
+ "key": "990c7abee41d4316",
+ "source": "10 REM! INTEGER K\n20 DIM B(1,3)\n30 CALL Y%\n40 PRINT STR$(X/39)+\"A\"+AB$+\"TASC\";MID$(W$,(Z))B:PRINT MID$(\"TASC\",-981)+\"\";\"HI\"+CHR$(P%(39)^100);:DATA X,\"A,B\",,300\n50 A=((X=((Q1%>131))))+M:SPEED=(PEEK(N2%)<=0)\n60 IF N2% THEN 10:PRINT\n70 N2%=TAN(Y%):AB$=\"A\"\n80 X%=Q1%:VTAB A:K=(INT(0)) OR -255\n90 K=Q1%^((A AND RND(Z)))\n100 PRINT AB$,INT(PEEK(-20));:CALL X\n110 A=VAL(Y$+\"TASC\"+\"TASC\"+\"X Y\")\n120 PRINT:CALL 517=((B(Q1%,0)=879))+((Q1%+M)):B(N2%,A^.5)=((NOT X%<Q1%))+-((M<Z))\n130 IF SQR(10>B(464,776)) THEN P%(SGN((M)))=P%(K)\n140 DATA ,\n150 Y%=ABS(LOG(B AND Z)):PRINT\n160 Q1%=Z*X%:GOTO 220\n170 ON B(127,ATN(Q1%)*((M AND K))) GOTO 220\n180 Y$=W$\n190 ON N2% GOTO 140,190,250,150:PRINT W$+RIGHT$(AB$,347)+Y$NOT ((Y%/K+A/.001)),\"A\",:READ M\n200 Y$=STR$(((P%(24) OR B(X%,K)))<B(Y%,Y%)):PRINT -A(Y%):IF ((2 OR X))>((20*Q1%=N2%*B(Q1%,253))) THEN Y$=LEFT$(Y$,B(K,127)>=X%)\n210 AB$=\"TASC\":GOSUB 80:PRINT\n220 PRINT M;\"TASC\",:PRINT AB$;P%(SQR(39*18589));\"A\"+CHR$(P%(N2%))+MID$(\"A\",SQR(255));\n230 IF -((SIN(A)-P%(1E3))) THEN 140\n240 K=(177)\n250 PRINT:P%(Y%)=K:PRINT B(ABS(P%(N2%)+X%),NOT Q1%+Z);\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n*****FATAL ERROR\nLINE NUMBER 190\nINCOMPLETE\n\n: PRINT W$ +  RIGHT$ (AB$,347) + Y$ !ERR\n!  NOT ((Y% / K + A / .001)),\"A\",\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

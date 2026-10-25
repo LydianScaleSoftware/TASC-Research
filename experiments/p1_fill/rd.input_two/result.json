@@ -1,0 +1,34 @@
+{
+ "id": "rd.input_two",
+ "key": "91dab64c0a0ee446",
+ "source": "10 INPUT X,Y",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 62,
+ "obj_sha256": "5ca4cf524059a1449ff4c1ca8b40ec4c94bd689a28f525e08007cbd0906aacaa",
+ "cycles": 57254234,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S011.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6125",
+  "LOCAL VARIABLES": "6126 - 6135",
+  "HIGHEST MEMORY LOCATION": "6135"
+ }
+}

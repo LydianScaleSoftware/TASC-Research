@@ -11,8 +11,9 @@ from dataclasses import dataclass, field
 from fractions import Fraction
 
 from tasc.compiler import fp
+from tasc.compiler.fin import fin
 from tasc.compiler.parse import (
-    Bin, Builtin, Expr, FnCall, Num, ParseError, Stmt, Str, Unary, VarRef, parse_line, read_program,
+    Bin, Builtin, Expr, FnCall, Num, ParseError, Stmt, Str, Unary, VarRef, iter_statements, read_program,
 )
 from tasc.harness import Options
 
@@ -38,7 +39,15 @@ RT = {
     "VLIN": 0x1722, "SAVE.ADDR": 0x1741, "SAVE.ADDR/I": 0x173E, "POKE": 0x1451, "POKE/I": 0x1454,
     "WAIT2": 0x145A, "SAVE.ARG3": 0x15D6, "WAIT3": 0x1466, "SAVE.HX": 0x15E8, "HPLOT": 0x0DF4,
     "HPLOT.TO": 0x0DED, "SAVE.SHAPE": 0x15CD, "DRAW.AT": 0x0DD9, "XDRAW.AT": 0x0DE0,
+    "DRAW": 0x0E34, "XDRAW": 0x0E3B, "IMOVE": 0x1675, "ISUBT": 0x0CDA, "STRGT": 0x1549, "STRLE": 0x1546,
+    "STRGE": 0x152F, "INPUT.STR.NEXT": 0x1298, "INPUT.STR.PROMPT": 0x128A,
 }
+# observed: an integer-argument variant sits 3 bytes above the real entry, except these (3 below)
+MINUS3 = {0x173B, 0x08DB, 0x1741, 0x1747}  # CALL, HIMEM:, POKE/WAIT address, PEEK
+
+
+def int_entry(real: int) -> int:
+    return real - 3 if real in MINUS3 else real + 3
 RT_RANGE = (0x0803, 0x0803 + 4013)
 
 ROM = {"HOME": 0xFC58, "TEXT": 0xF399, "GR": 0xF390, "HGR": 0xF3E2, "HGR2": 0xF3D8, "NORMAL": 0xF273,
@@ -48,11 +57,10 @@ ROM = {"HOME": 0xFC58, "TEXT": 0xF399, "GR": 0xF390, "HGR": 0xF3E2, "HGR2": 0xF3
        "ATN": 0xF09E, "USR": 0x000A}
 
 # one-argument statements: (real entry, int entry or None if unknown)
-ARG1 = {"VTAB": (0x149E, 0x14A1), "HTAB": (0x14A7, None), "COLOR=": (0x0E77, 0x0E7A), "HCOLOR=": (0x15F4, None),
-        "SPEED=": (0x161E, None), "ROT=": (0x15BB, None), "SCALE=": (0x15C4, None), "CALL": (0x173B, None),
-        "IN#": (0x1448, None), "PR#": (0x143F, None), "HIMEM:": (0x08DB, None)}
+ARG1 = {"VTAB": 0x149E, "HTAB": 0x14A7, "COLOR=": 0x0E77, "HCOLOR=": 0x15F4, "SPEED=": 0x161E, "ROT=": 0x15BB,
+        "SCALE=": 0x15C4, "CALL": 0x173B, "IN#": 0x1448, "PR#": 0x143F, "HIMEM:": 0x08DB}
 NO_DEBUG = {"REM", "DATA", "DIM", "END", "GOTO", "GOSUB", "RETURN", "HOME", "TEXT", "GR", "HGR", "HGR2", "NORMAL",
-            "INVERSE", "FLASH", "RESUME", "DEF", "POP", "NEW", "ONERR"}  # GUESS beyond HOME/END/GOTO/GOSUB/RETURN/REM/DATA
+            "INVERSE", "FLASH", "RESUME", "DEF", "NEW", "ONERR", "STOP", "RESTORE"}
 REAL_OP = {"+": 2, "-": 3, "*": 4, "/": 7}
 CMP = {"=": "EQ", "<": "LT", ">": "GT", "<=": "LE", ">=": "GE", "<>": "NE"}
 SWAP = {"=": "=", "<>": "<>", "<": ">", ">": "<", "<=": ">=", ">=": "<="}
@@ -80,6 +88,7 @@ class Sym:
     ops: set[int] = field(default_factory=set)
     common: int | None = None  # declaration index in COMMON
     raw: bytes = b""  # constants: stored bytes
+    used: bool = False  # constants tested in memory (AND/OR) need pool storage
     addr: int = 0  # storage
     rtn: int = 0  # routine address
     label: str = ""
@@ -145,6 +154,8 @@ class Compiler:
         self.const_seq = 0
         self.seq = 0
         self.temps: dict[str, list[Sym]] = {"real": [], "int": [], "str": []}
+        self.fn_temps: dict[str, list[Sym]] = {"real": [], "int": [], "str": []}  # observed: DEF FN bodies
+        self.in_fn = False
         self.temp_depth: dict[str, int] = {"real": 0, "int": 0, "str": 0}
         self.params: list[Sym] = []
         self.scope_param: dict[str, Sym] = {}
@@ -160,6 +171,7 @@ class Compiler:
         self.next_line: dict[int, int] = {}
         self.in_if = False
         self.lit_data: dict[int, str] = {}
+        self.depth = 0
 
     # -- symbols ------------------------------------------------------
     def var(self, name: str, suffix: str, array: bool = False, nsubs: int = 1) -> Sym:
@@ -179,29 +191,24 @@ class Compiler:
             dims: tuple[int, ...] = ()
             if array:
                 dims = self.dims.get((name, suffix)) or self.int_arrays.get(name) or (10,) * nsubs
-            if array:  # observed for int arrays (BALL): T = 24 = scalar T + 22; GUESS for real/string arrays
+            if array:  # observed: array hash term = scalar term + 22 (real 22, string 23, int 24)
                 ht = (ht + 22) % 32
             s = Sym(name, vt, "var", array, dims, ht, self.seq, label=name + suffix + ("()" if array else ""))
             self.syms[key] = s
         return s
 
-    def const(self, value: Fraction, vtype: str) -> Sym:
-        """Constant symbol.  Observed: an integer-valued literal (int constants on)
-        enters the table as int first, then real, whatever form is used first."""
-        if vtype == "real" and self.o.int_const and value.denominator == 1 and abs(value) <= 32767:
-            self._const_entry(value, "int")
-        return self._const_entry(value, vtype)
+    def const(self, value: Fraction, vtype: str, text: str | None = None) -> Sym:
+        """Constant symbol (created on first need at code generation)."""
+        return self._const_entry(value, vtype, text)
 
-    def _const_entry(self, value: Fraction, vtype: str) -> Sym:
+    def _const_entry(self, value: Fraction, vtype: str, text: str | None = None) -> Sym:
         if vtype == "int":
             raw = int(value).to_bytes(2, "big", signed=True)
         else:
-            raw = fp.pack_fraction(value)
+            raw = fin(text) if text is not None else fp.pack_fraction(value)  # ROM FIN, bit-exact
         key = (raw, vtype)
         s = self.consts.get(key)
         if s is None:
-            if vtype == "int" and value.denominator == 1:
-                self.const_seq += 1
             self.const_seq += 1
             s = Sym("K", vtype, "const", seq=self.const_seq, raw=raw,
                     label=f"K({int(value) if vtype == 'int' else float(value):g}{'%' if vtype == 'int' else ''})")
@@ -210,7 +217,7 @@ class Compiler:
 
     def temp(self, vtype: str) -> Sym:
         d = self.temp_depth[vtype]
-        pool = self.temps[vtype]
+        pool = self.fn_temps[vtype] if self.in_fn else self.temps[vtype]
         if d == len(pool):
             self.seq += 1
             pool.append(Sym(f"T{d}", vtype, "temp", seq=self.seq, label=f"T{vtype[0]}{d}"))
@@ -226,6 +233,11 @@ class Compiler:
 
     def jsr_rt(self, name: str) -> None:
         self.emit(JSR, Ref("rt", RT[name]), name)
+
+    def jsr_rt_t(self, name: str, t: str) -> None:
+        """JSR to RUNTIME entry `name`, or its integer variant when t == 'int'."""
+        a = RT[name]
+        self.emit(JSR, Ref("rt", int_entry(a) if t == "int" else a), name + ("/I" if t == "int" else ""))
 
     def jsr_rom(self, name: str) -> None:
         self.emit(JSR, Ref("abs", ROM[name]), name)
@@ -298,6 +310,9 @@ class Compiler:
             return "real"
         raise CompileError(f"type of {e}")
 
+    def want_any(self, e: Expr) -> str:
+        return "any_int" if self.etype(e) == "lit" else "any"
+
     def simple_or_str(self, e: Expr) -> bool:
         return self.simple(e) or isinstance(e, Str)
 
@@ -308,7 +323,7 @@ class Compiler:
         """Symbol for a simple operand used in `mode` ('int' or 'real')."""
         if isinstance(e, Num):
             v = fp.literal_value(e.text)
-            return self.const(v, "int" if mode == "int" else "real")
+            return self.const(v, "int" if mode == "int" else "real", e.text)
         assert isinstance(e, VarRef)
         return self.var(e.name, e.suffix)
 
@@ -322,8 +337,17 @@ class Compiler:
 
     # -- expressions ---------------------------------------------------
     def gen(self, e: Expr, want: str) -> str:
-        """Generate e; want = 'real' | 'int' | 'any' | 'str'.  Returns the type in the accumulator."""
-        t = self._gen(e, want)
+        """Generate e; want = 'real' | 'int' | 'any' | 'str'.  Returns the type in the accumulator.
+
+        Observed: TASC parses a whole expression before generating code, so the data of
+        all its string literals is emitted first, in source order."""
+        if self.depth == 0:
+            self.prescan(e)
+        self.depth += 1
+        try:
+            t = self._gen(e, want)
+        finally:
+            self.depth -= 1
         if want == "real" and t == "int":
             self.jsr_rt("FLOAT")
             return "real"
@@ -335,7 +359,7 @@ class Compiler:
             if et == "lit" and want in ("int", "any_int"):
                 self.entry(self.const(fp.literal_value(e.text), "int"), 0)
                 return "int"
-            self.entry(self.const(fp.literal_value(e.text), "real"), 0)
+            self.entry(self.const(fp.literal_value(e.text), "real", e.text), 0)
             return "real"
         if isinstance(e, Str):
             lab = self.lit_data.pop(id(e), None)
@@ -360,7 +384,7 @@ class Compiler:
             if e.op == "+":
                 return self._gen(e.e, want)
             if e.op == "NOT":
-                self.gen(e.e, "any")
+                self.need_flags(self.gen(e.e, self.want_any(e.e)))  # observed: NOT 10 uses int 10
                 self.jsr_rt("EQ")
                 return "real"
             if et == "int":
@@ -379,24 +403,43 @@ class Compiler:
         raise CompileError(f"cannot generate {e}")
 
     def subscripts(self, subs: list[Expr]) -> None:
-        """Observed: subscripts evaluated right to left; the first one ends in the accumulator."""
-        order = list(reversed(subs))
-        for i, sub in enumerate(order):
-            last = i == len(order) - 1
-            t = self.gen(sub, "any_int" if self.etype(sub) == "lit" else "any")
-            if last:
-                if t == "real":
-                    self.jsr_rom("AYINT")
+        """Observed: complex subscripts are computed left to right as scanned (a pending
+        result is spilled to a temp when the accumulator is needed again); then the
+        subscripts are pushed from last to first, and the first ends in the accumulator."""
+        descs: list[tuple[str, object, str]] = []  # (kind, payload, type): leaf / acc / temp
+
+        def spill() -> None:
+            for i, (kind, _, ty) in enumerate(descs):
+                if kind == "acc":
+                    t = self.temp(ty)
+                    self.entry(t, 1)
+                    descs[i] = ("temp", t, ty)
+
+        for sub in subs:
+            if self.simple(sub):
+                descs.append(("leaf", sub, ""))
             else:
-                if t == "int":
-                    raise CompileError("GUESS: int push-subscript entry unknown")
-                self.jsr_rt("PUSH.SUB")
+                spill()
+                descs.append(("acc", None, self.gen(sub, self.want_any(sub))))
+        for i in range(len(descs) - 1, -1, -1):
+            kind, payload, ty = descs[i]
+            if kind == "leaf":
+                spill()
+                assert isinstance(payload, Expr)
+                ty = self.gen(payload, self.want_any(payload))
+            elif kind == "temp":
+                assert isinstance(payload, Sym)
+                self.entry(payload, 0)
+                self.free_temp(ty)
+            descs[i] = ("done", None, ty)
+            if i > 0:
+                self.jsr_rt_t("PUSH.SUB", ty)
+            elif ty == "real":
+                self.jsr_rom("AYINT")
 
     def binop(self, e: Bin, et: str) -> str:
         lt, rt_ = self.etype(e.l), self.etype(e.r)
-        self.scan(e.l) if isinstance(e.l, Str) else None
-        if isinstance(e.r, Str) and self.simple_or_str(e.l):
-            self.scan(e.r)
+
         if lt == "str":
             return self.strop(e)
         if e.op in ("AND", "OR"):
@@ -409,10 +452,15 @@ class Compiler:
             return self.compare(e, mode)
         mode = "int" if et == "int" else "real"
         if e.op == "^":
-            if not self.simple(e.l):
-                raise CompileError("GUESS: ^ with complex left operand")
-            self.gen(e.r, "real")
-            self.apply(e.l, "real", 6)
+            if self.simple(e.l):
+                self.gen(e.r, "real")
+                self.apply(e.l, "real", 6)
+            elif self.simple(e.r):
+                self.gen(e.l, "real")
+                self.jsr_rom("MOVAF")
+                self.gen(e.r, "real")
+            else:
+                self.both_complex(e, "real", 6)
             self.jsr_rom("FPWRT")
             return "real"
         k = REAL_OP[e.op]
@@ -424,12 +472,7 @@ class Compiler:
                 self.gen(e.r, mode)
                 self.apply(e.l, mode, k)
             else:
-                self.gen(e.l, mode)
-                t = self.temp(mode)
-                self.entry(t, 1)
-                self.gen(e.r, mode)
-                self.entry(t, k)
-                self.free_temp(mode)
+                self.both_complex(e, mode, k)
             return mode
         # - and /: memory operand is the left one (M-FAC, M/FAC)
         if self.simple(e.l):
@@ -439,15 +482,28 @@ class Compiler:
             self.gen(e.l, "real")
             self.jsr_rom("MOVAF")
             self.gen(e.r, "real")
-            self.jsr_rom("FSUBT" if e.op == "-" else "FDIVT")  # GUESS for '/'
+            self.jsr_rom("FSUBT" if e.op == "-" else "FDIVT")
+        elif self.simple(e.r) and mode == "int":  # observed: IACC -> IARG, load right, IARG-IACC
+            self.gen(e.l, "int")
+            self.jsr_rt("IMOVE")
+            self.gen(e.r, "int")
+            self.jsr_rt("ISUBT")
         else:
-            self.gen(e.l, mode)
-            t = self.temp(mode)
-            self.entry(t, 1)
-            self.gen(e.r, mode)
-            self.entry(t, k)
-            self.free_temp(mode)
+            self.both_complex(e, mode, k)
         return mode
+
+    def both_complex(self, e: Bin, mode: str, k: int) -> None:
+        """Observed: the left result goes to a temp of its own type (an int result is not
+        floated first); the op is applied to the temp (6+k for an int temp in real mode)."""
+        lt = self._gen_top(e.l, "int" if mode == "int" else "any")
+        t = self.temp(lt)
+        self.entry(t, 1)
+        self.gen(e.r, mode)
+        self.entry(t, 6 + k if (mode == "real" and lt == "int") else k)
+        self.free_temp(lt)
+
+    def _gen_top(self, e: Expr, want: str) -> str:
+        return self.gen(e, want)
 
     def compare(self, e: Bin, mode: str) -> str:
         op = e.op
@@ -458,22 +514,19 @@ class Compiler:
             self.gen(e.r, mode)
             self.apply(e.l, mode, 5)
             op = SWAP[op]
-        else:  # GUESS
-            self.gen(e.l, mode)
-            t = self.temp(mode)
-            self.entry(t, 1)
-            self.gen(e.r, mode)
-            self.entry(t, 5)
-            self.free_temp(mode)
+        else:  # observed: typed temp as for arithmetic; relation swapped
+            self.both_complex(e, mode, 5)
             op = SWAP[op]
         self.jsr_rt(CMP[op])
         return "real"
 
     def test_mem(self, e: Expr) -> str:
-        """LDA (and ORA) of a simple operand's storage; returns its type."""
+        """LDA (and ORA) of a simple operand's storage (a constant: its pool bytes)."""
         if isinstance(e, Num):
-            raise CompileError("GUESS: AND/OR with a constant operand")
-        s = self.operand(e, "real")
+            s = self.operand(e, "int" if self.etype(e) == "lit" else "real")
+            s.used = True
+        else:
+            s = self.operand(e, "real")
         return self.test_sym(s)
 
     def test_sym(self, s: Sym) -> str:
@@ -484,10 +537,10 @@ class Compiler:
 
     def andor(self, e: Bin) -> str:
         if self.simple(e.l):
-            t = self.gen(e.r, "any")
+            t = self.gen(e.r, self.want_any(e.r))
             self.test_mem(e.l)
         elif self.simple(e.r):
-            t = self.gen(e.l, "any")
+            t = self.gen(e.l, self.want_any(e.l))
             self.test_mem(e.r)
         else:
             lt = self.gen(e.l, "any")
@@ -501,31 +554,139 @@ class Compiler:
         return "real"
 
     def strop(self, e: Bin) -> str:
-        complex_r = not (isinstance(e.r, Str) or (isinstance(e.r, VarRef) and e.r.subs is None))
-        if e.op == "+" and complex_r and isinstance(e.r, VarRef):  # observed: B$(1)+B$(2) uses a string temp
+        """Observed: a complex string result (array element, function, concatenation) is
+        pushed; a simple variable or literal is only loaded.  CONCAT = pushed + loaded,
+        CONCAT.T = loaded + pushed."""
+        simple_l = self.simple_or_str(e.l)
+        simple_r = self.simple_or_str(e.r)
+        names = {"=": "STREQ", "<": "STRLT", "<>": "STRNE", ">": "STRGT", "<=": "STRLE", ">=": "STRGE"}
+        op = e.op
+        if simple_l and simple_r:
+            self.gen(e.l, "str")
+            self.jsr_rt("PUSHSTR")
+            self.gen(e.r, "str")
+            rev = False
+        elif not simple_l and simple_r:
+            self.gen(e.l, "str")
+            self.gen(e.r, "str")
+            rev = False
+        elif simple_l and not simple_r:
+            self.gen(e.r, "str")
+            self.gen(e.l, "str")
+            rev = True
+        else:
             self.gen(e.l, "str")
             t = self.temp("str")
             self.entry(t, 1)
             self.gen(e.r, "str")
             self.entry(t, 0)
             self.free_temp("str")
-            self.jsr_rt("CONCAT.T")
+            rev = True
+        if op == "+":
+            self.jsr_rt("CONCAT.T" if rev else "CONCAT")
             return "str"
-        self.gen(e.l, "str")
-        if not (e.op == "+" and isinstance(e.l, Bin) and e.l.op == "+"):  # a concat result is already pushed
-            self.jsr_rt("PUSHSTR")
-        self.gen(e.r, "str")
-        if e.op == "+":
-            self.jsr_rt("CONCAT")
-            return "str"
-        names = {"=": "STREQ", "<": "STRLT", "<>": "STRNE"}
-        if e.op not in names:
-            raise CompileError(f"GUESS: string relation {e.op}")
-        self.jsr_rt(names[e.op])
+        if rev:  # GUESS: reversed string comparison swaps the relation
+            op = SWAP[op]
+        self.jsr_rt(names[op])
         return "real"
+
+    def reduce_args(self, args: list[Expr], steps: list[tuple[str, object]]) -> list[str]:
+        """Observed: complex arguments are computed first (as scanned), simple ones are
+        loaded at the reduction; string and numeric accumulators are separate.
+        steps: ('load', i) or ('push', name) or ('call', name); 'push'/'call' use the
+        integer variant when the value just loaded/computed is an int."""
+        desc: list[tuple[str, object, str]] = []
+        cls = lambda x: "str" if self.etype(x) == "str" else "num"  # noqa: E731
+
+        def spill(c: str, keep: int | None = None) -> None:
+            for j, (kind, _, ty) in enumerate(desc):
+                if kind == "acc" and j != keep and (ty == "str") == (c == "str"):
+                    t = self.temp(ty)
+                    self.entry(t, 1)
+                    desc[j] = ("temp", t, ty)
+
+        for x in args:
+            if self.simple_or_str(x):
+                desc.append(("leaf", x, ""))
+            else:
+                for c2 in self.uses(x):  # observed: spill whatever accumulator x's computation uses
+                    spill(c2)
+                desc.append(("acc", None, self.gen(x, "str" if cls(x) == "str" else self.want_any(x))))
+        # observed: at the reduction, a pending result that is not the first value of its
+        # class to be consumed is spilled straight away (before any load)
+        first_load: dict[str, int] = {}
+        for kind, v in steps:
+            if kind == "load":
+                first_load.setdefault(cls(args[int(v)]), int(v))  # type: ignore[call-overload]
+        for j, (k2, _, ty) in enumerate(desc):
+            c2 = "str" if ty == "str" else "num"
+            if k2 == "acc" and first_load.get(c2) != j:
+                t = self.temp(ty)
+                self.entry(t, 1)
+                desc[j] = ("temp", t, ty)
+        types = ["" for _ in args]
+        last_t = ""
+        for kind, v in steps:
+            if kind == "load":
+                i = int(v)  # type: ignore[call-overload]
+                k2, pay, ty = desc[i]
+                if k2 == "leaf":
+                    spill(cls(args[i]), keep=None)
+                    assert isinstance(pay, Expr)
+                    ty = self.gen(pay, "str" if cls(args[i]) == "str" else self.want_any(pay))
+                elif k2 == "temp":  # observed: reloading a temp spills the pending result first
+                    assert isinstance(pay, Sym)
+                    spill(cls(args[i]))
+                    self.entry(pay, 0)
+                    self.free_temp(ty)
+                desc[i] = ("done", None, ty)
+                types[i] = ty
+                last_t = ty
+            else:
+                self.jsr_rt_t(str(v), last_t)
+        return types
+
+    def uses(self, e: Expr) -> set[str]:
+        """Accumulator classes ('num', 'str') used while computing e."""
+        if isinstance(e, Str):
+            return {"str"}
+        if isinstance(e, Num):
+            return {"num"}
+        if isinstance(e, VarRef):
+            out = {"str" if e.suffix == "$" else "num"}
+            if e.subs:
+                out.add("num")
+                for x in e.subs:
+                    out |= self.uses(x)
+            return out
+        if isinstance(e, Unary):
+            return self.uses(e.e) | {"num"}
+        if isinstance(e, Bin):
+            return self.uses(e.l) | self.uses(e.r)
+        if isinstance(e, Builtin):
+            out = {"str" if self.etype(e) == "str" else "num"}
+            for x in e.args:
+                out |= self.uses(x)
+            return out
+        if isinstance(e, FnCall):
+            return self.uses(e.arg) | {"num"}
+        return {"num", "str"}
 
     def builtin(self, e: Builtin) -> str:
         n, a = e.name, e.args
+        if n in ("LEFT$", "RIGHT$", "MID$", "SCRN", "PDL", "PEEK", "CHR$", "LEN", "ASC", "VAL"):
+            name = {"LEFT$": "LEFT", "RIGHT$": "RIGHT", "CHR$": "CHR"}.get(n, n)
+            if n == "MID$":
+                steps: list[tuple[str, object]] = [("load", 0), ("load", 1)]
+                steps += [("call", "MID2")] if len(a) == 2 else [("call", "PUSH.BYTE"), ("load", 2), ("call", "MID3")]
+            elif n == "SCRN":
+                steps = [("load", 0), ("call", "PUSH.BYTE"), ("load", 1), ("call", "SCRN")]
+            elif n in ("LEFT$", "RIGHT$"):
+                steps = [("load", 0), ("load", 1), ("call", name)]
+            else:
+                steps = [("load", 0), ("call", name)]
+            self.reduce_args(a, steps)
+            return {"PEEK": "int", "PDL": "int", "SCRN": "int", "LEN": "int", "ASC": "int", "VAL": "real"}.get(n, "str")
         if n in ("SGN", "INT", "ABS", "SQR", "RND", "LOG", "EXP", "COS", "SIN", "TAN", "ATN", "USR"):
             self.gen(a[0], "real")
             self.jsr_rom(n)
@@ -539,16 +700,11 @@ class Compiler:
             self.jsr_rt("PEEK/I" if t == "int" else "PEEK")
             return "int"
         if n == "PDL":
-            t = self.gen(a[0], "any")
-            if t == "int":
-                raise CompileError("GUESS: PDL int entry")
-            self.jsr_rt("PDL")
+            self.jsr_rt_t("PDL", self.gen(a[0], self.want_any(a[0])))
             return "int"
         if n == "SCRN":
-            self.gen(a[0], "any")
-            self.jsr_rt("PUSH.BYTE")
-            self.gen(a[1], "any")
-            self.jsr_rt("SCRN")
+            self.jsr_rt_t("PUSH.BYTE", self.gen(a[0], self.want_any(a[0])))
+            self.jsr_rt_t("SCRN", self.gen(a[1], self.want_any(a[1])))
             return "int"
         if n in ("LEN", "ASC", "VAL"):
             self.gen(a[0], "str")
@@ -564,20 +720,16 @@ class Compiler:
             return "str"
         if n in ("LEFT$", "RIGHT$"):
             self.gen(a[0], "str")
-            t = self.gen(a[1], "any")
-            if t == "int":
-                raise CompileError(f"GUESS: {n} int entry")
-            self.jsr_rt("LEFT" if n == "LEFT$" else "RIGHT")
+            self.jsr_rt_t("LEFT" if n == "LEFT$" else "RIGHT", self.gen(a[1], self.want_any(a[1])))
             return "str"
         if n == "MID$":
             self.gen(a[0], "str")
-            self.gen(a[1], "any")
+            t = self.gen(a[1], self.want_any(a[1]))
             if len(a) == 2:
-                self.jsr_rt("MID2")
+                self.jsr_rt_t("MID2", t)
             else:
-                self.jsr_rt("PUSH.BYTE")
-                self.gen(a[2], "any")
-                self.jsr_rt("MID3")
+                self.jsr_rt_t("PUSH.BYTE", t)
+                self.jsr_rt_t("MID3", self.gen(a[2], self.want_any(a[2])))
             return "str"
         raise CompileError(f"function {n}")
 
@@ -613,6 +765,29 @@ class Compiler:
         self.jsr_rt(entry)
         self.word(Ref("label", lab))
 
+    def prescan(self, e: Expr) -> None:
+        """Observed: while scanning an expression TASC emits string literal data and
+        enters numeric literals into the constant table with their natural type (int
+        when integer constants are on and the value is an integer in range)."""
+        if isinstance(e, Str):
+            self.scan(e)
+        elif isinstance(e, Num):
+            v = fp.literal_value(e.text)
+            self.const(v, "int" if self.etype(e) == "lit" else "real", e.text)
+        elif isinstance(e, VarRef):
+            for x in e.subs or []:
+                self.prescan(x)
+        elif isinstance(e, Unary):
+            self.prescan(e.e)
+        elif isinstance(e, Bin):
+            self.prescan(e.l)
+            self.prescan(e.r)
+        elif isinstance(e, Builtin):
+            for x in e.args:
+                self.prescan(x)
+        elif isinstance(e, FnCall):
+            self.prescan(e.arg)
+
     def scan(self, e: Expr) -> None:
         """Observed: a string literal's data is emitted when the (bottom-up) parser
         scans it; its STRLIT call comes at the reduction that consumes it."""
@@ -622,6 +797,7 @@ class Compiler:
     # -- statements ----------------------------------------------------
     def store(self, v: VarRef, rhs: Expr) -> None:
         if v.subs is not None:
+            self.prescan(v)  # observed: all target subscripts are scanned before any code
             s = self.var(v.name, v.suffix, True, len(v.subs))
             self.subscripts(v.subs)
             s.ops.add(1)
@@ -655,6 +831,7 @@ class Compiler:
         k = st.kind
         if self.o.resume and k not in NO_DEBUG and not self.in_if:
             self.jsr_rt("DEBUG")
+        self.in_if = False  # observed: only the first statement after THEN skips the debug call
         if k in ("HOME", "TEXT", "GR", "HGR", "HGR2", "NORMAL", "INVERSE", "FLASH"):
             self.jsr_rom(k)
         elif k == "END":
@@ -684,34 +861,24 @@ class Compiler:
         elif k == "GOSUB":
             self.emit(JSR, Ref("line", st.args[0]))
         elif k in ARG1:
-            real_e, int_e = ARG1[k]
             t = self.arg(st.args[0])  # type: ignore[arg-type]
-            if t == "int":
-                if int_e is None:
-                    raise CompileError(f"GUESS: int entry for {k}")
-                self.emit(JSR, Ref("rt", int_e), k)
-            else:
-                self.emit(JSR, Ref("rt", real_e), k)
+            self.emit(JSR, Ref("rt", int_entry(ARG1[k]) if t == "int" else ARG1[k]), k)
         elif k == "PLOT":
             a, b = st.args
-            self.jsr_rt("SAVE.X/I" if self.arg(a) == "int" else "SAVE.X")  # type: ignore[arg-type]
-            self.jsr_rt("PLOT/I" if self.arg(b) == "int" else "PLOT")  # type: ignore[arg-type]
+            self.jsr_rt_t("SAVE.X", self.arg(a))  # type: ignore[arg-type]
+            self.jsr_rt_t("PLOT", self.arg(b))  # type: ignore[arg-type]
         elif k == "POKE":
             a, b = st.args
-            self.jsr_rt("SAVE.ADDR/I" if self.arg(a) == "int" else "SAVE.ADDR")  # type: ignore[arg-type]
-            self.jsr_rt("POKE/I" if self.arg(b) == "int" else "POKE")  # type: ignore[arg-type]
+            self.jsr_rt_t("SAVE.ADDR", self.arg(a))  # type: ignore[arg-type]
+            self.jsr_rt_t("POKE", self.arg(b))  # type: ignore[arg-type]
         elif k in ("HLIN", "VLIN"):
             a, b, c = st.args
             for e, nm in ((a, "SAVE.X"), (b, "SAVE.Y"), (c, k)):
-                if self.arg(e) == "int":  # type: ignore[arg-type]
-                    raise CompileError(f"GUESS: int entry for {k}")
-                self.jsr_rt(nm)
+                self.jsr_rt_t(nm, self.arg(e))  # type: ignore[arg-type]
         elif k == "WAIT":
             a = st.args
             for e, nm in zip(a, ["SAVE.ADDR", "WAIT2" if len(a) == 2 else "SAVE.ARG3", "WAIT3"]):
-                if self.arg(e) == "int":  # type: ignore[arg-type]
-                    raise CompileError("GUESS: int entry for WAIT")
-                self.jsr_rt(nm)
+                self.jsr_rt_t(nm, self.arg(e))  # type: ignore[arg-type]
         elif k == "HPLOT":
             to_next = False
             for p in st.args:
@@ -720,23 +887,18 @@ class Compiler:
                     continue
                 x, y = p  # type: ignore[misc]
                 for e, nm in ((x, "SAVE.HX"), (y, "HPLOT.TO" if to_next else "HPLOT")):
-                    if self.arg(e) == "int":
-                        raise CompileError("GUESS: int entry for HPLOT")
-                    self.jsr_rt(nm)
+                    self.jsr_rt_t(nm, self.arg(e))
                 to_next = False
         elif k in ("DRAW", "XDRAW"):
             sh, at = st.args
-            if self.arg(sh) == "int":  # type: ignore[arg-type]
-                raise CompileError(f"GUESS: int entry for {k}")
+            t = self.arg(sh)  # type: ignore[arg-type]
             if at is None:
-                self.emit(JSR, Ref("rt", 0x0E34 if k == "DRAW" else 0x0E3B), k)
+                self.jsr_rt_t(k, t)
             else:
-                self.jsr_rt("SAVE.SHAPE")
+                self.jsr_rt_t("SAVE.SHAPE", t)
                 x, y = at  # type: ignore[misc]
                 for e, nm in ((x, "SAVE.HX"), (y, "DRAW.AT" if k == "DRAW" else "XDRAW.AT")):
-                    if self.arg(e) == "int":
-                        raise CompileError(f"GUESS: int entry for {k}")
-                    self.jsr_rt(nm)
+                    self.jsr_rt_t(nm, self.arg(e))
         elif k == "IF":
             self.if_(st.args[0])  # type: ignore[arg-type]
         elif k == "IFGOTO":
@@ -746,9 +908,7 @@ class Compiler:
             self.emit(JMP, Ref("line", n))
         elif k in ("ONGOTO", "ONGOSUB"):
             e, targets = st.args
-            if self.arg(e) == "int":  # type: ignore[arg-type]
-                raise CompileError("GUESS: ON with int expression")
-            self.jsr_rt(k[:2] + k[2:])
+            self.jsr_rt_t(k, self.arg(e))  # type: ignore[arg-type]
             self.raw(bytes([len(targets)]))  # type: ignore[arg-type]
             for n in targets:  # type: ignore[union-attr]
                 self.word(Ref("line", n))
@@ -782,11 +942,7 @@ class Compiler:
         elif k == "READ":
             for v in st.args[0]:  # type: ignore[union-attr]
                 assert isinstance(v, VarRef)
-                if v.subs is not None:
-                    raise CompileError("READ into array element")
-                s = self.var(v.name, v.suffix)
-                self.jsr_rt("READ.STR" if s.vtype == "str" else "READ.NUM")
-                self.entry(s, 7 if s.vtype == "int" else 1)
+                self.read_into(v, "READ.STR" if v.suffix == "$" else "READ.NUM")
         elif k == "DATA":
             self.data(st.args[0])  # type: ignore[arg-type]
         elif k == "DEF":
@@ -795,7 +951,24 @@ class Compiler:
             raise CompileError(f"statement {k} not supported yet")
 
     def cond(self, e: Expr) -> None:
-        self.gen(e, "any")
+        self.need_flags(self.gen(e, self.want_any(e)))  # observed: IF 287 uses int 287
+
+    FLAG_RT = {"EQ", "LT", "GT", "LE", "GE", "NE", "AND", "OR", "AND/I", "OR/I", "STREQ", "STRLT", "STRNE", "STRGT",
+               "STRLE", "STRGE"}
+
+    def need_flags(self, t: str = "real") -> None:
+        """Observed: a value just loaded from a variable, or a comparison/logic result,
+        has the flags set; any other computed real gets LDA $9D (FAC exponent)."""
+        last = self.items[-1] if self.items else None
+        if last is not None and last.op == JSR and last.ref is not None:
+            if last.ref.kind == "entry":
+                sym = last.ref.a
+                assert isinstance(sym, Sym)
+                if last.ref.b in ((0, 1, 6, 7) if sym.vtype == "int" else (0, 1)):
+                    return
+            if last.ref.kind == "rt" and last.note in self.FLAG_RT:
+                return
+        self.raw(b"\xA5\xA0\x05\xA1" if t == "int" else b"\xA5\x9D")  # IACC $A0-$A1 / FAC exponent
 
     def if_(self, cond: Expr) -> None:
         self.cond(cond)
@@ -805,21 +978,17 @@ class Compiler:
 
     def for_(self, v: VarRef, a: Expr, b: Expr, step: Expr | None) -> None:
         s = self.var(v.name, v.suffix)
-        if s.vtype == "int":
-            for e in (a, b) + ((step,) if step else ()):
-                if self.arg(e) != "int" if e is a else False:
-                    raise CompileError("GUESS: real expression in integer FOR")
-            self.jsr_rt("IFOR.INIT")
+        if s.vtype == "int":  # observed: real-valued expressions use the entry 3 below
+            def ient(name: str, e: Expr) -> None:
+                t = self.arg(e)
+                self.emit(JSR, Ref("rt", RT[name] - (3 if t != "int" else 0)), name)
+            ient("IFOR.INIT", a)
             self.word(Ref("store", s, 0))
-            if self.arg(b) != "int":
-                raise CompileError("GUESS: real limit in integer FOR")
-            self.jsr_rt("IFOR.LIMIT")
+            ient("IFOR.LIMIT", b)
             if step is None:
                 self.jsr_rt("IFOR.STEP1")
             else:
-                if self.arg(step) != "int":
-                    raise CompileError("GUESS: real step in integer FOR")
-                self.jsr_rt("IFOR.STEP")
+                ient("IFOR.STEP", step)
             return
         t = self.arg(a)
         self.jsr_rt("FOR.INIT/I" if t == "int" else "FOR.INIT")
@@ -840,12 +1009,10 @@ class Compiler:
                 self.jsr_rt("COMMA")
             elif isinstance(it, tuple):
                 kind, e = it
-                if self.arg(e) == "int":
-                    raise CompileError(f"GUESS: int {kind}")
-                self.jsr_rt(kind)
+                self.jsr_rt_t(kind, self.arg(e))
             else:
                 assert isinstance(it, Expr)
-                t = self.gen(it, "any")
+                t = self.gen(it, self.want_any(it))
                 self.jsr_rt({"str": "PRINTSTR", "int": "PRINTINT", "real": "PRINTNUM"}[t])
         if not (last in (";", ",") or isinstance(last, tuple)):
             self.jsr_rom("CRDO")
@@ -855,18 +1022,26 @@ class Compiler:
         if prompt is not None:
             self.strlit(prompt.text, "STRLIT.PROMPT")
         for i, v in enumerate(vs):
-            if v.subs is not None:
-                raise CompileError("INPUT into array element")
-            s = self.var(v.name, v.suffix)
-            if s.vtype == "str":
-                if i or prompt is not None:
-                    raise CompileError("GUESS: INPUT string after first/prompt")
-                self.jsr_rt("INPUT.STR")
-                self.entry(s, 1)
-            else:
-                self.jsr_rt("INPUT.NUM.NEXT" if i else ("INPUT.NUM.PROMPT" if prompt is not None else "INPUT.NUM"))
-                self.entry(s, 7 if s.vtype == "int" else 1)
+            st = "STR" if v.suffix == "$" else "NUM"
+            entry = f"INPUT.{st}.NEXT" if i else (f"INPUT.{st}.PROMPT" if prompt is not None else f"INPUT.{st}")
+            self.read_into(v, entry)
         self.jsr_rt("INPUT.END")
+
+    def read_into(self, v: VarRef, entry: str) -> None:
+        """INPUT/READ target: scalar = entry, store; element = address, entry, ARR.STORE."""
+        if v.subs is not None:
+            s = self.var(v.name, v.suffix, True, len(v.subs))
+            self.subscripts(v.subs)
+            s.ops.add(1)
+            self.emit(JSR, Ref("entry", s, 1), f"{s!r}.op1")
+            self.jsr_rt(entry)
+            if s.vtype == "int":
+                raise CompileError("GUESS: INPUT/READ into int array element")
+            self.jsr_rt("ARR.STORE")
+            return
+        s = self.var(v.name, v.suffix)
+        self.jsr_rt(entry)
+        self.entry(s, 7 if s.vtype == "int" else 1)
 
     def data(self, raw: bytes) -> None:
         after = self.new_label()
@@ -908,8 +1083,10 @@ class Compiler:
         self.params.append(p)
         saved = self.scope_param
         self.scope_param = {param[0]: p}
+        self.in_fn = True
         self.entry(p, 1)
         self.gen(body, "real")
+        self.in_fn = False
         self.scope_param = saved
         self.raw(b"\x60")
         self.label(after)
@@ -930,6 +1107,7 @@ class Compiler:
                     self.int_arrays[nm] = dims
                 else:
                     self.int_names.add(nm)
+                self.var(nm, suf, bool(dims), len(dims) or 1)  # observed: entered at the declaration
         elif up.startswith("DEFCOMMON") or up.startswith("USECOMMON"):
             if up.startswith("USECOMMON"):
                 self.common_flag = 0xFF
@@ -948,26 +1126,49 @@ class Compiler:
         return e
 
     # -- program -------------------------------------------------------
-    def compile_lines(self, prog: list[tuple[int, list[Stmt]]]) -> None:
+    def compile_lines(self, prog: list[tuple[int, bytes]]) -> None:
         nums = [n for n, _ in prog]
         for i, n in enumerate(nums):
             self.next_line[n] = nums[i + 1] if i + 1 < len(nums) else -1
-        for n, stmts in prog:
+        for n, body in prog:
             self.cur_line = n
             self.in_if = False
             self.items.append(Item(None, line=n))
-            i = 0
-            while i < len(stmts):
-                st = stmts[i]
-                if st.kind == "IF" and i + 2 == len(stmts) and stmts[i + 1].kind == "RETURN":
-                    # observed (BALL line 370): IF c THEN RETURN -> c, BEQ *+3, RTS
-                    if self.o.resume and not self.in_if:
-                        self.jsr_rt("DEBUG")
-                    self.cond(st.args[0])  # type: ignore[arg-type]
-                    self.raw(b"\xF0\x01\x60")
-                    break
-                self.stmt(st, n)
-                i += 1
+            dead = False
+            pending_ret: Stmt | None = None
+            try:
+                for kw, is_data, parse in iter_statements(body):
+                    if dead and kw and not is_data:
+                        # observed: after GOTO / THEN line / RETURN / END / STOP / NEW, statements
+                        # that begin with a keyword are skipped unparsed (no code, no symbols);
+                        # implicit assignments and DATA are still compiled
+                        parse(True)
+                        continue
+                    st = parse(False)
+                    assert st is not None
+                    if pending_ret is not None:
+                        if st.kind == "RETURN":
+                            # observed: IF c THEN RETURN -> c, BEQ *+3, RTS (then dead code)
+                            if self.o.resume and not self.in_if:
+                                self.jsr_rt("DEBUG")
+                            self.in_if = False
+                            self.cond(pending_ret.args[0])  # type: ignore[arg-type]
+                            self.raw(b"\xF0\x01\x60")
+                            pending_ret = None
+                            dead = True
+                            continue
+                        self.stmt(pending_ret, n)
+                        pending_ret = None
+                    if st.kind == "IF":
+                        pending_ret = st  # decide once the next statement is known
+                        continue
+                    self.stmt(st, n)
+                    if st.kind in ("GOTO", "IFGOTO", "RETURN", "END", "STOP", "NEW"):
+                        dead = True
+                if pending_ret is not None:
+                    self.stmt(pending_ret, n)
+            except ParseError as exc:
+                raise CompileError(f"line {n}: {exc}") from exc
         self.items.append(Item(None, line=-1))
         self.emit(JMP, Ref("rt", RT["END"]))
 
@@ -996,11 +1197,5 @@ def _gen_with_fn(self: Compiler, e: Expr, want: str) -> str:
 Compiler._gen = _gen_with_fn  # type: ignore[method-assign]
 
 
-def parse_program(data: bytes) -> list[tuple[int, list[Stmt]]]:
-    out = []
-    for ln in read_program(data):
-        try:
-            out.append((ln.number, parse_line(ln.body)))
-        except ParseError as exc:
-            raise CompileError(f"line {ln.number}: {exc}") from exc
-    return out
+def parse_program(data: bytes) -> list[tuple[int, bytes]]:
+    return [(ln.number, ln.body) for ln in read_program(data)]

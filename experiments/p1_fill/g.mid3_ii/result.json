@@ -1,0 +1,34 @@
+{
+ "id": "g.mid3_ii",
+ "key": "ab9461a7f335f52f",
+ "source": "10 X$=MID$(A$,B%,C%)",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 79,
+ "obj_sha256": "3dbc8fc223e2ba60800d2a3a10b3f989665989926230ab8df7064f7810e64676",
+ "cycles": 54429665,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S007.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6142",
+  "LOCAL VARIABLES": "6143 - 6150",
+  "HIGHEST MEMORY LOCATION": "6150"
+ }
+}

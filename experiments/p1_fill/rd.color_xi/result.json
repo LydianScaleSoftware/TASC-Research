@@ -1,0 +1,34 @@
+{
+ "id": "rd.color_xi",
+ "key": "3c2be54e1a3bb9da",
+ "source": "10 COLOR=X%",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 41,
+ "obj_sha256": "f9d2b4c18fc8f9ea263791796d6bfc82f16c54ccbfb5b50e0b16b1cc74fcfa27",
+ "cycles": 53343435,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S006.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6104",
+  "LOCAL VARIABLES": "6105 - 6106",
+  "HIGHEST MEMORY LOCATION": "6106"
+ }
+}

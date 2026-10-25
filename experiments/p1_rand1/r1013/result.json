@@ -1,0 +1,90 @@
+{
+ "id": "r1013",
+ "key": "9c9838c2b53954a6",
+ "source": "10 DIM A$(6)\n20 FOR A=C TO XY STEP X%\n30 IF A% THEN A%=((XY>C))*((((AB<Y))-((AB<Y%)))):NEXT A\n40 READ X%:PRINT -((EXP(D%(2.25))/((464*XY)))),B$;:HLIN Y,NOT Y%>=((X%>=749<=((Y% OR D%(X%))))) AT AB%\n50 X%=C-SIN(A%)^C:A$((((X%)+10))*(A))=\"\"+STR$(-AB):HTAB (P%(A%,AB%>AB))\n60 XY=COS(TAN(A*X%)):X%=7\n70 A%=XY:GOTO 30\n80 ON ((5))+XY GOTO 90,140,150,140\n90 FOR AB=A% TO (VAL(A$(X%)))*((A%<VAL(\"TASC\")))\n100 Y%=518:PRINT D%(Y*C*AB);\n110 B$=LEFT$(Z$,SGN(X%))+\"HI\":IF P%(A%,X%)<>EXP(A%) THEN 80:READ A\n120 GOSUB 40:NEXT AB:COLOR=AB%\n130 B$=MID$(Z$,Y<>2 AND X%=AB%):PRINT CHR$(EXP(AB%))+MID$(N2$,7,1.5)+LEFT$(\"TASC\",49152),1<=((A AND X%))-481;\n140 PRINT:RETURN:GOTO 110\n150 D%(-Y%)=-((NOT AB)):C=-(5)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": false,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1087,
+ "obj_sha256": "ec752ea39eee1fecf98bf14397cb3ab0e8ed7ec84f852defb6d5438249609de3",
+ "cycles": 115004009,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6104
+  },
+  {
+   "line": 40,
+   "addr": 6159
+  },
+  {
+   "line": 50,
+   "addr": 6270
+  },
+  {
+   "line": 60,
+   "addr": 6351
+  },
+  {
+   "line": 70,
+   "addr": 6372
+  },
+  {
+   "line": 80,
+   "addr": 6381
+  },
+  {
+   "line": 90,
+   "addr": 6399
+  },
+  {
+   "line": 100,
+   "addr": 6450
+  },
+  {
+   "line": 110,
+   "addr": 6474
+  },
+  {
+   "line": 120,
+   "addr": 6535
+  },
+  {
+   "line": 130,
+   "addr": 6549
+  },
+  {
+   "line": 140,
+   "addr": 6679
+  },
+  {
+   "line": 150,
+   "addr": 6683
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S003.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7150",
+  "LOCAL VARIABLES": "7151 - 7481",
+  "HIGHEST MEMORY LOCATION": "7481"
+ }
+}

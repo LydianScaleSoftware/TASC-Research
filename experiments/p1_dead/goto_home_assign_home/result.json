@@ -1,0 +1,38 @@
+{
+ "id": "goto_home_assign_home",
+ "key": "79ac229987d2d256",
+ "source": "10 GOTO 20:HOME:X=1:HOME\n20 END",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 58,
+ "obj_sha256": "72c398bd5fa31b66d92e7bb2736b2b3d49219e1662051d4f2c3c636cc2bda453",
+ "cycles": 55376822,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6093
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6121",
+  "LOCAL VARIABLES": "6122 - 6126",
+  "HIGHEST MEMORY LOCATION": "6126"
+ }
+}

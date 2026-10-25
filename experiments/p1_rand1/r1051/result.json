@@ -1,0 +1,102 @@
+{
+ "id": "r1051",
+ "key": "06c0a79fa4f8accd",
+ "source": "10 REM! INTEGER I,J\n20 DIM P%(9,3),D%(3,9)\n30 XY=NOT (127)\n40 HLIN A%<N2,-J AT XY*XY%:GOSUB 120:P%(W%,ASC(STR$(A))^((B*B%/(3))))=I<.001\n50 P%(127 OR TAN(J>=I),LEN(\"X Y\") AND N2)=XY%/NOT ((-3)):INPUT N2\n60 IF 782 THEN 130\n70 Y=B\n80 VTAB SGN(COS(D%(B%,A%)/W%))\n90 B=XY:C$=LEFT$(X$,ATN(N2)+A*N2)\n100 POKE ASC(XY$)^XY,((0=VAL(\"HI\")))+((255 OR 382))^PEEK(A):I=0/PEEK(J)\n110 INVERSE:ON 193+A GOTO 110\n120 PRINT (A%);W%*((Y<>N2))^((XY%+A%));STR$(RND(D%(J,24))*B),\n130 XY$=\"123\"\n140 READ W%,W%:GOSUB 130\n150 INPUT N2:PRINT\n160 IF N2 THEN GOTO 60\n170 PRINT MID$(XY$,A%(2.25)<=XY% AND B);LEFT$(C$,I>=A%*XY%),:XY$=XY$:FOR XY=XY TO -((NOT EXP(A)))\n180 NEXT XY\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1003,
+ "obj_sha256": "708ea9de3f96dd204f2cd8a70d002f8e19c92a2ee378aea95565b41c240bfa02",
+ "cycles": 102338711,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6093
+  },
+  {
+   "line": 50,
+   "addr": 6183
+  },
+  {
+   "line": 60,
+   "addr": 6272
+  },
+  {
+   "line": 70,
+   "addr": 6280
+  },
+  {
+   "line": 80,
+   "addr": 6286
+  },
+  {
+   "line": 90,
+   "addr": 6319
+  },
+  {
+   "line": 100,
+   "addr": 6352
+  },
+  {
+   "line": 110,
+   "addr": 6447
+  },
+  {
+   "line": 120,
+   "addr": 6462
+  },
+  {
+   "line": 130,
+   "addr": 6528
+  },
+  {
+   "line": 140,
+   "addr": 6543
+  },
+  {
+   "line": 150,
+   "addr": 6558
+  },
+  {
+   "line": 160,
+   "addr": 6573
+  },
+  {
+   "line": 170,
+   "addr": 6581
+  },
+  {
+   "line": 180,
+   "addr": 6669
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7066",
+  "LOCAL VARIABLES": "7067 - 7303",
+  "HIGHEST MEMORY LOCATION": "7303"
+ }
+}

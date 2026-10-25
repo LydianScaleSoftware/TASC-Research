@@ -1,0 +1,33 @@
+{
+ "id": "rd.text",
+ "key": "638f7d381f3af6fe",
+ "source": "10 TEXT",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 26,
+ "obj_sha256": "4176998335334c5c84a203dc040302e11d8fd6a57017e61afa3bea13bad38399",
+ "cycles": 55867424,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S012.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6089",
+  "HIGHEST MEMORY LOCATION": "6089"
+ }
+}

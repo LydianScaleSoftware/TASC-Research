@@ -1,0 +1,70 @@
+{
+ "id": "r1016",
+ "key": "fa129f105073bbbe",
+ "source": "10 REM! INTEGER K,I\n20 DIM B(6),D%(6),P%(6)\n30 PRINT XY$+\"TASC\"+MID$(Q1$,N2%>=XY%,25996>=0);:POP:IF A% THEN IF NOT ((((A%-K))*((P%(Z%) OR 446)))) THEN HCOLOR=-Q1\n40 M$=XY$:END\n50 HCOLOR=Z:Q1$=M$\n60 IF Z THEN COLOR=ABS(1)\n70 IF -Z%+40000*((1000/K)) THEN IF LEN(\"X Y\"+Q1$)-C THEN Z%=2+Z%:VTAB VAL(XY$):DATA -2.5\n80 HOME\n90 PRINT N2%;\"HI\";\n100 GOTO 60\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 584,
+ "obj_sha256": "d0466593d4b711016222d8d192bbfc827bf6c175e74e34b17affd6c1e3704b7e",
+ "cycles": 81236018,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6084
+  },
+  {
+   "line": 40,
+   "addr": 6214
+  },
+  {
+   "line": 50,
+   "addr": 6223
+  },
+  {
+   "line": 60,
+   "addr": 6235
+  },
+  {
+   "line": 70,
+   "addr": 6252
+  },
+  {
+   "line": 80,
+   "addr": 6352
+  },
+  {
+   "line": 90,
+   "addr": 6355
+  },
+  {
+   "line": 100,
+   "addr": 6375
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6647",
+  "LOCAL VARIABLES": "6648 - 6755",
+  "HIGHEST MEMORY LOCATION": "6755"
+ }
+}

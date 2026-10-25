@@ -1,0 +1,119 @@
+{
+ "id": "r1002",
+ "key": "64b6182c57ecdb2d",
+ "source": "10 DEF FN F(Z)=((LOG(34372) AND -C))+Q1\n20 C%=-B%:Q1$=\"\":X=10\n30 FOR Q1=M^((Y%*M>=22019)) TO NOT ((3<>C))>FN F(C)*((M AND AB))\n40 PRINT RIGHT$(AB$,SQR(C%)+SQR(M)),W$\n50 FOR AB=20 TO C\n60 X=Y%>((B%^M>Y%)):IF NOT ((((2 OR X))+B%)) THEN C=AB<>((FN F(C%) AND XY%<7))\n70 Y%=XY%-((-Q1<>Y%))\n80 FOR M=FN F(INT(11237-M)) TO EXP(C%) STEP 1\n90 Q1$=Q1$:ON 2 GOTO 60:B%=-M\n100 IF 906 THEN PRINT ASC(\"X Y\");:DATA HI:AB$=LEFT$(LEFT$(RIGHT$(\"123\",AB),B% OR AB),39>=40000-1000)\n110 AB=XY%+AB:X=43885:B%=Q1\n120 INPUT Q1:GOTO 190\n130 IF C% THEN M=39148:END:PRINT Y%,Y%/B%=-((AB>=XY%))\n140 XY%=TAN(-((10725+1))):COLOR=-((AB<=XY%))\n150 FOR Q1=Q1 TO ABS(SGN(AB)):Y%=601\n160 POKE C,-C:GOSUB 140:IF ((-C%*((Y%*Y%))))^LOG(Y%) THEN 130\n170 INPUT XY%:CALL COS(B%):RESTORE\n180 READ B%:Q1=B%:C%=32767-X>=RND(Y%=B%)\n190 Y%=ASC(LEFT$(\"X Y\",9))-((FN F(XY%)-PEEK(34535)))\n200 HCOLOR=VAL(MID$(\"A\",5,39))=((40000>=C))\n210 PRINT PEEK(B%)<=((X<=XY%))<47778;20;:GOTO 140:PRINT CHR$(-((100+1)));C\n220 X=Y% AND C:INPUT C\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 1414,
+ "obj_sha256": "eafa2f457b8981d6b4458b6962b70a19ec9eee66c7e04f4c73564b2770104375",
+ "cycles": 134630368,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6115
+  },
+  {
+   "line": 30,
+   "addr": 6142
+  },
+  {
+   "line": 40,
+   "addr": 6213
+  },
+  {
+   "line": 50,
+   "addr": 6252
+  },
+  {
+   "line": 60,
+   "addr": 6269
+  },
+  {
+   "line": 70,
+   "addr": 6348
+  },
+  {
+   "line": 80,
+   "addr": 6366
+  },
+  {
+   "line": 90,
+   "addr": 6398
+  },
+  {
+   "line": 100,
+   "addr": 6422
+  },
+  {
+   "line": 110,
+   "addr": 6508
+  },
+  {
+   "line": 120,
+   "addr": 6529
+  },
+  {
+   "line": 130,
+   "addr": 6544
+  },
+  {
+   "line": 140,
+   "addr": 6561
+  },
+  {
+   "line": 150,
+   "addr": 6594
+  },
+  {
+   "line": 160,
+   "addr": 6623
+  },
+  {
+   "line": 170,
+   "addr": 6681
+  },
+  {
+   "line": 180,
+   "addr": 6705
+  },
+  {
+   "line": 190,
+   "addr": 6747
+  },
+  {
+   "line": 200,
+   "addr": 6798
+  },
+  {
+   "line": 210,
+   "addr": 6844
+  },
+  {
+   "line": 220,
+   "addr": 6886
+  }
+ ],
+ "info": {
+  "ATA HI": "AB$ =  LEFT$ ( LEFT$ ( RIGHT$ (\"1",
+  "OBJECT FILE": "S002.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7477",
+  "LOCAL VARIABLES": "7478 - 7538",
+  "HIGHEST MEMORY LOCATION": "7538"
+ }
+}

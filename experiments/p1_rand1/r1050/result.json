@@ -1,0 +1,106 @@
+{
+ "id": "r1050",
+ "key": "611fe52d5023e981",
+ "source": "10 DIM A$(7)\n20 INPUT XY:AB%=(M)\n30 GOTO 120:W=255\n40 GOSUB 120:ON PEEK(AB%)=INT(AB*24) GOTO 160,70:READ W%,XY\n50 TEXT\n60 GOTO 30:AB$=Q1$:PRINT RIGHT$(AB$,0.1)+CHR$(Z)+LEFT$(W$,C%)+CHR$(XY);\n70 HTAB -((XY=Z)) OR W+W%:INPUT A%:FOR AB=EXP(XY) AND (32767) TO 24/AB%\n80 GOSUB 10:PRINT\n90 AB$=LEFT$(RIGHT$(W$,LEN(\"123\")),AB%)\n100 AB%=49152\n110 A%=AB%\n120 FOR Z=255 TO M STEP (3)-A%:FOR AB=ABS(-W%)-AB TO C%<=W:Q1$=\"\"\n130 AB$=AB$:W=W%:INVERSE\n140 FOR W=EXP(W*W<W) TO Z=TAN(W%)^W:AB%=W\n150 GOTO 130\n160 NEXT W:HLIN C%,AB%*LOG(XY+A%) AT 3.14159>INT(-2):POKE (XY),NOT ((2<>9776))-((AB))\n170 PRINT:VTAB XY\n180 AB%=C%:GOSUB 60\n190 W=.001:C%=(((65535)>-A%))^AB\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 830,
+ "obj_sha256": "1a915444495887f2d5a47eed98cfdf1ed85be002ed8e02188c9886d5d56163a3",
+ "cycles": 102384506,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6102
+  },
+  {
+   "line": 40,
+   "addr": 6111
+  },
+  {
+   "line": 50,
+   "addr": 6158
+  },
+  {
+   "line": 60,
+   "addr": 6161
+  },
+  {
+   "line": 70,
+   "addr": 6170
+  },
+  {
+   "line": 80,
+   "addr": 6244
+  },
+  {
+   "line": 90,
+   "addr": 6250
+  },
+  {
+   "line": 100,
+   "addr": 6280
+  },
+  {
+   "line": 110,
+   "addr": 6286
+  },
+  {
+   "line": 120,
+   "addr": 6292
+  },
+  {
+   "line": 130,
+   "addr": 6368
+  },
+  {
+   "line": 140,
+   "addr": 6383
+  },
+  {
+   "line": 150,
+   "addr": 6436
+  },
+  {
+   "line": 160,
+   "addr": 6439
+  },
+  {
+   "line": 170,
+   "addr": 6516
+  },
+  {
+   "line": 180,
+   "addr": 6525
+  },
+  {
+   "line": 190,
+   "addr": 6534
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6893",
+  "LOCAL VARIABLES": "6894 - 6955",
+  "HIGHEST MEMORY LOCATION": "6955"
+ }
+}

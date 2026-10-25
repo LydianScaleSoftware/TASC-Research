@@ -1,0 +1,37 @@
+{
+ "id": "gosub_print",
+ "key": "0243d4a89d8c4363",
+ "source": "10 GOSUB 20:PRINT\n20 RETURN",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 30,
+ "obj_sha256": "c905374692c61ff9bed94bbb84b905899d00580cad22f804203c599d491a5850",
+ "cycles": 55399491,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6090
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6093",
+  "HIGHEST MEMORY LOCATION": "6093"
+ }
+}

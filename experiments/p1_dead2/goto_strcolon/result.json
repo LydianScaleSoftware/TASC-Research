@@ -1,0 +1,38 @@
+{
+ "id": "goto_strcolon",
+ "key": "ce748cd79b81e644",
+ "source": "10 GOTO 20:PRINT \"A:X=1\":Y=2\n20 END",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 58,
+ "obj_sha256": "6725c432c89ee39aa014009c0391f52f2a6c23133ae4bff1a5baec812ba803ea",
+ "cycles": 55251295,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6093
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6121",
+  "LOCAL VARIABLES": "6122 - 6126",
+  "HIGHEST MEMORY LOCATION": "6126"
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "id": "resume_print",
+ "key": "72a5495eee361b66",
+ "source": "10 RESUME:PRINT:Y=1",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 55,
+ "obj_sha256": "7a3e710e2ebd808e5f082c53cf1bdf19129474c99d3a60d187b0c77efd54a34e",
+ "cycles": 55980245,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6118",
+  "LOCAL VARIABLES": "6119 - 6123",
+  "HIGHEST MEMORY LOCATION": "6123"
+ }
+}

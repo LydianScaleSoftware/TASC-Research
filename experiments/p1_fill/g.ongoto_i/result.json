@@ -1,0 +1,34 @@
+{
+ "id": "g.ongoto_i",
+ "key": "a49f67541e99c6c4",
+ "source": "10 ON X% GOTO 10",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 41,
+ "obj_sha256": "0fd1b2c8c8f86a2a079390e039f707900a31fe382136015738aeb5342da50cec",
+ "cycles": 55075538,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S003.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6104",
+  "LOCAL VARIABLES": "6105 - 6106",
+  "HIGHEST MEMORY LOCATION": "6106"
+ }
+}

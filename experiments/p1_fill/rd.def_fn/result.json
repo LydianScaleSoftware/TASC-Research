@@ -1,0 +1,38 @@
+{
+ "id": "rd.def_fn",
+ "key": "81aa214eee4e14f4",
+ "source": "10 DEF FN F(Z)=Z*2\n20 X=FN F(3)",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 91,
+ "obj_sha256": "65017204cc806d39fb8631ea5be53e6b40a359bf572bd7374fc5bf92a90dee39",
+ "cycles": 58219604,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6094
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S004.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6154",
+  "LOCAL VARIABLES": "6155 - 6164",
+  "HIGHEST MEMORY LOCATION": "6164"
+ }
+}

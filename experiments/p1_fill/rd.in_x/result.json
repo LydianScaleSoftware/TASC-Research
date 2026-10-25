@@ -1,0 +1,34 @@
+{
+ "id": "rd.in_x",
+ "key": "0b5b1e7f2b0a3567",
+ "source": "10 IN#X",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 41,
+ "obj_sha256": "aa8efe2930fa00d8f8e198abe2f0cf68ecb3059c5390a7068baa241ea5b3416f",
+ "cycles": 54864426,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S003.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6104",
+  "LOCAL VARIABLES": "6105 - 6109",
+  "HIGHEST MEMORY LOCATION": "6109"
+ }
+}

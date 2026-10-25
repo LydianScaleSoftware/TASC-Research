@@ -1,0 +1,34 @@
+{
+ "id": "g.sub_3d",
+ "key": "b2b5e68d8141a715",
+ "source": "10 X=A(I%,J%,K%)",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 95,
+ "obj_sha256": "150a51b5c82e36f2d55a01f16ef0aa68eb4871de305748ab63f33f92edcc476b",
+ "cycles": 56979549,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S012.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6158",
+  "LOCAL VARIABLES": "6159 - 12824",
+  "HIGHEST MEMORY LOCATION": "12824"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "id": "r1036",
+ "key": "06d92f51e61c8c9b",
+ "source": "10 M$=STR$(24):Z%=1*3.14159-B^A%<((NOT Z%>679))\n20 M=XY%\n30 PRINT LEFT$(W$,3)W$;:Z%=A%\n40 C%=SGN((M)^((A% OR 0))):PRINT\n50 IF A%+LOG(858) THEN GOTO 140:M$=\"\"\n60 FOR B=616 TO M STEP RND(NOT ((AB+468))):B=NOT 7\n70 PLOT ABS(-N2),401:Z%=ABS(((M))):DATA HI,-2.5,1\n80 ON 635<Z%+Z%-NOT C% GOTO 150\n90 GOSUB 10:C%=-A:VTAB EXP(B)\n100 PRINT C%=Z%;N2>5=((AB<18537)) AND A%,M$;:A%=13355*M*((XY%/A%))/((A<>A<>LOG(XY%))):C%=NOT 48794\n110 PRINT LEFT$(LEFT$(MID$(\"123\",Z%,C%),C%^Z%),24)10;RIGHT$(W$,-INT(761)),:PRINT RIGHT$(\"TASC\",24528);CHR$(B)+W$+Z$+MID$(Z$,40)+MID$(W$,124):A%=M\n120 AB=24\n130 DATA -2.5,X:FOR N2=AB TO SIN(C%) STEP EXP(XY%+-B)\n140 C%=VAL(MID$(\"X Y\",N2,40))/(((C%)*((127-M))))\n150 DATA X,X:M$=M$:IF A THEN 50\n160 A=((5<>NOT A%))+-((3 AND A))\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n\n*****FATAL ERROR\nLINE NUMBER 150\nOPERAND\n\n: IF  !ERR!  AT HEN50\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

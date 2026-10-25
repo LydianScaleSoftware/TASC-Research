@@ -1,0 +1,34 @@
+{
+ "id": "g.sub_kk",
+ "key": "4da207cd5b88d7a1",
+ "source": "10 X=A(1,2)",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 82,
+ "obj_sha256": "4f0d673de275a2b4f86ca3256d8649b2154de00f5e1719bc33b60bb83a2ffe57",
+ "cycles": 57162551,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S011.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6145",
+  "LOCAL VARIABLES": "6146 - 6755",
+  "HIGHEST MEMORY LOCATION": "6755"
+ }
+}

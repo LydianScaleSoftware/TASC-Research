@@ -1,0 +1,38 @@
+{
+ "id": "rd.restore_read",
+ "key": "ddda08f2425310fe",
+ "source": "10 READ X:RESTORE\n20 DATA 1",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 52,
+ "obj_sha256": "fc3c54e7e43a76bcc0a53df16141762bd8beaa7c412a7f95eae98fcd0395ca15",
+ "cycles": 55507238,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6096
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S003.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6115",
+  "LOCAL VARIABLES": "6116 - 6120",
+  "HIGHEST MEMORY LOCATION": "6120"
+ }
+}

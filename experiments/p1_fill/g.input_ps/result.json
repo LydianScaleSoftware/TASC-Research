@@ -1,0 +1,34 @@
+{
+ "id": "g.input_ps",
+ "key": "460a2581bcf86f56",
+ "source": "10 INPUT \"Q\";A$",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 55,
+ "obj_sha256": "ccf1e404588a964db1d017758887b556431095dfcd7d81d3db482ef642f7f94e",
+ "cycles": 53404875,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S007.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6118",
+  "LOCAL VARIABLES": "6119 - 6120",
+  "HIGHEST MEMORY LOCATION": "6120"
+ }
+}

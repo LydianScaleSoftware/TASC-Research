@@ -1,0 +1,23 @@
+{
+ "id": "r1026",
+ "key": "892957380e2c2260",
+ "source": "10 DEF FN F(X)=XY\n20 COLOR=894:GOTO 110\n30 XY=Q1%:READ AB%,M%:Q1%=Y\n40 IF Q1% THEN FOR A=ABS(RND(3)=584) TO COS(M%=AB%>((M<A))) STEP 2:POP\n50 PRINT ((AB%*257<=M%))+((AB% AND M))*FN F(M%),:PRINT RIGHT$(Q1$,32767>=M%<=XY);Q1$;\n60 PRINT M%,CHR$(Q1%>100/118);:Z$=\"A\":FOR XY=7 TO ((M=M))-FN F(AB%)+-((AB+AB))\n70 NEXT XY\n80 IF M%<>127 THEN PRINT XY%RIGHT$(N2$+STR$(3),-5>18),\n90 ON PEEK(FN F(M%/811)) GOTO 140,80,160,300:Z$=STR$(((AB*AB%))^255)\n100 PRINT:AB=((M%*65535 OR M%))<SGN(23449):N2$=Z$+STR$(Q1%)\n110 SPEED=AB=((M%>=-5)):IF ASC(Q1$) THEN POKE NOT 221,RND(NOT ((65535>AB)))\n120 READ AB%:DATA 300,HI,\"A,B\"\n130 COLOR=INT(Q1% AND 10)\n140 INPUT A:Q1$=RIGHT$(MID$(LEFT$(N2$,Q1%),M%,AB),-ASC(Q1$))\n150 PRINT 20+XYM%,:CALL INT(AB%)\n160 FOR A=10 TO 32767*-XY%<AB STEP 376:IF COS(2.25) THEN 80:IF ASC(Q1$+Q1$)+ASC(\"A\") THEN 20\n170 XY%=M%\n180 IF 40*EXP(100)+949 THEN IF LOG(A-341<=3) THEN GOSUB 300:M=127\n190 Q1$=Z$:AB%=FN F(159)\n200 PRINT:DATA HI\n210 READ Q1%,AB%:AB%=((1000 OR 40))=M<=ABS(AB%)--2\n220 HTAB M:IF 127^((ASC(Q1$)<>NOT Q1%)) THEN POKE AB+ASC(\"A\")*((Y<XY%)),((Q1% AND Q1%))+2.25:READ M%,XY%\n230 READ A:PRINT\n240 INPUT M:PRINT CHR$(XY<=AB%);:PRINT N2$;\n250 NEXT A:IF A>127 THEN FOR Y=A TO FN F(-((AB>=272))) STEP ((3<65535^11458))^Y\n260 VTAB -((M%*M%)):IF AB THEN 120\n270 XY=M%\n280 Q1$=Q1$:READ Q1$\n290 PRINT\n300 HTAB -FN F(.001):VTAB Y\n310 Q1%=M:IF Y THEN AB=ASC(Z$)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": false,
+ "error": "CompileError: compile error:\n*****FATAL ERROR\nLINE NUMBER 160\nSYNTAX\n\n FOR A = 10 TO 32767 *  - XY% <  ABS  !E\nRR! TEP376\n\nTYPE CNTRL-C TO ABORT",
+ "obj_addr": 0,
+ "obj_len": 0,
+ "obj_sha256": "",
+ "cycles": 0,
+ "line_table": [],
+ "info": {}
+}

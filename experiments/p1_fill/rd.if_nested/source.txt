@@ -1,0 +1,1 @@
+10 IF X THEN IF Y THEN Z=1

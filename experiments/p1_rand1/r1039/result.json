@@ -1,0 +1,118 @@
+{
+ "id": "r1039",
+ "key": "2392beafebe81a59",
+ "source": "10 DEF FN F(T)=-X%\n20 AB%=C\n30 W=2.25*X%\n40 X%=B%:N2=-((AB%>24))\n50 FOR X=B TO -((NOT 40000))*X%\n60 GOSUB 100\n70 ON 82 GOTO 200\n80 READ W$,AB%\n90 IF AB%*AB% THEN 210\n100 PLOT NOT 32767,((720=10 OR C%))<-B:GOTO 130:FOR N2=((SQR(0)=LOG(C)))--B% TO 40344<X%\n110 PRINT:PLOT C,.5\n120 IF 0*((N2-AB%*B%)) THEN 40:POKE B%<=-((25576*24)),((X% AND B%))^C%<1000:HLIN X%,((W=100 OR W<=C%))+B% AT X%=X+((X% AND N2))\n130 W$=A$:FOR N2=B% TO 49152+((3*AB%=FN F(N2)))\n140 IF ATN(AB%) THEN PRINT A$,\n150 PRINT:ON 255 GOTO 200,110,70:PRINT\n160 N2=-((746 OR FN F(B))):W=X%:W$=C$\n170 DATA X,\"A,B\":CALL C<>ABS(B):C=SGN(B%) AND VAL(C$+W$)\n180 POP\n190 DATA X,,HI,HI:POP\n200 A$=\"\"+RIGHT$(A$,W<=AB%):INPUT AB%:PRINT \"123\";C\n210 GOSUB 160:PRINT\n220 ON ATN(COS(B))>=39 GOTO 130:FOR X=44695 TO AB% STEP N2\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 975,
+ "obj_sha256": "70bd2859969f110f3e912c0beeeabdc7d9bbf826abb63bd697bc68234f268ba0",
+ "cycles": 105167085,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6100
+  },
+  {
+   "line": 30,
+   "addr": 6109
+  },
+  {
+   "line": 40,
+   "addr": 6121
+  },
+  {
+   "line": 50,
+   "addr": 6148
+  },
+  {
+   "line": 60,
+   "addr": 6177
+  },
+  {
+   "line": 70,
+   "addr": 6180
+  },
+  {
+   "line": 80,
+   "addr": 6192
+  },
+  {
+   "line": 90,
+   "addr": 6207
+  },
+  {
+   "line": 100,
+   "addr": 6225
+  },
+  {
+   "line": 110,
+   "addr": 6276
+  },
+  {
+   "line": 120,
+   "addr": 6297
+  },
+  {
+   "line": 130,
+   "addr": 6322
+  },
+  {
+   "line": 140,
+   "addr": 6372
+  },
+  {
+   "line": 150,
+   "addr": 6397
+  },
+  {
+   "line": 160,
+   "addr": 6425
+  },
+  {
+   "line": 170,
+   "addr": 6467
+  },
+  {
+   "line": 180,
+   "addr": 6533
+  },
+  {
+   "line": 190,
+   "addr": 6539
+  },
+  {
+   "line": 200,
+   "addr": 6560
+  },
+  {
+   "line": 210,
+   "addr": 6635
+  },
+  {
+   "line": 220,
+   "addr": 6644
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S004.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7038",
+  "LOCAL VARIABLES": "7039 - 7089",
+  "HIGHEST MEMORY LOCATION": "7089"
+ }
+}

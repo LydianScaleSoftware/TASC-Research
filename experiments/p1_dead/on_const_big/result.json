@@ -1,0 +1,37 @@
+{
+ "id": "on_const_big",
+ "key": "7948da703c18d573",
+ "source": "10 ON 300 GOTO 20\n20 END",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 46,
+ "obj_sha256": "adf40b33204c83c6fb0bde1dde6974ad94e9017719937ec03bd7c923f4179f43",
+ "cycles": 55880479,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6093
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6109",
+  "HIGHEST MEMORY LOCATION": "6109"
+ }
+}

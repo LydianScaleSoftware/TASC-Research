@@ -1,0 +1,78 @@
+{
+ "id": "r1041",
+ "key": "bf5431f926e9242f",
+ "source": "10 DIM P%(10)\n20 INPUT W:DATA ,1\n30 FOR C=((P%(B%)-((20 OR W))))^-((C^AB%)) TO NOT SGN(3) OR AB:COLOR=NOT ((-20/(W%)))\n40 AB%=P%(1E3):Q1$=MID$(Q1$,ASC(N2$))\n50 PRINT ((P%(AB%) AND -C))>=XYSGN(3.14159),TAN(ASC(Q1$))/AB%;:FOR XY=A TO NOT ((-((AB%-293)))) STEP 40000=A\n60 B%=451:PRINT \"TASC\"NOT AB% OR P%(AB>=49152);CHR$(C=10),\n70 READ Q1$\n80 NEXT XY\n90 A=40:PRINT B%;CHR$(X%>=P%(W%)),AB%;\n100 HLIN W%,11130 AT PEEK(256)\n110 P%(39+((67 OR W))*LEN(N2$))=-P%(B%-B%)\n120 IF NOT ((P%(W%)<XY))*((B%/LOG(A))) THEN W=ABS(AB%) AND X%:PRINT Q1$;CHR$(29390),B%:POKE AB,NOT ((X%>A)) AND A\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": false,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 949,
+ "obj_sha256": "d59faab68aea84e7e736f89cbaab30ee839804efb23ff94d47aad9233ffb0235",
+ "cycles": 97835820,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6084
+  },
+  {
+   "line": 30,
+   "addr": 6105
+  },
+  {
+   "line": 40,
+   "addr": 6201
+  },
+  {
+   "line": 50,
+   "addr": 6225
+  },
+  {
+   "line": 60,
+   "addr": 6331
+  },
+  {
+   "line": 70,
+   "addr": 6404
+  },
+  {
+   "line": 80,
+   "addr": 6410
+  },
+  {
+   "line": 90,
+   "addr": 6415
+  },
+  {
+   "line": 100,
+   "addr": 6454
+  },
+  {
+   "line": 110,
+   "addr": 6475
+  },
+  {
+   "line": 120,
+   "addr": 6535
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 7012",
+  "LOCAL VARIABLES": "7013 - 7078",
+  "HIGHEST MEMORY LOCATION": "7078"
+ }
+}

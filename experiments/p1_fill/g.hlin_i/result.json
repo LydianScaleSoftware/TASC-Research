@@ -1,0 +1,34 @@
+{
+ "id": "g.hlin_i",
+ "key": "6bc166c7fb2aa49f",
+ "source": "10 HLIN X%,Y% AT Z%",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 68,
+ "obj_sha256": "999a83793fc0a45c073a277292e5f465d13ebaefd4d1e1d9d080f8c206e29642",
+ "cycles": 56224036,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S012.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6131",
+  "LOCAL VARIABLES": "6132 - 6137",
+  "HIGHEST MEMORY LOCATION": "6137"
+ }
+}
