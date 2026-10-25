@@ -60,6 +60,13 @@ boot takes about 10 s of wall time.
 
 ## Decisions
 
+- **Phase 5 integer declarations (Mark, 2026-10-25):** declare every integer
+  scalar and array with `REM! INTEGER` (option 1), grouping related variables in
+  the declaration lines where the hash-order constraints allow (option 3);
+  INTEGER lines come before the COMMON declaration. Evidence: integer FOR loops in
+  PASS1/PASS2 require INTEGER-declared names; reals in every pass rule out
+  `INTEGER *`; PASS1's integers in first-use order would need 38 hash buckets.
+
 - Repo `tasc-re/` under the project folder; git; originals read-only in
   `images/original/`; the working image is `images/work/tasc201.dsk` (copy of 2.01).
 - Reference version: **TASC 2.01** (only disk with BALL; boots straight into PASS0).
@@ -121,11 +128,9 @@ boot takes about 10 s of wall time.
 
 ## Open questions for Mark
 
-- Phase 5 defaults to confirm: every integer declared by `REM! INTEGER` in a
-  solver-chosen order (all PASS numerics are integers, so the original almost
-  certainly did this); line numbers in steps of 5, fixed once published; how far
-  names may stray from mnemonic when the hash forces it; the page-3 ML block stays
-  in PASS0's DATA statements as in the original.
+- Phase 5 defaults still to confirm: line numbers in steps of 5, fixed once
+  published; how far names may stray from mnemonic when the hash forces it; the
+  page-3 ML block stays in PASS0's DATA statements as in the original.
 
 ## Layout
 
