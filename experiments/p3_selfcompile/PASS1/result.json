@@ -4,7 +4,7 @@
  "obj_addr": 16882,
  "obj_len": 19703,
  "obj_sha256": "717688858123a4b3dcf43217cb1451c9e7c39908008335455d64dedc98fea02c",
- "cycles": 1735558364,
+ "cycles": 1738529999,
  "line_table": [
   {
    "line": 10,
@@ -60,6 +60,10 @@
   },
   {
    "line": 140,
+   "addr": 6084
+  },
+  {
+   "line": 150,
    "addr": 6084
   },
   {
@@ -5384,7 +5388,7 @@
   }
  ],
  "info": {
-  "NT": "PRINT : PRINT BG$;\"*****ERROR\": PRI",
+  "NT": "PRINT : PRINT BP$;\"*****ERROR\": PRI",
   "OBJECT FILE": "SRC1.OBJ",
   "LIBRARY": "2051 - 6063",
   "PROGRAM": "16882 - 36584",

@@ -15,7 +15,7 @@ Symbol entries (link-relative): +0 next, +1 reference chain head (-32767 = none)
 | $4358 | 155-210 | shell sort of the pairs | |
 | $449C | 215-295 | undefined line numbers | checked against CLINENUM; "UNDEFINED LINE NUMBER" |
 | $4594 | 300-365 | FN references | "UNDEFINED FUNCTION" |
-| $47C4 | 465-555 | **constant pool** | one walk over the constant chains (AW..AB-1) in bucket order; an entry whose reference chain is empty is unlinked and not emitted; real = 5 bytes, int = 2 bytes high byte first [confirmed by every recorded compile] |
+| $47C4 | 465-555 | **constant pool** | one walk over the constant chains (AW..AB-1) in bucket order; real constants are always written (5 bytes, before the empty-chain test); an integer constant whose reference chain is empty is unlinked and not emitted [confirmed p3_rand5]; real = 5 bytes, int = 2 bytes high byte first [confirmed by every recorded compile] |
 | $4906 | 560-665 | **COMMON allocation** | declaration list from BX(0); numeric pass then string pass; sizes 2 (int, string), 5 (real), arrays prod(dim+1)*size; AR(3..5) = COMBEG1, NUMCOMEND, STRCOMEND |
 | $4AC3 | 670-780 | routine area size | numeric 3*ops+6, string 10, array 9+2*dims |
 | $4C27 | 785-805 | local start | after the routines, or the VARIABLES address (DY); AR(0) = LOCBEG1 |

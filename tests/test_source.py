@@ -16,7 +16,7 @@ from tasc.compiler.parse import TOK, read_program
 from tasc.decomp.names import RESERVED
 
 SRC = Path(__file__).parents[1] / "src"
-DOCUMENTED = ["PASS0", "PASS1"]
+DOCUMENTED = ["PASS0", "PASS1", "PASS2"]
 KEYWORD_PARTS = ("AT", "TO", "ON", "OR", "FN", "IF")
 
 

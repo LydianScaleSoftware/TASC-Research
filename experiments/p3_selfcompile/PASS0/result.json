@@ -4,7 +4,7 @@
  "obj_addr": 16882,
  "obj_len": 7803,
  "obj_sha256": "e500a1ffb6e1bf79af73dd7114dacaabdc4f23db83dfb43c6ab6e6d8379f7241",
- "cycles": 464945427,
+ "cycles": 464686012,
  "line_table": [
   {
    "line": 10,
@@ -24,6 +24,10 @@
   },
   {
    "line": 50,
+   "addr": 6084
+  },
+  {
+   "line": 60,
    "addr": 6084
   },
   {

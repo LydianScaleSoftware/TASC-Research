@@ -64,5 +64,10 @@ def test_source_documentation_is_standalone() -> None:
     files = list(src.glob("*.DOC.TXT")) + list(src.glob("*.VARS.TXT"))
     assert files
     for f in files:
+        # a variable of the program may be called H1-H7; that is not a hypothesis reference
+        vars_file = src / (f.name.split(".")[0] + ".VARS.TXT")
+        names = {row.split()[0].split("(")[0].rstrip("%$") for row in vars_file.read_text().splitlines()[1:] if row.strip()}
         for n, line in enumerate(f.read_text().splitlines(), 1):
-            assert not banned.search(line), f"{f.name}:{n}: {line[:80]}"
+            for m in banned.finditer(line):
+                assert re.fullmatch(r"H[1-7]", m.group(0), re.IGNORECASE) and m.group(0) in names, \
+                    f"{f.name}:{n}: {line[:80]}"

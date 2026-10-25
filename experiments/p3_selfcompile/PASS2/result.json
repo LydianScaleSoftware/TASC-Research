@@ -4,7 +4,7 @@
  "obj_addr": 16882,
  "obj_len": 9221,
  "obj_sha256": "218d8a5bb87ef3a18f08b763344489eefb8d72c29a8471cb8afba600eec6fa7c",
- "cycles": 717476631,
+ "cycles": 719042235,
  "line_table": [
   {
    "line": 10,
@@ -40,6 +40,18 @@
   },
   {
    "line": 90,
+   "addr": 6084
+  },
+  {
+   "line": 100,
+   "addr": 6084
+  },
+  {
+   "line": 110,
+   "addr": 6084
+  },
+  {
+   "line": 120,
    "addr": 16902
   },
   {
@@ -2013,6 +2025,7 @@
  ],
  "info": {
   "NT": "PRINT : GOTO 5660",
+  "PRINT": "PRINT Y$: PRINT : GOTO 3960",
   "OBJECT FILE": "SRC2.OBJ",
   "LIBRARY": "2051 - 6063",
   "PROGRAM": "16882 - 26102",
