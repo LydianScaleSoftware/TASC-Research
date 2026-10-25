@@ -1,0 +1,18 @@
+{
+ "cycles_to_prompt": 62266154,
+ "screen_tail": [
+  "]",
+  "FILE NOT FOUND",
+  "BREAK IN 10",
+  "]RUN MAKE RUNTIME",
+  "]?"
+ ],
+ "made": true,
+ "identical": true,
+ "load": "$0803",
+ "len": 4013,
+ "orig_len": 4013,
+ "sha256": "3982a702f73a3b88d8d93318daaa9330b3775ba21cc74fd4cfd5dfcc57fd9a5b",
+ "orig_sha256": "3982a702f73a3b88d8d93318daaa9330b3775ba21cc74fd4cfd5dfcc57fd9a5b",
+ "first_diff": null
+}

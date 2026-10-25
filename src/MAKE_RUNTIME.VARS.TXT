@@ -1,0 +1,2 @@
+AD  REAL  address being filled, $0803-$17AF (line 20)
+BY  REAL  byte value read from DATA (line 20)

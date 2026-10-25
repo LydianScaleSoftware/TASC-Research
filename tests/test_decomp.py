@@ -37,3 +37,16 @@ def test_corpus_round_trip() -> None:
         if compare(u) != "identical":
             bad.append(f"{d.parent.name}/{d.name}")
     assert n > 1500 and not bad, bad[:10]
+
+
+def test_make_runtime_listing() -> None:
+    """MAKE RUNTIME's DATA statements hold exactly RUNTIME's bytes; its DOC file mirrors its
+    line numbers (the emulator run is `python -m tasc.makeruntime`)."""
+    from tasc.makeruntime import ORIGINAL, documentation, listing
+
+    data = ORIGINAL.read_bytes()
+    text = listing(data)
+    items = [int(x) for line in text.splitlines() if " DATA " in line for x in line.split(" DATA ")[1].split(",")]
+    assert bytes(items) == data
+    doc, _ = documentation(data)
+    assert [ln.split()[0] for ln in doc.splitlines()] == [ln.split()[0] for ln in text.splitlines()]

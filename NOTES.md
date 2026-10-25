@@ -16,7 +16,9 @@ Entry point for any new session. Phase 3 handoff: `docs/handoff_phase3.md` (Phas
 - **Phase 4: closed (2026-10-25, agreed with Mark).** Exit criterion met: the
   decompiler (`tasc/decomp/`) round-trips all 1,954 recorded compiles and BALL.OBJ
   (`python -m tasc.decomp.decompile --corpus`, pytest tests/test_decomp.py).
-- **Phase 5: next.** Already done: PASS0/1/2 decompiled jointly (shared COMMON
+- **Phase 5: started.** MAKE RUNTIME done: `src/MAKE_RUNTIME.txt` (+ DOC/VARS)
+  rebuilds RUNTIME byte for byte in Pandowdy (`python -m tasc.makeruntime`; RAG
+  phase5.md). Already done: PASS0/1/2 decompiled jointly (shared COMMON
   names); the real TASC compiles the regenerated sources (`src/generated/PASSn.bas`)
   into files identical to the originals (`python -m tasc.selfcompile`). To do:
   meaningful names within the hash constraints, line-mirrored DOC files and VARS
