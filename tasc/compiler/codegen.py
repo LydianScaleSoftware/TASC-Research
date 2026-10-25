@@ -59,6 +59,9 @@ ROM = {"HOME": 0xFC58, "TEXT": 0xF399, "GR": 0xF390, "HGR": 0xF3E2, "HGR2": 0xF3
 # one-argument statements: (real entry, int entry or None if unknown)
 ARG1 = {"VTAB": 0x149E, "HTAB": 0x14A7, "COLOR=": 0x0E77, "HCOLOR=": 0x15F4, "SPEED=": 0x161E, "ROT=": 0x15BB,
         "SCALE=": 0x15C4, "CALL": 0x173B, "IN#": 0x1448, "PR#": 0x143F, "HIMEM:": 0x08DB}
+# Confirmed from PASS1's own code (session 4): the statement dispatcher (decompiled PASS1
+# lines 350-370, ON token-127 GOTO) reaches the debug emitter (line 5380, call-table entry 85
+# = $1423) from every handler except these (RUN, not supported here, also gets the call).
 NO_DEBUG = {"REM", "DATA", "DIM", "END", "GOTO", "GOSUB", "RETURN", "HOME", "TEXT", "GR", "HGR", "HGR2", "NORMAL",
             "INVERSE", "FLASH", "RESUME", "DEF", "NEW", "ONERR", "STOP", "RESTORE"}
 REAL_OP = {"+": 2, "-": 3, "*": 4, "/": 7}

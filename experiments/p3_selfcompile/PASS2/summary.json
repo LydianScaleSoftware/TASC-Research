@@ -1,0 +1,12 @@
+{
+ "pass": "PASS2",
+ "identical": true,
+ "len": 9221,
+ "orig_len": 9221,
+ "load": 16882,
+ "sha256": "218d8a5bb87ef3a18f08b763344489eefb8d72c29a8471cb8afba600eec6fa7c",
+ "orig_sha256": "218d8a5bb87ef3a18f08b763344489eefb8d72c29a8471cb8afba600eec6fa7c",
+ "first_diff": null,
+ "cycles": 712173247,
+ "lines": 496
+}

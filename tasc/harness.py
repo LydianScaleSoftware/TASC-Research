@@ -165,7 +165,16 @@ def compile_in_session(
     while True:
         r = run_capturing(s.emu, s.transcript, COMPILE_CYCLES, until_text=ERROR_PROMPT)
         if r["stop_reason"] == "text_match":
-            raise CompileError("compile error:\n" + "\n".join(_tail(s.screen(), 8)))
+            if any(row.startswith(ERROR_PROMPT) for row in s.screen()):
+                raise CompileError("compile error:\n" + "\n".join(_tail(s.screen(), 8)))
+            # the prompt text inside a listed source line (TASC's own PRINT statements):
+            # run on until it has scrolled away
+            while ERROR_PROMPT in "\n".join(s.screen()):
+                r = run_capturing(s.emu, s.transcript, 2_000_000)
+                if r["stop_reason"] == "waiting_for_key":
+                    break
+            if r["stop_reason"] != "waiting_for_key":
+                continue
         if r["stop_reason"] != "waiting_for_key":
             raise CompileError(f"compile stopped: {r['stop_reason']} at {r['cpu']['pc']}")
         rows = s.screen()

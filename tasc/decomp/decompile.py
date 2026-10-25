@@ -146,9 +146,12 @@ def _render(u: Unit, names: dict[Sym, str]) -> None:
     u.body_lines = []
     u.line_addr = {}
     for ln in u.lines:
-        parts = [r.stmt(st) for st in ln.stmts if not (st is lf.stmts[-1] and final_end is not None)]
-        if parts:
-            u.body_lines.append((ln.number, b":".join(parts)))
+        sts = [st for st in ln.stmts if not (st is lf.stmts[-1] and final_end is not None)]
+        if sts:
+            body = r.stmt(sts[0])
+            for prev, st in zip(sts, sts[1:]):
+                body += (b"" if prev.kind == "IF" else b":") + r.stmt(st)  # IF c THEN stmt
+            u.body_lines.append((ln.number, body))
             u.line_addr[ln.number] = ln.addr
     u.program = program_bytes(u.decl_lines + u.body_lines)
     u.text = listing(u.decl_lines + u.body_lines)

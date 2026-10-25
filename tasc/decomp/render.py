@@ -26,27 +26,37 @@ class RenderError(Exception):
     pass
 
 
+def _plain(t: str) -> str:
+    """Decimal text without an exponent, Applesoft style (.5, not 0.5)."""
+    from decimal import Decimal
+    d = format(Decimal(t), "f")
+    if "." in d:
+        d = d.rstrip("0").rstrip(".")
+    if d.startswith("0."):
+        d = d[1:]
+    elif d.startswith("-0."):
+        d = "-" + d[2:]
+    return d
+
+
 def real_text(raw: bytes) -> str:
-    """Shortest decimal text that the ROM's FIN packs to exactly `raw`."""
+    """Shortest decimal text that the ROM's FIN packs to exactly `raw` (plain decimal
+    preferred; exponent form when it is shorter)."""
     v = real_value(raw)
     if v == 0:
         return "0"
     for p in range(1, 18):
-        t = f"{v:.{p}G}"
-        if "E" in t:
-            m, e = t.split("E")
-            t = f"{m}E{int(e)}"
-        if "." in t and "E" not in t:
-            t = t.rstrip("0").rstrip(".")
-        if t.startswith("0."):
-            t = t[1:]
-        elif t.startswith("-0."):
-            t = "-" + t[2:]
-        try:
-            if fin(t) == raw:
-                return t
-        except Exception:  # noqa: BLE001
-            continue
+        g = f"{v:.{p}G}"
+        cands = [_plain(g)]
+        if "E" in g:
+            m, e = g.split("E")
+            cands.append(f"{m}E{int(e)}")
+        for t in sorted(cands, key=len):
+            try:
+                if fin(t) == raw:
+                    return t
+            except Exception:  # noqa: BLE001
+                continue
     raise RenderError(f"no decimal text for {raw.hex()}")
 
 
@@ -266,5 +276,10 @@ def listing(lines: list[tuple[int, bytes]]) -> str:
                 s.append(chr(b))
             else:
                 s.append(f"{{${b:02X}}}")
-        out.append(f"{num} " + "".join(s).strip().replace("  ", " "))
+        text = "".join(s).strip()
+        while "  " in text:
+            text = text.replace("  ", " ")
+        for a, b in (("< =", "<="), ("> =", ">="), ("< >", "<>"), ("> <", "><"), ("= <", "=<"), ("= >", "=>")):
+            text = text.replace(a, b)
+        out.append(f"{num} {text}")
     return "\n".join(out) + "\n"
