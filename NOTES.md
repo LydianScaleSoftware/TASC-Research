@@ -88,7 +88,14 @@ boot takes about 10 s of wall time.
 - **Page-3 ML block (Mark, 2026-10-25):** stays in PASS0's DATA statements, loaded by
   the original FOR/READ/POKE loop and USR-vector POKEs (the DATA text and its split
   into four statements are fixed by the object; the original method is the only one
-  that keeps PASS0 byte-identical). DOC file points to ml/pass0_page3.hex/.asm.txt.
+  that keeps PASS0 byte-identical). Its DOC lines describe the routines themselves
+  (entry points, what each does), standalone.
+- **Recovered-source documentation is standalone (Mark, 2026-10-25):** DOC and VARS
+  files (and anything else shipped with the recovered sources) must read as written
+  by a programmer on an original Apple II: no references to this repository (ml/,
+  RAG, .md files), hypotheses (H1-H7), tools (Pandowdy, Python, cp2) or the
+  reverse-engineering process. Explain the code in its own terms (addresses, ROM
+  routines, DOS). Enforced by pytest test_source_documentation_is_standalone.
 - **MAKE RUNTIME (Mark, 2026-10-25):** RUNTIME is hand-written (H6), so add an
   Applesoft program `MAKE RUNTIME` that POKEs RUNTIME's 4,013 bytes from DATA
   statements and BSAVEs `RUNTIME,A$803,L4013` (not in the manual; consistent with

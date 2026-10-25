@@ -50,3 +50,19 @@ def test_make_runtime_listing() -> None:
     assert bytes(items) == data
     doc, _ = documentation(data)
     assert [ln.split()[0] for ln in doc.splitlines()] == [ln.split()[0] for ln in text.splitlines()]
+
+
+def test_source_documentation_is_standalone() -> None:
+    """Recovered-source documentation (DOC/VARS files) must read as written on the original
+    Apple II: no references to this project's files, tools or hypotheses (Mark, 2026-10-25)."""
+    import re
+
+    src = Path(__file__).parents[1] / "src"
+    banned = re.compile(r"\bml/|\brag\b|\.md\b|\.py\b|\.hex\b|\.json\b|\bH[1-7]\b|pandowdy|python|cp2|ciderpress|"
+                        r"tasc-re|predictor|decompil|experiments/|github|\bgit\b|sha256|pytest|claude",
+                        re.IGNORECASE)
+    files = list(src.glob("*.DOC.TXT")) + list(src.glob("*.VARS.TXT"))
+    assert files
+    for f in files:
+        for n, line in enumerate(f.read_text().splitlines(), 1):
+            assert not banned.search(line), f"{f.name}:{n}: {line[:80]}"

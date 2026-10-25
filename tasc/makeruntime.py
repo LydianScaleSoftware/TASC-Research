@@ -48,13 +48,15 @@ def listing(data: bytes) -> str:
 def documentation(data: bytes) -> tuple[str, str]:
     """MAKE_RUNTIME.DOC.TXT (one REM line per source line, same numbers) and
     MAKE_RUNTIME.VARS.TXT (variable compendium), per handoff section 6b."""
+    # Standalone, period documentation: it must read as written on the original Apple II
+    # and never refer to this project's files or tools (Mark, 2026-10-25).
     doc = [
-        "10 REM BUILD STEP FOR RUNTIME (HAND-WRITTEN 6502, H6). THE BYTES GO TO $0803-$17AF, WHERE AN "
-        "APPLESOFT PROGRAM NORMALLY LIVES: IF THIS PROGRAM IS STILL AT $0801 (TXTTAB HI $68 < 64), MOVE "
-        "THE PROGRAM START TO $4001 (TXTTAB $67/$68 = $4001, ZERO BYTE AT $4000) AND RE-RUN FROM DISK",
-        f"20 REM POKE THE {len(data)} BYTES FROM THE DATA STATEMENTS INTO ${LOAD:04X}-${LOAD + len(data) - 1:04X}",
-        f"30 REM SAVE THEM AS THE B FILE RUNTIME, LOAD ADDRESS ${LOAD:04X}, LENGTH {len(data)}; "
-        "SEE ML/ AND RAG RUNTIME*.MD FOR WHAT THE CODE DOES",
+        "10 REM RUNTIME LOADS AT $0803-$17AF, WHERE AN APPLESOFT PROGRAM NORMALLY LIVES. IF THIS "
+        "PROGRAM IS STILL THERE (HIGH BYTE OF THE PROGRAM START, LOCATION 104, BELOW 64), MOVE THE "
+        "PROGRAM START TO $4001 (POINTER AT 103-104, ZERO BYTE AT $4000) AND RUN IT AGAIN FROM DISK",
+        f"20 REM COPY THE {len(data)} BYTES OF THE LIBRARY FROM THE DATA STATEMENTS INTO "
+        f"${LOAD:04X}-${LOAD + len(data) - 1:04X}",
+        f"30 REM SAVE THEM AS THE BINARY FILE RUNTIME, LOAD ADDRESS ${LOAD:04X}, LENGTH {len(data)}",
         "40 REM",
     ]
     for i in range(0, len(data), PER_LINE):
