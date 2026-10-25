@@ -1,0 +1,37 @@
+{
+ "id": "clrcom_rd",
+ "key": "d655544abfea1075",
+ "source": "10 REM! CLEAR COMMON\n20 PRINT\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 35,
+ "obj_sha256": "9d5c8db2f1d6bbd5b156a79d45a49a3b0c7e47970bcd0123b5c9ba69bcc12bf1",
+ "cycles": 55407732,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6090
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6098",
+  "HIGHEST MEMORY LOCATION": "6098"
+ }
+}

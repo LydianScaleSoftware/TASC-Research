@@ -1,0 +1,34 @@
+{
+ "id": "scmp_lt",
+ "key": "cbfe75e69a2c7212",
+ "source": "10 X=A$<LEFT$(B$,1)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 81,
+ "obj_sha256": "90b4757ddb9688ddbe52901acb6cdcbae1bff1dc54fe15220a4cc3898df3b446",
+ "cycles": 54337540,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6144",
+  "LOCAL VARIABLES": "6145 - 6153",
+  "HIGHEST MEMORY LOCATION": "6153"
+ }
+}

@@ -1,0 +1,37 @@
+{
+ "id": "clrchain_rd",
+ "key": "b4a25c020a2050d3",
+ "source": "10 REM! CLEAR CHAIN\n20 PRINT\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 35,
+ "obj_sha256": "18da9efa5a1ee30d55914bc7dd5504a53314222f2eeb85a199fa84ccaba2d8d9",
+ "cycles": 53828802,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6090
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6098",
+  "HIGHEST MEMORY LOCATION": "6098"
+ }
+}

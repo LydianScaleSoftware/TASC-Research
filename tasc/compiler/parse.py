@@ -333,6 +333,8 @@ def statement(c: Cursor) -> Stmt:
         return Stmt("DATA", [bytes(raw)])
     if c.take("GOTO"):
         return Stmt("GOTO", [line_number(c)])
+    if c.take("RUN"):
+        return Stmt("RUN", [] if c.eos() else [line_number(c)])
     if c.take("GOSUB"):
         return Stmt("GOSUB", [line_number(c)])
     if c.take("IF"):

@@ -1,0 +1,34 @@
+{
+ "id": "cmp_ge",
+ "key": "2a40a7747da955aa",
+ "source": "10 X=A>=B(1)+1\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 95,
+ "obj_sha256": "47633afaf78e732ec6a6dfdab8208fbbda63e9d33f0360435d0495f45dc8a6f0",
+ "cycles": 55030355,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6158",
+  "LOCAL VARIABLES": "6159 - 6223",
+  "HIGHEST MEMORY LOCATION": "6223"
+ }
+}

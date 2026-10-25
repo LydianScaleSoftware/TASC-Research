@@ -207,6 +207,10 @@ def _walk(data: bytes, load: int, forced: set[int]) -> Walk:
                 ops.append(Op(a, 3, "ent", sym=s, op=op))
                 a += 3
                 continue
+            if not jsr and t == 0x03F5:  # RUN: JMP to the & vector
+                ops.append(Op(a, 3, "run"))
+                a += 3
+                continue
             if not jsr and t == rt_end:
                 ops.append(Op(a, 3, "end"))
                 a += 3

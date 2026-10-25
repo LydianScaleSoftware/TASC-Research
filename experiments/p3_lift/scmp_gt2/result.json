@@ -1,0 +1,34 @@
+{
+ "id": "scmp_gt2",
+ "key": "57691a13e7451d13",
+ "source": "10 X=\"A\">B$+C$\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 80,
+ "obj_sha256": "9ceba1280154775739ee7e8ac00dee0e426f202488428fda88e0e44d6b7f02a1",
+ "cycles": 54334313,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6143",
+  "LOCAL VARIABLES": "6144 - 6152",
+  "HIGHEST MEMORY LOCATION": "6152"
+ }
+}

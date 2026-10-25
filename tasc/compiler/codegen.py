@@ -95,6 +95,7 @@ class Sym:
     addr: int = 0  # storage
     rtn: int = 0  # routine address
     label: str = ""
+    busy: bool = False  # temps: in use
 
     @property
     def bucket(self) -> int:
@@ -163,7 +164,6 @@ class Compiler:
         # reused by the next function's body
         self.fn_pool: dict[str, list[Sym]] = {"real": [], "int": [], "str": []}
         self.in_fn = False
-        self.temp_depth: dict[str, int] = {"real": 0, "int": 0, "str": 0}
         self.params: list[Sym] = []
         self.scope_param: dict[str, Sym] = {}
         self.int_names: set[str] = set()
@@ -178,6 +178,7 @@ class Compiler:
         self.cur_line = 0
         self.next_line: dict[int, int] = {}
         self.in_if = False
+        self.rem_after_then = False
         self.lit_data: dict[int, str] = {}
         self.depth = 0
 
@@ -224,18 +225,24 @@ class Compiler:
         return s
 
     def temp(self, vtype: str) -> Sym:
-        d = self.temp_depth[vtype]
+        """Confirmed from PASS1 (lines 5460-5480): temps live in per-type chains of the
+        symbol table (int, string, real; one shared chain inside DEF FN bodies); a request
+        takes the first free temp of the type in its chain, else appends a new one."""
         pool = self.fn_pool[vtype] if self.in_fn else self.temps[vtype]
-        if d == len(pool):
-            self.seq += 1
-            pool.append(Sym(f"T{d}", vtype, "temp", seq=self.seq, label=f"T{vtype[0]}{d}"))
-            if self.in_fn:
-                self.fn_temps[vtype].append(pool[-1])
-        self.temp_depth[vtype] = d + 1
-        return pool[d]
+        for t in pool:
+            if not t.busy:
+                t.busy = True
+                return t
+        self.seq += 1
+        t = Sym(f"T{len(pool)}", vtype, "temp", seq=self.seq, label=f"T{vtype[0]}{len(pool)}", busy=True)
+        pool.append(t)
+        if self.in_fn:
+            self.fn_temps[vtype].append(t)
+        return t
 
-    def free_temp(self, vtype: str) -> None:
-        self.temp_depth[vtype] -= 1
+    def free_temp(self, t: Sym) -> None:
+        """PASS1 6540 / 5485: a temp is freed when its value is used."""
+        t.busy = False
 
     # -- emit ----------------------------------------------------------
     def emit(self, op: int, ref: Ref, note: str = "") -> None:
@@ -448,7 +455,7 @@ class Compiler:
             elif kind == "temp":
                 assert isinstance(payload, Sym)
                 self.entry(payload, 0)
-                self.free_temp(ty)
+                self.free_temp(payload)
             descs[i] = ("done", None, ty)
             if i > 0:
                 self.jsr_rt_t("PUSH.SUB", ty)
@@ -518,7 +525,7 @@ class Compiler:
         self.entry(t, 1)
         self.gen(e.r, mode)
         self.entry(t, 6 + k if (mode == "real" and lt == "int") else k)
-        self.free_temp(lt)
+        self.free_temp(t)
 
     def _gen_top(self, e: Expr, want: str) -> str:
         return self.gen(e, want)
@@ -528,7 +535,7 @@ class Compiler:
         if self.simple(e.r):
             self.gen(e.l, mode)
             self.apply(e.r, mode, 5)
-        elif self.simple(e.l):  # GUESS: evaluate right, compare with left, swapped relation
+        elif self.simple(e.l):  # PASS1 5920-5980 (confirmed p3_lift): right in acc -> left.op5, swapped relation
             self.gen(e.r, mode)
             self.apply(e.l, mode, 5)
             op = SWAP[op]
@@ -566,7 +573,7 @@ class Compiler:
             self.entry(tmp, 1)
             t = self.gen(e.r, "any")
             self.test_sym(tmp)
-            self.free_temp(lt)
+            self.free_temp(tmp)
         name = e.op + ("/I" if t == "int" else "")
         self.jsr_rt(name)
         return "real"
@@ -598,12 +605,12 @@ class Compiler:
             self.entry(t, 1)
             self.gen(e.r, "str")
             self.entry(t, 0)
-            self.free_temp("str")
+            self.free_temp(t)
             rev = True
         if op == "+":
             self.jsr_rt("CONCAT.T" if rev else "CONCAT")
             return "str"
-        if rev:  # GUESS: reversed string comparison swaps the relation
+        if rev:  # PASS1 6085-6120 (confirmed p3_lift): right in the accumulator -> swapped relation
             op = SWAP[op]
         self.jsr_rt(names[op])
         return "real"
@@ -661,7 +668,7 @@ class Compiler:
                     assert isinstance(pay, Sym)
                     spill(cls(args[i]))
                     self.entry(pay, 0)
-                    self.free_temp(ty)
+                    self.free_temp(pay)
                 desc[i] = ("done", None, ty)
                 types[i] = ty
                 last_t = ty
@@ -856,6 +863,7 @@ class Compiler:
         k = st.kind
         if self.o.resume and k not in NO_DEBUG and not self.in_if:
             self.jsr_rt("DEBUG")
+        self.rem_after_then = self.in_if
         self.in_if = False  # observed: only the first statement after THEN skips the debug call
         if k in ("HOME", "TEXT", "GR", "HGR", "HGR2", "NORMAL", "INVERSE", "FLASH"):
             self.jsr_rom(k)
@@ -867,6 +875,14 @@ class Compiler:
             self.jsr_rt(k)
         elif k == "RETURN":
             self.raw(b"\x60")
+        elif k == "RUN":
+            # PASS1 1290-1310: RUN = JMP $03F5 (the & vector RUNTIME points at the program);
+            # RUN n = JSR CLEAR (call-table entry 61) + the GOTO code
+            if st.args:
+                self.jsr_rt("CLEAR")
+                self.emit(JMP, Ref("line", st.args[0]))
+            else:
+                self.emit(JMP, Ref("abs", 0x03F5))
         elif k == "REM":
             self.rem(st.args[0])  # type: ignore[arg-type]
         elif k == "DIM":
@@ -1144,10 +1160,11 @@ class Compiler:
                 s = self.var(nm, suf, bool(dims), len(dims) or 1)
                 s.common = len(self.common)
                 self.common.append(s)
-        elif up.startswith("CLEARCOMMON"):
-            self.jsr_rt("CLEARCOMMON")
-        elif up.startswith("CLEARCHAIN"):
-            self.jsr_rt("CLEARCHAIN")
+        elif up.startswith("CLEARCOMMON") or up.startswith("CLEARCHAIN"):
+            # PASS1 1585-1615: these go through the debug emitter (line 5380)
+            if self.o.resume and not self.rem_after_then:
+                self.jsr_rt("DEBUG")
+            self.jsr_rt("CLEARCOMMON" if up.startswith("CLEARCOMMON") else "CLEARCHAIN")
 
     def fn_calls(self, e: Expr) -> Expr:
         return e
@@ -1190,7 +1207,7 @@ class Compiler:
                         pending_ret = st  # decide once the next statement is known
                         continue
                     self.stmt(st, n)
-                    if st.kind in ("GOTO", "IFGOTO", "RETURN", "END", "STOP", "NEW", "ONERR") or (
+                    if st.kind in ("GOTO", "IFGOTO", "RETURN", "END", "STOP", "NEW", "ONERR", "RUN") or (
                             st.kind == "RESUME" and self.o.resume):  # observed: RESUME = JMP $1656 only with the option
                         dead = True
                 if pending_ret is not None:

@@ -1,0 +1,38 @@
+{
+ "id": "run_dead",
+ "key": "e56432d5460dd255",
+ "source": "10 RUN:PRINT:X=1\n20 PRINT X\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 67,
+ "obj_sha256": "0e724599bdb54341331f062e07edb9496dbaaad551ed292ef7e80021e12e11ee",
+ "cycles": 56532217,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6093
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6130",
+  "LOCAL VARIABLES": "6131 - 6135",
+  "HIGHEST MEMORY LOCATION": "6135"
+ }
+}

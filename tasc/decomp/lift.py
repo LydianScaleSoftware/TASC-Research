@@ -337,6 +337,8 @@ class Machine:
             self.emit("RETURN", o)
         elif k == "end":
             self.emit("END", o)
+        elif k == "run":
+            self.emit("RUN", o)
         elif k == "jmprt":
             if o.name == "RESUME":
                 self.emit("RESUME", o)
@@ -700,7 +702,7 @@ def _terminal(o: Op, cands: set[Sym], fns: dict[int, FnDef]) -> bool:
     """An op that ends a statement (so no temp can be live across it)."""
     if o.kind == "jsr":
         return o.target not in fns
-    if o.kind in ("jmp", "rts", "bne3", "beq3", "beq1", "data", "end", "jmprt"):
+    if o.kind in ("jmp", "rts", "bne3", "beq3", "beq1", "data", "end", "jmprt", "run"):
         return True
     if o.kind == "rt":
         return o.name in STMT_RT

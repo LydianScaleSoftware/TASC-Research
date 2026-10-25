@@ -1,0 +1,38 @@
+{
+ "id": "clrcom_then_rd",
+ "key": "eabe5286a1fde27b",
+ "source": "10 IF X THEN REM! CLEAR COMMON\n20 PRINT\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 52,
+ "obj_sha256": "b572867b5bc6981666d9148bfc11f252ad2b92cdd8caf7d070e77e212af50602",
+ "cycles": 56056768,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6098
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6115",
+  "LOCAL VARIABLES": "6116 - 6120",
+  "HIGHEST MEMORY LOCATION": "6120"
+ }
+}

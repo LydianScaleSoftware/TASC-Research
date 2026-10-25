@@ -1,0 +1,33 @@
+{
+ "id": "run_n",
+ "key": "dcd344a24d82af9c",
+ "source": "10 PRINT:RUN 10\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 32,
+ "obj_sha256": "c1314a1e0a6769265ec1dc0f0b2f825f6f2ea3dfc0727dd2c89761f2ba224f19",
+ "cycles": 53613738,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S001.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6095",
+  "HIGHEST MEMORY LOCATION": "6095"
+ }
+}

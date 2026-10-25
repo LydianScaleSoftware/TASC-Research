@@ -19,7 +19,7 @@ from tasc.objfile import int_value, real_value
 
 PRIO = {"OR": 0x46, "AND": 0x50, "=": 0x64, "<": 0x64, ">": 0x64, "<=": 0x64, ">=": 0x64, "<>": 0x64,
         "+": 0x79, "-": 0x79, "*": 0x7B, "/": 0x7B, "^": 0x7D}
-ENDS_LINE = {"GOTO", "IFGOTO", "IFRETURN", "RETURN", "END", "STOP", "NEW", "ONERR", "RESUME"}
+ENDS_LINE = {"GOTO", "IFGOTO", "IFRETURN", "RETURN", "END", "STOP", "NEW", "ONERR", "RESUME", "RUN"}
 
 
 class RenderError(Exception):
