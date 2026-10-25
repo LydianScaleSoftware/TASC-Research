@@ -99,6 +99,10 @@ boot takes about 10 s of wall time.
   development side (`docs/lift/annot/PASSn.names.txt`), not in the VARS file
   (standalone rule). Declarations: names sharing a bucket must keep their storage
   order, so groups interleave; short runs join the previous INTEGER line.
+  Mark (2026-10-25): the resulting names are acceptable as long as they are
+  documented well; no further naming tuning (single letters are already
+  candidates, but each has only one bucket per type, so few survive). The effort
+  goes into DOC/VARS quality.
 - **Page-3 ML block (Mark, 2026-10-25):** stays in PASS0's DATA statements, loaded by
   the original FOR/READ/POKE loop and USR-vector POKEs (the DATA text and its split
   into four statements are fixed by the object; the original method is the only one
