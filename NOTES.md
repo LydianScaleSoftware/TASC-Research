@@ -28,10 +28,13 @@ Entry point for any new session. Phase 3 handoff: `docs/handoff_phase3.md`. Read
   RUN, REM! CLEAR debug call, string routines always emitted, complex FRE/POS
   arguments evaluated, peephole also drops an AND/OR test. 1,555/1,555 predicted
   and decompiled.
+- **Session 5 random batches:** p3_rand5 (`gen_random ... --v3`) and p3_rand6
+  (`--v3 --unsup`, unsupported keywords): predictor matches real TASC on every
+  recorded compile (1,954) and rejects every program TASC rejects (235);
+  `predict_check` compares rejections too. Decompiler round-trips all 1,954.
+  Real-TASC case lists: `python -m tasc.lift_checks [--unsup | --then]`.
 - Next: finish reading the parser corners (functions 4270-4440, arrays 3285-3500,
-  DATA/INPUT details) and PASS0; random batches with RUN/FRE/AND-after-store;
-  Phase 4 exit is effectively met (decompiler round trips everything).
-  mypy: tasc/decomp adds ~35 strict errors (typing only).
+  DATA/INPUT details) and PASS0. mypy: tasc/decomp adds ~35 strict errors.
 
 ### How the predictor is debugged
 `python -m tasc.predict_check [family]` (summary), `python -m tasc.linediff
