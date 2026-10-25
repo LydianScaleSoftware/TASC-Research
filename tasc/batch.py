@@ -143,6 +143,9 @@ def _worker(family: str, jobs: list[Job], base: Path) -> list[JobResult]:
             job = next(j for j in jobs if j.id == res.id)
             if not res.ok:
                 continue
+            srcf = files.get(names[res.id])
+            if srcf is not None:
+                (EXPERIMENTS / family / res.id / "source.bas").write_bytes(srcf.data)
             f = files.get(names[res.id] + ".OBJ")
             if f is None:
                 res.ok, res.error = False, "object file missing"
