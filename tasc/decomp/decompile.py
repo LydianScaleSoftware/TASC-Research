@@ -359,6 +359,12 @@ def fill_gaps(u: Unit) -> None:
                 pos += size
             if s is not None:
                 pos = max(pos, s.addr + s.size())
+    # string symbols get a routine even when unused (PASS2 1105), so an unused one is known
+    # by its routine but referenced by no code
+    refd = {o.sym for o in w.ops if o.sym is not None}
+    phantoms += [s for s in w.syms.values() if s.region == "local" and s.routine is not None and not s.array and s not in refd
+                 and s not in phantoms]
+    phantoms.sort(key=lambda s: s.addr)
     unk = list(u.lifted.unknowns)
     for ph in phantoms:
         if ph.vtype == "int":

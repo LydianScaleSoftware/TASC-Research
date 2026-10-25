@@ -95,7 +95,9 @@ def assemble(c: Compiler, opts: Options) -> Result:
     # observed: numeric scalars, constants, numeric arrays, string scalars, string arrays
     # (arrays always get a routine)
     rtn_order = ([s for s in temps + fn_syms + num_scalars if s.ops] + [k for k in consts if k.ops] + num_arrays
-                 + [s for s in stemps + c.fn_temps["str"] + strings if s.ops or s.array or s.common is not None])
+                 # PASS2 pass 3 (lines 845-1350, 1105): every string symbol gets a routine,
+                 # used or not (confirmed p3_lift fre_str, pos_str)
+                 + stemps + c.fn_temps["str"] + strings)
     entry: dict[tuple[int, int], int] = {}
     for s in rtn_order:
         s.rtn = pc

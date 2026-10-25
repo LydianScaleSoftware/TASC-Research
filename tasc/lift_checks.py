@@ -31,6 +31,11 @@ CASES: list[tuple[str, str, Options]] = [
     ("scmp_lt", "10 X=A$<LEFT$(B$,1)\n", Options()),
     ("scmp_ge", "10 X=A$>=B$(1)\n", Options()),
     ("scmp_gt2", "10 X=\"A\">B$+C$\n", Options()),
+    # PASS2 845-1350: string routines are emitted without an op-mask check; numeric only with ops
+    ("fre_str", "10 X=FRE(A$)\n", Options()),
+    ("pos_str", "10 X=POS(B$)+1:PRINT X\n", Options()),
+    ("fre_num", "10 X=FRE(A)\n", Options()),
+    ("fre_strarr", "10 X=FRE(A$(2))\n", Options()),
 ]
 
 

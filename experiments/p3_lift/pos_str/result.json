@@ -1,0 +1,34 @@
+{
+ "id": "pos_str",
+ "key": "d24565418f6bf1b0",
+ "source": "10 X=POS(B$)+1:PRINT X\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 71,
+ "obj_sha256": "31188fcf8ad19edc75022c7f3f9835ceb2fb2ca1c348bdf1d419230c657c54ea",
+ "cycles": 55996359,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6134",
+  "LOCAL VARIABLES": "6135 - 6141",
+  "HIGHEST MEMORY LOCATION": "6141"
+ }
+}

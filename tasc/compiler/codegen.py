@@ -721,8 +721,14 @@ class Compiler:
             self.gen(a[0], "real")
             self.jsr_rom(n)
             return "real"
-        if n in ("FRE", "POS"):  # observed: argument symbols allocated, no code
-            self.touch(a[0])
+        if n in ("FRE", "POS"):
+            # PASS1 6250 (confirmed p3_lift): the call is emitted without loading the operand,
+            # so a simple argument is only entered in the symbol table; a complex one is still
+            # computed (its own triples)
+            if self.simple_or_str(a[0]):
+                self.touch(a[0])
+            else:
+                self.gen(a[0], "str" if self.etype(a[0]) == "str" else self.want_any(a[0]))
             self.jsr_rt(n)
             return "real" if n == "FRE" else "int"
         if n == "PEEK":

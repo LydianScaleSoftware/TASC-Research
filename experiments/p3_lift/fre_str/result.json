@@ -1,0 +1,34 @@
+{
+ "id": "fre_str",
+ "key": "8f8fe95fcb2bf634",
+ "source": "10 X=FRE(A$)\n",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 48,
+ "obj_sha256": "1b9f9c005bc9a9a1bdc80d5d1b01db2bb4dbf1d5c5ff1f85aece6d3f93b7cfa6",
+ "cycles": 55246017,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6111",
+  "LOCAL VARIABLES": "6112 - 6118",
+  "HIGHEST MEMORY LOCATION": "6118"
+ }
+}

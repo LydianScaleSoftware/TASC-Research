@@ -180,6 +180,7 @@ class Machine:
         self.print_: Stmt | None = None
         self.stmt_start: int | None = None
         self.boundary = False  # a DEBUG call or line start since the last statement
+        self.last_val = ""  # what the previous op produced: num / stack / load / ''
 
     # -- helpers --------------------------------------------------------
     def take_num(self, o: Op) -> Node:
@@ -278,6 +279,19 @@ class Machine:
             i = self.step(ops, i, o)
 
     def step(self, ops: list[Op], i: int, o: Op) -> int:
+        before = (id(self.num), len(self.sstack), id(self.sload))
+        nxt = self._step(ops, i, o)
+        if self.num is not None and id(self.num) != before[0]:
+            self.last_val = "num"
+        elif len(self.sstack) > before[1]:
+            self.last_val = "stack"
+        elif self.sload is not None and id(self.sload) != before[2]:
+            self.last_val = "load"
+        else:
+            self.last_val = ""
+        return nxt
+
+    def _step(self, ops: list[Op], i: int, o: Op) -> int:
         k = o.kind
         if k == "ent":
             self.mark(o)
@@ -477,9 +491,15 @@ class Machine:
             self.bytes_.append(self.take_num(o))
             self.num = None
         elif n in ("FRE", "POS"):
-            u = Unknown()
-            self.unknowns.append(u)
-            self.num = CallN(n, [u])
+            # a complex argument is computed right before the call; a simple one never loaded
+            if self.last_val == "num":
+                self.num = CallN(n, [self.take_num(o)])
+            elif self.last_val in ("stack", "load"):
+                self.num = CallN(n, [self.take_str(o)])
+            else:
+                u = Unknown()
+                self.unknowns.append(u)
+                self.num = CallN(n, [u])
         elif n in ("PEEK", "PDL"):
             self.num = CallN(n, [self.take_num(o)])
         elif n == "SCRN":
