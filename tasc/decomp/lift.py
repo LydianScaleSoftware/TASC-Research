@@ -410,6 +410,12 @@ class Machine:
             self.input_.args[1].append(target)  # type: ignore[union-attr]
             return
         self.emit(io, o, target)
+        if o.kind == "ent" and o.op == 1 and isinstance(target, Leaf):
+            # store-load peephole after READ/GET: the value stays in the accumulator
+            if target.sym.vtype == "str":
+                self.load_str(Leaf(target.sym, peep=True))
+            else:
+                self.num = Leaf(target.sym, peep=True)
 
     def rt(self, o: Op) -> None:
         n = o.name
