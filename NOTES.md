@@ -1,6 +1,6 @@
 # TASC reverse engineering: project notes
 
-Entry point for any new session. Phase 3 handoff: `docs/handoff_phase3.md` (Phases 3 and 4 now closed). Read this first, then the handoff prompt
+Entry point for any new session. **Current handoff: `docs/handoff_phase5.md`** (Phase 5 in progress; Phases 3 and 4 closed; older: `docs/handoff_phase3.md`). Read this first, then the handoff prompt
 (`../TASC_handoff_prompt.md`) for the full mission and rules. RAG collection
 **`TASC project`** holds findings as chunks (status in brackets in each title).
 
