@@ -27,9 +27,12 @@ Entry point for any new session. Read this first, then the handoff prompt
   strings (literals in place, two string slots, compacting GC), INPUT/READ/
   GET, STOP/END, RESUME/Debug, ONERR/RESUME. DOS patches explained: they let
   TASC READ the tokenized source as a text file and use byte offsets > 32767.
-- Open in Phase R: exact ONERR trigger path through the CHRGET patch (trace an
-  error), per-routine notes for the graphics/statement entries, the PASS0
-  operator table ($5005). Optional (Mark): reassemblable RUNTIME source.
+- ONERR path traced in Pandowdy (ERROR -> HANDLERR -> TXTPTR=$00BB -> patched
+  CHRGOT -> JMP $5B handler) and RESUME (re-runs the statement from its
+  RT.DEBUG call). Statement/graphics entries documented, incl. why integer
+  entries are +3 (JSR AYINT) or -3 (JSR $0058 before GETADR entries).
+  Phase R is complete enough for Phase 3. Still open: the PASS0 operator
+  table ($5005); optional (Mark): reassemblable RUNTIME source.
 - Next: Phase 3, lifting PASS1/PASS2 with the object parser and predictor.
   Cleanup: mypy.
 

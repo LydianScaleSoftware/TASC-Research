@@ -1,0 +1,42 @@
+{
+ "id": "div0",
+ "key": "1311bdf890690750",
+ "source": "10 ONERR GOTO 30\n20 X=1/0\n30 Y=PEEK(222):END",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": false
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 109,
+ "obj_sha256": "5fdf09c8e57747f2e7ebd3da17f58290cd33d194921d8f01fda78bc0e9762f70",
+ "cycles": 58181111,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6089
+  },
+  {
+   "line": 30,
+   "addr": 6098
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6172",
+  "LOCAL VARIABLES": "6173 - 6182",
+  "HIGHEST MEMORY LOCATION": "6182"
+ }
+}

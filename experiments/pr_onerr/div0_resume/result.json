@@ -1,0 +1,46 @@
+{
+ "id": "div0_resume",
+ "key": "127e241c643a9fc8",
+ "source": "10 ONERR GOTO 30\n20 X=1/Z\n25 END\n30 Z=1:RESUME",
+ "options": {
+  "library": null,
+  "program": null,
+  "variables": null,
+  "listing": true,
+  "pause": true,
+  "int_arith": true,
+  "int_const": true,
+  "resume": true
+ },
+ "ok": true,
+ "error": "",
+ "obj_addr": 6064,
+ "obj_len": 93,
+ "obj_sha256": "598c52630fb7467263cc8d1a6bbd41b668a0859396239a30f4cd3005380778b4",
+ "cycles": 58515559,
+ "line_table": [
+  {
+   "line": 10,
+   "addr": 6084
+  },
+  {
+   "line": 20,
+   "addr": 6089
+  },
+  {
+   "line": 25,
+   "addr": 6101
+  },
+  {
+   "line": 30,
+   "addr": 6104
+  }
+ ],
+ "info": {
+  "OBJECT FILE": "S000.OBJ",
+  "LIBRARY": "2051 - 6063",
+  "PROGRAM": "6064 - 6156",
+  "LOCAL VARIABLES": "6157 - 6166",
+  "HIGHEST MEMORY LOCATION": "6166"
+ }
+}
