@@ -8,7 +8,7 @@ BY    -> BW
 CM    -> C3
 CS    -> CB
 DC    -> D3
-DD$   -> DK$
+DD$   -> DO$
 DL    -> CA
 DM    -> DW
 DS    -> DQ
@@ -58,7 +58,7 @@ NV    -> NU
 OB    -> OW
 OC    -> NQ
 OD    -> N1
-OF$   -> OV$
+OF$   -> OX$
 OI    -> P8
 OK    -> OH
 OL    -> OT
@@ -73,7 +73,7 @@ PM    -> RZ
 PS    -> PA
 Q     -> T9
 RB    -> QB
-RD$   -> RM$
+RD$   -> RO$
 RO    -> RN
 RR    -> RT
 RS    -> S7

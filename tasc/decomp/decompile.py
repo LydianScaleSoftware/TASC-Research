@@ -342,10 +342,13 @@ def _solve_group(nodes: list[Node], edges: dict[tuple[Node, Node], int], pools: 
         return out
 
     best: list[dict[int, tuple[int, str]]] = []
-    for n in order:
+    for i, n in enumerate(order):
         per: dict[int, tuple[int, str]] = {}
+        target = i * 32 // len(order)
         for sc, c in options(n):
             b = N.bucket(c, n.t)
+            if n.key not in prefs:
+                sc = -abs(b - target)  # no preference: spread over the buckets (room for names)
             if b not in per or sc > per[b][0]:
                 per[b] = (sc, c)
         best.append(per)

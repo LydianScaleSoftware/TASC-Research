@@ -2,7 +2,7 @@
 BE$   -> BG$
 CM    -> C3
 CS    -> CB
-DD$   -> DK$
+DD$   -> DO$
 DL    -> CA
 DM    -> DW
 EC    -> EL
@@ -23,7 +23,7 @@ NK    -> NF
 NL    -> NK
 NV    -> NU
 OD    -> N1
-OF$   -> OV$
+OF$   -> OX$
 OI    -> P8
 OK    -> OH
 OL    -> OT
@@ -31,7 +31,7 @@ OP    -> OO
 OP$   -> OT$
 PS    -> PA
 RB    -> QB
-RD$   -> RM$
+RD$   -> RO$
 SD    -> SC
 SF$   -> SI$
 SS$   -> SE$
