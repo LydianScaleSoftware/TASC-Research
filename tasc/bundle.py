@@ -1,8 +1,8 @@
-"""Build TASCAD as one self-contained script: dist/tascad.py.
+"""Build AASCAD as one self-contained script: dist/aascad.py.
 
     python -m tasc.bundle
 
-The script carries the source of every module TASCAD needs (the compiler, the
+The script carries the source of every module AASCAD needs (the compiler, the
 decompiler and their helpers) verbatim, each under a banner with its module name, and a
 small import hook that loads them from the script itself. The modules keep their own
 namespaces (several define names such as Sym or Line differently), so the code in the
@@ -15,7 +15,7 @@ import ast
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "dist" / "tascad.py"
+OUT = ROOT / "dist" / "aascad.py"
 
 # (module, is package), in an order that imports cleanly
 MODULES = [
@@ -25,7 +25,7 @@ MODULES = [
     ("tasc.compiler.parse", False), ("tasc.compiler.codegen", False), ("tasc.compiler.assemble", False),
     ("tasc.decomp", True), ("tasc.decomp.walk", False), ("tasc.decomp.lift", False),
     ("tasc.decomp.names", False), ("tasc.decomp.render", False), ("tasc.decomp.decompile", False),
-    ("tasc.tascad", False),
+    ("tasc.aascad", False),
 ]
 
 LOADER = '''
@@ -49,7 +49,7 @@ class _Bundle(importlib.abc.MetaPathFinder, importlib.abc.Loader):
 
     def exec_module(self, module):  # type: ignore[no-untyped-def]
         source = _MODULES[module.__name__][0]
-        filename = f"<tascad:{module.__name__}>"
+        filename = f"<aascad:{module.__name__}>"
         linecache.cache[filename] = (len(source), None, source.splitlines(True), filename)
         exec(compile(source, filename, "exec"), module.__dict__)
 
@@ -57,7 +57,7 @@ class _Bundle(importlib.abc.MetaPathFinder, importlib.abc.Loader):
 sys.meta_path.insert(0, _Bundle())
 
 if __name__ == "__main__":
-    from tasc.tascad import main
+    from tasc.aascad import main
     raise SystemExit(main())
 '''
 
@@ -68,10 +68,10 @@ def module_path(name: str, package: bool) -> Path:
 
 
 def build() -> Path:
-    import tasc.tascad as front
+    import tasc.aascad as front
     doc = (front.__doc__ or "").strip()
     out = ["#!/usr/bin/env python3", '"""' + doc + "\n\nThis file is the whole program: the modules below are loaded from it by the",
-           "small import hook at the end. Run it with: python3 tascad.py compile|decompile ...", '"""', "",
+           "small import hook at the end. Run it with: python3 aascad.py compile|decompile ...", '"""', "",
            "_MODULES = {}"]
     for name, package in MODULES:
         src = module_path(name, package).read_text()

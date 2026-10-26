@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AASCAD</title><meta name="description" content="AASCAD, Another AppleSoft Compiler And Decompiler: TASC 2.01 as one Python script"><style>
+:root{--bg:#fbfaf7;--fg:#1d1d1b;--muted:#6b6a64;--line:#e4e1d8;--code:#f2efe7;--sect:#eef3f8;
+--accent:#1f5f99;--kw:#7a3e00;--str:#2f6b2f;--num:#555;--rem:#8a4a8a;--hl:#fff3b0}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#161615;--fg:#e8e6e0;
+--muted:#9a978e;--line:#2f2e2a;--code:#1f1e1c;--sect:#1b2430;--accent:#7fb2e5;--kw:#e0a060;
+--str:#8fc98f;--num:#b0aea8;--rem:#d0a0d0;--hl:#4a4320}}
+:root[data-theme="dark"]{--bg:#161615;--fg:#e8e6e0;--muted:#9a978e;--line:#2f2e2a;--code:#1f1e1c;
+--sect:#1b2430;--accent:#7fb2e5;--kw:#e0a060;--str:#8fc98f;--num:#b0aea8;--rem:#d0a0d0;--hl:#4a4320}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.5 -apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
+main{max-width:1180px;margin:0 auto;padding:16px}
+header.top{display:flex;flex-wrap:wrap;gap:8px 20px;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:8px}
+header.top h1{font-size:22px;margin:0}
+header.top nav a{margin-right:14px}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.muted{color:var(--muted)}
+details.toc{margin:12px 0;border:1px solid var(--line);border-radius:6px;padding:6px 10px;background:var(--code)}
+details.toc ol{columns:2 320px;margin:6px 0;padding-left:22px;font-size:13px}
+section.r{margin:18px 0;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+section.r>.h{background:var(--sect);padding:8px 12px;border-bottom:1px solid var(--line)}
+section.r>.h p{margin:2px 0}
+section.r>.h .ln{font:600 13px ui-monospace,Menlo,Consolas,monospace;color:var(--muted);margin-right:8px}
+.row{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);border-top:1px solid var(--line)}
+.row:first-child{border-top:0}
+.src{font:13px/1.45 ui-monospace,Menlo,Consolas,monospace;padding:3px 10px;background:var(--code);white-space:pre-wrap;overflow-wrap:anywhere}
+.src .n{display:inline-block;min-width:3.6em;color:var(--muted)}
+.cm{padding:3px 10px;font-size:13px;color:var(--fg)}
+.cm p{margin:0}.cm p.v{color:var(--muted)}.cm p.d{color:var(--muted);font-style:italic}
+.k{color:var(--kw);font-weight:600}.s{color:var(--str)}.r{color:var(--rem)}
+abbr{text-decoration:underline dotted;cursor:help}
+.row:target,.row.hl{background:var(--hl)}.row:target .src{background:var(--hl)}
+details.fold>summary{padding:6px 12px;cursor:pointer;color:var(--muted);font-size:13px}
+table.vars{border-collapse:collapse;width:100%;font-size:13px}
+table.vars th,table.vars td{border-bottom:1px solid var(--line);padding:4px 6px;text-align:left;vertical-align:top}
+table.vars td:first-child{font-family:ui-monospace,Menlo,Consolas,monospace;white-space:nowrap}
+.foot{margin-top:32px;padding-top:10px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}
+pre.usage{font:13px/1.5 ui-monospace,Menlo,Consolas,monospace;background:var(--code);border:1px solid var(--line);border-radius:6px;padding:8px 12px;overflow-x:auto}
+.notice{margin-top:28px;border:1px solid var(--line);border-radius:6px;padding:4px 14px;background:var(--code);max-width:860px}
+.notice h2{font-size:16px;margin:10px 0 4px}
+.notice p{font-size:14px}
+.ov{max-width:860px}
+.ov td a{white-space:nowrap}
+table.asm{border-collapse:collapse;width:100%;font:12.5px/1.45 ui-monospace,Menlo,Consolas,monospace}
+table.asm td{padding:1px 6px;vertical-align:top;white-space:pre}
+table.asm td.a{color:var(--muted)}table.asm td.b{color:var(--muted)}
+table.asm td.l{color:var(--accent);font-weight:600}table.asm td.o{color:var(--kw);font-weight:600}
+table.asm td.c{white-space:pre-wrap;font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;font-size:12.5px}
+table.asm tr:target td,table.asm tr.hl td{background:var(--hl)}
+.wrap{overflow-x:auto}
+.ov h2{margin-top:28px;border-bottom:1px solid var(--line);padding-bottom:4px}
+.ov code,.ov pre{font-family:ui-monospace,Menlo,Consolas,monospace;background:var(--code);border-radius:4px}
+.ov code{padding:1px 4px;font-size:13px}.ov pre{padding:10px;overflow-x:auto;font-size:13px}
+.ov table{border-collapse:collapse;margin:8px 0;font-size:14px}
+.ov th,.ov td{border:1px solid var(--line);padding:4px 8px;text-align:left;vertical-align:top}
+.ov blockquote{margin:12px 0;padding:2px 14px;border-left:3px solid var(--accent);background:var(--code)}
+.ov hr{border:0;border-top:1px solid var(--line);margin:24px 0}
+.ov .pg{text-align:right;font-size:11.5px;color:var(--muted);border-top:1px dashed var(--line);margin:14px 0 4px}
+.ov table{display:block;overflow-x:auto}
+@media (max-width:760px){.row{grid-template-columns:1fr}.cm{padding-left:22px}}
+</style></head><body><main>
+<header class="top"><h1>AASCAD</h1><nav><a href="index.html">All programs</a> <a href="MANUAL.html">Manual</a> <strong>AASCAD</strong></nav></header>
+<section class="tools"><article class="ov"><p><strong>AASCAD</strong>, Another AppleSoft Compiler And Decompiler, is a reimplementation of TASC 2.01 as one Python script. It compiles an Applesoft program exactly as TASC does, producing the same object file byte for byte, and it turns a TASC object file back into an Applesoft program, which it checks by compiling it again: a decompiled program is reported only if it compiles to the same bytes.</p><p><a href="aascad.py" download><strong>Download aascad.py</strong></a> <span class="muted">(253,867 bytes, sha256 <code>eb23f5c0e31bcea6&hellip;</code>)</span></p><p>Needs Python 3.9 or later and nothing else: no packages to install. Reading and writing disk images also needs CiderPress&nbsp;II&rsquo;s command-line program.</p><p>The project&rsquo;s details, history and tests: <a href="https://github.com/OWNER/tasc-re">project page on GitHub</a> <span class="muted">(placeholder; the link is coming)</span>.</p><h2>compile</h2><p><code>aascad compile SOURCE [-o OBJECT] [options]</code>. TASC&rsquo;s questions become options; leaving one out is the same as answering it with RETURN. Prints the object&rsquo;s load address, size and SHA-256.</p><table><tr><th>Option</th><th>Meaning</th></tr><tr><td><code>SOURCE</code></td><td>the Applesoft program: a text listing (numbered lines) or a tokenized program as DOS saves it</td></tr><tr><td><code>-o OBJECT</code></td><td>the object file to write (default: the source&rsquo;s name with <code>.OBJ</code>)</td></tr><tr><td><code>--library ADDR</code></td><td>where RUNTIME is loaded (TASC&rsquo;s memory usage question; default $0803)</td></tr><tr><td><code>--program ADDR|HGR1|HGR2</code></td><td>where the compiled program goes (default: right after the library); HGR1 or HGR2 starts it above that hi-res screen</td></tr><tr><td><code>--variables ADDR</code></td><td>where the program&rsquo;s variables go (default: right after the program)</td></tr><tr><td><code>--no-int-arith</code></td><td>turn off the integer arithmetic option</td></tr><tr><td><code>--no-int-const</code></td><td>turn off the integer constants option</td></tr><tr><td><code>--resume</code></td><td>turn on the RESUME/debug code option</td></tr><tr><td><code>--compare OBJECT</code></td><td>check the result against an existing object file, byte for byte</td></tr><tr><td><code>--map</code></td><td>print the line number table: each line and its object code address</td></tr><tr><td><code>--replace</code></td><td>allow replacing a file that is already on a disk image</td></tr></table><h2>decompile</h2><p><code>aascad decompile OBJECT [-o LISTING] [--bas PROGRAM]</code>. The memory layout comes from the object&rsquo;s header; the code options are found by trying each combination until the recompiled program matches.</p><table><tr><th>Option</th><th>Meaning</th></tr><tr><td><code>OBJECT</code></td><td>a TASC object file</td></tr><tr><td><code>-o LISTING</code></td><td>write the Applesoft listing here (default: print it)</td></tr><tr><td><code>--bas PROGRAM</code></td><td>also write the tokenized Applesoft program</td></tr><tr><td><code>--load ADDR</code></td><td>the object&rsquo;s load address, if it can&rsquo;t be found (a file from a disk image brings its own; otherwise it is read from the object&rsquo;s header)</td></tr><tr><td><code>--replace</code></td><td>allow replacing a file that is already on a disk image</td></tr></table><h2>Files and disk images</h2><p>Files are read from and written to the local filesystem. A file inside a DOS 3.3 disk image is named <code>IMAGE::NAME</code>, for example <code>TASC.dsk::BALL</code>. Images are handled by CiderPress&nbsp;II&rsquo;s command-line program, found through <code>--cp2 PATH</code> (given before the command), the <code>CP2PATH</code> environment variable, or <code>cp2</code> on the PATH. An object written to an image is a binary file at its load address; a listing or <code>--bas</code> program is an Applesoft file. A file already on the image is replaced only with <code>--replace</code>.</p><p>Addresses may be decimal, <code>$hex</code> or <code>0xhex</code>.</p><h2>Examples</h2><pre class="usage">python3 aascad.py compile BALL.txt -o BALL.OBJ
+python3 aascad.py compile BALL.txt --no-int-arith --compare ORIGINAL.OBJ
+python3 aascad.py decompile BALL.OBJ -o BALL.txt --bas BALL.bas
+python3 aascad.py compile &quot;TASC.dsk::BALL&quot; -o &quot;WORK.dsk::BALL.OBJ&quot;
+python3 aascad.py --cp2 /opt/cp2/cp2 decompile &quot;TASC.dsk::PASS1&quot; -o PASS1.txt
+python3 aascad.py compile --help</pre><h2>Copyright</h2><p class="muted">AASCAD is copyright &copy; 2026 Lydian Scale Software. Portions are the work of Microsoft: the code sequences and object file layout it reproduces and the RUNTIME library entry points it calls are those of TASC (copyright &copy; 1981 Microsoft), and its number conversion follows the Applesoft ROM (Microsoft and Apple). AASCAD is not a Microsoft product.</p></article></section><footer class="foot">TASC and RUNTIME are copyright &copy; 1981 Microsoft. Shown for educational and historical purposes only; see the <a href="index.html#copyright">copyright and use notice</a>.</footer></main></body></html>

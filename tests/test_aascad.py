@@ -1,4 +1,4 @@
-"""TASCAD, the single-script compiler and decompiler (dist/tascad.py)."""
+"""AASCAD, the single-script compiler and decompiler (dist/aascad.py)."""
 
 from __future__ import annotations
 
@@ -8,27 +8,27 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).parents[1]
-BUNDLE = ROOT / "dist" / "tascad.py"
+BUNDLE = ROOT / "dist" / "aascad.py"
 EXTRACTED = ROOT / "extracted" / "tasc201"
 
 
 def test_bundle_is_current() -> None:
-    """dist/tascad.py is what python -m tasc.bundle builds from the current modules."""
+    """dist/aascad.py is what python -m tasc.bundle builds from the current modules."""
     from tasc import bundle
 
     committed = BUNDLE.read_text()
     bundle.build()
-    assert BUNDLE.read_text() == committed, "dist/tascad.py is stale: run python -m tasc.bundle"
+    assert BUNDLE.read_text() == committed, "dist/aascad.py is stale: run python -m tasc.bundle"
 
 
 def _run(tmp: Path, *args: str) -> subprocess.CompletedProcess[str]:
     # isolated mode in an empty folder: only the bundle itself can supply the modules
-    return subprocess.run([sys.executable, "-I", "tascad.py", *args], cwd=tmp, capture_output=True, text=True,
+    return subprocess.run([sys.executable, "-I", "aascad.py", *args], cwd=tmp, capture_output=True, text=True,
                           check=False)
 
 
 def test_bundle_compiles_and_decompiles(tmp_path: Path) -> None:
-    shutil.copy(BUNDLE, tmp_path / "tascad.py")
+    shutil.copy(BUNDLE, tmp_path / "aascad.py")
     shutil.copy(EXTRACTED / "BALL#fc0801", tmp_path / "BALL.bas")
     shutil.copy(ROOT / "tests" / "golden" / "BALL.OBJ", tmp_path / "BALL.OBJ")
     r = _run(tmp_path, "compile", "BALL.bas", "-o", "OUT.OBJ", "--compare", "BALL.OBJ")

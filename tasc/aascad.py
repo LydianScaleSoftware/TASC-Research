@@ -1,10 +1,15 @@
-"""TASCAD: The AppleSoft Compiler and Decompiler.
+"""AASCAD: Another AppleSoft Compiler And Decompiler.
 
 A Python reimplementation of Microsoft's TASC 2.01 Applesoft compiler (1981) that
 produces the same object files byte for byte, and a decompiler that turns a TASC
 object file back into an Applesoft program which compiles to the same bytes.
 
-    tascad compile SOURCE [-o OBJECT] [options]
+Copyright (c) 2026 Lydian Scale Software. Portions are the work of Microsoft: the code
+sequences and object file layout AASCAD reproduces and the RUNTIME library entry points
+it calls are those of TASC (copyright 1981 Microsoft), and its number conversion follows
+the Applesoft ROM (Applesoft, Microsoft and Apple). AASCAD is not a Microsoft product.
+
+    aascad compile SOURCE [-o OBJECT] [options]
         SOURCE is a text listing (numbered lines) or a tokenized Applesoft program
         (as saved by DOS, without the 2-byte length). Writes the object file as TASC
         does (the contents of the binary file; its load address is printed).
@@ -13,7 +18,7 @@ object file back into an Applesoft program which compiles to the same bytes.
           --compare OBJECT   check the result against an existing object file
           --map              print the line number table (line, address)
 
-    tascad decompile OBJECT [-o LISTING] [--bas PROGRAM] [--load ADDR]
+    aascad decompile OBJECT [-o LISTING] [--bas PROGRAM] [--load ADDR]
         Reads a TASC object file, works out its load address and memory layout from
         its header, finds the code options by trying them, and writes the Applesoft
         program (a text listing, and with --bas the tokenized program). The result
@@ -75,9 +80,9 @@ def _cp2(*args: str, cwd: str | None = None) -> str:
     try:
         p = subprocess.run([CP2, *args], cwd=cwd, capture_output=True, text=True, check=False)
     except FileNotFoundError:
-        raise SystemExit(f"tascad: CiderPress II not found as {CP2!r}; give --cp2 PATH or set CP2PATH") from None
+        raise SystemExit(f"aascad: CiderPress II not found as {CP2!r}; give --cp2 PATH or set CP2PATH") from None
     if p.returncode != 0:
-        raise SystemExit(f"tascad: cp2 {' '.join(args)} failed:\n{p.stderr}{p.stdout}")
+        raise SystemExit(f"aascad: cp2 {' '.join(args)} failed:\n{p.stderr}{p.stdout}")
     return p.stdout
 
 
@@ -90,7 +95,7 @@ def read_file(spec: str) -> File:
         _cp2("extract", "--preserve=naps", "--overwrite", str(Path(image).resolve()), name, cwd=td)
         files = [f for f in Path(td).rglob("*") if f.is_file()]
         if len(files) != 1:
-            raise SystemExit(f"tascad: {name} not found on {image}")
+            raise SystemExit(f"aascad: {name} not found on {image}")
         m = re.search(r"#([0-9a-fA-F]{2})([0-9a-fA-F]{4})$", files[0].name)
         load = int(m.group(2), 16) if m and int(m.group(1), 16) == 0x06 else None
         return File(files[0].read_bytes(), load)
@@ -108,7 +113,7 @@ def write_file(spec: str, data: bytes, kind: str, load: int = 0x0801, replace: b
     on_disk = any(re.search(r"[ *]" + re.escape(name) + r"$", line.rstrip())
                   for line in _cp2("catalog", path).splitlines())
     if on_disk and not replace:
-        raise SystemExit(f"tascad: {name} is already on {image}; give --replace to replace it")
+        raise SystemExit(f"aascad: {name} is already on {image}; give --replace to replace it")
     with tempfile.TemporaryDirectory() as td:
         host = Path(td) / f"{name}#{TYPES[kind]:02x}{load:04x}"
         host.write_bytes(data)
@@ -223,7 +228,7 @@ def cmd_decompile(a: argparse.Namespace) -> int:
 
 def main(argv: list[str] | None = None) -> int:
     global CP2
-    p = argparse.ArgumentParser(prog="tascad", description="The AppleSoft Compiler and Decompiler (TASC 2.01)")
+    p = argparse.ArgumentParser(prog="aascad", description="Another AppleSoft Compiler And Decompiler (TASC 2.01)")
     p.add_argument("--cp2", help="CiderPress II command-line program, for disk images (default: $CP2PATH or cp2)")
     sub = p.add_subparsers(dest="cmd", required=True)
     c = sub.add_parser("compile", help="compile an Applesoft program as TASC 2.01 does")

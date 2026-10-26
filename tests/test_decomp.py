@@ -75,10 +75,35 @@ def test_source_documentation_is_standalone() -> None:
         text = f.read_text()
         if f.suffix == ".html":  # the visible text and attribute values, not the markup or style sheet
             text = re.sub(r"<style>.*?</style>", "", text, flags=re.S)
-            # the index's download section for the modern TASCAD tool is exempt by design
+            # the index's download section for the modern AASCAD tool is exempt by design
             text = re.sub(r'<section class="tools">.*?</section>', "", text, flags=re.S)
             text = re.sub(r"<[a-z0-9]+|</[a-z0-9]+>|\b(?:class|id|href|name|content|lang|charset)=\"[^\"]*\"", " ", text)
         for n, line in enumerate(text.splitlines(), 1):
             for m in banned.finditer(line):
                 assert re.fullmatch(r"H[1-7]", m.group(0), re.IGNORECASE) and m.group(0) in names, \
                     f"{f.name}:{n}: {line[:80]}"
+
+
+def test_html_folder_is_self_contained() -> None:
+    """src/html can be archived whole and served anywhere: every local link and fragment
+    resolves inside it, nothing is loaded from elsewhere, and nothing links out of it."""
+    import re
+    from urllib.parse import unquote
+
+    site = (Path(__file__).parents[1] / "src" / "html").resolve()
+    pages = {p: p.read_text() for p in site.rglob("*.html")}
+    ids = {p: set(re.findall(r'\bid="([^"]+)"', t)) for p, t in pages.items()}
+    bad = []
+    for page, text in pages.items():
+        assert not re.search(r"<(?:script|link|img|iframe)\b[^>]*\bsrc=\"(?:https?:)?//", text), page.name
+        for ref in re.findall(r'\b(?:href|src)="([^"]*)"', text):
+            if re.match(r"(https?:|mailto:)", ref):
+                continue
+            path, _, frag = ref.partition("#")
+            target = (page.parent / unquote(path)).resolve() if path else page
+            if path.startswith("/") or ":" in path or not target.is_relative_to(site) or not target.is_file():
+                bad.append(f"{page.name}: {ref}")
+            elif frag and target in ids and frag not in ids[target]:
+                bad.append(f"{page.name}: {ref} (no such anchor)")
+    assert not [p for p in site.rglob("*") if p.is_symlink()]
+    assert not bad, bad[:20]

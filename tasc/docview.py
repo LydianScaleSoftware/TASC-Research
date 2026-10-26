@@ -100,6 +100,10 @@ table.asm tr:target td,table.asm tr.hl td{background:var(--hl)}
 .ov code{padding:1px 4px;font-size:13px}.ov pre{padding:10px;overflow-x:auto;font-size:13px}
 .ov table{border-collapse:collapse;margin:8px 0;font-size:14px}
 .ov th,.ov td{border:1px solid var(--line);padding:4px 8px;text-align:left;vertical-align:top}
+.ov blockquote{margin:12px 0;padding:2px 14px;border-left:3px solid var(--accent);background:var(--code)}
+.ov hr{border:0;border-top:1px solid var(--line);margin:24px 0}
+.ov .pg{text-align:right;font-size:11.5px;color:var(--muted);border-top:1px dashed var(--line);margin:14px 0 4px}
+.ov table{display:block;overflow-x:auto}
 @media (max-width:760px){.row{grid-template-columns:1fr}.cm{padding-left:22px}}
 """
 
@@ -237,16 +241,46 @@ def listing_html(page: Page) -> str:
 
 def _inline(s: str) -> str:
     s = html.escape(s, quote=False)
-    s = re.sub(r"`([^`]+)`", r"<code>\1</code>", s)
+    codes: list[str] = []  # code spans are kept out of the other rules
+
+    def code(m: re.Match[str]) -> str:
+        codes.append(f"<code>{m.group(1)}</code>")
+        return f"\x00{len(codes) - 1}\x00"
+
+    s = re.sub(r"`([^`]+)`", code, s)
     s = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", s)
     s = re.sub(r"(?<![\w*])\*([^*]+)\*(?![\w*])", r"<em>\1</em>", s)
     s = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", r'<a href="\2">\1</a>', s)
-    return s
+    s = re.sub(r"&lt;(https?://[^\s&]+)&gt;", r'<a href="\1">\1</a>', s)
+    s = s.replace("&lt;br&gt;", "<br>")
+    return re.sub("\x00(\\d+)\x00", lambda m: codes[int(m.group(1))], s)
 
 
-def markdown(text: str) -> str:
+_LIST = re.compile(r" {0,3}([-*]|\d+\.) ")
+_PAGE = re.compile(r"<!-- p\.(\w+) -->")
+_BLOCK = re.compile(r"(#{1,5} |```|\||>|<!--|---\s*$| {0,3}([-*]|\d+\.) )")
+
+
+@dataclass
+class _Md:
+    """State of one Markdown conversion: heading levels shift, ids are unique, headings are collected."""
+    shift: int = 0
+    toc: list[tuple[int, str, str]] = field(default_factory=list)  # (level, id, html)
+    ids: set[str] = field(default_factory=set)
+
+
+def markdown(text: str, shift: int = 0, toc: list[tuple[int, str, str]] | None = None) -> str:
+    """A small Markdown dialect: headings, paragraphs, fenced code, tables, block quotes, rules,
+    lists (whose items may hold paragraphs and code), and <!-- p.N --> page marks."""
+    md = _Md(shift)
+    out = _blocks(text.splitlines(), md)
+    if toc is not None:
+        toc.extend(md.toc)
+    return "\n".join(out)
+
+
+def _blocks(lines: list[str], md: _Md) -> list[str]:
     out: list[str] = []
-    lines = text.splitlines()
     i = 0
     while i < len(lines):
         ln = lines[i]
@@ -260,10 +294,25 @@ def markdown(text: str) -> str:
             out.append("<pre>" + html.escape("\n".join(lines[i + 1:j])) + "</pre>")
             i = j + 1
             continue
-        m = re.match(r"(#{1,4}) (.*)", ln)
+        if ln.startswith("<!--"):  # a page of the printed original starts here; other comments vanish
+            m = _PAGE.match(ln)
+            if m:
+                out.append(f'<div class="pg" id="page-{m.group(1)}">page {m.group(1)}</div>')
+            i += 1
+            continue
+        if re.fullmatch(r"---\s*", ln):
+            out.append("<hr>")
+            i += 1
+            continue
+        m = re.match(r"(#{1,5}) (.*)", ln)
         if m:
-            lvl = len(m.group(1))
-            slug = re.sub(r"[^a-z0-9]+", "-", m.group(2).lower()).strip("-")
+            lvl = min(6, len(m.group(1)) + md.shift)
+            slug = base = re.sub(r"[^a-z0-9]+", "-", m.group(2).lower()).strip("-")
+            k = 2
+            while slug in md.ids:
+                slug, k = f"{base}-{k}", k + 1
+            md.ids.add(slug)
+            md.toc.append((len(m.group(1)), slug, _inline(m.group(2))))
             out.append(f'<h{lvl} id="{slug}">{_inline(m.group(2))}</h{lvl}>')
             i += 1
             continue
@@ -278,24 +327,72 @@ def markdown(text: str) -> str:
             tb = "".join("<tr>" + "".join(f"<td>{_inline(c)}</td>" for c in r) + "</tr>" for r in rows[1:])
             out.append(f"<table><tr>{th}</tr>{tb}</table>")
             continue
-        if re.match(r"(\s*)([-*]|\d+\.) ", ln):
-            ordered = bool(re.match(r"\s*\d+\. ", ln))
-            items: list[str] = []
-            while i < len(lines) and lines[i].strip() and (re.match(r"\s*([-*]|\d+\.) ", lines[i]) or lines[i].startswith("  ")):
-                if re.match(r"\s*([-*]|\d+\.) ", lines[i]):
-                    items.append(re.sub(r"\s*([-*]|\d+\.) ", "", lines[i], count=1))
-                else:
-                    items[-1] += " " + lines[i].strip()
+        if ln.startswith(">"):
+            quoted = []
+            while i < len(lines) and lines[i].startswith(">"):
+                quoted.append(re.sub(r"^> ?", "", lines[i]))
                 i += 1
-            tag = "ol" if ordered else "ul"
-            out.append(f"<{tag}>" + "".join(f"<li>{_inline(x)}</li>" for x in items) + f"</{tag}>")
+            out.append("<blockquote>" + "\n".join(_blocks(quoted, md)) + "</blockquote>")
             continue
-        para = []
-        while i < len(lines) and lines[i].strip() and not re.match(r"(#{1,4} |```|\||\s*([-*]|\d+\.) )", lines[i]):
+        if _LIST.match(ln):
+            i = _list(lines, i, md, out)
+            continue
+        para: list[str] = []
+        while i < len(lines) and lines[i].strip() and not (para and _BLOCK.match(lines[i])):
             para.append(lines[i].strip())
             i += 1
         out.append(f"<p>{_inline(' '.join(para))}</p>")
-    return "\n".join(out)
+    return out
+
+
+def _list(lines: list[str], i: int, md: _Md, out: list[str]) -> int:
+    """One list from lines[i]; an item goes on through blank lines and page marks while what
+    follows is indented under it. Returns the index after the list."""
+    first = _LIST.match(lines[i])
+    assert first
+    ordered = first.group(1)[0].isdigit()
+    items: list[list[str]] = []
+    while i < len(lines):
+        m = _LIST.match(lines[i])
+        if not m or m.group(1)[0].isdigit() != ordered:
+            break
+        width = m.end()
+        body = [lines[i][width:]]
+        i += 1
+        while i < len(lines):
+            ln = lines[i]
+            if ln.strip() and not ln.startswith(" ") and not _PAGE.match(ln):
+                if body[-1].strip() and not _BLOCK.match(ln):
+                    body.append(ln)  # a lazy continuation of the item's paragraph
+                    i += 1
+                    continue
+                break
+            if not ln.strip() or _PAGE.match(ln):  # take it only if the item goes on after it
+                j = i
+                while j < len(lines) and (not lines[j].strip() or _PAGE.match(lines[j])):
+                    j += 1
+                if j == len(lines) or not lines[j].startswith(" ") or _LIST.match(lines[j]):
+                    break
+                body += [lines[k] if _PAGE.match(lines[k]) else "" for k in range(i, j)]
+                i = j
+                continue
+            if _LIST.match(ln):
+                break
+            body.append(ln[width:] if ln[:width].strip() == "" else ln.lstrip())
+            i += 1
+        items.append(body)
+        while i < len(lines) and not lines[i].strip() and i + 1 < len(lines) and _LIST.match(lines[i + 1]):
+            i += 1  # a blank line between items keeps the list going
+    lis = []
+    for body in items:
+        inner = _blocks(body, md)
+        # a one-paragraph item is written without its <p>, as a compact list
+        lis.append(inner[0][3:-4] if len(inner) == 1 and inner[0].startswith("<p>") else "\n".join(inner))
+    tag = "ol" if ordered else "ul"
+    start = int(first.group(1)[:-1]) if ordered else 1
+    attr = f' start="{start}"' if start != 1 else ""
+    out.append(f"<{tag}{attr}>" + "".join(f"<li>{x}</li>" for x in lis) + f"</{tag}>")
+    return i
 
 
 def fill(template: str, final: dict[str, str], addr_line: dict[int, int], listing: str) -> str:
@@ -348,27 +445,148 @@ def copy_disks() -> list[tuple[str, int, str, str]]:
     return out
 
 
-TASCAD = ROOT / "dist" / "tascad.py"
+AASCAD = ROOT / "dist" / "aascad.py"
 
 
-def copy_tascad() -> tuple[int, str] | None:
-    """Copy the TASCAD script next to the pages; return (size, sha256)."""
+def copy_aascad() -> tuple[int, str] | None:
+    """Copy the AASCAD script next to the pages; return (size, sha256)."""
     import hashlib
     import shutil
-    if not TASCAD.exists():
+    if not AASCAD.exists():
         return None
-    dst = OUT / "tascad.py"
-    shutil.copyfile(TASCAD, dst)
+    dst = OUT / "aascad.py"
+    shutil.copyfile(AASCAD, dst)
     data = dst.read_bytes()
     return len(data), hashlib.sha256(data).hexdigest()
 
 
+# the original manual: the scan and its transcription (kept beside this repository, in the project folder)
+MANUAL_PDF = ROOT.parent / "TASC_The_AppleSoft_Compiler_Manual_text.pdf"
+MANUAL_MD = ROOT.parent / "TASC_Applesoft_Compiler_Manual.md"
+# placeholder: the project's page, once the repository is published
+GITHUB = "https://github.com/OWNER/tasc-re"
+
+
+def copy_manual() -> dict[str, int]:
+    """Copy the manual's scan and transcription to manual/; return {published name: size}."""
+    import shutil
+    (OUT / "manual").mkdir(parents=True, exist_ok=True)
+    out = {}
+    for src, name in ((MANUAL_PDF, "TASC-Manual.pdf"), (MANUAL_MD, "TASC-Manual.md")):
+        dst = OUT / "manual" / name
+        if src.exists():
+            shutil.copyfile(src, dst)
+        if dst.exists():
+            out[name] = dst.stat().st_size
+    return out
+
+
+def _site_nav(here: str) -> str:
+    """The header of the pages that are not about one program."""
+    links = [("index.html", "All programs"), ("MANUAL.html", "Manual"), ("AASCAD.html", "AASCAD")]
+    title = dict(links)[here]
+    nav = " ".join(f'<a href="{h}">{x}</a>' if h != here else f"<strong>{x}</strong>" for h, x in links)
+    return f'<header class="top"><h1>{html.escape(title)}</h1><nav>{nav}</nav></header>\n'
+
+
+def manual_html(md_text: str, files: dict[str, int]) -> str:
+    toc: list[tuple[int, str, str]] = []
+    body = markdown(md_text, shift=1, toc=toc)
+    items = "".join(f'<li><a href="#{slug}">{text}</a></li>' for lvl, slug, text in toc if lvl == 1)
+    get = []
+    if "TASC-Manual.pdf" in files:
+        get.append(f'<a href="manual/TASC-Manual.pdf" download>the scanned manual (PDF, {files["TASC-Manual.pdf"]:,} bytes)</a>')
+    if "TASC-Manual.md" in files:
+        get.append(f'<a href="manual/TASC-Manual.md" download>this text (Markdown, {files["TASC-Manual.md"]:,} bytes)</a>')
+    return (_head("TASC manual", "Microsoft TASC, The Applesoft Compiler: User's Manual (1981), transcribed")
+            + _site_nav("MANUAL.html")
+            + '<p class="muted">The TASC user&rsquo;s manual, transcribed from the printed original and proofread '
+              'against its pages; page marks show where each printed page begins. Download '
+            + " or ".join(get) + ".</p>"
+            + f'<details class="toc"><summary>Chapters</summary><ol>{items}</ol></details>'
+            + f'<article class="ov">{body}</article>' + FOOTER + "</main></body></html>\n")
+
+
+def aascad_page_html(info: tuple[int, str] | None) -> str:
+    def rows(opts: list[tuple[str, str]]) -> str:
+        return "".join(f"<tr><td><code>{html.escape(o)}</code></td><td>{d}</td></tr>" for o, d in opts)
+
+    comp = [("SOURCE", "the Applesoft program: a text listing (numbered lines) or a tokenized program as DOS saves it"),
+            ("-o OBJECT", "the object file to write (default: the source&rsquo;s name with <code>.OBJ</code>)"),
+            ("--library ADDR", "where RUNTIME is loaded (TASC&rsquo;s memory usage question; default $0803)"),
+            ("--program ADDR|HGR1|HGR2", "where the compiled program goes (default: right after the library); "
+             "HGR1 or HGR2 starts it above that hi-res screen"),
+            ("--variables ADDR", "where the program&rsquo;s variables go (default: right after the program)"),
+            ("--no-int-arith", "turn off the integer arithmetic option"),
+            ("--no-int-const", "turn off the integer constants option"),
+            ("--resume", "turn on the RESUME/debug code option"),
+            ("--compare OBJECT", "check the result against an existing object file, byte for byte"),
+            ("--map", "print the line number table: each line and its object code address"),
+            ("--replace", "allow replacing a file that is already on a disk image")]
+    dec = [("OBJECT", "a TASC object file"),
+           ("-o LISTING", "write the Applesoft listing here (default: print it)"),
+           ("--bas PROGRAM", "also write the tokenized Applesoft program"),
+           ("--load ADDR", "the object&rsquo;s load address, if it can&rsquo;t be found (a file from a disk image "
+            "brings its own; otherwise it is read from the object&rsquo;s header)"),
+           ("--replace", "allow replacing a file that is already on a disk image")]
+    usage = ("python3 aascad.py compile BALL.txt -o BALL.OBJ\n"
+             "python3 aascad.py compile BALL.txt --no-int-arith --compare ORIGINAL.OBJ\n"
+             "python3 aascad.py decompile BALL.OBJ -o BALL.txt --bas BALL.bas\n"
+             "python3 aascad.py compile \"TASC.dsk::BALL\" -o \"WORK.dsk::BALL.OBJ\"\n"
+             "python3 aascad.py --cp2 /opt/cp2/cp2 decompile \"TASC.dsk::PASS1\" -o PASS1.txt\n"
+             "python3 aascad.py compile --help")
+    dl = ""
+    if info:
+        size, sha = info
+        dl = (f'<p><a href="aascad.py" download><strong>Download aascad.py</strong></a> <span class="muted">'
+              f'({size:,} bytes, sha256 <code>{sha[:16]}&hellip;</code>)</span></p>')
+    # a modern tool, so the period-documentation rule does not apply inside this section
+    return (_head("AASCAD", "AASCAD, Another AppleSoft Compiler And Decompiler: TASC 2.01 as one Python script")
+            + _site_nav("AASCAD.html") + '<section class="tools"><article class="ov">'
+            + "<p><strong>AASCAD</strong>, Another AppleSoft Compiler And Decompiler, is a reimplementation of TASC 2.01 "
+              "as one Python script. It compiles an Applesoft program exactly as TASC does, producing the same object "
+              "file byte for byte, and it turns a TASC object file back into an Applesoft program, which it checks by "
+              "compiling it again: a decompiled program is reported only if it compiles to the same bytes.</p>"
+            + dl
+            + "<p>Needs Python 3.9 or later and nothing else: no packages to install. Reading and writing disk images "
+              "also needs CiderPress&nbsp;II&rsquo;s command-line program.</p>"
+            + f'<p>The project&rsquo;s details, history and tests: <a href="{GITHUB}">project page on GitHub</a> '
+              '<span class="muted">(placeholder; the link is coming)</span>.</p>'
+            + "<h2>compile</h2><p><code>aascad compile SOURCE [-o OBJECT] [options]</code>. TASC&rsquo;s questions "
+              "become options; leaving one out is the same as answering it with RETURN. Prints the object&rsquo;s "
+              "load address, size and SHA-256.</p>"
+            + f"<table><tr><th>Option</th><th>Meaning</th></tr>{rows(comp)}</table>"
+            + "<h2>decompile</h2><p><code>aascad decompile OBJECT [-o LISTING] [--bas PROGRAM]</code>. The memory "
+              "layout comes from the object&rsquo;s header; the code options are found by trying each combination "
+              "until the recompiled program matches.</p>"
+            + f"<table><tr><th>Option</th><th>Meaning</th></tr>{rows(dec)}</table>"
+            + "<h2>Files and disk images</h2><p>Files are read from and written to the local filesystem. A file "
+              "inside a DOS 3.3 disk image is named <code>IMAGE::NAME</code>, for example "
+              "<code>TASC.dsk::BALL</code>. Images are handled by CiderPress&nbsp;II&rsquo;s command-line program, "
+              "found through <code>--cp2 PATH</code> (given before the command), the <code>CP2PATH</code> "
+              "environment variable, or <code>cp2</code> on the PATH. An object written to an image is a binary file "
+              "at its load address; a listing or <code>--bas</code> program is an Applesoft file. A file already "
+              "on the image is replaced only with <code>--replace</code>.</p>"
+              "<p>Addresses may be decimal, <code>$hex</code> or <code>0xhex</code>.</p>"
+            + f'<h2>Examples</h2><pre class="usage">{html.escape(usage)}</pre>'
+            + "<h2>Copyright</h2><p class=\"muted\">AASCAD is copyright &copy; 2026 Lydian Scale Software. Portions are the work of Microsoft: the code sequences and object file layout it reproduces and the RUNTIME library entry points it calls are those of TASC (copyright &copy; 1981 Microsoft), and its number conversion follows the Applesoft ROM (Microsoft and Apple). AASCAD is not a Microsoft product.</p>"
+            + "</article></section>" + FOOTER + "</main></body></html>\n")
+
+
 def write_index() -> None:
+    """The index and the pages beside it (manual, AASCAD), with their downloads."""
     OUT.mkdir(exist_ok=True)
-    (OUT / "index.html").write_text(index_html(copy_disks(), copy_tascad()))
+    aascad = copy_aascad()
+    manual = copy_manual()
+    (OUT / "index.html").write_text(index_html(copy_disks(), aascad, manual))
+    (OUT / "AASCAD.html").write_text(aascad_page_html(aascad))
+    md = OUT / "manual" / "TASC-Manual.md"
+    if md.exists():
+        (OUT / "MANUAL.html").write_text(manual_html(md.read_text(), manual))
 
 
-def index_html(disks: list[tuple[str, int, str, str]] | None = None, tascad: tuple[int, str] | None = None) -> str:
+def index_html(disks: list[tuple[str, int, str, str]] | None = None, aascad: tuple[int, str] | None = None,
+               manual: dict[str, int] | None = None) -> str:
     rows = "".join(
         f'<tr><td><strong>{TITLES[n]}</strong></td><td>{html.escape(PURPOSE[n])}</td>'
         f'<td><a href="{n}.OVERVIEW.html">overview</a></td><td><a href="{n}.html">listing</a></td></tr>'
@@ -379,8 +597,9 @@ def index_html(disks: list[tuple[str, int, str, str]] | None = None, tascad: tup
               'sharing a COMMON block: PASS0 asks the questions and sets up, PASS1 compiles, PASS2 finishes the '
               'object file. RUNTIME is the machine language library compiled programs call; MAKE RUNTIME builds it.</p>'
             + f'<table class="vars"><tr><th>Program</th><th>What it does</th><th></th><th></th></tr>{rows}</table>'
+            + _manual_html(manual or {})
             + _disks_html(disks or [])
-            + _tascad_html(tascad)
+            + _aascad_html(aascad)
             + '<section class="notice" id="copyright"><h2>Copyright and use</h2>'
               '<p>TASC, its compiler passes and the RUNTIME library are the copyrighted work of Microsoft '
               '(Copyright &copy; 1981 Microsoft), and Microsoft&rsquo;s ownership of this code is respected. '
@@ -393,27 +612,38 @@ def index_html(disks: list[tuple[str, int, str, str]] | None = None, tascad: tup
             + "</main></body></html>\n")
 
 
-def _tascad_html(info: tuple[int, str] | None) -> str:
+def _aascad_html(info: tuple[int, str] | None) -> str:
     if info is None:
         return ""
     size, sha = info
-    usage = ("python3 tascad.py compile BALL.txt -o BALL.OBJ\n"
-             "python3 tascad.py decompile BALL.OBJ -o BALL.txt --bas BALL.bas\n"
-             "python3 tascad.py compile \"TASC.dsk::BALL\" -o \"WORK.dsk::BALL.OBJ\"\n"
-             "python3 tascad.py --help")
+    usage = ("python3 aascad.py compile BALL.txt -o BALL.OBJ\n"
+             "python3 aascad.py decompile BALL.OBJ -o BALL.txt --bas BALL.bas\n"
+             "python3 aascad.py compile \"TASC.dsk::BALL\" -o \"WORK.dsk::BALL.OBJ\"\n"
+             "python3 aascad.py --help")
     # a modern tool, so the period-documentation rule does not apply inside this section
-    return ('<section class="tools"><h2>TASCAD</h2>'
-            f'<p><a href="tascad.py" download>tascad.py</a> <span class="muted">({size:,} bytes, sha256 '
+    return ('<section class="tools"><h2>AASCAD</h2>'
+            f'<p><a href="aascad.py" download>aascad.py</a> <span class="muted">({size:,} bytes, sha256 '
             f'<code>{sha[:16]}&hellip;</code>)</span></p>'
-            '<p>The AppleSoft Compiler and Decompiler: one Python script (3.9 or later, nothing to install) that '
+            '<p>Another AppleSoft Compiler And Decompiler: one Python script (3.9 or later, nothing to install) that '
             'compiles an Applesoft program exactly as TASC 2.01 does, byte for byte, and turns a TASC object file '
-            'back into an Applesoft program, checking that it compiles to the same bytes. It takes a text listing or a '
-            'tokenized program, TASC&rsquo;s options as flags (<code>--no-int-arith</code>, <code>--no-int-const</code>, '
-            '<code>--resume</code>, <code>--library</code>, <code>--program</code>, <code>--variables</code>), and finds '
-            'a decompiled object&rsquo;s options by itself. A file inside a disk image is named '
-            '<code>IMAGE::NAME</code>; disk images are read and written with CiderPress&nbsp;II&rsquo;s command-line '
-            'program (<code>--cp2 PATH</code> or the <code>CP2PATH</code> environment variable).</p>'
+            'back into an Applesoft program, checking that it compiles to the same bytes. '
+            '<a href="AASCAD.html">Its options and how to use it</a>; '
+            f'<a href="{GITHUB}">project page on GitHub</a> <span class="muted">(placeholder)</span>. AASCAD is copyright &copy; 2026 Lydian Scale Software, with portions by Microsoft.</p>'
             f'<pre class="usage">{html.escape(usage)}</pre></section>')
+
+
+def _manual_html(files: dict[str, int]) -> str:
+    if not files:
+        return ""
+    get = []
+    if "TASC-Manual.pdf" in files:
+        get.append(f'<a href="manual/TASC-Manual.pdf" download>scanned manual</a> (PDF, {files["TASC-Manual.pdf"]:,} bytes)')
+    if "TASC-Manual.md" in files:
+        get.append(f'<a href="manual/TASC-Manual.md" download>transcription</a> (Markdown text, '
+                   f'{files["TASC-Manual.md"]:,} bytes)')
+    return ('<h2>The TASC manual</h2><p>Microsoft&rsquo;s <em>TASC User&rsquo;s Manual</em> (1981): '
+            '<a href="MANUAL.html">read it here</a>, transcribed and proofread against the printed pages, or download '
+            'the ' + " or the ".join(get) + ".</p>")
 
 
 def _disks_html(disks: list[tuple[str, int, str, str]]) -> str:
