@@ -463,8 +463,8 @@ def copy_aascad() -> tuple[int, str] | None:
 # the original manual: the scan and its transcription (kept beside this repository, in the project folder)
 MANUAL_PDF = ROOT.parent / "TASC_The_AppleSoft_Compiler_Manual_text.pdf"
 MANUAL_MD = ROOT.parent / "TASC_Applesoft_Compiler_Manual.md"
-# placeholder: the project's page, once the repository is published
-GITHUB = "https://github.com/OWNER/tasc-re"
+# the project's page
+GITHUB = "https://github.com/LydianScaleSoftware/TASC-Research"
 
 
 def copy_manual() -> dict[str, int]:
@@ -550,8 +550,7 @@ def aascad_page_html(info: tuple[int, str] | None) -> str:
             + dl
             + "<p>Needs Python 3.9 or later and nothing else: no packages to install. Reading and writing disk images "
               "also needs CiderPress&nbsp;II&rsquo;s command-line program.</p>"
-            + f'<p>The project&rsquo;s details, history and tests: <a href="{GITHUB}">project page on GitHub</a> '
-              '<span class="muted">(placeholder; the link is coming)</span>.</p>'
+            + f'<p>The project&rsquo;s details, history and tests: <a href="{GITHUB}">project page on GitHub</a>.</p>'
             + "<h2>compile</h2><p><code>aascad compile SOURCE [-o OBJECT] [options]</code>. TASC&rsquo;s questions "
               "become options; leaving one out is the same as answering it with RETURN. Prints the object&rsquo;s "
               "load address, size and SHA-256.</p>"
@@ -628,7 +627,7 @@ def _aascad_html(info: tuple[int, str] | None) -> str:
             'compiles an Applesoft program exactly as TASC 2.01 does, byte for byte, and turns a TASC object file '
             'back into an Applesoft program, checking that it compiles to the same bytes. '
             '<a href="AASCAD.html">Its options and how to use it</a>; '
-            f'<a href="{GITHUB}">project page on GitHub</a> <span class="muted">(placeholder)</span>. AASCAD is copyright &copy; 2026 <a href="https://lydianscale.com">Lydian Scale Software</a>, with portions by Microsoft.</p>'
+            f'<a href="{GITHUB}">project page on GitHub</a>. AASCAD is copyright &copy; 2026 <a href="https://lydianscale.com">Lydian Scale Software</a>, with portions by Microsoft.</p>'
             f'<pre class="usage">{html.escape(usage)}</pre></section>')
 
 
