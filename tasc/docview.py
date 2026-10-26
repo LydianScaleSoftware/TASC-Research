@@ -82,6 +82,7 @@ table.vars{border-collapse:collapse;width:100%;font-size:13px}
 table.vars th,table.vars td{border-bottom:1px solid var(--line);padding:4px 6px;text-align:left;vertical-align:top}
 table.vars td:first-child{font-family:ui-monospace,Menlo,Consolas,monospace;white-space:nowrap}
 .foot{margin-top:32px;padding-top:10px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}
+pre.usage{font:13px/1.5 ui-monospace,Menlo,Consolas,monospace;background:var(--code);border:1px solid var(--line);border-radius:6px;padding:8px 12px;overflow-x:auto}
 .notice{margin-top:28px;border:1px solid var(--line);border-radius:6px;padding:4px 14px;background:var(--code);max-width:860px}
 .notice h2{font-size:16px;margin:10px 0 4px}
 .notice p{font-size:14px}
@@ -347,12 +348,27 @@ def copy_disks() -> list[tuple[str, int, str, str]]:
     return out
 
 
+TASCAD = ROOT / "dist" / "tascad.py"
+
+
+def copy_tascad() -> tuple[int, str] | None:
+    """Copy the TASCAD script next to the pages; return (size, sha256)."""
+    import hashlib
+    import shutil
+    if not TASCAD.exists():
+        return None
+    dst = OUT / "tascad.py"
+    shutil.copyfile(TASCAD, dst)
+    data = dst.read_bytes()
+    return len(data), hashlib.sha256(data).hexdigest()
+
+
 def write_index() -> None:
     OUT.mkdir(exist_ok=True)
-    (OUT / "index.html").write_text(index_html(copy_disks()))
+    (OUT / "index.html").write_text(index_html(copy_disks(), copy_tascad()))
 
 
-def index_html(disks: list[tuple[str, int, str, str]] | None = None) -> str:
+def index_html(disks: list[tuple[str, int, str, str]] | None = None, tascad: tuple[int, str] | None = None) -> str:
     rows = "".join(
         f'<tr><td><strong>{TITLES[n]}</strong></td><td>{html.escape(PURPOSE[n])}</td>'
         f'<td><a href="{n}.OVERVIEW.html">overview</a></td><td><a href="{n}.html">listing</a></td></tr>'
@@ -364,6 +380,7 @@ def index_html(disks: list[tuple[str, int, str, str]] | None = None) -> str:
               'object file. RUNTIME is the machine language library compiled programs call; MAKE RUNTIME builds it.</p>'
             + f'<table class="vars"><tr><th>Program</th><th>What it does</th><th></th><th></th></tr>{rows}</table>'
             + _disks_html(disks or [])
+            + _tascad_html(tascad)
             + '<section class="notice" id="copyright"><h2>Copyright and use</h2>'
               '<p>TASC, its compiler passes and the RUNTIME library are the copyrighted work of Microsoft '
               '(Copyright &copy; 1981 Microsoft), and Microsoft&rsquo;s ownership of this code is respected. '
@@ -374,6 +391,28 @@ def index_html(disks: list[tuple[str, int, str, str]] | None = None) -> str:
               '<p>Any takedown or removal request from the copyright holder will be respected and acted on '
               'promptly.</p></section>'
             + "</main></body></html>\n")
+
+
+def _tascad_html(info: tuple[int, str] | None) -> str:
+    if info is None:
+        return ""
+    size, sha = info
+    usage = ("python3 tascad.py compile BALL.txt -o BALL.OBJ\n"
+             "python3 tascad.py decompile BALL.OBJ -o BALL.txt --bas BALL.bas\n"
+             "python3 tascad.py compile \"TASC.dsk::BALL\" -o \"WORK.dsk::BALL.OBJ\"\n"
+             "python3 tascad.py --help")
+    return ('<h2>TASCAD</h2>'
+            f'<p><a href="tascad.py" download>tascad.py</a> <span class="muted">({size:,} bytes, sha256 '
+            f'<code>{sha[:16]}&hellip;</code>)</span></p>'
+            '<p>The AppleSoft Compiler and Decompiler: one Python script (3.9 or later, nothing to install) that '
+            'compiles an Applesoft program exactly as TASC 2.01 does, byte for byte, and turns a TASC object file '
+            'back into an Applesoft program, checking that it compiles to the same bytes. It takes a text listing or a '
+            'tokenized program, TASC&rsquo;s options as flags (<code>--no-int-arith</code>, <code>--no-int-const</code>, '
+            '<code>--resume</code>, <code>--library</code>, <code>--program</code>, <code>--variables</code>), and finds '
+            'a decompiled object&rsquo;s options by itself. A file inside a disk image is named '
+            '<code>IMAGE::NAME</code>; disk images are read and written with CiderPress&nbsp;II&rsquo;s command-line '
+            'program (<code>--cp2 PATH</code> or the <code>CP2PATH</code> environment variable).</p>'
+            f'<pre class="usage">{html.escape(usage)}</pre>')
 
 
 def _disks_html(disks: list[tuple[str, int, str, str]]) -> str:

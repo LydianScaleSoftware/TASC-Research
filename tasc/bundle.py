@@ -89,6 +89,8 @@ def build() -> Path:
 
 def main() -> None:
     path = build()
+    from tasc import docview
+    docview.write_index()  # the download on the index page
     text = path.read_text()
     print(f"{path.relative_to(ROOT)}: {text.count(chr(10))} lines, {len(text)} characters, {len(MODULES)} modules")
 
