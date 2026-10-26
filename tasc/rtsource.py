@@ -16,6 +16,7 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass, field
 from pathlib import Path
+from typing import Callable
 
 from tasc import edasm, m6502, rtdis
 
@@ -257,6 +258,44 @@ def render(ann: Ann) -> str:
     return "\n".join(r.text for r in rows(ann)[0]) + "\n"
 
 
+PART_LIMIT = 12 * 1024  # bytes per source file, so each one fits the editor's buffer
+PART_DIR = ROOT / "src" / "runtime"
+
+
+def parts(ann: Ann) -> list[tuple[str, str, int, int]]:
+    """The source split for EDASM: (file name, text, first address, last address). Single
+    spaced, cut only where a routine's comment block begins, each file at most PART_LIMIT
+    bytes; every file but the last ends with CHN and the next file's name."""
+    rs, _ = rows(ann)
+    segments: list[list[Row]] = [[]]
+    for k, r in enumerate(rs):
+        starts_block = r.kind == "block" and (k == 0 or rs[k - 1].kind != "block") and r.addr > LIB
+        if starts_block and any(x.kind == "code" for x in segments[-1]):
+            segments.append([])
+        segments[-1].append(r)
+    groups: list[list[Row]] = [[]]
+    size = 0
+    for seg in segments:
+        seg_size = len(compact("\n".join(r.text for r in seg)))
+        if groups[-1] and size + seg_size + 200 > PART_LIMIT:
+            groups.append([])
+            size = 0
+        groups[-1] += seg
+        size += seg_size
+    n = len(groups)
+    out = []
+    for i, g in enumerate(groups, 1):
+        codes = [r for r in g if r.kind == "code"]
+        first, last = codes[0].addr, codes[-1].addr + len(codes[-1].raw) - 1
+        name = f"RUNTIME.S{i}"
+        head = [f"* {name}: PART {i} OF {n} OF THE RUNTIME SOURCE, ${first:04X}-${last:04X}",
+                f"* ASSEMBLE RUNTIME.S1; EACH PART CHAINS TO THE NEXT WITH CHN"]
+        body = compact("\n".join(r.text for r in g))
+        tail = f" CHN RUNTIME.S{i + 1}\n" if i < n else ""
+        out.append((name, "\n".join(head) + "\n" + body + tail, first, last))
+    return out
+
+
 def compact(text: str) -> str:
     """The same source with single spaces between the fields, as kept on disk."""
     out = []
@@ -306,8 +345,8 @@ def _line(label: str, op: str, operand: str, comment: str) -> str:
     return s.rstrip()
 
 
-def check(text: str) -> list[str]:
-    org, data, _ = edasm.assemble(text)
+def check(text: str, load: Callable[[str], str] | None = None) -> list[str]:
+    org, data, _ = edasm.assemble(text, load)
     problems = []
     if org != LIB:
         problems.append(f"ORG ${org:04X}")
@@ -340,8 +379,18 @@ def main() -> None:
         problems = check(src)
         print(f"{name}: {src.count(chr(10))} lines, {len(src)} characters;",
               "assembles to RUNTIME byte for byte" if not problems else "DIFFERS: " + "; ".join(problems))
+    pieces = parts(ann)
+    PART_DIR.mkdir(exist_ok=True)
+    for old in PART_DIR.glob("RUNTIME.S*"):
+        old.unlink()
+    files = {name: text for name, text, _, _ in pieces}
+    for name, text in files.items():
+        (PART_DIR / name).write_text(text)
+    problems = check(files["RUNTIME.S1"], files.__getitem__)
+    print(f"src/runtime/: {len(pieces)} files of at most {max(len(x) for x in files.values())} characters;",
+          "the chain assembles to RUNTIME byte for byte" if not problems else "DIFFERS: " + "; ".join(problems))
     from tasc import docview
-    docview.write_runtime(*rows(ann), ann)
+    docview.write_runtime(*rows(ann), ann, [(n, len(x), f, l) for n, x, f, l in pieces])
 
 
 if __name__ == "__main__":

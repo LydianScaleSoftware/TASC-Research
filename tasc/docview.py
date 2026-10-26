@@ -385,7 +385,8 @@ def _asm_operand(operand: str, labels: dict[str, int], equ: dict[str, str]) -> s
     return re.sub(r"[A-Z][A-Z0-9]*|[^A-Z]+", one, operand)
 
 
-def write_runtime(rows: list, labels: dict[int, str], ann: object) -> None:
+def write_runtime(rows: list, labels: dict[int, str], ann: object,
+                  files: list[tuple[str, int, int, int]] | None = None) -> None:
     """src/html/RUNTIME.html (the source as an assembler listing) and its overview."""
     by_name = {n: a for a, n in labels.items()}
     equ = {n: c for n, _, c in ann.equates}  # type: ignore[attr-defined]
@@ -446,6 +447,8 @@ def write_runtime(rows: list, labels: dict[int, str], ann: object) -> None:
                 raise ValueError(f"[[${a:04X}]] has no label in RUNTIME")
             return f"[{m.group(2) or labels[a]}](RUNTIME.html#A{a:04X})"
         md = re.sub(r"\[\[\$([0-9A-Fa-f]{4})(?:\|([^\]]+))?\]\]", link, tmpl.read_text())
+        table = "\n".join(f"| {n} | ${f:04X}-${l:04X} | {size} |" for n, size, f, l in files or [])
+        md = md.replace("[[FILES]]", "| File | Addresses | Characters |\n|---|---|---|\n" + table)
         (SRC / "RUNTIME.OVERVIEW.TXT").write_text(md)
         (OUT / "RUNTIME.OVERVIEW.html").write_text(overview_html("RUNTIME", md))
     (OUT / "index.html").write_text(index_html())

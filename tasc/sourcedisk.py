@@ -8,8 +8,8 @@
 The disk holds the tokenized Applesoft sources exactly as tasc.sourcegen wrote them
 (src/PASS0.bas, PASS1.bas, PASS2.bas: the files the self-compile proof compiles),
 MAKE RUNTIME (tokenized from src/MAKE_RUNTIME.txt; its line 10 re-runs it by that
-name), RUNTIME.S (the library's 6502 source, a text file, single-spaced as an Apple
-assembler keeps it) and a HELLO that catalogs the disk at boot.  cp2 writes the standard DOS 3.3
+name), RUNTIME.S1-RUNTIME.S6 (the library's 6502 source for EDASM as text files of at
+most 12K, chained with CHN; assemble RUNTIME.S1) and a HELLO that catalogs the disk at boot.  cp2 writes the standard DOS 3.3
 image to tracks 0-2.  The image is rebuilt from scratch each time and checked by
 extracting every file again.
 """
@@ -36,7 +36,7 @@ HELLO = """10 TEXT : HOME
 30 PRINT
 40 PRINT "PASS0, PASS1, PASS2: THE COMPILER PASSES"
 50 PRINT "MAKE RUNTIME: BUILDS THE RUNTIME LIBRARY"
-60 PRINT "RUNTIME.S: SOURCE OF THE RUNTIME LIBRARY"
+60 PRINT "RUNTIME.S1-S6: SOURCE OF THE LIBRARY"
 70 PRINT
 80 PRINT CHR$ (4);"CATALOG"
 """
@@ -59,9 +59,9 @@ def build(image: Path = IMAGE) -> dict[str, bytes]:
         hello.write_text(HELLO)
         disk.import_basic(image, hello, "HELLO")
         disk.import_basic(image, SRC / "MAKE_RUNTIME.txt", "MAKE RUNTIME")
-        src = Path(td) / "RUNTIME.S"
-        src.write_text(rtsource.compact((SRC / "RUNTIME.S").read_text()))
-        disk.run_cp2("import", str(image.resolve()), "text", src.name, cwd=Path(td))
+        for part in sorted(rtsource.PART_DIR.glob("RUNTIME.S*"), key=lambda q: int(q.name[9:])):
+            shutil.copyfile(part, Path(td) / part.name)
+            disk.run_cp2("import", str(image.resolve()), "text", part.name, cwd=Path(td))
     for p in ("PASS0", "PASS1", "PASS2"):
         data = (SRC / f"{p}.bas").read_bytes()
         disk.add_file(image, p, data, A_TYPE, A_AUX)
@@ -69,16 +69,17 @@ def build(image: Path = IMAGE) -> dict[str, bytes]:
     return files
 
 
-def runtime_source(image: Path) -> str:
-    """RUNTIME.S as read back from the disk: DOS text (bit 7 set, carriage returns) to plain text."""
-    raw = disk.extract(image, "RUNTIME.S").data
+def text_file(image: Path, name: str) -> str:
+    """A text file as read back from the disk: DOS text (bit 7 set, carriage returns) to plain text."""
+    raw = disk.extract(image, name).data
     return bytes(b & 0x7F for b in raw).decode("ascii").replace("\r", "\n")
 
 
 def check(image: Path, files: dict[str, bytes]) -> list[str]:
     """Each pass's file on the disk must be byte for byte the generated program, and
-    RUNTIME.S read back from the disk must assemble to RUNTIME."""
-    problems = [f"RUNTIME.S: {p}" for p in rtsource.check(runtime_source(image))]
+    RUNTIME.S1 and the files it chains to, read back from the disk, must assemble to RUNTIME."""
+    problems = [f"RUNTIME.S1-S6: {p}" for p in rtsource.check(text_file(image, "RUNTIME.S1"),
+                                                              lambda name: text_file(image, name))]
     for name, data in files.items():
         got = disk.extract(image, name).data
         if got != data:
@@ -128,7 +129,7 @@ def main() -> None:
     problems = check(IMAGE, files)
     print(disk.run_cp2("catalog", str(IMAGE.resolve())).rstrip())
     print("check:", "; ".join(problems) if problems else
-          "every pass on the disk is identical to src/PASSn.bas; RUNTIME.S read back assembles to RUNTIME")
+          "every pass on the disk is identical to src/PASSn.bas; RUNTIME.S1 and its chain, read back, assemble to RUNTIME")
 
 
 if __name__ == "__main__":

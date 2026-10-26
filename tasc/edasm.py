@@ -1,13 +1,15 @@
 """A small two-pass 6502 assembler for the EDASM-style source subset used in src/RUNTIME.S.
 
-    python -m tasc.edasm FILE        assemble FILE and print the length and SHA-256
+    python -m tasc.edasm FILE        assemble FILE (and the files it chains to with CHN, from the
+                                     same folder) and print the length and SHA-256
 
 It accepts exactly what the generated RUNTIME source uses, with the rules of Apple's
 DOS Toolkit assembler (EDASM) that decide the bytes:
 
 - a label starts in column 1 (at most 8 characters, a letter first, then letters and
   digits); `*` in column 1 is a comment line; `;` starts an end-of-line comment;
-- directives ORG, EQU and DFB (bytes, separated by commas);
+- directives ORG, EQU, DFB (bytes, separated by commas) and CHN NAME, which ends the
+  file and goes on with the source file NAME: one assembly, one symbol table;
 - operands: `#expr`, `expr`, `expr,X`, `expr,Y`, `(expr,X)`, `(expr),Y`, `(expr)`; an
   opcode alone is implied or accumulator mode (`ASL`);
 - expressions: `$hex`, decimal, symbols and `*` combined with `+` and `-`;
@@ -23,6 +25,7 @@ import re
 import sys
 from dataclasses import dataclass
 from pathlib import Path
+from typing import Callable
 
 from tasc.m6502 import OPCODES
 
@@ -45,9 +48,11 @@ class Line:
     label: str
     op: str
     operand: str
+    where: str = ""
 
 
-def parse(text: str) -> list[Line]:
+def parse(text: str, load: Callable[[str], str] | None = None, where: str = "") -> list[Line]:
+    """The source lines; CHN NAME is replaced by the lines of the file NAME (via `load`)."""
     out: list[Line] = []
     for n, raw in enumerate(text.splitlines(), 1):
         if not raw.strip() or raw.startswith("*"):
@@ -61,7 +66,12 @@ def parse(text: str) -> list[Line]:
         parts = code.split(None, 1)
         op = parts[0] if parts else ""
         operand = parts[1].strip() if len(parts) > 1 else ""
-        out.append(Line(n, label, op, operand))
+        if op == "CHN":
+            if load is None:
+                raise AsmError(f"{where} line {n}: CHN {operand} but no files to chain to")
+            out += parse(load(operand), load, operand)
+            break  # the rest of a chained file is not assembled
+        out.append(Line(n, label, op, operand, where))
     return out
 
 
@@ -112,14 +122,14 @@ def mode_of(mn: str, operand: str, v: int | None) -> tuple[str, str]:
     return ab, expr
 
 
-def assemble(text: str) -> tuple[int, bytes, dict[str, int]]:
-    lines = parse(text)
+def assemble(text: str, load: Callable[[str], str] | None = None) -> tuple[int, bytes, dict[str, int]]:
+    lines = parse(text, load)
     sym: dict[str, int] = {}
     org: int | None = None
     # pass 1: addresses
     pc = 0
     sizes: dict[int, int] = {}
-    for ln in lines:
+    for k, ln in enumerate(lines):
         if ln.op == "ORG":
             pc = value(ln.operand, sym, pc, True) or 0
             org = pc if org is None else org
@@ -138,12 +148,12 @@ def assemble(text: str) -> tuple[int, bytes, dict[str, int]]:
             size = LENGTH[mode_of(ln.op, ln.operand, v)[0]]
         else:
             raise AsmError(f"line {ln.number}: unknown opcode {ln.op!r}")
-        sizes[ln.number] = size
+        sizes[k] = size
         pc += size
     # pass 2: bytes
     out = bytearray()
     pc = org or 0
-    for ln in lines:
+    for k, ln in enumerate(lines):
         if ln.op in ("ORG", "EQU"):
             continue
         if ln.op == "DFB":
@@ -151,10 +161,10 @@ def assemble(text: str) -> tuple[int, bytes, dict[str, int]]:
                 v = value(e, sym, pc, True)
                 assert v is not None
                 out.append(v & 0xFF)
-            pc += sizes[ln.number]
+            pc += sizes[k]
             continue
         mode, expr = mode_of(ln.op, ln.operand, value(_core(ln.operand), sym, pc, False) if ln.operand else None)
-        if LENGTH[mode] != sizes[ln.number]:
+        if LENGTH[mode] != sizes[k]:
             raise AsmError(f"line {ln.number}: size changed between passes")
         op = TABLE[ln.op].get(mode)
         if op is None:
@@ -176,7 +186,7 @@ def assemble(text: str) -> tuple[int, bytes, dict[str, int]]:
                 out.append(v & 0xFF)
             else:
                 out += bytes((v & 0xFF, (v >> 8) & 0xFF))
-        pc += sizes[ln.number]
+        pc += sizes[k]
     return org or 0, bytes(out), sym
 
 
@@ -189,7 +199,8 @@ def _core(operand: str) -> str:
 
 
 def main() -> None:
-    org, data, _ = assemble(Path(sys.argv[1]).read_text())
+    path = Path(sys.argv[1])
+    org, data, _ = assemble(path.read_text(), lambda name: (path.parent / name).read_text())
     print(f"${org:04X}, {len(data)} bytes, sha256 {hashlib.sha256(data).hexdigest()}")
 
 

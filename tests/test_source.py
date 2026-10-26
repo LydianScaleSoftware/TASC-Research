@@ -145,5 +145,9 @@ def test_runtime_source_assembles() -> None:
     text = (SRC / "RUNTIME.S").read_text()
     assert rtsource.check(text) == []
     assert rtsource.check(rtsource.compact(text)) == []
+    # the files for EDASM: at most 12K each, chained with CHN from RUNTIME.S1
+    parts = {p.name: p.read_text() for p in rtsource.PART_DIR.glob("RUNTIME.S*")}
+    assert parts and all(len(x) <= rtsource.PART_LIMIT for x in parts.values())
+    assert rtsource.check(parts["RUNTIME.S1"], parts.__getitem__) == []
     assert all(len(line.split(";")[0].split(" ")[0]) <= 8 for line in text.splitlines()
                if line and not line[0].isspace() and not line.startswith("*")), "labels of at most 8 characters"

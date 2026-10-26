@@ -75,5 +75,5 @@ The loop, after each batch of annotations:
 - The batch harness puts 8 jobs per disk (`tasc/batch.py JOBS_PER_DISK`); 20 filled the disk with larger programs.
 - The harness ignores "TYPE CNTRL-C TO ABORT" inside a listed source line (PASS1/PASS2 print it themselves); only a row starting with it is the real error prompt.
 - `src/generated/` is the older raw decompiler output (solver names, steps of 5); the Phase 5 sources are `src/PASSn.*`.
-- Open housekeeping: mypy strict (~35 errors in `tasc/decomp`, ~31 older in `tasc/compiler`). RUNTIME source: done in session 6 at Mark's request (src/RUNTIME.S, EDASM style, `python -m tasc.rtsource`).
+- Open housekeeping: mypy strict (~35 errors in `tasc/decomp`, ~31 older in `tasc/compiler`). RUNTIME source: done in session 6 at Mark's request (src/RUNTIME.S combined, src/runtime/RUNTIME.S1-S6 chained with CHN for EDASM, at most 12K each; `python -m tasc.rtsource`).
 - Ask Mark before costly or irreversible choices. Report concisely with evidence.
