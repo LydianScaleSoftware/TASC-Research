@@ -722,7 +722,7 @@ ARRINT   LDX  #$01                      ;... 1 INTEGER
          STY  IACC
          LDY  #$03                      ;Y = 2 * DIMENSIONS + 3: THE LAST HIGHEST INDEX
          LDA  (TPTR),Y
-         ASL
+         ASL  A
          TAY
          INY
          INY
@@ -777,9 +777,9 @@ ARRSIZE  LDX  RESULT+3                  ;TIMES THE ELEMENT SIZE: 2 ...
 ARRSI1   LDY  IACC                      ;... OR 5 (4+1) FOR A REAL
          LDA  IACC+1
          STA  HDRFLAG
-         ASL
+         ASL  A
          ROL  IACC
-         ASL
+         ASL  A
          ROL  IACC
          ADC  HDRFLAG
          STA  IACC+1
@@ -1236,7 +1236,7 @@ SHAPE1   LDA  SHAPETBL                  ;THE SHAPE TABLE
          CMP  (HGRSHAPE,X)
          BEQ  SHAPE2
          BCS  HGRPO4
-SHAPE2   ASL                            ;THE SHAPE'S OFFSET, 2 BYTES PER NUMBER ...
+SHAPE2   ASL  A                         ;THE SHAPE'S OFFSET, 2 BYTES PER NUMBER ...
          BCC  SHAPE3
          INC  HGRSHAPE+1
          CLC
@@ -2251,7 +2251,7 @@ ONGOS1   STX  HDRFLAG
          LDY  #$01                      ;THE COUNT
          LDA  (LINNUM),Y
          TAY
-         ASL                            ;RETURN ADDRESS PAST THE LIST: COUNT*2+1
+         ASL  A                         ;RETURN ADDRESS PAST THE LIST: COUNT*2+1
          SEC
          ADC  LINNUM
          TAX
@@ -2271,7 +2271,7 @@ ONGOS3   LDX  HDRFLAG                   ;GOTO: DROP THE RETURN ADDRESS; GOSUB KE
          PLA
          PLA
 ONGOS4   LDA  IACC+1                    ;THE LINE'S ADDRESS - 1 ...
-         ASL
+         ASL  A
          TAY
          LDA  (LINNUM),Y
          TAX

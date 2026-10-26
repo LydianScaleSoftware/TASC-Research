@@ -149,5 +149,10 @@ def test_runtime_source_assembles() -> None:
     parts = {p.name: p.read_text() for p in rtsource.PART_DIR.glob("RUNTIME.S*")}
     assert parts and all(len(x) <= rtsource.PART_LIMIT for x in parts.values())
     assert rtsource.check(parts["RUNTIME.S1"], parts.__getitem__) == []
+    # EDASM rejects accumulator mode without the A (as the real assembler showed)
+    from tasc import edasm
+    import pytest as _pt
+    with _pt.raises(edasm.AsmError):
+        edasm.assemble(" ORG $0803\n ASL\n")
     assert all(len(line.split(";")[0].split(" ")[0]) <= 8 for line in text.splitlines()
                if line and not line[0].isspace() and not line.startswith("*")), "labels of at most 8 characters"

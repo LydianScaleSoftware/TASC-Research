@@ -195,8 +195,10 @@ def _sym(v: int, labels: dict[int, str]) -> str:
 
 def _insn_item(i: m6502.Insn, labels: dict[int, str]) -> Item:
     mn, mode, v = i.mnemonic, i.mode, i.operand
-    if mode in ("imp", "acc"):
+    if mode == "imp":
         return Item(i.addr, i.length, mn, "")
+    if mode == "acc":  # EDASM needs the A; a bare ASL is an error
+        return Item(i.addr, i.length, mn, "A")
     if mode == "imm":
         assert v is not None
         return Item(i.addr, i.length, mn, f"#${v:02X}")

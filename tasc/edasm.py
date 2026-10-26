@@ -10,8 +10,8 @@ DOS Toolkit assembler (EDASM) that decide the bytes:
   digits); `*` in column 1 is a comment line; `;` starts an end-of-line comment;
 - directives ORG, EQU, DFB (bytes, separated by commas) and CHN NAME, which ends the
   file and goes on with the source file NAME: one assembly, one symbol table;
-- operands: `#expr`, `expr`, `expr,X`, `expr,Y`, `(expr,X)`, `(expr),Y`, `(expr)`; an
-  opcode alone is implied or accumulator mode (`ASL`);
+- operands: `#expr`, `expr`, `expr,X`, `expr,Y`, `(expr,X)`, `(expr),Y`, `(expr)`, and `A`
+  for accumulator mode (`ASL A`: EDASM rejects a bare `ASL`); an opcode alone is implied;
 - expressions: `$hex`, decimal, symbols and `*` combined with `+` and `-`;
 - a zero-page form is used whenever the operand's value is known in pass 1, is below
   $100 and the instruction has one; otherwise the absolute form.  This is why the source
@@ -98,8 +98,12 @@ def value(expr: str, sym: dict[str, int], pc: int, strict: bool) -> int | None:
 def mode_of(mn: str, operand: str, v: int | None) -> tuple[str, str]:
     """Addressing mode and the expression inside the operand."""
     modes = TABLE[mn]
-    if not operand or operand == "A":
-        return ("acc" if "acc" in modes else "imp"), ""
+    if operand == "A" and "acc" in modes:
+        return "acc", ""
+    if not operand:
+        if "imp" not in modes:  # EDASM: ASL, LSR, ROL, ROR need the A
+            raise AsmError(f"{mn} needs an operand")
+        return "imp", ""
     if operand.startswith("#"):
         return "imm", operand[1:]
     if "rel" in modes:

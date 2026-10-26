@@ -6,6 +6,8 @@ RUNTIME is 4013 bytes of 6502 machine language, normally loaded at $0803-$17AF w
 
 The source is written for Apple's DOS Toolkit assembler (EDASM) and assembles to the library byte for byte. It is split into files small enough for the editor; `RUNTIME.S1` holds the equates and the `ORG`, and each file ends with `CHN` and the name of the next, so assembling `RUNTIME.S1` assembles the whole library (see [Source files](#source-files)).
 
+To assemble it with the DOS Tool Kit: boot the Tool Kit disk with the source disk in drive 2, `RUN EDASM`, then at the editor's `:` prompt type `DRIVE 2` and `ASM RUNTIME.S1`. The assembler reports `SUCCESSFUL ASSEMBLY: NO ERRORS` and writes `RUNTIME.S1.OBJ0`, a binary file at $0803 of 4013 bytes, identical to RUNTIME. (The source disk has room for it; rename it RUNTIME to use it.)
+
 ## Starting a program
 
 Every object file starts with `JSR INIT` and a 17-byte header ([INIT](RUNTIME.html#A0803)). INIT:
@@ -90,7 +92,7 @@ Every error ends at [ERREXIT](RUNTIME.html#A1413) with Applesoft's error number 
 |---|---|---|
 | RUNTIME.S1 | $0803-$08DA | 10969 |
 | RUNTIME.S2 | $08DB-$0B10 | 9988 |
-| RUNTIME.S3 | $0B11-$0E33 | 11848 |
-| RUNTIME.S4 | $0E34-$1191 | 12043 |
-| RUNTIME.S5 | $1192-$14FC | 12010 |
+| RUNTIME.S3 | $0B11-$0E33 | 11854 |
+| RUNTIME.S4 | $0E34-$1191 | 12045 |
+| RUNTIME.S5 | $1192-$14FC | 12014 |
 | RUNTIME.S6 | $14FD-$17AF | 9506 |
