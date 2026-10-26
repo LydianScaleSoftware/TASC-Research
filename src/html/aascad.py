@@ -5,10 +5,11 @@ A Python reimplementation of Microsoft's TASC 2.01 Applesoft compiler (1981) tha
 produces the same object files byte for byte, and a decompiler that turns a TASC
 object file back into an Applesoft program which compiles to the same bytes.
 
-Copyright (c) 2026 Lydian Scale Software. Portions are the work of Microsoft: the code
-sequences and object file layout AASCAD reproduces and the RUNTIME library entry points
-it calls are those of TASC (copyright 1981 Microsoft), and its number conversion follows
-the Applesoft ROM (Applesoft, Microsoft and Apple). AASCAD is not a Microsoft product.
+Copyright (c) 2026 Lydian Scale Software (https://lydianscale.com). Portions are the
+work of Microsoft: the code sequences and object file layout AASCAD reproduces and the
+RUNTIME library entry points it calls are those of TASC (copyright 1981 Microsoft), and
+its number conversion follows the Applesoft ROM (Applesoft, Microsoft and Apple). AASCAD
+is not a Microsoft product.
 
     aascad compile SOURCE [-o OBJECT] [options]
         SOURCE is a text listing (numbered lines) or a tokenized Applesoft program
@@ -6164,10 +6165,11 @@ A Python reimplementation of Microsoft's TASC 2.01 Applesoft compiler (1981) tha
 produces the same object files byte for byte, and a decompiler that turns a TASC
 object file back into an Applesoft program which compiles to the same bytes.
 
-Copyright (c) 2026 Lydian Scale Software. Portions are the work of Microsoft: the code
-sequences and object file layout AASCAD reproduces and the RUNTIME library entry points
-it calls are those of TASC (copyright 1981 Microsoft), and its number conversion follows
-the Applesoft ROM (Applesoft, Microsoft and Apple). AASCAD is not a Microsoft product.
+Copyright (c) 2026 Lydian Scale Software (https://lydianscale.com). Portions are the
+work of Microsoft: the code sequences and object file layout AASCAD reproduces and the
+RUNTIME library entry points it calls are those of TASC (copyright 1981 Microsoft), and
+its number conversion follows the Applesoft ROM (Applesoft, Microsoft and Apple). AASCAD
+is not a Microsoft product.
 
     aascad compile SOURCE [-o OBJECT] [options]
         SOURCE is a text listing (numbered lines) or a tokenized Applesoft program

@@ -569,7 +569,7 @@ def aascad_page_html(info: tuple[int, str] | None) -> str:
               "on the image is replaced only with <code>--replace</code>.</p>"
               "<p>Addresses may be decimal, <code>$hex</code> or <code>0xhex</code>.</p>"
             + f'<h2>Examples</h2><pre class="usage">{html.escape(usage)}</pre>'
-            + "<h2>Copyright</h2><p class=\"muted\">AASCAD is copyright &copy; 2026 Lydian Scale Software. Portions are the work of Microsoft: the code sequences and object file layout it reproduces and the RUNTIME library entry points it calls are those of TASC (copyright &copy; 1981 Microsoft), and its number conversion follows the Applesoft ROM (Microsoft and Apple). AASCAD is not a Microsoft product.</p>"
+            + "<h2>Copyright</h2><p class=\"muted\">AASCAD is copyright &copy; 2026 <a href=\"https://lydianscale.com\">Lydian Scale Software</a>. Portions are the work of Microsoft: the code sequences and object file layout it reproduces and the RUNTIME library entry points it calls are those of TASC (copyright &copy; 1981 Microsoft), and its number conversion follows the Applesoft ROM (Microsoft and Apple). AASCAD is not a Microsoft product.</p>"
             + "</article></section>" + FOOTER + "</main></body></html>\n")
 
 
@@ -628,7 +628,7 @@ def _aascad_html(info: tuple[int, str] | None) -> str:
             'compiles an Applesoft program exactly as TASC 2.01 does, byte for byte, and turns a TASC object file '
             'back into an Applesoft program, checking that it compiles to the same bytes. '
             '<a href="AASCAD.html">Its options and how to use it</a>; '
-            f'<a href="{GITHUB}">project page on GitHub</a> <span class="muted">(placeholder)</span>. AASCAD is copyright &copy; 2026 Lydian Scale Software, with portions by Microsoft.</p>'
+            f'<a href="{GITHUB}">project page on GitHub</a> <span class="muted">(placeholder)</span>. AASCAD is copyright &copy; 2026 <a href="https://lydianscale.com">Lydian Scale Software</a>, with portions by Microsoft.</p>'
             f'<pre class="usage">{html.escape(usage)}</pre></section>')
 
 
