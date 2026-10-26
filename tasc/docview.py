@@ -81,6 +81,9 @@ details.fold>summary{padding:6px 12px;cursor:pointer;color:var(--muted);font-siz
 table.vars{border-collapse:collapse;width:100%;font-size:13px}
 table.vars th,table.vars td{border-bottom:1px solid var(--line);padding:4px 6px;text-align:left;vertical-align:top}
 table.vars td:first-child{font-family:ui-monospace,Menlo,Consolas,monospace;white-space:nowrap}
+.notice{margin-top:28px;border:1px solid var(--line);border-radius:6px;padding:4px 14px;background:var(--code);max-width:860px}
+.notice h2{font-size:16px;margin:10px 0 4px}
+.notice p{font-size:14px}
 .ov{max-width:860px}
 .ov td a{white-space:nowrap}
 table.asm{border-collapse:collapse;width:100%;font:12.5px/1.45 ui-monospace,Menlo,Consolas,monospace}
@@ -326,6 +329,15 @@ def index_html() -> str:
               'sharing a COMMON block: PASS0 asks the questions and sets up, PASS1 compiles, PASS2 finishes the '
               'object file. RUNTIME is the machine language library compiled programs call; MAKE RUNTIME builds it.</p>'
             + f'<table class="vars"><tr><th>Program</th><th>What it does</th><th></th><th></th></tr>{rows}</table>'
+            + '<section class="notice"><h2>Copyright and use</h2>'
+              '<p>TASC, its compiler passes and the RUNTIME library are the copyrighted work of Microsoft '
+              '(Copyright &copy; 1981 Microsoft), and Microsoft&rsquo;s ownership of this code is respected. '
+              'The sources, listings and documentation here are prepared with the intent of staying within the '
+              'bounds of fair use, and are for educational and historical purposes only: to study and preserve '
+              'how an early Apple&nbsp;II compiler worked. They are not offered for sale or for any commercial '
+              'use.</p>'
+              '<p>Any takedown or removal request from the copyright holder will be respected and acted on '
+              'promptly.</p></section>'
             + "</main></body></html>\n")
 
 
