@@ -128,6 +128,8 @@ def main() -> None:
     files = build()
     problems = check(IMAGE, files)
     print(disk.run_cp2("catalog", str(IMAGE.resolve())).rstrip())
+    from tasc import docview
+    docview.write_index()  # the downloadable copy on the index page
     print("check:", "; ".join(problems) if problems else
           "every pass on the disk is identical to src/PASSn.bas; RUNTIME.S1 and its chain, read back, assemble to RUNTIME")
 
