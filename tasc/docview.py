@@ -81,6 +81,7 @@ details.fold>summary{padding:6px 12px;cursor:pointer;color:var(--muted);font-siz
 table.vars{border-collapse:collapse;width:100%;font-size:13px}
 table.vars th,table.vars td{border-bottom:1px solid var(--line);padding:4px 6px;text-align:left;vertical-align:top}
 table.vars td:first-child{font-family:ui-monospace,Menlo,Consolas,monospace;white-space:nowrap}
+.foot{margin-top:32px;padding-top:10px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}
 .notice{margin-top:28px;border:1px solid var(--line);border-radius:6px;padding:4px 14px;background:var(--code);max-width:860px}
 .notice h2{font-size:16px;margin:10px 0 4px}
 .notice p{font-size:14px}
@@ -111,6 +112,10 @@ _kw = "|".join(re.escape(k) for k in KEYWORDS)
 _TOKEN = re.compile(rf'(?P<str>"[^"]*"?)|(?P<fn>\bFN [A-Z][A-Z0-9]?)|(?P<kw>(?<![A-Z0-9])(?:{_kw}))'
                     rf'|(?P<id>(?<![A-Z0-9])[A-Z][A-Z0-9]?[$%]?(?![A-Z0-9]))(?P<par>\()?')
 _JUMP = re.compile(r"\b(GOTO|GOSUB|THEN) (\d+(?:,\d+)*)")
+
+
+FOOTER = ('<footer class="foot">TASC and RUNTIME are copyright &copy; 1981 Microsoft. Shown for educational and '
+          'historical purposes only; see the <a href="index.html#copyright">copyright and use notice</a>.</footer>')
 
 
 def _anchor(num: int) -> str:
@@ -223,7 +228,7 @@ def listing_html(page: Page) -> str:
                     cells.append(f"<td>{html.escape(c)}</td>")
             trs.append("<tr>" + "".join(cells) + "</tr>")
         parts.append(f'<h2 id="vars">Variables</h2><table class="vars"><tr>{th}</tr>{"".join(trs)}</table>\n')
-    parts.append("</main></body></html>\n")
+    parts.append(FOOTER + "</main></body></html>\n")
     return "".join(parts)
 
 
@@ -315,7 +320,7 @@ def fill(template: str, final: dict[str, str], addr_line: dict[int, int], listin
 def overview_html(name: str, body_md: str) -> str:
     t = TITLES[name]
     return (_head(f"{t} overview", PURPOSE[name]) + _nav(name, f"{name}.OVERVIEW.html")
-            + '<article class="ov">' + markdown(body_md) + "</article></main></body></html>\n")
+            + '<article class="ov">' + markdown(body_md) + "</article>" + FOOTER + "</main></body></html>\n")
 
 
 def index_html() -> str:
@@ -329,7 +334,7 @@ def index_html() -> str:
               'sharing a COMMON block: PASS0 asks the questions and sets up, PASS1 compiles, PASS2 finishes the '
               'object file. RUNTIME is the machine language library compiled programs call; MAKE RUNTIME builds it.</p>'
             + f'<table class="vars"><tr><th>Program</th><th>What it does</th><th></th><th></th></tr>{rows}</table>'
-            + '<section class="notice"><h2>Copyright and use</h2>'
+            + '<section class="notice" id="copyright"><h2>Copyright and use</h2>'
               '<p>TASC, its compiler passes and the RUNTIME library are the copyrighted work of Microsoft '
               '(Copyright &copy; 1981 Microsoft), and Microsoft&rsquo;s ownership of this code is respected. '
               'The sources, listings and documentation here are prepared with the intent of staying within the '
@@ -448,7 +453,7 @@ def write_runtime(rows: list, labels: dict[int, str], ann: object,
             hs = f'<div class="h"><p><span class="ln">{labels.get(addr, "")}</span></p>{paras}</div>'
         parts.append(f'<section class="r">{hs}<div class="wrap"><table class="asm">{"".join(body)}</table></div></section>\n')
     parts.append(f'<h2 id="equates">Equates</h2><table class="vars"><tr><th>Name</th><th>Value</th><th>Meaning</th></tr>'
-                 f'{"".join(eq_rows)}</table>\n</main></body></html>\n')
+                 f'{"".join(eq_rows)}</table>\n' + FOOTER + '</main></body></html>\n')
     OUT.mkdir(exist_ok=True)
     (OUT / "RUNTIME.html").write_text("".join(parts))
     tmpl = ROOT / "docs" / "lift" / "annot" / "RUNTIME.overview.txt"

@@ -34,6 +34,7 @@ details.fold>summary{padding:6px 12px;cursor:pointer;color:var(--muted);font-siz
 table.vars{border-collapse:collapse;width:100%;font-size:13px}
 table.vars th,table.vars td{border-bottom:1px solid var(--line);padding:4px 6px;text-align:left;vertical-align:top}
 table.vars td:first-child{font-family:ui-monospace,Menlo,Consolas,monospace;white-space:nowrap}
+.foot{margin-top:32px;padding-top:10px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}
 .notice{margin-top:28px;border:1px solid var(--line);border-radius:6px;padding:4px 14px;background:var(--code);max-width:860px}
 .notice h2{font-size:16px;margin:10px 0 4px}
 .notice p{font-size:14px}
@@ -83,4 +84,4 @@ table.asm tr:target td,table.asm tr.hl td{background:var(--hl)}
 <p>89 bytes POKEd into $0377-$03CF (<a href="PASS0.html#L2240">line 2240</a>):</p>
 <table><tr><th>Entry</th><th>What it does</th></tr><tr><td>$0377</td><td>USR: stores the floating point accumulator, rounded, as 5 packed bytes at $0371-$0375 (how PASS1 packs a numeric constant)</td></tr><tr><td>$037E</td><td>reads one byte with RDKEY into $0376; with DOS reading a file, the byte comes from the file</td></tr><tr><td>$0387</td><td>prints the byte in $0376 with COUT; with DOS writing a file, it goes to the file</td></tr><tr><td>$038D</td><td>lists the tokenized line in the input buffer at $0280, spelling tokens from the ROM's keyword table (the compilation listing)</td></tr></table>
 <h3 id="symbol-table-chain-heads-set-at-line-2310-pass0-html-l2310">Symbol table chain heads (set at <a href="PASS0.html#L2310">line 2310</a>)</h3>
-<p>SC(0) heads the list of COMMON declarations; 1-4 are the FN chains, 5-8 the temporaries (5 integer, 6 string, 7 real, 8 inside DEF FN), 9-40 the variable chains, 41-72 the constant chains and 73-104 the line number chains. PASS0 zeroes them all. The call and operator tables lie above them, in the space where PASS1 later allocates entries: PASS1 copies the tables out before it allocates anything.</p></article></main></body></html>
+<p>SC(0) heads the list of COMMON declarations; 1-4 are the FN chains, 5-8 the temporaries (5 integer, 6 string, 7 real, 8 inside DEF FN), 9-40 the variable chains, 41-72 the constant chains and 73-104 the line number chains. PASS0 zeroes them all. The call and operator tables lie above them, in the space where PASS1 later allocates entries: PASS1 copies the tables out before it allocates anything.</p></article><footer class="foot">TASC and RUNTIME are copyright &copy; 1981 Microsoft. Shown for educational and historical purposes only; see the <a href="index.html#copyright">copyright and use notice</a>.</footer></main></body></html>
