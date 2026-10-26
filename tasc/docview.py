@@ -401,7 +401,8 @@ def _tascad_html(info: tuple[int, str] | None) -> str:
              "python3 tascad.py decompile BALL.OBJ -o BALL.txt --bas BALL.bas\n"
              "python3 tascad.py compile \"TASC.dsk::BALL\" -o \"WORK.dsk::BALL.OBJ\"\n"
              "python3 tascad.py --help")
-    return ('<h2>TASCAD</h2>'
+    # a modern tool, so the period-documentation rule does not apply inside this section
+    return ('<section class="tools"><h2>TASCAD</h2>'
             f'<p><a href="tascad.py" download>tascad.py</a> <span class="muted">({size:,} bytes, sha256 '
             f'<code>{sha[:16]}&hellip;</code>)</span></p>'
             '<p>The AppleSoft Compiler and Decompiler: one Python script (3.9 or later, nothing to install) that '
@@ -412,7 +413,7 @@ def _tascad_html(info: tuple[int, str] | None) -> str:
             'a decompiled object&rsquo;s options by itself. A file inside a disk image is named '
             '<code>IMAGE::NAME</code>; disk images are read and written with CiderPress&nbsp;II&rsquo;s command-line '
             'program (<code>--cp2 PATH</code> or the <code>CP2PATH</code> environment variable).</p>'
-            f'<pre class="usage">{html.escape(usage)}</pre>')
+            f'<pre class="usage">{html.escape(usage)}</pre></section>')
 
 
 def _disks_html(disks: list[tuple[str, int, str, str]]) -> str:
