@@ -27,7 +27,7 @@ from tasc.decomp.lift import BinN, FnDef, Leaf, Lifted, Unknown, lift
 from tasc.decomp.lift import Node as ExprNode
 from tasc.decomp.render import Line, Renderer, layout, listing, program_bytes
 from tasc.decomp.walk import Sym, walk
-from tasc.harness import Options
+from tasc.options import Options
 
 DECL_WIDTH = 200
 REM, DIM = bytes([TOK["REM"]]), bytes([TOK["DIM"]])

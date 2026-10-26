@@ -15,7 +15,7 @@ from tasc.compiler.fin import fin
 from tasc.compiler.parse import (
     TOK, Bin, Builtin, Expr, FnCall, Num, ParseError, Stmt, Str, Unary, VarRef, is_str, iter_statements, read_program,
 )
-from tasc.harness import Options
+from tasc.options import Options
 
 # ---------------------------------------------------------------- RUNTIME / ROM addresses (library at $0803)
 

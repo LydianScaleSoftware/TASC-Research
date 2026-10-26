@@ -64,6 +64,8 @@ The loop, after each batch of annotations:
 
 ## Things to watch
 
+- **TASCAD** (session 6): dist/tascad.py is generated; after changing the compiler, decompiler or tasc/tascad.py run `python -m tasc.bundle` (pytest test_bundle_is_current fails otherwise).
+
 - **Source disk** (session 6): images/source/TASC 2.01 SOURCE.dsk, rebuilt by `python -m tasc.sourcedisk` whenever the sources change; `--compile` re-proves it with TASC in drive 1 and the disk in drive 2.
 
 - **Documentation views** (session 6): src/html/ (listing + overview per program) and src/PASSn.OVERVIEW.TXT are generated with the sources; edit docs/lift/annot/<PASS>.overview.txt, never the generated files.

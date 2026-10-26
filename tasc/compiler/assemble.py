@@ -5,7 +5,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 
 from tasc.compiler.codegen import RT_RANGE, Compiler, CompileError, Item, Ref, Sym, parse_program
-from tasc.harness import Options
+from tasc.options import Options
 
 LIB_SIZE = 4013  # RUNTIME 2.01
 DISP = {"real": 0x1764, "int": 0x0D06, "str": 0x0C7F}
