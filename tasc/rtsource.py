@@ -103,18 +103,19 @@ def build_items(ann: Ann) -> tuple[list[Item], dict[int, str]]:
             items += _data_items(first, last, kind, comment)
             a = last + 1
             continue
-        i = insns.get(a)
-        if i is None:
+        found = insns.get(a)
+        if found is None:
             raise ValueError(f"no instruction or data at ${a:04X}")
-        inner = [k for k in range(1, i.length) if a + k in starts]
+        insn = found
+        inner = [k for k in range(1, insn.length) if a + k in starts]
         if inner:  # BIT used to skip the next instruction
             k = inner[0]
             items.append(Item(a, k, "DFB", ",".join(f"${b:02X}" for b in DATA[a - LIB:a - LIB + k]),
                               "BIT ABSOLUTE: SKIPS THE NEXT 2 BYTES" if DATA[a - LIB] == 0x2C else "SKIPS THE NEXT BYTES"))
             a += k
             continue
-        items.append(_insn_item(i, labels))
-        a += i.length
+        items.append(_insn_item(insn, labels))
+        a += insn.length
     return items, labels
 
 
