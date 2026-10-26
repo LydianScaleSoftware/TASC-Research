@@ -32,12 +32,12 @@ No source was ever published. This project reconstructs it.
 
 This project relied heavily on **Claude Code with Claude Opus 5.5**, which did most
 of the analysis, coding, annotation and testing. It was a guided effort, not an
-unattended one: Mark, of Lydian Scale Software, set the goals, the rules and the
+unattended one: I set the goals, the rules and the
 standards, made the judgment calls, and reviewed the results, working through a custom
 ecosystem of tools built so the agent could run its own experiments and check its own
 work against the real software:
 
-- **An Apple II emulator the agent could drive.** The Pandowdy emulator, with a custom
+- **An Apple II emulator the agent could drive.** The (as-of-yet unreleased) Pandowdy emulator, with a custom
   MCP server, let Claude boot disks, type, set breakpoints and watchpoints, and read
   memory and the screen. A Python harness ran up to twelve emulators in parallel, each
   booting the original TASC disk to compile a test program, so any question about

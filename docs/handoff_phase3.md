@@ -1,10 +1,10 @@
 # Handoff: TASC reverse engineering, start of Phase 3
 
-You are continuing a long-running project with Mark (experienced developer, deep Apple II background; he owns the tools and reviews the work). Sessions 1-3 completed Phases 0, 1, 2 and R. This session starts **Phase 3**.
+You are continuing a long-running project with the project owner (experienced developer, deep Apple II background; owns the tools and reviews the work). Sessions 1-3 completed Phases 0, 1, 2 and R. This session starts **Phase 3**.
 
 ## Read first (in this order)
 
-1. **The original handoff prompt:** `/Users/mlong/research/tasc_project/TASC_handoff_prompt.md`. It holds the mission, goals, rules, phase plan, conventions (sections 5-8, 6a, 6b) and how to work with Mark. Everything in it still applies unless this document updates it.
+1. **The original handoff prompt:** `/Users/mlong/research/tasc_project/TASC_handoff_prompt.md`. It holds the mission, goals, rules, phase plan, conventions (sections 5-8, 6a, 6b) and how to work with the project owner. Everything in it still applies unless this document updates it.
 2. **The project notes:** `/Users/mlong/research/tasc_project/tasc-re/NOTES.md` (status, decisions, hypotheses table, layout).
 3. **The RAG collection `TASC project`** (see the list below). Search it before re-deriving anything. Search scope: `collections: ["TASC project", "Apple II programming", "Apple 2 Software"]`.
 
@@ -15,7 +15,7 @@ Repo: `/Users/mlong/research/tasc_project/tasc-re` (git, main branch; last commi
 - **Phase 0 (done).** Scripted loop: `python -m tasc.phase0`. TASC is deterministic (H4).
 - **Phase 1 (done; exit criterion met).** The Python predictor `tasc/compiler/` (parse.py, codegen.py, assemble.py, fin.py) reproduces **BALL.OBJ byte for byte** and **all 1,528 recorded real-TASC compiles**, including 603 random programs (`python -m tasc.predict_check`; pytest `tests/test_compiler.py`). The predictor's code and comments are the authoritative template set; `tasc/templates/core.json` is an older summary. This predictor is the seed of the Phase 3 compiler: Phase 3's job is to make it *derived from* TASC's own code (lifting PASS1/PASS2), not just observed behaviour, and to cover anything the observations never exercised.
 - **Phase 2 (done for the PASS files).** `python -m tasc.classify extracted/tasc201/PASSn#0641f2`: every byte of PASS0/1/2 is TASC template output; **zero foreign bytes** (H3 confirmed). The only hand-written code the PASS files use is an 89-byte block POKEd from **PASS0 DATA** to $0377-$03CF (`ml/pass0_page3.hex`, H7 confirmed): because it lives in DATA statements, recovering TASC's source reproduces it automatically. PASS0 also patches DOS 3.3 (6 bytes) so TASC can READ the tokenized source as a text file; the originals are saved in a COMMON array.
-- **Phase R (done enough; reassemblable source deferred by Mark).** `python -m tasc.rtdis --listing docs/runtime/runtime_listing.txt`: RUNTIME is hand-written (H6 confirmed); 3,925/4,013 bytes are code, the rest classified. Documented: RT.INIT, TASC's entry table, the three variable dispatchers, integer multiply, arrays, FOR/NEXT frames (measured), strings and GC, INPUT/READ/GET, STOP/END, ONERR/RESUME (traced in Pandowdy), statement/graphics entries. **Mark will return to a reassemblable RUNTIME source later; do not start it now.**
+- **Phase R (done enough; reassemblable source deferred).** `python -m tasc.rtdis --listing docs/runtime/runtime_listing.txt`: RUNTIME is hand-written (H6 confirmed); 3,925/4,013 bytes are code, the rest classified. Documented: RT.INIT, TASC's entry table, the three variable dispatchers, integer multiply, arrays, FOR/NEXT frames (measured), strings and GC, INPUT/READ/GET, STOP/END, ONERR/RESUME (traced in Pandowdy), statement/graphics entries. **The project owner will return to a reassemblable RUNTIME source later; do not start it now.**
 
 ## Hypotheses (from NOTES.md)
 
@@ -31,7 +31,7 @@ Goal (original prompt section 9): lift PASS1's code generator and PASS2's backpa
 4. **Explain the remaining observed-only rules from the lifted code:** why main-program temps are int-first while FN-body temps follow creation order; the RESUME/Debug statement list; the string-compare swap (simple left, complex right); the "unparsed skip" after GOTO/THEN line/RETURN/END/STOP/NEW/ONERR (and RESUME with debug on).
 5. Exit: the Python compiler matches real TASC on all test programs (rerun `tasc.predict_check`, add more random batches with `python -m tasc.gen_random <family> <n> <seed> --v2`).
 
-Ask Mark before costly or irreversible choices (IR design if it diverges from section 6 of the original prompt, large refactors of tasc/compiler).
+Ask the project owner before costly or irreversible choices (IR design if it diverges from section 6 of the original prompt, large refactors of tasc/compiler).
 
 ## Key facts to carry forward (details in RAG)
 
@@ -66,5 +66,5 @@ Ask Mark before costly or irreversible choices (IR design if it diverges from se
 
 - mypy strict reports ~31 errors (mostly `Ref` payload typing in `tasc/compiler/`); clean up when convenient.
 - GUESS markers remaining in `tasc/compiler/codegen.py` (string compare swap; RESUME/Debug list beyond tested statements).
-- Reassemblable RUNTIME source: deferred by Mark.
+- Reassemblable RUNTIME source: deferred.
 - Update NOTES.md at the end of each work block and push RAG chunks for new findings (dead ends too), per the original prompt section 8.

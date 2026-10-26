@@ -12,21 +12,21 @@ Entry point for any new session. **Current handoff: `docs/handoff_phase5.md`** (
 - **Session 6: PASS2 annotated** (docs/lift/annot/PASS2.ann: all 35 locals, 6 DEF FNs, ~40 routine headers, ~200 line comments; PASS2 added to DOCUMENTED, so all three passes are documented). All PASS2 routines are explained in the DOC: reference pairs and the shell sort, CLINENUM lookup, undefined line/FN reports, constant pool, COMMON allocation, routine-area size, the three routine/local passes (routine byte layouts), page-by-page backpatching (DATA chain, line/FN pairs, numeric op groups incl. FOR/NEXT and AND/OR, string/array routines), header, report. The standalone-documentation test now allows a word H1-H7 when it is a variable listed in that file's VARS compendium (the solver named a PASS2 variable H4). docs/lift/PASS2.md corrected: real constants are always written.
 - **Session 6: HTML views and overviews.** tasc/docview.py writes src/html/: per program an annotated listing (routine sections with their comment above, line comments beside, variable meanings on hover, GOTO/GOSUB/THEN links, the compendium at the end) and an overview page; src/PASSn.OVERVIEW.TXT is the overview text. Overviews are hand-written templates in docs/lift/annot/<PASS>.overview.txt with {NAME} and [[$addr]] (a line link by object address), filled at generation so they follow renaming and renumbering; sourcegen writes the pass pages, `python -m tasc.docview` the MAKE RUNTIME pages. The standalone test covers the new files (HTML checked on its visible text). Preview: the `tasc-html` entry in /Users/mlong/RAG/.claude/launch.json serves src/html on port 8766.
 - **Session 6: source disk.** `images/source/TASC 2.01 SOURCE.dsk` (built by `python -m tasc.sourcedisk`): bootable DOS 3.3 (cp2 `cdi ... 35trk dos` writes the DOS image), HELLO (banner + CATALOG), MAKE RUNTIME, PASS0, PASS1, PASS2 as tokenized A files identical to src/PASSn.bas; 289 sectors free. Checked in Pandowdy: boots, each program LOADs (PASS1 20,780 bytes, 15,571 free). `python -m tasc.sourcedisk --compile`: real TASC in drive 1 compiles each pass from the source disk in drive 2 (`PASSn,D2`, object to drive 2) into files identical to PASS0/1/2 (experiments/p5_sourcedisk/*/summary.json).
-- **Session 6: RUNTIME source.** `python -m tasc.rtsource` writes src/RUNTIME.S (EDASM-style 6502 source, Mark's choice of syntax: labels <= 8 chars, ORG/EQU/DFB, `*` and `;` comments) from the flow disassembly and docs/lift/annot/RUNTIME.ann (equates for page zero/ROM, labels for every entry and internal target, 66 routine blocks, ~450 line comments, data runs), and checks it with tasc/edasm.py, a two-pass assembler for that subset with EDASM's zero-page rule: it assembles to RUNTIME byte for byte (pytest test_runtime_source_assembles). BIT-skip bytes and four absolute-on-page-zero instructions (LDA/CMP $00F1/$00F2/$00FF,X: stack-page access) are DFB. Findings: $109B-$10C7 is leftover assembler text (the BCS before it is always taken; the old notes started it at $109E); $0947 is RESETSTK (bottom-of-stack return into NORET); $1413 ERREXIT is the common error exit; CLEAR CHAIN returns into CLEAR. HTML: src/html/RUNTIME.html (assembler listing with links) and RUNTIME.OVERVIEW.html. Mark: EDASM cannot assemble a source that large, so (his choice) the disk copy is split into src/runtime/RUNTIME.S1-S6, single-spaced, at most 12K each (PART_LIMIT), cut at routine blocks; S1 holds the equates and ORG and each part ends with `CHN RUNTIME.Sn+1` (tasc/edasm.py follows CHN with one symbol table). src/RUNTIME.S stays as the combined reading copy. The source disk holds the six parts as DOS text files (20 sectors left); the check reads them back and assembles the chain to RUNTIME; DOS reads them line by line (checked in Pandowdy). With no room left for objects, `--compile` now writes the object to drive 1.
-- **Session 6: verified with the real EDASM.** Mark supplied the DOS Tool Kit (images/original/DOSToolkit.dsk, 143,488 bytes = a 140K DOS 3.3 disk plus a 128-byte trailer `AF EC EE 00...`; images/work/dostoolkit.dsk is the trimmed 140K copy). EDITOR-ASSEMBLER 1.0 (1979, ASSM at $1200, EDITOR at $11FF); directives EQU ORG OBJ LST DFB PAGE ASC DCI DW MSB DDB DS REP CHR SKP DSECT DEND DO ELSE FIN CHN REL EXTRN ENTRY SBTL (CHN yes, no INCLUDE); editor commands include DRIVE, LOAD/SAVE, TLOAD/TSAVE, LENGTH; the editor buffer holds 30,208 bytes; keys typed ahead are dropped. `python -m tasc.edasmrun` boots the Tool Kit with the source disk in drive 2, RUN EDASM, DRIVE 2, ASM RUNTIME.S1: first run 13 errors because EDASM needs `ASL A` (a bare ASL/LSR/ROL/ROR is an error assembled as 3 bytes); after the fix: SUCCESSFUL ASSEMBLY: NO ERRORS, RUNTIME.S1.OBJ0 = RUNTIME byte for byte (sha256 3982a702...; experiments/p5_edasm/summary.json). tasc/edasm.py now rejects a bare accumulator opcode too. EDASM writes the screen with its own routine, so the harness's scroll capture keeps only the last screen.
-- **Session 6, later: TASCAD renamed AASCAD (Another AppleSoft Compiler And Decompiler), Mark's choice.** tasc/aascad.py, dist/aascad.py, tests/test_aascad.py; copyright (c) 2026 Lydian Scale Software, with the TASC-derived parts (generated code sequences, object layout, RUNTIME entry points) credited to Microsoft and the number conversion to the Applesoft ROM. The site (src/html) gained AASCAD.html (options, examples, a placeholder GitHub link: docview.GITHUB), MANUAL.html (the transcribed manual rendered by docview.markdown, which now handles block quotes, rules, list items holding paragraphs and code, and <!-- p.N --> page marks) and manual/ (the PDF scan and the Markdown, copied from the tasc_project folder by docview.copy_manual; the PDF is a download only). docview.write_index() refreshes all of it. src/html is meant to be archived whole (tar -czf tasc-html.tgz -C src html); tests/test_decomp.py::test_html_folder_is_self_contained checks every local link and anchor resolves inside it and nothing is loaded from elsewhere.
-- **Session 6: TASCAD (The AppleSoft Compiler and Decompiler), Mark's name.** One script, dist/tascad.py (built by `python -m tasc.bundle` from the modules; it embeds every module's source verbatim with an import hook, because 10 top-level names such as Sym/Line/Stmt differ between modules, so the bundled code is the tested code). Front end tasc/tascad.py: `tascad compile SOURCE` (text listing via tasc.applesoft.tokenize_program, which reproduces PASS0-2 exactly, or a tokenized program; TASC options as flags; --compare, --map) and `tascad decompile OBJECT` (load address = header string-COMMON end + 1, library = JSR operand, COMMON start from the header; the code options found by trying all eight combinations until the recompile is identical; reports only verified results). Files are local; IMAGE::NAME reads/writes inside a disk image through CiderPress II (--cp2 PATH, $CP2PATH, or cp2 on the PATH); binary files from an image bring their load address; writes refuse an existing name unless --replace (cp2 add silently skips an existing name otherwise). Options moved from tasc/harness.py to tasc/options.py. Tests (tests/test_tascad.py): the committed bundle equals a fresh build; run isolated in an empty folder it compiles BALL and PASS0-2 to the originals and decompiles PASS0-2 with verified round trips. Also checked on macOS's Python 3.9.6.
-- **Proof (session 6, final names after PASS2):** `python -m tasc.selfcompile PASS0/PASS1/PASS2`: real TASC compiles the regenerated sources (306, 1,345 and 504 lines) into files identical to PASS0/1/2 (sha256 e500a1ff..., 71768885..., 218d8a5b...; experiments/p3_selfcompile/*/summary.json). Full pytest 24 passed. Next: Mark's review of the DOC/VARS files; then the final proof for goal 5 (already passing) and freezing the numbering.
+- **Session 6: RUNTIME source.** `python -m tasc.rtsource` writes src/RUNTIME.S (EDASM-style 6502 source, the chosen syntax: labels <= 8 chars, ORG/EQU/DFB, `*` and `;` comments) from the flow disassembly and docs/lift/annot/RUNTIME.ann (equates for page zero/ROM, labels for every entry and internal target, 66 routine blocks, ~450 line comments, data runs), and checks it with tasc/edasm.py, a two-pass assembler for that subset with EDASM's zero-page rule: it assembles to RUNTIME byte for byte (pytest test_runtime_source_assembles). BIT-skip bytes and four absolute-on-page-zero instructions (LDA/CMP $00F1/$00F2/$00FF,X: stack-page access) are DFB. Findings: $109B-$10C7 is leftover assembler text (the BCS before it is always taken; the old notes started it at $109E); $0947 is RESETSTK (bottom-of-stack return into NORET); $1413 ERREXIT is the common error exit; CLEAR CHAIN returns into CLEAR. HTML: src/html/RUNTIME.html (assembler listing with links) and RUNTIME.OVERVIEW.html. EDASM cannot assemble a source that large, so (by decision) the disk copy is split into src/runtime/RUNTIME.S1-S6, single-spaced, at most 12K each (PART_LIMIT), cut at routine blocks; S1 holds the equates and ORG and each part ends with `CHN RUNTIME.Sn+1` (tasc/edasm.py follows CHN with one symbol table). src/RUNTIME.S stays as the combined reading copy. The source disk holds the six parts as DOS text files (20 sectors left); the check reads them back and assembles the chain to RUNTIME; DOS reads them line by line (checked in Pandowdy). With no room left for objects, `--compile` now writes the object to drive 1.
+- **Session 6: verified with the real EDASM.** The DOS Tool Kit was supplied (images/original/DOSToolkit.dsk, 143,488 bytes = a 140K DOS 3.3 disk plus a 128-byte trailer `AF EC EE 00...`; images/work/dostoolkit.dsk is the trimmed 140K copy). EDITOR-ASSEMBLER 1.0 (1979, ASSM at $1200, EDITOR at $11FF); directives EQU ORG OBJ LST DFB PAGE ASC DCI DW MSB DDB DS REP CHR SKP DSECT DEND DO ELSE FIN CHN REL EXTRN ENTRY SBTL (CHN yes, no INCLUDE); editor commands include DRIVE, LOAD/SAVE, TLOAD/TSAVE, LENGTH; the editor buffer holds 30,208 bytes; keys typed ahead are dropped. `python -m tasc.edasmrun` boots the Tool Kit with the source disk in drive 2, RUN EDASM, DRIVE 2, ASM RUNTIME.S1: first run 13 errors because EDASM needs `ASL A` (a bare ASL/LSR/ROL/ROR is an error assembled as 3 bytes); after the fix: SUCCESSFUL ASSEMBLY: NO ERRORS, RUNTIME.S1.OBJ0 = RUNTIME byte for byte (sha256 3982a702...; experiments/p5_edasm/summary.json). tasc/edasm.py now rejects a bare accumulator opcode too. EDASM writes the screen with its own routine, so the harness's scroll capture keeps only the last screen.
+- **Session 6, later: TASCAD renamed AASCAD (Another AppleSoft Compiler And Decompiler).** tasc/aascad.py, dist/aascad.py, tests/test_aascad.py; copyright (c) 2026 Lydian Scale Software, with the TASC-derived parts (generated code sequences, object layout, RUNTIME entry points) credited to Microsoft and the number conversion to the Applesoft ROM. The site (src/html) gained AASCAD.html (options, examples, a placeholder GitHub link: docview.GITHUB), MANUAL.html (the transcribed manual rendered by docview.markdown, which now handles block quotes, rules, list items holding paragraphs and code, and <!-- p.N --> page marks) and manual/ (the PDF scan and the Markdown, copied from the tasc_project folder by docview.copy_manual; the PDF is a download only). docview.write_index() refreshes all of it. src/html is meant to be archived whole (tar -czf tasc-html.tgz -C src html); tests/test_decomp.py::test_html_folder_is_self_contained checks every local link and anchor resolves inside it and nothing is loaded from elsewhere.
+- **Session 6: TASCAD (The AppleSoft Compiler and Decompiler).** One script, dist/tascad.py (built by `python -m tasc.bundle` from the modules; it embeds every module's source verbatim with an import hook, because 10 top-level names such as Sym/Line/Stmt differ between modules, so the bundled code is the tested code). Front end tasc/tascad.py: `tascad compile SOURCE` (text listing via tasc.applesoft.tokenize_program, which reproduces PASS0-2 exactly, or a tokenized program; TASC options as flags; --compare, --map) and `tascad decompile OBJECT` (load address = header string-COMMON end + 1, library = JSR operand, COMMON start from the header; the code options found by trying all eight combinations until the recompile is identical; reports only verified results). Files are local; IMAGE::NAME reads/writes inside a disk image through CiderPress II (--cp2 PATH, $CP2PATH, or cp2 on the PATH); binary files from an image bring their load address; writes refuse an existing name unless --replace (cp2 add silently skips an existing name otherwise). Options moved from tasc/harness.py to tasc/options.py. Tests (tests/test_tascad.py): the committed bundle equals a fresh build; run isolated in an empty folder it compiles BALL and PASS0-2 to the originals and decompiles PASS0-2 with verified round trips. Also checked on macOS's Python 3.9.6.
+- **Proof (session 6, final names after PASS2):** `python -m tasc.selfcompile PASS0/PASS1/PASS2`: real TASC compiles the regenerated sources (306, 1,345 and 504 lines) into files identical to PASS0/1/2 (sha256 e500a1ff..., 71768885..., 218d8a5b...; experiments/p3_selfcompile/*/summary.json). Full pytest 24 passed. Next: a review of the DOC/VARS files; then the final proof for goal 5 (already passing) and freezing the numbering.
 
 
 - Phases 0, 1, 2, R: done (sessions 1-3; details in RAG phase0/1/2, runtime*).
-- **Phase 3: closed (2026-10-25, agreed with Mark).** Exit criterion met: the
+- **Phase 3: closed (2026-10-25, agreed).** Exit criterion met: the
   Python compiler (`tasc/compiler/`) matches real TASC byte for byte on every
   recorded program, 1,954 compiles including BALL, and rejects all 237 programs
   TASC rejects (`python -m tasc.predict_check`). Rules are lifted from PASS1/PASS2
   where read (`docs/lift/PASS1.md`, `PASS2.md`; RAG `phase3-lift.md`); no GUESS
   markers left. Real-TASC case lists: `python -m tasc.lift_checks [--unsup | --then]`.
-- **Phase 4: closed (2026-10-25, agreed with Mark).** Exit criterion met: the
+- **Phase 4: closed (2026-10-25, agreed).** Exit criterion met: the
   decompiler (`tasc/decomp/`) round-trips all 1,954 recorded compiles and BALL.OBJ
   (`python -m tasc.decomp.decompile --corpus`, pytest tests/test_decomp.py).
 - **Phase 5: started.** MAKE RUNTIME done: `src/MAKE_RUNTIME.txt` (+ DOC/VARS)
@@ -45,7 +45,7 @@ Entry point for any new session. **Current handoff: `docs/handoff_phase5.md`** (
   compendiums (section 6b) with their pytest checkers, re-run the self-compile
   proof after renaming. Carried into Phase 5 as background reading: the PASS1
   parser corners (functions 4270-4440, arrays 3285-3500, DATA/INPUT details) and
-  PASS0. Open decisions for Mark (see below).
+  PASS0. Open decisions: see below.
 - Housekeeping: mypy strict (~35 errors in tasc/decomp, ~31 older in tasc/compiler).
 
 ### How the predictor is debugged
@@ -82,13 +82,13 @@ boot takes about 10 s of wall time.
 
 ## Decisions
 
-- **Phase 5 integer declarations (Mark, 2026-10-25):** declare every integer
+- **Phase 5 integer declarations (decided 2026-10-25):** declare every integer
   scalar and array with `REM! INTEGER` (option 1), grouping related variables in
   the declaration lines where the hash-order constraints allow (option 3);
   INTEGER lines come before the COMMON declaration. Evidence: integer FOR loops in
   PASS1/PASS2 require INTEGER-declared names; reals in every pass rule out
   `INTEGER *`; PASS1's integers in first-use order would need 38 hash buckets.
-- **Phase 5 line numbers (Mark, 2026-10-25):** steps of 10; a subroutine starts at
+- **Phase 5 line numbers (decided 2026-10-25):** steps of 10; a subroutine starts at
   the smallest multiple of 100 that is not the very next line number (after a
   routine ending at 90 the next starts at 200, after 150 at 200, after 190 at
   300). A GOSUB target that the previous line falls into (an alternate entry)
@@ -100,7 +100,7 @@ boot takes about 10 s of wall time.
   boundaries are constrained. One statement per line except forced groupings.
   Frozen once Phase 5's DOC/VARS files are published; later changes carry
   documentation over by object address.
-- **Phase 5 variable names (Mark, 2026-10-25):** the ideal name conveys the
+- **Phase 5 variable names (decided 2026-10-25):** the ideal name conveys the
   variable's usage or meaning, from analysis of what the program does; keep that
   goal, and where the hash order forbids it fall back to a similar first letter
   with a second letter or digit chosen to fit the logic; never a keyword.
@@ -112,22 +112,22 @@ boot takes about 10 s of wall time.
   development side (`docs/lift/annot/PASSn.names.txt`), not in the VARS file
   (standalone rule). Declarations: names sharing a bucket must keep their storage
   order, so groups interleave; short runs join the previous INTEGER line.
-  Mark (2026-10-25): the resulting names are acceptable as long as they are
+  Decided 2026-10-25: the resulting names are acceptable as long as they are
   documented well; no further naming tuning (single letters are already
   candidates, but each has only one bucket per type, so few survive). The effort
   goes into DOC/VARS quality.
-- **Page-3 ML block (Mark, 2026-10-25):** stays in PASS0's DATA statements, loaded by
+- **Page-3 ML block (decided 2026-10-25):** stays in PASS0's DATA statements, loaded by
   the original FOR/READ/POKE loop and USR-vector POKEs (the DATA text and its split
   into four statements are fixed by the object; the original method is the only one
   that keeps PASS0 byte-identical). Its DOC lines describe the routines themselves
   (entry points, what each does), standalone.
-- **Recovered-source documentation is standalone (Mark, 2026-10-25):** DOC and VARS
+- **Recovered-source documentation is standalone (decided 2026-10-25):** DOC and VARS
   files (and anything else shipped with the recovered sources) must read as written
   by a programmer on an original Apple II: no references to this repository (ml/,
   RAG, .md files), hypotheses (H1-H7), tools (Pandowdy, Python, cp2) or the
   reverse-engineering process. Explain the code in its own terms (addresses, ROM
   routines, DOS). Enforced by pytest test_source_documentation_is_standalone.
-- **MAKE RUNTIME (Mark, 2026-10-25):** RUNTIME is hand-written (H6), so add an
+- **MAKE RUNTIME (decided 2026-10-25):** RUNTIME is hand-written (H6), so add an
   Applesoft program `MAKE RUNTIME` that POKEs RUNTIME's 4,013 bytes from DATA
   statements and BSAVEs `RUNTIME,A$803,L4013` (not in the manual; consistent with
   how the original was probably built). Proof: run it in Pandowdy and compare the
@@ -193,6 +193,6 @@ boot takes about 10 s of wall time.
 - PASS1 is identical in 2.0 and 2.01; PASS0, PASS2 and RUNTIME differ (same
   lengths for PASS2 and RUNTIME).
 
-## Open questions for Mark
+## Open questions
 
 - None blocking. Phase 5 defaults all decided (see Decisions).

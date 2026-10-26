@@ -54,7 +54,7 @@ def test_make_runtime_listing() -> None:
 
 def test_source_documentation_is_standalone() -> None:
     """Recovered-source documentation (DOC/VARS files) must read as written on the original
-    Apple II: no references to this project's files, tools or hypotheses (Mark, 2026-10-25)."""
+    Apple II: no references to this project's files, tools or hypotheses (decided 2026-10-25)."""
     import re
 
     src = Path(__file__).parents[1] / "src"

@@ -161,7 +161,7 @@ def routine_starts(lf: Lifted) -> set[int]:
 
 
 def _number_routines(u: Unit, last_decl: int) -> None:
-    """Phase 5 numbering (Mark, 2026-10-25): steps of 10; a routine starts at the smallest
+    """Phase 5 numbering (decided 2026-10-25): steps of 10; a routine starts at the smallest
     multiple of 100 that is not the very next number (after 90: 200; after 150: 200); a
     routine start that the previous line falls into skips one number instead (after 50: 70).
     The program body starts like a routine."""
@@ -267,7 +267,7 @@ def _weight(x: Node, y: Node, unit: int) -> int:
 
 
 def _candidates(pref: str) -> list[list[str]]:
-    """Fallback tiers for a preferred name (Mark, 2026-10-25): the name itself; the same
+    """Fallback tiers for a preferred name (decided 2026-10-25): the name itself; the same
     first letter with another letter (nearest to the preferred second letter first); the
     same first letter alone or with a digit; then other first letters."""
     p1, p2 = pref[0], pref[1:2]
@@ -310,7 +310,7 @@ def _solve_group(nodes: list[Node], edges: dict[tuple[Node, Node], int], pools: 
     if len(order) != len(nodes):
         raise DecompileError("cyclic symbol-order constraints")
     # Buckets by dynamic programming along the order: nondecreasing, +1 before a node with a
-    # strict incoming edge, maximising the quality of the names that fit (Mark, 2026-10-25:
+    # strict incoming edge, maximising the quality of the names that fit (decided 2026-10-25:
     # names that say what the variable is for; else a similar first letter with a second
     # letter or digit).
     pos = {n: i for i, n in enumerate(order)}

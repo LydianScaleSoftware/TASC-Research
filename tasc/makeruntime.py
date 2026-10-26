@@ -4,7 +4,7 @@
                                          compare the BSAVEd RUNTIME with the original
 
 RUNTIME is hand-written machine language (H6), so it has no Applesoft source; this
-program is the build step for it (Mark, 2026-10-25): it POKEs the 4,013 bytes from
+program is the build step for it (decided 2026-10-25): it POKEs the 4,013 bytes from
 DATA into $0803-$17AF and does BSAVE RUNTIME,A$803,L4013.  The bytes go where an
 Applesoft program normally lives ($0801), so line 10 first moves the program start
 to $4001 (TXTTAB $67/$68, with a 0 byte before it) and re-runs the program from
@@ -49,7 +49,7 @@ def documentation(data: bytes) -> tuple[str, str]:
     """MAKE_RUNTIME.DOC.TXT (one REM line per source line, same numbers) and
     MAKE_RUNTIME.VARS.TXT (variable compendium), per handoff section 6b."""
     # Standalone, period documentation: it must read as written on the original Apple II
-    # and never refer to this project's files or tools (Mark, 2026-10-25).
+    # and never refer to this project's files or tools (decided 2026-10-25).
     doc = [
         "10 REM RUNTIME LOADS AT $0803-$17AF, WHERE AN APPLESOFT PROGRAM NORMALLY LIVES. IF THIS "
         "PROGRAM IS STILL THERE (HIGH BYTE OF THE PROGRAM START, LOCATION 104, BELOW 64), MOVE THE "
