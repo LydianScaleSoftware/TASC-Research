@@ -86,7 +86,7 @@ the shipped program exactly.
 | `dist/aascad.py` | AASCAD, as one script |
 | `tasc/` | The project's Python code: emulator harness, compiler, decompiler, source and documentation generators, a small EDASM-compatible assembler |
 | `tests/` | The test suite (`pytest`; `pytest -m emu` for the emulator tests) |
-| `docs/` | Analysis notes, annotations that drive the generated documentation, session handoffs |
+| `docs/` | Analysis notes and the annotations that drive the generated documentation |
 | `experiments/` | Recorded compiles by the real TASC (sources, objects, transcripts) |
 | `images/` | Disk images: the originals, working copies, and the source disk |
 | `NOTES.md` | The project's working notes and decisions |
