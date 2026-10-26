@@ -1,0 +1,85 @@
+# RUNTIME: the library compiled programs call
+
+## What it is
+
+RUNTIME is 4013 bytes of 6502 machine language, normally loaded at $0803-$17AF with `BLOAD RUNTIME` before a compiled program is run with `BRUN`. Compiled code is mostly calls: almost every statement, operator and function becomes a `JSR` into RUNTIME or into the Applesoft ROM, after code that loads the operands. RUNTIME keeps everything the ROM does not provide: integer arithmetic, the variable dispatchers, arrays, FOR/NEXT, the string routines and garbage collector, INPUT and READ, COMMON, ONERR/RESUME, and small entries that check an argument and go on into the ROM's own code for a statement.
+
+The source (`RUNTIME.S`) is written for Apple's DOS Toolkit assembler and assembles to the library byte for byte.
+
+## Starting a program
+
+Every object file starts with `JSR INIT` and a 17-byte header ([INIT](RUNTIME.html#A0803)). INIT:
+
+- points the & vector at the program, so `&` runs it again;
+- puts `JMP` instructions at $58 (to [FLOATI](RUNTIME.html#A166E), which floats the integer accumulator) and $5B (the ONERR handler);
+- learns the library's own address from the operand of the caller's `JSR` and computes the addresses it stores from it;
+- copies a 15-byte patch over CHRGET ([CHRPATCH](RUNTIME.html#A096C)) that lets the ROM's error handler reach a compiled ONERR handler;
+- copies the header to page zero: the first DATA item ($12), the highest address ($14), the COMMON bounds ($69-$6E) and the local bounds ($7B-$80). A program that declares USECOMMON checks that the COMMON bounds are those the previous program left (otherwise error 163, TYPE MISMATCH);
+- clears the variables ([CLEAR](RUNTIME.html#A08A7)) and resets the stack ([RESETSTK](RUNTIME.html#A0947)), leaving a return address to [NORET](RUNTIME.html#A09B9) at the bottom so a RETURN without GOSUB is caught.
+
+## How compiled code calls it
+
+**Accumulators.** Real values are in Applesoft's FAC ($9D-$A2), with ARG ($A5-$AA) as the second operand. Integers are in IACC ($A0 high, $A1 low; these are FAC+3 and FAC+4, which is where AYINT leaves its result) and IARG ($9E/$9F). Strings are pointers to [length][text]: the loaded string at $77/$78 and the pushed string at $79/$7A.
+
+**Real and integer entries.** A routine that takes a number usually has two entries 3 bytes apart. The real entry is `JSR AYINT` (or for an address `JSR $58`, which floats IACC), and the code generator uses whichever matches the operand's type. Byte arguments go through the ROM's CONINT (error ILLEGAL QUANTITY above 255); addresses through GETADR.
+
+**Inline operands.** Some calls are followed by data the routine reads through its return address and then returns past: the loop variable's address after the loop start and NEXT; a literal's address after STRLIT; the handler's address after ONERR; a count and line addresses after ON GOTO/GOSUB; an array's descriptor after the array dispatchers.
+
+**Variables.** Compiled code reaches every variable through a small routine of its own, which loads an operation number and the variable's address and jumps to a dispatcher:
+
+| Dispatcher | Operations |
+|---|---|
+| [DISPREAL](RUNTIME.html#A1764) real | 0 load FAC, 1 store, 2 add, 3 variable - FAC, 4 multiply, 5 compare, 6 load ARG, 7 variable / FAC |
+| [DISPINT](RUNTIME.html#A0D06) integer | 0 load IACC, 1 store, 2 add, 3 variable - IACC, 4 multiply, 5 compare; 6-13 the real operations with the variable used as a real |
+| [DISPSTR](RUNTIME.html#A0C7F) string | load (carry set) or store (carry clear) the string pointer |
+| [ARRREAL](RUNTIME.html#A0B11), [ARRSTR](RUNTIME.html#A0B14), [ARRINT](RUNTIME.html#A0B17) arrays | load an element (carry set) or leave its address for [ARRSTORE](RUNTIME.html#A0C6F) (carry clear) |
+
+## Memory and strings
+
+String space runs down from HIMEM; $6F/$70 is its bottom. New strings are made below it ([NEWSTR](RUNTIME.html#A114B)); when there is no room the garbage collector ([GARBAG](RUNTIME.html#A0F15)) packs the strings still in use at the top. Its roots are the COMMON strings, the local strings and the two string accumulators; literals and DATA items stay where they are in the program. An empty string is kept at HIMEM-1, and cleared string variables point at it. `REM! CLEAR CHAIN` ([CLRCHAIN](RUNTIME.html#A0F0B)) collects garbage keeping only the COMMON strings, then clears the locals, ready for `BRUN` of the next program.
+
+## FOR loops
+
+[The loop start](RUNTIME.html#A09DE) stores the initial value and pushes the variable's address; [the limit and step](RUNTIME.html#A167E) push the rest. A frame is 16 bytes, from the top of the stack:
+
+| Bytes | Real loop | Integer loop |
+|---|---|---|
+| 1-2 | the marker $09B0 | the marker |
+| 3-4 | loop address - 1 | byte 4 = 0 marks an integer loop |
+| 5-9 | step (packed real) | step in 5-6 |
+| 10-14 | limit (packed real) | loop address in 8-9, limit in 10-11 |
+| 15-16 | the variable's address | the variable's address |
+
+The marker is also a valid return address: a subroutine that RETURNs with loops still open lands at [FORUNWND](RUNTIME.html#A09B1), which drops the frame and returns again. [NEXT](RUNTIME.html#A0A31) finds the variable's frame, dropping inner loops, adds the step and compares with the limit in the step's direction. [POP](RUNTIME.html#A097B) passes over frames to drop a GOSUB return.
+
+## Errors
+
+Every error ends at [ERREXIT](RUNTIME.html#A1413) with Applesoft's error number in X. Without ONERR the object address of the failing call becomes the "line number" of the message, so errors report addresses in the compiled program. With ONERR the patched CHRGET passes control to the handler, and [RESUME](RUNTIME.html#A1656) (with the RESUME/debug option, which puts [DEBUG](RUNTIME.html#A1423) before every statement) restarts the failing statement.
+
+| Number | Error | Raised by |
+|---|---|---|
+| 0 | NEXT WITHOUT FOR | NEXT |
+| 16 | SYNTAX | READ of a bad number |
+| 22 | RETURN WITHOUT GOSUB | POP, RETURN on an empty stack |
+| 42 | OUT OF DATA | READ |
+| 53 | ILLEGAL QUANTITY | hi-res coordinates, shape number, ASC, LEFT$/RIGHT$/MID$ count, byte arguments |
+| 69 | OVERFLOW | integer arithmetic, integer loops |
+| 77 | OUT OF MEMORY | strings, CLEAR, HIMEM: |
+| 107 | BAD SUBSCRIPT | array elements |
+| 163 | TYPE MISMATCH | a USECOMMON program whose COMMON block differs |
+| 176 | STRING TOO LONG | concatenation |
+| 254, 255 | bad input, Control-C | INPUT (with ONERR) |
+
+## Entries by kind
+
+| Kind | Entries |
+|---|---|
+| program | [INIT](RUNTIME.html#A0803), [PGMEND](RUNTIME.html#A1363), [STOP](RUNTIME.html#A134B), [DEBUG](RUNTIME.html#A1423), [ONERR](RUNTIME.html#A1637), [RESUME](RUNTIME.html#A1656), [CLRCOM](RUNTIME.html#A08A7), [CLEAR](RUNTIME.html#A08AA), [CLRCHAIN](RUNTIME.html#A0F0B), [HIMEM](RUNTIME.html#A08DB) |
+| flow | [POP](RUNTIME.html#A097B), [ONGOTO](RUNTIME.html#A14B0), [ONGOSUB](RUNTIME.html#A14B7), [FORINIT](RUNTIME.html#A09E8), [NEXT](RUNTIME.html#A0A31), [FORLIM](RUNTIME.html#A16BF), [FORSTEP](RUNTIME.html#A16B8) |
+| integers | [DISPINT](RUNTIME.html#A0D06), [INEG](RUNTIME.html#A0CC3), [ISUBT](RUNTIME.html#A0CDA), [IMOVE](RUNTIME.html#A1675), [FLOATI](RUNTIME.html#A166E), [LOGORI](RUNTIME.html#A14FD), [LOGANDI](RUNTIME.html#A1503) |
+| relations | [RELNE](RUNTIME.html#A1517), [RELGT](RUNTIME.html#A1519), [RELGE](RUNTIME.html#A151B), [RELEQ](RUNTIME.html#A1524), [RELLE](RUNTIME.html#A1526), [RELLT](RUNTIME.html#A1528), [STRGE](RUNTIME.html#A152F), [STRLT](RUNTIME.html#A1532), [STRLE](RUNTIME.html#A1546), [STRGT](RUNTIME.html#A1549), [STREQ](RUNTIME.html#A1582), [STRNE](RUNTIME.html#A15B7) |
+| strings | [DISPSTR](RUNTIME.html#A0C7F), [STRLIT](RUNTIME.html#A0EC5), [PRSTR](RUNTIME.html#A0EEE), [CONCAT](RUNTIME.html#A10EF), [PUSHSTR](RUNTIME.html#A1135), [CHRFN](RUNTIME.html#A1192), [STRFN](RUNTIME.html#A11A9), [LEFT](RUNTIME.html#A11C4), [RIGHT](RUNTIME.html#A11F2), [MID2](RUNTIME.html#A1227), [MID3](RUNTIME.html#A1231), [VALFN](RUNTIME.html#A0E80), [ASCFN](RUNTIME.html#A0EAA), [LENFN](RUNTIME.html#A0EB6), [FREFN](RUNTIME.html#A0F13) |
+| input and output | [INPBEG](RUNTIME.html#A1627), [INPNUM](RUNTIME.html#A12FD), [INPSTR](RUNTIME.html#A1287), [INPEND](RUNTIME.html#A1387), [READNUM](RUNTIME.html#A13AC), [READSTR](RUNTIME.html#A13A9), [RESTORE](RUNTIME.html#A0963), [GETNUM](RUNTIME.html#A1399), [GETSTR](RUNTIME.html#A10CC), [PRINTN](RUNTIME.html#A1761), [COMMA](RUNTIME.html#A148E), [TAB](RUNTIME.html#A146F), [SPC](RUNTIME.html#A147F), [PRNUM](RUNTIME.html#A143F), [INNUM](RUNTIME.html#A1448) |
+| screen and graphics | [VTAB](RUNTIME.html#A149E), [HTAB](RUNTIME.html#A14A7), [COLOR](RUNTIME.html#A0E77), [PLOT](RUNTIME.html#A170A), [HLIN](RUNTIME.html#A1716), [VLIN](RUNTIME.html#A1722), [SCRN](RUNTIME.html#A16EB), [HCOLOR](RUNTIME.html#A15F4), [HPLOT](RUNTIME.html#A0DF4), [HPLOTTO](RUNTIME.html#A0DED), [DRAW](RUNTIME.html#A0E34), [XDRAW](RUNTIME.html#A0E3B), [DRAWAT](RUNTIME.html#A0DD9), [XDRAWAT](RUNTIME.html#A0DE0), [ROT](RUNTIME.html#A15BB), [SCALE](RUNTIME.html#A15C4), [PDL](RUNTIME.html#A172B), [POS](RUNTIME.html#A1700) |
+| memory | [SVADDR](RUNTIME.html#A1741), [PEEK](RUNTIME.html#A1747), [CALL](RUNTIME.html#A173B), [POKE](RUNTIME.html#A1451), [WAIT](RUNTIME.html#A145A), [WAIT3](RUNTIME.html#A1466), [SPEED](RUNTIME.html#A161E) |
+| arrays | [ARRREAL](RUNTIME.html#A0B11), [ARRSTR](RUNTIME.html#A0B14), [ARRINT](RUNTIME.html#A0B17), [ARRSTORE](RUNTIME.html#A0C6F), [PUSHSUB](RUNTIME.html#A165C) |

@@ -24,12 +24,13 @@ ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "src"
 OUT = SRC / "html"
 
-TITLES = {"PASS0": "PASS0", "PASS1": "PASS1", "PASS2": "PASS2", "MAKE_RUNTIME": "MAKE RUNTIME"}
+TITLES = {"PASS0": "PASS0", "PASS1": "PASS1", "PASS2": "PASS2", "MAKE_RUNTIME": "MAKE RUNTIME", "RUNTIME": "RUNTIME"}
 PURPOSE = {
     "PASS0": "Pass 0: dialog, DOS patches, tables, then runs pass 1",
     "PASS1": "Pass 1: parsing, symbol table and code generation",
     "PASS2": "Pass 2: constants, variable routines, backpatching, header and report",
     "MAKE_RUNTIME": "Builds the RUNTIME library file from DATA statements",
+    "RUNTIME": "The machine language library compiled programs call (6502 source)",
 }
 
 
@@ -82,6 +83,13 @@ table.vars th,table.vars td{border-bottom:1px solid var(--line);padding:4px 6px;
 table.vars td:first-child{font-family:ui-monospace,Menlo,Consolas,monospace;white-space:nowrap}
 .ov{max-width:860px}
 .ov td a{white-space:nowrap}
+table.asm{border-collapse:collapse;width:100%;font:12.5px/1.45 ui-monospace,Menlo,Consolas,monospace}
+table.asm td{padding:1px 6px;vertical-align:top;white-space:pre}
+table.asm td.a{color:var(--muted)}table.asm td.b{color:var(--muted)}
+table.asm td.l{color:var(--accent);font-weight:600}table.asm td.o{color:var(--kw);font-weight:600}
+table.asm td.c{white-space:pre-wrap;font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;font-size:12.5px}
+table.asm tr:target td,table.asm tr.hl td{background:var(--hl)}
+.wrap{overflow-x:auto}
 .ov h2{margin-top:28px;border-bottom:1px solid var(--line);padding-bottom:4px}
 .ov code,.ov pre{font-family:ui-monospace,Menlo,Consolas,monospace;background:var(--code);border-radius:4px}
 .ov code{padding:1px 4px;font-size:13px}.ov pre{padding:10px;overflow-x:auto;font-size:13px}
@@ -362,3 +370,82 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+
+# ---------------------------------------------------------------- RUNTIME (6502 source)
+
+def _asm_operand(operand: str, labels: dict[str, int], equ: dict[str, str]) -> str:
+    def one(m: re.Match[str]) -> str:
+        w = m.group(0)
+        if w in labels:
+            return f'<a href="#A{labels[w]:04X}">{w}</a>'
+        if w in equ:
+            return f'<a href="#E_{w}" title="{html.escape(equ[w])}">{w}</a>'
+        return html.escape(w)
+    return re.sub(r"[A-Z][A-Z0-9]*|[^A-Z]+", one, operand)
+
+
+def write_runtime(rows: list, labels: dict[int, str], ann: object) -> None:
+    """src/html/RUNTIME.html (the source as an assembler listing) and its overview."""
+    by_name = {n: a for a, n in labels.items()}
+    equ = {n: c for n, _, c in ann.equates}  # type: ignore[attr-defined]
+    parts = [_head("RUNTIME source", PURPOSE["RUNTIME"]), _nav("RUNTIME", "RUNTIME.html")]
+    parts.append('<p class="muted">The library as 6502 source in the style of Apple\'s DOS Toolkit assembler. '
+                 "Address and bytes on the left; labels in operands link to their definitions; point at a name from "
+                 'the equates for its meaning. The source assembles to the library byte for byte. '
+                 '<a href="#equates">Equates</a></p>\n')
+    # sections: header, then one per routine block
+    sections: list[tuple[int, list[str], list]] = [(-1, [], [])]
+    for r in rows:
+        if r.kind == "block":
+            if not sections[-1][2] or sections[-1][0] != r.addr:
+                if sections[-1][0] != r.addr:
+                    sections.append((r.addr, [], []))
+            if r.text.strip("*- ") :
+                sections[-1][1].append(r.text[2:])
+            continue
+        sections[-1][2].append(r)
+    toc = []
+    for addr, block, _ in sections[1:]:
+        name = labels.get(addr, f"${addr:04X}")
+        first = " ".join(block)[:110]
+        toc.append(f'<li><a href="#A{addr:04X}">{name}</a> <span class="muted">{html.escape(first)}</span></li>')
+    parts.append(f'<details class="toc"><summary>Routines ({len(sections) - 1})</summary><ol>{"".join(toc)}</ol></details>\n')
+    eq_rows = []
+    for addr, block, items in sections:
+        body = []
+        for r in items:
+            if r.kind == "head":
+                continue
+            if r.kind == "equ":
+                eq_rows.append(f'<tr id="E_{r.label}"><td>{r.label}</td><td>{html.escape(r.operand)}</td>'
+                               f'<td>{html.escape(r.comment)}</td></tr>')
+                continue
+            a = f"{r.addr:04X}" if r.kind == "code" else ""
+            rid = f' id="A{r.addr:04X}"' if r.kind == "code" else ""
+            body.append(f'<tr{rid}><td class="a">{a}</td><td class="b">{r.raw.hex(" ").upper()}</td>'
+                        f'<td class="l">{r.label}</td><td class="o">{r.op}</td>'
+                        f'<td>{_asm_operand(r.operand, by_name, equ)}</td><td class="c">{html.escape(r.comment)}</td></tr>')
+        if not body:
+            continue
+        hs = ""
+        if block:
+            text = " ".join(block)
+            paras = "".join(f"<p>{html.escape(p.strip())}</p>" for p in ann.routines.get(addr, text).split("|"))  # type: ignore[attr-defined]
+            hs = f'<div class="h"><p><span class="ln">{labels.get(addr, "")}</span></p>{paras}</div>'
+        parts.append(f'<section class="r">{hs}<div class="wrap"><table class="asm">{"".join(body)}</table></div></section>\n')
+    parts.append(f'<h2 id="equates">Equates</h2><table class="vars"><tr><th>Name</th><th>Value</th><th>Meaning</th></tr>'
+                 f'{"".join(eq_rows)}</table>\n</main></body></html>\n')
+    OUT.mkdir(exist_ok=True)
+    (OUT / "RUNTIME.html").write_text("".join(parts))
+    tmpl = ROOT / "docs" / "lift" / "annot" / "RUNTIME.overview.txt"
+    if tmpl.exists():
+        def link(m: re.Match[str]) -> str:
+            a = int(m.group(1), 16)
+            if a not in labels:
+                raise ValueError(f"[[${a:04X}]] has no label in RUNTIME")
+            return f"[{m.group(2) or labels[a]}](RUNTIME.html#A{a:04X})"
+        md = re.sub(r"\[\[\$([0-9A-Fa-f]{4})(?:\|([^\]]+))?\]\]", link, tmpl.read_text())
+        (SRC / "RUNTIME.OVERVIEW.TXT").write_text(md)
+        (OUT / "RUNTIME.OVERVIEW.html").write_text(overview_html("RUNTIME", md))
+    (OUT / "index.html").write_text(index_html())

@@ -69,6 +69,9 @@ def test_source_documentation_is_standalone() -> None:
         vars_file = src / (f.name.split(".")[0] + ".VARS.TXT")
         rows = vars_file.read_text().splitlines()[1:] if vars_file.exists() else []
         names = {row.split()[0].split("(")[0].rstrip("%$") for row in rows if row.strip()}
+        if f.name.startswith("RUNTIME"):  # labels and equates of the library source (the Monitor's H2)
+            names |= {ln.split()[0] for ln in (src / "RUNTIME.S").read_text().splitlines()
+                      if ln and not ln[0].isspace() and not ln.startswith("*")}
         text = f.read_text()
         if f.suffix == ".html":  # the visible text and attribute values, not the markup or style sheet
             text = re.sub(r"<style>.*?</style>", "", text, flags=re.S)

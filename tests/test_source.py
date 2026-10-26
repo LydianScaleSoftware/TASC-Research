@@ -136,3 +136,14 @@ def test_listing_retokenizes(name: str, tmp_path: Path) -> None:
     want = source_lines(name)
     bad = [n for (n, a), (_, b) in zip(want, got) if a != b]
     assert len(got) == len(want) and not bad, f"lines that tokenize differently: {bad}"
+
+
+def test_runtime_source_assembles() -> None:
+    """src/RUNTIME.S, and its single-spaced form on the source disk, assemble to RUNTIME."""
+    from tasc import rtsource
+
+    text = (SRC / "RUNTIME.S").read_text()
+    assert rtsource.check(text) == []
+    assert rtsource.check(rtsource.compact(text)) == []
+    assert all(len(line.split(";")[0].split(" ")[0]) <= 8 for line in text.splitlines()
+               if line and not line[0].isspace() and not line.startswith("*")), "labels of at most 8 characters"
